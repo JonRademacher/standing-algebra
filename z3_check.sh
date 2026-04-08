@@ -10,3 +10,9 @@ echo "Checking Standing Algebra system (should be UNSAT)"
 z3 Collapse_Demonstrations/Collapse_With_StandingAlgebra.smt2 | grep unsat
 
 echo "Collapse demonstration checks passed."
+
+echo "Checking Goodhart drift collapse (should be SAT)"
+z3 Collapse_Demonstrations/Goodhart_Drift/Goodhart_System.smt2 | grep sat
+
+echo "Checking Goodhart drift with Standing Algebra (should be UNSAT)"
+z3 Collapse_Demonstrations/Goodhart_Drift/Goodhart_With_StandingAlgebra.smt2 | grep unsat
