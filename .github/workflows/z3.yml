@@ -1,0 +1,19 @@
+name: Z3 SMT-LIB CI
+
+on: [push, pull_request]
+
+jobs:
+  z3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Z3
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y z3
+
+      - name: Run Z3 checks
+        run: |
+          chmod +x z3_check.sh
+          ./z3_check.sh
