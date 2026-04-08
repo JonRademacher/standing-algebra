@@ -1,0 +1,5 @@
+-Q COQ StandingAlgebra
+
+COQ/StandingAlgebraCore.v
+COQ/StandingAlgebraBasicsCoq.v
+COQ/StandingAlgebra_Model_Example.v
