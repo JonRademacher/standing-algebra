@@ -1,0 +1,16 @@
+name: Coq CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Coq
+        uses: coq-community/coq-action@v1
+        with:
+          coq_version: "8.18"
+          script: |
+            coqc -q -project _CoqProject
