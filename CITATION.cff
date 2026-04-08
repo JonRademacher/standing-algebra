@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Standing Algebra (Σᴿ)"
+authors:
+  - family-names: Rademacher
+    given-names: Jonathan
+doi: 10.5281/zenodo.19472101
+release-date: 2026-04-08
+license: Apache-2.0
+``
