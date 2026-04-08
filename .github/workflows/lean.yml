@@ -10,4 +10,6 @@ jobs:
       - uses: leanprover/lean-action@v1
         with:
           use-mathlib-cache: false
+      - run: lake update
       - run: lake build
+
