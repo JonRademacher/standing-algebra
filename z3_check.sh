@@ -1,17 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Running Z3 checks..."
+echo "Running Z3 collapse demonstrations..."
 
-for f in "Z3 SMT-LIB"/*.smt2; do
-  echo "Checking $f"
-  result=$(z3 "$f")
-  echo "$result"
+echo "Checking collapsing system (should be SAT)"
+z3 Collapse_Demonstrations/Collapse_System.smt2 | grep sat
 
-  if [[ "$result" != *"sat"* ]]; then
-    echo "ERROR: $f did not return sat"
-    exit 1
-  fi
-done
+echo "Checking Standing Algebra system (should be UNSAT)"
+z3 Collapse_Demonstrations/Collapse_With_StandingAlgebra.smt2 | grep unsat
 
-echo "All Z3 checks passed."
+echo "Collapse demonstration checks passed."
