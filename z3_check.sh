@@ -15,7 +15,7 @@ echo
 # Extract all sat/unsat/unknown lines
 z3_status_lines() {
   local f="$1"
-  "$Z3_BIN" "$f" 2>&1 | tr -d '\r' | grep -E '^(sat|unsat|unknown)$' || true
+  "$Z3_BIN" -T:5 "$f" 2>&1 | tr -d '\r' | grep -E '^(sat|unsat|unknown)$' || true
 }
 
 # Determine expected result based on filename
