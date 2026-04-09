@@ -45,7 +45,7 @@
 (assert
   (forall ((F Operation) (s State))
     (=> (Legitimate F)
-        (<= (DomPressure (Apply F s))
+        (<= (DomPressure (ApplyS F s))
             (DomPressure s)))))
 
 ; ---------------------------------------------------------
