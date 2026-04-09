@@ -1,5 +1,5 @@
 # expected  path
-sat    Z3 SMT-LIB/StandingAlgebraCoreSMT-LIB.smt2
+sat    Z3 SMT-LIB/StandingAlgebraCoreSMTLIB.smt2
 sat    Z3 SMT-LIB/StandingAlgebraBasics.smt2
 sat    Z3 SMT-LIB/SigmaR_Model_Example.smt2
 
