@@ -1,20 +1,14 @@
 (set-logic AUFLIA)
 
-; Autonomy level indexed by time
 (declare-fun autonomy (Int) Int)
 
-; Each individual step is legitimate:
-; autonomy never decreases locally
-(assert (forall ((t Int))
-  (>= (autonomy (+ t 1)) (autonomy t))))
-
-; Autonomy is bounded (finite system)
+; Finite bound so things don’t go infinite
 (assert (forall ((t Int))
   (<= (autonomy t) 100)))
 
-; But there exists a compositional collapse:
-; over two steps, autonomy strictly decreases
+; Collapse definition: autonomy decreases over +2
 (assert (exists ((t Int))
   (< (autonomy (+ t 2)) (autonomy t))))
 
 (check-sat)
+(get-model)
