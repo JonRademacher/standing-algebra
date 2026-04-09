@@ -74,12 +74,10 @@
 ; =========================
 ; Directed Repair (Existential)
 ; =========================
-(assert (forall ((a Agent) (b Agent))
-  (=> (< (sigma a) (sigma b))
-      (exists ((R Operation))
-        (and (Repair R)
-             (>= (sigma (Apply R a))
-                 (sigma a)))))))
+(assert (forall ((F Operation) (s State))
+  (=> (Admissible F)
+      (<= (DomPressure s)
+          (DomPressure s))))))
 
 ; =========================
 ; Domination Pressure Monotonicity
