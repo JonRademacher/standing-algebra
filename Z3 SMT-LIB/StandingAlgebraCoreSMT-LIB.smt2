@@ -14,6 +14,7 @@
 ; =========================
 (declare-fun sigma (Agent) Int)              ; standing
 (declare-fun Apply (Operation Agent) Agent)  ; defunctionalized operation
+(declare-fun ApplyS (Operation State) State)  ; defunctionalized operation
 (declare-fun DomPressure (State) Int)         ; domination pressure
 (declare-fun L (Operation) Operation)         ; legitimacy envelope
 
