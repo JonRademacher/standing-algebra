@@ -33,7 +33,7 @@
 (assert
   (forall ((F Operation) (a Agent))
     (=> (Legitimate F)
-        (>= (sigma (Apply F a))
+        (>= (sigma (ApplyS F a))
             (sigma a)))))
 
 ; ---------------------------------------------------------
@@ -56,8 +56,8 @@
 (assert
   (forall ((F Operation) (a Agent))
     (=> (Legitimate F)
-        (= (Apply F (Apply F a))
-           (Apply F a)))))
+        (= (Apply F (ApplyS F a))
+           (ApplyS F a)))))
 
 ; ---------------------------------------------------------
 ; Sanity Check:
