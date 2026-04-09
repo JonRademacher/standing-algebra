@@ -46,6 +46,10 @@ echo "Z3 version:"
 "$Z3_BIN" -version || true
 echo
 
+echo "Available SMT2 files under Z3 SMT-LIB:"
+find "Z3 SMT-LIB" -maxdepth 1 -type f -name '*.smt2' -print || true
+
+
 require_file "$MANIFEST"
 echo "=== Running Z3 checks from manifest: $MANIFEST ==="
 
