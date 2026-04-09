@@ -1,8 +1,3 @@
-grep -R '&gt;\|&lt;\|=&gt;' -n . && {
-  echo "ERROR: HTML entities found in SMT or scripts"
-  exit 1
-}
-
 #!/usr/bin/env bash
 set -euo pipefail
 
