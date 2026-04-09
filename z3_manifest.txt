@@ -1,0 +1,9 @@
+# expected  path
+sat    Z3 SMT-LIB/StandingAlgebraCoreSMT-LIB.smt2
+sat    Z3 SMT-LIB/StandingAlgebraBasics.smt2
+sat    Z3 SMT-LIB/SigmaR_Model_Example.smt2
+
+sat    Collapse_Demonstrations/Collapse_System.smt2
+unsat  Collapse_Demonstrations/Collapse_With_StandingAlgebra.smt2
+sat    Collapse_Demonstrations/Goodhart_Drift/Goodhart_System.smt2
+unsat  Collapse_Demonstrations/Goodhart_Drift/Goodhart_With_StandingAlgebra.smt2
