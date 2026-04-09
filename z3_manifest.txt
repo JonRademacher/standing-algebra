@@ -7,3 +7,4 @@ sat    Collapse_Demonstrations/Collapse_System.smt2
 unsat  Collapse_Demonstrations/Collapse_With_StandingAlgebra.smt2
 sat    Collapse_Demonstrations/Goodhart_Drift/Goodhart_System.smt2
 unsat  Collapse_Demonstrations/Goodhart_Drift/Goodhart_With_StandingAlgebra.smt2
+ 
