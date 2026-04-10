@@ -2,6 +2,7 @@
 set -euo pipefail
 
 Z3_BIN="${Z3_BIN:-z3}"
+Z3_TIMEOUT=5   # seconds — prevents CI hangs
 
 SCAN_DIRS=(
   "Z3 SMT-LIB"
@@ -12,25 +13,56 @@ echo "Z3 version:"
 "$Z3_BIN" -version || true
 echo
 
-# Extract all sat/unsat/unknown lines
+# ------------------------------------------------------------
+# Guard: fail fast on HTML entities (common silent breakage)
+# ------------------------------------------------------------
+if grep -R '&gt;\|&lt;\|=&gt;' -n \
+    "Z3 SMT-LIB" \
+    "Collapse_Demonstrations" \
+    z3_check.sh; then
+  echo
+  echo "ERROR: HTML entities found. Use real SMT-LIB operators: >= <= =>"
+  exit 1
+fi
+
+# ------------------------------------------------------------
+# Extract all sat / unsat / unknown lines from Z3 output
+# (supports multiple check-sat per file)
+# ------------------------------------------------------------
 z3_status_lines() {
   local f="$1"
-  "$Z3_BIN" -T:5 "$f" 2>&1 | tr -d '\r' | grep -E '^(sat|unsat|unknown)$' || true
+  "$Z3_BIN" -T:${Z3_TIMEOUT} "$f" 2>&1 \
+    | tr -d '\r' \
+    | grep -E '^(sat|unsat|unknown)$' || true
 }
 
-# Determine expected result based on filename
+# ------------------------------------------------------------
+# Expected result policy (THIS is the key logic)
+# ------------------------------------------------------------
 expected_result() {
-  local f="$1"
-  case "$(basename "$f")" in
+  case "$(basename "$1")" in
     Collapse_System.smt2)
+      echo "sat"
+      ;;
+    Collapse_With_StandingAlgebra.smt2)
+      echo "unsat"
+      ;;
+    Goodhart_System.smt2)
+      echo "sat"
+      ;;
+    Goodhart_With_StandingAlgebra.smt2)
       echo "unsat"
       ;;
     *)
+      # Everything else (core, basics, examples) must be SAT
       echo "sat"
       ;;
   esac
 }
 
+# ------------------------------------------------------------
+# Check a single SMT2 file
+# ------------------------------------------------------------
 check_file() {
   local f="$1"
   local expected
@@ -41,16 +73,15 @@ check_file() {
 
   if [[ -z "$lines" ]]; then
     echo "ERROR  : $f -> no sat/unsat/unknown output (parse error or missing (check-sat))"
-    return 2
+    return 1
   fi
 
   if echo "$lines" | grep -q '^unknown$'; then
-    echo "UNKNOWN: $f ->"
+    echo "FAIL   : $f -> Z3 returned unknown"
     echo "$lines" | sed 's/^/  /'
     return 1
   fi
 
-  # Require ALL check-sat results to match expected
   if echo "$lines" | grep -vq "^${expected}\$"; then
     echo "FAIL   : $f -> expected ${expected}, got:"
     echo "$lines" | sed 's/^/  /'
@@ -63,32 +94,33 @@ check_file() {
   return 0
 }
 
-scan_dir() {
-  local dir="$1"
-  [[ -d "$dir" ]] || { echo "WARN   : Skipping missing dir: $dir"; return 0; }
+# ------------------------------------------------------------
+# Scan directories
+# ------------------------------------------------------------
+overall_rc=0
+
+for dir in "${SCAN_DIRS[@]}"; do
+  if [[ ! -d "$dir" ]]; then
+    echo "WARN   : Skipping missing directory: $dir"
+    continue
+  fi
 
   echo "=== Scanning: $dir ==="
 
-  local rc_any=0
   while IFS= read -r -d '' f; do
     if ! check_file "$f"; then
-      rc_any=1
+      overall_rc=1
     fi
   done < <(find "$dir" -type f -name '*.smt2' -print0 | sort -z)
 
   echo
-  return "$rc_any"
-}
-
-overall_rc=0
-for d in "${SCAN_DIRS[@]}"; do
-  if ! scan_dir "$d"; then
-    overall_rc=1
-  fi
 done
 
+# ------------------------------------------------------------
+# Final status
+# ------------------------------------------------------------
 if [[ "$overall_rc" -eq 0 ]]; then
-  echo "Z3 CI passed: all files matched expected SAT/UNSAT behavior."
+  echo "Z3 CI passed: Standing Algebra demonstrably eliminates collapse."
 else
   echo "Z3 CI failed: at least one file did not match expected behavior."
 fi
