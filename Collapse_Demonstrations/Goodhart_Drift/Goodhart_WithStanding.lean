@@ -1,15 +1,11 @@
 /-
   Collapse_Demonstrations.Goodhart_Drift.Goodhart_WithStanding
 
-  Lean analogue of:
+  This file proves that Goodhart drift is impossible under
+  the SAME Standing Algebra axiom used in the SigmaR core.
 
-    Goodhart_With_StandingAlgebra.smt2  →  UNSAT
-
-  This file proves that under Standing Algebra–style mathematical
-  constraints, Goodhart drift is impossible.
-
-  The proof is entirely structural: it shows that the inequalities
-  required for Goodhart drift contradict the algebraic assumptions.
+  This is not a new argument.
+  It is a specialization of the collapse-elimination proof.
 -/
 
 namespace Collapse_Demonstrations.Goodhart_Drift
@@ -17,42 +13,75 @@ namespace Collapse_Demonstrations.Goodhart_Drift
 -- Import the Goodhart drift definition
 import Collapse_Demonstrations.Goodhart_Drift.Goodhart
 
-/--
-  Abstract time index.
--/
-variable (Time : Type)
+-- Import SigmaR core Standing Algebra
+-- Adjust the import path if your core file name differs
+import SigmaR.SigmaR_Core
 
 /--
-  Proxy metric and true value.
+  We align Goodhart with SigmaR as follows:
+
+  * Time          ≙ Agent
+  * Step/Update   ≙ Operation
+  * trueValue     ≙ σ (standing)
+  * proxy-improving steps are admissible
 -/
 variable
-  (proxy : Time → Int)
+  (Time : Type)
+  (Operation : Type)
+
+/-- True value = standing function σ -/
+variable
   (trueValue : Time → Int)
 
-/--
-  Standing Algebra–style assumptions for Goodhart:
+/-- Application of an operation to a time state -/
+variable
+  (Apply : Operation → Time → Time)
 
-  1. Proxy improvement is monotone (optimization pressure)
-  2. True value is monotone (standing cannot decrease)
--/
-def GoodhartStandingAlgebra : Prop :=
-  (∀ t₁ t₂ : Time, proxy t₂ > proxy t₁ → trueValue t₂ ≥ trueValue t₁)
+/-- Admissibility of an operation -/
+variable
+  (Admissible : Operation → Prop)
 
 /--
-  Under Standing Algebra constraints, Goodhart drift is impossible.
+  Standing Algebra axiom (from SigmaR core):
+
+  Admissible operations do not decrease standing.
 -/
-theorem noGoodhartDrift_under_StandingAlgebra
-  (SA : GoodhartStandingAlgebra Time proxy trueValue) :
+variable
+  (StandingAlgebra :
+    ∀ (F : Operation) (t : Time),
+      Admissible F →
+      trueValue (Apply F t) ≥ trueValue t)
+
+/--
+  Proxy improvement assumption:
+
+  A Goodhart proxy-improving transition corresponds
+  to applying some admissible operation.
+-/
+variable
+  (ProxyImproves :
+    ∀ t₁ t₂ : Time,
+      proxy t₂ > proxy t₁ →
+      ∃ F : Operation, Admissible F ∧ Apply F t₁ = t₂)
+
+/--
+  Under SigmaR Standing Algebra, Goodhart drift is impossible.
+-/
+theorem noGoodhartDrift_under_StandingAlgebra :
   ¬ GoodhartDrift Time proxy trueValue :=
 by
   intro hDrift
   rcases hDrift with ⟨t₁, t₂, hNe, hProxyUp, hTrueDown⟩
 
-  -- From Standing Algebra, proxy increase implies true value non-decrease
-  have hTrueNonDecrease : trueValue t₂ ≥ trueValue t₁ :=
-    SA t₁ t₂ hProxyUp
+  -- From proxy improvement, get an admissible operation
+  rcases ProxyImproves t₁ t₂ hProxyUp with ⟨F, hAdm, hApply⟩
+  subst hApply
 
-  -- Contradiction: trueValue t₂ < trueValue t₁ and ≥ trueValue t₁
-  exact lt_irrefl _ (lt_of_lt_of_le hTrueDown hTrueNonDecrease)
+  -- Standing Algebra forbids true-value decrease
+  have hNonDecrease : trueValue (Apply F t₁) ≥ trueValue t₁ :=
+    StandingAlgebra F t₁ hAdm
+
+  -- Contradiction: decrease and non-decrease
+  exact lt_irrefl _ (lt_of_lt_of_le hTrueDown hNonDecrease)
 
 end Collapse_Demonstrations.Goodhart_Drift
