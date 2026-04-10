@@ -5,10 +5,12 @@
  * This file depends only on SigmaR_Core.v.
  *)
 
-Require Import SigmaR_Core.
+From StandingAlgebra Require Import StandingAlgebraCoreCoq.
+
 Require Import Coq.Arith.Arith.
 Require Import Coq.Arith.Le.
 Require Import Coq.Logic.Classical.
+
 
 (* ========================================= *)
 (* Derived Definitions *)
