@@ -1,14 +1,9 @@
-(**
- * Standing Algebra (Σᴿ)
- * Example / Model Sanity File
- *
- * This file demonstrates that the core axioms
- * of Σᴿ are jointly consistent under a simple interpretation.
- *
- * It does NOT introduce new axioms globally.
- *)
+(** Standing Algebra (Σᴿ)
+    Example / Model Sanity File *)
 
-Require Import SigmaR_Core.
+From StandingAlgebra Require Import StandingAlgebraCoreCoq.
+From StandingAlgebra Require Import StandingAlgebraBasicsCoq.
+
 Require Import Coq.Arith.Arith.
 Require Import Coq.Logic.Classical.
 
