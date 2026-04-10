@@ -5,7 +5,7 @@
  * This file depends only on SigmaR_Core.v.
  *)
 
-From StandingAlgebra Require Import StandingAlgebraCoreCoq.
+Require Import StandingAlgebraCoreCoq.
 
 Require Import Coq.Arith.Arith.
 Require Import Coq.Arith.Le.
