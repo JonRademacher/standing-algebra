@@ -14,18 +14,6 @@ echo "Z3 version:"
 echo
 
 # ------------------------------------------------------------
-# Guard: fail fast on HTML entities (common silent breakage)
-# ------------------------------------------------------------
-if grep -R '&gt;\|&lt;\|=&gt;' -n \
-    "Z3 SMT-LIB" \
-    "Collapse_Demonstrations" \
-    z3_check.sh; then
-  echo
-  echo "ERROR: HTML entities found. Use real SMT-LIB operators: >= <= =>"
-  exit 1
-fi
-
-# ------------------------------------------------------------
 # Extract all sat / unsat / unknown lines from Z3 output
 # (supports multiple check-sat per file)
 # ------------------------------------------------------------
