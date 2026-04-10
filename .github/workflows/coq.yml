@@ -16,8 +16,9 @@ jobs:
         with:
           coq_version: '8.19'
           script: |
-            coqc -q -R coq StandingAlgebra coq/StandingAlgebraCoreCoq.v
-            coqc -q -R coq StandingAlgebra coq/StandingAlgebraBasicsCoq.v
-            coqc -q -R coq StandingAlgebra coq/StandingAlgebra_Model_Example.v
+            coqc -q -R COQ StandingAlgebra COQ/StandingAlgebraBasicsCoq.v
+            coqc -q -R COQ StandingAlgebra COQ/StandingAlgebraCoreCoq.v
+            coqc -q -R COQ StandingAlgebra COQ/StandingAlgebra_Model_Example.v
+
 
 
