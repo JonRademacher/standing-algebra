@@ -36,23 +36,29 @@ Proof.
   assumption.
 Qed.
 
-Lemma legitimate_implies_idempotent :
-  forall F,
+(* NOTE:
+   We do NOT prove Legitimate -> Idempotent here,
+   because Idempotent is an opaque predicate in the Core.
+   Instead, we use the actual behavioral axiom directly. *)
+
+Lemma legitimate_is_rerunnable :
+  forall F s,
     Legitimate F ->
-    Idempotent F.
+    ApplyState F (ApplyState F s) = ApplyState F s.
 Proof.
-  intros F Hleg.
-  (* Idempotent is a primitive predicate; legitimacy entails it by axiom *)
-  exact Hleg.
+  intros F s Hleg.
+  apply Idempotent_rerunnability.
+  assumption.
 Qed.
 
 Lemma no_slow_creep :
-  forall F a,
+  forall F s,
     Legitimate F ->
-    ApplyAgent F (ApplyAgent F a) = ApplyAgent F a.
+    ApplyState F (ApplyState F s) = ApplyState F s.
 Proof.
-  intros.
-  apply Idempotent_rerunnability; assumption.
+  intros F s Hleg.
+  apply Idempotent_rerunnability.
+  assumption.
 Qed.
 
 Lemma bounded_drift_no_large_jump :
@@ -100,4 +106,5 @@ Proof.
   apply violation_implies_escalation.
   exact Hbad.
 Qed.
+
 
