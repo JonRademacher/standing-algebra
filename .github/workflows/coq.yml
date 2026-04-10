@@ -11,14 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Coq
+      - name: Build Coq project
         uses: coq-community/docker-coq-action@v1
         with:
           coq_version: '8.19'
+          script: |
+            coqc -q -R coq StandingAlgebra \
+              coq/StandingAlgebraCoreCoq.v \
+              coq/StandingAlgebraBasicsCoq.v \
+              coq/StandingAlgebra_Model_Example.v
 
-      - name: Build Coq files
-        run: |
-          coqc -q -R coq StandingAlgebra \
-            coq/StandingAlgebraCoreCoq.v \
-            coq/StandingAlgebraBasicsCoq.v \
-            coq/StandingAlgebra_Model_Example.v
