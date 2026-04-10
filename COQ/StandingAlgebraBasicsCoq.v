@@ -1,3 +1,9 @@
+(** Standing Algebra (Σᴿ)
+ * Basic Derived Properties and Lemmas
+ *
+ * This file depends only on StandingAlgebraCoreCoq.v.
+ *)
+
 From StandingAlgebra Require Import StandingAlgebraCoreCoq.
 
 Require Import Coq.Arith.Arith.
@@ -50,22 +56,6 @@ Proof.
   assumption.
 Qed.
 
-Lemma bounded_drift_no_large_jump :
-  forall F a,
-    Admissible F ->
-    σ (ApplyAgent F a) <= S (σ a).
-Proof.
-  intros F a Hadm.
-  destruct (bounded_drift F a Hadm) as [H | [H | H]].
-  - rewrite H; apply le_n_S; apply le_n.
-  - rewrite H; apply le_n.
-  - exfalso.
-    have Hnondec := ALRP_standing_preservation F a Hadm.
-    rewrite H in Hnondec.
-    apply (Nat.lt_irrefl (σ (ApplyAgent F a))).
-    exact (Nat.lt_le_trans _ _ _ (Nat.lt_succ_diag_r _) Hnondec).
-Qed.
-
 Lemma successor_is_increase :
   forall a,
     σ a < σ (Realize_S a).
@@ -99,6 +89,3 @@ Proof.
   apply violation_implies_escalation.
   exact Hbad.
 Qed.
-
-
-
