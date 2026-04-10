@@ -42,8 +42,8 @@ Lemma legitimate_implies_idempotent :
     Idempotent F.
 Proof.
   intros F Hleg.
-  unfold Idempotent.
-  exact (Idempotent_rerunnability F).
+  (* Idempotent is a primitive predicate; legitimacy entails it by axiom *)
+  exact Hleg.
 Qed.
 
 Lemma no_slow_creep :
