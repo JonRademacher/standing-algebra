@@ -14,7 +14,7 @@ Require Import Coq.Logic.Classical.
 (* ========================================= *)
 
 Definition StandingPreserved (F : Operation) : Prop :=
-  forall a : Agent, σ a <= σ (ApplyAgent F a).
+  forall a : Agent, σ (ApplyAgent F a) >= σ a.
 
 Definition StrictlyRaisesStanding (F : Operation) (a : Agent) : Prop :=
   σ (ApplyAgent F a) > σ a.
