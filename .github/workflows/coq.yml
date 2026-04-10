@@ -19,6 +19,10 @@ jobs:
         with:
           coq_version: '8.19'
           script: |
+            mkdir -p /tmp/coqbuild
+            cp -r COQ /tmp/coqbuild/
+            cd /tmp/coqbuild
+            
             coqc -q -R COQ StandingAlgebra COQ/StandingAlgebraCoreCoq.v
             coqc -q -R COQ StandingAlgebra COQ/StandingAlgebraBasicsCoq.v
             coqc -q -R COQ StandingAlgebra COQ/StandingAlgebra_Model_Example.v
