@@ -1,9 +1,3 @@
-(** Standing Algebra (Σᴿ)
- * Basic Derived Properties and Lemmas
- *
- * This file depends only on StandingAlgebraCoreCoq.v.
- *)
-
 From StandingAlgebra Require Import StandingAlgebraCoreCoq.
 
 Require Import Coq.Arith.Arith.
@@ -36,11 +30,6 @@ Proof.
   assumption.
 Qed.
 
-(* NOTE:
-   We do NOT prove Legitimate -> Idempotent here,
-   because Idempotent is an opaque predicate in the Core.
-   Instead, we use the actual behavioral axiom directly. *)
-
 Lemma legitimate_is_rerunnable :
   forall F s,
     Legitimate F ->
@@ -70,7 +59,11 @@ Proof.
   destruct (bounded_drift F a Hadm) as [H | [H | H]].
   - rewrite H; apply le_n_S; apply le_n.
   - rewrite H; apply le_n.
-  - rewrite H; apply le_n.
+  - exfalso.
+    have Hnondec := ALRP_standing_preservation F a Hadm.
+    rewrite H in Hnondec.
+    apply (Nat.lt_irrefl (σ (ApplyAgent F a))).
+    exact (Nat.lt_le_trans _ _ _ (Nat.lt_succ_diag_r _) Hnondec).
 Qed.
 
 Lemma successor_is_increase :
@@ -106,5 +99,6 @@ Proof.
   apply violation_implies_escalation.
   exact Hbad.
 Qed.
+
 
 
