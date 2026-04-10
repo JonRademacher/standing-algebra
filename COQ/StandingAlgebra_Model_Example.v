@@ -6,6 +6,7 @@ From StandingAlgebra Require Import StandingAlgebraBasicsCoq.
 
 Require Import Coq.Arith.Arith.
 Require Import Coq.Logic.Classical.
+Require Import Lia.
 
 Section SigmaR_Model_Example.
 
