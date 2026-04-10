@@ -8,6 +8,7 @@ From StandingAlgebra Require Import StandingAlgebraCoreCoq.
 
 Require Import Coq.Arith.Arith.
 Require Import Coq.Logic.Classical.
+Require Import Lia.
 
 (* ========================================= *)
 (* Derived Definitions *)
