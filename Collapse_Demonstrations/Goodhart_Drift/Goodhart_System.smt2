@@ -1,26 +1,39 @@
 (set-logic AUFLIA)
 
-; True value and proxy metric
+; ---------------------------------
+; Finite Goodhart system (bounded)
+; ---------------------------------
+
 (declare-fun true_value (Int) Int)
 (declare-fun proxy (Int) Int)
 
-; Each step legitimately improves the proxy
+; ---- Finite time domain ----
+; We restrict time to a small finite window
 (assert (forall ((t Int))
-  (> (proxy (+ t 1)) (proxy t))))
+  (and (>= t 0) (<= t 10))))
 
-; The proxy is bounded (finite system)
+; ---- Proxy improves locally ----
+(assert (forall ((t Int))
+  (=> (and (>= t 0) (< t 10))
+      (> (proxy (+ t 1)) (proxy t)))))
+
+; ---- Proxy is bounded (finite system) ----
 (assert (forall ((t Int))
   (<= (proxy t) 100)))
 
-; True value is initially aligned
+; ---- True value initially non-negative ----
 (assert (forall ((t Int))
   (>= (true_value t) 0)))
 
-; Goodhart collapse:
-; there exists a time where proxy improves but true value worsens
+; ---- Goodhart collapse ----
+; There exists a step where proxy improves
+; but true value worsens
 (assert (exists ((t Int))
   (and
+    (>= t 0)
+    (< t 10)
     (> (proxy (+ t 1)) (proxy t))
     (< (true_value (+ t 1)) (true_value t)))))
 
 (check-sat)
+(get-model)
