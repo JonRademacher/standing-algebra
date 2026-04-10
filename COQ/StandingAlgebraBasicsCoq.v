@@ -1,28 +1,26 @@
-(**
- * Standing Algebra (Σᴿ)
+(** Standing Algebra (Σᴿ)
  * Basic Derived Properties and Lemmas
  *
- * This file depends only on SigmaR_Core.v.
+ * This file depends only on StandingAlgebraCoreCoq.v.
  *)
 
-Require Import StandingAlgebraCoreCoq.
+From StandingAlgebra Require Import StandingAlgebraCoreCoq.
 
 Require Import Coq.Arith.Arith.
 Require Import Coq.Logic.Classical.
-
 
 (* ========================================= *)
 (* Derived Definitions *)
 (* ========================================= *)
 
 Definition StandingPreserved (F : Operation) : Prop :=
-  forall a : Agent, σ a <= σ (apply F a).
+  forall a : Agent, σ a <= σ (ApplyAgent F a).
 
 Definition StrictlyRaisesStanding (F : Operation) (a : Agent) : Prop :=
-  σ (apply F a) > σ a.
+  σ (ApplyAgent F a) > σ a.
 
 Definition NoStandingLoss (F : Operation) : Prop :=
-  forall a : Agent, ~(σ (apply F a) < σ a).
+  forall a : Agent, ~(σ (ApplyAgent F a) < σ a).
 
 (* ========================================= *)
 (* Lemmas *)
@@ -51,7 +49,7 @@ Qed.
 Lemma no_slow_creep :
   forall F a,
     Legitimate F ->
-    apply F (apply F a) = apply F a.
+    ApplyAgent F (ApplyAgent F a) = ApplyAgent F a.
 Proof.
   intros.
   apply Idempotent_rerunnability; assumption.
@@ -60,7 +58,7 @@ Qed.
 Lemma bounded_drift_no_large_jump :
   forall F a,
     Admissible F ->
-    σ (apply F a) <= S (σ a).
+    σ (ApplyAgent F a) <= S (σ a).
 Proof.
   intros F a Hadm.
   destruct (bounded_drift F a Hadm) as [H | [H | H]].
@@ -79,20 +77,11 @@ Proof.
 Qed.
 
 (* ========================================= *)
-(* Notes *)
+(* Universality (Contrapositive) *)
 (* ========================================= *)
-(**
- - This file introduces no new axioms.
- - All results are first-order derivations from SigmaR_Core.
- - Proofs here are intentionally simple and compositional.
- *)
-
-(* --------------------------------------------- *)
-(* Universality (Contrapositive)                 *)
-(* --------------------------------------------- *)
 
 Definition EscalatesDomination (F : Operation) (s : State) : Prop :=
-  DomPressure (apply F s) > DomPressure s.
+  DomPressure (ApplyState F s) > DomPressure s.
 
 Axiom violation_implies_escalation :
   forall (F : Operation) (s : State),
@@ -111,4 +100,4 @@ Proof.
   apply violation_implies_escalation.
   exact Hbad.
 Qed.
-``
+
