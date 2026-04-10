@@ -8,7 +8,6 @@
 Require Import StandingAlgebraCoreCoq.
 
 Require Import Coq.Arith.Arith.
-Require Import Coq.Arith.Le.
 Require Import Coq.Logic.Classical.
 
 
