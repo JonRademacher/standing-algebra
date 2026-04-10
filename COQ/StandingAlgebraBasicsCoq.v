@@ -62,7 +62,7 @@ Lemma successor_is_increase :
 Proof.
   intro a.
   rewrite realize_S_spec.
-  apply lt_n_Sn.
+  apply Nat.lt_succ_diag_r.
 Qed.
 
 (* ========================================= *)
