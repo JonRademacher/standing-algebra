@@ -1,4 +1,4 @@
-; Standing Algebra (Σᴿ) formalization in SMT-LIB (Z3).
+; Standing Algebra formalization in SMT-LIB (Z3).
 
 ; Sort declarations (Agents, Operations, global States, Coupling kind, Remedy levels)
 (declare-sort Agent 0)
