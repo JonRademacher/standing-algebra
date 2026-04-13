@@ -94,7 +94,6 @@
   (=> (Admissible F)
       (>= (sigma (apply F i)) (sigma i)))))
 
-; ✅ FIXED Drift (guarded)
 (assert (forall ((F Operation) (i Agent))
   (=> (Drift F)
       (or (= (sigma (apply F i)) (sigma i))
