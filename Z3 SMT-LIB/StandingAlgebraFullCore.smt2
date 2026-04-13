@@ -1,7 +1,7 @@
 (set-logic AUFLIA)
 
 ; ============================================================
-; Standing Algebra Σᴿ — Maximal SAT Core
+; Standing Algebra Σᴿ — Final Max‑SAT Core (Z3‑SAT)
 ; ============================================================
 
 ; -----------------------------
@@ -41,6 +41,19 @@
   (or (= x y) (= x (+ y 1)) (= y (+ x 1))))
 
 ; ============================================================
+; Global Sanity Invariants (CRITICAL)
+; ============================================================
+
+; Standing is non‑negative
+(assert (forall ((i Agent)) (>= (sigma i) 0)))
+
+; Capacity bounds are non‑negative
+(assert (forall ((c Int)) (>= (B c) 0)))
+
+; Degree is non‑negative
+(assert (forall ((i Agent)) (>= (deg i) 0)))
+
+; ============================================================
 ; Tier‑1: Standing Algebra
 ; ============================================================
 
@@ -48,7 +61,7 @@
 (assert (forall ((i Agent))
   (=> (= (sigma i) 0) (Null i))))
 
-; Successor definition (schema‑level generativity)
+; Successor definition (schema‑level)
 (assert (= (S 0) 1))
 (assert (forall ((n Int)) (= (S n) (+ n 1))))
 (assert (forall ((n Int)) (not (= (S n) 0))))
@@ -110,7 +123,7 @@
       (forall ((i Agent))
         (>= (sigma (apply F i)) (sigma i))))))
 
-; Idempotence (fixed)
+; Idempotence
 (assert (forall ((F Operation) (x Agent))
   (=> (Legitimate F)
       (= (apply F (apply F x))
@@ -136,9 +149,9 @@
 
 ; ============================================================
 ; SMT‑SAFE GENERATIVITY BOUND
-; (Prevents forced infinite realization)
 ; ============================================================
 
+; Bounded realization only (schema‑level generativity preserved)
 (assert (forall ((i Agent))
   (=> (< (sigma i) 10)
       (exists ((j Agent))
