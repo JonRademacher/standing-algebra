@@ -138,7 +138,7 @@
             (forall ((i Agent))
               (or (= (sigma (apply F i)) (sigma i))
                   (= (sigma (apply F i)) (S (sigma i)))))
-            (Drift F)))))
+            (Drift F))))
 
 ; Stabilizing ops never raise standing
 (assert (forall ((F Operation) (i Agent))
