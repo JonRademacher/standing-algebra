@@ -1,7 +1,7 @@
 (set-logic AUFLIA)
 
 ; ============================================================
-; Standing Algebra Σᴿ — Final Max‑SAT Core (Z3‑SAT)
+; Standing Algebra Σᴿ — Final Max‑SAT Core (Stratified)
 ; ============================================================
 
 ; -----------------------------
@@ -31,6 +31,7 @@
 
 (declare-fun Admissible (Operation) Bool)
 (declare-fun Legitimate (Operation) Bool)
+(declare-fun Stabilizing (Operation) Bool)
 (declare-fun Drift (Operation) Bool)
 (declare-fun Repair (Operation) Bool)
 
@@ -41,17 +42,12 @@
   (or (= x y) (= x (+ y 1)) (= y (+ x 1))))
 
 ; ============================================================
-; Global Sanity Invariants (CRITICAL)
+; Global Sanity Invariants
 ; ============================================================
 
-; Standing is non‑negative
 (assert (forall ((i Agent)) (>= (sigma i) 0)))
-
-; Capacity bounds are non‑negative
-(assert (forall ((c Int)) (>= (B c) 0)))
-
-; Degree is non‑negative
 (assert (forall ((i Agent)) (>= (deg i) 0)))
+(assert (forall ((c Int)) (>= (B c) 0)))
 
 ; ============================================================
 ; Tier‑1: Standing Algebra
@@ -61,7 +57,7 @@
 (assert (forall ((i Agent))
   (=> (= (sigma i) 0) (Null i))))
 
-; Successor definition (schema‑level)
+; Successor (schema‑level)
 (assert (= (S 0) 1))
 (assert (forall ((n Int)) (= (S n) (+ n 1))))
 (assert (forall ((n Int)) (not (= (S n) 0))))
@@ -106,7 +102,7 @@
 (assert (exists ((i Agent)) (= (sigma i) 1)))
 
 ; ============================================================
-; Tier‑2: Structural Legitimacy
+; Tier‑2: Structural Legitimacy (Stratified)
 ; ============================================================
 
 ; Capacity‑indexed autonomy
@@ -123,19 +119,19 @@
       (forall ((i Agent))
         (>= (sigma (apply F i)) (sigma i))))))
 
-; Idempotence
+; Idempotence ONLY for stabilizing legitimate ops
 (assert (forall ((F Operation) (x Agent))
-  (=> (Legitimate F)
+  (=> (and (Legitimate F) (Stabilizing F))
       (= (apply F (apply F x))
          (apply F x)))))
 
-; Bounded drift
+; Drift constraint
 (assert (forall ((D Operation) (i Agent))
   (=> (Drift D)
       (and (OneStepDiff (sigma (apply D i)) (sigma i))
            (OneStepDiff (deg (apply D i)) (deg i))))))
 
-; Unified legitimacy (no hidden selection)
+; Unified legitimacy (allows successor or stability)
 (assert (forall ((F Operation))
   (iff (Legitimate F)
        (and (Admissible F)
@@ -144,14 +140,26 @@
                   (= (sigma (apply F i)) (S (sigma i)))))
             (Drift F)))))
 
-; Identity operation
+; Stabilizing ops never raise standing
+(assert (forall ((F Operation) (i Agent))
+  (=> (and (Legitimate F) (Stabilizing F))
+      (= (sigma (apply F i)) (sigma i)))))
+
+; Successor‑raising ops are non‑stabilizing
+(assert (forall ((F Operation))
+  (=> (and (Legitimate F)
+           (exists ((i Agent))
+             (= (sigma (apply F i)) (S (sigma i)))))
+      (not (Stabilizing F)))))
+
+; Identity is stabilizing and legitimate
 (assert (Legitimate Id))
+(assert (Stabilizing Id))
 
 ; ============================================================
-; SMT‑SAFE GENERATIVITY BOUND
+; SMT‑SAFE GENERATIVITY (BOUNDED REALIZATION)
 ; ============================================================
 
-; Bounded realization only (schema‑level generativity preserved)
 (assert (forall ((i Agent))
   (=> (< (sigma i) 10)
       (exists ((j Agent))
