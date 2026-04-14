@@ -1,7 +1,7 @@
 ; StandingAlgebra_Emergency.smt2
 (set-logic AUFLIA)
 
-(include "StandingAlgebra_MaxSAT_UltraSafe.smt2")
+(include "StandingAlgebraFullCore.smt2")
 
 (declare-const EmergencyEnabled Bool)
 (assert EmergencyEnabled)
