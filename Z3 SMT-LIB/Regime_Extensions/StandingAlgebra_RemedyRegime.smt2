@@ -1,7 +1,7 @@
 ; StandingAlgebra_Remedy.smt2
 (set-logic AUFLIA)
 
-(include "StandingAlgebra_MaxSAT_UltraSafe.smt2")
+(include "StandingAlgebraFullCore.smt2")
 
 (declare-datatypes ((RemedyLevel 0))
   ((RemedyLevel CounterSpeech Friction Damping Removal Exceptional)))
