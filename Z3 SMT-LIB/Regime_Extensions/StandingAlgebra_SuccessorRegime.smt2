@@ -1,7 +1,7 @@
 ; StandingAlgebra_Successor.smt2
 (set-logic AUFLIA)
 
-(include "StandingAlgebra_MaxSAT_UltraSafe.smt2")
+(include "StandingAlgebraFullCore.smt2")
 
 ; Enable successor realization only under a guard
 (declare-const SuccessorEnabled Bool)
