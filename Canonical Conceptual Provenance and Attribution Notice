@@ -1,0 +1,136 @@
+# Standing Algebra (Σᴿ)  
+## Conceptual Provenance, Attribution, and Derivative Works Notice
+
+**Architect:** Jonathan Rademacher  
+**Framework Name:** Standing Algebra (Σᴿ)  
+**Initial Public Disclosure:** https://zenodo.org/records/19186551
+**Canonical Repositories:**  
+- Standing Algebra (foundational): https://github.com/[…]/standing-algebra  
+- Standing Algebra AI Policy Layer: https://github.com/[…]/Standing-Algebra-AI-Policy-Layer  
+
+---
+
+## 1. Purpose of This Document
+
+This document establishes the **conceptual provenance**, **semantic boundaries**, and **attribution requirements** for the framework known as **Standing Algebra (Σᴿ)**.
+
+It is intended to protect the *ideas themselves*, not merely any particular codebase, implementation, or variable naming scheme.
+
+Standing Algebra is a **formal, structural framework**, and its protection depends on clearly identifying what constitutes **derivative use of the concept**, even when re‑implemented independently.
+
+---
+
+## 2. What Standing Algebra Is (Canonical Definition)
+
+Standing Algebra (Σᴿ) is a structural framework defined by the **following non‑optional premises and guarantees**:
+
+1. **Standing (σ)** as a non‑negative structural measure of agent viability or legitimacy.
+2. **Capacity bounds** that limit admissible changes to standing.
+3. **Non‑selection as a semantic guarantee**:  
+   No agent, output, or outcome is chosen or optimized among alternatives.
+4. **Recursive constraint ratcheting**:  
+   When constraints cannot be jointly satisfied, the constraint space itself is modified (reframed), not the outcome selected.
+5. **Capacity ratcheting via explanation**:  
+   If no admissible outcome exists, the system must explain the structural impossibility and the conditions under which feasibility would be restored.
+6. **Second‑order policy layers** that constrain first‑order generative or operational systems.
+7. **Emergency as a bounded, second‑order mode** that cannot be invoked without remedy failure and cannot ratchet permanently.
+8. **Structural integrity over preference aggregation**:  
+   The system evaluates invariant preservation, not utility, ranking, or optimization.
+9. **Symmetric treatment of agents** under constraint failure (no sacrificial selection).
+10. **Explicit exclusion of Goodhart‑style collapse mechanisms** via structural unsatisfiability.
+
+Any system that implements **most or all of these premises together** is implementing **Standing Algebra**, regardless of terminology or variable naming.
+
+---
+
+## 3. What Constitutes a Derivative Work
+
+A work is considered **derivative of Standing Algebra (Σᴿ)** if it:
+
+- Reproduces the above premises in substance,
+- Preserves the same structural guarantees and exclusions,
+- Implements recursive constraint ratcheting instead of selection,
+- Uses explanation or capacity expansion as a response to infeasibility,
+- Or presents itself as solving similar coordination, safety, or governance problems using these mechanisms.
+
+This includes, but is not limited to:
+
+- Re‑implementations in other programming languages,
+- Formalizations using different logics or proof assistants,
+- AI safety or governance systems using structurally equivalent mechanisms,
+- Renamed or rebranded frameworks that preserve the same semantic structure.
+
+**Renaming variables, symbols, or modules does not negate derivation.**
+
+---
+
+## 4. Attribution Requirement (Conceptual, Not Technical)
+
+Any derivative work **must attribute**:
+
+> *Standing Algebra (Σᴿ), architected by Jonathan Rademacher.*
+
+Attribution may be given in:
+
+- academic citations,
+- documentation,
+- repository provenance files,
+- or equivalent professional acknowledgments.
+
+This requirement applies **regardless of whether the original code is used**.
+
+---
+
+## 5. Non‑Restriction Clause
+
+This framework is released to encourage use, extension, and adaptation.
+
+Nothing in this notice:
+
+- prohibits modification,
+- restricts commercial use,
+- enforces licensing conditions at runtime,
+- or prevents independent innovation.
+
+The requirement is **honest attribution**, not permission.
+
+---
+
+## 6. Misrepresentation Clause
+
+A derivative work **must not claim** to implement Standing Algebra (Σᴿ) if it:
+
+- removes non‑selection guarantees,
+- replaces constraint ratcheting with optimization,
+- introduces agent ranking or sacrifice,
+- or otherwise violates the premises listed in Section 2.
+
+Such a system may be inspired by Standing Algebra, but it is not Standing Algebra.
+
+---
+
+## 7. Evidence of Priority and Authorship
+
+Evidence supporting the provenance of Standing Algebra includes:
+
+- timestamped public repositories,
+- academic preprints and working papers,
+- versioned code history,
+- formal SMT / proof encodings,
+- and cryptographic timestamps where applicable.
+
+This document itself is intended to be timestamped and publicly verifiable.
+
+---
+
+## 8. Closing Statement
+
+Standing Algebra (Σᴿ) is a **conceptual framework**, not a brand or product.
+
+Its protection relies on **clarity of definition**, **public disclosure**, and **community norms of attribution**, not technical enforcement.
+
+This document defines those boundaries explicitly.
+
+---
+
+*End of document.*
