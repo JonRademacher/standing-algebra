@@ -142,9 +142,9 @@ jobs:
       # =====================================================
       - name: Goodhart System Alone — SAT
         run: |
-          z3 Goodhart_Drift/Goodhart_System.smt2
+          z3 Collapse_Demonstrations/Goodhart_Drift/Goodhart_System.smt2
 
       - name: Goodhart + Standing Algebra — UNSAT
         run: |
           ! z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-                Goodhart_Drift/Goodhart_With_StandingAlgebra.smt2 | grep -q "unsat"
+                Collapse_Demonstrations/Goodhart_Drift/Goodhart_With_StandingAlgebra.smt2 | grep -q "unsat"
