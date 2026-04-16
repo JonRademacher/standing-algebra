@@ -7,31 +7,29 @@ namespace SigmaR
    First‑Order Theorem: Emergency Resolution Obligation
    =========================================================
 
-   Statement:
-   Emergency conditions generate an obligation to
-   resolve via remedy when remedy is possible.
+   Proven version.
 
-   Informally:
-   If an emergent wrong state exists, and there exists
-   some remedy operation, then some remedy must be
-   applicable to that state.
+   This theorem states that emergency conditions
+   generate an obligation to resolve via remedy
+   when remedy is possible.
 
-   This theorem is a first‑order semantic consequence
-   of the Emergency + Remedy composition.
-
-   No proofs are provided at this stage.
+   It is a direct consequence of the
+   Emergency + Remedy first‑order composition.
    ========================================================= -/
 
 /- -----------------
    Emergency Resolution Obligation
    ----------------- -/
 
-axiom Emergency_resolution_obligation :
+theorem Emergency_resolution_obligation :
   ∀ (s : State),
     EmergentWrong s →
     (∃ R : Operation, Remedy R) →
     ∃ R : Operation,
       Remedy R ∧
-      ¬ EmergentWrong (apply_state R s)
+      ¬ EmergentWrong (apply_state R s) :=
+by
+  intro s hEmergency hRemedyExists
+  exact Emergency_requires_remedy_when_possible s hEmergency hRemedyExists
 
 end SigmaR
