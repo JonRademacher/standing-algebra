@@ -7,30 +7,21 @@ namespace SigmaR
    First‑Order Theorem: Continuation Stability
    =========================================================
 
-   Statement:
-   Successor continuation is stable under bounded,
-   admissible system evolution.
+   Proven version.
 
-   Informally:
-   If successor access exists for an agent, then after
-   any admissible drift step, successor access still
-   realizes proper successor standing — not a degraded,
-   stalled, or distorted continuation.
+   This theorem states that successor continuation
+   remains structurally stable under admissible
+   bounded drift.
 
-   This theorem strengthens non‑erosion by asserting
-   relational stability, not just existence.
-
-   This is a first‑order semantic consequence of the
-   Successor + Drift compositions.
-
-   No proofs are provided at this stage.
+   It is a direct consequence of the
+   Successor + Drift first‑order composition.
    ========================================================= -/
 
 /- -----------------
    Continuation Stability
    ----------------- -/
 
-axiom Continuation_stability :
+theorem Continuation_stability :
   ∀ (a : Agent),
     (∃ F : Operation, SuccessorOp F) →
     ∀ (D : Operation),
@@ -38,6 +29,11 @@ axiom Continuation_stability :
       ∃ F : Operation,
         SuccessorOp F ∧
         σ (apply F (apply D a)) =
-          Nat.succ (σ (apply D a))
+          Nat.succ (σ (apply D a)) :=
+by
+  intro a hSucc D hDrift
+  rcases hSucc with ⟨F_succ, hF_succ⟩
+  refine ⟨F_succ, hF_succ, ?_⟩
+  exact Successor_preserved_under_drift F_succ D a hF_succ hDrift
 
 end SigmaR
