@@ -7,36 +7,33 @@ namespace SigmaR
    First‑Order Theorem: Successor Non‑Erosion
    =========================================================
 
-   Statement:
-   Bounded drift cannot eliminate access to successor standing.
+   Proven version.
 
-   Informally:
-   If successor access exists, then no admissible drift
-   operation can erode that access.
+   This theorem is a direct consequence of the
+   first‑order Successor + Drift composition.
 
-   This theorem is a direct instantiation of the
-   Successor + Drift first‑order composition.
-
-   No new axioms are introduced here.
+   It is safe to prove at this stage because it
+   introduces no new commitments and merely
+   repackages an existing structural axiom.
    ========================================================= -/
 
 /- -----------------
-   Successor Non‑Erosion Theorem
+   Successor Non‑Erosion
    ----------------- -/
 
 theorem Successor_non_erosion :
   ∀ (a : Agent),
     (∃ F : Operation, SuccessorOp F) →
-    (∀ D : Operation, Drift D →
-       ∃ F : Operation,
-         SuccessorOp F ∧
-         σ (apply F (apply D a)) = Nat.succ (σ (apply D a))) :=
+    ∀ (D : Operation),
+      Drift D →
+      ∃ F : Operation,
+        SuccessorOp F ∧
+        σ (apply F (apply D a)) =
+          Nat.succ (σ (apply D a)) :=
 by
-  -- This theorem follows directly from the
-  -- SuccessorDrift first‑order composition.
-  --
-  -- Proof will be supplied once the composition
-  -- axioms are imported as lemmas.
-  admit
+  intro a hSucc D hDrift
+  rcases hSucc with ⟨F_succ, hF_succ⟩
+  refine ⟨F_succ, hF_succ, ?_⟩
+  exact Successor_preserved_under_drift F_succ D a hF_succ hDrift
 
 end SigmaR
