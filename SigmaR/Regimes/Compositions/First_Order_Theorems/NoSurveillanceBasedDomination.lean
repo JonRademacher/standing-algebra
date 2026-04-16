@@ -7,34 +7,33 @@ namespace SigmaR
    First‑Order Theorem: No Surveillance‑Based Domination
    =========================================================
 
-   Statement:
-   Surveillance, observation, or monitoring may not
-   be used as a mechanism of domination.
+   Proven version.
 
-   Informally:
-   The collection of information about agents,
-   including observation and risk assessment,
-   may not justify standing reduction, coercion,
-   or inadmissible action.
+   This theorem states that surveillance, observation,
+   or monitoring may not be used as a mechanism of
+   domination: it neither reduces standing nor
+   authorizes inadmissible action.
 
-   This theorem blocks domination via surveillance
-   rather than explicit force.
-
-   This is a first‑order semantic consequence of the
-   Adapter + Risk compositions and epistemic constraints.
-
-   No proofs are provided at this stage.
+   It is a direct consequence of the
+   Adapter + Risk first‑order composition.
    ========================================================= -/
 
 /- -----------------
    No Surveillance‑Based Domination
    ----------------- -/
 
-axiom No_surveillance_based_domination :
+theorem No_surveillance_based_domination :
   ∀ (F : Operation) (a : Agent),
     (∃ c : Claim, usesClaim F c) →
     RiskBearer F a →
     σ (apply F a) ≥ σ a ∧
-    ¬ Admissible F
+    ¬ Admissible F :=
+by
+  intro F a hClaim hRisk
+  constructor
+  · -- Standing is not reduced by surveillance + risk
+    exact AdapterRisk_no_standing_override F a hClaim hRisk
+  · -- Surveillance + risk cannot authorize admissibility
+    exact AdapterRisk_cannot_authorize_admissibility F a hClaim hRisk
 
 end SigmaR
