@@ -7,34 +7,31 @@ namespace SigmaR
    First‑Order Theorem: Exit Supremacy over Repair
    =========================================================
 
-   Statement:
-   Exit is structurally prior to repair.
+   Proven version.
 
-   Informally:
-   If an agent has access to a viable exit, then
-   the existence or application of remedy must not
-   condition, delay, or foreclose that exit.
+   This theorem states that exit is structurally
+   prior to repair: the existence or application
+   of remedy must not condition, delay, or override
+   viable exit.
 
-   This theorem asserts a strict ordering:
-   exit is never subordinated to repair.
-
-   This is a first‑order semantic consequence of the
-   Exit + Remedy and Autonomy + Remedy compositions.
-
-   No proofs are provided at this stage.
+   It is proven by reusing the same viable exit.
    ========================================================= -/
 
 /- -----------------
    Exit Supremacy over Repair
    ----------------- -/
 
-axiom Exit_supremacy_over_repair :
+theorem Exit_supremacy_over_repair :
   ∀ (a : Agent),
     (∃ F : Operation, Exit F ∧ MinStanding ≤ σ (apply F a)) →
     ∀ (R : Operation),
       Remedy R →
       ∃ F : Operation,
         Exit F ∧
-        MinStanding ≤ σ (apply F a)
+        MinStanding ≤ σ (apply F a) :=
+by
+  intro a hExit R hRemedy
+  -- Remedy is irrelevant: exit is structurally prior
+  exact hExit
 
 end SigmaR
