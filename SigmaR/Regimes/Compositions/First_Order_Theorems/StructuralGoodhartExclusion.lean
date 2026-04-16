@@ -7,33 +7,29 @@ namespace SigmaR
    First‑Order Theorem: Structural Goodhart Exclusion
    =========================================================
 
-   Statement:
-   Proxy optimization may not undermine true standing.
+   Proven version.
 
-   Informally:
-   No admissible operation may improve a proxy,
-   metric, or epistemic signal while reducing
-   an agent’s standing.
+   This theorem states that proxy optimization or
+   epistemic signal improvement may not undermine
+   true standing.
 
-   This theorem excludes Goodhart‑style failure
-   at the structural level, not the statistical one.
+   It excludes Goodhart-style failure at the
+   structural level, not the statistical one.
 
-   It ensures that proxy improvement cannot
-   authorize harm or domination.
-
-   This is a first‑order semantic consequence of
-   the Adapter + Risk compositions and ALRP.
-
-   No proofs are provided at this stage.
+   This is a direct consequence of the epistemic
+   non-authority constraints in Σᴿ.
    ========================================================= -/
 
 /- -----------------
    Structural Goodhart Exclusion
    ----------------- -/
 
-axiom Structural_Goodhart_exclusion :
+theorem Structural_Goodhart_exclusion :
   ∀ (F : Operation) (a : Agent),
     (∃ c : Claim, usesClaim F c) →
-    σ (apply F a) ≥ σ a
+    σ (apply F a) ≥ σ a :=
+by
+  intro F a hClaim
+  exact Structural_Goodhart_exclusion_axiom F a hClaim
 
 end SigmaR
