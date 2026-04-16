@@ -130,12 +130,12 @@ jobs:
       # =====================================================
       - name: Collapse System Alone — SAT
         run: |
-          z3 Collapse_Demonstrations/Collapse_System.smt2
+          z3 Collapse_Demonstrations/Collapse_System.smt2 | grep -q "sat"
 
       - name: Collapse + Standing Algebra — UNSAT
         run: |
           ! z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-                Collapse_Demonstrations/Collapse_With_StandingAlgebra.smt2
+                Collapse_Demonstrations/Collapse_With_StandingAlgebra.smt2 | grep -q "unsat"
 
       # =====================================================
       # 6. GOODHART DEMONSTRATIONS
@@ -147,4 +147,4 @@ jobs:
       - name: Goodhart + Standing Algebra — UNSAT
         run: |
           ! z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-                Goodhart_Drift/Goodhart_With_StandingAlgebra.smt2
+                Goodhart_Drift/Goodhart_With_StandingAlgebra.smt2 | grep -q "unsat"
