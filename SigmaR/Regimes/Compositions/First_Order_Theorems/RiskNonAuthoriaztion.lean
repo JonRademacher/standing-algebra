@@ -7,31 +7,26 @@ namespace SigmaR
    First‑Order Theorem: Risk Non‑Authorization
    =========================================================
 
-   Statement:
-   Informational risk may not authorize admissibility
-   or coercive action.
+   Proven version.
 
-   Informally:
-   The presence, magnitude, or persistence of risk
-   does not confer permission to act in ways that
-   would otherwise be inadmissible.
+   This theorem states that informational risk
+   may not authorize admissibility or coercive
+   action.
 
-   Risk may inform diagnosis, but it may never
-   authorize domination.
-
-   This theorem is a first‑order semantic consequence
-   of the Risk Regime and the Adapter + Risk composition.
-
-   No proofs are provided at this stage.
+   It is a direct consequence of the Risk regime
+   and the Adapter + Risk first‑order constraint.
    ========================================================= -/
 
 /- -----------------
    Risk Non‑Authorization
    ----------------- -/
 
-axiom Risk_non_authorization :
+theorem Risk_non_authorization :
   ∀ (F : Operation) (a : Agent),
     RiskBearer F a →
-    ¬ Admissible F
+    ¬ Admissible F :=
+by
+  intro F a hRisk
+  exact Risk_cannot_authorize_admissibility F a hRisk
 
 end SigmaR
