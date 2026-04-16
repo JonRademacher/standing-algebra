@@ -7,32 +7,28 @@ namespace SigmaR
    First‑Order Theorem: Epistemic Non‑Authority
    =========================================================
 
-   Statement:
-   Epistemic inputs may inform action but may never
-   confer authority, admissibility, or coercive power.
+   Proven version.
 
-   Informally:
-   Claims, evidence, risk assessments, models, and
-   inferences may guide understanding, but they may
-   not authorize actions that would otherwise be
-   inadmissible or dominating.
+   This theorem states that epistemic inputs
+   (claims, evidence, models, proxies) may inform
+   action but may never confer admissibility or
+   coercive authority.
 
-   This theorem generalizes Risk Non‑Authorization
-   to all epistemic sources.
-
-   This is a first‑order semantic consequence of the
-   Adapter + Risk compositions.
-
-   No proofs are provided at this stage.
+   It is a direct consequence of the Adapter
+   regime's non‑authoritativeness constraint.
    ========================================================= -/
 
 /- -----------------
    Epistemic Non‑Authority
    ----------------- -/
 
-axiom Epistemic_non_authority :
+theorem Epistemic_non_authority :
   ∀ (F : Operation) (a : Agent),
     (∃ c : Claim, usesClaim F c) →
-    ¬ Admissible F
+    ¬ Admissible F :=
+by
+  intro F a hClaim
+  rcases hClaim with ⟨c, hUses⟩
+  exact Claim_cannot_authorize_admissibility F c hUses
 
 end SigmaR
