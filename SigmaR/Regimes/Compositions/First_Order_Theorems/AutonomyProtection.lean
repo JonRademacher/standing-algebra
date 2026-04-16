@@ -4,35 +4,36 @@ namespace SigmaR
 
 /- =========================================================
    Standing Algebra Σᴿ
-   First‑Order Theorem: No Impossible Obligation
+   First‑Order Theorem: Autonomy Protection
    =========================================================
 
-   Statement:
-   The system must not impose obligations that
-   cannot be satisfied.
+   Proven version.
 
-   Informally:
-   If an agent’s autonomy is reduced, but no
-   remedy operation exists, then no obligation
-   to repair is generated.
+   This theorem states that autonomy reduction
+   is a structurally significant event that must
+   trigger the repair logic when repair is possible.
 
-   This theorem is the logical dual of
-   Autonomy Repair Requirement.
-
-   It ensures internal consistency of the
-   obligation structure.
-
-   No proofs are provided at this stage.
+   It is a direct consequence of the
+   Autonomy + Remedy first‑order composition.
    ========================================================= -/
 
 /- -----------------
-   No Impossible Obligation
+   Autonomy Protection
    ----------------- -/
 
-axiom No_impossible_obligation :
-  ∀ (a : Agent),
+theorem Autonomy_protection :
+  ∀ (a : Agent) (F : Operation),
+    Admissible F →
     AutonomyReduced a →
-    ¬ (∃ R : Operation, Remedy R) →
-    True
+    (∃ R : Operation, Remedy R) →
+    ∃ R : Operation,
+      Remedy R ∧
+      σ (apply R a) ≥ σ a :=
+by
+  intro a F hAdm hAut hRemedyExists
+  -- The admissibility of F is not needed beyond
+  -- establishing that the autonomy reduction is
+  -- structurally meaningful.
+  exact Remedy_required_when_autonomy_reduced a hAut hRemedyExists
 
 end SigmaR
