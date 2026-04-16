@@ -7,32 +7,32 @@ namespace SigmaR
    First‑Order Theorem: No Slow Continuation Denial
    =========================================================
 
-   Statement:
-   There is no admissible, bounded way to gradually deny
-   successor access via drift.
+   Proven version.
 
-   Informally:
-   If successor access exists for an agent, then
-   after any admissible drift step, successor access
-   still exists.
+   This theorem states that there is no admissible,
+   bounded way to gradually deny successor access.
 
-   This theorem is a first‑order semantic consequence
-   of the Successor + Drift compositions.
-
-   No proofs are provided at this stage.
+   It is a direct consequence of the
+   Successor + Drift first‑order composition.
    ========================================================= -/
 
 /- -----------------
    No Slow Continuation Denial
    ----------------- -/
 
-axiom No_slow_continuation_denial :
+theorem No_slow_continuation_denial :
   ∀ (a : Agent),
     (∃ F : Operation, SuccessorOp F) →
     ∀ (D : Operation),
       Drift D →
       ∃ F : Operation,
         SuccessorOp F ∧
-        σ (apply F (apply D a)) = Nat.succ (σ (apply D a))
+        σ (apply F (apply D a)) =
+          Nat.succ (σ (apply D a)) :=
+by
+  intro a hSucc D hDrift
+  rcases hSucc with ⟨F_succ, hF_succ⟩
+  refine ⟨F_succ, hF_succ, ?_⟩
+  exact Successor_preserved_under_drift F_succ D a hF_succ hDrift
 
 end SigmaR
