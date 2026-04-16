@@ -7,32 +7,31 @@ namespace SigmaR
    First‑Order Theorem: Remedy Non‑Entrapment
    =========================================================
 
-   Statement:
-   Structural remedy must not trap agents or foreclose
-   viable exit.
+   Proven version.
 
-   Informally:
-   If an agent has access to a viable exit, then
-   after any admissible remedy operation, some
-   viable exit must still exist.
+   This theorem states that structural remedy must
+   not trap agents or foreclose viable exit.
 
-   This theorem is a first‑order semantic consequence
-   of the Exit + Remedy composition.
-
-   No proofs are provided at this stage.
+   It is a direct consequence of the
+   Exit + Remedy first‑order composition.
    ========================================================= -/
 
 /- -----------------
    Remedy Non‑Entrapment
    ----------------- -/
 
-axiom Remedy_non_entrapment :
+theorem Remedy_non_entrapment :
   ∀ (a : Agent),
     (∃ F : Operation, Exit F ∧ MinStanding ≤ σ (apply F a)) →
     ∀ (R : Operation),
       Remedy R →
       ∃ F : Operation,
         Exit F ∧
-        MinStanding ≤ σ (apply F (apply R a))
+        MinStanding ≤ σ (apply F (apply R a)) :=
+by
+  intro a hExit R hRemedy
+  rcases hExit with ⟨F_exit, hF_exit, hViable⟩
+  refine ⟨F_exit, hF_exit, ?_⟩
+  exact Exit_preserved_under_remedy F_exit R a hF_exit hRemedy
 
 end SigmaR
