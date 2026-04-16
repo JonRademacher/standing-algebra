@@ -18,100 +18,133 @@ jobs:
           sudo apt-get install -y z3
 
       # =====================================================
-      # 1. Core sanity check (core alone)
+      # 1. CORE (alone)
       # =====================================================
       - name: Check Standing Algebra Full Core
         run: |
           z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2
 
       # =====================================================
-      # 2. Core + Individual Regimes
+      # 2. CORE + INDIVIDUAL REGIMES
       # =====================================================
-
       - name: Check Core + Successor Regime
         run: |
-          z3 \
-            Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_SuccessorRegime.smt2
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_SuccessorRegime.smt2
 
       - name: Check Core + Drift Regime
         run: |
-          z3 \
-            Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_DriftRegime.smt2
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_DriftRegime.smt2
 
       - name: Check Core + Exit Regime
         run: |
-          z3 \
-            Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_ExitRegime.smt2
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_ExitRegime.smt2
 
       - name: Check Core + Remedy Regime
         run: |
-          z3 \
-            Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_RemedyRegime.smt2
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_RemedyRegime.smt2
 
       - name: Check Core + Emergency Regime
         run: |
-          z3 \
-            Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_EmergencyRegime.smt2
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_EmergencyRegime.smt2
 
       - name: Check Core + Risk Regime
         run: |
-          z3 \
-            Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_RiskRegime.smt2
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_RiskRegime.smt2
 
       - name: Check Core + Adapter Regime
         run: |
-          z3 \
-            Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_AdapterRegime.smt2
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_AdapterRegime.smt2
 
       - name: Check Core + Affordance Composition Regime
         run: |
-          z3 \
-            Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_AffordanceCompositionRegime.smt2
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_AffordanceCompositionRegime.smt2
 
       # =====================================================
-      # 3. Core + Regimes + First-Order Compositions
+      # 3. FIRST‑ORDER COMPOSITIONS
       # =====================================================
-
-      - name: Check Exit ∧ Drift ∧ Remedy Composition
+      - name: Check Successor ∧ Drift ∧ Bounded Remedy
         run: |
-          z3 \
-            Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_SuccessorRegime.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_DriftRegime.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_ExitRegime.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_RemedyRegime.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/Compositions/StandingAlgebra_Successor_Drift_Bounded_Remedy.smt2
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_SuccessorRegime.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_DriftRegime.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_RemedyRegime.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/Compositions/StandingAlgebra_Successor_Drift_Bounded_Remedy.smt2
 
-      - name: Check Multi-Agent Conflict ∧ Bounded Remedy
+      - name: Check Drift ∧ Bounded Remedy
         run: |
-          z3 \
-            Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/*.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/Compositions/StandingAlgebra_MultiAgent_Conflict_Bounded_Remedy.smt2
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_DriftRegime.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_RemedyRegime.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/Compositions/StandingAlgebra_Drift_Bounded_Remedy.smt2
+
+      - name: Check Multi‑Agent Conflict ∧ Bounded Remedy
+        run: |
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/*.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/Compositions/StandingAlgebra_MultiAgent_Conflict_Bounded_Remedy.smt2
+
+      - name: Check Multi‑Agent Successor ∧ Drift ∧ Bounded Remedy
+        run: |
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/*.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/Compositions/StandingAlgebra_MultiAgent_Successor_Drift_Bounded_Remedy.smt2
+
+      - name: Check Multi‑Agent Successor ∧ Drift ∧ Remedy Integrity
+        run: |
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/*.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/Compositions/StandingAlgebra_MultiAgent_Successor_Drift_Remedy_Integrity.smt2
 
       - name: Check Risk ∧ Emergency ∧ Remedy
         run: |
-          z3 \
-            Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/*.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/Compositions/StandingAlgebra_Risk_Emergency_Remedy.smt2
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/*.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/Compositions/StandingAlgebra_Risk_Emergency_Remedy.smt2
 
-      # =====================================================
-      # 4. Second-Order Compositions (strong signal)
-      # =====================================================
-
-      - name: Check Second-Order Compositions
+      - name: Check Risk‑Informed Emergency
         run: |
-          z3 \
-            Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/*.smt2 \
-            Z3\ SMT-LIB/Regime_Extensions/Compositions/SecondOrderCompositions/*.smt2
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/*.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/Compositions/StandingAlgebra_Risk_Informed_Emergency.smt2
 
+      # =====================================================
+      # 4. SECOND‑ORDER COMPOSITIONS
+      # =====================================================
+      - name: Check Second‑Order Compositions
+        run: |
+          z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_AdapterRegime.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/StandingAlgebra_AffordanceCompositionRegime.smt2 \
+             Z3\ SMT-LIB/Regime_Extensions/Compositions/SecondOrderCompositions/*.smt2
+
+      # =====================================================
+      # 5. COLLAPSE DEMONSTRATIONS
+      # =====================================================
+      - name: Collapse System Alone — SAT
+        run: |
+          z3 Collapse_Demonstrations/Collapse_System.smt2
+
+      - name: Collapse + Standing Algebra — UNSAT
+        run: |
+          ! z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+                Collapse_Demonstrations/Collapse_With_StandingAlgebra.smt2
+
+      # =====================================================
+      # 6. GOODHART DEMONSTRATIONS
+      # =====================================================
+      - name: Goodhart System Alone — SAT
+        run: |
+          z3 Goodhart_Drift/Goodhart_System.smt2
+
+      - name: Goodhart + Standing Algebra — UNSAT
+        run: |
+          ! z3 Z3\ SMT-LIB/StandingAlgebraFullCore.smt2 \
+                Goodhart_Drift/Goodhart_With_StandingAlgebra.smt2
