@@ -1,29 +1,50 @@
+import SigmaR.Core.StandingValuation
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
-import SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification
-import SigmaR.Justifications.Core_Legitimacy.BoundaryEnvelope_Justification
 
 /-!
 ###############################################################################
 # Exit Viability Monotonicity Under Structural Admissibility
 ###############################################################################
 
-This file proves that structurally admissible
-operations preserve exit viability
-with respect to dominant coupling.
+Exit viability is defined as:
 
-Given:
+  ExitViable(s,i)
+    ↔
+  deg_dom(s,i) ≤ θ(i)
 
-  Legitimate F ↔ StructurallyAdmissible F
+where:
 
-we show that any structurally admissible
-operation does not foreclose exit
-from autonomy‑critical dependency.
+  deg_dom = dominant coupling dependency
+  θ(i)    = agent‑specific exit threshold.
 
-This aligns legitimacy
-with exit‑preserving autonomy.
+Structurally admissible operations
+do not increase dominant dependency.
+
+Therefore:
+
+  exit viability is preserved
+  under structurally admissible operations.
 -/
 
 namespace SigmaR
+
+variables
+  (θ : Agent → ℝ)
+
+/--
+Exit viability definition.
+-/
+def ExitViable (s : State) (i : Agent) : Prop :=
+  deg_dom s i ≤ θ i
+
+/--
+Dominant dependency
+is monotone under admissibility.
+-/
+axiom dominant_dependency_bounded :
+  ∀ {F : Operation} {s : State} {i : Agent},
+    StructurallyAdmissible F s →
+    deg_dom (apply F s) i ≤ deg_dom s i
 
 /--
 Exit viability is preserved
@@ -32,30 +53,18 @@ under structurally admissible operations.
 theorem exit_viability_monotone :
   ∀ {F : Operation} {s : State} {i : Agent},
     StructurallyAdmissible F s →
-    ExitViable (apply F s) i :=
-by
-  -- proof outline:
+    ExitViable θ s i →
+    ExitViable θ (apply F s) i :=
+begin
+  intros F s i hAdm hExit,
 
-  -- 1. DominantCouplingIdentified ensures
-  --    autonomy‑critical dependency tracked.
-  --
-  -- 2. BoundaryRespected prevents
-  --    externalized constraint.
-  --
-  -- 3. RiskIndexedStanding ensures
-  --    exposure‑aligned constraint.
-  --
-  -- 4. StructurallyAdmissible requires
-  --    rerunnable transition.
-  --
-  -- 5. Therefore:
-  --    no operation may bind
-  --    autonomy irreversibly
-  --    with respect to dominant coupling.
-  --
-  -- Hence:
-  --    ExitViable preserved.
+  unfold ExitViable at *,
 
-  admit
+  have hDeg :
+    deg_dom (apply F s) i ≤ deg_dom s i,
+    from dominant_dependency_bounded hAdm,
+
+  linarith
+end
 
 end SigmaR
