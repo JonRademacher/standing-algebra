@@ -1,49 +1,47 @@
 /-!
 ###############################################################################
-# Standing Valuation Layer (Extended)
+# Standing Valuation Layer (Full Extension)
 ###############################################################################
 
-This layer introduces:
+This file defines:
 
-• delta valuation (change in standing),
-• sign properties of valuation change,
-• a minimal notion of risk inheritance,
-• and a structural bridge to admissible update relations.
+• scalar standing valuation σ
+• valuation preorder
+• delta valuation Δσ and its sign
+• minimal risk inheritance
+• capacity-indexed bounds (CIA hook)
+• repair operators (strictly restorative)
+• admissible update monotonicity
+• precise routing of valuation-risk
 
-No aggregation, optimization, or normativity is introduced here.
+No aggregation, optimization, or authority primitives appear here.
+This file is purely structural.
 -/
 
 namespace SigmaR
 
-/-- Core sorts (assumed defined elsewhere in Σᴿ). -/
+/-- Core sorts (defined elsewhere in Σᴿ). -/
 constant Agent : Type
 constant State : Type
 
-/-- Standing valuation for agent `i` at state `s`. -/
+/-- Standing valuation (autonomy-relevant). -/
 constant σ : Agent → State → ℝ
 
-/--
-Order comparison of standing across states for an agent.
-Purely relational; no optimization is implied.
--/
+/-- Capacity bound for each agent (CIA input). -/
+constant cap : Agent → ℝ
+
+/-- Standing order relation. -/
 def ValLe (i : Agent) (s₁ s₂ : State) : Prop :=
   σ i s₁ ≤ σ i s₂
 
-/--
-Reflexivity of standing comparison.
--/
+/-- Reflexivity. -/
 theorem ValLe_refl (i : Agent) (s : State) :
   ValLe i s s :=
-by
-  unfold ValLe
-  exact le_rfl
+by unfold ValLe; exact le_rfl
 
-/--
-Transitivity of standing comparison.
--/
+/-- Transitivity. -/
 theorem ValLe_trans
-  (i : Agent)
-  (s₁ s₂ s₃ : State) :
+  (i : Agent) (s₁ s₂ s₃ : State) :
   ValLe i s₁ s₂ →
   ValLe i s₂ s₃ →
   ValLe i s₁ s₃ :=
@@ -52,12 +50,8 @@ by
   intro h₁ h₂
   exact le_trans h₁ h₂
 
-/--
-Standing valuation induces a preorder on states for each agent.
-Antisymmetry is intentionally *not* assumed.
--/
-theorem ValLe_preorder (i : Agent) :
-  Preorder State :=
+/-- Preorder induced by valuation. -/
+theorem ValLe_preorder (i : Agent) : Preorder State :=
 { le := ValLe i
   le_refl := ValLe_refl i
   le_trans := ValLe_trans i }
@@ -66,114 +60,120 @@ theorem ValLe_preorder (i : Agent) :
 /* Delta valuation                                                            */
 /* -------------------------------------------------------------------------- */
 
-/--
-Delta valuation: change in standing for agent `i`
-between states `s₁` and `s₂`.
-
-Positive = standing increase  
-Zero     = standing preserved  
-Negative = standing reduction
--/
+/-- Change in standing (delta). -/
 def Δσ (i : Agent) (s₁ s₂ : State) : ℝ :=
   σ i s₂ - σ i s₁
 
-/--
-Zero delta iff standing is preserved.
--/
-theorem delta_zero_iff
-  (i : Agent) (s₁ s₂ : State) :
-  Δσ i s₁ s₂ = 0 ↔ σ i s₂ = σ i s₁ :=
-by
-  unfold Δσ
-  constructor
-  · intro h
-    linarith
-  · intro h
-    linarith
-
-/--
-Non-negative delta iff standing does not decrease.
--/
+/-- Non-decrease iff delta ≥ 0. -/
 theorem delta_nonneg_iff
   (i : Agent) (s₁ s₂ : State) :
   Δσ i s₁ s₂ ≥ 0 ↔ ValLe i s₁ s₂ :=
-by
-  unfold Δσ ValLe
-  linarith
+by unfold Δσ ValLe; linarith
 
-/--
-Negative delta iff standing strictly decreases.
--/
+/-- Strict decrease iff delta < 0. -/
 theorem delta_neg_iff
   (i : Agent) (s₁ s₂ : State) :
   Δσ i s₁ s₂ < 0 ↔ σ i s₂ < σ i s₁ :=
-by
-  unfold Δσ
-  linarith
+by unfold Δσ; linarith
+
+/-- Standing preserved iff delta = 0. -/
+theorem delta_zero_iff
+  (i : Agent) (s₁ s₂ : State) :
+  Δσ i s₁ s₂ = 0 ↔ σ i s₂ = σ i s₁ :=
+by unfold Δσ; linarith
 
 /* -------------------------------------------------------------------------- */
 /* Risk inheritance                                                           */
 /* -------------------------------------------------------------------------- */
 
 /--
-Risk inheritance (valuation-only, minimal form).
-
-An agent inherits risk across a transition if
-their standing changes at all.
+Valuation-level risk inheritance:
+the agent bears exposure iff their standing changes.
 -/
 def InheritsRisk (i : Agent) (s₁ s₂ : State) : Prop :=
   Δσ i s₁ s₂ ≠ 0
 
-/--
-Standing-preserving transitions do not transfer valuation risk.
--/
-theorem no_risk_if_delta_zero
+/-- Standing preservation implies no inherited risk. -/
+theorem no_risk_if_preserved
   (i : Agent) (s₁ s₂ : State) :
-  Δσ i s₁ s₂ = 0 →
+  σ i s₂ = σ i s₁ →
   ¬ InheritsRisk i s₁ s₂ :=
 by
-  unfold InheritsRisk
   intro h
-  exact h
+  unfold InheritsRisk Δσ
+  linarith
 
-/--
-Any strict change in standing constitutes risk inheritance.
--/
-theorem risk_if_delta_nonzero
+/-- Any strict decrease implies inherited risk. -/
+theorem risk_if_decrease
   (i : Agent) (s₁ s₂ : State) :
-  σ i s₂ ≠ σ i s₁ →
+  σ i s₂ < σ i s₁ →
   InheritsRisk i s₁ s₂ :=
 by
   unfold InheritsRisk Δσ
-  intro h
   linarith
 
 /* -------------------------------------------------------------------------- */
-/* Bridge to admissible updates (future layer hook)                            */
+/* Capacity-indexed autonomy (CIA)                                             */
+/* -------------------------------------------------------------------------- */
+
+/--
+CIA-compatible valuation:
+standing cannot exceed agent capacity.
+-/
+def CIA_Respected (s : State) : Prop :=
+  ∀ i : Agent, σ i s ≤ cap i
+
+/--
+Delta bounded by capacity difference (CIA bound).
+-/
+def CIA_BoundedDelta (i : Agent) (s₁ s₂ : State) : Prop :=
+  Δσ i s₁ s₂ ≤ cap i - σ i s₁
+
+/* -------------------------------------------------------------------------- */
+/* Repair operators                                                           */
+/* -------------------------------------------------------------------------- */
+
+/--
+A repair transition strictly restores standing.
+(No standing decrease allowed; at least one agent improves.)
+-/
+def Repair (s₁ s₂ : State) : Prop :=
+  (∀ i : Agent, σ i s₁ ≤ σ i s₂) ∧
+  (∃ i : Agent, σ i s₁ < σ i s₂)
+
+/-- Repairs strictly reduce valuation-level risk debt. -/
+theorem repair_has_positive_delta
+  (i : Agent) (s₁ s₂ : State) :
+  Repair s₁ s₂ →
+  Δσ i s₁ s₂ ≥ 0 :=
+by
+  intro h
+  have hmono : σ i s₁ ≤ σ i s₂ := h.left i
+  unfold Δσ
+  linarith
+
+/* -------------------------------------------------------------------------- */
+/* Admissible update hook                                                      */
 /* -------------------------------------------------------------------------- */
 
 /--
 Abstract admissible update relation (defined later).
-
-Read: s₁ ⟶ s₂ is an admissible system update.
 -/
 constant AdmissibleUpdate : State → State → Prop
 
 /--
-Valuation monotonicity requirement for admissible updates.
-
-This is NOT an axiom here — it is a *specification hook*
-that later admissibility definitions must satisfy.
+Valuation monotonicity constraint for admissible updates.
+(This is a specification, not an axiom.)
 -/
 def ValuationMonotoneUnderUpdate : Prop :=
-  ∀ (i : Agent) (s₁ s₂ : State),
+  ∀ i s₁ s₂,
     AdmissibleUpdate s₁ s₂ →
     ValLe i s₁ s₂
 
 /--
-Equivalent delta formulation of valuation monotonicity.
+Equivalent delta-based admissibility constraint.
 -/
-theorem admissible_update_delta_nonneg
+theorem admissible_delta_nonneg
   (H : ValuationMonotoneUnderUpdate)
   (i : Agent) (s₁ s₂ : State) :
   AdmissibleUpdate s₁ s₂ →
@@ -182,5 +182,15 @@ by
   intro hUpd
   have h := H i s₁ s₂ hUpd
   exact (delta_nonneg_iff i s₁ s₂).2 h
+
+/--
+CIA-refined admissibility:
+updates must be valuation-monotone *and* capacity-respecting.
+-/
+def CIA_AdmissibleUpdate : Prop :=
+  ValuationMonotoneUnderUpdate ∧
+  ∀ i s₁ s₂,
+    AdmissibleUpdate s₁ s₂ →
+    CIA_BoundedDelta i s₁ s₂
 
 end SigmaR
