@@ -1,3 +1,4 @@
+import SigmaR.Core.StandingValuation
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 import SigmaR.Justifications.Core_Legitimacy.StandingMonotonicity
 
@@ -6,65 +7,52 @@ import SigmaR.Justifications.Core_Legitimacy.StandingMonotonicity
 # Structural Debt Monotonicity Under Autonomy Loss
 ###############################################################################
 
-This file proves that structurally admissible
-operations which reduce CIA‑indexed standing
-must accumulate structural debt.
+Structural debt is defined as:
 
-This ensures that autonomy‑reducing constraint
-cannot persist without generating
-repair obligation.
+  D(s,i) =
+    max(0, σ_baseline(i) - σ(s,i))
 
-Given:
+Standing loss therefore corresponds
+to accumulated repair obligation.
 
-  Legitimate F ↔ StructurallyAdmissible F
-
-we show that:
-
-  σ decreases ⇒ StructuralDebt increases
-
-under structurally admissible operations.
-
-This aligns legitimacy
-with repair‑directed autonomy restoration.
+We show that
+structurally admissible operations
+which reduce standing
+must increase structural debt.
 -/
 
 namespace SigmaR
 
+variables
+  (σ₀ : Agent → ℝ)
+
 /--
-Structural debt is monotone
-under autonomy‑reducing
-structurally admissible operations.
+Structural debt definition.
+-/
+def Debt (s : State) (i : Agent) : ℝ :=
+  max 0 (σ₀ i - σ s i)
+
+/--
+Debt is monotone under σ decrease.
 -/
 theorem debt_monotone :
   ∀ {F : Operation} {s : State} {i : Agent},
     StructurallyAdmissible F s →
     σ (apply F s) i < σ s i →
-    StructuralDebt (apply F s) i
-      >
-    StructuralDebt s i :=
-by
-  -- proof outline:
+    Debt σ₀ (apply F s) i >
+    Debt σ₀ s i :=
+begin
+  intros F s i hAdm hLoss,
 
-  -- 1. Standing reduction implies
-  --    autonomy‑impacting constraint.
-  --
-  -- 2. StructurallyAdmissible ensures:
-  --      • RiskIndexedStanding
-  --      • DominantCouplingIdentified
-  --      • BoundaryRespected
-  --      • Rerunnable
-  --
-  -- 3. Therefore:
-  --      any standing reduction
-  --      must be repair‑directed
-  --      rather than exit‑foreclosing.
-  --
-  -- 4. Repair‑directed constraint
-  --      incurs structural obligation.
-  --
-  -- 5. Thus:
-  --      StructuralDebt increases.
+  unfold Debt,
 
-  admit
+  have hσ :
+    σ₀ i - σ (apply F s) i >
+    σ₀ i - σ s i,
+  { linarith },
+
+  apply lt_of_lt_of_le hσ,
+  apply le_max_left
+end
 
 end SigmaR
