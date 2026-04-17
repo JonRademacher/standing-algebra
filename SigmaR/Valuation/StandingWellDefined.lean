@@ -14,6 +14,7 @@ No new structure or authority is introduced here.
 
 namespace SigmaR
 
+import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.StandingValuation
 
 /* -------------------------------------------------------------------------- */
