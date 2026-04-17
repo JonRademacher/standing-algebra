@@ -20,6 +20,7 @@ This file closes the valuation-level properties of debt.
 
 namespace SigmaR
 
+import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.StandingValuation
 import SigmaR.Valuation.StandingWellDefined
 
