@@ -20,6 +20,8 @@ This file is purely structural.
 
 namespace SigmaR
 
+import SigmaR.StandingAlgebra_FormalCore
+
 /-- Core sorts (defined elsewhere in Σᴿ). -/
 constant Agent : Type
 constant State : Type
