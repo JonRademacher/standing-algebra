@@ -17,6 +17,7 @@ This file is validation-only and downstream of valuation.
 
 namespace SigmaR
 
+import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.StandingValuation
 import SigmaR.Valuation.StandingWellDefined
 import SigmaR.Valuation.DebtWellDefined
