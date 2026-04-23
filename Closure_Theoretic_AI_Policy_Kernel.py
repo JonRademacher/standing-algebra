@@ -3,7 +3,7 @@ Closure-Theoretic AI Policy Kernel
 =================================
 
 Author: Jon Rademacher
-Contact: jonathan.d.rademacher [at] gmail.com
+Contact: jonathandrademacher@yahoo.com
 Year: 2026
 
 This file implements a minimal, closure-theoretic policy layer
