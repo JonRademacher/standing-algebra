@@ -1,9 +1,33 @@
-# standing-algebra
-Standing Algebra (Σᴿ): A formally verified admissibility framework for autonomy‑preserving transformations, validated in Coq, Lean, and SMT (Z3).
-
-Abstract
-This article presents Standing Algebra (Σᴿ), a many‑sorted first‑order logical framework that formalizes standing, autonomy, recognition, and structural legitimacy in multi‑agent systems. Σᴿ provides a rigorous axiomatic basis for analyzing how agents gain, preserve, or distort standing under pluralistic constraints. Tier‑1 axioms define a successor‑based, non‑dilutive standing algebra and partition entities into null, prime (autonomy singularities), and composite classes. Tier‑2 axioms encode structural legitimacy: capacity‑indexed autonomy (CIA), the autonomy‑limiting reflex (ALRP), the non‑reciprocity prevention principle (NRPP), standing preservation (STC‑5), rerunnability, bounded drift, and directed repair. Together these yield a formal method to characterize—and prohibit—domination, recognition failure, and coercive coupling. 
-The full axiomatic system of Σᴿ has been formally encoded and verified in Lean, Coq, and SMT-LIB (Z3), demonstrating that the theory is both mathematically consistent and computationally valid.
-To the author’s knowledge, Σᴿ is the first formally specified, machine checked system in which non domination is enforced structurally—without optimization objectives, outcome selection, or internal authority—using an off the shelf verification solver purely as a validator.
-Taken together, these axioms define what I call the Pluralist Non Domination Substrate: a domain agnostic structural layer in which autonomy preservation, symmetry, and bounded intervention emerge as necessary conditions for legitimate plural coordination. Σᴿ allows an AI system to integrate asynchronous, plural-source autonomy reports, filter them structurally, and maintain a longitudinal autonomy state that cannot be manipulated by any individual’s narrative — without ever judging intent or truthfulness.
-This will demonstrate how Σᴿ constrains AI systems so that no admissible operation reduces human standing, prevents slow‑creep misalignment via drift budgets, enforces idempotent (rerunnable) policies, and subordinates AI standing to human capacity. The theory is applicable to AI alignment and safety, governance design, distributed systems, organizational analysis, and any domain requiring an autonomy preserving, structural account of coordination. Σᴿ also includes an optional multigranularity modifier for pluralist systems that preserves harm detection at coarse scales and supports prime discovery (autonomy root identification) across any domain.
+Standing Algebra (Σᴿ)
+Standing Algebra (Σᴿ) is a formally specified, mechanically verified admissibility framework for autonomy‑preserving transformations in multi‑agent systems. The framework is validated across Lean, Coq, and SMT‑LIB (Z3) and is explicitly designed to enforce non‑domination structurally, without optimization objectives, outcome selection, or internal authority.
+Overview
+Σᴿ is a many‑sorted first‑order logical system that formalizes standing, autonomy, dependency, and structural legitimacy. Rather than scoring or selecting outcomes, Σᴿ classifies which transformations are admissible under autonomy‑preserving constraints. The framework is intentionally non‑optimizing and admits multiple models, preventing collapse into utility maximization or proxy objectives.
+The theory is organized in layers:
+Formal Core Provides the axiomatic skeleton: successor‑based standing, non‑dilution, composite formation, dependency structure, and operational predicates.
+Structural Legitimacy (Tier‑2) Encodes invariants such as capacity‑indexed autonomy (CIA), the autonomy‑limiting reflex (ALRP), non‑reciprocity prevention (NRPP), standing preservation (STC‑5), bounded drift, rerunnability, and directed repair.
+Valuation Layer Introduces valuation measures (e.g. standing, capacity, risk inheritance, structural debt, exit conditions) strictly as structural witnesses, not objectives.
+Independence Guarantees A dedicated Lean‑verified layer proves that valuation dimensions are definitionally independent. No measure (e.g. risk, consent, capacity, standing, debt, exit) collapses into or substitutes for any other. This blocks proxy metrics, consent laundering, and value collapse at the formal level.
+Soundness & Satisfiability The full axiom stack admits non‑trivial models. SMT‑based validation (Z3) demonstrates the existence of admissible structures satisfying all invariants simultaneously, while Lean and Coq enforce proof‑level discipline.
+What Σᴿ Is (and Is Not)
+Σᴿ is:
+a structural filter on transformations,
+non‑probabilistic and non‑optimizing,
+compatible with pluralist systems and asynchronous inputs,
+suitable as a validation or constraint layer.
+Σᴿ is not:
+a utility function,
+a policy selector or decision engine,
+a moral theory or preference aggregator,
+an empirical or statistical model.
+Applications
+Σᴿ is applicable wherever structural guarantees of non‑domination matter, including:
+AI alignment and safety layers,
+governance and institutional design,
+distributed and multi‑agent systems,
+organizational and coordination analysis.
+Because Σᴿ constrains form rather than outcome, it can coexist with domain‑specific decision procedures while enforcing hard autonomy and non‑domination bounds.
+Status
+✔ Formal core verified in Lean and Coq
+✔ Satisfiability demonstrated in Z3
+✔ Valuation measures and independence guarantees enforced at the type and axiom level
+✔ Deliberately scoped to avoid optimization, selection, or reward semantics
