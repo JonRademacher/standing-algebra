@@ -1,11 +1,8 @@
 import Lake
 open Lake DSL
 
-package standing_algebra where
+package SigmaR
 
-require mathlib from git
-  "https://github.com/leanprover-community/mathlib4.git"
+lean_lib SigmaR
 
-@[default_target]
-lean_lib StandingAlgebra where
-  srcDir := "SigmaR"
+lean_lib Collapse_Demonstrations
