@@ -1,20 +1,45 @@
-import StandingAlgebra_FormalCore
-import RoleState_Definition
-import StructuralDebt_Definition
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Standing.RoleState_Definition
+import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
 /-!
 ###############################################################################
-# Role ≠ Structural Debt
+# Independence: Role ≠ Structural Debt
 ###############################################################################
 
-Role occupancy does not eliminate structural debt,
-and structural debt does not assign institutional roles.
+This file establishes that institutional role occupancy does not
+entail elimination or resolution of structural debt.
 
-Debt tracks unresolved asymmetry; roles are
-institutional descriptors.
+Structural debt tracks unresolved asymmetry or obligation
+within a system.
+Roles are institutional descriptors of position or permission.
+
+Importing this file explicitly rejects any assumption that
+holding a role clears or resolves structural debt.
 ###############################################################################
 -/
 
-axiom RoleNotDebt :
-  ∀ (a : Agent) (s : State),
-    (if RoleState a s then 1 else 0) ≠ StructuralDebt a
+namespace SigmaR
+
+/--
+There is no general implication from role state
+to the absence or resolution of structural debt.
+Any relationship between these concepts must be introduced explicitly.
+-/
+axiom role_not_debt :
+  ¬ (∀ (a : Agent) (s : State),
+       RoleState a s → StructuralDebt a)
+
+end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- institutional position cancels obligation
+- role occupancy resolves asymmetry
+- debt collapses into role assignment
+
+Roles and structural debt are distinct structural facts.
+-/
+
