@@ -1,20 +1,45 @@
-import StandingAlgebra_FormalCore
-import ExitViability_Definition
-import RoleState_Definition
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Measures.ExitViability_Definition
+import SigmaR.Standing.RoleState_Definition
 
 /-!
 ###############################################################################
-# Exit ≠ Role
+# Independence: Exit Viability ≠ Role
 ###############################################################################
 
-Role occupancy does not guarantee exit viability,
-and exit viability does not assign roles.
+This file establishes that exit viability does not entail
+institutional role occupancy.
 
-Institutional position must not substitute for
-structural refusal.
+Exit viability concerns the structural availability of refusal
+or escape.
+Role occupancy describes an institutional position or permission.
+
+Importing this file explicitly rejects any assumption that
+structural exit assigns institutional roles.
 ###############################################################################
 -/
 
-axiom ExitNotRole :
-  ∀ (a : Agent) (s : State),
-    (if ExitViable a s then 1 else 0) ≠ (if RoleState a s then 1 else 0)
+namespace SigmaR
+
+/--
+There is no general implication from exit viability
+to role state.
+Any relationship between these concepts must be introduced explicitly.
+-/
+axiom exit_not_role :
+  ¬ (∀ (a : Agent) (s : State),
+       ExitViable a → RoleState a s)
+
+end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- escape availability confers institutional authority
+- exit substitutes for role assignment
+- refusal capacity collapses into institutional position
+
+Exit viability and role occupancy are distinct structural facts.
+-/
+
