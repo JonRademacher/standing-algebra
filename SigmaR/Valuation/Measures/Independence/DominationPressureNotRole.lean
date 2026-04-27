@@ -1,21 +1,45 @@
-import StandingAlgebra_FormalCore
-import DominationPressure_Definition
-import RoleState_Definition
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Measures.DominationPressure_Definition
+import SigmaR.Standing.RoleState_Definition
 
 /-!
 ###############################################################################
-# Domination Pressure ≠ Role
+# Independence: Domination Pressure ≠ Role
 ###############################################################################
 
-Role occupancy is an institutional descriptor.
+This file establishes that domination pressure does not entail
+institutional role occupancy.
 
-Domination pressure is a systemic diagnostic.
+Role occupancy is an institutional descriptor of position or permission.
+Domination pressure is a system-level diagnostic of structural instability
+or approach to collapse.
 
-Institutional roles do not prevent domination, and
-domination pressure does not assign roles.
+Importing this file explicitly rejects any assumption that
+systemic domination pressure assigns or determines roles.
 ###############################################################################
 -/
 
-axiom DominationPressureNotRole :
-  ∀ (a : Agent) (s : State),
-    DominationPressure s ≠ (if RoleState a s then 1 else 0)
+namespace SigmaR
+
+/--
+There is no general implication from domination pressure
+to role state.
+Any relationship between these concepts must be introduced explicitly.
+-/
+axiom domination_pressure_not_role :
+  ¬ (∀ (a : Agent) (s : State),
+       DominationPressure s → RoleState a s)
+
+end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- systemic instability confers institutional position
+- domination pressure assigns authority or office
+- roles collapse into collapse diagnostics
+
+Roles are assigned; domination pressure is diagnosed.
+-/
+
