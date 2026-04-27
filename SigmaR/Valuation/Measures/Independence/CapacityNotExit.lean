@@ -1,22 +1,47 @@
-import StandingAlgebra_FormalCore
-import CapacityMeasure_Definition
-import ExitViability_Definition
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Measures.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Capacity ≠ Exit
+# Independence: Capacity ≠ Exit
 ###############################################################################
 
-Capacity measures ability or potential.
+This file establishes that capacity measures do not entail exit viability.
 
-Exit viability is a structural predicate concerning refusal
-and non-coercion.
+Capacity expresses ability or potential.
+Exit viability is a structural predicate concerning refusal,
+non-coercion, and the availability of escape.
 
-An agent may have capacity without exit, or exit without
-capacity.
+An agent may possess capacity without a viable exit,
+or retain exit viability despite reduced capacity.
+
+Importing this file explicitly rejects any attempt to reduce
+exit to agent-level capacity.
 ###############################################################################
 -/
 
-axiom CapacityNotExit :
-  ∀ (a : Agent) (s : State),
-    CapacityMeasure a s ≠ (if ExitViable a s then 1 else 0)
+namespace SigmaR
+
+/--
+There is no general implication from capacity measures
+to exit viability.
+Any relationship between these concepts must be introduced explicitly.
+-/
+axiom capacity_not_exit :
+  ¬ (∀ (a : Agent) (s : State),
+       CapacityMeasure a s → ExitViable a s)
+
+end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- ability guarantees escape
+- competence implies non-coercion
+- exit can be inferred from functional readiness
+
+Exit is structural, not a capacity threshold.
+-/
+
