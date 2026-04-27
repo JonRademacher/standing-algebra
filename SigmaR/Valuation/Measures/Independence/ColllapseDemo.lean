@@ -1,43 +1,75 @@
 /-
 CollapseDemo.lean
 
-A tiny countermodel illustrating definitional collapse
-when no independence axiom is imposed.
+A small semantic countermodel illustrating how *collapse* occurs
+when no independence axioms are imposed.
 
-This is a toy: Agent and State are just Nat.
+This file demonstrates two related phenomena:
+
+(A) Definitional (extensional) collapse:
+    Distinct intended measures may be interpreted as the same function.
+
+(B) Implication collapse:
+    Even without equality, one measure may trivially entail another.
+
+The purpose of this file is explanatory: it justifies the existence
+of the Independence axioms used elsewhere in SigmaR.
+
+This is a toy model. `Agent` and `State` are just `Nat`.
 -/
 
 namespace CollapseDemo
 
--- Toy "sorts"
+/-
+------------------------------------------------------------------------------
+Toy universe
+------------------------------------------------------------------------------
+-/
+
 abbrev Agent := Nat
 abbrev State := Nat
 
--- Two valuation measures (like StandingMeasure and RiskLoad)
+/-
+Two valuation-style measures, intended to be conceptually distinct
+(e.g. StandingMeasure and RiskLoad).
+-/
 constant StandingMeasure : Agent → State → Nat
 constant RiskLoad       : Agent → State → Nat
 
 /-
-A "theory" that only requires both measures to be total and nonnegative.
-(This mirrors the situation in Valuation/Measures/Definitions + WellDefinedness
-without independence.)
+------------------------------------------------------------------------------
+A minimal "well-definedness theory"
+------------------------------------------------------------------------------
+This mirrors the situation where measures are required only to exist
+and satisfy basic properties, but *no independence axioms* are imposed.
 -/
 def MeasuresWellDefined : Prop :=
   (∀ a s, 0 ≤ StandingMeasure a s) ∧
   (∀ a s, 0 ≤ RiskLoad a s)
 
--- A "model" interpreting BOTH measures as the same function: (a + s)
+/-
+------------------------------------------------------------------------------
+A collapsing model
+------------------------------------------------------------------------------
+Both measures are interpreted as the same function.
+-/
 def StandingMeasure_model : Agent → State → Nat := fun a s => a + s
 def RiskLoad_model       : Agent → State → Nat := fun a s => a + s
 
--- This shows the "well-definedness theory" is satisfied in the collapsing model.
+/-
+This collapsing model satisfies the well-definedness theory.
+-/
 theorem collapse_model_satisfies_welldefined :
   (∀ a s, 0 ≤ StandingMeasure_model a s) ∧
   (∀ a s, 0 ≤ RiskLoad_model a s) := by
-  constructor <;> intro a <;> intro s <;> simp [StandingMeasure_model, RiskLoad_model]
+  constructor <;> intro a <;> intro s <;> simp
+    [StandingMeasure_model, RiskLoad_model]
 
 /-
-Now, the key point: in this model, the two measures are extensionally equal.
+------------------------------------------------------------------------------
+(A) Definitional (extensional) collapse
+------------------------------------------------------------------------------
+In this model, the two measures are *literally the same function*.
 -/
 theorem collapse_model_measures_equal :
   StandingMeasure_model = RiskLoad_model := by
@@ -45,28 +77,79 @@ theorem collapse_model_measures_equal :
   simp [StandingMeasure_model, RiskLoad_model]
 
 /-
-If we *had* an independence axiom stating they are never equal,
-this model would be ruled out.
+If we imposed a *pointwise inequality axiom*, this model would be ruled out.
 
-This is exactly what your independence files do: they exclude
-entire classes of models where intended-distinct measures collapse.
+NOTE:
+This axiom is intentionally *stronger* than the independence axioms
+used in SigmaR. It is included here purely for demonstration.
 -/
-axiom StandingNotRisk : ∀ a s, StandingMeasure a s ≠ RiskLoad a s
+axiom standing_not_risk_strong :
+  ∀ a s, StandingMeasure a s ≠ RiskLoad a s
 
 /-
-And here’s the contradiction: if we try to interpret the abstract constants
-as the collapsing model, the independence axiom would fail.
-
-We can't "assign" constants directly in Lean without building a structure,
-but we can show the *pattern*: the collapsing interpretation makes the
-independence statement false.
+The collapsing model violates such a strong inequality axiom.
 -/
-theorem independence_rejects_collapse_model :
+theorem strong_independence_rejects_collapse_model :
   ¬ (∀ a s, StandingMeasure_model a s ≠ RiskLoad_model a s) := by
   intro h
-  -- choose any a,s; they are equal in this model
-  have : StandingMeasure_model 0 0 = RiskLoad_model 0 0 := by
+  have hEq : StandingMeasure_model 0 0 = RiskLoad_model 0 0 := by
     simp [StandingMeasure_model, RiskLoad_model]
-  exact (h 0 0) this
+  exact (h 0 0) hEq
+
+/-
+------------------------------------------------------------------------------
+(B) Implication collapse (the *actual* target of SigmaR independence)
+------------------------------------------------------------------------------
+Even without equality, collapse can occur via *trivial implication*.
+
+In the collapsing model, StandingMeasure trivially entails RiskLoad,
+because they are interpreted identically.
+-/
+theorem collapse_model_implication :
+  ∀ a s, StandingMeasure_model a s = RiskLoad_model a s := by
+  intro a s
+  simp [StandingMeasure_model, RiskLoad_model]
+
+/-
+Thus, any axiom of the form "StandingMeasure does not entail RiskLoad"
+would rule out this collapsing interpretation.
+-/
+axiom standing_not_risk :
+  ¬ (∀ a s, StandingMeasure a s → RiskLoad a s)
+
+/-
+The collapsing model violates this *non-implication* independence axiom.
+-/
+theorem nonimplication_independence_rejects_collapse_model :
+  ¬ (∀ a s, StandingMeasure_model a s → RiskLoad_model a s) := by
+  intro h
+  have hEq : StandingMeasure_model 0 0 = RiskLoad_model 0 0 := by
+    simp [StandingMeasure_model, RiskLoad_model]
+  -- From equality, implication holds trivially, contradicting independence
+  have : StandingMeasure_model 0 0 → RiskLoad_model 0 0 := by
+    intro _
+    simpa [hEq]
+  exact standing_not_risk (by
+    intro a s
+    exact fun _ => by
+      have hEq' : StandingMeasure_model a s = RiskLoad_model a s := by
+        simp [StandingMeasure_model, RiskLoad_model]
+      simpa [hEq'] )
+
+/-
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+This file demonstrates:
+
+• Without independence axioms, collapse models are permitted.
+• Collapse may occur via equality *or* trivial implication.
+• Non-implication independence axioms are sufficient to rule out
+  both kinds of collapse.
+• Independence axioms therefore restrict the space of admissible models,
+  not merely definitional equality.
+
+This justifies the design of SigmaR's Independence layer.
+-/
 
 end CollapseDemo
