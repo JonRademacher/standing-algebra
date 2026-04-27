@@ -1,21 +1,42 @@
-import StandingAlgebra_FormalCore
-import ConsentState_Definition
-import RoleState_Definition
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Standing.ConsentState_Definition
+import SigmaR.Standing.RoleState_Definition
 
 /-!
 ###############################################################################
-# Consent ≠ Role
+# Independence: Consent ≠ Role
 ###############################################################################
 
+This file establishes that consent does not entail role occupancy.
+
 Consent describes whether participation is voluntary.
+Role describes an institutional or permissioned position.
+No implication from consent to role is assumed.
 
-Role describes institutional or permissioned position.
-
-Consent does not constitute role occupancy, and
-role occupancy does not guarantee consent.
+Importing this file explicitly rejects any assumption that
+agreement constitutes institutional role occupancy.
 ###############################################################################
 -/
 
-axiom ConsentNotRole :
-  ∀ (a : Agent) (s : State),
-    (if ConsentState a s then 1 else 0) ≠ (if RoleState a s then 1 else 0)
+namespace SigmaR
+
+/--
+There is no general implication from consent to role state.
+Any relationship between these concepts must be introduced explicitly.
+-/
+axiom consent_not_role :
+  ¬ (∀ (a : Agent) (s : State),
+       ConsentState a s → RoleState a s)
+
+end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- agreement implies institutional position
+- consent grants authority or office
+- voluntariness substitutes for role assignment
+
+Consent and role occupancy are structurally distinct.
+-/
