@@ -4,21 +4,43 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
 /-!
 ###############################################################################
-# Exit ≠ Debt (Measure Independence)
+# Independence: Exit Collapse ≠ Structural Debt
 ###############################################################################
 
-Exit collapse is a structural boundary condition,
-not an accumulation of debt.
+This file establishes that exit collapse does not entail
+structural debt.
+
+Exit collapse is a structural boundary condition concerning
+loss of refusal or escape.
+Structural debt tracks accumulated obligation or unresolved
+asymmetry within a system.
+
+Importing this file explicitly rejects any assumption that
+loss of exit is equivalent to accumulated debt.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Exit collapse is not definitionally reducible to structural debt.
+There is no general implication from exit collapse
+to structural debt.
+Any relationship between these concepts must be introduced explicitly.
 -/
-axiom ExitNotDebt :
+axiom exit_not_debt :
   ¬ (∀ (i : Agent) (s : State),
-      ExitCollapse i s ↔ StructuralDebt i s = 0)
+       ExitCollapse i s → StructuralDebt i s)
 
 end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- loss of exit is merely debt by another name
+- inability to refuse implies accumulated obligation
+- boundary failure collapses into deferred repair
+
+Exit collapse and structural debt are distinct structural conditions.
+-/
+
