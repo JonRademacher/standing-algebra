@@ -1,22 +1,45 @@
-import StandingAlgebra_FormalCore
-import RoleState_Definition
-import TemporalAccumulation_Definition
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Standing.RoleState_Definition
+import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
 
 /-!
 ###############################################################################
-# Role ≠ Temporal Accumulation
+# Independence: Role ≠ Temporal Accumulation
 ###############################################################################
 
-Role occupancy is an institutional descriptor.
+This file establishes that institutional role occupancy does not
+entail prevention of temporal accumulation.
 
-Temporal accumulation tracks irreversible structural
+Role occupancy is an institutional descriptor of position or permission.
+Temporal accumulation tracks irreversible or narrowing structural
 constraint over time.
 
-Institutional roles do not prevent temporal harm,
-and temporal harm does not assign roles.
+Importing this file explicitly rejects any assumption that
+holding an institutional role prevents temporal harm or accumulation.
 ###############################################################################
 -/
 
-axiom RoleNotTemporalAccumulation :
-  ∀ (a : Agent) (s : State),
-    (if RoleState a s then 1 else 0) ≠ TemporalAccumulation a s
+namespace SigmaR
+
+/--
+There is no general implication from role state
+to temporal accumulation.
+Any relationship between these concepts must be introduced explicitly.
+-/
+axiom role_not_temporal_accumulation :
+  ¬ (∀ (a : Agent) (s : State),
+       RoleState a s → TemporalAccumulation a s)
+
+end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- institutional position blocks long-term harm
+- roles stabilize irreversible constraint
+- temporal accumulation collapses into role assignment
+
+Role occupancy and temporal accumulation are distinct structural facts.
+-/
+
