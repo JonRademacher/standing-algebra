@@ -1,19 +1,44 @@
-import StandingAlgebra_FormalCore
-import RoleState_Definition
-import CapacityMeasure_Definition
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Standing.RoleState_Definition
+import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 
 /-!
 ###############################################################################
-# Role ≠ Capacity
+# Independence: Role ≠ Capacity
 ###############################################################################
 
-Institutional role does not guarantee capacity, and
-capacity does not imply institutional role.
+This file establishes that institutional role occupancy
+does not entail agent-level capacity.
 
-They must remain definitionally distinct.
+Role occupancy is an institutional or permissioned descriptor.
+Capacity measures agent ability or potential.
+
+Importing this file explicitly rejects any assumption that
+holding a role guarantees capacity.
 ###############################################################################
 -/
 
-axiom RoleNotCapacity :
-  ∀ (a : Agent) (s : State),
-    (if RoleState a s then 1 else 0) ≠ CapacityMeasure a s
+namespace SigmaR
+
+/--
+There is no general implication from role state
+to capacity measures.
+Any relationship between these concepts must be introduced explicitly.
+-/
+axiom role_not_capacity :
+  ¬ (∀ (a : Agent) (s : State),
+       RoleState a s → CapacityMeasure a s)
+
+end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- institutional position implies ability
+- permission substitutes for capacity
+- roles collapse into competence
+
+Role occupancy and capacity are distinct structural facts.
+-/
+
