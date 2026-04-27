@@ -4,19 +4,40 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Autonomy ≠ Exit Viability
+# Independence: Autonomy ≠ Exit Viability
 ###############################################################################
 
-Autonomy impairment does not by itself constitute exit collapse,
-and exit collapse is not reducible to autonomy loss.
+This file establishes that autonomy measures do not entail exit viability.
+
+Loss or preservation of autonomy does not, by itself, determine whether
+an agent has a viable exit from a system. Exit collapse may occur despite
+nonzero autonomy, and autonomy loss does not uniquely characterize exit failure.
+
+Importing this file explicitly rejects any default assumption that
+autonomy guarantees exit.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom AutonomyNotExit :
-  ∀ (a : Agent) (s : State),
-    AutonomyMeasure a s ≠ 0 →
-    ExitViable a ≠ False
+/--
+There is no general implication from autonomy measures to exit viability.
+Any relationship between these concepts must be introduced explicitly.
+-/
+axiom autonomy_not_exit :
+  ¬ (∀ (a : Agent) (s : State),
+       AutonomyMeasure a s → ExitViable a)
 
 end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- individual autonomy ensures escape options
+- nonzero freedom implies system exit
+- exit viability can be inferred from local autonomy measures
+
+Exit is a structural property, not an autonomy threshold.
+-/
+
