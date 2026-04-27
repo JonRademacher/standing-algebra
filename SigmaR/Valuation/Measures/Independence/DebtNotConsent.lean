@@ -1,19 +1,44 @@
-import StandingAlgebra_FormalCore
-import StructuralDebt_Definition
-import ConsentState_Definition
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Measures.StructuralDebt_Definition
+import SigmaR.Standing.ConsentState_Definition
 
 /-!
 ###############################################################################
-# Structural Debt ≠ Consent
+# Independence: Structural Debt ≠ Consent
 ###############################################################################
 
-Consent does not discharge structural debt, and
-structural debt does not imply absence of consent.
+This file establishes that structural debt does not entail
+the absence of consent.
 
-They represent distinct structural facts.
+Structural debt tracks unresolved asymmetry or obligation
+within a system.
+Consent is an agent-level act or expression.
+
+Importing this file explicitly rejects any assumption that
+structural debt negates or invalidates consent.
 ###############################################################################
 -/
 
-axiom DebtNotConsent :
-  ∀ (a : Agent) (s : State),
-    StructuralDebt a ≠ (if ConsentState a s then 1 else 0)
+namespace SigmaR
+
+/--
+There is no general implication from structural debt
+to the absence of consent.
+Any relationship between these concepts must be introduced explicitly.
+-/
+axiom debt_not_consent :
+  ¬ (∀ (a : Agent) (s : State),
+       StructuralDebt a → ¬ ConsentState a s)
+
+end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- obligation invalidates agreement
+- debt implies coercion by definition
+- structural asymmetry negates consent
+
+Consent may occur despite structural debt.
+-/
