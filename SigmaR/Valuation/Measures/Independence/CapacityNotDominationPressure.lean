@@ -1,20 +1,45 @@
-import StandingAlgebra_FormalCore
-import CapacityMeasure_Definition
-import DominationPressure_Definition
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Measures.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.DominationPressure_Definition
 
 /-!
 ###############################################################################
-# Capacity ≠ Domination Pressure
+# Independence: Capacity ≠ Domination Pressure
 ###############################################################################
 
-Capacity is an agent-level valuation.
+This file establishes that capacity measures do not entail
+system-level domination pressure.
 
-Domination pressure is a system-level collapse diagnostic.
+Capacity is an agent-level valuation expressing potential or ability.
+Domination pressure is a global diagnostic of structural instability
+and collapse.
 
-They must remain definitionally distinct.
+Importing this file explicitly rejects any attempt to reduce
+systemic domination to agent-level capacity.
 ###############################################################################
 -/
 
-axiom CapacityNotDominationPressure :
-  ∀ (a : Agent) (s : State),
-    CapacityMeasure a s ≠ DominationPressure s
+namespace SigmaR
+
+/--
+There is no general implication from capacity measures
+to domination pressure.
+Any relationship between these quantities must be introduced explicitly.
+-/
+axiom capacity_not_domination_pressure :
+  ¬ (∀ (a : Agent) (s : State),
+       CapacityMeasure a s → DominationPressure s)
+
+end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- individual ability aggregates into domination
+- capacity loss predicts systemic collapse
+- agent-level metrics can proxy structural instability
+
+Capacity and domination pressure operate on different levels.
+-/
+
