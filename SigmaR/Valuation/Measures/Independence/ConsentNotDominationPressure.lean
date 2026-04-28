@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.DominationPressure_Definition
 
 /-!
 ###############################################################################
-# Independence: Consent ≠ Domination Pressure
+# Independence: Consent Not Domination Pressure
 ###############################################################################
 
 This file establishes that consent does not entail the absence
