@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Independence: Risk ≠ Exit Viability
+# Independence: Risk Not Exit Viability
 ###############################################################################
 
 This file establishes that risk exposure does not entail
