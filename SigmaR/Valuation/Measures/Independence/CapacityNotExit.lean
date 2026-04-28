@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Independence: Capacity ≠ Exit
+# Independence: Capacity Not Exit
 ###############################################################################
 
 This file establishes that capacity measures do not entail exit viability.
