@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Role ≠ Autonomy
+# Independence: Role Not Autonomy
 ###############################################################################
 
 This file establishes that role occupancy does not entail autonomy.
