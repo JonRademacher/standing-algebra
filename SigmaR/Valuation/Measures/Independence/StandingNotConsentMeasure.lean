@@ -4,7 +4,7 @@ import SigmaR.Standing.ConsentState_Definition
 
 /-!
 ###############################################################################
-# Independence: Standing (Measure) ≠ Consent
+# Independence: Standing (Measure) Not Consent
 ###############################################################################
 
 Standing as a measure of recognition does not entail consent.
