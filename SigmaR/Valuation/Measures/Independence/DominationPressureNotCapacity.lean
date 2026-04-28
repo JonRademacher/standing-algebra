@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Domination Pressure ≠ Capacity
+# Independence: Domination Pressure Not Capacity
 ###############################################################################
 
 This file establishes that domination pressure does not entail
