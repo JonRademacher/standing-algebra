@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
 /-!
 ###############################################################################
-# Independence: Risk ≠ Structural Debt
+# Independence: Risk Not Structural Debt
 ###############################################################################
 
 This file establishes that risk exposure does not entail
