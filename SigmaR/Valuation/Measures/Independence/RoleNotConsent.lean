@@ -4,7 +4,7 @@ import SigmaR.Standing.ConsentState_Definition
 
 /-!
 ###############################################################################
-# Independence: Role ≠ Consent
+# Independence: Role Not Consent
 ###############################################################################
 
 This file establishes that institutional role occupancy does not entail consent.
