@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Exit Collapse ≠ Capacity
+# Independence: Exit Collapse Not Capacity
 ###############################################################################
 
 Exit collapse does not entail loss of capacity.
