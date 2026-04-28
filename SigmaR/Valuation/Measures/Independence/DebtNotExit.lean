@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Independence: Structural Debt ≠ Exit Viability
+# Independence: Structural Debt Not Exit Viability
 ###############################################################################
 
 This file establishes that structural debt does not entail
