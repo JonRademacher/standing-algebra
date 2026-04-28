@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.DominationPressure_Definition
 
 /-!
 ###############################################################################
-# Independence: Autonomy ≠ Domination Pressure
+# Independence: Autonomy Not Domination Pressure
 ###############################################################################
 
 This file establishes that agent-level autonomy measures do not entail
