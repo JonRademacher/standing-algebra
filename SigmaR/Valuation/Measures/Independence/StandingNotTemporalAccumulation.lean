@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
 
 /-!
 ###############################################################################
-# Independence: Standing ≠ Temporal Accumulation
+# Independence: Standing Not Temporal Accumulation
 ###############################################################################
 
 This file establishes that standing does not entail
