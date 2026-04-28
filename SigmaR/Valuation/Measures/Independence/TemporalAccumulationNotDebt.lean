@@ -4,20 +4,43 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
 /-!
 ###############################################################################
-# Temporal Accumulation ≠ Structural Debt
+# Independence: Temporal Accumulation ≠ Structural Debt
 ###############################################################################
 
-Temporal accumulation captures time-binding and
-irreversibility, not unresolved asymmetry.
+This file establishes that temporal accumulation does not entail
+structural debt.
 
-Debt may be repaired; temporal harm may persist.
+Temporal accumulation captures time-binding and irreversible
+constraint across states.
+Structural debt tracks unresolved asymmetry or deferred repair
+within a system.
+
+Importing this file explicitly rejects any assumption that
+irreversible temporal harm constitutes structural debt.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom TemporalAccumulationNotDebt :
-  ∀ (a : Agent) (s : State),
-    TemporalAccumulation a s ≠ StructuralDebt a
+/--
+There is no general implication from temporal accumulation
+to structural debt.
+Any relationship between these concepts must be introduced explicitly.
+-/
+axiom temporal_accumulation_not_debt :
+  ¬ (∀ (a : Agent) (s : State),
+       TemporalAccumulation a s → StructuralDebt a)
 
 end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- time-binding harm is merely debt by another name
+- irreversibility implies unresolved obligation
+- structural asymmetry collapses into temporal damage
+
+Temporal accumulation and structural debt are distinct
+structural diagnostics.
+-/
