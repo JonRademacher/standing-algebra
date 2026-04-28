@@ -79,12 +79,17 @@ theorem collapse_model_measures_equal :
 /-
 If we imposed a *pointwise inequality axiom*, this model would be ruled out.
 
+/-
 NOTE:
 This axiom is intentionally *stronger* than the independence axioms
 used in SigmaR. It is included here purely for demonstration.
+
+It asserts that standing and risk can never both hold simultaneously.
 -/
-axiom standing_not_risk_strong :
-  ∀ a s, StandingMeasure a s ≠ RiskLoad a s
+axiom standing_and_risk_exclusive :
+  ∀ (a : Agent) (s : State),
+    StandingMeasure a s → RiskLoad a s → False
+
 
 /-
 The collapsing model violates such a strong inequality axiom.
