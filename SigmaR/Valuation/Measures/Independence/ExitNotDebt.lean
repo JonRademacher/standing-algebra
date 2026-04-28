@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
 /-!
 ###############################################################################
-# Independence: Exit Collapse ≠ Structural Debt
+# Independence: Exit Collapse Not Structural Debt
 ###############################################################################
 
 This file establishes that exit collapse does not entail
