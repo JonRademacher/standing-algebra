@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Independence: Standing ≠ Exit Viability
+# Independence: Standing Not Exit Viability
 ###############################################################################
 
 This file establishes that standing does not entail exit viability.
