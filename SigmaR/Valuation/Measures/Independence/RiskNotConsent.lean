@@ -4,7 +4,7 @@ import SigmaR.Standing.ConsentState_Definition
 
 /-!
 ###############################################################################
-# Independence: Risk ≠ Consent
+# Independence: Risk Not Consent
 ###############################################################################
 
 This file establishes that risk exposure does not entail
