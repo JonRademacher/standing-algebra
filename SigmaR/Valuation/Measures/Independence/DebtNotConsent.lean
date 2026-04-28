@@ -4,7 +4,7 @@ import SigmaR.Standing.ConsentState_Definition
 
 /-!
 ###############################################################################
-# Independence: Structural Debt ≠ Consent
+# Independence: Structural Debt Not Consent
 ###############################################################################
 
 This file establishes that structural debt does not entail
