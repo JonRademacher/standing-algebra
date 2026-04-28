@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.RiskInheritance_Definition
 
 /-!
 ###############################################################################
-# Independence: Structural Debt ≠ Risk
+# Independence: Structural Debt Not Risk
 ###############################################################################
 
 This file establishes that structural debt does not entail
