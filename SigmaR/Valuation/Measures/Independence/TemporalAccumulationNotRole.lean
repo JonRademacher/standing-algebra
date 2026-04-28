@@ -4,7 +4,7 @@ import SigmaR.Standing.RoleState_Definition
 
 /-!
 ###############################################################################
-# Independence: Temporal Accumulation ≠ Role
+# Independence: Temporal Accumulation Not Role
 ###############################################################################
 
 This file establishes that temporal accumulation does not entail
