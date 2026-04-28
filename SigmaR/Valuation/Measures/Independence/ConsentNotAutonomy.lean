@@ -2,7 +2,7 @@ import SigmaR.StandingAlgebra_FormalCore
 
 /-!
 ###############################################################################
-# Independence: Consent ≠ Autonomy
+# Independence: Consent Not Autonomy
 ###############################################################################
 
 This file establishes that consent does not entail autonomy.
