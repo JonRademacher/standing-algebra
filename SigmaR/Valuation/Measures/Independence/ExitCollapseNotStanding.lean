@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.StandingMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Exit Collapse ≠ Standing
+# Independence: Exit Collapse Not Standing
 ###############################################################################
 
 Exit collapse does not entail loss of standing.
