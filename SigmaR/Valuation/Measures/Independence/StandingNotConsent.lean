@@ -3,7 +3,7 @@ import SigmaR.Valuation.Measures.StandingMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Standing ≠ Consent
+# Independence: Standing Not Consent
 ###############################################################################
 
 This file establishes that standing does not entail consent.
