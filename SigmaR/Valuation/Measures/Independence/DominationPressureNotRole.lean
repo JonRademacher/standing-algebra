@@ -4,7 +4,7 @@ import SigmaR.Standing.RoleState_Definition
 
 /-!
 ###############################################################################
-# Independence: Domination Pressure ≠ Role
+# Independence: Domination Pressure Not Role
 ###############################################################################
 
 This file establishes that domination pressure does not entail
