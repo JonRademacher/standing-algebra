@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
 
 /-!
 ###############################################################################
-# Independence: Consent ≠ Temporal Accumulation
+# Independence: Consent Not Temporal Accumulation
 ###############################################################################
 
 This file establishes that consent at a given state does not entail
