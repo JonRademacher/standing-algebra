@@ -4,7 +4,7 @@ import SigmaR.StandingAlgebra_FormalCore
 
 /-!
 ###############################################################################
-# Independence: Structural Debt ≠ Capacity
+# Independence: Structural Debt Not Capacity
 ###############################################################################
 
 This file establishes that structural debt does not entail capacity.
