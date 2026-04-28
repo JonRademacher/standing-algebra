@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.StandingMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Structural Debt ≠ Standing
+# Independence: Structural Debt Not Standing
 ###############################################################################
 
 This file establishes that structural debt does not entail
