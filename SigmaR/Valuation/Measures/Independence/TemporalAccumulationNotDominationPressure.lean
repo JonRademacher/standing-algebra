@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.DominationPressure_Definition
 
 /-!
 ###############################################################################
-# Independence: Temporal Accumulation ≠ Domination Pressure
+# Independence: Temporal Accumulation Not Domination Pressure
 ###############################################################################
 
 This file establishes that temporal accumulation does not entail
