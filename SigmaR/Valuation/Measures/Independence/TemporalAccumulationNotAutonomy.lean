@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Temporal Accumulation ≠ Autonomy
+# Independence: Temporal Accumulation Not Autonomy
 ###############################################################################
 
 This file establishes that temporal accumulation does not entail
