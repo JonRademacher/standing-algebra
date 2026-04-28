@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.StandingMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Autonomy ≠ Standing
+# Independence: Autonomy Not Standing
 ###############################################################################
 
 This file establishes that standing does not entail autonomy.
