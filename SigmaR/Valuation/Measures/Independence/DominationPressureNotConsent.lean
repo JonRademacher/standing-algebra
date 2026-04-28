@@ -4,7 +4,7 @@ import SigmaR.Standing.ConsentState_Definition
 
 /-!
 ###############################################################################
-# Independence: Domination Pressure ≠ Consent
+# Independence: Domination Pressure Not Consent
 ###############################################################################
 
 This file establishes that domination pressure does not entail
