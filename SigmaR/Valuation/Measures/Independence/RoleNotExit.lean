@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Independence: Role ≠ Exit Viability
+# Independence: Role Not Exit Viability
 ###############################################################################
 
 This file establishes that institutional role occupancy does not
