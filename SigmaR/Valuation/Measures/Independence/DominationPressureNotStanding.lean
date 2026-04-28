@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.StandingMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Domination Pressure ≠ Standing
+# Independence: Domination Pressure Not Standing
 ###############################################################################
 
 This file establishes that domination pressure does not entail
