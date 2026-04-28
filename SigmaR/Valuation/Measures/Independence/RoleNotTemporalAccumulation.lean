@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
 
 /-!
 ###############################################################################
-# Independence: Role ≠ Temporal Accumulation
+# Independence: Role Not Temporal Accumulation
 ###############################################################################
 
 This file establishes that institutional role occupancy does not
