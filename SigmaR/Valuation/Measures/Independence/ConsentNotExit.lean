@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Independence: Consent ≠ Exit Viability
+# Independence: Consent Not Exit Viability
 ###############################################################################
 
 This file establishes that consent does not entail exit viability.
