@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.MeasurementLimits.ObservabilityIsLocal
+import SigmaR.Valuation.Measures.Relevance.ObservabilityIsLocal
 
 /-!
 ###############################################################################
