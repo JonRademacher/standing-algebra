@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Role ≠ Capacity
+# Independence: Role Not Capacity
 ###############################################################################
 
 This file establishes that institutional role occupancy
