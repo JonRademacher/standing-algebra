@@ -4,7 +4,7 @@ import SigmaR.Standing.ConsentState_Definition
 
 /-!
 ###############################################################################
-# Independence: Capacity (Measure) ≠ Consent
+# Independence: Capacity (Measure) Not Consent
 ###############################################################################
 
 Capacity as ability or potential does not entail consent.
