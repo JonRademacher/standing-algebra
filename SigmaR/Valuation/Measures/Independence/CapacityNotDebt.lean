@@ -3,7 +3,7 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
 /-!
 ###############################################################################
-# Independence: Capacity ≠ Debt
+# Independence: Capacity Not Debt
 ###############################################################################
 
 This file establishes that capacity measures do not entail
