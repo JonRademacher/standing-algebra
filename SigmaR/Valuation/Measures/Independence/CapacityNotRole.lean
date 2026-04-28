@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.RoleState_Definition
 
 /-!
 ###############################################################################
-# Independence: Capacity ≠ Role
+# Independence: Capacity Not Role
 ###############################################################################
 
 This file establishes that role occupancy does not entail capacity.
