@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.RiskLoad_Definition
 
 /-!
 ###############################################################################
-# Independence: Autonomy ≠ Risk
+# Independence: Autonomy Not Risk
 ###############################################################################
 
 This file establishes that autonomy measures do not entail risk load.
