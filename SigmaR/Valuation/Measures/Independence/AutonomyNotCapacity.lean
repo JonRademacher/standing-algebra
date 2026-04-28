@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Autonomy ≠ Capacity
+# Independence: Autonomy Not Capacity
 ###############################################################################
 
 This file establishes that no implication from `AutonomyMeasure`
