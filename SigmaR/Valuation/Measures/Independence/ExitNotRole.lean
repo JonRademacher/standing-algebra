@@ -4,7 +4,7 @@ import SigmaR.Standing.RoleState_Definition
 
 /-!
 ###############################################################################
-# Independence: Exit Viability ≠ Role
+# Independence: Exit Viability Not Role
 ###############################################################################
 
 This file establishes that exit viability does not entail
