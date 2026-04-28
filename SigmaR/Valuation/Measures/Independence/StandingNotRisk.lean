@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.RiskLoad_Definition
 
 /-!
 ###############################################################################
-# Independence: Standing ≠ Risk
+# Independence: Standing Not Risk
 ###############################################################################
 
 This file establishes that standing does not entail risk exposure.
