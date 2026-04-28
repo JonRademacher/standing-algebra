@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.DominationPressure_Definition
 
 /-!
 ###############################################################################
-# Independence: Role ≠ Domination Pressure
+# Independence: Role Not Domination Pressure
 ###############################################################################
 
 This file establishes that institutional role occupancy does not
