@@ -4,7 +4,7 @@ import SigmaR.Standing.RoleState_Definition
 
 /-!
 ###############################################################################
-# Independence: Structural Debt ≠ Role
+# Independence: Structural Debt Not Role
 ###############################################################################
 
 This file establishes that structural debt does not entail
