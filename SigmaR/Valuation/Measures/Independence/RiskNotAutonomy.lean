@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Risk ≠ Autonomy
+# Independence: Risk Not Autonomy
 ###############################################################################
 
 This file establishes that risk exposure does not entail
