@@ -4,21 +4,43 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Temporal Accumulation ≠ Exit Viability
+# Independence: Temporal Accumulation ≠ Exit Viability
 ###############################################################################
 
-Temporal accumulation captures irreversible constraint
-over time. Exit viability is a binary structural property.
+This file establishes that temporal accumulation does not entail
+exit viability.
 
-These must not collapse into one another.
+Temporal accumulation captures irreversible or time-binding
+constraint over time.
+Exit viability is a present structural predicate concerning
+the availability of refusal or withdrawal.
+
+Importing this file explicitly rejects any assumption that
+accumulated temporal constraint determines exit viability.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom TemporalAccumulationNotExit :
-  ∀ (a : Agent) (s : State),
-    TemporalAccumulation a s ≠ 0 →
-    ExitViable a ≠ False
+/--
+There is no general implication from temporal accumulation
+to exit viability.
+Any relationship between these concepts must be introduced explicitly.
+-/
+axiom temporal_accumulation_not_exit :
+  ¬ (∀ (a : Agent) (s : State),
+       TemporalAccumulation a s → ExitViable a)
 
 end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- long-term harm eliminates present exit options
+- time-binding constraint collapses into refusal capacity
+- exit viability is merely a function of historical accumulation
+
+Temporal accumulation and exit viability are distinct structural facts.
+-/
+
