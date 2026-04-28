@@ -4,7 +4,7 @@ import SigmaR.Standing.RoleState_Definition
 
 /-!
 ###############################################################################
-# Independence: Risk ≠ Role
+# Independence: Risk Not Role
 ###############################################################################
 
 This file establishes that risk exposure does not entail
