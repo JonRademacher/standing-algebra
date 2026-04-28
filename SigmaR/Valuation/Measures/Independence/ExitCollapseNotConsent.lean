@@ -4,7 +4,7 @@ import SigmaR.Standing.ConsentState_Definition
 
 /-!
 ###############################################################################
-# Independence: Exit Collapse ≠ Consent
+# Independence: Exit Collapse Not Consent
 ###############################################################################
 
 Exit collapse does not entail absence of consent.
