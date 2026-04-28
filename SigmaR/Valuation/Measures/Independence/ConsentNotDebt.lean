@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
 /-!
 ###############################################################################
-# Independence: Consent ≠ Structural Debt
+# Independence: Consent Not Structural Debt
 ###############################################################################
 
 This file establishes that consent does not entail the absence
