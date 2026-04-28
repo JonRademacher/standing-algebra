@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Standing ≠ Capacity
+# Independence: Standing Not Capacity
 ###############################################################################
 
 This file establishes that standing does not entail capacity.
