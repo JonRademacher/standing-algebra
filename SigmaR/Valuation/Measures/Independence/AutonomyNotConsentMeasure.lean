@@ -4,7 +4,7 @@ import SigmaR.Standing.ConsentState_Definition
 
 /-!
 ###############################################################################
-# Independence: Autonomy (Measure) ≠ Consent
+# Independence: Autonomy (Measure) Not Consent
 ###############################################################################
 
 Autonomy as a structural measure does not entail consent.
