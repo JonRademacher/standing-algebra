@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Risk Inheritance ≠ Autonomy
+# Independence: Risk Inheritance Not Autonomy
 ###############################################################################
 
 Inherited or structural risk does not entail loss of autonomy.
