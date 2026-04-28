@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
 /-!
 ###############################################################################
-# Independence: Role ≠ Structural Debt
+# Independence: Role Not Structural Debt
 ###############################################################################
 
 This file establishes that institutional role occupancy does not
