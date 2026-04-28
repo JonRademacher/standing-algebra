@@ -1,21 +1,43 @@
-import StandingAlgebra_FormalCore
-import StandingMeasure_Definition
-import ExitViability_Definition
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Measures.StandingMeasure_Definition
+import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Standing ≠ Exit
+# Independence: Standing ≠ Exit Viability
 ###############################################################################
 
-Standing concerns recognition and admissibility.
+This file establishes that standing does not entail exit viability.
 
-Exit viability concerns refusal and non-coercion.
+Standing concerns recognition and admissibility under participation.
+Exit viability concerns the structural ability to refuse or withdraw
+without coercion.
 
-Standing does not guarantee exit, and exit does not
-constitute standing.
+Importing this file explicitly rejects any assumption that
+recognized standing guarantees a viable exit.
 ###############################################################################
 -/
 
-axiom StandingNotExit :
-  ∀ (a : Agent) (s : State),
-    StandingMeasure a s ≠ (if ExitViable a s then 1 else 0)
+namespace SigmaR
+
+/--
+There is no general implication from standing
+to exit viability.
+Any relationship between these concepts must be introduced explicitly.
+-/
+axiom standing_not_exit :
+  ¬ (∀ (a : Agent) (s : State),
+       StandingMeasure a s → ExitViable a)
+
+end SigmaR
+
+/-!
+## Interpretation
+
+This prevents downstream users from assuming that:
+- recognition guarantees freedom to leave
+- admissibility substitutes for non-coercion
+- exit viability collapses into standing
+
+Standing and exit viability are distinct structural facts.
+-/
