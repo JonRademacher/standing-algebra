@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Independence: Temporal Accumulation ≠ Exit Viability
+# Independence: Temporal Accumulation Not Exit Viability
 ###############################################################################
 
 This file establishes that temporal accumulation does not entail
