@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.RiskLoad_Definition
 
 /-!
 ###############################################################################
-# Independence: Consent ≠ Risk
+# Independence: Consent Not Risk
 ###############################################################################
 
 This file establishes that consent does not entail the absence
