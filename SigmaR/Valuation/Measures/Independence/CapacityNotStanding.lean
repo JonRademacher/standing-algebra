@@ -4,7 +4,7 @@ import SigmaR.StandingAlgebra_FormalCore
 
 /-!
 ###############################################################################
-# Independence: Capacity ≠ Standing
+# Independence: Capacity Not Standing
 ###############################################################################
 
 This file establishes that standing does not entail capacity.
