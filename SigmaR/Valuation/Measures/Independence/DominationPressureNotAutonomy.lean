@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Domination Pressure ≠ Autonomy
+# Independence: Domination Pressure Not Autonomy
 ###############################################################################
 
 This file establishes that domination pressure does not entail
