@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
 /-!
 ###############################################################################
-# Independence: Domination Pressure ≠ Structural Debt
+# Independence: Domination Pressure Not Structural Debt
 ###############################################################################
 
 This file establishes that domination pressure does not entail
