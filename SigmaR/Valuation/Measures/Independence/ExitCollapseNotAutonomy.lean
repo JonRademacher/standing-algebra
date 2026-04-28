@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Exit Collapse ≠ Autonomy
+# Independence: Exit Collapse Not Autonomy
 ###############################################################################
 
 Exit collapse does not entail loss of autonomy.
