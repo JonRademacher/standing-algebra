@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.StandingMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Role ≠ Standing
+# Independence: Role Not Standing
 ###############################################################################
 
 This file establishes that institutional role occupancy does not
