@@ -4,7 +4,7 @@ import SigmaR.Standing.ConsentState_Definition
 
 /-!
 ###############################################################################
-# Independence: Temporal Accumulation ≠ Consent
+# Independence: Temporal Accumulation Not Consent
 ###############################################################################
 
 This file establishes that temporal accumulation does not entail
