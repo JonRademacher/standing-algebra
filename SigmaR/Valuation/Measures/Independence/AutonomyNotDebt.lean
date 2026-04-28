@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
 /-!
 ###############################################################################
-# Independence: Autonomy ≠ Structural Debt
+# Independence: Autonomy Not Structural Debt
 ###############################################################################
 
 This file establishes that autonomy does not entail structural debt.
