@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Independence: Exit Viability ≠ Autonomy
+# Independence: Exit Viability Not Autonomy
 ###############################################################################
 
 This file establishes that exit viability does not entail autonomy.
