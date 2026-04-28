@@ -3,7 +3,7 @@ import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Consent ≠ Capacity
+# Independence: Consent Not Capacity
 ###############################################################################
 
 This file establishes that consent does not entail capacity.
