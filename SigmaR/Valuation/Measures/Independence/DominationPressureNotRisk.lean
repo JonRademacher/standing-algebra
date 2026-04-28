@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.RiskLoad_Definition
 
 /-!
 ###############################################################################
-# Independence: Domination Pressure ≠ Risk
+# Independence: Domination Pressure Not Risk
 ###############################################################################
 
 This file establishes that domination pressure does not entail
