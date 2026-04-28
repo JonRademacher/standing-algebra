@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
 
 /-!
 ###############################################################################
-# Independence: Risk ≠ Temporal Accumulation
+# Independence: Risk Not Temporal Accumulation
 ###############################################################################
 
 This file establishes that risk exposure does not entail
