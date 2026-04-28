@@ -34,7 +34,7 @@ jobs:
       # -------------------------------
       - name: Check Independence invariants
         run: |
-          ./scripts/check_independence.sh
+          ./Scripts/check_independence.sh
 
       # -------------------------------
       # Lake + Lean build
