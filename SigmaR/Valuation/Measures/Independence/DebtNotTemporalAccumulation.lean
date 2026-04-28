@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
 
 /-!
 ###############################################################################
-# Independence: Structural Debt ≠ Temporal Accumulation
+# Independence: Structural Debt Not Temporal Accumulation
 ###############################################################################
 
 This file establishes that structural debt does not entail
