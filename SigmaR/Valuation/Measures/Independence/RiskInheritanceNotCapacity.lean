@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Risk Inheritance ≠ Capacity
+# Independence: Risk Inheritance Not Capacity
 ###############################################################################
 
 Inherited risk does not entail loss of capacity.
