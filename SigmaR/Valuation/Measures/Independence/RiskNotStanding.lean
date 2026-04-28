@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.StandingMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Risk ≠ Standing
+# Independence: Risk Not Standing
 ###############################################################################
 
 This file establishes that risk inheritance does not entail standing.
