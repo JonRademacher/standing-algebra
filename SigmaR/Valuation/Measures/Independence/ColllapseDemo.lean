@@ -10,7 +10,7 @@ This file demonstrates two related phenomena:
     Distinct intended measures may be interpreted as the same function.
 
 (B) Implication collapse:
-    Even without equality, one measure may trivially entail another.
+    Even without explicit equality, one measure may trivially entail another.
 
 The purpose of this file is explanatory: it justifies the existence
 of the Independence axioms used elsewhere in SigmaR.
@@ -69,51 +69,40 @@ theorem collapse_model_satisfies_welldefined :
 ------------------------------------------------------------------------------
 (A) Definitional (extensional) collapse
 ------------------------------------------------------------------------------
-In this model, the two measures are *literally the same function*.
+In this model, the two measures are definitionally indistinguishable.
 -/
-theorem collapse_model_measures_equal :
-  StandingMeasure_model = RiskLoad_model := by
-  funext a s
+theorem collapse_model_extensional :
+  ∀ a s, StandingMeasure_model a s = RiskLoad_model a s := by
+  intro a s
   simp [StandingMeasure_model, RiskLoad_model]
 
 /-
-If we imposed a *pointwise inequality axiom*, this model would be ruled out.
-
-/-
+------------------------------------------------------------------------------
+A deliberately strong collapse axiom (demo-only)
+------------------------------------------------------------------------------
 NOTE:
 This axiom is intentionally *stronger* than the independence axioms
 used in SigmaR. It is included here purely for demonstration.
 
 It asserts that standing and risk can never both hold simultaneously.
 -/
-
 axiom standing_and_risk_exclusive :
   ∀ (a : Agent) (s : State),
     StandingMeasure a s → RiskLoad a s → False
-
-
-/-
-The collapsing model violates such a strong inequality axiom.
--/
-theorem strong_independence_rejects_collapse_model :
-  ¬ (∀ a s, StandingMeasure_model a s ≠ RiskLoad_model a s) := by
-  intro h
-  have hEq : StandingMeasure_model 0 0 = RiskLoad_model 0 0 := by
-    simp [StandingMeasure_model, RiskLoad_model]
-  exact (h 0 0) hEq
 
 /-
 ------------------------------------------------------------------------------
 (B) Implication collapse (the *actual* target of SigmaR independence)
 ------------------------------------------------------------------------------
-Even without equality, collapse can occur via *trivial implication*.
+Even without asserting equality, collapse can occur via
+*trivial implication*.
 
 In the collapsing model, StandingMeasure trivially entails RiskLoad,
-because they are interpreted identically.
+because they compute identically.
 -/
 theorem collapse_model_implication :
-  ∀ a s, StandingMeasure_model a s = RiskLoad_model a s := by
-  intro a s
+  ∀ a s, StandingMeasure_model a s → RiskLoad_model a s := by
+  intro a s _
   simp [StandingMeasure_model, RiskLoad_model]
 
 /-
@@ -129,18 +118,7 @@ The collapsing model violates this *non-implication* independence axiom.
 theorem nonimplication_independence_rejects_collapse_model :
   ¬ (∀ a s, StandingMeasure_model a s → RiskLoad_model a s) := by
   intro h
-  have hEq : StandingMeasure_model 0 0 = RiskLoad_model 0 0 := by
-    simp [StandingMeasure_model, RiskLoad_model]
-  -- From equality, implication holds trivially, contradicting independence
-  have : StandingMeasure_model 0 0 → RiskLoad_model 0 0 := by
-    intro _
-    simpa [hEq]
-  exact standing_not_risk (by
-    intro a s
-    exact fun _ => by
-      have hEq' : StandingMeasure_model a s = RiskLoad_model a s := by
-        simp [StandingMeasure_model, RiskLoad_model]
-      simpa [hEq'] )
+  exact standing_not_risk h
 
 /-
 ------------------------------------------------------------------------------
@@ -149,7 +127,7 @@ Interpretation
 This file demonstrates:
 
 • Without independence axioms, collapse models are permitted.
-• Collapse may occur via equality *or* trivial implication.
+• Collapse may occur via extensional identity or trivial implication.
 • Non-implication independence axioms are sufficient to rule out
   both kinds of collapse.
 • Independence axioms therefore restrict the space of admissible models,
