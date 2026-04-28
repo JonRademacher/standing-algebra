@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.RiskLoad_Definition
 
 /-!
 ###############################################################################
-# Independence: Capacity ≠ Risk
+# Independence: Capacity Not Risk
 ###############################################################################
 
 This file establishes that capacity measures do not entail risk load.
