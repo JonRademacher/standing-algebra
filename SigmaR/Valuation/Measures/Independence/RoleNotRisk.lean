@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.RiskLoad_Definition
 
 /-!
 ###############################################################################
-# Independence: Role ≠ Risk
+# Independence: Role Not Risk
 ###############################################################################
 
 This file establishes that institutional role occupancy does not
