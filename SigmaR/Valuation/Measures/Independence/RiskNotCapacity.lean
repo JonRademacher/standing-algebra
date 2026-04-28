@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Risk ≠ Capacity
+# Independence: Risk Not Capacity
 ###############################################################################
 
 This file establishes that risk exposure does not entail
