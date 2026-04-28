@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 
 /-!
 ###############################################################################
-# Independence: Domination Pressure ≠ Exit Viability
+# Independence: Domination Pressure Not Exit Viability
 ###############################################################################
 
 This file establishes that domination pressure does not entail
