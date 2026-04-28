@@ -86,6 +86,7 @@ used in SigmaR. It is included here purely for demonstration.
 
 It asserts that standing and risk can never both hold simultaneously.
 -/
+
 axiom standing_and_risk_exclusive :
   ∀ (a : Agent) (s : State),
     StandingMeasure a s → RiskLoad a s → False
