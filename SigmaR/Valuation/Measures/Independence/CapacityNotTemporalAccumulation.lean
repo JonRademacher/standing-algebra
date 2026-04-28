@@ -4,7 +4,7 @@ import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
 
 /-!
 ###############################################################################
-# Independence: Capacity ≠ Temporal Accumulation
+# Independence: Capacity Not Temporal Accumulation
 ###############################################################################
 
 This file establishes that capacity measures do not entail
