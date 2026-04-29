@@ -17,13 +17,14 @@ evidence sufficient to justify relevance back to PFA.
 namespace SigmaR
 
 /--
-Aggregation without PFA does not establish collective warrant
-and triggers the need for non-parochial evaluation.
+No implication permitting aggregation without PFA
+to establish collective warrant or relevance is allowed.
 -/
 axiom aggregation_without_pfa_requires_evaluation :
-  ∀ (A : (Agent → State → Prop) → Prop),
-    ¬ (A True) →
-    ∃ (E : State → Prop),
-      True
+  ¬ (
+    ∃ (G : Set Agent) (s : State),
+      ¬ PFA G s ∧
+      TreatedAsAuthoritative s
+  )
 
 end SigmaR
