@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,10 +14,17 @@ agents, states, or measures.
 namespace SigmaR
 
 /--
-Equivalence does not permit ordering or ranking.
+No implication from equivalence to induced ordering
+or ranking is permitted.
 -/
 axiom equivalence_not_ordering :
-  ¬ (∃ (rank : (Agent → State → Nat) → Nat),
-        True)
+  ¬ (
+    ∃ (M₁ M₂ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      EquivalentMeasures M₁ M₂ ∧
+      EquivalenceInducesOrdering M₁ M₂
+  )
 
 end SigmaR
+
