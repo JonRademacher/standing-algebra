@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.DominationPressure_Definition
 import SigmaR.Valuation.Measures.ExitViability_Definition
 
@@ -7,40 +8,27 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 # Independence: Domination Pressure Not Exit Viability
 ###############################################################################
 
-This file establishes that domination pressure does not entail
-loss of exit viability.
-
+Domination pressure is a system-level diagnostic of structural
+instability or collapse.
 Exit viability is an agent-level structural predicate concerning
-the availability of non-coercive refusal or escape.
-Domination pressure is a system-level diagnostic indicating
-approach to structural collapse.
+non-coercive refusal or escape.
 
-Importing this file explicitly rejects any assumption that
-systemic domination pressure by itself determines exit viability.
+No default implication from domination pressure to loss of
+exit viability is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from domination pressure
-to loss of exit viability.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating domination pressure as eliminating,
+revoking, or licensing the absence of exit viability
+is permitted.
 -/
 axiom domination_pressure_not_exit :
-  ¬ (∀ (a : Agent) (s : State),
-       DominationPressure s → ¬ ExitViable a)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsExitViableLostFromDominationPressure a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- systemic collapse diagnostics eliminate escape
-- domination pressure traps agents by definition
-- exit viability collapses into system-level pressure
-
-Exit viability and domination pressure are distinct structural facts.
--/
-
