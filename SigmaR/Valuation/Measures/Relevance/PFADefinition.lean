@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -8,26 +9,18 @@ import SigmaR.StandingAlgebra_FormalCore
 PFA (Perceptual Frame Agreement) represents a condition of
 collective perceptual consistency.
 
-It holds when a group of honest agents perceive a phenomenon
-such that the associated valuation measure is invariant under
-differences in description, expression, or framing.
+It does NOT assert correctness, legitimacy, optimization,
+authority, or collective warrant. It is purely a condition
+of perceptual agreement.
 
-PFA does NOT assert correctness, legitimacy, optimization,
-or collective warrant. It is purely a condition of perceptual
-agreement.
+The predicate itself is declared centrally in
+StructuralInterfaces and is used here by reference only.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-/--
-PFA indicates Perceptual Frame Agreement for a group of agents
-with respect to a state.
-
-It asserts that honest perceptual variation does not alter
-the measured valuation.
--/
-constant PFA : Set Agent → State → Prop
+-- No definitions or axioms are introduced here.
+-- PFA : Set Agent → State → Prop is declared in StructuralInterfaces.
 
 end SigmaR
-
