@@ -6,16 +6,22 @@ import SigmaR.StandingAlgebra_FormalCore
 ###############################################################################
 
 Predicates must not be used as valuation measures.
+
+This file prevents propositional conditions from being
+coerced or encoded as numeric valuation measures.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-A predicate has propositional type, not numeric type.
+Predicates may not be treated as valuation measures
+via numeric encoding.
 -/
-axiom wellformed_predicate_typing :
-  ∀ (P : Agent → State → Prop),
-    True
+axiom no_predicate_as_measure :
+  ¬ (
+    ∀ (P : Agent → State → Prop),
+      IsMeasure (fun a s => if P a s then 1 else 0)
+  )
 
 end SigmaR
