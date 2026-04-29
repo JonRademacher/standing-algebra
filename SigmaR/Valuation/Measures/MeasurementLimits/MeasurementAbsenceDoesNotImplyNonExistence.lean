@@ -22,7 +22,7 @@ is permitted.
 axiom measurement_absence_not_nonexistence :
   ¬ (
     ∀ (a : Agent) (s : State),
-      ¬ Observable a s → ¬ Exists s
+      ¬ Observable a s → ¬ StateExists s
   )
 
 end SigmaR
