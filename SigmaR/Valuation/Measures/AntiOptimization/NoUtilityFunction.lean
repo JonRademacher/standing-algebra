@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -14,11 +15,15 @@ welfare, or optimality.
 namespace SigmaR
 
 /--
-No valuation measure is assumed to be a utility function.
+No implication treating valuation measures as utility
+or preference functions is permitted.
 -/
 axiom no_utility_function :
-  ¬ (∃ (U : Agent → State → Nat),
-        ∀ (a : Agent) (s : State),
-          True)
+  ¬ (
+    ∃ (M : Measure),
+      IsMeasure M ∧
+      TreatedAsUtility M
+  )
 
 end SigmaR
+
