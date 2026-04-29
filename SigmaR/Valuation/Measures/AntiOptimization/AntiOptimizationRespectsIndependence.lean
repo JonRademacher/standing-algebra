@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.Independence.IndependenceContract
 import SigmaR.Valuation.Measures.AntiOptimization.AntiOptimizationContract
 
@@ -21,16 +22,14 @@ remain fully in force.
 namespace SigmaR
 
 /--
-Prohibiting optimization does not permit inference
-between distinct valuation measures.
-
-AntiOptimization does not weaken Independence.
+No implication from anti-optimization to weakened independence
+between valuation measures is permitted.
 -/
 axiom antioptimization_respects_independence :
-  ∀ (M₁ M₂ : Agent → State → Nat),
-    ¬ (
-      ¬ (∃ (O : State → Nat), True) →
-      (∀ a s, M₁ a s → M₂ a s)
-    )
+  ¬ (
+    ¬ (∃ (O : Obj), Optimizes O) →
+    ∃ (M₁ M₂ : Measure),
+      ¬ IndependentMeasures M₁ M₂
+  )
 
 end SigmaR
