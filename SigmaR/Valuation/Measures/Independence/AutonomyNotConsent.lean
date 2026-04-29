@@ -1,40 +1,30 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
+import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
+import SigmaR.Valuation.Measures.ConsentState_Definition
 
 /-!
 ###############################################################################
 # Independence: Autonomy Not Consent
 ###############################################################################
 
-This file establishes that autonomy does not entail consent.
+Autonomy expresses freedom from coercive constraint.
+Consent expresses an affirmative act.
 
-Although both notions concern agency, autonomy expresses freedom from
-coercive constraint, while consent expresses an affirmative act.
-No implication between them is assumed at the level of SigmaR.
-
-Importing this file explicitly rejects any default assumption that
-autonomy licenses consent.
+No default implication from autonomy to consent is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from autonomy to consent.
-Any connection between these predicates must be introduced explicitly.
+No implication treating autonomy as licensing consent
+is permitted.
 -/
 axiom autonomy_not_consent :
-  ¬ (∀ (i : Agent) (s : State),
-       Autonomous i s → Consent i s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsConsentFromAutonomy a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- lack of coercion implies agreement
-- agency implies authorization
-- autonomy can substitute for consent
-
-Such assumptions are common but structurally unsafe.
--/
