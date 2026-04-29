@@ -1,3 +1,5 @@
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
@@ -6,40 +8,24 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 # Independence: Capacity Not Debt
 ###############################################################################
 
-This file establishes that capacity measures do not entail
-structural debt accumulation.
-
 Capacity expresses potential or ability.
-Structural debt tracks accumulated, system-level obligation or constraint.
-An agent may lose capacity without incurring debt,
-and may incur debt without immediate capacity reduction.
+Structural debt tracks accumulated, system-level constraint.
 
-Importing this file explicitly rejects any default assumption that
-capacity loss implies indebtedness.
+No default implication from capacity measures to
+structural debt is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from capacity measures
-to structural debt.
-Any relationship between these quantities must be introduced explicitly.
+No implication treating capacity measures as implying
+or licensing assumptions of structural debt is permitted.
 -/
 axiom capacity_not_debt :
-  ¬ (∀ (a : Agent) (s : State),
-       CapacityMeasure a s → StructuralDebt a)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsDebtFromCapacityMeasure a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- reduced ability implies obligation
-- incapacity can be reinterpreted as debt
-- functional limitation licenses structural claims
-
-Capacity and debt are distinct diagnostics.
--/
-
