@@ -8,18 +8,25 @@ import SigmaR.StandingAlgebra_FormalCore
 Valuation constructions must not participate in circular
 dependency structures.
 
-This prevents mutual or indirect self-dependence.
+This file prevents indirect self-dependence and cyclic
+valuation graphs.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-No valuation construction may depend (directly or indirectly)
-on itself.
+No valuation measure may be part of a circular dependency
+chain.
 -/
-axiom wellformed_no_circular_dependency :
-  ∀ (M : Agent → State → Nat),
-    True
+axiom no_circular_dependency :
+  ¬ (
+    ∃ (M₁ M₂ : Agent → State → Nat),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      DependsOn M₁ M₂ ∧
+      DependsOn M₂ M₁
+  )
 
 end SigmaR
+
