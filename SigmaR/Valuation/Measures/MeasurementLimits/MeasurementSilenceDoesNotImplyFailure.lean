@@ -15,10 +15,14 @@ Silence may result from occlusion or unobservability.
 namespace SigmaR
 
 /--
-Measurement silence does not imply failure.
+No implication from measurement silence to failure
+is permitted.
 -/
 axiom measurement_silence_not_failure :
-  ∀ (s : State),
-    ¬ True → True
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      ¬ Observable a s →
+      Failure s
+  )
 
 end SigmaR
