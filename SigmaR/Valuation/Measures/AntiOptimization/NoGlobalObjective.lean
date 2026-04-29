@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -15,11 +16,14 @@ No measure is defined relative to an optimizing target.
 namespace SigmaR
 
 /--
-There is no global objective function governing valuation.
+No implication asserting the existence of a globally
+governing optimization objective is permitted.
 -/
 axiom no_global_objective :
-  ¬ (∃ (O : State → Nat),
-        ∀ (a : Agent) (s : State),
-          True)
+  ¬ (
+    ∃ (O : Obj),
+      GlobalObjective O ∧
+      Optimizes O
+  )
 
 end SigmaR
