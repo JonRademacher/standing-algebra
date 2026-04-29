@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -16,21 +17,13 @@ whether agents exist or whether observations agree.
 namespace SigmaR
 
 /--
-Abstract perceptual or descriptive frames.
--/
-constant Frame : Type
-
-/--
-Abstract successor relation over frames.
--/
-constant Successor : Frame → Frame → Prop
-
-/--
-Plurality exists whenever there is more than one reachable frame.
+Plurality exists whenever there is more than one reachable
+perceptual or descriptive frame in the successor structure.
 -/
 axiom plurality_emerges_from_successor_structure :
   ∃ (f₁ f₂ : Frame),
     f₁ ≠ f₂ ∧
-    (Successor f₁ f₂ ∨ Successor f₂ f₁)
+    (FrameSucc f₁ f₂ ∨ FrameSucc f₂ f₁)
 
 end SigmaR
+
