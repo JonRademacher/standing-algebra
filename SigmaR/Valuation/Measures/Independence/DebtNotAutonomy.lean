@@ -1,46 +1,31 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.StructuralDebt_Definition
+import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
 
 /-!
 ###############################################################################
 # Independence: Structural Debt Not Autonomy
 ###############################################################################
 
-This file establishes that structural debt does not entail autonomy.
-
-Structural debt tracks unresolved asymmetry or obligation within
-a system.
+Structural debt tracks unresolved asymmetry or obligation.
 Autonomy measures freedom from coercive constraint.
 
-An agent may incur or inherit debt while lacking autonomy,
-and debt does not license freedom.
-
-Importing this file explicitly rejects any assumption that
-structural debt implies autonomy.
+No default implication from structural debt to autonomy
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from structural debt
-to autonomy measures.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating structural debt as constituting
+or licensing autonomy is permitted.
 -/
 axiom debt_not_autonomy :
-  ¬ (∀ (a : Agent) (s : State),
-       StructuralDebt a → AutonomyMeasure a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsAutonomyFromStructuralDebt a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- obligation implies freedom
-- debt confers agency
-- structural asymmetry licenses autonomy
-
-Debt constrains; it does not liberate.
--/
