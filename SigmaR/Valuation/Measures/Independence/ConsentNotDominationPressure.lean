@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Standing.ConsentState_Definition
 import SigmaR.Valuation.Measures.DominationPressure_Definition
 
@@ -7,39 +8,26 @@ import SigmaR.Valuation.Measures.DominationPressure_Definition
 # Independence: Consent Not Domination Pressure
 ###############################################################################
 
-This file establishes that consent does not entail the absence
-or prevention of domination pressure.
-
 Consent is an agent-level expression or act.
-Domination pressure is a system-level diagnostic of structural
-instability and coercive accumulation.
+Domination pressure is a system-level diagnostic of
+structural instability and coercive accumulation.
 
-Importing this file explicitly rejects any assumption that
-consented participation prevents domination pressure.
+No default implication from consent to the absence
+or prevention of domination pressure is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from consent to the absence
-of domination pressure.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating consent as preventing,
+resolving, or licensing the absence of domination
+pressure is permitted.
 -/
 axiom consent_not_domination_pressure :
-  ¬ (∀ (a : Agent) (s : State),
-       ConsentState a s → ¬ DominationPressure s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsDominationPressureResolvedFromConsentState a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- agreement neutralizes systemic coercion
-- consent stabilizes domination dynamics
-- participation implies non-domination
-
-Domination pressure may accumulate despite consent.
--/
-
