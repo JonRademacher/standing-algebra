@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.DominationPressure_Definition
 import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
@@ -7,39 +8,25 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 # Independence: Domination Pressure Not Structural Debt
 ###############################################################################
 
-This file establishes that domination pressure does not entail
-structural debt.
+Domination pressure is a system-level diagnostic of structural
+instability or collapse.
+Structural debt represents unresolved asymmetry or deferred repair.
 
-Structural debt represents unresolved asymmetry or deferred repair
-within a system.
-Domination pressure represents approach to systemic instability
-or collapse.
-
-Importing this file explicitly rejects any assumption that
-collapse diagnostics automatically imply accumulated debt.
+No default implication from domination pressure to structural
+debt is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from domination pressure
-to structural debt.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating domination pressure as implying
+or licensing structural debt is permitted.
 -/
 axiom domination_pressure_not_debt :
-  ¬ (∀ (a : Agent) (s : State),
-       DominationPressure s → StructuralDebt a)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsStructuralDebtFromDominationPressure a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- collapse signals are merely debt by another name
-- systemic instability implies deferred obligation
-- domination pressure collapses into structural debt
-
-Domination pressure and debt are distinct structural diagnostics.
--/
