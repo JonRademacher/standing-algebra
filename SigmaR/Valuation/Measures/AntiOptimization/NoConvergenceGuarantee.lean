@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,12 +14,14 @@ stability, or improvement over progression.
 namespace SigmaR
 
 /--
-There is no guarantee that valuation converges
-to a stable or optimal state.
+No implication from valuation structure to guaranteed
+convergence is permitted.
 -/
 axiom no_convergence_guarantee :
-  ¬ (∃ (L : Agent → Nat),
-        ∀ (a : Agent) (s : State),
-          True)
+  ¬ (
+    ∀ (M : Measure),
+      IsMeasure M →
+      Converges M
+  )
 
 end SigmaR
