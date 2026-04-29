@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.NonComparability.NonComparabilityContract
 
 /-!
@@ -16,13 +17,17 @@ Non-comparability is a semantic constraint, not an epistemic failure.
 namespace SigmaR
 
 /--
-Non-comparability does not imply that nothing can be known
-about the measures involved.
+No implication treating non-comparability as epistemic
+ignorance or indeterminacy is permitted.
 -/
 axiom noncomparability_not_ignorance :
   ¬ (
-    ∀ (M₁ M₂ : Agent → State → Nat),
-      ¬ (∃ a s, True)
+    ∃ (M₁ M₂ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      NonComparable M₁ M₂ ∧
+      TreatedAsIgnorance M₁ M₂
   )
 
 end SigmaR
+
