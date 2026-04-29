@@ -1,6 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.Relevance.IPFA_Definition
-import SigmaR.Valuation.Measures.Relevance.PFA_Definition
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -15,11 +14,14 @@ constitute collective perceptual agreement.
 namespace SigmaR
 
 /--
-IPFA alone is insufficient to establish PFA.
+No implication reducing PFA to a conjunction
+of IPFAs is permitted.
 -/
 axiom ipfa_insufficient_for_pfa :
-  ∀ (G : Set Agent) (s : State),
-    (∀ a ∈ G, IPFA a s) →
-    ¬ PFA G s
+  ¬ (
+    ∀ (G : Set Agent) (s : State),
+      PFA G s →
+      (∀ a ∈ G, IPFA a s)
+  )
 
 end SigmaR
