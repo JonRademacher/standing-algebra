@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
 import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
@@ -7,37 +8,22 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 # Independence: Autonomy Not Structural Debt
 ###############################################################################
 
-This file establishes that autonomy does not entail structural debt.
-
-Loss of autonomy and accumulation of structural debt are distinct
-phenomena. Either may occur without the other, and no implication
-between them is assumed at the level of measures.
-
-Importing this file explicitly rejects any default assumption that
-autonomy loss implies debt.
+Loss of autonomy and accumulation of structural debt are
+distinct phenomena. No default implication between them
+is licensed at the level of valuation measures.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from autonomy measures to structural debt.
-Any relationship between these quantities must be introduced explicitly.
+No implication treating autonomy measures as implying
+or licensing assumptions of structural debt is permitted.
 -/
 axiom autonomy_not_debt :
-  ¬ (∀ (a : Agent) (s : State),
-       AutonomyMeasure a s → StructuralDebt a)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsDebtFromAutonomyMeasure a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- reduced autonomy implies obligation
-- constraint implies indebtedness
-- social control can be justified as debt accounting
-
-Such inferences must be made explicit if intended.
--/
-
