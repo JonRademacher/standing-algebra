@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.Relevance.ObservabilityIsLocal
 
 /-!
@@ -14,11 +15,6 @@ that are not observable by any agent.
 namespace SigmaR
 
 /--
-Abstract notion of failure.
--/
-constant Failure : State → Prop
-
-/--
 There exist failures that occur in unobservable states.
 -/
 axiom occlusion_permits_undetected_failure :
@@ -28,3 +24,4 @@ axiom occlusion_permits_undetected_failure :
       ¬ Observable a s
 
 end SigmaR
+
