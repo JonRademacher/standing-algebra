@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -16,16 +17,15 @@ they are not deprioritized relative to relevant options.
 namespace SigmaR
 
 /--
-Relevance does not imply priority.
-
-Options outside relevance are excluded from scope,
-not ranked as lower priority.
+No implication permitting relevance to induce
+priority, ranking, or preference ordering is allowed.
 -/
 axiom relevance_does_not_imply_priority :
-  ∀ (R : Agent → State → Prop)
-    (O₁ O₂ : State),
-    ¬ (R (Classical.choice (Classical.decEq Agent)) O₁ →
-       ¬ R (Classical.choice (Classical.decEq Agent)) O₂ →
-       O₁ ≠ O₂)
+  ¬ (
+    ∀ (a : Agent) (s : State) (M : Measure),
+      IPFA a s →
+      InducesRanking M
+  )
 
 end SigmaR
+
