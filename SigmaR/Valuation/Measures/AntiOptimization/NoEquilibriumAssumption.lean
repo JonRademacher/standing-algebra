@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,11 +14,14 @@ of equilibria or steady states.
 namespace SigmaR
 
 /--
-No equilibrium state is assumed to exist.
+No implication from valuation structure to the
+existence of an equilibrium state is permitted.
 -/
 axiom no_equilibrium_assumption :
-  ¬ (∃ (s : State),
-        ∀ (a : Agent),
-          True)
+  ¬ (
+    ∀ (M : Measure),
+      IsMeasure M →
+      HasEquilibrium M
+  )
 
 end SigmaR
