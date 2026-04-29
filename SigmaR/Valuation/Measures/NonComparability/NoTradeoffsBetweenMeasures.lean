@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,11 +14,18 @@ or compensatory reasoning.
 namespace SigmaR
 
 /--
-No tradeoff is permitted between non-comparable measures.
+No implication permitting tradeoff or compensatory
+reasoning between non-comparable valuation measures
+is allowed.
 -/
 axiom no_tradeoffs_between_measures :
-  ∀ (M₁ M₂ : Agent → State → Nat),
-    ¬ (∃ (a : Agent) (s : State),
-          True)
+  ¬ (
+    ∃ (M₁ M₂ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      NonComparable M₁ M₂ ∧
+      TradeoffJustifies M₁ M₂
+  )
 
 end SigmaR
+
