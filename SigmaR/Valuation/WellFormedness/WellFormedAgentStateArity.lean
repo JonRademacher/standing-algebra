@@ -5,17 +5,33 @@ import SigmaR.StandingAlgebra_FormalCore
 # Well-Formed Agent–State Arity
 ###############################################################################
 
-Valuation constructs must respect agent–state arity.
+Valuation measures must *genuinely* depend on both Agent and State.
+
+This file prevents arity collapse, currying abuse, and the use of
+agent-free or state-free functions as valuation measures.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Measures must depend on both Agent and State.
+No function that ignores the Agent dimension may be treated
+as a valuation measure.
 -/
-axiom wellformed_agent_state_arity :
-  ∀ (M : Agent → State → Nat),
-    True
+axiom no_agent_free_measure :
+  ¬ (
+    ∀ (f : State → Nat),
+      IsMeasure (fun (_ : Agent) (s : State) => f s)
+  )
+
+/--
+No function that ignores the State dimension may be treated
+as a valuation measure.
+-/
+axiom no_state_free_measure :
+  ¬ (
+    ∀ (f : Agent → Nat),
+      IsMeasure (fun (a : Agent) (_ : State) => f a)
+  )
 
 end SigmaR
