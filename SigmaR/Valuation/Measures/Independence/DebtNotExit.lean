@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.StructuralDebt_Definition
 import SigmaR.Valuation.Measures.ExitViability_Definition
 
@@ -7,39 +8,26 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 # Independence: Structural Debt Not Exit Viability
 ###############################################################################
 
-This file establishes that structural debt does not entail
-loss of exit viability.
+Structural debt tracks accumulated obligation or unresolved asymmetry.
+Exit viability is a structural predicate concerning the availability
+of non-coercive refusal or escape.
 
-Structural debt tracks accumulated obligation or unresolved
-asymmetry within a system.
-Exit viability is a structural predicate concerning the
-availability of non-coercive refusal or escape.
-
-Importing this file explicitly rejects any assumption that
-accumulated debt by itself eliminates exit.
+No default implication from structural debt to loss of exit viability
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from structural debt
-to loss of exit viability.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating structural debt as eliminating,
+preventing, or licensing the absence of exit viability
+is permitted.
 -/
 axiom debt_not_exit :
-  ¬ (∀ (a : Agent) (s : State),
-       StructuralDebt a → ¬ ExitViable a)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsExitViableResolvedFromStructuralDebt a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- obligation necessarily traps agents
-- debt accumulation eliminates escape
-- exit failure follows automatically from asymmetry
-
-Exit viability and debt are distinct structural facts.
--/
