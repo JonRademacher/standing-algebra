@@ -7,16 +7,28 @@ import SigmaR.StandingAlgebra_FormalCore
 
 Composition of valuation expressions must preserve
 structural well-formedness.
+
+This file prevents arbitrary or ill-typed compositions
+from being treated as valuation measures.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Composition preserves well-formedness.
+There is no general rule that composing valuation measures
+(or composing measures with arbitrary functions) yields
+a valuation measure.
+
+Only explicitly sanctioned compositions are well-formed.
 -/
-axiom wellformed_composition :
-  ∀ (M₁ M₂ : Agent → State → Nat),
-    True
+axiom no_arbitrary_composition_as_measure :
+  ¬ (
+    ∀ (M₁ M₂ : Agent → State → Nat),
+      IsMeasure M₁ →
+      IsMeasure M₂ →
+      IsMeasure (fun a s => M₁ a s + M₂ a s)
+  )
 
 end SigmaR
+
