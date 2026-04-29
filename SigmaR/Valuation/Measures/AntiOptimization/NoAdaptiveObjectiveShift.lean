@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -15,12 +16,15 @@ Goals are not endogenously redefined by measured outcomes.
 namespace SigmaR
 
 /--
-No adaptive redefinition of objectives from internal
-valuation measures is assumed.
+No implication from valuation measures to the endogenous
+generation or adaptation of objectives is permitted.
 -/
 axiom no_adaptive_objective_shift :
-  ¬ (∃ (G : State → Nat)
-        (M : Agent → State → Nat),
-        True)
+  ¬ (
+    ∃ (M : Measure) (O : Obj),
+      IsMeasure M ∧
+      Optimizes O ∧
+      GeneratedFromMeasure O M
+  )
 
 end SigmaR
