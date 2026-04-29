@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -15,10 +16,15 @@ It is a structural property of the frame space.
 namespace SigmaR
 
 /--
-Plurality does not arise from counting agents.
+No implication reducing plurality to enumeration
+or aggregation of agents is permitted.
 -/
 axiom plurality_not_sum_of_individuals :
-  ¬ (∃ (G : Set Agent),
-        True)
+  ¬ (
+    ∀ (G : Set Agent) (s : State),
+      TreatedAsPlurality s →
+      TreatedAsAggregationOfAgents G s
+  )
 
 end SigmaR
+
