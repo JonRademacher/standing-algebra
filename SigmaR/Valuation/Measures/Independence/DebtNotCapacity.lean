@@ -1,47 +1,31 @@
-import SigmaR.Valuation.Measures.CapacityMeasure_Definition
-import SigmaR.Valuation.Measures.StructuralDebt_Definition
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
+import SigmaR.Valuation.Measures.StructuralDebt_Definition
+import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 
 /-!
 ###############################################################################
 # Independence: Structural Debt Not Capacity
 ###############################################################################
 
-This file establishes that structural debt does not entail capacity.
-
-Structural debt tracks unresolved asymmetry or obligation within
-a system.
+Structural debt tracks unresolved asymmetry or obligation.
 Capacity measures agent-level ability or potential.
 
-An agent may incur or inherit debt while lacking capacity,
-and debt does not license ability.
-
-Importing this file explicitly rejects any assumption that
-structural debt implies capacity.
+No default implication from structural debt to capacity
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from structural debt
-to capacity measures.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating structural debt as constituting
+or licensing capacity is permitted.
 -/
 axiom debt_not_capacity :
-  ¬ (∀ (a : Agent) (s : State),
-       StructuralDebt a → CapacityMeasure a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsCapacityFromStructuralDebt a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- obligation implies ability
-- debt substitutes for capacity
-- structural asymmetry licenses competence
-
-Debt constrains; it does not empower.
--/
-
