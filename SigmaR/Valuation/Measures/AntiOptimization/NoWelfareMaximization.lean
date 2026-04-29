@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,11 +14,15 @@ represents welfare to be maximized.
 namespace SigmaR
 
 /--
-No valuation measure is assumed to be a welfare function.
+No implication treating valuation measures as welfare
+quantities to be maximized is permitted.
 -/
 axiom no_welfare_maximization :
-  ¬ (∃ (W : Agent → State → Nat),
-        ∀ a s,
-          True)
+  ¬ (
+    ∃ (M : Measure) (O : Obj),
+      IsMeasure M ∧
+      TreatedAsWelfare M ∧
+      Optimizes O
+  )
 
 end SigmaR
