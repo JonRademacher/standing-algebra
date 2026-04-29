@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.AntiOptimization.AntiOptimizationContract
 
 /-!
@@ -14,10 +15,14 @@ objective, target, or optimization criterion.
 namespace SigmaR
 
 /--
-Relevance does not imply optimization.
+No implication permitting relevance to authorize
+objectives, targets, or optimization is allowed.
 -/
 axiom relevance_respects_antioptimization :
-  ¬ (∃ (O : State → Nat),
-        True)
+  ¬ (
+    ∀ (a : Agent) (s : State) (O : Obj),
+      IPFA a s →
+      Optimizes O
+  )
 
 end SigmaR
