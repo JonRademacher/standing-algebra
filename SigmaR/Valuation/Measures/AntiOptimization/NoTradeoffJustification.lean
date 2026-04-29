@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,11 +14,17 @@ in one measure by improvement in another.
 namespace SigmaR
 
 /--
-There is no general tradeoff justification across measures.
+No implication permitting tradeoff-based justification
+between valuation measures is allowed.
 -/
 axiom no_tradeoff_justification :
-  ¬ (∀ (M₁ M₂ : Agent → State → Nat),
-        ∀ (a : Agent) (s : State),
-          True)
+  ¬ (
+    ∃ (M₁ M₂ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      M₁ ≠ M₂ ∧
+      TradeoffJustifies M₁ M₂
+  )
 
 end SigmaR
+
