@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,10 +14,15 @@ establish relevance for collective or system-level evaluation.
 namespace SigmaR
 
 /--
-Personal relevance does not imply system relevance.
+No implication permitting personal relevance to
+escalate to system-level relevance or authority
+is allowed.
 -/
 axiom personal_not_system_relevance :
-  ∀ (R : Agent → State → Prop),
-    ¬ (∀ a s, R a s → True)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      IPFA a s →
+      TreatedAsAuthoritative s
+  )
 
 end SigmaR
