@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -15,12 +16,15 @@ A value may evolve monotonically without becoming "better".
 namespace SigmaR
 
 /--
-There is no assumption that monotone change constitutes improvement.
+No implication from monotonicity to improvement,
+benefit, or desirability is permitted.
 -/
 axiom no_monotone_improvement :
-  ∀ (M : Agent → State → Nat),
-    ¬ (∀ a s₁ s₂,
-        M a s₁ ≤ M a s₂ →
-        True)
+  ¬ (
+    ∃ (M : Measure),
+      IsMeasure M ∧
+      InterpretedAsImprovement M
+  )
 
+end SigmaR
 end SigmaR
