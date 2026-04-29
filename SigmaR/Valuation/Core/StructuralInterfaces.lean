@@ -7,7 +7,7 @@ import SigmaR.StandingAlgebra_FormalCore
 
 This file centralizes *all* cross-layer structural interface symbols used by
 Valuation layers (WellFormedness, Measures, MeasurementLimits, Relevance,
-Monotonicity, and AntiOptimization).
+Monotonicity, AntiOptimization, and Equivalence).
 
 It is a pure signature file:
 • no axioms
@@ -150,5 +150,24 @@ constant AssumesSelection : Measure → Prop
 
 -- Metric manipulation
 constant GamesMetric : Obj → Measure → Prop
+
+/-!
+------------------------------------------------------------------------------
+7. Equivalence interfaces (purely relational, non-teleological)
+------------------------------------------------------------------------------
+These predicates name equivalence relations and explicitly
+forbidden equivalence-based collapses.
+------------------------------------------------------------------------------ -/
+
+-- Core equivalence relation
+constant EquivalentMeasures : Measure → Measure → Prop
+
+-- Illicit consequences of equivalence
+constant EquivalenceInducesOrdering : Measure → Measure → Prop
+
+-- Contextual scoping of equivalence
+constant EquivalenceContext : Type
+constant EquivalentInContext :
+  EquivalenceContext → Measure → Measure → Prop
 
 end SigmaR
