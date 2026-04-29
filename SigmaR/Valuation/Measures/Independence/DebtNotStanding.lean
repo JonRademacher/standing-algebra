@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.StructuralDebt_Definition
 import SigmaR.Valuation.Measures.StandingMeasure_Definition
 
@@ -7,39 +8,24 @@ import SigmaR.Valuation.Measures.StandingMeasure_Definition
 # Independence: Structural Debt Not Standing
 ###############################################################################
 
-This file establishes that structural debt does not entail
-loss of standing.
-
-Structural debt tracks unresolved asymmetry or deferred repair
-within a system.
+Structural debt tracks unresolved asymmetry or deferred repair.
 Standing measures recognized status or admissible participation.
 
-Importing this file explicitly rejects any assumption that
-accumulated debt by itself eliminates standing.
+No default implication from structural debt to loss of standing
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from structural debt
-to loss of standing.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating structural debt as eliminating,
+revoking, or licensing the loss of standing is permitted.
 -/
 axiom debt_not_standing :
-  ¬ (∀ (a : Agent) (s : State),
-       StructuralDebt a → ¬ StandingMeasure a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsStandingRevokedFromStructuralDebt a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- obligation revokes status
-- debt excludes participation by definition
-- structural asymmetry nullifies standing
-
-Standing and debt are independent structural dimensions.
--/
-
