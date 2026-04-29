@@ -1,27 +1,34 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
 # Definition Non-Equivalence
 ###############################################################################
 
-Distinct valuation concepts must not be definitionally identical.
+Distinct valuation concepts must not be definitionally
+or semantically collapsed at the level of primitive
+definitions.
 
-This file prevents semantic collapse at the level of primitive
-definitions, prior to Independence or WellDefinedness constraints.
+Any equivalence between distinct concepts must be
+introduced explicitly and locally, never implicitly
+at the definition layer.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Distinct valuation primitives are not definitionally equal by default.
-
-Any equivalence between distinct concepts must be introduced
-explicitly and locally, never implicitly at the definition level.
+No implication from the mere existence of valuation
+definitions to equivalence or identity of distinct
+valuation measures is permitted.
 -/
 axiom definition_non_equivalence :
-  ∀ (M₁ M₂ : Agent → State → Nat),
-    M₁ ≠ M₂
+  ¬ (
+    ∀ (M₁ M₂ : Measure),
+      IsMeasure M₁ →
+      IsMeasure M₂ →
+      EquivalentMeasures M₁ M₂
+  )
 
 end SigmaR
