@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,10 +14,16 @@ in one dimension by gain in another.
 namespace SigmaR
 
 /--
-No compensatory reasoning is assumed.
+No implication from one valuation measure to compensatory
+justification via another measure is permitted.
 -/
 axiom no_compensatory_reasoning :
-  ¬ (∃ (C : (Agent → State → Nat) → (Agent → State → Nat) → Prop),
-        True)
+  ¬ (
+    ∃ (M₁ M₂ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      M₁ ≠ M₂ ∧
+      Compensates M₂ M₁
+  )
 
 end SigmaR
