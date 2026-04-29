@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -14,10 +15,19 @@ where asserted.
 namespace SigmaR
 
 /--
-Non-comparability is not overridden by default.
+No implication permitting declared non-comparability
+to be ignored, overridden, or bypassed by default
+is allowed.
 -/
 axiom noncomparability_scope :
-  ∀ (M₁ M₂ : Agent → State → Nat),
-    True
+  ¬ (
+    ∃ (C : NonComparabilityContext)
+      (M₁ M₂ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      NonComparableInContext C M₁ M₂ ∧
+      ¬ NonComparable M₁ M₂
+  )
 
 end SigmaR
+
