@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,17 +14,7 @@ context used by the agent.
 namespace SigmaR
 
 /--
-Abstract perceptual frames.
--/
-constant Frame : Type
-
-/--
-Observability under a given perceptual frame.
--/
-constant ObservableInFrame : Agent → Frame → State → Prop
-
-/--
-Different frames may yield different observables
+Different perceptual frames may yield different observables
 for the same agent and state.
 -/
 axiom observability_is_frame_dependent :
