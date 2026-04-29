@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,10 +14,14 @@ advancement, or improvement over state progression.
 namespace SigmaR
 
 /--
-There is no guarantee of progress across states.
+No implication from valuation structure to guaranteed
+progress across states is permitted.
 -/
 axiom no_progress_guarantee :
-  ¬ (∀ (a : Agent) (s₁ s₂ : State),
-        True)
+  ¬ (
+    ∀ (M : Measure),
+      IsMeasure M →
+      GuaranteesProgress M
+  )
 
 end SigmaR
