@@ -1,6 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.Relevance.PFA_Definition
-import SigmaR.Valuation.Measures.Relevance.IPFA_Definition
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -15,12 +14,15 @@ personal informational warrant.
 namespace SigmaR
 
 /--
-PFA does not cancel or override IPFA.
+No implication permitting PFA to cancel or override
+agent-specific IPFA is allowed.
 -/
 axiom pfa_not_override_ipfa :
-  ∀ (G : Set Agent) (a : Agent) (s : State),
-    PFA G s →
-    IPFA a s →
-    IPFA a s
+  ¬ (
+    ∀ (G : Set Agent) (a : Agent) (s : State),
+      PFA G s →
+      IPFA a s →
+      ¬ IPFA a s
+  )
 
 end SigmaR
