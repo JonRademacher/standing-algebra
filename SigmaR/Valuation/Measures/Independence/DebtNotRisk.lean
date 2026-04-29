@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.StructuralDebt_Definition
 import SigmaR.Valuation.Measures.RiskInheritance_Definition
 
@@ -7,40 +8,25 @@ import SigmaR.Valuation.Measures.RiskInheritance_Definition
 # Independence: Structural Debt Not Risk
 ###############################################################################
 
-This file establishes that structural debt does not entail
-risk inheritance.
+Structural debt tracks accumulated obligation or unresolved asymmetry.
+Risk inheritance tracks exposure transmitted through structure,
+history, or dependency.
 
-Structural debt tracks accumulated obligation or unresolved
-asymmetry within a system.
-Risk inheritance tracks exposure to risk transmitted through
-structure, history, or dependency.
-
-Importing this file explicitly rejects any assumption that
-debt accumulation itself implies inherited risk.
+No default implication from structural debt to risk inheritance
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from structural debt
-to risk inheritance.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating structural debt as implying
+or licensing risk inheritance is permitted.
 -/
 axiom debt_not_risk :
-  ¬ (∀ (i : Agent) (s : State),
-       StructuralDebt i s → RiskInheritance i s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsRiskFromStructuralDebt a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- obligation automatically implies hazard
-- debt is merely risk under another name
-- accumulated asymmetry entails exposure
-
-Debt and risk are distinct valuation dimensions.
--/
-
