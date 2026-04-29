@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,10 +14,19 @@ valuation measures into a single quantity.
 namespace SigmaR
 
 /--
-Equivalence does not allow aggregation of measures.
+No implication permitting aggregation of valuation
+measures on the basis of equivalence is allowed.
 -/
 axiom equivalence_not_aggregation :
-  ¬ (∃ (F : (Agent → State → Nat) → Nat),
-        True)
+  ¬ (
+    ∃ (M₁ M₂ : Measure) (O : Obj),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      M₁ ≠ M₂ ∧
+      EquivalentMeasures M₁ M₂ ∧
+      AggregatesFromMeasure O M₁ ∧
+      AggregatesFromMeasure O M₂
+  )
 
 end SigmaR
+
