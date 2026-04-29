@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Standing.ConsentState_Definition
 import SigmaR.Valuation.Measures.ExitViability_Definition
 
@@ -7,37 +8,25 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 # Independence: Consent Not Exit Viability
 ###############################################################################
 
-This file establishes that consent does not entail exit viability.
+Consent does not license or guarantee exit viability.
+Exit viability is a structural condition concerning refusal,
+non-coercion, and the availability of escape.
 
-Consented participation does not guarantee the availability of a
-non-coercive or viable exit. Consent may be structurally coerced due
-to dependency, timing, or irreversibility.
-
-Importing this file explicitly rejects any assumption that
-agreement guarantees escape.
+No default implication from consent to exit viability is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from consent to exit viability.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating consent as guaranteeing
+or licensing exit viability is permitted.
 -/
 axiom consent_not_exit :
-  ¬ (∀ (a : Agent) (s : State),
-       ConsentState a s → ExitViable a)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsExitViableFromConsentState a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- agreement ensures escape
-- participation implies non-coercion
-- consent licenses structural exit
-
-Exit viability is a structural condition, not a property of consent.
--/
 
