@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.DominationPressure_Definition
 import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
 
@@ -7,41 +8,25 @@ import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
 # Independence: Domination Pressure Not Autonomy
 ###############################################################################
 
-This file establishes that domination pressure does not entail
-loss of autonomy.
+Domination pressure is a system-level diagnostic of structural
+instability and coercive accumulation.
+Autonomy measures agent-level freedom from coercive constraint.
 
-Autonomy is an agent-level valuation describing freedom from
-coercive constraint.
-Domination pressure is a system-level diagnostic indicating
-approach to structural collapse.
-
-Importing this file explicitly rejects any assumption that
-systemic domination pressure automatically eliminates
-agent-level autonomy.
+No default implication from domination pressure to loss of
+autonomy is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from domination pressure
-to loss of autonomy.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating domination pressure as eliminating,
+revoking, or licensing the absence of autonomy is permitted.
 -/
 axiom domination_pressure_not_autonomy :
-  ¬ (∀ (a : Agent) (s : State),
-       DominationPressure s → AutonomyMeasure a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsAutonomyFromDominationPressure a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- systemic instability implies individual unfreedom
-- collapse diagnostics substitute for autonomy measures
-- agent-level autonomy collapses into system-level pressure
-
-Domination pressure and autonomy operate at different levels.
--/
-
