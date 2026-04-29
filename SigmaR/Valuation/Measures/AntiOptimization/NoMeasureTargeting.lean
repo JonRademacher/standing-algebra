@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,10 +14,15 @@ They are descriptive, not prescriptive.
 namespace SigmaR
 
 /--
-No valuation measure is assumed to be a target of action.
+No implication treating valuation measures as targets
+of optimization or action is permitted.
 -/
 axiom no_measure_targeting :
-  ¬ (∃ (M : Agent → State → Nat),
-        True)
+  ¬ (
+    ∃ (M : Measure) (O : Obj),
+      IsMeasure M ∧
+      Optimizes O ∧
+      TargetsMeasure O M
+  )
 
 end SigmaR
