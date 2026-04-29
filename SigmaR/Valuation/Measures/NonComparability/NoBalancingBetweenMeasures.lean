@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,10 +14,16 @@ offset, or averaged against each other.
 namespace SigmaR
 
 /--
-No balancing is permitted between non-comparable measures.
+No implication permitting balancing between
+non-comparable valuation measures is allowed.
 -/
 axiom no_balancing_between_measures :
-  ¬ (∃ (B : (Agent → State → Nat) → (Agent → State → Nat) → Nat),
-        True)
+  ¬ (
+    ∃ (M₁ M₂ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      NonComparable M₁ M₂ ∧
+      BalancedAgainst M₁ M₂
+  )
 
 end SigmaR
