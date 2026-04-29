@@ -8,7 +8,7 @@ import SigmaR.StandingAlgebra_FormalCore
 Measurement limitations do not imply that the
 underlying system, model, or framework is invalid.
 
-Limits on observation are expected features,
+Limits on observation are expected structural features,
 not defects.
 ###############################################################################
 -/
@@ -16,9 +16,15 @@ not defects.
 namespace SigmaR
 
 /--
-Measurement limits do not imply system invalidity.
+No implication from measurement limitations to system
+invalidity is permitted.
 -/
 axiom measurement_limits_not_invalidity :
-  True
+  ¬ (
+    ∀ (s : State),
+      MeasurementLimited s →
+      SystemInvalid
+  )
 
 end SigmaR
+``
