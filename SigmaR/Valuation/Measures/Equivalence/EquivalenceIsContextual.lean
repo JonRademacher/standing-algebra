@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,10 +14,17 @@ and does not persist universally.
 namespace SigmaR
 
 /--
-Equivalence is not assumed to hold globally.
+No implication asserting context-free or global
+equivalence between valuation measures is permitted.
 -/
 axiom equivalence_is_contextual :
-  ∀ (M₁ M₂ : Agent → State → Nat),
-    ¬ (∀ a s, True)
+  ¬ (
+    ∃ (M₁ M₂ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      EquivalentMeasures M₁ M₂ ∧
+      (∀ (C : EquivalenceContext),
+         EquivalentInContext C M₁ M₂)
+  )
 
 end SigmaR
