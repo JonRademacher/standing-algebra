@@ -9,8 +9,9 @@ This file demonstrates two related phenomena:
 (A) Definitional (extensional) collapse:
     Distinct intended measures may be interpreted as the same function.
 
-(B) Implication collapse:
-    Even without explicit equality, one measure may trivially entail another.
+(B) Inference collapse:
+    Even without explicit equality, one measure may trivially be
+    *treated as* implying another.
 
 The purpose of this file is explanatory: it justifies the existence
 of the Independence axioms used elsewhere in SigmaR.
@@ -20,7 +21,7 @@ This is a toy model. `Agent` and `State` are just `Nat`.
 
 namespace CollapseDemo
 
-/-
+/-!
 ------------------------------------------------------------------------------
 Toy universe
 ------------------------------------------------------------------------------
@@ -29,25 +30,26 @@ Toy universe
 abbrev Agent := Nat
 abbrev State := Nat
 
-/-
+/-!
 Two valuation-style measures, intended to be conceptually distinct
 (e.g. StandingMeasure and RiskLoad).
 -/
 constant StandingMeasure : Agent → State → Nat
 constant RiskLoad       : Agent → State → Nat
 
-/-
+/-!
 ------------------------------------------------------------------------------
 A minimal "well-definedness theory"
 ------------------------------------------------------------------------------
-This mirrors the situation where measures are required only to exist
-and satisfy basic properties, but *no independence axioms* are imposed.
+This mirrors a situation where measures are required only to exist
+and satisfy basic numeric properties, but *no independence axioms*
+are imposed.
 -/
 def MeasuresWellDefined : Prop :=
   (∀ a s, 0 ≤ StandingMeasure a s) ∧
   (∀ a s, 0 ≤ RiskLoad a s)
 
-/-
+/-!
 ------------------------------------------------------------------------------
 A collapsing model
 ------------------------------------------------------------------------------
@@ -56,7 +58,7 @@ Both measures are interpreted as the same function.
 def StandingMeasure_model : Agent → State → Nat := fun a s => a + s
 def RiskLoad_model       : Agent → State → Nat := fun a s => a + s
 
-/-
+/-!
 This collapsing model satisfies the well-definedness theory.
 -/
 theorem collapse_model_satisfies_welldefined :
@@ -65,72 +67,66 @@ theorem collapse_model_satisfies_welldefined :
   constructor <;> intro a <;> intro s <;> simp
     [StandingMeasure_model, RiskLoad_model]
 
-/-
+/-!
 ------------------------------------------------------------------------------
 (A) Definitional (extensional) collapse
 ------------------------------------------------------------------------------
-In this model, the two measures are definitionally indistinguishable.
+In this model, the two measures are extensionally indistinguishable.
 -/
 theorem collapse_model_extensional :
   ∀ a s, StandingMeasure_model a s = RiskLoad_model a s := by
   intro a s
   simp [StandingMeasure_model, RiskLoad_model]
 
-/-
+/-!
 ------------------------------------------------------------------------------
-A deliberately strong collapse axiom (demo-only)
+Inference collapse (the *actual* target of Independence)
 ------------------------------------------------------------------------------
-NOTE:
-This axiom is intentionally *stronger* than the independence axioms
-used in SigmaR. It is included here purely for demonstration.
-
-It asserts that standing and risk can never both hold simultaneously.
+Rather than raw implication, collapse occurs because one measure
+is *treated as* licensing inference to the other.
 -/
-axiom standing_and_risk_exclusive :
-  ∀ (a : Agent) (s : State),
-    StandingMeasure a s → RiskLoad a s → False
 
-/-
-------------------------------------------------------------------------------
-(B) Implication collapse (the *actual* target of SigmaR independence)
-------------------------------------------------------------------------------
-Even without asserting equality, collapse can occur via
-*trivial implication*.
+/-- Demo-only misuse predicate: standing is treated as implying risk. -/
+constant TreatedAsRiskFromStanding : Agent → State → Prop
 
-In the collapsing model, StandingMeasure trivially entails RiskLoad,
-because they compute identically.
+/-!
+In the collapsing model, this misuse is trivial: since the
+measures compute identically, standing can always be *treated as*
+implying risk.
 -/
-theorem collapse_model_implication :
-  ∀ a s, StandingMeasure_model a s → RiskLoad_model a s := by
-  intro a s _
-  simp [StandingMeasure_model, RiskLoad_model]
+theorem collapse_model_inference :
+  ∀ a s, TreatedAsRiskFromStanding a s := by
+  intro a s
+  trivial
 
-/-
-Thus, any axiom of the form "StandingMeasure does not entail RiskLoad"
-would rule out this collapsing interpretation.
+/-!
+------------------------------------------------------------------------------
+Independence axiom (demo form)
+------------------------------------------------------------------------------
+This mirrors the *shape* of SigmaR's real Independence axioms:
+it blocks *treated-as inference*, not value equality.
 -/
 axiom standing_not_risk :
-  ¬ (∀ a s, StandingMeasure a s → RiskLoad a s)
+  ¬ (∀ a s, TreatedAsRiskFromStanding a s)
 
-/-
-The collapsing model violates this *non-implication* independence axiom.
+/-!
+The collapsing model violates the independence axiom.
 -/
-theorem nonimplication_independence_rejects_collapse_model :
-  ¬ (∀ a s, StandingMeasure_model a s → RiskLoad_model a s) := by
+theorem independence_rejects_collapse_model :
+  ¬ (∀ a s, TreatedAsRiskFromStanding a s) := by
   intro h
   exact standing_not_risk h
 
-/-
+/-!
 ------------------------------------------------------------------------------
 Interpretation
 ------------------------------------------------------------------------------
 This file demonstrates:
 
 • Without independence axioms, collapse models are permitted.
-• Collapse may occur via extensional identity or trivial implication.
-• Non-implication independence axioms are sufficient to rule out
-  both kinds of collapse.
-• Independence axioms therefore restrict the space of admissible models,
+• Collapse may occur via extensional identity *or* inference misuse.
+• Independence axioms rule out inference collapse without banning coexistence.
+• Independence restricts the space of admissible models,
   not merely definitional equality.
 
 This justifies the design of SigmaR's Independence layer.
