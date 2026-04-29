@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,11 +14,14 @@ a single scalar quantity by default.
 namespace SigmaR
 
 /--
-There is no canonical scalarization of multiple measures.
+No implication permitting scalar collapse of multiple
+valuation measures is allowed.
 -/
 axiom no_scalarization :
-  ¬ (∃ (F : (Agent → State → Nat) → Nat),
-        ∀ (M : Agent → State → Nat),
-          True)
+  ¬ (
+    ∃ (Ms : Set Measure) (O : Obj),
+      (∃ M₁ M₂, M₁ ∈ Ms ∧ M₂ ∈ Ms ∧ M₁ ≠ M₂) ∧
+      Scalarizes Ms O
+  )
 
 end SigmaR
