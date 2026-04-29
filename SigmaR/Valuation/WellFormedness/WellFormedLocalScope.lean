@@ -7,16 +7,23 @@ import SigmaR.StandingAlgebra_FormalCore
 
 Locally scoped valuation expressions must remain
 explicitly bound to their local context.
+
+This file prevents implicit or accidental localization
+of valuation measures.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Local scope must be explicit and preserved.
+No valuation measure may be treated as locally scoped
+unless it is explicitly declared local.
 -/
-axiom wellformed_local_scope :
-  ∀ (M : Agent → State → Nat),
-    True
+axiom no_implicit_local_scope :
+  ¬ (
+    ∀ (M : Agent → State → Nat),
+      IsMeasure M →
+      IsLocalScope M
+  )
 
 end SigmaR
