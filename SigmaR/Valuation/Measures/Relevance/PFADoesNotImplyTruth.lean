@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.Relevance.PFA_Definition
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -14,11 +14,15 @@ perception, not correctness or objective truth.
 namespace SigmaR
 
 /--
-Perceptual agreement does not entail truth.
+No implication from PFA to objective truth or correctness
+is permitted.
 -/
 axiom pfa_not_truth :
-  ∀ (G : Set Agent) (s : State),
-    PFA G s →
-    True
+  ¬ (
+    ∀ (G : Set Agent) (s : State),
+      PFA G s →
+      TreatedAsTrue s
+  )
 
 end SigmaR
+
