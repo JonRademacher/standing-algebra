@@ -15,9 +15,17 @@ It does not constrain interpretation, usage, or consequence.
 namespace SigmaR
 
 /--
-WellFormedness is scoped to structural legality only.
+Well-formedness does not constrain interpretation,
+usage, or consequence.
+
+Those concerns are governed by higher layers.
 -/
-axiom wellformedness_is_structural :
-  True
+axiom wellformedness_does_not_constrain_interpretation :
+  ¬ (
+    ∀ (M : Agent → State → Nat),
+      WellFormed M →
+      ConstrainsInterpretation M
+  )
 
 end SigmaR
+
