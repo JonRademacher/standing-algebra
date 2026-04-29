@@ -21,7 +21,7 @@ No implication from well-formedness to validity is permitted.
 axiom wellformedness_not_validity :
   ¬ (
     ∀ (M : Agent → State → Nat),
-      WellFormed M → Valid M
+      WellFormed M → ValidMeasure M
   )
 
 end SigmaR
