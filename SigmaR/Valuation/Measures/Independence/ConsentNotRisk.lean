@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Standing.ConsentState_Definition
 import SigmaR.Valuation.Measures.RiskLoad_Definition
 
@@ -7,38 +8,25 @@ import SigmaR.Valuation.Measures.RiskLoad_Definition
 # Independence: Consent Not Risk
 ###############################################################################
 
-This file establishes that consent does not entail the absence
-or neutralization of risk exposure.
-
 Consent is an agent-level act or expression.
 Risk load captures exposure to harm or uncertainty.
-No implication from consent to risk is assumed.
 
-Importing this file explicitly rejects any assumption that
-agreement neutralizes risk exposure.
+No default implication from consent to the absence
+or neutralization of risk is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from consent to the absence of risk load.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating consent as eliminating,
+neutralizing, or licensing the absence of risk load
+is permitted.
 -/
 axiom consent_not_risk :
-  ¬ (∀ (a : Agent) (s : State),
-       ConsentState a s → ¬ RiskLoad a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsRiskResolvedFromConsentState a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- agreement eliminates danger
-- consent implies safety
-- participation neutralizes exposure
-
-Risk may persist or increase despite consent.
--/
-
