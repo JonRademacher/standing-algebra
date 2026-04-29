@@ -5,18 +5,24 @@ import SigmaR.StandingAlgebra_FormalCore
 # Measurement Does Not Imply Causation
 ###############################################################################
 
-Observed correlations or measurements do not
-establish causal relationships.
+Observed measurements or correlations do not establish
+causal relationships.
+
+Causation cannot be inferred from observation alone.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Measurement does not imply causation.
+No implication from measurement to causation is permitted.
 -/
 axiom measurement_not_causation :
-  ¬ (∃ (C : State → State → Prop),
-        True)
+  ¬ (
+    ∀ (a : Agent) (s₁ s₂ : State),
+      Observable a s₁ →
+      Observable a s₂ →
+      Causes s₁ s₂
+  )
 
 end SigmaR
