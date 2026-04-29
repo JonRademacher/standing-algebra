@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
 import SigmaR.Standing.ConsentState_Definition
 
@@ -7,21 +8,25 @@ import SigmaR.Standing.ConsentState_Definition
 # Independence: Autonomy (Measure) Not Consent
 ###############################################################################
 
-Autonomy as a structural measure does not entail consent.
+Autonomy as a structural valuation measure does not
+license or imply consent.
 
-An agent may possess autonomy while withholding consent,
-and consent may occur under constrained autonomy.
+Any relationship between autonomy measures and consent
+must be introduced explicitly in higher layers or models.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from autonomy measures
-to consent.
+No implication treating autonomy measures as
+licensing or implying consent is permitted.
 -/
 axiom autonomy_not_consent_measure :
-  ¬ (∀ (a : Agent) (s : State),
-       AutonomyMeasure a s → ConsentState a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsConsentFromAutonomyMeasure a s
+  )
 
 end SigmaR
+
