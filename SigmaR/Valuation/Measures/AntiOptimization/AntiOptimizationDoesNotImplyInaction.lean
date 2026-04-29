@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.AntiOptimization.AntiOptimizationContract
 
 /-!
@@ -16,14 +17,18 @@ not the possibility of action.
 
 namespace SigmaR
 
+/-- Marker predicate for permissible actions/interventions.
+    (Defined elsewhere; only referenced structurally here.) -/
+constant ActionPossible : State → State → Prop
+
 /--
-Prohibiting optimization does not imply that
-no action or response may occur.
+No implication from the absence of optimization
+to the impossibility of action is permitted.
 -/
 axiom antioptimization_not_inaction :
   ¬ (
-    ¬ (∃ (O : State → Nat), True) →
-    ¬ (∃ (A : State → State), True)
+    ¬ (∃ (O : Obj), Optimizes O) →
+    ¬ (∃ (s₁ s₂ : State), ActionPossible s₁ s₂)
   )
 
 end SigmaR
