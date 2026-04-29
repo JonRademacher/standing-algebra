@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.DominationPressure_Definition
 import SigmaR.Valuation.Measures.RiskLoad_Definition
 
@@ -7,39 +8,25 @@ import SigmaR.Valuation.Measures.RiskLoad_Definition
 # Independence: Domination Pressure Not Risk
 ###############################################################################
 
-This file establishes that domination pressure does not entail
-risk exposure.
-
-Domination pressure is a system-level diagnostic indicating
-approach to structural collapse.
+Domination pressure is a system-level diagnostic of structural
+instability or collapse.
 Risk load captures inherited or situational exposure to harm.
 
-Importing this file explicitly rejects any assumption that
-collapse diagnostics automatically imply risk exposure.
+No default implication from domination pressure to risk
+exposure is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from domination pressure
-to risk load.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating domination pressure as implying
+or licensing risk exposure is permitted.
 -/
 axiom domination_pressure_not_risk :
-  ¬ (∀ (a : Agent) (s : State),
-       DominationPressure s → RiskLoad a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsRiskFromDominationPressure a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- systemic instability implies danger by definition
-- domination pressure collapses into risk metrics
-- collapse diagnostics substitute for exposure measures
-
-Domination pressure and risk are distinct valuation dimensions.
--/
-
