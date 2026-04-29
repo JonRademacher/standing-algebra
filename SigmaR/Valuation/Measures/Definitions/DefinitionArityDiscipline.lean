@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -7,30 +8,36 @@ import SigmaR.StandingAlgebra_FormalCore
 
 Valuation definitions must respect their intended arity.
 
-This file enforces that:
-- measures depend on Agent and State
-- pressures depend on State only
-- state predicates are not numeric measures
+This file blocks illicit reinterpretation of definitions
+across arity boundaries.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Agent-indexed valuation measures must depend on both
-Agent and State parameters.
+No implication permitting an agent–state valuation
+to be treated as agent-independent is allowed.
 -/
-axiom measure_arity_discipline :
-  ∀ (M : Agent → State → Nat),
-    ∃ (a₁ a₂ : Agent) (s₁ s₂ : State),
-      a₁ ≠ a₂ ∨ s₁ ≠ s₂
+axiom measure_requires_agent_dependency :
+  ¬ (
+    ∀ (M : Measure),
+      IsMeasure M →
+      ∃ (f : State → Nat),
+        ∀ (a : Agent) (s : State),
+          M a s = f s
+  )
 
 /--
-State-level pressures are not agent-indexed by definition.
+No implication permitting a state-level quantity
+to be treated as agent-indexed is allowed.
 -/
 axiom pressure_not_agent_indexed :
-  ∀ (P : State → Nat),
-    ∀ (a₁ a₂ : Agent) (s : State),
-      P s = P s
+  ¬ (
+    ∀ (P : State → Nat),
+      ∃ (M : Measure),
+        ∀ (a : Agent) (s : State),
+          M a s = P s
+  )
 
 end SigmaR
