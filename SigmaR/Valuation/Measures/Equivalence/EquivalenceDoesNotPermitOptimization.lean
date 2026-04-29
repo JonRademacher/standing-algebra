@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,10 +14,17 @@ license optimization or maximization.
 namespace SigmaR
 
 /--
-Equivalence does not imply optimizability.
+No implication from equivalence to optimization
+is permitted.
 -/
 axiom equivalence_not_optimization :
-  ¬ (∃ (O : State → Nat),
-        True)
+  ¬ (
+    ∃ (M₁ M₂ : Measure) (O : Obj),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      EquivalentMeasures M₁ M₂ ∧
+      Optimizes O
+  )
 
 end SigmaR
+
