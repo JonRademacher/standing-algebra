@@ -7,16 +7,21 @@ import SigmaR.StandingAlgebra_FormalCore
 
 Measurement does not imply that the system is to be
 optimized, improved, or maximized.
+
+Observation does not license optimization.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Measurement does not license optimization.
+No implication from measurement to optimization is permitted.
 -/
 axiom measurement_not_optimization :
-  ¬ (∃ (O : State → Nat),
-        True)
+  ¬ (
+    ∀ (a : Agent) (s : State) (O : State → Nat),
+      Observable a s →
+      Optimizes O
+  )
 
 end SigmaR
