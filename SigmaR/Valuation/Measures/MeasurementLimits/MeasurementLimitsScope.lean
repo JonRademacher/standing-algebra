@@ -5,7 +5,9 @@ import SigmaR.StandingAlgebra_FormalCore
 # Measurement Limits Scope
 ###############################################################################
 
-Measurement limits apply to the act of observation and diagnosis.
+Measurement limits apply to the act of observation and
+diagnosis.
+
 They do not constrain the underlying system state itself.
 ###############################################################################
 -/
@@ -13,11 +15,14 @@ They do not constrain the underlying system state itself.
 namespace SigmaR
 
 /--
-Measurement limitations are scoped to observers and contexts,
-not to the existence of system properties.
+No implication from measurement limits to constraints
+on the system state itself is permitted.
 -/
 axiom measurement_limits_are_scoped :
-  ∀ (a : Agent) (s : State),
-    True
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      MeasurementLimited a s →
+      ConstrainsState s
+  )
 
 end SigmaR
