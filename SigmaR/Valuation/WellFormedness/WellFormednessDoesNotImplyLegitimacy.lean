@@ -19,7 +19,7 @@ No implication from well-formedness to legitimacy is permitted.
 axiom wellformedness_not_legitimacy :
   ¬ (
     ∀ (M : Agent → State → Nat),
-      WellFormed M → Legitimate M
+      WellFormed M → LegitimateMeasure M
   )
 
 end SigmaR
