@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,11 +14,15 @@ does not by itself establish Perceptual Frame Agreement (PFA).
 namespace SigmaR
 
 /--
-IPFA does not escalate to PFA without shared observation.
+No implication permitting IPFA alone to establish
+PFA or collective warrant is allowed.
 -/
 axiom ipfa_not_escalate_to_pfa :
-  ∀ (P : Agent → State → Prop),
-    ¬ (∀ a s, P a s) →
-    ¬ (∀ s, True)
+  ¬ (
+    ∀ (G : Set Agent) (s : State),
+      (∀ a ∈ G, IPFA a s) →
+      PFA G s
+  )
 
 end SigmaR
+
