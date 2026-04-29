@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.NonComparability.NonComparabilityContract
 
 /-!
@@ -17,12 +18,17 @@ not the possibility of action.
 namespace SigmaR
 
 /--
-Non-comparability does not imply that no action or response may occur.
+No implication treating non-comparability as implying
+inaction or impossibility of response is permitted.
 -/
 axiom noncomparability_not_inaction :
   ¬ (
-    ∀ (M₁ M₂ : Agent → State → Nat),
-      ¬ (∃ (A : State → State), True)
+    ∃ (M₁ M₂ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      NonComparable M₁ M₂ ∧
+      TreatedAsInaction M₁ M₂
   )
 
 end SigmaR
+
