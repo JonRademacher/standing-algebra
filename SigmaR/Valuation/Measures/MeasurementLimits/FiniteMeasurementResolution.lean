@@ -6,17 +6,24 @@ import SigmaR.StandingAlgebra_FormalCore
 ###############################################################################
 
 Measurements have finite resolution.
-Arbitrarily fine distinctions are not assumed observable.
+
+This file prevents assumptions of arbitrarily fine or
+infinitely precise measurement.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Measurement resolution is finite.
+There is no general rule that measurement admits
+infinite resolution.
+
+Measurements must not be treated as arbitrarily precise.
 -/
-axiom finite_measurement_resolution :
-  ∀ (a : Agent) (s : State),
-    True
+axiom no_infinite_measurement_resolution :
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      InfinitelyResolvable (MeasuredValue a s)
+  )
 
 end SigmaR
