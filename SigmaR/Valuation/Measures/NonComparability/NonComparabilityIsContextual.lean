@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,10 +14,18 @@ It is not assumed globally.
 namespace SigmaR
 
 /--
-Non-comparability is contextual, not universal.
+No implication asserting context-free or global
+non-comparability between valuation measures is permitted.
 -/
 axiom noncomparability_is_contextual :
-  ∀ (M₁ M₂ : Agent → State → Nat),
-    True
+  ¬ (
+    ∃ (M₁ M₂ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      NonComparable M₁ M₂ ∧
+      (∀ (C : NonComparabilityContext),
+         NonComparableInContext C M₁ M₂)
+  )
 
 end SigmaR
+
