@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,11 +14,17 @@ for optimizing another measure.
 namespace SigmaR
 
 /--
-No proxy-based optimization is assumed.
+No implication permitting proxy-based optimization
+between valuation measures is allowed.
 -/
 axiom no_proxy_optimization :
-  ¬ (∃ (P : Agent → State → Nat)
-        (T : Agent → State → Nat),
-        True)
+  ¬ (
+    ∃ (M₁ M₂ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      M₁ ≠ M₂ ∧
+      ProxiesFor M₁ M₂
+  )
 
 end SigmaR
+
