@@ -7,13 +7,9 @@ import SigmaR.StandingAlgebra_FormalCore
 
 RiskLoad measures the structural exposure borne by an agent.
 
-Source alignment:
-  • Standing Algebra: risk is inherited exposure,
-    not likelihood, utility, or expected value.
-  • On Relevance: risk grounds standing and
-    justification, but does not itself authorize action.
-
-RiskLoad is purely diagnostic and successor-native.
+• It is descriptive and diagnostic.
+• It is not probabilistic, normative, or optimizing.
+• Any properties or invariants are introduced elsewhere.
 ###############################################################################
 -/
 
@@ -24,11 +20,5 @@ RiskLoad a is the successor-native measure
 of structural risk exposure borne by agent a.
 -/
 constant RiskLoad : Agent → Nat
-
-/--
-Risk load is always well-defined and non-negative.
--/
-axiom RiskLoad_nonneg :
-  ∀ a : Agent, 0 ≤ RiskLoad a
 
 end SigmaR
