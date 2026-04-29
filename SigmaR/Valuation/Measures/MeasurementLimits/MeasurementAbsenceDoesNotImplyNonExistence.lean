@@ -15,10 +15,14 @@ Measurement limits constrain access, not reality.
 namespace SigmaR
 
 /--
-Failure to observe does not imply non-existence.
+No implication from lack of observation to non-existence
+is permitted.
 -/
 axiom measurement_absence_not_nonexistence :
-  ∀ (a : Agent) (s : State),
-    ¬ True → True
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      ¬ Observable a s → ¬ Exists s
+  )
 
 end SigmaR
+
