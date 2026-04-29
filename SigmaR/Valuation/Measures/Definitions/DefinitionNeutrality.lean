@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -9,20 +10,26 @@ Valuation definitions must be semantically neutral.
 
 They must not encode moral judgments, policy decisions,
 optimization goals, or normative classifications.
+
+Any evaluative or policy-driven semantics must be introduced
+in higher layers or explicit models.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Primitive definitions must not enforce normative distinctions.
-
-Any evaluative or policy-driven semantics must be introduced
-in higher layers or explicit models.
+No implication from the mere existence of a valuation
+definition to normative, policy, or evaluative interpretation
+is permitted.
 -/
 axiom definition_neutrality :
-  ∀ (M : Agent → State → Nat),
-    ¬ (∃ (a : Agent) (s : State),
-         M a s = 0 ∨ M a s = 100)
+  ¬ (
+    ∀ (M : Measure),
+      IsMeasure M →
+      (TreatedAsUtility M ∨
+       TreatedAsWelfare M ∨
+       InterpretedAsImprovement M)
+  )
 
 end SigmaR
