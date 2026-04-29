@@ -6,17 +6,27 @@ import SigmaR.StandingAlgebra_FormalCore
 ###############################################################################
 
 Well-formed valuation constructions must not be
-structurally empty or degenerate.
+structurally trivial.
+
+This file prevents argument-insensitive or
+structurally constant functions from being treated
+as valuation measures.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Well-formed constructions are non-trivial.
+No structurally trivial valuation may be treated as a measure.
+
+In particular, functions that ignore both Agent and State
+are not admissible as valuation measures.
 -/
-axiom wellformed_non_triviality :
-  ∀ (M : Agent → State → Nat),
-    True
+axiom no_structurally_trivial_measure :
+  ¬ (
+    ∀ (M : Agent → State → Nat),
+      StructurallyConstant M →
+      IsMeasure M
+  )
 
 end SigmaR
