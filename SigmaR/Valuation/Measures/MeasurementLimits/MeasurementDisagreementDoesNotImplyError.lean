@@ -16,10 +16,14 @@ frame dependence, or locality.
 namespace SigmaR
 
 /--
-Measurement disagreement does not imply error.
+No implication from measurement disagreement to error
+is permitted.
 -/
 axiom measurement_disagreement_not_error :
-  ∀ (a₁ a₂ : Agent) (s : State),
-    True
+  ¬ (
+    ∀ (a₁ a₂ : Agent) (s : State),
+      Measured a₁ s ≠ Measured a₂ s →
+      Error a₁ s ∨ Error a₂ s
+  )
 
 end SigmaR
