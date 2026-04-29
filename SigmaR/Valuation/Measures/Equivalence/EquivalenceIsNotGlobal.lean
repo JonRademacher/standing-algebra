@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.Equivalence.EquivalenceScope
 
 /-!
@@ -14,11 +15,17 @@ hold globally across all states, agents, or contexts.
 namespace SigmaR
 
 /--
-No equivalence relation is assumed to hold universally.
+No implication asserting universal or global equivalence
+between valuation measures is permitted.
 -/
 axiom equivalence_not_global :
-  ¬ (∀ (M₁ M₂ : Agent → State → Nat)
-        (a : Agent) (s : State),
-        True)
+  ¬ (
+    ∃ (M₁ M₂ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      (∀ (C : EquivalenceContext),
+         EquivalentInContext C M₁ M₂)
+  )
 
 end SigmaR
+
