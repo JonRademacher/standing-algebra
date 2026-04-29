@@ -1,26 +1,27 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
 # Relevance Does Not Determine Decision
 ###############################################################################
 
-Epistemic relevance does not determine decisions,
-outcomes, or selections.
-
-Relevance constrains consideration, not resolution.
+Epistemic relevance constrains consideration, not resolution.
+It must not determine decisions, outcomes, or selections.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Relevance does not determine decision outcomes.
+No implication permitting relevance to determine
+decision outcomes is allowed.
 -/
 axiom relevance_does_not_determine_decision :
-  ∀ (R : Agent → State → Prop)
-    (D : State → State),
-    ¬ (∀ (a : Agent) (s : State),
-          R a s → D s = s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      IPFA a s →
+      TreatedAsAuthoritative s
+  )
 
 end SigmaR
