@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,10 +14,15 @@ over agents or states by default.
 namespace SigmaR
 
 /--
-No canonical ranking of agents or states is assumed.
+No implication from valuation measures to induced
+rankings or orderings is permitted.
 -/
 axiom no_ranked_operations :
-  ¬ (∃ (rank : State → Nat),
-        True)
+  ¬ (
+    ∃ (M : Measure),
+      IsMeasure M ∧
+      InducesRanking M
+  )
 
 end SigmaR
+
