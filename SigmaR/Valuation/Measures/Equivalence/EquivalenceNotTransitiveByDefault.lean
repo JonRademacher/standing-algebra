@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -13,10 +14,19 @@ automatically propagate transitively.
 namespace SigmaR
 
 /--
-Equivalence is not transitive unless explicitly stated.
+No implication asserting transitive closure of
+equivalence between valuation measures is permitted
+by default.
 -/
 axiom equivalence_not_transitive_by_default :
-  ¬ (∀ (M₁ M₂ M₃ : Agent → State → Nat),
-        True)
+  ¬ (
+    ∃ (M₁ M₂ M₃ : Measure),
+      IsMeasure M₁ ∧
+      IsMeasure M₂ ∧
+      IsMeasure M₃ ∧
+      EquivalentMeasures M₁ M₂ ∧
+      EquivalentMeasures M₂ M₃ ∧
+      EquivalentMeasures M₁ M₃
+  )
 
 end SigmaR
