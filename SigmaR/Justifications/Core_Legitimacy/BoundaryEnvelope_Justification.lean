@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Core_Legitimacy.BoundaryEnvelope_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.ScopeScaleRelativity_Justification
 import SigmaR.Justifications.Core_Legitimacy.MultiScopeSimultaneity_Justification
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
