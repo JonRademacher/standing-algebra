@@ -5,19 +5,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Standing Is Conditionally Monotone
+# Standing Is Conditionally Monotone (Structural)
 ###############################################################################
 
-Standing is not reduced without corresponding structural degradation.
+Standing is treated as conditionally non-increasing
+with respect to domination pressure along the state preorder.
+
+This file names the conditional monotonicity relationship.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom standing_conditionally_monotone :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    DominationPressure s₁ ≤ DominationPressure s₂ →
-    StandingMeasure a s₂ ≤ StandingMeasure a s₁
+/--
+Standing is treated as conditionally monotone decreasing
+with respect to domination pressure.
+-/
+constant StandingConditionallyMonotoneUnderDomination :
+  Agent → Prop
 
 end SigmaR
