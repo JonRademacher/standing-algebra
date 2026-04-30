@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorDriftSensitivity_Justification
+
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
 import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
