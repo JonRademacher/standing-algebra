@@ -1,44 +1,34 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Standing.RoleState_Definition
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.StandingMeasure_Definition
+import SigmaR.Standing.RoleState_Definition
 
 /-!
 ###############################################################################
 # Independence: Standing Not Role
 ###############################################################################
 
-This file establishes that standing does not entail institutional role
-occupancy.
+Standing does not license or imply institutional role occupancy.
 
 Standing measures recognition or admissible participation.
 Role occupancy describes institutional position or permission.
 
-Importing this file explicitly rejects any assumption that
-recognized standing assigns roles or authority.
+No default implication from standing to role assignment
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from standing
-to role state.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating standing as constituting,
+assigning, or licensing institutional role occupancy
+is permitted.
 -/
 axiom standing_not_role :
-  ¬ (∀ (a : Agent) (s : State),
-       StandingMeasure a s → RoleState a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsRoleFromStandingMeasure a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- recognition confers authority
-- admissibility substitutes for role assignment
-- standing collapses into institutional position
-
-Standing and role occupancy are distinct structural facts.
--/
-
