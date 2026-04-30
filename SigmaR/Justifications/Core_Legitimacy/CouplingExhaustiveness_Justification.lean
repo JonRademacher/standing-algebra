@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Core_Legitimacy.CouplingExhaustiveness_Justification
+
 /-!
 ###############################################################################
 # Justification of Coupling Exhaustiveness
