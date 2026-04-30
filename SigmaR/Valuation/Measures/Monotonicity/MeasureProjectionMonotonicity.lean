@@ -3,22 +3,25 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Measure Projection Monotonicity
+# Measure Projection Monotonicity (Structural)
 ###############################################################################
 
-Projecting or restricting a valuation does not reverse monotonicity.
+Projection or restriction of valuation measures may be treated
+as preserving monotonicity in certain models or interpretive regimes.
+
+This file names the admissibility of monotonicity-preserving
+projection and restriction.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Projection of a monotone measure remains monotone.
+A valuation measure is treated as admitting projection
+or restriction without reversing its structural monotonicity.
 -/
-axiom measure_projection_monotone :
-  ∀ (M : Agent → State → Nat)
-    (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    M a s₁ ≤ M a s₂
+constant ProjectionPreservesMonotonicity :
+  Measure → Prop
 
 end SigmaR
