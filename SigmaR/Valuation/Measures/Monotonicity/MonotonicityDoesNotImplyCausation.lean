@@ -2,21 +2,23 @@ import SigmaR.StandingAlgebra_FormalCore
 
 /-!
 ###############################################################################
-# Monotonicity Does Not Imply Causation
+# Monotonicity Does Not Imply Causation (Contract)
 ###############################################################################
 
-Monotonicity of one measure does not entail causal influence
-over another measure.
+Monotonicity of a valuation measure must not be interpreted
+as causal influence over another measure.
+
+This file introduces no axioms.
+It names an interpretive boundary that applies to all uses
+of monotonicity within SigmaR.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom monotonicity_does_not_imply_causation :
-  ∀ (M₁ M₂ : Agent → State → Nat),
-    ¬ (∀ a s₁ s₂,
-        StateLe s₁ s₂ →
-        M₁ a s₁ ≤ M₁ a s₂ →
-        M₂ a s₁ ≤ M₂ a s₂)
+/--
+Monotonicity relations are treated as non-causal.
+-/
+constant MonotonicityIsNonCausal : Prop
 
 end SigmaR
