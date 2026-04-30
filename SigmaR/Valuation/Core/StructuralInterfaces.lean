@@ -16,15 +16,16 @@ SigmaR valuation layers:
 • NonComparability
 • Independence (ALL inference firewalls)
 • Monotonicity (ALL structural and contract predicates)
+• Admissibility (ALL permission-to-reason predicates)
 
 This is a **pure signature file**:
 • no axioms
 • no theorems
 • no definitions
 
-Its sole purpose is to make *all inference and evolution boundaries explicit
-and reviewable*. Nothing here asserts truth, causation, legitimacy, optimization,
-authority, obligation, or necessity.
+Its sole purpose is to make *all inference, evolution, and permission
+boundaries explicit and reviewable*. Nothing here asserts truth, causation,
+legitimacy, optimization, authority, obligation, or necessity.
 ###############################################################################
 -/
 
@@ -186,8 +187,7 @@ constant NonComparableInContext :
 ------------------------------------------------------------------------------
 9. Independence misuse predicates (COMPLETE)
 ------------------------------------------------------------------------------
-Each predicate names a *forbidden inference*, not a forbidden fact.
------------------------------------------------------------------------------- -/
+-/
 
 -- Autonomy misuses
 constant TreatedAsAutonomyFromStandingMeasure : Agent → State → Prop
@@ -272,29 +272,60 @@ constant TreatedAsDominationPressureFromTemporalAccumulation : Agent → State �
 ------------------------------------------------------------------------------
 10. Monotonicity interfaces (COMPLETE)
 ------------------------------------------------------------------------------
-These name monotonicity structure, direction, conditions, and contracts.
-They assert NOTHING.
------------------------------------------------------------------------------- -/
+-/
 
--- Core structural properties
 constant StructurallyMonotone : Measure → Prop
 constant StructurallyAntitone : Measure → Prop
 
--- Measure-level attributes
 constant UpperBounded : Measure → Prop
 constant Irreversible : Measure → Prop
 constant RequiresEnablingStructure : Measure → Prop
 
--- Conditional monotonicity relations
 constant MonotoneUnder : Measure → Measure → Prop
 constant AntitoneUnder : Measure → Measure → Prop
 
--- Monotonicity contracts
 constant MonotonicityIsContextual : Prop
 constant MonotonicityRequiresScope : Prop
 constant MonotonicityIsNonCausal : Prop
 constant MonotonicityDoesNotGuaranteePersistence : Prop
 constant MonotonicityAllowsNonTotalOrder : Prop
 constant MonotonicityRespectsIndependence : Prop
+
+/-!
+------------------------------------------------------------------------------
+11. Admissibility interfaces (NEW — COMPLETE)
+------------------------------------------------------------------------------
+These name permission-to-reason predicates.
+They assert NOTHING.
+------------------------------------------------------------------------------ -/
+
+-- Core admissibility primitives
+constant AdmissibleConfiguration : Prop
+constant AdmissibleMeasure : Measure → Prop
+constant AdmissibleMeasureSet : Set Measure → Prop
+constant AdmissibleInference : Prop
+constant AdmissibleComparison : Measure → Measure → Prop
+constant AdmissibleEvolution : Measure → Prop
+constant AdmissibleIrreversibility : Measure → Prop
+
+-- Admissibility under structural constraints
+constant AdmissibleUnderWellFormedness : Prop
+constant AdmissibleUnderIndependence : Prop
+constant AdmissibleUnderMonotonicity : Prop
+constant AdmissibleMeasureUsage : Measure → Prop
+constant AdmissibleContextBinding : Prop
+constant AdmissibleFrame : Frame → Prop
+constant AdmissibleAgentPerspective : Agent → Prop
+
+-- Admissibility non-implication firewalls
+constant AdmissibilityDoesNotImplyTruth : Prop
+constant AdmissibilityDoesNotImplyValidity : Prop
+constant AdmissibilityDoesNotImplyLegitimacy : Prop
+constant AdmissibilityDoesNotImplyAuthority : Prop
+constant AdmissibilityDoesNotImplyIntervention : Prop
+
+-- Admissibility scope and contract
+constant AdmissibilityScope : Prop
+constant AdmissibilityContract : Prop
 
 end SigmaR
