@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.StandingMeasure_Definition
 import SigmaR.Valuation.Measures.StructuralDebt_Definition
 
@@ -7,38 +8,29 @@ import SigmaR.Valuation.Measures.StructuralDebt_Definition
 # Independence: Standing Not Structural Debt
 ###############################################################################
 
-This file establishes that standing does not entail the
-absence or discharge of structural debt.
+Standing does not license or imply the resolution,
+elimination, or absence of structural debt.
 
-Standing tracks recognition under admissible participation.
+Standing measures recognized status or admissible participation.
 Structural debt tracks unresolved asymmetry and deferred repair
 within a system.
 
-Importing this file explicitly rejects any assumption that
-recognized standing resolves or eliminates structural debt.
+No default implication from standing to structural debt
+resolution is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from standing
-to the absence of structural debt.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating standing as resolving,
+eliminating, or licensing the absence of structural debt
+is permitted.
 -/
 axiom standing_not_debt :
-  ¬ (∀ (a : Agent) (s : State),
-       StandingMeasure a s → ¬ StructuralDebt a)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsStructuralDebtResolvedFromStandingMeasure a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- recognition cancels obligation
-- admissible participation resolves asymmetry
-- standing collapses into debt clearance
-
-Standing and structural debt are distinct structural facts.
--/
