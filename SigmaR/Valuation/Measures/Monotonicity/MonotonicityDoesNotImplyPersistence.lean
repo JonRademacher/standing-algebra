@@ -3,23 +3,23 @@ import SigmaR.Valuation.Measures.Monotonicity.MonotonicityScope
 
 /-!
 ###############################################################################
-# Monotonicity Does Not Imply Persistence
+# Monotonicity Does Not Imply Persistence (Contract)
 ###############################################################################
 
-Monotonicity does not guarantee that a property,
-once true, remains true.
+Monotonicity of a valuation measure must not be interpreted
+as guaranteeing persistence of values across state progression.
+
+This file introduces no axioms.
+It names an interpretive boundary governing the use of
+monotonicity within SigmaR.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-Monotonic constraints do not imply persistence of values.
+Monotonicity relations are treated as non-persistent.
 -/
-axiom monotonicity_not_persistence :
-  ∀ (M : Agent → State → Nat),
-    ¬ (∀ a s₁ s₂,
-        StateLe s₁ s₂ →
-        M a s₁ = M a s₂)
+constant MonotonicityDoesNotGuaranteePersistence : Prop
 
 end SigmaR
