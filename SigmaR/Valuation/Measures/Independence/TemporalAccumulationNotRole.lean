@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
 import SigmaR.Standing.RoleState_Definition
 
@@ -7,39 +8,30 @@ import SigmaR.Standing.RoleState_Definition
 # Independence: Temporal Accumulation Not Role
 ###############################################################################
 
-This file establishes that temporal accumulation does not entail
-institutional role occupancy.
+Temporal accumulation does not license or imply institutional
+role occupancy.
 
-Temporal accumulation is a structural, time-based diagnostic of
-irreversible or narrowing constraint.
-Role occupancy is an institutional descriptor of position or permission.
+Temporal accumulation is a structural, time-based diagnostic
+of irreversible or narrowing constraint.
+Role occupancy is an institutional descriptor of position
+or permission.
 
-Importing this file explicitly rejects any assumption that
-irreversible temporal accumulation assigns institutional roles.
+No default implication from temporal accumulation to role
+assignment is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from temporal accumulation
-to role state.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating temporal accumulation as constituting,
+assigning, or licensing institutional role occupancy
+is permitted.
 -/
 axiom temporal_accumulation_not_role :
-  ¬ (∀ (a : Agent) (s : State),
-       TemporalAccumulation a s → RoleState a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsRoleFromTemporalAccumulation a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- long-term structural harm assigns authority
-- time-binding constraint collapses into institutional position
-- roles emerge from accumulation rather than assignment
-
-Temporal accumulation and role occupancy are distinct structural facts.
--/
-
