@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.SymmetricalAffordanceExposure_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.STC5_Justification
 import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
 
