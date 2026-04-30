@@ -1,45 +1,35 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.RiskInheritance_Definition
 import SigmaR.Valuation.Measures.StandingMeasure_Definition
 
 /-!
 ###############################################################################
-# Independence: Risk Not Standing
+# Independence: Risk Inheritance Not Standing
 ###############################################################################
 
-This file establishes that risk inheritance does not entail standing.
+Inherited or structural risk does not license or imply standing.
 
 Risk inheritance captures exposure transmitted through structure,
 history, or dependency.
 Standing measures recognized status or admissible participation
 within a system.
 
-Importing this file explicitly rejects any assumption that
-exposure or inherited risk constitutes standing.
+No default implication from risk inheritance to standing
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from risk inheritance
-to standing.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating risk inheritance as constituting
+or licensing standing is permitted.
 -/
 axiom risk_not_standing :
-  ¬ (∀ (i : Agent) (s : State),
-       RiskInheritance i s → StandingMeasure i s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsStandingFromRiskInheritance a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- exposure confers recognition
-- inherited risk substitutes for standing
-- vulnerability collapses into admissible participation
-
-Risk inheritance and standing are distinct structural facts.
--/
-
