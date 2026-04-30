@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftStandingMonotonicity_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.ALRP_Justification
 import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
 
