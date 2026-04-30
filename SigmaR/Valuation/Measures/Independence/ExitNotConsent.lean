@@ -1,44 +1,35 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Standing.ConsentState_Definition
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.ExitViability_Definition
+import SigmaR.Standing.ConsentState_Definition
 
 /-!
 ###############################################################################
 # Independence: Exit Viability Not Consent
 ###############################################################################
 
-This file establishes that exit viability does not entail consent.
+Exit viability does not license or imply consent.
 
-The availability of a viable exit does not imply that participation
-was voluntary or uncoerced. Exit and consent are distinct
-structural predicates.
+Exit viability concerns the availability of non-coercive refusal
+or escape.
+Consent is an agent-level act or expression that may occur
+under constraint.
 
-Importing this file explicitly rejects any assumption that
-the availability of exit guarantees consent.
+No default implication from exit viability to consent
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from exit viability
-to consent.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating exit viability as constituting
+or licensing consent is permitted.
 -/
 axiom exit_not_consent :
-  ¬ (∀ (a : Agent) (s : State),
-       ExitViable a → ConsentState a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsConsentFromExitViable a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- the option to leave implies voluntary participation
-- exit availability substitutes for consent
-- coercion is negated by formal exit
-
-Exit viability and consent are distinct structural facts.
--/
-
