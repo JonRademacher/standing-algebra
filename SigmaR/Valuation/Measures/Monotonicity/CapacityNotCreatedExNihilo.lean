@@ -4,19 +4,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Capacity Not Created Ex Nihilo
+# Capacity Not Created Ex Nihilo (Structural)
 ###############################################################################
 
-Capacity does not arise spontaneously under state progression.
-It must be supported by prior structure.
+Capacity is treated as not spontaneously increasing
+along the state preorder without enabling structure.
+
+This file names the monotonicity constraint.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom capacity_not_created_ex_nihilo :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    CapacityMeasure a s₁ ≤ CapacityMeasure a s₂
+/--
+Capacity is treated as requiring enabling structure
+to increase along the state preorder.
+-/
+constant CapacityRequiresEnablingStructure :
+  Agent → Prop
 
 end SigmaR
