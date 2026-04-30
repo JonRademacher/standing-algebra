@@ -1,9 +1,5 @@
 module SigmaR.Justifications.All
 
-/- ============================
-   Core Legitimacy
-   ============================ -/
-
 import SigmaR.Justifications.Core_Legitimacy.ALRP_Justification
 import SigmaR.Justifications.Core_Legitimacy.Agency_Justification
 import SigmaR.Justifications.Core_Legitimacy.AlternativesConsidered_Justification
@@ -51,10 +47,6 @@ import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.TransitionCriteriaRerunnability_Justification
 import SigmaR.Justifications.Core_Legitimacy.iPFA_Justification
 
-/- ============================
-   Regime Legitimacy — Adapter Regime
-   ============================ -/
-
 import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterCompositionNonSelection_Justification
 import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterContestability_Justification
 import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterInterference_Justification
@@ -64,10 +56,6 @@ import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterRiskInherita
 import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterScopeIntegrity_Justification
 import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.EpistemicAdapter_Justification
 
-/- ============================
-   Regime Legitimacy — Affordance Composition Regime
-   ============================ -/
-
 import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
 import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.ExitPreservationUnderComposition_Justification
 import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.NonSelectiveComposition_Justification
@@ -76,10 +64,6 @@ import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.Risk
 import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.ScopeIntegrityUnderComposition_Justification
 import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.StandingMonotonicityUnderComposition_Justification
 import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.SymmetricalAffordanceExposure_Justification
-
-/- ============================
-   Regime Legitimacy — Drift Regime
-   ============================ -/
 
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.BoundedDrift_Justification
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftDependencyMonotonicity_Justification
@@ -91,19 +75,11 @@ import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftScopeIntegrity_J
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftStandingMonotonicity_Justification
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftStructuralDebt_Justification
 
-/- ============================
-   Regime Legitimacy — Emergency Regime
-   ============================ -/
-
 import SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.EmergencyAuthorization_Justification
 import SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.EmergencyRegime_Justification
 import SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.EmergencyRiskInheritance_Justification
 import SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.EmergencyTermination_Justification
 import SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.RiskBoundEmergency_Justification
-
-/- ============================
-   Regime Legitimacy — Exit Regime
-   ============================ -/
 
 import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitAvailability_Justification
 import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitFeasibility_Justification
@@ -111,10 +87,6 @@ import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitNonPunitive_Justif
 import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitNonSubstitutability_Justification
 import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitPreservation_Justification
 import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification
-
-/- ============================
-   Regime Legitimacy — Remedy Regime
-   ============================ -/
 
 import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.EmergentWrongRepair_Justification
 import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyEffectiveness_Justification
@@ -124,10 +96,6 @@ import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyRegime_Justifi
 import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RepairAvailability_Justification
 import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RepairNonSubstitutabilityForExit_Justification
 
-/- ============================
-   Regime Legitimacy — Risk Regime
-   ============================ -/
-
 import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskConsentNonTransitivity_Justification
 import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskDiscountingProhibition_Justification
 import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskInheritance_Justification
@@ -135,10 +103,6 @@ import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskLoadMonotonicity_J
 import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskRegime_Justification
 import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskSensitiveSymmetry_Justification
 import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskStandingCoupling_Justification
-
-/- ============================
-   Regime Legitimacy — Successor Regime
-   ============================ -/
 
 import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.ContinuationLegitimacyStability_Justification
 import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorAvailability_Justification
@@ -150,10 +114,6 @@ import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegime_J
 import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRepairCompatibility_Justification
 import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorSymmetry_Justification
 import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccesssorDriftSensitivity_Justification
-
-/- ============================
-   Regime Legitimacy — Shared / Root Files
-   ============================ -/
 
 import SigmaR.Justifications.Regime_Legitimacy.DebtDissipationByRepair_Justification
 import SigmaR.Justifications.Regime_Legitimacy.NegationLemmas
