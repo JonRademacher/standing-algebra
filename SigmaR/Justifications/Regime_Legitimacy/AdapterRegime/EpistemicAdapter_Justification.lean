@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.EpistemicAdapter_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.PFA_Justification
 import SigmaR.Justifications.Core_Legitimacy.ScopeScaleRelativity_Justification
 import SigmaR.Justifications.Core_Legitimacy.DerivedStanding_Justification
