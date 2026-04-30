@@ -4,18 +4,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Autonomy Not Created Ex Nihilo
+# Autonomy Not Created Ex Nihilo (Structural)
 ###############################################################################
 
-Autonomy does not arise spontaneously without enabling structure.
+Autonomy is not treated as spontaneously increasing
+along the state preorder without enabling structure.
+
+This file names the structural monotonicity constraint.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom autonomy_not_created_ex_nihilo :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    AutonomyMeasure a s₁ ≤ AutonomyMeasure a s₂
+/--
+Autonomy is treated as requiring enabling structure
+to increase along the state preorder.
+-/
+constant AutonomyRequiresEnablingStructure :
+  Agent → Prop
 
 end SigmaR
