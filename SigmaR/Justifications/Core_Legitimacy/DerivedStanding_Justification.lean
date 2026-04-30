@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Core_Legitimacy.DerivedStanding_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 import SigmaR.Justifications.Core_Legitimacy.CouplingTypeDifferentiation_Justification
 
