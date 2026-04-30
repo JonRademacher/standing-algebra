@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Core_Legitimacy.RegimeInteractionNormalization_Justification
+
 import SigmaR.StandingAlgebra_FormalCore
 
 /-!
