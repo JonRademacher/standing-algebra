@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterNonRepresentationalStanding_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.DerivedStanding_Justification
 import SigmaR.Justifications.Regimes.AdapterRegime.AdapterRegime_Justification
 import SigmaR.Justifications.Regimes.RiskRegime.RiskInheritance_Justification
