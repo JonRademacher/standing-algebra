@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorNonAccumulation_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.Rerunnability_Justification
 import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
 
