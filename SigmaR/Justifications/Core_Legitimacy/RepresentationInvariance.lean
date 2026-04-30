@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Core_Legitimacy.RepresentationInvariance
+
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 import SigmaR.Core.StandingValuation
 
