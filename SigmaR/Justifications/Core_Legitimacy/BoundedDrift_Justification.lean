@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Core_Legitimacy.BoundedDrift_Justification
+
 import SigmaR.StandingAlgebra_RegimeStacked
 
 /-!
