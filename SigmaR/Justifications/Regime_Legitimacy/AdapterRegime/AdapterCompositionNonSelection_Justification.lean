@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterCompositionNonSelection_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.NonSelection_Justification
 import SigmaR.Justifications.Core_Legitimacy.StandingMonotonicity
 import SigmaR.Justifications.Regimes.AdapterRegime.AdapterRegime_Justification
