@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Core_Legitimacy.DebtMonotonicity
+
 import SigmaR.Core.StandingValuation
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 import SigmaR.Justifications.Core_Legitimacy.StandingMonotonicity
