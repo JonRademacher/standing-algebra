@@ -4,19 +4,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Exit Collapse Is Irreversible
+# Exit Collapse Is Irreversible (Structural)
 ###############################################################################
 
-Exit collapse cannot be undone by state progression alone.
+Exit collapse is treated as non-reversible
+along the state preorder in the absence of
+explicit countervailing structure.
+
+This file names the irreversibility constraint.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom exit_collapse_irreversible :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    ExitCollapse a s₁ →
-    ExitCollapse a s₂
+/--
+Exit collapse is treated as irreversible
+along the state preorder.
+-/
+constant ExitCollapseIrreversible : Prop
 
 end SigmaR
