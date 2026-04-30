@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.NonSelectiveComposition_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.NonSelection_Justification
 import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
 
