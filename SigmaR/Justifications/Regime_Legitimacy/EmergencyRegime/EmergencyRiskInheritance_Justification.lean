@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.EmergencyRiskInheritance_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
 import SigmaR.Justifications.Regimes.Emergency.EmergencyRegime_Justification
 import SigmaR.Justifications.Regimes.RiskRegime.RiskInheritance_Justification
