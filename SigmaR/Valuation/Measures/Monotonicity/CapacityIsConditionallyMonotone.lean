@@ -5,19 +5,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Capacity Is Conditionally Monotone
+# Capacity Is Conditionally Monotone (Structural)
 ###############################################################################
 
-Capacity does not increase in the presence of increasing structural debt.
+Capacity is treated as conditionally non-increasing with respect
+to structural debt along the state preorder.
+
+This file *names* the monotonicity relationship.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom capacity_conditionally_monotone :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    StructuralDebt a s₁ ≤ StructuralDebt a s₂ →
-    CapacityMeasure a s₂ ≤ CapacityMeasure a s₁
+/--
+Capacity is treated as conditionally monotone decreasing
+with respect to structural debt.
+-/
+constant CapacityConditionallyMonotoneUnderDebt :
+  Agent → Prop
 
 end SigmaR
