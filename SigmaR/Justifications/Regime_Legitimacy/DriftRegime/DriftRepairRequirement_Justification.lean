@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRepairRequirement_Justification
+
 import SigmaR.Justifications.Regimes.RemedyRegime.RemedyRegime_Justification
 import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
 
