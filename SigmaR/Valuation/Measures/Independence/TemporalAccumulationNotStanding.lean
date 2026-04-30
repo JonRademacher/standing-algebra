@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
 import SigmaR.Valuation.Measures.StandingMeasure_Definition
 
@@ -7,40 +8,29 @@ import SigmaR.Valuation.Measures.StandingMeasure_Definition
 # Independence: Temporal Accumulation Not Standing
 ###############################################################################
 
-This file establishes that temporal accumulation does not entail
-loss or determination of standing.
+Temporal accumulation does not license or imply loss,
+revocation, or determination of standing.
 
 Temporal accumulation captures time-binding and irreversible
 structural constraint over time.
 Standing measures recognized status or admissible participation
 within a system.
 
-Importing this file explicitly rejects any assumption that
-accumulated temporal harm determines standing.
+No default implication from temporal accumulation to standing
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from temporal accumulation
-to standing.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating temporal accumulation as determining,
+revoking, or licensing standing is permitted.
 -/
 axiom temporal_accumulation_not_standing :
-  ¬ (∀ (a : Agent) (s : State),
-       TemporalAccumulation a s → StandingMeasure a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsStandingFromTemporalAccumulation a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- irreversible harm automatically revokes recognition
-- time-binding constraint collapses into standing metrics
-- admissibility is merely a function of historical damage
-
-Temporal accumulation and standing are distinct structural facts.
--/
-
