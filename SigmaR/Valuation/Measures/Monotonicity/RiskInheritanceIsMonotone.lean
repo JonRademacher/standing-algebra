@@ -4,18 +4,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Risk Inheritance Is Monotone
+# Risk Inheritance Is Monotone (Structural)
 ###############################################################################
 
-Inherited risk is monotone under state progression.
+Risk inheritance is treated as non-decreasing
+along the state preorder within certain models
+or interpretive regimes.
+
+This file names the monotonicity relationship.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom risk_inheritance_monotone :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    RiskInheritance a s₁ ≤ RiskInheritance a s₂
+/--
+Risk inheritance is treated as monotone
+along the state preorder.
+-/
+constant RiskInheritanceMonotone : Prop
 
 end SigmaR
