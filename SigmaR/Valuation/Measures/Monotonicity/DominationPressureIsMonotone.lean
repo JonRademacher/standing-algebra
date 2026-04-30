@@ -4,19 +4,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Domination Pressure Is Monotone
+# Domination Pressure Is Monotone (Structural)
 ###############################################################################
 
-Domination pressure accumulates under state progression and does not
-decrease without explicit structural intervention.
+Domination pressure is treated as non-decreasing
+along the state preorder unless countervailing
+structure is present.
+
+This file names the monotonicity relationship.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom domination_pressure_monotone :
-  ∀ (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    DominationPressure s₁ ≤ DominationPressure s₂
+/--
+Domination pressure is treated as monotone
+along the state preorder.
+-/
+constant DominationPressureMonotone : Prop
 
 end SigmaR
