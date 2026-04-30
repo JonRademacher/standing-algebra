@@ -4,18 +4,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Temporal Accumulation Is Irreversible
+# Temporal Accumulation Is Irreversible (Structural)
 ###############################################################################
 
-Temporal accumulation cannot decrease under state progression alone.
+Temporal accumulation is treated as non-decreasing
+along the state preorder in the absence of
+explicit repair or mitigation mechanisms.
+
+This file names the irreversibility constraint.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom temporal_accumulation_irreversible :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    TemporalAccumulation a s₁ ≤ TemporalAccumulation a s₂
+/--
+Temporal accumulation is treated as irreversible
+along the state preorder.
+-/
+constant TemporalAccumulationIrreversible : Prop
 
 end SigmaR
