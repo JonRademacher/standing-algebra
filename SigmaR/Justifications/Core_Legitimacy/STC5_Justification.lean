@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Core_Legitimacy.STC5_Justification
+
 import SigmaR.StandingAlgebra_RegimeStacked
 
 /-!
