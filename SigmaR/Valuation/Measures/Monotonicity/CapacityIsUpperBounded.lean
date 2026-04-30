@@ -1,20 +1,25 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Measures.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Capacity Is Upper Bounded
+# Capacity Is Upper Bounded (Structural)
 ###############################################################################
 
-Agent capacity has finite upper limits.
+Capacity is treated as having a finite upper bound
+within certain models or interpretive regimes.
+
+This file names the boundedness constraint.
+It does not assert it globally.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom capacity_upper_bounded :
-  ∃ (B : Nat),
-    ∀ (a : Agent) (s : State),
-      CapacityMeasure a s ≤ B
+/--
+Capacity is treated as upper bounded.
+-/
+constant CapacityUpperBounded : Prop
 
 end SigmaR
