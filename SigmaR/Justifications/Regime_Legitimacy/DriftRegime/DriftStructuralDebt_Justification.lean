@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftSctructuralDebt_Justification
+
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
 
