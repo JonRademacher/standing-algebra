@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskConsentNonTransivity_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 import SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
 import SigmaR.Justifications.Regimes.RiskRegime.RiskRegime_Justification
