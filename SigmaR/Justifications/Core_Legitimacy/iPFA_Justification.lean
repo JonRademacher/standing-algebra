@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Core_Legitimacy.iPFA_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.Agency_Justification
 import SigmaR.Justifications.Core_Legitimacy.Autonomy_Justification
 
