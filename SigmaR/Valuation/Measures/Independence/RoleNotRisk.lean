@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Standing.RoleState_Definition
 import SigmaR.Valuation.Measures.RiskLoad_Definition
 
@@ -7,38 +8,26 @@ import SigmaR.Valuation.Measures.RiskLoad_Definition
 # Independence: Role Not Risk
 ###############################################################################
 
-This file establishes that institutional role occupancy does not
-entail risk exposure.
+Institutional role occupancy does not license or imply risk exposure.
 
 Roles are institutional descriptors of position or permission.
 Risk load captures inherited or situational exposure to harm.
 
-Importing this file explicitly rejects any assumption that
-holding an institutional role determines risk exposure.
+No default implication from role occupancy to risk exposure
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from role state
-to risk load.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating role occupancy as constituting,
+determining, or licensing risk exposure is permitted.
 -/
 axiom role_not_risk :
-  ¬ (∀ (a : Agent) (s : State),
-       RoleState a s → RiskLoad a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsRiskFromRoleState a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- institutional position implies exposure
-- roles substitute for risk assessment
-- risk collapses into role assignment
-
-Role occupancy and risk exposure are distinct structural facts.
--/
-
