@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.ExitCollapse_Definition
 import SigmaR.Valuation.Measures.StandingMeasure_Definition
 
@@ -7,21 +8,26 @@ import SigmaR.Valuation.Measures.StandingMeasure_Definition
 # Independence: Exit Collapse Not Standing
 ###############################################################################
 
-Exit collapse does not entail loss of standing.
+Exit collapse does not license or imply loss of standing.
 
-Recognition or admissible participation may persist
-despite the absence of viable exit.
+Exit collapse concerns the absence of viable exit.
+Standing measures recognized status or admissible participation.
+
+No default implication from exit collapse to standing revocation
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from exit collapse
-to loss of standing.
+No implication treating exit collapse as eliminating,
+revoking, or licensing the loss of standing is permitted.
 -/
 axiom exit_collapse_not_standing :
-  ¬ (∀ (a : Agent) (s : State),
-       ExitCollapse a s → ¬ StandingMeasure a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsStandingRevokedFromExitCollapse a s
+  )
 
 end SigmaR
