@@ -5,19 +5,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Exit Viability Is Conditionally Antitone
+# Exit Viability Is Conditionally Antitone (Structural)
 ###############################################################################
 
-Exit viability decreases as irreversible constraint accumulates.
+Exit viability is treated as conditionally decreasing
+with respect to temporal accumulation along the state preorder.
+
+This file names the antitonic relationship.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom exit_viability_conditionally_antitone :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    TemporalAccumulation a s₁ ≤ TemporalAccumulation a s₂ →
-    ExitViable a s₂ ≤ ExitViable a s₁
+/--
+Exit viability is treated as conditionally antitone
+with respect to temporal accumulation.
+-/
+constant ExitViabilityConditionallyAntitoneUnderTemporalAccumulation :
+  Agent → Prop
 
 end SigmaR
