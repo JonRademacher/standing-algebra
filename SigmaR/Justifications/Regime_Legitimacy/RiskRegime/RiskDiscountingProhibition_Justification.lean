@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskDiscountingProhibition_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 import SigmaR.Justifications.Regimes.RiskRegime.RiskRegime_Justification
 import SigmaR.Justifications.Regimes.RiskRegime.RiskLoadMonotonicity_Justification
