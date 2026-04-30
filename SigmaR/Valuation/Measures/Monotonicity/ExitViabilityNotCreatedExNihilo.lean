@@ -4,18 +4,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Exit Viability Not Created Ex Nihilo
+# Exit Viability Not Created Ex Nihilo (Structural)
 ###############################################################################
 
-Exit viability cannot arise without structural conditions.
+Exit viability is treated as not spontaneously increasing
+along the state preorder without enabling structural conditions.
+
+This file names the monotonicity constraint.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom exit_viability_not_created_ex_nihilo :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    ExitViable a s₁ ≤ ExitViable a s₂
+/--
+Exit viability is treated as requiring enabling structure
+to arise along the state preorder.
+-/
+constant ExitViabilityRequiresEnablingStructure :
+  Agent → Prop
 
 end SigmaR
