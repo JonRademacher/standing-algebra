@@ -15,6 +15,7 @@ Valuation layers:
 • AntiOptimization
 • Equivalence
 • NonComparability
+• Independence (ALL inference firewalls)
 
 This is a **pure signature file**:
 • no axioms
@@ -22,7 +23,8 @@ This is a **pure signature file**:
 • no definitions
 
 Its sole purpose is to make *all inference boundaries explicit and reviewable*.
-Nothing here asserts truth, validity, legitimacy, optimization, or authority.
+Nothing here asserts truth, validity, legitimacy, optimization, authority,
+causation, or obligation.
 ###############################################################################
 -/
 
@@ -32,8 +34,7 @@ namespace SigmaR
 ------------------------------------------------------------------------------
 0. Canonical type aliases
 ------------------------------------------------------------------------------
-These aliases make arity explicit and prevent accidental semantic drift.
------------------------------------------------------------------------------- -/
+-/
 
 abbrev Val : Type := Nat
 abbrev Measure : Type := Agent → State → Val
@@ -45,48 +46,29 @@ abbrev Obj    : Type := State → Val
 ------------------------------------------------------------------------------
 1. WellFormedness interfaces (structural legality)
 ------------------------------------------------------------------------------
-These predicates govern *structural admissibility only*.
-They say nothing about truth, validity, legitimacy, or meaning.
------------------------------------------------------------------------------- -/
+-/
 
 constant WellFormed : Measure → Prop
-/-- Measure is admitted structurally as a valuation measure. -/
 constant IsMeasure : Measure → Prop
 
-/-- Measure is explicitly bound to an agent–state context. -/
 constant ContextBound : Measure → Prop
-
-/-- Measure is explicitly declared globally scoped. -/
 constant IsGlobalScope : Measure → Prop
-
-/-- Measure is explicitly declared locally scoped. -/
 constant IsLocalScope : Measure → Prop
 
-/-- Measure relies on an implicit or restricted domain. -/
 constant RestrictsDomain : Measure → Prop
-
-/-- Measure is structurally trivial (e.g. ignores Agent and State). -/
 constant StructurallyConstant : Measure → Prop
 
-/-- Codomain of one measure is structurally compatible with another. -/
 constant CompatibleDomainCodomain : Measure → Measure → Prop
-
-/-- Structural dependency relation between measures. -/
 constant DependsOn : Measure → Measure → Prop
 
-/-- Abstract projection operator on measures (no preservation assumed). -/
 constant Project : Measure → Measure
-
-/-- Abstract restriction operator on measures (no preservation assumed). -/
 constant Restrict : Measure → PredAS → Measure
 
 /-!
 ------------------------------------------------------------------------------
 2. Cross-layer meta predicates (blocked by WellFormedness)
 ------------------------------------------------------------------------------
-These predicates belong to *higher layers*.
-WellFormedness explicitly blocks inference into them.
------------------------------------------------------------------------------- -/
+-/
 
 constant TrueMeasure : Measure → Prop
 constant ValidMeasure : Measure → Prop
@@ -97,18 +79,15 @@ constant ConstrainsInterpretation : Measure → Prop
 ------------------------------------------------------------------------------
 3. Monotonicity interface
 ------------------------------------------------------------------------------
-Abstract preorder on states; carries no semantic meaning by itself.
------------------------------------------------------------------------------- -/
+-/
 
 constant StateLe : State → State → Prop
 
 /-!
 ------------------------------------------------------------------------------
-4. MeasurementLimits interfaces (epistemic constraints)
+4. MeasurementLimits interfaces
 ------------------------------------------------------------------------------
-These predicates describe limits on observation and diagnosis,
-not on existence, truth, or legitimacy.
------------------------------------------------------------------------------- -/
+-/
 
 constant Observable : Agent → State → Prop
 constant Measured : Agent → State → Val
@@ -120,7 +99,6 @@ constant Error : Agent → State → Prop
 constant Understands : Agent → State → Prop
 constant Controls : Agent → State → Prop
 
-/-- Objective is treated as something to be optimized. -/
 constant Optimizes : Obj → Prop
 
 constant Causes : State → State → Prop
@@ -134,133 +112,160 @@ constant Failure : PredS
 
 /-!
 ------------------------------------------------------------------------------
-5. Relevance / Frame / Plurality interfaces
+5. Relevance / Frame interfaces
 ------------------------------------------------------------------------------
-These predicates govern *warrant and perception*, not authority.
------------------------------------------------------------------------------- -/
+-/
 
 constant IPFA : Agent → State → Prop
 constant PFA : Set Agent → State → Prop
 
-/-- Perceptual or descriptive frames. -/
 constant Frame : Type
-
 constant ObservableInFrame : Agent → Frame → State → Prop
 constant FrameSucc : Frame → Frame → Prop
 
 /-!
 ------------------------------------------------------------------------------
-6. AntiOptimization interfaces (forbidden teleological inferences)
+6. AntiOptimization interfaces
 ------------------------------------------------------------------------------
-These predicates *name illicit inference patterns*.
-They do not define goals, optimization, or value.
------------------------------------------------------------------------------- -/
+-/
 
--- Objective formation & targeting
-/-- Objective is treated as globally governing valuation. -/
 constant GlobalObjective : Obj → Prop
-
-/-- Objective is endogenously generated from a valuation measure. -/
 constant GeneratedFromMeasure : Obj → Measure → Prop
-
-/-- Objective treats a valuation measure as its target. -/
 constant TargetsMeasure : Obj → Measure → Prop
 
--- Aggregation / scalar collapse
-/-- Objective aggregates information from a valuation measure. -/
 constant AggregatesFromMeasure : Obj → Measure → Prop
-
-/-- Multiple measures are collapsed into a single scalar objective. -/
 constant Scalarizes : Set Measure → Obj → Prop
 
--- Measure–measure misuse
-/-- One measure is treated as compensating for another. -/
 constant Compensates : Measure → Measure → Prop
-
-/-- Harm in one measure is justified by improvement in another. -/
 constant TradeoffJustifies : Measure → Measure → Prop
-
-/-- One measure is used as a proxy for another. -/
 constant ProxiesFor : Measure → Measure → Prop
-
-/-- Measure induces a ranking or ordering. -/
 constant InducesRanking : Measure → Prop
 
--- Semantic / teleological interpretation
-/-- Measure is interpreted as utility or preference satisfaction. -/
 constant TreatedAsUtility : Measure → Prop
-
-/-- Measure is interpreted as welfare. -/
 constant TreatedAsWelfare : Measure → Prop
-
-/-- Monotone change is interpreted as improvement. -/
 constant InterpretedAsImprovement : Measure → Prop
 
--- Dynamics / guarantees explicitly *not* assumed
-/-- Measure is assumed to converge. -/
 constant Converges : Measure → Prop
-
-/-- Measure is assumed to admit an equilibrium. -/
 constant HasEquilibrium : Measure → Prop
-
-/-- Measure is assumed to admit a fixed point. -/
 constant HasFixedPoint : Measure → Prop
-
-/-- Measure is assumed to guarantee progress. -/
 constant GuaranteesProgress : Measure → Prop
-
-/-- Measure is assumed to induce selection or fitness dynamics. -/
 constant AssumesSelection : Measure → Prop
 
--- Metric manipulation
-/-- Objective treats metric manipulation as success. -/
 constant GamesMetric : Obj → Measure → Prop
 
 /-!
 ------------------------------------------------------------------------------
-7. Equivalence interfaces (purely relational)
+7. Equivalence interfaces
 ------------------------------------------------------------------------------
-Equivalence is non-teleological, non-global, and contextual.
------------------------------------------------------------------------------- -/
+-/
 
-/-- Two valuation measures are treated as equivalent. -/
 constant EquivalentMeasures : Measure → Measure → Prop
-
-/-- Equivalence is treated as inducing an ordering. -/
 constant EquivalenceInducesOrdering : Measure → Measure → Prop
 
-/-- Context in which equivalence claims may hold. -/
 constant EquivalenceContext : Type
-
-/-- Measures are equivalent within a specific context. -/
 constant EquivalentInContext :
   EquivalenceContext → Measure → Measure → Prop
 
 /-!
 ------------------------------------------------------------------------------
-8. NonComparability interfaces (hard semantic boundaries)
+8. NonComparability interfaces
 ------------------------------------------------------------------------------
-Non-comparability forbids tradeoffs, balancing, scalar comparison,
-but does NOT imply ignorance or inaction.
------------------------------------------------------------------------------- -/
+-/
 
-/-- Two valuation measures are non-comparable. -/
 constant NonComparable : Measure → Measure → Prop
-
-/-- Measures are treated as balanceable or offsetting. -/
 constant BalancedAgainst : Measure → Measure → Prop
 
-/-- Non-comparability is treated as epistemic ignorance. -/
 constant TreatedAsIgnorance : Measure → Measure → Prop
-
-/-- Non-comparability is treated as implying inaction. -/
 constant TreatedAsInaction : Measure → Measure → Prop
 
-/-- Context in which non-comparability claims may hold. -/
 constant NonComparabilityContext : Type
-
-/-- Measures are non-comparable within a specific context. -/
 constant NonComparableInContext :
   NonComparabilityContext → Measure → Measure → Prop
+
+/-!
+------------------------------------------------------------------------------
+9. Independence misuse predicates (COMPLETE)
+------------------------------------------------------------------------------
+Each predicate names a *forbidden inference*, not a forbidden fact.
+------------------------------------------------------------------------------ -/
+
+-- Autonomy misuses
+constant TreatedAsAutonomyFromStandingMeasure : Agent → State → Prop
+constant TreatedAsAutonomyFromRoleState : Agent → State → Prop
+constant TreatedAsAutonomyFromExitViable : Agent → State → Prop
+constant TreatedAsAutonomyLostFromRiskLoad : Agent → State → Prop
+constant TreatedAsAutonomyLostFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsAutonomyLostFromExitCollapse : Agent → State → Prop
+constant TreatedAsAutonomyLostFromRiskInheritance : Agent → State → Prop
+constant TreatedAsAutonomyFromDominationPressure : Agent → State → Prop
+
+-- Capacity misuses
+constant TreatedAsCapacityFromStandingMeasure : Agent → State → Prop
+constant TreatedAsCapacityFromRoleState : Agent → State → Prop
+constant TreatedAsCapacityFromExitViable : Agent → State → Prop
+constant TreatedAsCapacityLostFromRiskLoad : Agent → State → Prop
+constant TreatedAsCapacityLostFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsCapacityLostFromExitCollapse : Agent → State → Prop
+constant TreatedAsCapacityLostFromRiskInheritance : Agent → State → Prop
+constant TreatedAsCapacityLostFromDominationPressure : Agent → State → Prop
+
+-- Consent misuses
+constant TreatedAsConsentFromStandingMeasure : Agent → State → Prop
+constant TreatedAsConsentFromRoleState : Agent → State → Prop
+constant TreatedAsConsentFromExitViable : Agent → State → Prop
+constant TreatedAsConsentInvalidFromRiskLoad : Agent → State → Prop
+constant TreatedAsConsentInvalidFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsConsentInvalidFromExitCollapse : Agent → State → Prop
+constant TreatedAsConsentInvalidFromRiskInheritance : Agent → State → Prop
+constant TreatedAsConsentInvalidFromDominationPressure : Agent → State → Prop
+
+-- Standing misuses
+constant TreatedAsStandingFromRoleState : Agent → State → Prop
+constant TreatedAsStandingFromExitViable : Agent → State → Prop
+constant TreatedAsStandingFromRiskInheritance : Agent → State → Prop
+constant TreatedAsStandingFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsStandingRevokedFromStructuralDebt : Agent → State → Prop
+constant TreatedAsStandingRevokedFromExitCollapse : Agent → State → Prop
+constant TreatedAsStandingRevokedFromDominationPressure : Agent → State → Prop
+
+-- Structural debt misuses
+constant TreatedAsStructuralDebtFromRiskLoad : Agent → State → Prop
+constant TreatedAsStructuralDebtFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsStructuralDebtFromExitCollapse : Agent → State → Prop
+constant TreatedAsStructuralDebtFromDominationPressure : Agent → State → Prop
+constant TreatedAsStructuralDebtResolvedFromStandingMeasure : Agent → State → Prop
+constant TreatedAsStructuralDebtResolvedFromRoleState : Agent → State → Prop
+
+-- Exit viability / collapse misuses
+constant TreatedAsExitViableFromStandingMeasure : Agent → State → Prop
+constant TreatedAsExitViableFromRoleState : Agent → State → Prop
+constant TreatedAsExitViableFromRiskLoad : Agent → State → Prop
+constant TreatedAsExitViableFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsExitViableResolvedFromStructuralDebt : Agent → State → Prop
+constant TreatedAsExitViableLostFromDominationPressure : Agent → State → Prop
+
+constant TreatedAsExitCollapseFromStandingMeasure : Agent → State → Prop
+
+-- Risk misuses
+constant TreatedAsRiskFromStandingMeasure : Agent → State → Prop
+constant TreatedAsRiskFromRoleState : Agent → State → Prop
+constant TreatedAsRiskFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsRiskFromStructuralDebt : Agent → State → Prop
+constant TreatedAsRiskFromDominationPressure : Agent → State → Prop
+constant TreatedAsRiskFromExitViable : Agent → State → Prop
+
+-- Temporal accumulation misuses
+constant TreatedAsTemporalAccumulationFromStandingMeasure : Agent → State → Prop
+constant TreatedAsTemporalAccumulationFromRiskLoad : Agent → State → Prop
+constant TreatedAsTemporalAccumulationFromStructuralDebt : Agent → State → Prop
+constant TreatedAsTemporalAccumulationFromExitViable : Agent → State → Prop
+constant TreatedAsTemporalAccumulationResolvedFromRoleState : Agent → State → Prop
+
+-- Domination pressure misuses
+constant TreatedAsDominationPressureFromStandingMeasure : Agent → State → Prop
+constant TreatedAsDominationPressureFromRiskLoad : Agent → State → Prop
+constant TreatedAsDominationPressureFromStructuralDebt : Agent → State → Prop
+constant TreatedAsDominationPressureFromExitViable : Agent → State → Prop
+constant TreatedAsDominationPressureFromTemporalAccumulation : Agent → State → Prop
 
 end SigmaR
