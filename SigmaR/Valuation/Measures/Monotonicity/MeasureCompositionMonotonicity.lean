@@ -3,25 +3,25 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Measure Composition Monotonicity
+# Measure Composition Monotonicity (Structural)
 ###############################################################################
 
-Composition of monotone measures is itself monotone.
+Composition of valuation measures with monotone transformations
+may be treated as preserving monotonicity in certain models
+or interpretive regimes.
+
+This file names the admissibility of such composition.
+It does not assert it as a universal semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-If a measure is structurally monotone, applying a monotone
-post-processing function preserves monotonicity.
+A valuation measure is treated as admitting monotone
+post-composition without violating its structural monotonicity.
 -/
-axiom measure_composition_monotone :
-  ∀ (M : Agent → State → Nat)
-    (f : Nat → Nat)
-    (a : Agent) (s₁ s₂ : State),
-    (∀ x y, x ≤ y → f x ≤ f y) →
-    StateLe s₁ s₂ →
-    f (M a s₁) ≤ f (M a s₂)
+constant MonotoneCompositionAdmissible :
+  Measure → Prop
 
 end SigmaR
