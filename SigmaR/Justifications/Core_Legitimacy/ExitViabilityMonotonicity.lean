@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Core_Legitimacy.ExitViabilityMonotonicity
+
 import SigmaR.Core.StandingValuation
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 
