@@ -4,18 +4,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Structural Debt Is Monotone
+# Structural Debt Is Monotone (Structural)
 ###############################################################################
 
-Structural debt does not decrease without explicit repair.
+Structural debt is treated as non-decreasing
+along the state preorder in the absence of
+explicit repair or resolution mechanisms.
+
+This file names the monotonicity relationship.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom structural_debt_monotone :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    StructuralDebt a s₁ ≤ StructuralDebt a s₂
+/--
+Structural debt is treated as monotone
+along the state preorder.
+-/
+constant StructuralDebtMonotone : Prop
 
 end SigmaR
