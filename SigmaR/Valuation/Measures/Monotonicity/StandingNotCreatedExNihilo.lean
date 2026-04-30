@@ -4,18 +4,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Standing Not Created Ex Nihilo
+# Standing Not Created Ex Nihilo (Structural)
 ###############################################################################
 
-Standing cannot arise without prior structural conditions.
+Standing is treated as not spontaneously increasing
+along the state preorder without enabling structural conditions.
+
+This file names the monotonicity constraint.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom standing_not_created_ex_nihilo :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    StandingMeasure a s₁ ≤ StandingMeasure a s₂
+/--
+Standing is treated as requiring enabling structure
+to increase along the state preorder.
+-/
+constant StandingRequiresEnablingStructure :
+  Agent → Prop
 
 end SigmaR
