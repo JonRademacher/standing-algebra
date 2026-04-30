@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterContestability_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.ContestationCondition_Justification
 import SigmaR.Justifications.Regimes.Adapter.AdapterInference_Justification
 
