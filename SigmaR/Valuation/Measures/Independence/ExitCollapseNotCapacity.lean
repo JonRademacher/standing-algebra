@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.ExitCollapse_Definition
 import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 
@@ -7,21 +8,27 @@ import SigmaR.Valuation.Measures.CapacityMeasure_Definition
 # Independence: Exit Collapse Not Capacity
 ###############################################################################
 
-Exit collapse does not entail loss of capacity.
+Exit collapse does not license or imply loss of capacity.
 
-An agent may retain ability or potential even when
-structural exit has collapsed.
+Exit collapse concerns the absence of viable exit.
+Capacity measures agent-level ability or potential.
+
+No default implication from exit collapse to loss of
+capacity is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from exit collapse
-to loss of capacity.
+No implication treating exit collapse as eliminating,
+revoking, or licensing the absence of agent capacity
+is permitted.
 -/
 axiom exit_collapse_not_capacity :
-  ¬ (∀ (a : Agent) (s : State),
-       ExitCollapse a s → CapacityMeasure a s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsCapacityLostFromExitCollapse a s
+  )
 
 end SigmaR
