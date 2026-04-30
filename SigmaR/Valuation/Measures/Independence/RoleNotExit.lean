@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Standing.RoleState_Definition
 import SigmaR.Valuation.Measures.ExitViability_Definition
 
@@ -7,37 +8,26 @@ import SigmaR.Valuation.Measures.ExitViability_Definition
 # Independence: Role Not Exit Viability
 ###############################################################################
 
-This file establishes that institutional role occupancy does not
-entail exit viability.
+Institutional role occupancy does not license or imply exit viability.
 
 Roles are institutional descriptors of position or permission.
 Exit viability concerns the structural ability to refuse or withdraw.
 
-Importing this file explicitly rejects any assumption that
-holding an institutional role guarantees a viable exit.
+No default implication from role occupancy to exit viability
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from role state
-to exit viability.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating role occupancy as guaranteeing,
+constituting, or licensing exit viability is permitted.
 -/
 axiom role_not_exit :
-  ¬ (∀ (a : Agent) (s : State),
-       RoleState a s → ExitViable a)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsExitViableFromRoleState a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- institutional position guarantees freedom to leave
-- permission substitutes for non-coercion
-- exit viability collapses into role assignment
-
-Roles and exit viability are distinct structural facts.
--/
