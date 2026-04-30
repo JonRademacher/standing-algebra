@@ -2,31 +2,23 @@ import SigmaR.StandingAlgebra_FormalCore
 
 /-!
 ###############################################################################
-# Measure Structural Monotonicity
+# Measure Structural Monotonicity (Interface)
 ###############################################################################
 
-Structural refinement of a state does not decrease valuation measures.
+This file defines the *structural notion* of monotonicity
+for valuation measures with respect to the state preorder.
 
-This axiom is abstract: it does not assume time, continuity,
-or numeric interpretation.
+It does NOT assert that any particular measure is monotone.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-An abstract preorder over states.
-Interpreted as refinement, progression, or extension.
+A valuation measure is structurally monotone with respect to
+the state preorder.
 -/
-constant StateLe : State → State → Prop
-
-/--
-Generic structural monotonicity for valuation measures.
--/
-axiom measure_structural_monotone :
-  ∀ (M : Agent → State → Nat)
-    (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    M a s₁ ≤ M a s₂
+constant StructurallyMonotone :
+  Measure → Prop
 
 end SigmaR
