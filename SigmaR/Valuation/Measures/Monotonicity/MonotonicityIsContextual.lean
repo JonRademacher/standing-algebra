@@ -2,18 +2,23 @@ import SigmaR.StandingAlgebra_FormalCore
 
 /-!
 ###############################################################################
-# Monotonicity Is Contextual
+# Monotonicity Is Contextual (Contract)
 ###############################################################################
 
 Monotonicity applies only within an explicit state ordering
-and system context.
+and an explicit interpretive or system context.
+
+This file introduces no axioms.
+It names an interpretive boundary governing the use of
+monotonicity within SigmaR.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom monotonicity_is_contextual :
-  ¬ (∀ (M : Agent → State → Nat) (a : Agent) (s₁ s₂ : State),
-        M a s₁ ≤ M a s₂)
+/--
+Monotonicity relations are treated as context-dependent.
+-/
+constant MonotonicityIsContextual : Prop
 
 end SigmaR
