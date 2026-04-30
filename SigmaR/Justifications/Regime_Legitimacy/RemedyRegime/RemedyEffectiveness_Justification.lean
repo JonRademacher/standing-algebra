@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyEffectiveness_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
 import SigmaR.Justifications.Regimes.RemedyRegime.RemedyRegime_Justification
 
