@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterScopeIntegrity_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.ScopeScaleRelativity_Justification
 import SigmaR.Justifications.Core_Legitimacy.MultiScopeSimultaneity_Justification
 import SigmaR.Justifications.Core_Legitimacy.PublicFrameResolution_Justification
