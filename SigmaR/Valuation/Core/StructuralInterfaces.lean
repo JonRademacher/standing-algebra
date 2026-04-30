@@ -6,25 +6,25 @@ import SigmaR.StandingAlgebra_FormalCore
 ###############################################################################
 
 This file centralizes *all* cross-layer structural interface symbols used by
-Valuation layers:
+SigmaR valuation layers:
 
 • WellFormedness
 • MeasurementLimits
-• Relevance
-• Monotonicity
+• Relevance / Framing
 • AntiOptimization
 • Equivalence
 • NonComparability
 • Independence (ALL inference firewalls)
+• Monotonicity (ALL structural and contract predicates)
 
 This is a **pure signature file**:
 • no axioms
 • no theorems
 • no definitions
 
-Its sole purpose is to make *all inference boundaries explicit and reviewable*.
-Nothing here asserts truth, validity, legitimacy, optimization, authority,
-causation, or obligation.
+Its sole purpose is to make *all inference and evolution boundaries explicit
+and reviewable*. Nothing here asserts truth, causation, legitimacy, optimization,
+authority, obligation, or necessity.
 ###############################################################################
 -/
 
@@ -77,7 +77,7 @@ constant ConstrainsInterpretation : Measure → Prop
 
 /-!
 ------------------------------------------------------------------------------
-3. Monotonicity interface
+3. Monotonicity: core ordering
 ------------------------------------------------------------------------------
 -/
 
@@ -267,5 +267,34 @@ constant TreatedAsDominationPressureFromRiskLoad : Agent → State → Prop
 constant TreatedAsDominationPressureFromStructuralDebt : Agent → State → Prop
 constant TreatedAsDominationPressureFromExitViable : Agent → State → Prop
 constant TreatedAsDominationPressureFromTemporalAccumulation : Agent → State → Prop
+
+/-!
+------------------------------------------------------------------------------
+10. Monotonicity interfaces (COMPLETE)
+------------------------------------------------------------------------------
+These name monotonicity structure, direction, conditions, and contracts.
+They assert NOTHING.
+------------------------------------------------------------------------------ -/
+
+-- Core structural properties
+constant StructurallyMonotone : Measure → Prop
+constant StructurallyAntitone : Measure → Prop
+
+-- Measure-level attributes
+constant UpperBounded : Measure → Prop
+constant Irreversible : Measure → Prop
+constant RequiresEnablingStructure : Measure → Prop
+
+-- Conditional monotonicity relations
+constant MonotoneUnder : Measure → Measure → Prop
+constant AntitoneUnder : Measure → Measure → Prop
+
+-- Monotonicity contracts
+constant MonotonicityIsContextual : Prop
+constant MonotonicityRequiresScope : Prop
+constant MonotonicityIsNonCausal : Prop
+constant MonotonicityDoesNotGuaranteePersistence : Prop
+constant MonotonicityAllowsNonTotalOrder : Prop
+constant MonotonicityRespectsIndependence : Prop
 
 end SigmaR
