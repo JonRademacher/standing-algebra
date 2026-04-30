@@ -4,18 +4,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Temporal Accumulation Is Monotone
+# Temporal Accumulation Is Monotone (Structural)
 ###############################################################################
 
-Temporal accumulation is monotone with respect to state progression.
+Temporal accumulation is treated as non-decreasing
+along the state preorder within certain models
+or interpretive regimes.
+
+This file names the monotonicity relationship.
+It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom temporal_accumulation_monotone :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    TemporalAccumulation a s₁ ≤ TemporalAccumulation a s₂
+/--
+Temporal accumulation is treated as monotone
+along the state preorder.
+-/
+constant TemporalAccumulationMonotone : Prop
 
 end SigmaR
