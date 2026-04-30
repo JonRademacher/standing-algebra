@@ -3,22 +3,27 @@ import SigmaR.Valuation.Measures.Monotonicity.MonotonicityScope
 
 /-!
 ###############################################################################
-# Monotonicity Non-Totality
+# Monotonicity Non-Totality (Contract)
 ###############################################################################
 
-The state ordering used for monotonicity need not be total.
+The state ordering used for monotonicity is not required
+to be total.
 
-Not all states are required to be comparable.
+Monotonicity may be defined over partial orders,
+preorders, or other non-total structures.
+
+This file introduces no axioms.
+It names an interpretive boundary governing the use
+of state orderings within SigmaR.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-State progression is not assumed to be a total order.
+The state ordering used for monotonicity is treated
+as potentially non-total.
 -/
-axiom state_order_not_total :
-  ¬ (∀ (s₁ s₂ : State),
-        StateLe s₁ s₂ ∨ StateLe s₂ s₁)
+constant MonotonicityAllowsNonTotalOrder : Prop
 
 end SigmaR
