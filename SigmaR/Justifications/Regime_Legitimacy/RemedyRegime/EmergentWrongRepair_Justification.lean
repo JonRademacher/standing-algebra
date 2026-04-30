@@ -1,3 +1,5 @@
+module SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.EmergentWrongRepair_Justification
+
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
