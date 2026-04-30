@@ -5,19 +5,24 @@ import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
 ###############################################################################
-# Autonomy Is Conditionally Monotone
+# Autonomy Is Conditionally Monotone (Structural)
 ###############################################################################
 
-Autonomy does not increase under increasing domination pressure.
+Autonomy is conditionally non-increasing with respect to
+domination pressure under admissible state transitions.
+
+This file *names* the monotonicity relationship.
+It does not assert it globally or unconditionally.
 ###############################################################################
 -/
 
 namespace SigmaR
 
-axiom autonomy_conditionally_monotone :
-  ∀ (a : Agent) (s₁ s₂ : State),
-    StateLe s₁ s₂ →
-    DominationPressure s₁ ≤ DominationPressure s₂ →
-    AutonomyMeasure a s₂ ≤ AutonomyMeasure a s₁
+/--
+Autonomy is treated as conditionally monotone decreasing
+with respect to domination pressure along the state preorder.
+-/
+constant AutonomyConditionallyMonotoneUnderDomination :
+  Agent → Prop
 
 end SigmaR
