@@ -1,43 +1,34 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.StandingMeasure_Definition
+import SigmaR.Standing.ConsentState_Definition
 
 /-!
 ###############################################################################
 # Independence: Standing Not Consent
 ###############################################################################
 
-This file establishes that standing does not entail consent.
+Standing does not license or imply consent.
 
 Standing measures recognized status or admissible participation
 within a system.
 Consent is an agent-level condition of voluntary agreement.
 
-Importing this file explicitly rejects any assumption that
-recognized standing constitutes consent.
+No default implication from standing to consent
+is licensed.
 ###############################################################################
 -/
 
 namespace SigmaR
 
 /--
-There is no general implication from standing
-to consent.
-Any relationship between these concepts must be introduced explicitly.
+No implication treating standing as constituting,
+generating, or licensing consent is permitted.
 -/
 axiom standing_not_consent :
-  ¬ (∀ (i : Agent) (s : State),
-       StandingMeasure i s → Consent i s)
+  ¬ (
+    ∀ (a : Agent) (s : State),
+      TreatedAsConsentFromStandingMeasure a s
+  )
 
 end SigmaR
-
-/-!
-## Interpretation
-
-This prevents downstream users from assuming that:
-- recognition implies agreement
-- admissibility substitutes for consent
-- standing collapses into voluntariness
-
-Standing and consent are distinct structural facts.
--/
-
