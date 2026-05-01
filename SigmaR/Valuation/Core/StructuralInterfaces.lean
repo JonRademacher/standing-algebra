@@ -520,4 +520,74 @@ constant StandingValuationDoesNotImplyMorality : Prop
 constant StandingValuationScope : Prop
 constant StandingValuationContract : Prop
 
+/-!
+------------------------------------------------------------------------------
+15. CouplingValuation interfaces
+------------------------------------------------------------------------------
+-/
+
+-- Core coupling valuation entities
+constant CouplingValuation : Type
+constant CouplingState :
+  Agent → State → CouplingValuation
+constant CouplingWeight : Type
+
+-- Structural dependencies of coupling valuation
+constant CouplingDependsOnMeasure :
+  CouplingValuation → Measure → Prop
+constant CouplingDependsOnResponse :
+  CouplingValuation → Response → Prop
+constant CouplingDependsOnContext :
+  CouplingValuation → Prop
+
+-- Aggregation semantics
+constant CouplingAggregation :
+  CouplingValuation → CouplingValuation → CouplingValuation → Prop
+
+-- Loss propagation and modulation
+constant CouplingLossPropagation :
+  CouplingValuation → CouplingValuation → Prop
+constant CouplingAmplification :
+  CouplingValuation → CouplingValuation → Prop
+constant CouplingDampening :
+  CouplingValuation → CouplingValuation → Prop
+
+-- Irreversibility and hysteresis
+constant CouplingIrreversibility :
+  CouplingValuation → Prop
+constant CouplingHysteresis :
+  CouplingValuation → Prop
+
+-- Thresholds and collapse
+constant CouplingThreshold :
+  CouplingValuation → Prop
+constant CouplingCollapse :
+  CouplingValuation → Prop
+
+-- Comparability
+constant CouplingComparable :
+  CouplingValuation → CouplingValuation → Prop
+
+-- Response effects on coupling valuation
+constant ResponseAffectsCoupling :
+  Response → CouplingValuation → Prop
+
+-- Compliance with prior layers
+constant CouplingValuationAdmissible :
+  CouplingValuation → Prop
+constant CouplingRespectsMonotonicity :
+  CouplingValuation → Prop
+constant CouplingRespectsIndependence :
+  CouplingValuation → Prop
+
+-- Coupling valuation non-implication firewalls
+constant CouplingDoesNotImplyLegitimacy : Prop
+constant CouplingDoesNotImplyAuthority : Prop
+constant CouplingDoesNotImplyIntervention : Prop
+constant CouplingDoesNotImplyMorality : Prop
+
+-- Scope and contract
+constant CouplingValuationScope : Prop
+constant CouplingValuationContract : Prop
+
 end SigmaR
