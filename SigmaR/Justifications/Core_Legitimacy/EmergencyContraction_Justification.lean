@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.EmergencyContraction_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
 
 /-!
