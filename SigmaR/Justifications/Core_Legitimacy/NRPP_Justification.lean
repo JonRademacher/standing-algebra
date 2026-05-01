@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
-
 import SigmaR.StandingAlgebra_RegimeStacked
 import SigmaR.Justifications.Core_Legitimacy.STC5_Justification
 
