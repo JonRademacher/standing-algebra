@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.BeliefNonAuthoritative_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.PFA_Justification
 import SigmaR.Justifications.Core_Legitimacy.ContestationCondition_Justification
 
