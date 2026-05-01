@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyNonEscalation_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
 import SigmaR.Justifications.Regimes.RemedyRegime.RemedyRegime_Justification
 
