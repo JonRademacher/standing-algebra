@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.ScopeIntegrityUnderComposition_Justification
-
 import SigmaR.Justifications.Regimes.AdapterRegime.AdapterScopeIntegrity_Justification
 import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
 
