@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterRiskInheritance_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.RiskIndexedStanding_Justification
 import SigmaR.Justifications.Regimes.Adapter.AdapterInference_Justification
 
