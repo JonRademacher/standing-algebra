@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.DriftRegime.BoundedDrift_Justification
-
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
 
