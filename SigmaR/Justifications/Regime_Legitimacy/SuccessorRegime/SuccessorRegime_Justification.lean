@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegime_Justification
-
 import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorConsistency_Justification
 import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorAvailability_Justification
 import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorNonDeprivation_Justification
