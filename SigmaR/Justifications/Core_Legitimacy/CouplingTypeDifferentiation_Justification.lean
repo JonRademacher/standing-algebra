@@ -1,4 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.CouplingTypeDifferentiation_Justification
 ---
 
 ```lean
