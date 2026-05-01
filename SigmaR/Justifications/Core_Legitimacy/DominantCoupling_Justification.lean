@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.CouplingTypeDifferentiation_Justification
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 
