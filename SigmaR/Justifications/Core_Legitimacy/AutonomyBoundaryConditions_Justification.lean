@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.AutonomyBoundaryConditions_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 
 /-!
