@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyRegime_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
