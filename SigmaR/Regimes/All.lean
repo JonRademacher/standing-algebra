@@ -1,0 +1,9 @@
+import SigmaR.Regimes.StandingAlgebra_AdapterRegime
+import SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime
+import SigmaR.Regimes.StandingAlgebra_DriftRegime
+import SigmaR.Regimes.StandingAlgebra_EmergencyRegime
+import SigmaR.Regimes.StandingAlgebra_ExitRegime
+import SigmaR.Regimes.StandingAlgebra_RegimesStacked
+import SigmaR.Regimes.StandingAlgebra_RemedyRegime
+import SigmaR.Regimes.StandingAlgebra_RiskRegime
+import SigmaR.Regimes.StandingAlgebra_SuccessorRegime
