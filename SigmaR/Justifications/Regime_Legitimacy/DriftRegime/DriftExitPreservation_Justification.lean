@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftExitPreservation_Justification
-
 import SigmaR.Justifications.Regimes.ExitRegime.ExitRegime_Justification
 import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
 
