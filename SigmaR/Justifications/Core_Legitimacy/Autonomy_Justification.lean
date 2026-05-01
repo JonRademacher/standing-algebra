@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.Autonomy_Justification
-
 import SigmaR.StandingAlgebra_RegimeStacked
 
 /-!
