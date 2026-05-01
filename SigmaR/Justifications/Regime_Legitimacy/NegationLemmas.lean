@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.NegationLemmas
-
 import SigmaR.StandingAlgebra_FormalCore
 
 /-!
