@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.Agency_Justification
-
 import SigmaR.StandingAlgebra_RegimeStacked
 
 /-!
