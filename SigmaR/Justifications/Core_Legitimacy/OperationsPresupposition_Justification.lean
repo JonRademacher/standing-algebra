@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.OperationsPresupposition_Justification
-
 import SigmaR.StandingAlgebra_FormalCore
 
 /-!
