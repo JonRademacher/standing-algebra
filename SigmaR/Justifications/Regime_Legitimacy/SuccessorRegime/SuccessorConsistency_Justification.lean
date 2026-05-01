@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorConsistency_Justification
-
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
 
