@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.CoreConstraintPersistence_Justification
-
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Justifications.Core_Legitimacy.ALRP_Justification
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
