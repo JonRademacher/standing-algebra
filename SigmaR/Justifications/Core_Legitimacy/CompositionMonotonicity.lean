@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.CompositionMonotonicity
-
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 import SigmaR.Justifications.Core_Legitimacy.StandingMonotonicity
 import SigmaR.Justifications.Core_Legitimacy.DebtMonotonicity
