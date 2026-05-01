@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.Emergency_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.STC5_Justification
 
 /-!
