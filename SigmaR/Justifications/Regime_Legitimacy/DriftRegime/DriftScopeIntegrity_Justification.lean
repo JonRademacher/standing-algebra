@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftScopeIntegrity_Justification
-
 import SigmaR.Justifications.Regimes.AdapterRegime.AdapterScopeIntegrity_Justification
 import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
 
