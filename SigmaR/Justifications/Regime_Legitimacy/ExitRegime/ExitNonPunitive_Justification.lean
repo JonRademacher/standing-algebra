@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitNonPunitive_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 import SigmaR.Justifications.Regimes.ExitRegime.ExitRegime_Justification
 
