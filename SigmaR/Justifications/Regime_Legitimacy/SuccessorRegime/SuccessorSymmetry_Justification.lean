@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorSymmetry_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.STC5_Justification
 import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
 
