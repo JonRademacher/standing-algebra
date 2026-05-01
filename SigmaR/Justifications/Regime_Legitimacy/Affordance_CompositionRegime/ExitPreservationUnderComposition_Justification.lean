@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.ExitPreservationUnderComposition_Justification
-
 import SigmaR.Justifications.Regimes.ExitRegime.ExitRegime_Justification
 import SigmaR.Justifications.Regimes.ExitRegime.ExitPreservation_Justification
 import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
