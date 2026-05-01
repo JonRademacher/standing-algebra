@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskInheritance_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
