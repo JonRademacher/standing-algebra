@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.RiskAccumulationBound_Justification
-
 import SigmaR.Justifications.Regimes.RiskRegime.RiskLoadMonotonicity_Justification
 import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
 
