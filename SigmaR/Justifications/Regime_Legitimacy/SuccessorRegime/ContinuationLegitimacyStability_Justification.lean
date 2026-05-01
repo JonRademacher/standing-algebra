@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.ContinuationLegitimacyStability_Justification
-
 import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
 
 /-!
