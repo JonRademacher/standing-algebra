@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitNonSubstitutability_Justification
-
 import SigmaR.Justifications.Regimes.ExitRegime.ExitRegime_Justification
 import SigmaR.Justifications.Core_Legitimacy.ContestationCondition_Justification
 
