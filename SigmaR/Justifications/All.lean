@@ -1,5 +1,3 @@
-module SigmaR.Justifications.All
-
 import SigmaR.Justifications.Core_Legitimacy.ALRP_Justification
 import SigmaR.Justifications.Core_Legitimacy.Agency_Justification
 import SigmaR.Justifications.Core_Legitimacy.AlternativesConsidered_Justification
