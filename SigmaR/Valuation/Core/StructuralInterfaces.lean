@@ -25,8 +25,9 @@ This is a **pure signature file**:
 • no definitions
 
 Its sole purpose is to make *all inference, evolution, permission,
-and response boundaries explicit and reviewable*. Nothing here asserts
-truth, causation, legitimacy, optimization, authority, obligation, or necessity.
+and response boundaries explicit and reviewable*.
+Nothing here asserts truth, causation, legitimacy, optimization,
+authority, obligation, or necessity.
 ###############################################################################
 -/
 
@@ -190,10 +191,84 @@ constant NonComparableInContext :
 ------------------------------------------------------------------------------
 -/
 
--- (UNCHANGED — full list preserved exactly as before)
+-- Autonomy misuses
+constant TreatedAsAutonomyFromStandingMeasure : Agent → State → Prop
+constant TreatedAsAutonomyFromRoleState : Agent → State → Prop
+constant TreatedAsAutonomyFromExitViable : Agent → State → Prop
+constant TreatedAsAutonomyLostFromRiskLoad : Agent → State → Prop
+constant TreatedAsAutonomyLostFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsAutonomyLostFromExitCollapse : Agent → State → Prop
+constant TreatedAsAutonomyLostFromRiskInheritance : Agent → State → Prop
+constant TreatedAsAutonomyFromDominationPressure : Agent → State → Prop
 
--- [Autonomy, Capacity, Consent, Standing, Debt, Exit, Risk,
---  TemporalAccumulation, DominationPressure misuse predicates here]
+-- Capacity misuses
+constant TreatedAsCapacityFromStandingMeasure : Agent → State → Prop
+constant TreatedAsCapacityFromRoleState : Agent → State → Prop
+constant TreatedAsCapacityFromExitViable : Agent → State → Prop
+constant TreatedAsCapacityLostFromRiskLoad : Agent → State → Prop
+constant TreatedAsCapacityLostFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsCapacityLostFromExitCollapse : Agent → State → Prop
+constant TreatedAsCapacityLostFromRiskInheritance : Agent → State → Prop
+constant TreatedAsCapacityLostFromDominationPressure : Agent → State → Prop
+
+-- Consent misuses
+constant TreatedAsConsentFromStandingMeasure : Agent → State → Prop
+constant TreatedAsConsentFromRoleState : Agent → State → Prop
+constant TreatedAsConsentFromExitViable : Agent → State → Prop
+constant TreatedAsConsentInvalidFromRiskLoad : Agent → State → Prop
+constant TreatedAsConsentInvalidFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsConsentInvalidFromExitCollapse : Agent → State → Prop
+constant TreatedAsConsentInvalidFromRiskInheritance : Agent → State → Prop
+constant TreatedAsConsentInvalidFromDominationPressure : Agent → State → Prop
+
+-- Standing misuses
+constant TreatedAsStandingFromRoleState : Agent → State → Prop
+constant TreatedAsStandingFromExitViable : Agent → State → Prop
+constant TreatedAsStandingFromRiskInheritance : Agent → State → Prop
+constant TreatedAsStandingFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsStandingRevokedFromStructuralDebt : Agent → State → Prop
+constant TreatedAsStandingRevokedFromExitCollapse : Agent → State → Prop
+constant TreatedAsStandingRevokedFromDominationPressure : Agent → State → Prop
+
+-- Structural debt misuses
+constant TreatedAsStructuralDebtFromRiskLoad : Agent → State → Prop
+constant TreatedAsStructuralDebtFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsStructuralDebtFromExitCollapse : Agent → State → Prop
+constant TreatedAsStructuralDebtFromDominationPressure : Agent → State → Prop
+constant TreatedAsStructuralDebtResolvedFromStandingMeasure : Agent → State → Prop
+constant TreatedAsStructuralDebtResolvedFromRoleState : Agent → State → Prop
+
+-- Exit viability / collapse misuses
+constant TreatedAsExitViableFromStandingMeasure : Agent → State → Prop
+constant TreatedAsExitViableFromRoleState : Agent → State → Prop
+constant TreatedAsExitViableFromRiskLoad : Agent → State → Prop
+constant TreatedAsExitViableFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsExitViableResolvedFromStructuralDebt : Agent → State → Prop
+constant TreatedAsExitViableLostFromDominationPressure : Agent → State → Prop
+
+constant TreatedAsExitCollapseFromStandingMeasure : Agent → State → Prop
+
+-- Risk misuses
+constant TreatedAsRiskFromStandingMeasure : Agent → State → Prop
+constant TreatedAsRiskFromRoleState : Agent → State → Prop
+constant TreatedAsRiskFromTemporalAccumulation : Agent → State → Prop
+constant TreatedAsRiskFromStructuralDebt : Agent → State → Prop
+constant TreatedAsRiskFromDominationPressure : Agent → State → Prop
+constant TreatedAsRiskFromExitViable : Agent → State → Prop
+
+-- Temporal accumulation misuses
+constant TreatedAsTemporalAccumulationFromStandingMeasure : Agent → State → Prop
+constant TreatedAsTemporalAccumulationFromRiskLoad : Agent → State → Prop
+constant TreatedAsTemporalAccumulationFromStructuralDebt : Agent → State → Prop
+constant TreatedAsTemporalAccumulationFromExitViable : Agent → State → Prop
+constant TreatedAsTemporalAccumulationResolvedFromRoleState : Agent → State → Prop
+
+-- Domination pressure misuses
+constant TreatedAsDominationPressureFromStandingMeasure : Agent → State → Prop
+constant TreatedAsDominationPressureFromRiskLoad : Agent → State → Prop
+constant TreatedAsDominationPressureFromStructuralDebt : Agent → State → Prop
+constant TreatedAsDominationPressureFromExitViable : Agent → State → Prop
+constant TreatedAsDominationPressureFromTemporalAccumulation : Agent → State → Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -251,7 +326,7 @@ constant AdmissibilityContract : Prop
 
 /-!
 ------------------------------------------------------------------------------
-12. ResponseSemantics interfaces (NEW — COMPLETE)
+12. ResponseSemantics interfaces
 ------------------------------------------------------------------------------
 -/
 
