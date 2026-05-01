@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.CorePropagationConditions
-
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 import SigmaR.Justifications.Core_Legitimacy.RiskIndexedStanding_Justification
 import SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification
