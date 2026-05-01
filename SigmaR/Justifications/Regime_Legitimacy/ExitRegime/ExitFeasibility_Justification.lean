@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitFeasibility_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 import SigmaR.Justifications.Regimes.ExitRegime.ExitAvailability_Justification
 
