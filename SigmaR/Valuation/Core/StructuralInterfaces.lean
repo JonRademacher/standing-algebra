@@ -370,4 +370,86 @@ constant ResponseDoesNotImplyMorality : Prop
 constant ResponseScope : Prop
 constant ResponseSemanticsContract : Prop
 
+/-!
+------------------------------------------------------------------------------
+13. DerivedValuations interfaces
+------------------------------------------------------------------------------
+-/
+
+-- Core derived valuation entities
+constant DerivedValuation : Type
+constant ValuationFunction : Agent → State → DerivedValuation
+
+-- Autonomy-specific derived valuation
+constant AutonomyValuation : Type
+constant AutonomyState : Agent → State → AutonomyValuation
+constant AutonomyLevel : AutonomyValuation → Val
+
+-- Structural dependencies of autonomy valuation
+constant AutonomyDependsOnMeasure :
+  AutonomyValuation → Measure → Prop
+constant AutonomyDependsOnResponse :
+  AutonomyValuation → Response → Prop
+constant AutonomyDependsOnContext :
+  AutonomyValuation → Prop
+
+-- Aggregation semantics
+constant ValuationAggregation :
+  DerivedValuation → DerivedValuation → DerivedValuation → Prop
+constant AutonomyAggregation :
+  AutonomyValuation → AutonomyValuation → AutonomyValuation → Prop
+
+-- Loss and degradation semantics
+constant ValuationLoss :
+  DerivedValuation → DerivedValuation → Prop
+constant AutonomyLoss :
+  AutonomyValuation → AutonomyValuation → Prop
+constant AutonomyFragility :
+  AutonomyValuation → Prop
+
+-- Irreversibility and hysteresis
+constant ValuationIrreversibility :
+  DerivedValuation → Prop
+constant AutonomyIrreversibility :
+  AutonomyValuation → Prop
+constant AutonomyHysteresis :
+  AutonomyValuation → Prop
+
+-- Response effects on valuation
+constant ResponseAffectsValuation :
+  Response → DerivedValuation → Prop
+constant ResponseAffectsAutonomy :
+  Response → AutonomyValuation → Prop
+
+-- Thresholds and collapse
+constant AutonomyThreshold :
+  AutonomyValuation → Prop
+constant AutonomyCollapse :
+  AutonomyValuation → Prop
+
+-- Comparability
+constant ValuationComparable :
+  DerivedValuation → DerivedValuation → Prop
+constant AutonomyComparable :
+  AutonomyValuation → AutonomyValuation → Prop
+
+-- Compliance with prior layers
+constant ValuationAdmissible :
+  DerivedValuation → Prop
+constant ValuationRespectsMonotonicity :
+  DerivedValuation → Prop
+constant ValuationRespectsIndependence :
+  DerivedValuation → Prop
+
+-- Derived valuation non-implication firewalls
+constant ValuationDoesNotImplyLegitimacy : Prop
+constant ValuationDoesNotImplyAuthority : Prop
+constant ValuationDoesNotImplyIntervention : Prop
+constant ValuationDoesNotImplyMorality : Prop
+
+-- Scope and contract
+constant ValuationScope : Prop
+constant DerivedValuationsContract : Prop
+
+
 end SigmaR
