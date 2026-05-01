@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
-
 import SigmaR.Justifications.Core_Legitimacy.PFA_Justification
 import SigmaR.Justifications.Core_Legitimacy.ContestationCondition_Justification
 import SigmaR.Justifications.Core_Legitimacy.PublicFrameResolution_Justification
