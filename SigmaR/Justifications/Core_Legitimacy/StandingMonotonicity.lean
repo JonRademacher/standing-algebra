@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Core_Legitimacy.StandingMonotonicity
-
 import SigmaR.Core.StandingValuation
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 
