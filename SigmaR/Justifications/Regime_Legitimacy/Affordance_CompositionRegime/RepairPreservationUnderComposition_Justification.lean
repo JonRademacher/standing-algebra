@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.RepairPreservationUnderComposition_Justification
-
 import SigmaR.Justifications.Regimes.RemedyRegime.RemedyRegime_Justification
 import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
 
