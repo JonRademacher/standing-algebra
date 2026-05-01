@@ -451,5 +451,73 @@ constant ValuationDoesNotImplyMorality : Prop
 constant ValuationScope : Prop
 constant DerivedValuationsContract : Prop
 
+/-!
+------------------------------------------------------------------------------
+14. StandingValuation interfaces
+------------------------------------------------------------------------------
+-/
+
+-- Core standing valuation entities
+constant StandingValuation : Type
+constant StandingState :
+  Agent → State → StandingValuation
+constant StandingLevel :
+  StandingValuation → Val
+
+-- Structural dependencies of standing valuation
+constant StandingDependsOnMeasure :
+  StandingValuation → Measure → Prop
+constant StandingDependsOnResponse :
+  StandingValuation → Response → Prop
+constant StandingDependsOnContext :
+  StandingValuation → Prop
+
+-- Aggregation semantics
+constant StandingAggregation :
+  StandingValuation → StandingValuation → StandingValuation → Prop
+
+-- Loss and degradation semantics
+constant StandingLoss :
+  StandingValuation → StandingValuation → Prop
+constant StandingFragility :
+  StandingValuation → Prop
+
+-- Irreversibility and hysteresis
+constant StandingIrreversibility :
+  StandingValuation → Prop
+constant StandingHysteresis :
+  StandingValuation → Prop
+
+-- Thresholds and collapse
+constant StandingThreshold :
+  StandingValuation → Prop
+constant StandingCollapse :
+  StandingValuation → Prop
+
+-- Comparability
+constant StandingComparable :
+  StandingValuation → StandingValuation → Prop
+
+-- Response effects on standing valuation
+constant ResponseAffectsStanding :
+  Response → StandingValuation → Prop
+
+-- Compliance with prior layers
+constant StandingValuationAdmissible :
+  StandingValuation → Prop
+constant StandingRespectsMonotonicity :
+  StandingValuation → Prop
+constant StandingRespectsIndependence :
+  StandingValuation → Prop
+
+-- Standing valuation non-implication firewalls
+constant StandingValuationDoesNotImplyLegitimacy : Prop
+constant StandingValuationDoesNotImplyAuthority : Prop
+constant StandingValuationDoesNotImplyIntervention : Prop
+constant StandingValuationDoesNotImplyMorality : Prop
+
+-- Scope and contract
+constant StandingValuationScope : Prop
+constant StandingValuationContract : Prop
 
 end SigmaR
