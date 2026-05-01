@@ -1,5 +1,3 @@
-module SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyNonDomination_Justification
-
 import SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification
 import SigmaR.Justifications.Regimes.RemedyRegime.RemedyRegime_Justification
 
