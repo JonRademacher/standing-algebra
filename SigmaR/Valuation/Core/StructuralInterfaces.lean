@@ -661,4 +661,98 @@ constant ExitCostDoesNotImplyMorality : Prop
 constant ExitCostValuationScope : Prop
 constant ExitCostValuationContract : Prop
 
+/-!
+------------------------------------------------------------------------------
+17. PerceptualValuation interfaces
+------------------------------------------------------------------------------
+-/
+
+-- Core perceptual valuation entities
+constant PerceptionValuation : Type
+constant PerceptionState :
+  Agent → State → PerceptionValuation
+constant PerceptionLevel :
+  PerceptionValuation → Val
+
+-- Perceptual agreement structures (agreement is valuated, not perception)
+constant PerceptualAgreement : Type
+constant InternalPerceptualAgreement :
+  PerceptualAgreement → Prop        -- iPFA
+constant ExternalPerceptualAgreement :
+  PerceptualAgreement → Prop        -- PFA
+
+-- Agreement stabilization
+constant AgreementStabilizedByEvidence :
+  PerceptualAgreement → Prop        -- non-parochial evidence
+
+-- Structural dependencies of perceptual valuation
+constant PerceptionDependsOnMeasure :
+  PerceptionValuation → Measure → Prop
+constant PerceptionDependsOnResponse :
+  PerceptionValuation → Response → Prop
+constant PerceptionDependsOnContext :
+  PerceptionValuation → Prop
+constant PerceptionDependsOnCoupling :
+  PerceptionValuation → CouplingValuation → Prop
+
+-- Aggregation semantics
+constant PerceptionAggregation :
+  PerceptionValuation → PerceptionValuation → PerceptionValuation → Prop
+
+-- Loss, divergence, and disagreement
+constant PerceptionLoss :
+  PerceptionValuation → PerceptionValuation → Prop
+constant PerceptionDivergence :
+  PerceptionValuation → PerceptionValuation → Prop
+constant PerceptualDisagreement :
+  PerceptualAgreement → PerceptualAgreement → Prop
+constant AgreementMisalignment :
+  PerceptualAgreement → PerceptualAgreement → Prop   -- iPFA vs PFA
+constant PerceptionFragility :
+  PerceptionValuation → Prop
+
+-- Irreversibility and hysteresis
+constant PerceptionIrreversibility :
+  PerceptionValuation → Prop
+constant PerceptionHysteresis :
+  PerceptionValuation → Prop
+
+-- Thresholds and collapse
+constant PerceptionThreshold :
+  PerceptionValuation → Prop
+constant PerceptionCollapse :
+  PerceptionValuation → Prop
+
+-- Comparability
+constant PerceptionComparable :
+  PerceptionValuation → PerceptionValuation → Prop
+constant PerceptionComparableUnderAgreement :
+  PerceptionValuation → PerceptionValuation → PerceptualAgreement → Prop
+
+-- Response effects
+constant ResponseAffectsPerceptualAgreement :
+  Response → PerceptualAgreement → Prop
+constant ResponseAffectsPerceptionValuation :
+  Response → PerceptionValuation → Prop
+
+-- Compliance with prior layers
+constant PerceptionValuationAdmissible :
+  PerceptionValuation → Prop
+constant PerceptionRespectsMonotonicity :
+  PerceptionValuation → Prop
+constant PerceptionRespectsIndependence :
+  PerceptionValuation → Prop
+
+-- Perceptual valuation non-implication firewalls
+constant PerceptionDoesNotImplyTruth : Prop
+constant PerceptionDoesNotImplyError : Prop
+constant PerceptionDoesNotImplyLegitimacy : Prop
+constant PerceptionDoesNotImplyAuthority : Prop
+constant PerceptionDoesNotImplyIntervention : Prop
+constant PerceptionDoesNotImplyMorality : Prop
+
+-- Scope and contract
+constant PerceptionValuationScope : Prop
+constant PerceptionValuationContract : Prop
+
 end SigmaR
