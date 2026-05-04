@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.CapacityValuation
+import SigmaR.Valuation.DerivedValuations.CapacityValuation.CapacityValuation
 
 /-!
 ###############################################################################
