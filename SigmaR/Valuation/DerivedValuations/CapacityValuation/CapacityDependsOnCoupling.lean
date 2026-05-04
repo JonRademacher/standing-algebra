@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.DerivedValuations.CapacityValuation
-import SigmaR.Valuation.DerivedValuations.CouplingValuation
+import SigmaR.Valuation.DerivedValuations.CouplingValuation.CouplingValuation
 
 /-!
 ###############################################################################
