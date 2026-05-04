@@ -996,5 +996,122 @@ constant TransformabilityProgressBoundaryDoesNotImplySelection : Prop
 constant TransformabilityValuationScope : Prop
 constant TransformabilityValuationContract : Prop
 
+/-!
+------------------------------------------------------------------------------
+20. RiskValuation interfaces
+------------------------------------------------------------------------------
+-/
+
+-- Core risk valuation entities
+constant RiskValuation : Type
+constant RiskState :
+  Agent → State → RiskValuation
+constant RiskLevel :
+  RiskValuation → Val
+
+-- Risk agreement structures
+constant RiskAgreement : Type
+constant InternalRiskAgreement :
+  RiskAgreement → Prop
+constant ExternalRiskAgreement :
+  RiskAgreement → Prop
+
+-- Agreement stabilization
+constant RiskAgreementStabilizedByEvidence :
+  RiskAgreement → Prop
+
+-- Structural dependencies of risk valuation
+constant RiskDependsOnMeasure :
+  RiskValuation → Measure → Prop
+constant RiskDependsOnResponse :
+  RiskValuation → Response → Prop
+constant RiskDependsOnContext :
+  RiskValuation → Prop
+constant RiskDependsOnCoupling :
+  RiskValuation → CouplingValuation → Prop
+constant RiskDependsOnCapacityValuation :
+  RiskValuation → CapacityValuation → Prop
+constant RiskDependsOnTransformabilityValuation :
+  RiskValuation → TransformabilityValuation → Prop
+constant RiskDependsOnPerceptualValuation :
+  RiskValuation → PerceptionValuation → Prop
+
+-- Aggregation semantics
+constant RiskAggregation :
+  RiskValuation → RiskValuation → RiskValuation → Prop
+
+-- Exposure, load, and accumulation
+constant RiskExposure :
+  RiskValuation → Prop
+constant RiskLoad :
+  RiskValuation → Prop
+constant RiskAccumulation :
+  RiskValuation → RiskValuation → Prop
+
+-- Inheritance and transfer
+constant RiskInheritance :
+  RiskValuation → RiskValuation → Prop
+constant RiskTransfer :
+  RiskValuation → RiskValuation → Prop
+
+-- Propagation and modulation
+constant RiskPropagation :
+  RiskValuation → RiskValuation → Prop
+constant RiskAmplification :
+  RiskValuation → RiskValuation → Prop
+constant RiskDampening :
+  RiskValuation → RiskValuation → Prop
+
+-- Loss and fragility
+constant RiskLoss :
+  RiskValuation → RiskValuation → Prop
+constant RiskFragility :
+  RiskValuation → Prop
+
+-- Irreversibility and hysteresis
+constant RiskIrreversibility :
+  RiskValuation → Prop
+constant RiskHysteresis :
+  RiskValuation → Prop
+
+-- Thresholds and collapse
+constant RiskThreshold :
+  RiskValuation → Prop
+constant RiskCollapse :
+  RiskValuation → Prop
+
+-- Comparability
+constant RiskComparable :
+  RiskValuation → RiskValuation → Prop
+constant RiskComparableUnderAgreement :
+  RiskValuation → RiskValuation → RiskAgreement → Prop
+
+-- Response effects
+constant ResponseAffectsRiskAgreement :
+  Response → RiskAgreement → Prop
+constant ResponseAffectsRiskValuation :
+  Response → RiskValuation → Prop
+
+-- Compliance with prior layers
+constant RiskValuationAdmissible :
+  RiskValuation → Prop
+constant RiskRespectsMonotonicity :
+  RiskValuation → Prop
+constant RiskRespectsIndependence :
+  RiskValuation → Prop
+
+-- Risk valuation non-implication firewalls
+constant RiskDoesNotImplyFault : Prop
+constant RiskDoesNotImplyCulpability : Prop
+constant RiskDoesNotImplyLegitimacy : Prop
+constant RiskDoesNotImplyAuthority : Prop
+constant RiskDoesNotImplyIntervention : Prop
+constant RiskDoesNotImplyMorality : Prop
+constant RiskDoesNotImplyProbabilityBelief : Prop
+
+-- Scope and contract
+constant RiskValuationScope : Prop
+constant RiskValuationContract : Prop
+
 
 end SigmaR
