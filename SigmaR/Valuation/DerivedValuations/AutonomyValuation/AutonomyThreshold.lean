@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.AutonomyValuation
+import SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyValuation
 
 /-!
 ###############################################################################
