@@ -590,4 +590,75 @@ constant CouplingDoesNotImplyMorality : Prop
 constant CouplingValuationScope : Prop
 constant CouplingValuationContract : Prop
 
+/-!
+------------------------------------------------------------------------------
+16. ExitCostValuation interfaces
+------------------------------------------------------------------------------
+-/
+
+-- Core exit cost valuation entities
+constant ExitCostValuation : Type
+constant ExitCostState :
+  Agent → State → ExitCostValuation
+constant ExitCostLevel :
+  ExitCostValuation → Val
+
+-- Structural dependencies of exit cost valuation
+constant ExitCostDependsOnMeasure :
+  ExitCostValuation → Measure → Prop
+constant ExitCostDependsOnResponse :
+  ExitCostValuation → Response → Prop
+constant ExitCostDependsOnContext :
+  ExitCostValuation → Prop
+
+-- Aggregation and accumulation semantics
+constant ExitCostAggregation :
+  ExitCostValuation → ExitCostValuation → ExitCostValuation → Prop
+constant ExitCostAccumulation :
+  ExitCostValuation → ExitCostValuation → Prop
+
+-- Loss and fragility semantics
+constant ExitCostLoss :
+  ExitCostValuation → ExitCostValuation → Prop
+constant ExitCostFragility :
+  ExitCostValuation → Prop
+
+-- Irreversibility and hysteresis
+constant ExitCostIrreversibility :
+  ExitCostValuation → Prop
+constant ExitCostHysteresis :
+  ExitCostValuation → Prop
+
+-- Thresholds and collapse
+constant ExitCostThreshold :
+  ExitCostValuation → Prop
+constant ExitCostCollapse :
+  ExitCostValuation → Prop
+
+-- Comparability
+constant ExitCostComparable :
+  ExitCostValuation → ExitCostValuation → Prop
+
+-- Response effects on exit cost valuation
+constant ResponseAffectsExitCost :
+  Response → ExitCostValuation → Prop
+
+-- Compliance with prior layers
+constant ExitCostValuationAdmissible :
+  ExitCostValuation → Prop
+constant ExitCostRespectsMonotonicity :
+  ExitCostValuation → Prop
+constant ExitCostRespectsIndependence :
+  ExitCostValuation → Prop
+
+-- Exit cost valuation non-implication firewalls
+constant ExitCostDoesNotImplyLegitimacy : Prop
+constant ExitCostDoesNotImplyAuthority : Prop
+constant ExitCostDoesNotImplyIntervention : Prop
+constant ExitCostDoesNotImplyMorality : Prop
+
+-- Scope and contract
+constant ExitCostValuationScope : Prop
+constant ExitCostValuationContract : Prop
+
 end SigmaR
