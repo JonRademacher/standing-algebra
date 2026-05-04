@@ -1113,5 +1113,130 @@ constant RiskDoesNotImplyProbabilityBelief : Prop
 constant RiskValuationScope : Prop
 constant RiskValuationContract : Prop
 
+/-!
+------------------------------------------------------------------------------
+21. AutonomyValuation interfaces (v2)
+------------------------------------------------------------------------------
+-/
+
+-- Core autonomy valuation entities
+constant AutonomyValuation : Type
+constant AutonomyState :
+  Agent → State → AutonomyValuation
+constant AutonomyLevel :
+  AutonomyValuation → Val
+
+-- Autonomy agreement structures
+constant AutonomyAgreement : Type
+constant InternalAutonomyAgreement :
+  AutonomyAgreement → Prop
+constant ExternalAutonomyAgreement :
+  AutonomyAgreement → Prop
+
+-- Agreement stabilization
+constant AutonomyAgreementStabilizedByEvidence :
+  AutonomyAgreement → Prop
+
+-- Structural dependencies of autonomy valuation
+constant AutonomyDependsOnMeasure :
+  AutonomyValuation → Measure → Prop
+constant AutonomyDependsOnResponse :
+  AutonomyValuation → Response → Prop
+constant AutonomyDependsOnContext :
+  AutonomyValuation → Prop
+constant AutonomyDependsOnPerceptualValuation :
+  AutonomyValuation → PerceptionValuation → Prop
+constant AutonomyDependsOnCapacityValuation :
+  AutonomyValuation → CapacityValuation → Prop
+constant AutonomyDependsOnTransformabilityValuation :
+  AutonomyValuation → TransformabilityValuation → Prop
+constant AutonomyDependsOnRiskValuation :
+  AutonomyValuation → RiskValuation → Prop
+constant AutonomyDependsOnExitCostValuation :
+  AutonomyValuation → ExitCostValuation → Prop
+constant AutonomyDependsOnCouplingValuation :
+  AutonomyValuation → CouplingValuation → Prop
+
+-- Aggregation semantics
+constant AutonomyAggregation :
+  AutonomyValuation → AutonomyValuation → AutonomyValuation → Prop
+
+-- Loss, erosion, and fragility
+constant AutonomyLoss :
+  AutonomyValuation → AutonomyValuation → Prop
+constant AutonomyErosion :
+  AutonomyValuation → Prop
+constant AutonomyFragility :
+  AutonomyValuation → Prop
+
+-- Propagation and modulation
+constant AutonomyPropagation :
+  AutonomyValuation → AutonomyValuation → Prop
+constant AutonomyAmplification :
+  AutonomyValuation → AutonomyValuation → Prop
+constant AutonomyDampening :
+  AutonomyValuation → AutonomyValuation → Prop
+
+-- Irreversibility and hysteresis
+constant AutonomyIrreversibility :
+  AutonomyValuation → Prop
+constant AutonomyHysteresis :
+  AutonomyValuation → Prop
+
+-- Thresholds and collapse
+constant AutonomyThreshold :
+  AutonomyValuation → Prop
+constant AutonomyCollapse :
+  AutonomyValuation → Prop
+
+-- Comparability
+constant AutonomyComparable :
+  AutonomyValuation → AutonomyValuation → Prop
+constant AutonomyComparableUnderAgreement :
+  AutonomyValuation → AutonomyValuation → AutonomyAgreement → Prop
+
+-- Response effects
+constant ResponseAffectsAutonomyAgreement :
+  Response → AutonomyAgreement → Prop
+constant ResponseAffectsAutonomyValuation :
+  Response → AutonomyValuation → Prop
+
+-- Autonomy-progress (ratchet) boundary
+constant AutonomyProgressOption : Type
+constant AutonomyProgressOptionSet :
+  AutonomyProgressOption → Prop
+constant AutonomyProgressAvailable :
+  AutonomyProgressOptionSet → Prop
+constant AutonomyProgressWithinScope :
+  AutonomyProgressOptionSet → Prop
+constant AutonomyProgressEndorsable :
+  AutonomyProgressOptionSet → Prop
+constant AutonomyProgressRequiredForNonDomination :
+  AutonomyProgressOptionSet → Prop
+constant AutonomyNonProgressOutOfScopeWhenProgressAvailable :
+  AutonomyProgressOptionSet → Prop
+constant AutonomyOmissionMaintainsConstraint :
+  AutonomyProgressOptionSet → Prop
+
+-- Compliance with prior layers
+constant AutonomyValuationAdmissible :
+  AutonomyValuation → Prop
+constant AutonomyRespectsMonotonicity :
+  AutonomyValuation → Prop
+constant AutonomyRespectsIndependence :
+  AutonomyValuation → Prop
+
+-- Autonomy valuation non-implication firewalls
+constant AutonomyDoesNotImplyConsent : Prop
+constant AutonomyDoesNotImplyLegitimacy : Prop
+constant AutonomyDoesNotImplyAuthority : Prop
+constant AutonomyDoesNotImplyIntervention : Prop
+constant AutonomyDoesNotImplyMorality : Prop
+constant AutonomyProgressBoundaryDoesNotImplySelection : Prop
+
+-- Scope and contract
+constant AutonomyValuationScope : Prop
+constant AutonomyValuationContract : Prop
+
 
 end SigmaR
