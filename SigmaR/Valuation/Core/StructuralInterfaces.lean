@@ -755,4 +755,246 @@ constant PerceptionDoesNotImplyMorality : Prop
 constant PerceptionValuationScope : Prop
 constant PerceptionValuationContract : Prop
 
+/-!
+------------------------------------------------------------------------------
+18. CapacityValuation interfaces
+------------------------------------------------------------------------------
+-/
+
+-- Core capacity valuation entities
+constant CapacityValuation : Type
+constant CapacityState :
+  Agent → State → CapacityValuation
+constant CapacityLevel :
+  CapacityValuation → Val
+
+-- Capacity agreement structures
+constant CapacityAgreement : Type
+constant InternalCapacityAgreement :
+  CapacityAgreement → Prop
+constant ExternalCapacityAgreement :
+  CapacityAgreement → Prop
+
+-- Agreement stabilization
+constant CapacityAgreementStabilizedByEvidence :
+  CapacityAgreement → Prop
+
+-- Structural dependencies of capacity valuation
+constant CapacityDependsOnMeasure :
+  CapacityValuation → Measure → Prop
+constant CapacityDependsOnResponse :
+  CapacityValuation → Response → Prop
+constant CapacityDependsOnContext :
+  CapacityValuation → Prop
+constant CapacityDependsOnCoupling :
+  CapacityValuation → CouplingValuation → Prop
+constant CapacityDependsOnPerceptionValuation :
+  CapacityValuation → PerceptionValuation → Prop
+
+-- Aggregation, load, and constraint semantics
+constant CapacityAggregation :
+  CapacityValuation → CapacityValuation → CapacityValuation → Prop
+constant CapacityLoad :
+  CapacityValuation → Prop
+constant CapacityConsumption :
+  CapacityValuation → CapacityValuation → Prop
+constant CapacitySaturation :
+  CapacityValuation → Prop
+
+-- Capacity-progress (ratchet) boundary
+constant CapacityProgressOption : Type
+constant CapacityProgressOptionSet :
+  CapacityProgressOption → Prop
+constant CapacityProgressAvailable :
+  CapacityProgressOptionSet → Prop
+constant CapacityProgressWithinScope :
+  CapacityProgressOptionSet → Prop
+constant CapacityProgressEndorsable :
+  CapacityProgressOptionSet → Prop
+constant CapacityProgressRequiredForNonDomination :
+  CapacityProgressOptionSet → Prop
+constant CapacityNonProgressOutOfScopeWhenProgressAvailable :
+  CapacityProgressOptionSet → Prop
+constant CapacityOmissionMaintainsConstraint :
+  CapacityProgressOptionSet → Prop
+
+-- Loss, divergence, and fragility
+constant CapacityLoss :
+  CapacityValuation → CapacityValuation → Prop
+constant CapacityDivergence :
+  CapacityValuation → CapacityValuation → Prop
+constant CapacityFragility :
+  CapacityValuation → Prop
+
+-- Irreversibility and hysteresis
+constant CapacityIrreversibility :
+  CapacityValuation → Prop
+constant CapacityHysteresis :
+  CapacityValuation → Prop
+
+-- Thresholds and collapse
+constant CapacityThreshold :
+  CapacityValuation → Prop
+constant CapacityCollapse :
+  CapacityValuation → Prop
+
+-- Comparability
+constant CapacityComparable :
+  CapacityValuation → CapacityValuation → Prop
+constant CapacityComparableUnderAgreement :
+  CapacityValuation → CapacityValuation → CapacityAgreement → Prop
+
+-- Response effects
+constant ResponseAffectsCapacityAgreement :
+  Response → CapacityAgreement → Prop
+constant ResponseAffectsCapacityValuation :
+  Response → CapacityValuation → Prop
+
+-- Compliance with prior layers
+constant CapacityValuationAdmissible :
+  CapacityValuation → Prop
+constant CapacityRespectsMonotonicity :
+  CapacityValuation → Prop
+constant CapacityRespectsIndependence :
+  CapacityValuation → Prop
+
+-- Capacity valuation non-implication firewalls
+constant CapacityDoesNotImplyCompetence : Prop
+constant CapacityDoesNotImplyLegitimacy : Prop
+constant CapacityDoesNotImplyAuthority : Prop
+constant CapacityDoesNotImplyIntervention : Prop
+constant CapacityDoesNotImplyMorality : Prop
+constant CapacityProgressBoundaryDoesNotImplySelection : Prop
+
+-- Scope and contract
+constant CapacityValuationScope : Prop
+constant CapacityValuationContract : Prop
+
+/-!
+------------------------------------------------------------------------------
+19. TransformabilityValuation interfaces
+------------------------------------------------------------------------------
+-/
+
+-- Core transformability valuation entities
+constant TransformabilityValuation : Type
+constant TransformabilityState :
+  Agent → State → TransformabilityValuation
+constant TransformabilityLevel :
+  TransformabilityValuation → Val
+
+-- Transformability agreement structures
+constant TransformabilityAgreement : Type
+constant InternalTransformabilityAgreement :
+  TransformabilityAgreement → Prop
+constant ExternalTransformabilityAgreement :
+  TransformabilityAgreement → Prop
+
+-- Agreement stabilization
+constant TransformabilityAgreementStabilizedByEvidence :
+  TransformabilityAgreement → Prop
+
+-- Structural dependencies of transformability valuation
+constant TransformabilityDependsOnOperation :
+  TransformabilityValuation → Operation → Prop
+constant TransformabilityDependsOnMeasure :
+  TransformabilityValuation → Measure → Prop
+constant TransformabilityDependsOnResponse :
+  TransformabilityValuation → Response → Prop
+constant TransformabilityDependsOnContext :
+  TransformabilityValuation → Prop
+constant TransformabilityDependsOnCoupling :
+  TransformabilityValuation → CouplingValuation → Prop
+constant TransformabilityDependsOnCapacityValuation :
+  TransformabilityValuation → CapacityValuation → Prop
+constant TransformabilityDependsOnPerceptionValuation :
+  TransformabilityValuation → PerceptionValuation → Prop
+
+-- Aggregation and composability semantics
+constant TransformabilityAggregation :
+  TransformabilityValuation → TransformabilityValuation → TransformabilityValuation → Prop
+constant TransformabilityComposability :
+  TransformabilityValuation → Prop
+constant TransformabilityDecomposability :
+  TransformabilityValuation → Prop
+
+-- Operation availability and scope
+constant TransformabilityOperationAvailable :
+  Operation → Prop
+constant TransformabilityOperationSet :
+  Operation → Prop
+constant TransformabilityOperationWithinScope :
+  TransformabilityOperationSet → Prop
+
+-- Loss, divergence, and fragility
+constant TransformabilityLoss :
+  TransformabilityValuation → TransformabilityValuation → Prop
+constant TransformabilityDivergence :
+  TransformabilityValuation → TransformabilityValuation → Prop
+constant TransformabilityFragility :
+  TransformabilityValuation → Prop
+
+-- Irreversibility and hysteresis
+constant TransformabilityIrreversibility :
+  TransformabilityValuation → Prop
+constant TransformabilityHysteresis :
+  TransformabilityValuation → Prop
+
+-- Thresholds and collapse
+constant TransformabilityThreshold :
+  TransformabilityValuation → Prop
+constant TransformabilityCollapse :
+  TransformabilityValuation → Prop
+
+-- Comparability
+constant TransformabilityComparable :
+  TransformabilityValuation → TransformabilityValuation → Prop
+constant TransformabilityComparableUnderAgreement :
+  TransformabilityValuation → TransformabilityValuation → TransformabilityAgreement → Prop
+
+-- Response effects
+constant ResponseAffectsTransformabilityAgreement :
+  Response → TransformabilityAgreement → Prop
+constant ResponseAffectsTransformabilityValuation :
+  Response → TransformabilityValuation → Prop
+
+-- Transformability-progress (ratchet) boundary
+constant TransformabilityProgressOption : Type
+constant TransformabilityProgressOptionSet :
+  TransformabilityProgressOption → Prop
+constant TransformabilityProgressAvailable :
+  TransformabilityProgressOptionSet → Prop
+constant TransformabilityProgressWithinScope :
+  TransformabilityProgressOptionSet → Prop
+constant TransformabilityProgressEndorsable :
+  TransformabilityProgressOptionSet → Prop
+constant TransformabilityProgressRequiredForNonDomination :
+  TransformabilityProgressOptionSet → Prop
+constant TransformabilityNonProgressOutOfScopeWhenProgressAvailable :
+  TransformabilityProgressOptionSet → Prop
+constant TransformabilityOmissionMaintainsConstraint :
+  TransformabilityProgressOptionSet → Prop
+
+-- Compliance with prior layers
+constant TransformabilityValuationAdmissible :
+  TransformabilityValuation → Prop
+constant TransformabilityRespectsMonotonicity :
+  TransformabilityValuation → Prop
+constant TransformabilityRespectsIndependence :
+  TransformabilityValuation → Prop
+
+-- Transformability valuation non-implication firewalls
+constant TransformabilityDoesNotImplyCreativity : Prop
+constant TransformabilityDoesNotImplyCompetence : Prop
+constant TransformabilityDoesNotImplyLegitimacy : Prop
+constant TransformabilityDoesNotImplyAuthority : Prop
+constant TransformabilityDoesNotImplyIntervention : Prop
+constant TransformabilityDoesNotImplyMorality : Prop
+constant TransformabilityProgressBoundaryDoesNotImplySelection : Prop
+
+-- Scope and contract
+constant TransformabilityValuationScope : Prop
+constant TransformabilityValuationContract : Prop
+
+
 end SigmaR
