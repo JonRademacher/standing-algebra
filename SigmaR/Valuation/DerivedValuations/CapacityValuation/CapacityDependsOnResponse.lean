@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.ResponseSemantics.Response
-import SigmaR.Valuation.DerivedValuations.CapacityValuation
+import SigmaR.Valuation.DerivedValuations.CapacityValuation.CapacityValuation
 
 /-!
 ###############################################################################
