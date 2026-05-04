@@ -8,13 +8,13 @@ import SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyValuation
 
 This file introduces the notion of an autonomy level.
 
-Autonomy levels are numerical or ordered indicators
-of autonomy valuation, without normative interpretation.
+Autonomy levels represent the degree of effective autonomy
+available to an agent, without normative interpretation.
 
 They do NOT:
-• assert thresholds
-• assert desirability
-• assert legitimacy
+• imply consent
+• justify obligation
+• authorize action
 ###############################################################################
 -/
 
@@ -23,6 +23,7 @@ namespace SigmaR
 /--
 An autonomy level associated with an autonomy valuation.
 -/
-constant AutonomyLevel : AutonomyValuation → Val
+constant AutonomyLevel :
+  AutonomyValuation → Val
 
 end SigmaR
