@@ -25,7 +25,7 @@ namespace SigmaR
 ExitCostValuationAdmissible E means that exit cost valuation E
 is admissible under declared structural constraints.
 -/
-constant ExitCostValuationAdmissible :
+axiom ExitCostValuationAdmissible :
   ExitCostValuation → Prop
 
 end SigmaR

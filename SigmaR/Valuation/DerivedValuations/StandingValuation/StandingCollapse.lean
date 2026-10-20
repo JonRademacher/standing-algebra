@@ -25,7 +25,7 @@ namespace SigmaR
 StandingCollapse S means that standing valuation S
 has structurally collapsed.
 -/
-constant StandingCollapse :
+axiom StandingCollapse :
   StandingValuation → Prop
 
 end SigmaR

@@ -1,3 +1,5 @@
+import Collapse_Demonstrations.Collapse
+
 /-
   Collapse_Demonstrations.Collapse_NoStanding
 
@@ -12,7 +14,6 @@
 namespace Collapse_Demonstrations
 
 -- Reuse the collapse definition
-import Collapse_Demonstrations.Collapse
 
 /--
   Baseline axiom set WITHOUT Standing Algebra.

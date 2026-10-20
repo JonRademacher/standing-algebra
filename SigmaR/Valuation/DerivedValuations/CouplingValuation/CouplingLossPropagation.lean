@@ -24,7 +24,7 @@ namespace SigmaR
 CouplingLossPropagation C₁ C₂ means that loss in coupling
 valuation C₁ propagates structurally to coupling valuation C₂.
 -/
-constant CouplingLossPropagation :
+axiom CouplingLossPropagation :
   CouplingValuation → CouplingValuation → Prop
 
 end SigmaR

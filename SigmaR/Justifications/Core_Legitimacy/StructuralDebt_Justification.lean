@@ -23,10 +23,10 @@ of structural debt dissipation.
 -/
 namespace SigmaR
 /-- Predicate: the operation incurs structural debt at state `s`. -/
-constant StructuralDebt : Operation → State → Prop
+axiom StructuralDebt : Operation → State → Prop
 /-- Predicate: structural debt incurred by `F` at `s`
    is dissipated via directed repair. -/
-constant DebtDissipated : Operation → State → Prop
+axiom DebtDissipated : Operation → State → Prop
 /--
 Tier‑2 legitimacy axiom:
 If an operation is Legitimate and incurs structural debt,

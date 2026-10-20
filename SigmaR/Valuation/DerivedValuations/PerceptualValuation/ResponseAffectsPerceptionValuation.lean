@@ -26,7 +26,7 @@ namespace SigmaR
 ResponseAffectsPerceptionValuation R P means that response R
 has a structural effect on perception valuation P.
 -/
-constant ResponseAffectsPerceptionValuation :
+axiom ResponseAffectsPerceptionValuation :
   Response → PerceptionValuation → Prop
 
 end SigmaR

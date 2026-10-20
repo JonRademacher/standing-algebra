@@ -17,6 +17,6 @@ namespace SigmaR
 Prime i indicates that agent i is treated as irreducible
 under some theory or model.
 -/
-constant Prime : Agent → Prop
+axiom Prime : Agent → Prop
 
 end SigmaR

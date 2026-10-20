@@ -24,7 +24,7 @@ namespace SigmaR
 RiskExposure R means that risk valuation R
 includes structural exposure.
 -/
-constant RiskExposure :
+axiom RiskExposure :
   RiskValuation → Prop
 
 end SigmaR

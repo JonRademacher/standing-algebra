@@ -24,6 +24,6 @@ namespace SigmaR
 Admissibility is always relative to an explicit context
 and must not be assumed globally.
 -/
-constant AdmissibleContextBinding : Prop
+axiom AdmissibleContextBinding : Prop
 
 end SigmaR

@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 ExitViable a means agent a retains meaningful exit options.
 -/
-constant ExitViable : Agent → Prop
+axiom ExitViable : Agent → Prop
 
 end SigmaR

@@ -21,7 +21,7 @@ CapacityProgressRequiredForNonDomination S means that
 when S exists and is within scope, non-progress alternatives
 fall outside the non-dominating option space.
 -/
-constant CapacityProgressRequiredForNonDomination :
+axiom CapacityProgressRequiredForNonDomination :
   CapacityProgressOptionSet → Prop
 
 end SigmaR

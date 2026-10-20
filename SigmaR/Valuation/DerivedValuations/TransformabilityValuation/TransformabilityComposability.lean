@@ -26,7 +26,7 @@ namespace SigmaR
 TransformabilityComposability T means that transformability
 valuation T admits compositional transformation.
 -/
-constant TransformabilityComposability :
+axiom TransformabilityComposability :
   TransformabilityValuation → Prop
 
 end SigmaR

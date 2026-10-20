@@ -25,7 +25,7 @@ TransformabilityRespectsMonotonicity T means that
 transformability valuation T does not violate declared
 monotonicity constraints.
 -/
-constant TransformabilityRespectsMonotonicity :
+axiom TransformabilityRespectsMonotonicity :
   TransformabilityValuation → Prop
 
 end SigmaR

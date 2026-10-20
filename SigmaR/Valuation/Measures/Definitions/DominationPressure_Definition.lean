@@ -21,6 +21,6 @@ DominationPressure a is the successor-native measure
 of accumulated domination pressure affecting agent a
 (or designated system carriers in Σᴿ⁺).
 -/
-constant DominationPressure : Agent → Nat
+axiom DominationPressure : Agent → Nat
 
 end SigmaR

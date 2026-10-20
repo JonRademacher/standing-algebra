@@ -27,7 +27,7 @@ namespace SigmaR
 PerceptionValuationAdmissible P means that perception valuation P
 is admissible under declared structural constraints.
 -/
-constant PerceptionValuationAdmissible :
+axiom PerceptionValuationAdmissible :
   PerceptionValuation → Prop
 
 end SigmaR

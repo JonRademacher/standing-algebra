@@ -20,13 +20,13 @@ namespace SigmaR
 /--
 Standing valuation for an agent in a state.
 -/
-constant StandingValue : Agent → State → Nat
+axiom StandingValue : Agent → State → Nat
 
 /--
 Predicate: two agents' standing values are fungible.
 (This predicate will be shown impossible.)
 -/
-constant FungibleStanding : Agent → Agent → State → Prop
+axiom FungibleStanding : Agent → Agent → State → Prop
 
 /--
 Non-fungibility axiom:

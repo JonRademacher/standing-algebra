@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Exit cost valuation does not imply morality.
 -/
-constant ExitCostDoesNotImplyMorality : Prop
+axiom ExitCostDoesNotImplyMorality : Prop
 
 end SigmaR

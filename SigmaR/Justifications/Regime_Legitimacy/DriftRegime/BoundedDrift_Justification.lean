@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegime_Justification
 
 /-!
 ###############################################################################
@@ -28,7 +28,7 @@ namespace SigmaR
 /--
 Predicate: operation `D` is a bounded drift operation.
 -/
-constant BoundedDrift : Operation → Prop
+axiom BoundedDrift : Operation → Prop
 
 /--
 Tier-2 legitimacy axiom (Bounded Drift):

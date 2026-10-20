@@ -19,6 +19,6 @@ namespace SigmaR
 Admissibility of reasoning respects declared monotonicity
 constraints and contracts.
 -/
-constant AdmissibleUnderMonotonicity : Prop
+axiom AdmissibleUnderMonotonicity : Prop
 
 end SigmaR

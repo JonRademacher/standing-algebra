@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Standing valuation does not imply legitimacy.
 -/
-constant StandingValuationDoesNotImplyLegitimacy : Prop
+axiom StandingValuationDoesNotImplyLegitimacy : Prop
 
 end SigmaR

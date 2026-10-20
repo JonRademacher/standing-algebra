@@ -25,7 +25,7 @@ namespace SigmaR
 ExitCostAggregation E₁ E₂ E₃ means that exit cost valuation E₃
 is an aggregation of exit cost valuations E₁ and E₂.
 -/
-constant ExitCostAggregation :
+axiom ExitCostAggregation :
   ExitCostValuation → ExitCostValuation → ExitCostValuation → Prop
 
 end SigmaR

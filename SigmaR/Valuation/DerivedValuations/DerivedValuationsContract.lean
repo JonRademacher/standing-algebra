@@ -27,6 +27,6 @@ namespace SigmaR
 The Derived Valuations layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant DerivedValuationsContract : Prop
+axiom DerivedValuationsContract : Prop
 
 end SigmaR

@@ -24,7 +24,7 @@ namespace SigmaR
 ExternalAutonomyAgreement A means that autonomy agreement A
 is externalized across multiple agents.
 -/
-constant ExternalAutonomyAgreement :
+axiom ExternalAutonomyAgreement :
   AutonomyAgreement → Prop
 
 end SigmaR

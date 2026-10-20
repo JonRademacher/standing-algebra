@@ -25,7 +25,7 @@ namespace SigmaR
 CouplingAggregation C₁ C₂ C₃ means that coupling valuation C₃
 is an aggregation of coupling valuations C₁ and C₂.
 -/
-constant CouplingAggregation :
+axiom CouplingAggregation :
   CouplingValuation → CouplingValuation → CouplingValuation → Prop
 
 end SigmaR

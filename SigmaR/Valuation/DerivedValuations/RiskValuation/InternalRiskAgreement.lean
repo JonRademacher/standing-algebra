@@ -22,7 +22,7 @@ namespace SigmaR
 InternalRiskAgreement A means that risk agreement A
 is internalized within a single agent.
 -/
-constant InternalRiskAgreement :
+axiom InternalRiskAgreement :
   RiskAgreement → Prop
 
 end SigmaR

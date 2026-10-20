@@ -27,6 +27,6 @@ namespace SigmaR
 Monotonicity relations are treated as respecting
 Independence inference boundaries.
 -/
-constant MonotonicityRespectsIndependence : Prop
+axiom MonotonicityRespectsIndependence : Prop
 
 end SigmaR

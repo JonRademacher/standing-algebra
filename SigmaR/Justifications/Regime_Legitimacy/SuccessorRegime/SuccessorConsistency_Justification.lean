@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegime_Justification
 
 /-!
 ###############################################################################
@@ -32,7 +32,7 @@ namespace SigmaR
 Predicate: operation `F` is successor-consistent
 with respect to standing.
 -/
-constant SuccessorConsistent : Operation → Prop
+axiom SuccessorConsistent : Operation → Prop
 
 /--
 Tier-2 legitimacy axiom (Successor Consistency):

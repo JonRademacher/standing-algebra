@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Coupling valuation does not imply authority.
 -/
-constant CouplingDoesNotImplyAuthority : Prop
+axiom CouplingDoesNotImplyAuthority : Prop
 
 end SigmaR

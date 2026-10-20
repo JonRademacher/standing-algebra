@@ -23,7 +23,7 @@ namespace SigmaR
 /--
 A capacity level associated with a capacity valuation.
 -/
-constant CapacityLevel :
+axiom CapacityLevel :
   CapacityValuation → Val
 
 end SigmaR

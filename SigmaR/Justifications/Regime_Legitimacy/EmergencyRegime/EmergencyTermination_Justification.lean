@@ -58,7 +58,7 @@ proxy optimization channel.
 namespace SigmaR
 
 /-- Predicate: the operation terminates emergency conditions at state `s`. -/
-constant EmergencyTerminated : Operation → State → Prop
+axiom EmergencyTerminated : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Emergency Termination:

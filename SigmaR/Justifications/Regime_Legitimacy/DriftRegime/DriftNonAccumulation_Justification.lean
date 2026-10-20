@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegime_Justification
 
 /-!
 ###############################################################################
@@ -28,7 +28,7 @@ namespace SigmaR
 Predicate: drift operation `D` is non-accumulative
 under repeated application.
 -/
-constant NonAccumulatingDrift : Operation → Prop
+axiom NonAccumulatingDrift : Operation → Prop
 
 /--
 Tier-2 legitimacy axiom (Drift Non-Accumulation):

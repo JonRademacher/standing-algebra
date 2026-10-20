@@ -25,7 +25,7 @@ namespace SigmaR
 CapacityDependsOnContext C means that capacity valuation C
 is explicitly context-dependent.
 -/
-constant CapacityDependsOnContext :
+axiom CapacityDependsOnContext :
   CapacityValuation → Prop
 
 end SigmaR

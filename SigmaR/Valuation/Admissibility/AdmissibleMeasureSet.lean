@@ -24,6 +24,6 @@ namespace SigmaR
 A set of valuation measures is admissible for joint use
 in reasoning.
 -/
-constant AdmissibleMeasureSet : Set Measure → Prop
+axiom AdmissibleMeasureSet : Set Measure → Prop
 
 end SigmaR

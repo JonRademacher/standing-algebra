@@ -24,7 +24,7 @@ namespace SigmaR
 AutonomyDependsOnMeasure A M means that autonomy valuation A
 structurally depends on valuation measure M.
 -/
-constant AutonomyDependsOnMeasure :
+axiom AutonomyDependsOnMeasure :
   AutonomyValuation → Measure → Prop
 
 end SigmaR

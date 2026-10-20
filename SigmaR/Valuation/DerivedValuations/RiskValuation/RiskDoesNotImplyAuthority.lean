@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Risk valuation does not imply authority.
 -/
-constant RiskDoesNotImplyAuthority : Prop
+axiom RiskDoesNotImplyAuthority : Prop
 
 end SigmaR

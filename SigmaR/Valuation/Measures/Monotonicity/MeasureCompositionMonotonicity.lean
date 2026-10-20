@@ -21,7 +21,7 @@ namespace SigmaR
 A valuation measure is treated as admitting monotone
 post-composition without violating its structural monotonicity.
 -/
-constant MonotoneCompositionAdmissible :
+axiom MonotoneCompositionAdmissible :
   Measure → Prop
 
 end SigmaR

@@ -25,6 +25,6 @@ namespace SigmaR
 /--
 An abstract derived valuation.
 -/
-constant DerivedValuation : Type
+axiom DerivedValuation : Type
 
 end SigmaR

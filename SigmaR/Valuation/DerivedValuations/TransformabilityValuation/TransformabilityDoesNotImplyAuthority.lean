@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Transformability valuation does not imply authority.
 -/
-constant TransformabilityDoesNotImplyAuthority : Prop
+axiom TransformabilityDoesNotImplyAuthority : Prop
 
 end SigmaR

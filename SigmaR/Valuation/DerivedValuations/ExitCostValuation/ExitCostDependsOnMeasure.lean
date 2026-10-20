@@ -24,7 +24,7 @@ namespace SigmaR
 ExitCostDependsOnMeasure E M means that exit cost valuation E
 structurally depends on valuation measure M.
 -/
-constant ExitCostDependsOnMeasure :
+axiom ExitCostDependsOnMeasure :
   ExitCostValuation → Measure → Prop
 
 end SigmaR

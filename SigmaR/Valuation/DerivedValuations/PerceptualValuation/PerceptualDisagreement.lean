@@ -24,7 +24,7 @@ namespace SigmaR
 PerceptualDisagreement A₁ A₂ means that perceptual agreements
 A₁ and A₂ are not aligned.
 -/
-constant PerceptualDisagreement :
+axiom PerceptualDisagreement :
   PerceptualAgreement → PerceptualAgreement → Prop
 
 end SigmaR

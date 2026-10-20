@@ -18,6 +18,6 @@ namespace SigmaR
 Admissibility of reasoning does not imply authority
 to act, decide, or intervene.
 -/
-constant AdmissibilityDoesNotImplyAuthority : Prop
+axiom AdmissibilityDoesNotImplyAuthority : Prop
 
 end SigmaR

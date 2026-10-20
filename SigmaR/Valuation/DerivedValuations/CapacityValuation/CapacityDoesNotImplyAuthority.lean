@@ -18,6 +18,6 @@ namespace SigmaR
 /--
 Capacity valuation does not imply authority.
 -/
-constant CapacityDoesNotImplyAuthority : Prop
+axiom CapacityDoesNotImplyAuthority : Prop
 
 end SigmaR

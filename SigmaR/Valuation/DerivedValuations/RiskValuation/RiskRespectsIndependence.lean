@@ -22,7 +22,7 @@ namespace SigmaR
 RiskRespectsIndependence R means that risk valuation R
 does not violate Independence constraints.
 -/
-constant RiskRespectsIndependence :
+axiom RiskRespectsIndependence :
   RiskValuation → Prop
 
 end SigmaR

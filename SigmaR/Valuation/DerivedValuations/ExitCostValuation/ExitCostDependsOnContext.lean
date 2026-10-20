@@ -24,7 +24,7 @@ namespace SigmaR
 ExitCostDependsOnContext E means that exit cost valuation E
 is explicitly context-dependent.
 -/
-constant ExitCostDependsOnContext :
+axiom ExitCostDependsOnContext :
   ExitCostValuation → Prop
 
 end SigmaR

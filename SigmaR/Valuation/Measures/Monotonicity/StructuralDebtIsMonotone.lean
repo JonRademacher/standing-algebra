@@ -22,6 +22,6 @@ namespace SigmaR
 Structural debt is treated as monotone
 along the state preorder.
 -/
-constant StructuralDebtMonotone : Prop
+axiom StructuralDebtMonotone : Prop
 
 end SigmaR

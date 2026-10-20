@@ -17,6 +17,6 @@ Dependency degree of an agent in a given state.
 
 Represents inbound structural reliance, not influence or power.
 -/
-constant DependencyDegree : Agent → State → Nat
+axiom DependencyDegree : Agent → State → Nat
 
 end SigmaR

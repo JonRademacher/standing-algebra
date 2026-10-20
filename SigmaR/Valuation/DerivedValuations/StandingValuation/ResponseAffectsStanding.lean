@@ -25,7 +25,7 @@ namespace SigmaR
 ResponseAffectsStanding R S means that response R
 has a structural effect on standing valuation S.
 -/
-constant ResponseAffectsStanding :
+axiom ResponseAffectsStanding :
   Response → StandingValuation → Prop
 
 end SigmaR

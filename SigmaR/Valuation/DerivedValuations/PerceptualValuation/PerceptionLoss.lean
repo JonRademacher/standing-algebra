@@ -25,7 +25,7 @@ namespace SigmaR
 PerceptionLoss P₁ P₂ means that perception valuation P₂
 represents a loss relative to perception valuation P₁.
 -/
-constant PerceptionLoss :
+axiom PerceptionLoss :
   PerceptionValuation → PerceptionValuation → Prop
 
 end SigmaR

@@ -26,7 +26,7 @@ namespace SigmaR
 PerceptionCollapse P means that perception valuation P
 has structurally collapsed.
 -/
-constant PerceptionCollapse :
+axiom PerceptionCollapse :
   PerceptionValuation → Prop
 
 end SigmaR

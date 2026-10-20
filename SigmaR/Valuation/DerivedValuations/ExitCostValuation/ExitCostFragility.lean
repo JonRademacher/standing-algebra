@@ -20,7 +20,7 @@ namespace SigmaR
 ExitCostFragility E means that exit cost valuation E
 is structurally sensitive to certain changes.
 -/
-constant ExitCostFragility :
+axiom ExitCostFragility :
   ExitCostValuation → Prop
 
 end SigmaR

@@ -19,6 +19,6 @@ namespace SigmaR
 Response semantics do not imply authority to enact,
 enforce, or prioritize a response.
 -/
-constant ResponseDoesNotImplyAuthority : Prop
+axiom ResponseDoesNotImplyAuthority : Prop
 
 end SigmaR

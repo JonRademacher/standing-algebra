@@ -23,6 +23,6 @@ namespace SigmaR
 RoleState a s holds if agent a occupies
 a role or permissioned position in state s.
 -/
-constant RoleState : Agent → State → Prop
+axiom RoleState : Agent → State → Prop
 
 end SigmaR

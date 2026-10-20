@@ -23,7 +23,7 @@ namespace SigmaR
 /--
 An autonomy level associated with an autonomy valuation.
 -/
-constant AutonomyLevel :
+axiom AutonomyLevel :
   AutonomyValuation → Val
 
 end SigmaR

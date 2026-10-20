@@ -26,7 +26,7 @@ namespace SigmaR
 ResponseAffectsPerceptualAgreement R A means that response R
 has a structural effect on perceptual agreement A.
 -/
-constant ResponseAffectsPerceptualAgreement :
+axiom ResponseAffectsPerceptualAgreement :
   Response → PerceptualAgreement → Prop
 
 end SigmaR

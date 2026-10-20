@@ -18,7 +18,7 @@ namespace SigmaR
 /--
 A structural precondition under which a response may apply.
 -/
-constant ResponsePrecondition :
+axiom ResponsePrecondition :
   Response → State → Prop
 
 end SigmaR

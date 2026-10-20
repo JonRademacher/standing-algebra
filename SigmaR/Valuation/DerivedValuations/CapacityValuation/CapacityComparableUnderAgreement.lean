@@ -27,7 +27,7 @@ CapacityComparableUnderAgreement C₁ C₂ A means that
 capacity valuations C₁ and C₂ are structurally comparable
 under capacity agreement A.
 -/
-constant CapacityComparableUnderAgreement :
+axiom CapacityComparableUnderAgreement :
   CapacityValuation → CapacityValuation → CapacityAgreement → Prop
 
 end SigmaR

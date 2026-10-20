@@ -26,6 +26,6 @@ namespace SigmaR
 The Coupling Valuation layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant CouplingValuationContract : Prop
+axiom CouplingValuationContract : Prop
 
 end SigmaR

@@ -24,7 +24,7 @@ namespace SigmaR
 RiskTransfer R₁ R₂ means that risk valuation R₁
 is structurally transferred to R₂.
 -/
-constant RiskTransfer :
+axiom RiskTransfer :
   RiskValuation → RiskValuation → Prop
 
 end SigmaR

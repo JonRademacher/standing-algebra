@@ -61,7 +61,7 @@ namespace SigmaR
 /-- Predicate: the autonomy‑limiting action
     at state `s` is voluntary and
     capacity‑indexed. -/
-constant VoluntaryAutonomyLimitation : State → Prop
+axiom VoluntaryAutonomyLimitation : State → Prop
 
 /--
 Core legitimacy axiom:

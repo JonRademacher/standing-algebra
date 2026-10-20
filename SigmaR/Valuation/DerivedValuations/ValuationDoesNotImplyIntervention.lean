@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Derived valuation does not imply intervention.
 -/
-constant ValuationDoesNotImplyIntervention : Prop
+axiom ValuationDoesNotImplyIntervention : Prop
 
 end SigmaR

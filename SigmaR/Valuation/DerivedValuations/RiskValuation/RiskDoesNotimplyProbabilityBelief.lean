@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Risk valuation does not imply probability belief.
 -/
-constant RiskDoesNotImplyProbabilityBelief : Prop
+axiom RiskDoesNotImplyProbabilityBelief : Prop
 
 end SigmaR

@@ -39,7 +39,7 @@ This captures that coercive intervention remains:
   • terminable,
   • or repairable.
 -/
-constant OffRampsAndCorrection : Operation → State → Prop
+axiom OffRampsAndCorrection : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom:

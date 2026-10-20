@@ -27,7 +27,7 @@ namespace SigmaR
 CapacityDependsOnPerceptionValuation C P means that capacity
 valuation C is structurally dependent on perception valuation P.
 -/
-constant CapacityDependsOnPerceptionValuation :
+axiom CapacityDependsOnPerceptionValuation :
   CapacityValuation → PerceptionValuation → Prop
 
 end SigmaR

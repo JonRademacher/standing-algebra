@@ -8,10 +8,10 @@ Semantic behavior predicates.
 These capture what an operation *does*,
 not how it is labeled.
 -/
-constant BehavesAsNegotiation      : Operation → Prop
-constant BehavesAsCooperation      : Operation → Prop
-constant BehavesAsCompromise       : Operation → Prop
-constant BehavesAsTragicAcceptance : Operation → Prop
+axiom BehavesAsNegotiation      : Operation → Prop
+axiom BehavesAsCooperation      : Operation → Prop
+axiom BehavesAsCompromise       : Operation → Prop
+axiom BehavesAsTragicAcceptance : Operation → Prop
 
 /--
 Resolution soundness:

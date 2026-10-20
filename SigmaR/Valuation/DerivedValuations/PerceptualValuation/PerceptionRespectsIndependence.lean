@@ -22,7 +22,7 @@ namespace SigmaR
 PerceptionRespectsIndependence P means that perception valuation P
 does not violate Independence constraints.
 -/
-constant PerceptionRespectsIndependence :
+axiom PerceptionRespectsIndependence :
   PerceptionValuation → Prop
 
 end SigmaR

@@ -24,7 +24,7 @@ namespace SigmaR
 StandingRespectsMonotonicity S means that standing valuation S
 does not violate declared monotonicity constraints.
 -/
-constant StandingRespectsMonotonicity :
+axiom StandingRespectsMonotonicity :
   StandingValuation → Prop
 
 end SigmaR

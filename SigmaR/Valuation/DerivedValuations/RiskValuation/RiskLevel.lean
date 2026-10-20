@@ -23,7 +23,7 @@ namespace SigmaR
 /--
 A risk level associated with a risk valuation.
 -/
-constant RiskLevel :
+axiom RiskLevel :
   RiskValuation → Val
 
 end SigmaR

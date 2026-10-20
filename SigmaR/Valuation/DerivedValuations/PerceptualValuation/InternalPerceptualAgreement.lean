@@ -22,7 +22,7 @@ namespace SigmaR
 InternalPerceptualAgreement A means that perceptual agreement A
 is internalized within a single agent.
 -/
-constant InternalPerceptualAgreement :
+axiom InternalPerceptualAgreement :
   PerceptualAgreement → Prop
 
 end SigmaR

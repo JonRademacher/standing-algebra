@@ -24,7 +24,7 @@ namespace SigmaR
 CouplingAmplification C₁ C₂ means that coupling valuation C₁
 amplifies the effect of coupling valuation C₂.
 -/
-constant CouplingAmplification :
+axiom CouplingAmplification :
   CouplingValuation → CouplingValuation → Prop
 
 end SigmaR

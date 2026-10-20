@@ -22,7 +22,7 @@ namespace SigmaR
 ResponseComposable R₁ R₂ means that responses R₁ and R₂
 may be structurally composed.
 -/
-constant ResponseComposable :
+axiom ResponseComposable :
   Response → Response → Prop
 
 end SigmaR

@@ -29,6 +29,6 @@ actions available to agent a in state s.
 
 Higher values indicate wider remaining agency.
 -/
-constant AgencyScope : Agent → State → Nat
+axiom AgencyScope : Agent → State → Nat
 
 end SigmaR

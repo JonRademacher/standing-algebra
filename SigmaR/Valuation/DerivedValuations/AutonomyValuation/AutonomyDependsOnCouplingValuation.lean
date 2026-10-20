@@ -26,7 +26,7 @@ namespace SigmaR
 AutonomyDependsOnCouplingValuation A C means that autonomy
 valuation A is structurally dependent on coupling valuation C.
 -/
-constant AutonomyDependsOnCouplingValuation :
+axiom AutonomyDependsOnCouplingValuation :
   AutonomyValuation → CouplingValuation → Prop
 
 end SigmaR

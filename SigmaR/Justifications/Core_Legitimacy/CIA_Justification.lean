@@ -23,11 +23,11 @@ namespace SigmaR
 /-- Predicate: the agent has sufficient capacity to exercise autonomy.
     Capacity may be cognitive, physical, situational, or social; its internal
     structure is left open for later refinement. -/
-constant Capacity : Agent → Prop
+axiom Capacity : Agent → Prop
 
 /-- Predicate: the agent’s autonomy is indexed by sufficient capacity (CIA).
     CIA status reflects that autonomy is not merely possessed but enactable. -/
-constant CIA_Autonomous : Agent → Prop
+axiom CIA_Autonomous : Agent → Prop
 
 /--
 Tier‑2 legitimacy axiom for CIA:

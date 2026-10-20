@@ -22,6 +22,6 @@ namespace SigmaR
 Temporal accumulation is treated as monotone
 along the state preorder.
 -/
-constant TemporalAccumulationMonotone : Prop
+axiom TemporalAccumulationMonotone : Prop
 
 end SigmaR

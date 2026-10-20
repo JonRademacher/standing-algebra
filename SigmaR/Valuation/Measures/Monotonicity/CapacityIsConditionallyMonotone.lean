@@ -22,7 +22,7 @@ namespace SigmaR
 Capacity is treated as conditionally monotone decreasing
 with respect to structural debt.
 -/
-constant CapacityConditionallyMonotoneUnderDebt :
+axiom CapacityConditionallyMonotoneUnderDebt :
   Agent → Prop
 
 end SigmaR

@@ -19,7 +19,7 @@ namespace SigmaR
 AutonomyProgressAvailable S means that a set of
 autonomy-progress options S exists.
 -/
-constant AutonomyProgressAvailable :
+axiom AutonomyProgressAvailable :
   AutonomyProgressOptionSet → Prop
 
 end SigmaR

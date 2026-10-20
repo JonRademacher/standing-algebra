@@ -25,6 +25,6 @@ namespace SigmaR
 The Admissibility layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant AdmissibilityContract : Prop
+axiom AdmissibilityContract : Prop
 
 end SigmaR

@@ -25,7 +25,7 @@ namespace SigmaR
 ExitCostDependsOnResponse E R means that exit cost valuation E
 is structurally sensitive to response R.
 -/
-constant ExitCostDependsOnResponse :
+axiom ExitCostDependsOnResponse :
   ExitCostValuation → Response → Prop
 
 end SigmaR

@@ -19,6 +19,6 @@ namespace SigmaR
 Admissibility of a configuration or reasoning pattern
 does not imply permission or obligation to intervene.
 -/
-constant AdmissibilityDoesNotImplyIntervention : Prop
+axiom AdmissibilityDoesNotImplyIntervention : Prop
 
 end SigmaR

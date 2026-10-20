@@ -25,7 +25,7 @@ namespace SigmaR
 AutonomyAgreementStabilizedByEvidence A means that autonomy
 agreement A is stabilized through non-parochial evidence.
 -/
-constant AutonomyAgreementStabilizedByEvidence :
+axiom AutonomyAgreementStabilizedByEvidence :
   AutonomyAgreement → Prop
 
 end SigmaR

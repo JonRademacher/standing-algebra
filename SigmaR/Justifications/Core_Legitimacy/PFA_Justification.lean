@@ -39,11 +39,11 @@ namespace SigmaR
 
 /-- Predicate: the relevant perceptual frames have converged
     under shared conditions at state `s`. -/
-constant PFA : State → Prop
+axiom PFA : State → Prop
 
 /-- Predicate: the evidence available at state `s` is non-parochial,
     i.e. not controlled solely by the claimant. -/
-constant NonParochialEvidence : State → Prop
+axiom NonParochialEvidence : State → Prop
 
 /--
 Core evidential axiom:

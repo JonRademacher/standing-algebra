@@ -17,6 +17,6 @@ Predicate indicating exit collapse for an agent in a given state.
 
 True means no admissible continuation preserves exit viability.
 -/
-constant ExitCollapse : Agent → State → Prop
+axiom ExitCollapse : Agent → State → Prop
 
 end SigmaR

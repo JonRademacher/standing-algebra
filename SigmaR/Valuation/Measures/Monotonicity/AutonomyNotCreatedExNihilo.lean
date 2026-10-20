@@ -21,7 +21,7 @@ namespace SigmaR
 Autonomy is treated as requiring enabling structure
 to increase along the state preorder.
 -/
-constant AutonomyRequiresEnablingStructure :
+axiom AutonomyRequiresEnablingStructure :
   Agent → Prop
 
 end SigmaR

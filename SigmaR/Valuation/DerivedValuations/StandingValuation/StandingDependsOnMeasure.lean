@@ -22,7 +22,7 @@ namespace SigmaR
 StandingDependsOnMeasure S M means that standing valuation S
 structurally depends on valuation measure M.
 -/
-constant StandingDependsOnMeasure :
+axiom StandingDependsOnMeasure :
   StandingValuation → Measure → Prop
 
 end SigmaR

@@ -21,7 +21,7 @@ TransformabilityProgressRequiredForNonDomination S means that
 when S exists and is within scope, non-progress alternatives
 fall outside the non-dominating option space.
 -/
-constant TransformabilityProgressRequiredForNonDomination :
+axiom TransformabilityProgressRequiredForNonDomination :
   TransformabilityProgressOptionSet → Prop
 
 end SigmaR

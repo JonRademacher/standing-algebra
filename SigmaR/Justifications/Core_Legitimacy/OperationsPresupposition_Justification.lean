@@ -35,7 +35,7 @@ This includes (at minimum):
   • degree well-definedness
   • typing correctness
 -/
-constant CoreSemanticPresupposition : Operation → Prop
+axiom CoreSemanticPresupposition : Operation → Prop
 
 /--
 Operations presupposition axiom:

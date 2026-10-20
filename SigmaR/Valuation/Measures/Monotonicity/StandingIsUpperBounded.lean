@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Standing is treated as upper bounded.
 -/
-constant StandingUpperBounded : Prop
+axiom StandingUpperBounded : Prop
 
 end SigmaR

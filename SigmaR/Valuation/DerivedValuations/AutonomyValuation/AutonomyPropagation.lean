@@ -24,7 +24,7 @@ namespace SigmaR
 AutonomyPropagation A₁ A₂ means that autonomy valuation A₁
 propagates structurally to autonomy valuation A₂.
 -/
-constant AutonomyPropagation :
+axiom AutonomyPropagation :
   AutonomyValuation → AutonomyValuation → Prop
 
 end SigmaR

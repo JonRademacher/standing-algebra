@@ -25,7 +25,7 @@ namespace SigmaR
 ResponseDampensMeasure R M means that response R
 decreases valuation measure M.
 -/
-constant ResponseDampensMeasure :
+axiom ResponseDampensMeasure :
   Response → Measure → Prop
 
 end SigmaR

@@ -24,7 +24,7 @@ namespace SigmaR
 PerceptionFragility P means that perception valuation P
 is structurally sensitive to certain changes.
 -/
-constant PerceptionFragility :
+axiom PerceptionFragility :
   PerceptionValuation → Prop
 
 end SigmaR

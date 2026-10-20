@@ -25,7 +25,7 @@ namespace SigmaR
 StandingValuationAdmissible S means that standing valuation S
 is admissible under declared structural constraints.
 -/
-constant StandingValuationAdmissible :
+axiom StandingValuationAdmissible :
   StandingValuation → Prop
 
 end SigmaR

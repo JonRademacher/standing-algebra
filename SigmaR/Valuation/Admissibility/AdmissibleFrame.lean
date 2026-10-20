@@ -24,6 +24,6 @@ namespace SigmaR
 A valuation frame is admissible for use in reasoning
 under explicitly declared constraints.
 -/
-constant AdmissibleFrame : Frame → Prop
+axiom AdmissibleFrame : Frame → Prop
 
 end SigmaR

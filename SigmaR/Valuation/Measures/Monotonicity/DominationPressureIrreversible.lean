@@ -22,6 +22,6 @@ namespace SigmaR
 Domination pressure is treated as irreversible
 along the state preorder.
 -/
-constant DominationPressureIrreversible : Prop
+axiom DominationPressureIrreversible : Prop
 
 end SigmaR

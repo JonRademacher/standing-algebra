@@ -24,7 +24,7 @@ namespace SigmaR
 AutonomyIrreversibility A means that autonomy valuation A
 is structurally irreversible once lost.
 -/
-constant AutonomyIrreversibility :
+axiom AutonomyIrreversibility :
   AutonomyValuation → Prop
 
 end SigmaR

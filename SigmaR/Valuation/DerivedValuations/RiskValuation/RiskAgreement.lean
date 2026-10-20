@@ -23,6 +23,6 @@ namespace SigmaR
 /--
 An abstract structure representing risk agreement.
 -/
-constant RiskAgreement : Type
+axiom RiskAgreement : Type
 
 end SigmaR

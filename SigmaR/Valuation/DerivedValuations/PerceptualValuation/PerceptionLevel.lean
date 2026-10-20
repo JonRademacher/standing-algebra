@@ -23,7 +23,7 @@ namespace SigmaR
 /--
 A perception level associated with a perception valuation.
 -/
-constant PerceptionLevel :
+axiom PerceptionLevel :
   PerceptionValuation → Val
 
 end SigmaR

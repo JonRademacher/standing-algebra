@@ -24,7 +24,7 @@ namespace SigmaR
 RiskDependsOnMeasure R M means that risk valuation R
 structurally depends on valuation measure M.
 -/
-constant RiskDependsOnMeasure :
+axiom RiskDependsOnMeasure :
   RiskValuation → Measure → Prop
 
 end SigmaR

@@ -27,7 +27,7 @@ AutonomyComparableUnderAgreement A₁ A₂ G means that
 autonomy valuations A₁ and A₂ are structurally comparable
 under autonomy agreement G.
 -/
-constant AutonomyComparableUnderAgreement :
+axiom AutonomyComparableUnderAgreement :
   AutonomyValuation → AutonomyValuation → AutonomyAgreement → Prop
 
 end SigmaR

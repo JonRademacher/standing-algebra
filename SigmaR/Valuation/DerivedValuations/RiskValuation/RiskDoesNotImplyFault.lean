@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Risk valuation does not imply fault.
 -/
-constant RiskDoesNotImplyFault : Prop
+axiom RiskDoesNotImplyFault : Prop
 
 end SigmaR

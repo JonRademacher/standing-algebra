@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Risk valuation does not imply legitimacy.
 -/
-constant RiskDoesNotImplyLegitimacy : Prop
+axiom RiskDoesNotImplyLegitimacy : Prop
 
 end SigmaR

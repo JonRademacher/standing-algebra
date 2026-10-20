@@ -24,7 +24,7 @@ namespace SigmaR
 CapacityIrreversibility C means that capacity valuation C
 is structurally irreversible once degraded.
 -/
-constant CapacityIrreversibility :
+axiom CapacityIrreversibility :
   CapacityValuation → Prop
 
 end SigmaR

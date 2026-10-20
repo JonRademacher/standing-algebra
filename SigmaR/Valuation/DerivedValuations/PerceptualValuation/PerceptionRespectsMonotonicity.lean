@@ -24,7 +24,7 @@ namespace SigmaR
 PerceptionRespectsMonotonicity P means that perception valuation P
 does not violate declared monotonicity constraints.
 -/
-constant PerceptionRespectsMonotonicity :
+axiom PerceptionRespectsMonotonicity :
   PerceptionValuation → Prop
 
 end SigmaR

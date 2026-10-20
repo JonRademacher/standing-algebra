@@ -24,7 +24,7 @@ namespace SigmaR
 AutonomyErosion A means that autonomy valuation A
 is undergoing structural erosion.
 -/
-constant AutonomyErosion :
+axiom AutonomyErosion :
   AutonomyValuation → Prop
 
 end SigmaR

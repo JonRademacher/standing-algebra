@@ -23,7 +23,7 @@ namespace SigmaR
 StandingDependsOnResponse S R means that standing valuation S
 is structurally sensitive to response R.
 -/
-constant StandingDependsOnResponse :
+axiom StandingDependsOnResponse :
   StandingValuation → Response → Prop
 
 end SigmaR

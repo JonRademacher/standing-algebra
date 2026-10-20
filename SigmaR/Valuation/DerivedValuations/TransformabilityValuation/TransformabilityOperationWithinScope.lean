@@ -24,7 +24,7 @@ namespace SigmaR
 TransformabilityOperationWithinScope S means that operations
 in S lie within effective scope of transformation.
 -/
-constant TransformabilityOperationWithinScope :
+axiom TransformabilityOperationWithinScope :
   TransformabilityOperationSet → Prop
 
 end SigmaR

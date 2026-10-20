@@ -25,7 +25,7 @@ namespace SigmaR
 ResponseAffectsCoupling R C means that response R
 has a structural effect on coupling valuation C.
 -/
-constant ResponseAffectsCoupling :
+axiom ResponseAffectsCoupling :
   Response → CouplingValuation → Prop
 
 end SigmaR

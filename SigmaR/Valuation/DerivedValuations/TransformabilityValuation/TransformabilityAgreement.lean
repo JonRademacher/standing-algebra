@@ -23,6 +23,6 @@ namespace SigmaR
 /--
 An abstract structure representing transformability agreement.
 -/
-constant TransformabilityAgreement : Type
+axiom TransformabilityAgreement : Type
 
 end SigmaR

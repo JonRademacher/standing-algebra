@@ -19,7 +19,7 @@ namespace SigmaR
 TransformabilityProgressEndorsable S means that the
 transformability-progress options in S are structurally endorsable.
 -/
-constant TransformabilityProgressEndorsable :
+axiom TransformabilityProgressEndorsable :
   TransformabilityProgressOptionSet → Prop
 
 end SigmaR

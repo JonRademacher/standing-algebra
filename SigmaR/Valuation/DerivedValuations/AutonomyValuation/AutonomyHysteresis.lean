@@ -25,7 +25,7 @@ namespace SigmaR
 AutonomyHysteresis A means that autonomy valuation A
 exhibits path-dependent behavior.
 -/
-constant AutonomyHysteresis :
+axiom AutonomyHysteresis :
   AutonomyValuation → Prop
 
 end SigmaR

@@ -27,7 +27,7 @@ RiskDependsOnPerceptualValuation R P means that
 risk valuation R is structurally dependent on
 perceptual valuation P.
 -/
-constant RiskDependsOnPerceptualValuation :
+axiom RiskDependsOnPerceptualValuation :
   RiskValuation → PerceptionValuation → Prop
 
 end SigmaR

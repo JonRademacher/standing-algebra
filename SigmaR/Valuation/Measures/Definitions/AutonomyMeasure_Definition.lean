@@ -25,6 +25,6 @@ of agent a’s autonomy in state s.
 
 Higher values indicate greater preserved autonomy.
 -/
-constant AutonomyMeasure : Agent → State → Nat
+axiom AutonomyMeasure : Agent → State → Nat
 
 end SigmaR

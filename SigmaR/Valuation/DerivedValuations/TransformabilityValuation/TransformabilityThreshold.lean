@@ -24,7 +24,7 @@ namespace SigmaR
 TransformabilityThreshold T means that transformability valuation T
 is associated with a structural threshold.
 -/
-constant TransformabilityThreshold :
+axiom TransformabilityThreshold :
   TransformabilityValuation → Prop
 
 end SigmaR

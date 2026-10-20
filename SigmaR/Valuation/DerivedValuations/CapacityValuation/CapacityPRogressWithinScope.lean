@@ -19,7 +19,7 @@ namespace SigmaR
 CapacityProgressWithinScope S means that the capacity-progress
 options in S are within the effective scope of control.
 -/
-constant CapacityProgressWithinScope :
+axiom CapacityProgressWithinScope :
   CapacityProgressOptionSet → Prop
 
 end SigmaR

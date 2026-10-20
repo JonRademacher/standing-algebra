@@ -23,6 +23,6 @@ namespace SigmaR
 /--
 An exit cost level associated with an exit cost valuation.
 -/
-constant ExitCostLevel : ExitCostValuation → Val
+axiom ExitCostLevel : ExitCostValuation → Val
 
 end SigmaR

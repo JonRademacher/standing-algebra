@@ -22,6 +22,6 @@ namespace SigmaR
 /--
 An abstract structure representing autonomy agreement.
 -/
-constant AutonomyAgreement : Type
+axiom AutonomyAgreement : Type
 
 end SigmaR

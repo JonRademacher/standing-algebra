@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Autonomy valuation does not imply legitimacy.
 -/
-constant AutonomyDoesNotImplyLegitimacy : Prop
+axiom AutonomyDoesNotImplyLegitimacy : Prop
 
 end SigmaR

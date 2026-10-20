@@ -25,7 +25,7 @@ namespace SigmaR
 RiskAgreementStabilizedByEvidence A means that risk agreement A
 is stabilized through non-parochial evidence.
 -/
-constant RiskAgreementStabilizedByEvidence :
+axiom RiskAgreementStabilizedByEvidence :
   RiskAgreement → Prop
 
 end SigmaR

@@ -23,6 +23,6 @@ namespace SigmaR
 /--
 Volition i indicates that agent i has a volitional component.
 -/
-constant Volition : Agent → Prop
+axiom Volition : Agent → Prop
 
 end SigmaR

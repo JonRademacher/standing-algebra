@@ -65,7 +65,7 @@ namespace SigmaR
 /-- Predicate: adapter‑mediated
     identity or role recoupling
     occurs at state `s`. -/
-constant EpistemicAdapter : Operation → State → Prop
+axiom EpistemicAdapter : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom

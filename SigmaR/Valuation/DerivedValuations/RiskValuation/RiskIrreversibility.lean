@@ -25,7 +25,7 @@ namespace SigmaR
 RiskIrreversibility R means that risk valuation R
 is structurally irreversible once accumulated.
 -/
-constant RiskIrreversibility :
+axiom RiskIrreversibility :
   RiskValuation → Prop
 
 end SigmaR

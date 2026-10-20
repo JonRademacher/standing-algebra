@@ -26,7 +26,7 @@ namespace SigmaR
 ResponseAffectsRiskValuation R V means that response R
 has a structural effect on risk valuation V.
 -/
-constant ResponseAffectsRiskValuation :
+axiom ResponseAffectsRiskValuation :
   Response → RiskValuation → Prop
 
 end SigmaR

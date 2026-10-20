@@ -21,7 +21,7 @@ TransformabilityOmissionMaintainsConstraint S means that
 failure to engage available transformability-progress options
 maintains the transformability constraint structurally.
 -/
-constant TransformabilityOmissionMaintainsConstraint :
+axiom TransformabilityOmissionMaintainsConstraint :
   TransformabilityProgressOptionSet → Prop
 
 end SigmaR

@@ -24,7 +24,7 @@ namespace SigmaR
 CouplingDampening C₁ C₂ means that coupling valuation C₁
 dampens the effect of coupling valuation C₂.
 -/
-constant CouplingDampening :
+axiom CouplingDampening :
   CouplingValuation → CouplingValuation → Prop
 
 end SigmaR

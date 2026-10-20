@@ -19,6 +19,6 @@ namespace SigmaR
 RiskLoad a is the successor-native measure
 of structural risk exposure borne by agent a.
 -/
-constant RiskLoad : Agent → Nat
+axiom RiskLoad : Agent → Nat
 
 end SigmaR

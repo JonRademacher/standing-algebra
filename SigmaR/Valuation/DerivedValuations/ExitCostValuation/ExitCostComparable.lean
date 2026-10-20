@@ -25,7 +25,7 @@ namespace SigmaR
 ExitCostComparable E₁ E₂ means that exit cost valuations
 E₁ and E₂ are structurally comparable.
 -/
-constant ExitCostComparable :
+axiom ExitCostComparable :
   ExitCostValuation → ExitCostValuation → Prop
 
 end SigmaR

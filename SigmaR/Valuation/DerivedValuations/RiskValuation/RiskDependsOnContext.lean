@@ -25,7 +25,7 @@ namespace SigmaR
 RiskDependsOnContext R means that risk valuation R
 is explicitly context-dependent.
 -/
-constant RiskDependsOnContext :
+axiom RiskDependsOnContext :
   RiskValuation → Prop
 
 end SigmaR

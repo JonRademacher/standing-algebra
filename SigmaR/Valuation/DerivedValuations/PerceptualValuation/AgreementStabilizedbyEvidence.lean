@@ -25,7 +25,7 @@ namespace SigmaR
 AgreementStabilizedByEvidence A means that perceptual agreement A
 is stabilized through non-parochial evidence.
 -/
-constant AgreementStabilizedByEvidence :
+axiom AgreementStabilizedByEvidence :
   PerceptualAgreement → Prop
 
 end SigmaR

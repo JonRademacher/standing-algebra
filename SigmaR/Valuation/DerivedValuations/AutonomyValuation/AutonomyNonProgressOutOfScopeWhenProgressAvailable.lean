@@ -23,7 +23,7 @@ AutonomyNonProgressOutOfScopeWhenProgressAvailable S
 means that non-progress options are out of scope
 when progress options S are available.
 -/
-constant AutonomyNonProgressOutOfScopeWhenProgressAvailable :
+axiom AutonomyNonProgressOutOfScopeWhenProgressAvailable :
   AutonomyProgressOptionSet → Prop
 
 end SigmaR

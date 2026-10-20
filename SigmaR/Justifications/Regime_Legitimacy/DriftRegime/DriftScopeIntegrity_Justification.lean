@@ -1,5 +1,5 @@
-import SigmaR.Justifications.Regimes.AdapterRegime.AdapterScopeIntegrity_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterScopeIntegrity_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegime_Justification
 
 /-!
 ###############################################################################
@@ -27,13 +27,13 @@ namespace SigmaR
 /--
 Predicate: drift operation `D` is scoped to `S`.
 -/
-constant DriftScoped : Operation → Scope → Prop
+axiom DriftScoped : Operation → Scope → Prop
 
 /--
 Predicate: drift operation `D` produces effects
 outside scope `S`.
 -/
-constant DriftEscapesScope : Operation → Scope → Prop
+axiom DriftEscapesScope : Operation → Scope → Prop
 
 /--
 Tier-2 legitimacy axiom (Scope Integrity Under Drift):

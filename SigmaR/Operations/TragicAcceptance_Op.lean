@@ -9,7 +9,7 @@ Operations-level predicate:
 no admissible operation can reduce harm
 without violating autonomy.
 -/
-constant TragicAcceptanceOp : Operation → Prop
+axiom TragicAcceptanceOp : Operation → Prop
 
 /--
 Operations-level invariant (Tragic Acceptance):

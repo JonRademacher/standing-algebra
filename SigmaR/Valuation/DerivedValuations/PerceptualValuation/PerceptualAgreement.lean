@@ -22,6 +22,6 @@ namespace SigmaR
 /--
 An abstract structure representing perceptual agreement.
 -/
-constant PerceptualAgreement : Type
+axiom PerceptualAgreement : Type
 
 end SigmaR

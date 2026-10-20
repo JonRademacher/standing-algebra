@@ -19,6 +19,6 @@ namespace SigmaR
 Response semantics are explicitly scoped
 and never globally applicable by default.
 -/
-constant ResponseScope : Prop
+axiom ResponseScope : Prop
 
 end SigmaR

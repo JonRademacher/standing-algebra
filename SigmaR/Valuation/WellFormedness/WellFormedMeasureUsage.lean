@@ -24,27 +24,27 @@ namespace SigmaR
 A valuation measure must not be applied outside its declared
 agent–state domain.
 -/
-constant MeasureUsedWithinDomain :
+axiom MeasureUsedWithinDomain :
   Measure → Prop
 
 /--
 A measure declared as context-bound must not be used outside
 that context.
 -/
-constant MeasureUsageRespectsContext :
+axiom MeasureUsageRespectsContext :
   Measure → Prop
 
 /--
 Projected or restricted measures must not be used as if they
 were original, unrestricted measures.
 -/
-constant MeasureUsageRespectsProjection :
+axiom MeasureUsageRespectsProjection :
   Measure → Prop
 
 /--
 Restricted measures must not be treated as globally scoped.
 -/
-constant MeasureUsageRespectsRestriction :
+axiom MeasureUsageRespectsRestriction :
   Measure → Prop
 
 end SigmaR

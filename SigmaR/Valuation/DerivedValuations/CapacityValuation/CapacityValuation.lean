@@ -23,6 +23,6 @@ namespace SigmaR
 /--
 An abstract derived valuation associated with agent capacity.
 -/
-constant CapacityValuation : Type
+axiom CapacityValuation : Type
 
 end SigmaR

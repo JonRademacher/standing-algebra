@@ -22,7 +22,7 @@ namespace SigmaR
 StandingDependsOnContext S means that standing valuation S
 is explicitly context-dependent.
 -/
-constant StandingDependsOnContext :
+axiom StandingDependsOnContext :
   StandingValuation → Prop
 
 end SigmaR

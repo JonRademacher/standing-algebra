@@ -21,6 +21,6 @@ namespace SigmaR
 CapacityProgressOption O means that O represents
 a capacity-increasing option.
 -/
-constant CapacityProgressOption : Type
+axiom CapacityProgressOption : Type
 
 end SigmaR

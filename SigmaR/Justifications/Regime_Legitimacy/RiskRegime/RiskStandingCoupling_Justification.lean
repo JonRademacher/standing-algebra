@@ -1,8 +1,8 @@
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskRegime_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskInheritance_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskInheritance_Justification
 
 /-!
 ###############################################################################
@@ -45,7 +45,7 @@ at state `s`.
 
 This is intentionally abstract and non-quantitative.
 -/
-constant StandingRelevantRisk : Operation → State → Prop
+axiom StandingRelevantRisk : Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Risk–Standing Coupling):

@@ -24,6 +24,6 @@ namespace SigmaR
 /--
 An abstract derived valuation associated with transformability.
 -/
-constant TransformabilityValuation : Type
+axiom TransformabilityValuation : Type
 
 end SigmaR

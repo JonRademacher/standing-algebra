@@ -5,9 +5,9 @@ import SigmaR.Justifications.Core_Legitimacy.BoundedDrift_Justification
 import SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
 import SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification
 
-import SigmaR.Justifications.Regimes.RiskRegime.RiskDiscountingProhibition_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskInheritance_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskLoadMonotonicity_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskDiscountingProhibition_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskInheritance_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskLoadMonotonicity_Justification
 
 /-!
 ###############################################################################

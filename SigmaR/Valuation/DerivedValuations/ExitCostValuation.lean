@@ -1,12 +1,12 @@
-import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegime_Justification
+import SigmaR.Valuation.DerivedValuations.ExitCostValuation.ExitCostValuation
 
 /-!
 ###############################################################################
-# DriftRegime_Justification — compatibility module
+# ExitCostValuation — compatibility module
 ###############################################################################
 
 This module is the path the rest of the repository imports.  The material it
-carries lives in `SigmaR/Justifications/Regime_Legitimacy/DriftRegime/DriftRegime_Justification.lean`; re-exporting it here keeps every existing import in the
+carries lives in `SigmaR/Valuation/DerivedValuations/ExitCostValuation/ExitCostValuation.lean`; re-exporting it here keeps every existing import in the
 tree valid.
 ###############################################################################
 -/

@@ -25,7 +25,7 @@ namespace SigmaR
 ResponseAmplifiesMeasure R M means that response R
 increases valuation measure M.
 -/
-constant ResponseAmplifiesMeasure :
+axiom ResponseAmplifiesMeasure :
   Response → Measure → Prop
 
 end SigmaR

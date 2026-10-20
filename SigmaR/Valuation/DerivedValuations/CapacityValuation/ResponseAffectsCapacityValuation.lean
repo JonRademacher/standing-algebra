@@ -26,7 +26,7 @@ namespace SigmaR
 ResponseAffectsCapacityValuation R C means that response R
 has a structural effect on capacity valuation C.
 -/
-constant ResponseAffectsCapacityValuation :
+axiom ResponseAffectsCapacityValuation :
   Response → CapacityValuation → Prop
 
 end SigmaR

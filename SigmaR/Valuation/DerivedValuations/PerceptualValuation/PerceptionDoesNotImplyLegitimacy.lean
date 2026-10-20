@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Perception valuation does not imply legitimacy.
 -/
-constant PerceptionDoesNotImplyLegitimacy : Prop
+axiom PerceptionDoesNotImplyLegitimacy : Prop
 
 end SigmaR

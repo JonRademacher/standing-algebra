@@ -1,10 +1,10 @@
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.NonSelectiveComposition_Justification
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.ExitPreservationUnderComposition_Justification
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.StandingMonotonicityUnderComposition_Justification
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.RiskAccumulationBound_Justification
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.ScopeIntegrityUnderComposition_Justification
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.SymmetricAffordanceExposure_Justification
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.RepairPreservationUnderComposition_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.NonSelectiveComposition_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.ExitPreservationUnderComposition_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.StandingMonotonicityUnderComposition_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.RiskAccumulationBound_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.ScopeIntegrityUnderComposition_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.SymmetricalAffordanceExposure_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.RepairPreservationUnderComposition_Justification
 
 /-!
 ###############################################################################
@@ -49,7 +49,7 @@ namespace SigmaR
 Predicate: operation `G` participates in the
 Affordance Composition Regime.
 -/
-constant AffordanceCompositionRegimeOp : Operation → Prop
+axiom AffordanceCompositionRegimeOp : Operation → Prop
 
 /--
 Tier-2 regime declaration:

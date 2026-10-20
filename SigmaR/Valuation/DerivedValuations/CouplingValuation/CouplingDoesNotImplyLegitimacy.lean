@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Coupling valuation does not imply legitimacy.
 -/
-constant CouplingDoesNotImplyLegitimacy : Prop
+axiom CouplingDoesNotImplyLegitimacy : Prop
 
 end SigmaR

@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Autonomy valuation does not imply intervention.
 -/
-constant AutonomyDoesNotImplyIntervention : Prop
+axiom AutonomyDoesNotImplyIntervention : Prop
 
 end SigmaR

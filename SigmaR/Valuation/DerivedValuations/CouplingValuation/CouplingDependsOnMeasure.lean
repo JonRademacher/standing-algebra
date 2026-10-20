@@ -24,7 +24,7 @@ namespace SigmaR
 CouplingDependsOnMeasure C M means that coupling valuation C
 structurally depends on valuation measure M.
 -/
-constant CouplingDependsOnMeasure :
+axiom CouplingDependsOnMeasure :
   CouplingValuation → Measure → Prop
 
 end SigmaR

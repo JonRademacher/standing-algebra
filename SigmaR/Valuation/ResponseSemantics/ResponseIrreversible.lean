@@ -24,7 +24,7 @@ namespace SigmaR
 ResponseIrreversible R means that response R
 does not admit a structural reversal.
 -/
-constant ResponseIrreversible :
+axiom ResponseIrreversible :
   Response → Prop
 
 end SigmaR

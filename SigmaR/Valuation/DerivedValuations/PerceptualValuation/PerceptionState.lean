@@ -23,7 +23,7 @@ namespace SigmaR
 /--
 A perception valuation relative to a specific agent and state.
 -/
-constant PerceptionState :
+axiom PerceptionState :
   Agent → State → PerceptionValuation
 
 end SigmaR

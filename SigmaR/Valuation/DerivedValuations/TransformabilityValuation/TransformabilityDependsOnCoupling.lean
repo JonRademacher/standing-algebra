@@ -26,7 +26,7 @@ namespace SigmaR
 TransformabilityDependsOnCoupling T K means that transformability
 valuation T is structurally grounded in coupling valuation K.
 -/
-constant TransformabilityDependsOnCoupling :
+axiom TransformabilityDependsOnCoupling :
   TransformabilityValuation → CouplingValuation → Prop
 
 end SigmaR

@@ -24,7 +24,7 @@ namespace SigmaR
 CapacityLoad C means that capacity valuation C
 is subject to structural load.
 -/
-constant CapacityLoad :
+axiom CapacityLoad :
   CapacityValuation → Prop
 
 end SigmaR

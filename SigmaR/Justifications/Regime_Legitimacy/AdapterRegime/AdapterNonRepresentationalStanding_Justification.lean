@@ -1,6 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.DerivedStanding_Justification
-import SigmaR.Justifications.Regimes.AdapterRegime.AdapterRegime_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskInheritance_Justification
+import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskInheritance_Justification
 
 /-!
 ###############################################################################
@@ -31,7 +31,7 @@ namespace SigmaR
 Predicate: adapter operation `F` claims to represent agent `a`
 in a standing-relevant way.
 -/
-constant AdapterClaimsRepresentation : Operation → Agent → Prop
+axiom AdapterClaimsRepresentation : Operation → Agent → Prop
 
 /--
 Tier-2 legitimacy axiom (Adapter Non-Representational Standing):

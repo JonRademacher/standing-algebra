@@ -25,7 +25,7 @@ namespace SigmaR
 StandingLoss S₁ S₂ means that standing valuation S₂
 represents a loss relative to standing valuation S₁.
 -/
-constant StandingLoss :
+axiom StandingLoss :
   StandingValuation → StandingValuation → Prop
 
 end SigmaR

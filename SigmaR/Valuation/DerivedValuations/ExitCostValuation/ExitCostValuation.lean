@@ -26,6 +26,6 @@ namespace SigmaR
 /--
 An abstract derived valuation associated with exit cost.
 -/
-constant ExitCostValuation : Type
+axiom ExitCostValuation : Type
 
 end SigmaR

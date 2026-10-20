@@ -25,7 +25,7 @@ namespace SigmaR
 PerceptionDivergence P₁ P₂ means that perception valuation P₁
 and P₂ are structurally diverging.
 -/
-constant PerceptionDivergence :
+axiom PerceptionDivergence :
   PerceptionValuation → PerceptionValuation → Prop
 
 end SigmaR

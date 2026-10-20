@@ -20,7 +20,7 @@ namespace SigmaR
 ExitCostRespectsIndependence E means that exit cost valuation E
 does not violate Independence constraints.
 -/
-constant ExitCostRespectsIndependence :
+axiom ExitCostRespectsIndependence :
   ExitCostValuation → Prop
 
 end SigmaR

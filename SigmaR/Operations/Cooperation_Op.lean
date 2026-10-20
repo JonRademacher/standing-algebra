@@ -9,7 +9,7 @@ Operations-level predicate:
 where agents jointly act without imposing
 constraints on non-participants.
 -/
-constant CooperationOp : Operation → Prop
+axiom CooperationOp : Operation → Prop
 
 /--
 Operations-level invariant (Cooperation):

@@ -25,7 +25,7 @@ namespace SigmaR
 ValuationComparable V₁ V₂ means that derived valuations
 V₁ and V₂ are structurally comparable.
 -/
-constant ValuationComparable :
+axiom ValuationComparable :
   DerivedValuation → DerivedValuation → Prop
 
 end SigmaR

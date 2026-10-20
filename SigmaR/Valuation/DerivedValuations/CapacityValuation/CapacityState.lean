@@ -24,7 +24,7 @@ namespace SigmaR
 /--
 A capacity valuation relative to a specific agent and state.
 -/
-constant CapacityState :
+axiom CapacityState :
   Agent → State → CapacityValuation
 
 end SigmaR

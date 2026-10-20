@@ -34,6 +34,6 @@ namespace SigmaR
 The Capacity Valuation layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant CapacityValuationContract : Prop
+axiom CapacityValuationContract : Prop
 
 end SigmaR

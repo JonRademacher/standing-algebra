@@ -18,6 +18,6 @@ namespace SigmaR
 Derived valuations are explicitly scoped
 and never globally applicable by default.
 -/
-constant ValuationScope : Prop
+axiom ValuationScope : Prop
 
 end SigmaR

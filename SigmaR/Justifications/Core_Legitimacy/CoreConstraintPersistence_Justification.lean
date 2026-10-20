@@ -35,7 +35,7 @@ namespace SigmaR
 Predicate: operation `F` satisfies all core
 non-domination constraints.
 -/
-constant CoreConstraintsSatisfied : Operation → Prop
+axiom CoreConstraintsSatisfied : Operation → Prop
 
 /--
 Tier-2 legitimacy axiom (Core Constraint Persistence):

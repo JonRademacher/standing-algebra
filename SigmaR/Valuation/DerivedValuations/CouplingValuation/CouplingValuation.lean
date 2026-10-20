@@ -27,6 +27,6 @@ namespace SigmaR
 An abstract derived valuation associated with coupling-weighted
 dependency.
 -/
-constant CouplingValuation : Type
+axiom CouplingValuation : Type
 
 end SigmaR

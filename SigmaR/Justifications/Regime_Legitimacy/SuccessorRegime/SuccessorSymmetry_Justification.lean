@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.STC5_Justification
-import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegime_Justification
 
 /-!
 ###############################################################################
@@ -28,7 +28,7 @@ namespace SigmaR
 Predicate: operation `F` is a successor-generating operation
 at state `s`.
 -/
-constant SuccessorOp : Operation → State → Prop
+axiom SuccessorOp : Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Successor Symmetry):

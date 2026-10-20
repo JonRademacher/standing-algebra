@@ -25,7 +25,7 @@ namespace SigmaR
 CouplingThreshold C means that coupling valuation C
 is associated with a structural threshold.
 -/
-constant CouplingThreshold :
+axiom CouplingThreshold :
   CouplingValuation → Prop
 
 end SigmaR

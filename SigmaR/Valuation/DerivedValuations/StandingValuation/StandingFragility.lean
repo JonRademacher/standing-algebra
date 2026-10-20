@@ -20,7 +20,7 @@ namespace SigmaR
 StandingFragility S means that standing valuation S
 is structurally sensitive to certain changes.
 -/
-constant StandingFragility :
+axiom StandingFragility :
   StandingValuation → Prop
 
 end SigmaR

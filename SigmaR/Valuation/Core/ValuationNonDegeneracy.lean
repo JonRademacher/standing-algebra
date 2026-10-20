@@ -18,12 +18,12 @@ namespace SigmaR
 /--
 Predicate: two states are structurally distinct.
 -/
-constant StructurallyDistinct : State → State → Prop
+axiom StructurallyDistinct : State → State → Prop
 
 /--
 Predicate: valuation distinguishes two states.
 -/
-constant ValuationDistinguishes : State → State → Prop
+axiom ValuationDistinguishes : State → State → Prop
 
 /--
 Non-degeneracy axiom:

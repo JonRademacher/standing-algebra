@@ -25,7 +25,7 @@ namespace SigmaR
 AutonomyCollapse A means that autonomy valuation A
 has structurally collapsed.
 -/
-constant AutonomyCollapse :
+axiom AutonomyCollapse :
   AutonomyValuation → Prop
 
 end SigmaR

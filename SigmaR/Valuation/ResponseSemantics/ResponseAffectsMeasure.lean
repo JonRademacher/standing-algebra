@@ -25,7 +25,7 @@ namespace SigmaR
 ResponseAffectsMeasure R M means that response R
 has a structural effect on valuation measure M.
 -/
-constant ResponseAffectsMeasure :
+axiom ResponseAffectsMeasure :
   Response → Measure → Prop
 
 end SigmaR

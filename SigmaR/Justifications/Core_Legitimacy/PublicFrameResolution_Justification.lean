@@ -65,7 +65,7 @@ namespace SigmaR
     at state `s`
     have stabilized sufficiently
     for public constraint. -/
-constant FrameResolved : State → Prop
+axiom FrameResolved : State → Prop
 
 /--
 Core legitimacy axiom:

@@ -59,7 +59,7 @@ namespace SigmaR
 
 /-- Predicate: the operation reduces RiskLoad
     without restoring CIA‑indexed autonomy at state `s`. -/
-constant RiskLoadReduced : Operation → State → Prop
+axiom RiskLoadReduced : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Risk Load Monotonicity:

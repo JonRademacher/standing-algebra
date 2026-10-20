@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.ALRP_Justification
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
 
 /-!
 ###############################################################################
@@ -29,13 +29,13 @@ namespace SigmaR
 /--
 Predicate: operation `G` is a composition of affordance operations.
 -/
-constant AffordanceComposed : Operation → Prop
+axiom AffordanceComposed : Operation → Prop
 
 /--
 Predicate: operation `F` preserves standing
 for agent `a` at state `s`.
 -/
-constant PreservesStanding : Agent → Operation → State → Prop
+axiom PreservesStanding : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Standing Monotonicity Under Composition):

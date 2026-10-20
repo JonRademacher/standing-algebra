@@ -24,7 +24,7 @@ namespace SigmaR
 ExternalCapacityAgreement A means that capacity agreement A
 is externalized across multiple agents.
 -/
-constant ExternalCapacityAgreement :
+axiom ExternalCapacityAgreement :
   CapacityAgreement → Prop
 
 end SigmaR

@@ -23,7 +23,7 @@ namespace SigmaR
 AutonomyRespectsIndependence A means that autonomy valuation A
 does not violate Independence constraints.
 -/
-constant AutonomyRespectsIndependence :
+axiom AutonomyRespectsIndependence :
   AutonomyValuation → Prop
 
 end SigmaR

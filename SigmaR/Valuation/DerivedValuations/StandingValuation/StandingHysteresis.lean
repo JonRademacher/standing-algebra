@@ -25,7 +25,7 @@ namespace SigmaR
 StandingHysteresis S means that standing valuation S
 exhibits path-dependent behavior.
 -/
-constant StandingHysteresis :
+axiom StandingHysteresis :
   StandingValuation → Prop
 
 end SigmaR

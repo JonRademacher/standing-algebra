@@ -22,7 +22,7 @@ namespace SigmaR
 AutonomyRespectsMonotonicity A means that autonomy valuation A
 does not violate declared monotonicity constraints.
 -/
-constant AutonomyRespectsMonotonicity :
+axiom AutonomyRespectsMonotonicity :
   AutonomyValuation → Prop
 
 end SigmaR

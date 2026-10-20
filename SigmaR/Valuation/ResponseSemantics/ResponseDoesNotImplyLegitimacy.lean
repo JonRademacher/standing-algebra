@@ -18,6 +18,6 @@ namespace SigmaR
 /--
 Response semantics do not imply legitimacy.
 -/
-constant ResponseDoesNotImplyLegitimacy : Prop
+axiom ResponseDoesNotImplyLegitimacy : Prop
 
 end SigmaR

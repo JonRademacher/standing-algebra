@@ -25,7 +25,7 @@ namespace SigmaR
 TransformabilityAggregation T₁ T₂ T₃ means that transformability
 valuation T₃ is an aggregation of T₁ and T₂.
 -/
-constant TransformabilityAggregation :
+axiom TransformabilityAggregation :
   TransformabilityValuation → TransformabilityValuation → TransformabilityValuation → Prop
 
 end SigmaR

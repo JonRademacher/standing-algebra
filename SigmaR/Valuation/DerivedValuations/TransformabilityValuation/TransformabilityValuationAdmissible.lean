@@ -26,7 +26,7 @@ TransformabilityValuationAdmissible T means that
 transformability valuation T is admissible under
 declared structural constraints.
 -/
-constant TransformabilityValuationAdmissible :
+axiom TransformabilityValuationAdmissible :
   TransformabilityValuation → Prop
 
 end SigmaR

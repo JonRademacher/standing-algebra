@@ -56,7 +56,7 @@ proxy optimization channel.
 namespace SigmaR
 
 /-- Predicate: the operation performs risk‑weighted emergency intervention at state `s`. -/
-constant RiskBoundEmergency : Operation → State → Prop
+axiom RiskBoundEmergency : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Risk‑Bound Emergency:

@@ -25,7 +25,7 @@ namespace SigmaR
 ExitCostHysteresis E means that exit cost valuation E
 exhibits path-dependent behavior.
 -/
-constant ExitCostHysteresis :
+axiom ExitCostHysteresis :
   ExitCostValuation → Prop
 
 end SigmaR

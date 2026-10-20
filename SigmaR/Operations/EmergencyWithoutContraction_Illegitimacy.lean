@@ -1,6 +1,6 @@
 import SigmaR.Operations.LegitimacyInterface
-import SigmaR.Justifications.Regimes.Emergency.EmergencyRegime_Justification
-import SigmaR.Justifications.Regimes.Emergency.EmergencyContraction_Justification
+import SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.EmergencyRegime_Justification
+import SigmaR.Justifications.Core_Legitimacy.EmergencyContraction_Justification
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 
 /-!

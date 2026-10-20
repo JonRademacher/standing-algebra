@@ -22,7 +22,7 @@ namespace SigmaR
 ResponseRespectsIndependence R means that response R
 does not violate Independence constraints.
 -/
-constant ResponseRespectsIndependence :
+axiom ResponseRespectsIndependence :
   Response → Prop
 
 end SigmaR

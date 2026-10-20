@@ -1,3 +1,7 @@
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.StandingValuation
+import SigmaR.Valuation.StandingWellDefined
+
 /-!
 ###############################################################################
 # Debt — Well-Definedness (Valuation Layer)
@@ -20,9 +24,6 @@ This file closes the valuation-level properties of debt.
 
 namespace SigmaR
 
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.StandingValuation
-import SigmaR.Valuation.StandingWellDefined
 
 /* -------------------------------------------------------------------------- */
 /* Primitive debt structure                                                    */
@@ -34,7 +35,7 @@ Debt is a valuation-level quantity indexed by agent and state.
 Interpretation:
 accumulated standing-relevant exposure.
 -/
-constant debt : Agent → State → Nat
+axiom debt : Agent → State → Nat
 
 /* -------------------------------------------------------------------------- */
 /* Basic coherence axioms                                                      */

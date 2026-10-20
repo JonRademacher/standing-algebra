@@ -24,7 +24,7 @@ namespace SigmaR
 ExternalRiskAgreement A means that risk agreement A
 is externalized across multiple agents.
 -/
-constant ExternalRiskAgreement :
+axiom ExternalRiskAgreement :
   RiskAgreement → Prop
 
 end SigmaR

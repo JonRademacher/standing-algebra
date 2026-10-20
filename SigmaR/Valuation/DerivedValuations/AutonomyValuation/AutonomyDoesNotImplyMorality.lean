@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Autonomy valuation does not imply morality.
 -/
-constant AutonomyDoesNotImplyMorality : Prop
+axiom AutonomyDoesNotImplyMorality : Prop
 
 end SigmaR

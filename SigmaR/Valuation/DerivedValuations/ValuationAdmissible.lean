@@ -25,7 +25,7 @@ namespace SigmaR
 ValuationAdmissible V means that derived valuation V
 is admissible under declared structural constraints.
 -/
-constant ValuationAdmissible :
+axiom ValuationAdmissible :
   DerivedValuation → Prop
 
 end SigmaR

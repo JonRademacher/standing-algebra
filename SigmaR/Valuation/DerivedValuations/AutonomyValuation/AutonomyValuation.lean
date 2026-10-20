@@ -30,6 +30,6 @@ namespace SigmaR
 /--
 An autonomy-specific derived valuation.
 -/
-constant AutonomyValuation : Type
+axiom AutonomyValuation : Type
 
 end SigmaR

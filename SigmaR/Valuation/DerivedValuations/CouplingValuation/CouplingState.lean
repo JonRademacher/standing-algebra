@@ -25,6 +25,6 @@ namespace SigmaR
 /--
 A coupling weight associated with dependency valuation.
 -/
-constant CouplingWeight : Type
+axiom CouplingWeight : Type
 
 end SigmaR

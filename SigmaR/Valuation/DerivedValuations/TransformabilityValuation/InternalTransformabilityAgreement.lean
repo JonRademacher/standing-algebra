@@ -23,7 +23,7 @@ namespace SigmaR
 InternalTransformabilityAgreement A means that transformability
 agreement A is internalized within a single agent.
 -/
-constant InternalTransformabilityAgreement :
+axiom InternalTransformabilityAgreement :
   TransformabilityAgreement → Prop
 
 end SigmaR

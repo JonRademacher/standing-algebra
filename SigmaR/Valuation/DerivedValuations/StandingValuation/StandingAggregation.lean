@@ -25,7 +25,7 @@ namespace SigmaR
 StandingAggregation S₁ S₂ S₃ means that standing valuation S₃
 is an aggregation of standing valuations S₁ and S₂.
 -/
-constant StandingAggregation :
+axiom StandingAggregation :
   StandingValuation → StandingValuation → StandingValuation → Prop
 
 end SigmaR

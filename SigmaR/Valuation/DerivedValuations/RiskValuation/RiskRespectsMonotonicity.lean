@@ -22,7 +22,7 @@ namespace SigmaR
 RiskRespectsMonotonicity R means that risk valuation R
 does not violate declared monotonicity constraints.
 -/
-constant RiskRespectsMonotonicity :
+axiom RiskRespectsMonotonicity :
   RiskValuation → Prop
 
 end SigmaR

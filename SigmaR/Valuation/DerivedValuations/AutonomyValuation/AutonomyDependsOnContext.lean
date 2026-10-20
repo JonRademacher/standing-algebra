@@ -24,7 +24,7 @@ namespace SigmaR
 AutonomyDependsOnContext A means that autonomy valuation A
 is explicitly context-dependent.
 -/
-constant AutonomyDependsOnContext :
+axiom AutonomyDependsOnContext :
   AutonomyValuation → Prop
 
 end SigmaR

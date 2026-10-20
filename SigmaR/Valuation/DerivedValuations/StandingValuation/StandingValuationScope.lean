@@ -20,6 +20,6 @@ namespace SigmaR
 Standing valuation is explicitly scoped and never
 globally applicable by default.
 -/
-constant StandingValuationScope : Prop
+axiom StandingValuationScope : Prop
 
 end SigmaR

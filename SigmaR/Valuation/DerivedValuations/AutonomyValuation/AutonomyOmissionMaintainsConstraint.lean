@@ -21,7 +21,7 @@ AutonomyOmissionMaintainsConstraint S means that
 failure to engage available autonomy-progress options
 maintains the autonomy constraint structurally.
 -/
-constant AutonomyOmissionMaintainsConstraint :
+axiom AutonomyOmissionMaintainsConstraint :
   AutonomyProgressOptionSet → Prop
 
 end SigmaR

@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Standing valuation does not imply authority.
 -/
-constant StandingValuationDoesNotImplyAuthority : Prop
+axiom StandingValuationDoesNotImplyAuthority : Prop
 
 end SigmaR

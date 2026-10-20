@@ -30,6 +30,6 @@ or interacts with, some external entity x.
 
 The nature of x is intentionally left abstract.
 -/
-constant Perceives : Agent → Type → Prop
+axiom Perceives : Agent → Type → Prop
 
 end SigmaR

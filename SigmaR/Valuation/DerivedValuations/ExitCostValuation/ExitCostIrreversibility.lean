@@ -24,7 +24,7 @@ namespace SigmaR
 ExitCostIrreversibility E means that exit cost valuation E
 is structurally irreversible once accumulated or lost.
 -/
-constant ExitCostIrreversibility :
+axiom ExitCostIrreversibility :
   ExitCostValuation → Prop
 
 end SigmaR

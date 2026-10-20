@@ -24,6 +24,6 @@ namespace SigmaR
 A valuation configuration is admissible if it is explicitly declared
 and structurally coherent under the system's constraints.
 -/
-constant AdmissibleConfiguration : Prop
+axiom AdmissibleConfiguration : Prop
 
 end SigmaR

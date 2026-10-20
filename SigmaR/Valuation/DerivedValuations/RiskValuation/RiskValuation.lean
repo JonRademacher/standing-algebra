@@ -23,6 +23,6 @@ namespace SigmaR
 /--
 An abstract derived valuation associated with risk.
 -/
-constant RiskValuation : Type
+axiom RiskValuation : Type
 
 end SigmaR

@@ -84,7 +84,7 @@ namespace SigmaR
     has a uniquely identifiable
     dominant coupling
     at state `s`. -/
-constant DominantCouplingIdentified : State → Prop
+axiom DominantCouplingIdentified : State → Prop
 
 /--
 Core legitimacy axiom:

@@ -43,7 +43,7 @@ introduce legitimacy‑preserving proxy optimization.
 namespace SigmaR
 
 /-- Predicate: the operation preserves an exit pathway across states. -/
-constant ExitPreserved : Operation → State → Prop
+axiom ExitPreserved : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Exit Preservation:

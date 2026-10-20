@@ -24,7 +24,7 @@ namespace SigmaR
 RiskInheritance R₁ R₂ means that risk valuation R₂
 inherits structural risk from R₁.
 -/
-constant RiskInheritance :
+axiom RiskInheritance :
   RiskValuation → RiskValuation → Prop
 
 end SigmaR

@@ -21,6 +21,6 @@ namespace SigmaR
 TransformabilityProgressOption O means that O represents
 a transformability-increasing option.
 -/
-constant TransformabilityProgressOption : Type
+axiom TransformabilityProgressOption : Type
 
 end SigmaR

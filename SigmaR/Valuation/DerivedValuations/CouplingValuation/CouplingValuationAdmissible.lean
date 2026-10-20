@@ -25,7 +25,7 @@ namespace SigmaR
 CouplingValuationAdmissible C means that coupling valuation C
 is admissible under declared structural constraints.
 -/
-constant CouplingValuationAdmissible :
+axiom CouplingValuationAdmissible :
   CouplingValuation → Prop
 
 end SigmaR

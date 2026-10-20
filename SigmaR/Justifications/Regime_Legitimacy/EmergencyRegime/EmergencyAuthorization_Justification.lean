@@ -54,7 +54,7 @@ proxy optimization channel.
 namespace SigmaR
 
 /-- Predicate: the operation is emergency‑authorized at state `s`. -/
-constant EmergencyAuthorized : Operation → State → Prop
+axiom EmergencyAuthorized : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Emergency Authorization:

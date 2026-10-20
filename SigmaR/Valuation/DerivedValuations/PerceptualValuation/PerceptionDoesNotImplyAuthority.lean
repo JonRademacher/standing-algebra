@@ -18,6 +18,6 @@ namespace SigmaR
 /--
 Perception valuation does not imply authority.
 -/
-constant PerceptionDoesNotImplyAuthority : Prop
+axiom PerceptionDoesNotImplyAuthority : Prop
 
 end SigmaR

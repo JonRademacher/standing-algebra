@@ -24,7 +24,7 @@ namespace SigmaR
 TransformabilityCollapse T means that transformability valuation T
 has structurally collapsed.
 -/
-constant TransformabilityCollapse :
+axiom TransformabilityCollapse :
   TransformabilityValuation → Prop
 
 end SigmaR

@@ -1,6 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskRegime_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskLoadMonotonicity_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskLoadMonotonicity_Justification
 
 /-!
 ###############################################################################
@@ -47,13 +47,13 @@ Predicate: the operation introduces non-zero risk at state `s`.
 This is intentionally abstract; no quantitative notion of risk
 is assumed at this layer.
 -/
-constant IntroducesRisk : Operation → State → Prop
+axiom IntroducesRisk : Operation → State → Prop
 
 /--
 Predicate: the operation declares introduced risk negligible,
 acceptable, or legitimacy-neutral at state `s`.
 -/
-constant RiskDiscounted : Operation → State → Prop
+axiom RiskDiscounted : Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Risk Discounting Prohibition):

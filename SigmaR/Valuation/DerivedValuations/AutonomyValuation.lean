@@ -1,12 +1,12 @@
-import SigmaR.Justifications.Core_Legitimacy.EmergencyContraction_Justification
+import SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyValuation
 
 /-!
 ###############################################################################
-# EmergencyContraction_Justification — compatibility module
+# AutonomyValuation — compatibility module
 ###############################################################################
 
 This module is the path the rest of the repository imports.  The material it
-carries lives in `SigmaR/Justifications/Core_Legitimacy/EmergencyContraction_Justification.lean`; re-exporting it here keeps every existing import in the
+carries lives in `SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyValuation.lean`; re-exporting it here keeps every existing import in the
 tree valid.
 ###############################################################################
 -/

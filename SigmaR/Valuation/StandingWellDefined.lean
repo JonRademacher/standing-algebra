@@ -1,3 +1,6 @@
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.StandingValuation
+
 /-!
 ###############################################################################
 # Standing Valuation — Well-Definedness
@@ -14,8 +17,6 @@ No new structure or authority is introduced here.
 
 namespace SigmaR
 
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.StandingValuation
 
 /* -------------------------------------------------------------------------- */
 /* 1. Standing extensionality                                                  */
@@ -26,7 +27,7 @@ Standing is extensional in the state argument.
 -/
 theorem standing_extensional
   (i : Agent) {s₁ s₂ : State} :
-  s₁ = s₂ → σ i s₁ = σ i s₂ :=
+  s₁ = s₂ → σv i s₁ = σv i s₂ :=
 by
   intro h
   cases h
@@ -101,7 +102,7 @@ theorem CIA_does_not_distort_order
   ValLe i s₁ s₂ ∨ ValLe i s₂ s₁ :=
 by
   unfold ValLe
-  exact le_total (σ i s₁) (σ i s₂)
+  exact Int.le_total (σv i s₁) (σv i s₂)
 
 /* -------------------------------------------------------------------------- */
 /* 5. Risk inheritance invariance                                             */
@@ -134,7 +135,7 @@ Standing order carries no structure beyond σ itself.
 -/
 theorem ValLe_depends_only_on_sigma
   (i : Agent) (s₁ s₂ : State) :
-  ValLe i s₁ s₂ ↔ σ i s₁ ≤ σ i s₂ :=
+  ValLe i s₁ s₂ ↔ σv i s₁ ≤ σv i s₂ :=
 by
   rfl
 

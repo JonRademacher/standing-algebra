@@ -24,7 +24,7 @@ namespace SigmaR
 RiskHysteresis R means that risk valuation R
 exhibits path-dependent behavior.
 -/
-constant RiskHysteresis :
+axiom RiskHysteresis :
   RiskValuation → Prop
 
 end SigmaR

@@ -25,7 +25,7 @@ namespace SigmaR
 CouplingDependsOnResponse C R means that coupling valuation C
 is structurally sensitive to response R.
 -/
-constant CouplingDependsOnResponse :
+axiom CouplingDependsOnResponse :
   CouplingValuation → Response → Prop
 
 end SigmaR

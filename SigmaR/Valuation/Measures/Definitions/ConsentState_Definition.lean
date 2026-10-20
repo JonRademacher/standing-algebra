@@ -25,6 +25,6 @@ namespace SigmaR
 ConsentState a s holds if agent a’s participation
 in state s is consented.
 -/
-constant ConsentState : Agent → State → Prop
+axiom ConsentState : Agent → State → Prop
 
 end SigmaR

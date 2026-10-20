@@ -24,7 +24,7 @@ namespace SigmaR
 RiskFragility R means that risk valuation R
 is structurally fragile.
 -/
-constant RiskFragility :
+axiom RiskFragility :
   RiskValuation → Prop
 
 end SigmaR

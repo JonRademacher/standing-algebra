@@ -27,7 +27,7 @@ Preference over operations.
 
 `Preferred F G` records that a selection procedure ranks `F` above `G`.
 -/
-constant Preferred : Operation → Operation → Prop
+axiom Preferred : Operation → Operation → Prop
 
 /--
 Σᴿ does not select among legitimate options.

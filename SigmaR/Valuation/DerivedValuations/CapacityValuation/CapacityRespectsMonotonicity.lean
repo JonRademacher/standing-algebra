@@ -24,7 +24,7 @@ namespace SigmaR
 CapacityRespectsMonotonicity C means that capacity valuation C
 does not violate declared monotonicity constraints.
 -/
-constant CapacityRespectsMonotonicity :
+axiom CapacityRespectsMonotonicity :
   CapacityValuation → Prop
 
 end SigmaR

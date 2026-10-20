@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Transformability valuation does not imply morality.
 -/
-constant TransformabilityDoesNotImplyMorality : Prop
+axiom TransformabilityDoesNotImplyMorality : Prop
 
 end SigmaR

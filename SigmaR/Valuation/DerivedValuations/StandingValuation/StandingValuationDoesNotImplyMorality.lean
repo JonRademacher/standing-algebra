@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Standing valuation does not imply morality.
 -/
-constant StandingValuationDoesNotImplyMorality : Prop
+axiom StandingValuationDoesNotImplyMorality : Prop
 
 end SigmaR

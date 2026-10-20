@@ -19,6 +19,6 @@ namespace SigmaR
 AgencyCondition i indicates that agent i satisfies
 a structural agency-related condition under some theory.
 -/
-constant AgencyCondition : Agent → Prop
+axiom AgencyCondition : Agent → Prop
 
 end SigmaR

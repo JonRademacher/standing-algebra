@@ -27,7 +27,7 @@ RiskComparableUnderAgreement R₁ R₂ A means that
 risk valuations R₁ and R₂ are structurally comparable
 under risk agreement A.
 -/
-constant RiskComparableUnderAgreement :
+axiom RiskComparableUnderAgreement :
   RiskValuation → RiskValuation → RiskAgreement → Prop
 
 end SigmaR

@@ -20,7 +20,7 @@ namespace SigmaR
 ValuationRespectsIndependence V means that derived valuation V
 does not violate Independence constraints.
 -/
-constant ValuationRespectsIndependence :
+axiom ValuationRespectsIndependence :
   DerivedValuation → Prop
 
 end SigmaR

@@ -19,6 +19,6 @@ namespace SigmaR
 Response semantics do not imply intervention,
 execution, or action.
 -/
-constant ResponseDoesNotImplyIntervention : Prop
+axiom ResponseDoesNotImplyIntervention : Prop
 
 end SigmaR

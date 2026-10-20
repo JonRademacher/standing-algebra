@@ -39,6 +39,6 @@ namespace SigmaR
 The Autonomy Valuation layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant AutonomyValuationContract : Prop
+axiom AutonomyValuationContract : Prop
 
 end SigmaR

@@ -41,7 +41,7 @@ proxy optimization channel.
 namespace SigmaR
 
 /-- Predicate: the operation provides an available exit at state `s`. -/
-constant ExitAvailable : Operation → State → Prop
+axiom ExitAvailable : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Exit Availability:

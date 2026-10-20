@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
-import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegime_Justification
 
 /-!
 ###############################################################################
@@ -28,7 +28,7 @@ namespace SigmaR
 Predicate: operation `F` interferes with
 directed repair at state `s`.
 -/
-constant SuccessorBlocksRepair : Operation → State → Prop
+axiom SuccessorBlocksRepair : Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Successor–Repair Compatibility):

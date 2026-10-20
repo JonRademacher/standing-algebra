@@ -24,7 +24,7 @@ namespace SigmaR
 ValuationRespectsMonotonicity V means that derived valuation V
 does not violate declared monotonicity constraints.
 -/
-constant ValuationRespectsMonotonicity :
+axiom ValuationRespectsMonotonicity :
   DerivedValuation → Prop
 
 end SigmaR

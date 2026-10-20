@@ -34,7 +34,7 @@ Non‑parochial evidence is:
   • not restricted to a single perceptual frame,
   • rerunnable by affected agents.
 -/
-constant NonParochialEvidence : Operation → State → Prop
+axiom NonParochialEvidence : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom:

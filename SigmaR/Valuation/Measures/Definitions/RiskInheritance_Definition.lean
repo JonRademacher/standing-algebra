@@ -19,6 +19,6 @@ Risk inheritance measure for an agent in a given state.
 This reflects structurally inherited exposure due to dependency,
 not probabilistic expectation or loss optimization.
 -/
-constant RiskInheritance : Agent → State → Nat
+axiom RiskInheritance : Agent → State → Nat
 
 end SigmaR

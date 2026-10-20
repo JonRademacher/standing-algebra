@@ -48,7 +48,7 @@ Predicate: operation F
 may be evaluated for legitimacy
 at state s.
 -/
-constant Admissible : Operation → State → Prop
+axiom Admissible : Operation → State → Prop
 
 /--
 Precondition:

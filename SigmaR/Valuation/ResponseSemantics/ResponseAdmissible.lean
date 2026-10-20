@@ -23,7 +23,7 @@ ResponseAdmissible R means that response R
 is permitted within the response semantics layer
 under declared constraints.
 -/
-constant ResponseAdmissible :
+axiom ResponseAdmissible :
   Response → Prop
 
 end SigmaR

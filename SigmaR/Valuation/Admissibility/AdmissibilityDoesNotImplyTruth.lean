@@ -18,6 +18,6 @@ namespace SigmaR
 Admissibility of a configuration or reasoning pattern
 does not imply truth of any conclusion.
 -/
-constant AdmissibilityDoesNotImplyTruth : Prop
+axiom AdmissibilityDoesNotImplyTruth : Prop
 
 end SigmaR

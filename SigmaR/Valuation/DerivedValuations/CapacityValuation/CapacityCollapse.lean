@@ -27,7 +27,7 @@ namespace SigmaR
 CapacityCollapse C means that capacity valuation C
 has structurally collapsed.
 -/
-constant CapacityCollapse :
+axiom CapacityCollapse :
   CapacityValuation → Prop
 
 end SigmaR

@@ -1,3 +1,6 @@
+import Collapse_Demonstrations.Goodhart_Drift.Goodhart
+import SigmaR.SigmaR_Core
+
 /-
   Collapse_Demonstrations.Goodhart_Drift.Goodhart_WithStanding
 
@@ -11,11 +14,9 @@
 namespace Collapse_Demonstrations.Goodhart_Drift
 
 -- Import the Goodhart drift definition
-import Collapse_Demonstrations.Goodhart_Drift.Goodhart
 
 -- Import SigmaR core Standing Algebra
 -- Adjust the import path if your core file name differs
-import SigmaR.SigmaR_Core
 
 /--
   We align Goodhart with SigmaR as follows:

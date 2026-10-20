@@ -24,6 +24,6 @@ namespace SigmaR
 An abstract derived valuation associated with perceptual
 agreement and alignment.
 -/
-constant PerceptionValuation : Type
+axiom PerceptionValuation : Type
 
 end SigmaR

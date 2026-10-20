@@ -25,7 +25,7 @@ namespace SigmaR
 CouplingCollapse C means that coupling valuation C
 has structurally collapsed.
 -/
-constant CouplingCollapse :
+axiom CouplingCollapse :
   CouplingValuation → Prop
 
 end SigmaR

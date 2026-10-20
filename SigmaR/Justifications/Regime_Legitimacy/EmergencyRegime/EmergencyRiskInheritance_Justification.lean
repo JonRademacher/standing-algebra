@@ -1,6 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
-import SigmaR.Justifications.Regimes.Emergency.EmergencyRegime_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskInheritance_Justification
+import SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.EmergencyRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskInheritance_Justification
 
 /-!
 ###############################################################################
@@ -34,7 +34,7 @@ namespace SigmaR
 Predicate: agent `a` exercises emergency authority via operation `F`
 at state `s`.
 -/
-constant ExercisesEmergencyAuthority : Agent → Operation → State → Prop
+axiom ExercisesEmergencyAuthority : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Emergency Risk Inheritance):

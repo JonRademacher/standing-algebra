@@ -24,7 +24,7 @@ namespace SigmaR
 ExitCostAccumulation E₁ E₂ means that exit cost valuation E₂
 represents an accumulation relative to exit cost valuation E₁.
 -/
-constant ExitCostAccumulation :
+axiom ExitCostAccumulation :
   ExitCostValuation → ExitCostValuation → Prop
 
 end SigmaR

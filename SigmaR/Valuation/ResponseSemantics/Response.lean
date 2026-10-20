@@ -25,6 +25,6 @@ namespace SigmaR
 An abstract response representing a possible transformation
 of system state.
 -/
-constant Response : Type
+axiom Response : Type
 
 end SigmaR

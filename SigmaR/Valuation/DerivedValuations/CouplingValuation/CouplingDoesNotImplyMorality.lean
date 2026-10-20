@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Coupling valuation does not imply morality.
 -/
-constant CouplingDoesNotImplyMorality : Prop
+axiom CouplingDoesNotImplyMorality : Prop
 
 end SigmaR

@@ -38,7 +38,7 @@ State isomorphism:
 Two states represent
 equivalent structural relation.
 -/
-constant Isomorphic :
+axiom Isomorphic :
   State → State → Prop
 
 /--

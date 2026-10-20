@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegime_Justification
 
 /-!
 ###############################################################################
@@ -29,7 +29,7 @@ namespace SigmaR
 Predicate: agent `a` has an available successor path
 under operation `F` at state `s`.
 -/
-constant SuccessorAvailable : Agent → Operation → State → Prop
+axiom SuccessorAvailable : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Successor Availability):

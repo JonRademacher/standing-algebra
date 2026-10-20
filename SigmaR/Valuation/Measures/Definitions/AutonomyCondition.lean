@@ -19,6 +19,6 @@ namespace SigmaR
 AutonomyCondition i indicates that agent i satisfies
 a structural autonomy-related condition under some theory.
 -/
-constant AutonomyCondition : Agent → Prop
+axiom AutonomyCondition : Agent → Prop
 
 end SigmaR

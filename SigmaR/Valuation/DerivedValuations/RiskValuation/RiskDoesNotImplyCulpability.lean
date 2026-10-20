@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Risk valuation does not imply culpability.
 -/
-constant RiskDoesNotImplyCulpability : Prop
+axiom RiskDoesNotImplyCulpability : Prop
 
 end SigmaR

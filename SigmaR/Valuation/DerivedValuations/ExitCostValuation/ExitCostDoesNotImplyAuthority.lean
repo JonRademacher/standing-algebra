@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Exit cost valuation does not imply authority.
 -/
-constant ExitCostDoesNotImplyAuthority : Prop
+axiom ExitCostDoesNotImplyAuthority : Prop
 
 end SigmaR

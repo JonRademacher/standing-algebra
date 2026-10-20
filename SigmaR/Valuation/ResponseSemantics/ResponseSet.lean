@@ -23,6 +23,6 @@ namespace SigmaR
 /--
 A set of responses considered jointly.
 -/
-constant ResponseSet : Type
+axiom ResponseSet : Type
 
 end SigmaR

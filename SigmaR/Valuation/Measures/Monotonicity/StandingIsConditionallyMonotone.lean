@@ -22,7 +22,7 @@ namespace SigmaR
 Standing is treated as conditionally monotone decreasing
 with respect to domination pressure.
 -/
-constant StandingConditionallyMonotoneUnderDomination :
+axiom StandingConditionallyMonotoneUnderDomination :
   Agent → Prop
 
 end SigmaR

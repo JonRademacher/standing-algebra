@@ -24,7 +24,7 @@ namespace SigmaR
 AutonomyComparable A₁ A₂ means that autonomy valuations
 A₁ and A₂ are structurally comparable.
 -/
-constant AutonomyComparable :
+axiom AutonomyComparable :
   AutonomyValuation → AutonomyValuation → Prop
 
 end SigmaR

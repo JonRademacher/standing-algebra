@@ -25,7 +25,7 @@ namespace SigmaR
 AutonomyDependsOnResponse A R means that autonomy valuation A
 is structurally sensitive to response R.
 -/
-constant AutonomyDependsOnResponse :
+axiom AutonomyDependsOnResponse :
   AutonomyValuation → Response → Prop
 
 end SigmaR

@@ -55,7 +55,7 @@ namespace SigmaR
 
 /-- Predicate: the operation performs standing‑weighted
     risk‑based intervention at state `s`. -/
-constant RiskInherited : Operation → State → Prop
+axiom RiskInherited : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Risk Inheritance (Regime‑Level):

@@ -24,7 +24,7 @@ namespace SigmaR
 AutonomyDampening A₁ A₂ means that autonomy valuation A₁
 dampens the autonomy effects represented by A₂.
 -/
-constant AutonomyDampening :
+axiom AutonomyDampening :
   AutonomyValuation → AutonomyValuation → Prop
 
 end SigmaR

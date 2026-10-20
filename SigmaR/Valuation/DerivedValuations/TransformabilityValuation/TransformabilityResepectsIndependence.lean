@@ -23,7 +23,7 @@ TransformabilityRespectsIndependence T means that
 transformability valuation T does not violate
 Independence constraints.
 -/
-constant TransformabilityRespectsIndependence :
+axiom TransformabilityRespectsIndependence :
   TransformabilityValuation → Prop
 
 end SigmaR

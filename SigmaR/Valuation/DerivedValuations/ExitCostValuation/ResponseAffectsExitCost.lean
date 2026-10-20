@@ -25,7 +25,7 @@ namespace SigmaR
 ResponseAffectsExitCost R E means that response R
 has a structural effect on exit cost valuation E.
 -/
-constant ResponseAffectsExitCost :
+axiom ResponseAffectsExitCost :
   Response → ExitCostValuation → Prop
 
 end SigmaR

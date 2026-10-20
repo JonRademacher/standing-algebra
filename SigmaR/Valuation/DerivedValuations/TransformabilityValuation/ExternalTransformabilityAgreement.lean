@@ -24,7 +24,7 @@ namespace SigmaR
 ExternalTransformabilityAgreement A means that transformability
 agreement A is externalized across multiple agents.
 -/
-constant ExternalTransformabilityAgreement :
+axiom ExternalTransformabilityAgreement :
   TransformabilityAgreement → Prop
 
 end SigmaR

@@ -26,7 +26,7 @@ namespace SigmaR
 AutonomyDependsOnExitCostValuation A E means that autonomy
 valuation A is structurally dependent on exit cost valuation E.
 -/
-constant AutonomyDependsOnExitCostValuation :
+axiom AutonomyDependsOnExitCostValuation :
   AutonomyValuation → ExitCostValuation → Prop
 
 end SigmaR

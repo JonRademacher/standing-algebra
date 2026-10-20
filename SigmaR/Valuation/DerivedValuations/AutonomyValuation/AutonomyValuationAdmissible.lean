@@ -25,7 +25,7 @@ namespace SigmaR
 AutonomyValuationAdmissible A means that autonomy valuation A
 is admissible under declared structural constraints.
 -/
-constant AutonomyValuationAdmissible :
+axiom AutonomyValuationAdmissible :
   AutonomyValuation → Prop
 
 end SigmaR

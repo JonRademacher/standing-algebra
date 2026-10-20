@@ -64,7 +64,7 @@ namespace SigmaR
 /-- Predicate: transition criteria
     at state `s` remain rerunnable
     under updated PFAs. -/
-constant Rerunnable : State → Prop
+axiom Rerunnable : State → Prop
 
 /--
 Core legitimacy axiom:

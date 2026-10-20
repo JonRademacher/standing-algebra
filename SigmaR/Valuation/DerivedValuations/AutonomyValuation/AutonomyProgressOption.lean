@@ -20,6 +20,6 @@ namespace SigmaR
 AutonomyProgressOption O means that O represents
 an autonomy-increasing option.
 -/
-constant AutonomyProgressOption : Type
+axiom AutonomyProgressOption : Type
 
 end SigmaR

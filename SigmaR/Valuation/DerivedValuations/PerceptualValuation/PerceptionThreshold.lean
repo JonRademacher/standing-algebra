@@ -26,7 +26,7 @@ namespace SigmaR
 PerceptionThreshold P means that perception valuation P
 is associated with a structural threshold.
 -/
-constant PerceptionThreshold :
+axiom PerceptionThreshold :
   PerceptionValuation → Prop
 
 end SigmaR

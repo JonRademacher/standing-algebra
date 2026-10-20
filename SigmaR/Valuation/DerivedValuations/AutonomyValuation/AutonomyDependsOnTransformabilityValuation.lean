@@ -28,7 +28,7 @@ AutonomyDependsOnTransformabilityValuation A T means that
 autonomy valuation A is structurally dependent on
 transformability valuation T.
 -/
-constant AutonomyDependsOnTransformabilityValuation :
+axiom AutonomyDependsOnTransformabilityValuation :
   AutonomyValuation → TransformabilityValuation → Prop
 
 end SigmaR

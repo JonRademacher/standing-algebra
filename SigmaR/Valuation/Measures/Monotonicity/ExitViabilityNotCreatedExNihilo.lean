@@ -21,7 +21,7 @@ namespace SigmaR
 Exit viability is treated as requiring enabling structure
 to arise along the state preorder.
 -/
-constant ExitViabilityRequiresEnablingStructure :
+axiom ExitViabilityRequiresEnablingStructure :
   Agent → Prop
 
 end SigmaR

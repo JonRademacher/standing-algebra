@@ -23,7 +23,7 @@ namespace SigmaR
 /--
 An exit cost valuation relative to a specific agent and state.
 -/
-constant ExitCostState :
+axiom ExitCostState :
   Agent → State → ExitCostValuation
 
 end SigmaR

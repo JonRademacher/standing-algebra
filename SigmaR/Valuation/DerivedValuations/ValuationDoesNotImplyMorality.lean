@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Derived valuation does not imply morality.
 -/
-constant ValuationDoesNotImplyMorality : Prop
+axiom ValuationDoesNotImplyMorality : Prop
 
 end SigmaR

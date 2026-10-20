@@ -21,7 +21,7 @@ namespace SigmaR
 /--
 Valuation-level invariant predicate.
 -/
-constant ValuationInvariant : State → Prop
+axiom ValuationInvariant : State → Prop
 
 /--
 Admissibility preserves valuation invariants.

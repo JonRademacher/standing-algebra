@@ -24,6 +24,6 @@ namespace SigmaR
 /--
 A structural classification of responses.
 -/
-constant ResponseKind : Response → Prop
+axiom ResponseKind : Response → Prop
 
 end SigmaR

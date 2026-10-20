@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Capacity valuation does not imply morality.
 -/
-constant CapacityDoesNotImplyMorality : Prop
+axiom CapacityDoesNotImplyMorality : Prop
 
 end SigmaR

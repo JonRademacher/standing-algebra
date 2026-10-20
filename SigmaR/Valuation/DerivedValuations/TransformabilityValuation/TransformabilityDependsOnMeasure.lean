@@ -22,7 +22,7 @@ namespace SigmaR
 TransformabilityDependsOnMeasure T M means that transformability
 valuation T structurally depends on valuation measure M.
 -/
-constant TransformabilityDependsOnMeasure :
+axiom TransformabilityDependsOnMeasure :
   TransformabilityValuation → Measure → Prop
 
 end SigmaR

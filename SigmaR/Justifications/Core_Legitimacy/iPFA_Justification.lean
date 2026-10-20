@@ -32,10 +32,10 @@ This grounds one of the necessary components for emergent autonomy.
 namespace SigmaR
 
 /-- Predicate: the agent participates in a perceptual frame agreement (PFA). -/
-constant PerceptualFrameAgreement : Agent → Prop
+axiom PerceptualFrameAgreement : Agent → Prop
 
 /-- Predicate: the agent has a perceptual frame agreement validated across time. -/
-constant TemporallyValidatedPFA : Agent → Prop
+axiom TemporallyValidatedPFA : Agent → Prop
 
 /--
 Tier‑2 justification axiom:

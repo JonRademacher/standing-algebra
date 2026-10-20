@@ -1,4 +1,4 @@
-import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegime_Justification
 
 /-!
 ###############################################################################
@@ -33,7 +33,7 @@ namespace SigmaR
 Predicate: continuation paths from operation `F`
 remain legitimacy-satisfiable beyond state `s`.
 -/
-constant LegitimacySatisfiableBeyond : Operation → State → Prop
+axiom LegitimacySatisfiableBeyond : Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Continuation Legitimacy Stability):

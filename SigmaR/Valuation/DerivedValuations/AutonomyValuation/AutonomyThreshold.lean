@@ -25,7 +25,7 @@ namespace SigmaR
 AutonomyThreshold A means that autonomy valuation A
 is associated with a structural threshold.
 -/
-constant AutonomyThreshold :
+axiom AutonomyThreshold :
   AutonomyValuation → Prop
 
 end SigmaR

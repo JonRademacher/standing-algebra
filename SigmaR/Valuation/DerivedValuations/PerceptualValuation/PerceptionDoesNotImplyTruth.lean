@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Perception valuation does not imply truth.
 -/
-constant PerceptionDoesNotImplyTruth : Prop
+axiom PerceptionDoesNotImplyTruth : Prop
 
 end SigmaR

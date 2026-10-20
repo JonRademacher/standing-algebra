@@ -24,6 +24,6 @@ namespace SigmaR
 An inference pattern is admissible under the system's
 declared constraints.
 -/
-constant AdmissibleInference : Prop
+axiom AdmissibleInference : Prop
 
 end SigmaR

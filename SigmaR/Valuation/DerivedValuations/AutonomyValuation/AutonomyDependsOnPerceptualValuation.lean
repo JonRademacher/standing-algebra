@@ -27,7 +27,7 @@ namespace SigmaR
 AutonomyDependsOnPerceptualValuation A P means that autonomy
 valuation A is structurally dependent on perceptual valuation P.
 -/
-constant AutonomyDependsOnPerceptualValuation :
+axiom AutonomyDependsOnPerceptualValuation :
   AutonomyValuation → PerceptionValuation → Prop
 
 end SigmaR

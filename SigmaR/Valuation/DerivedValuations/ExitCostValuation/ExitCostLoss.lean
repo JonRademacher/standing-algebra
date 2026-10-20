@@ -24,7 +24,7 @@ namespace SigmaR
 ExitCostLoss E₁ E₂ means that exit cost valuation E₂
 represents a loss relative to exit cost valuation E₁.
 -/
-constant ExitCostLoss :
+axiom ExitCostLoss :
   ExitCostValuation → ExitCostValuation → Prop
 
 end SigmaR

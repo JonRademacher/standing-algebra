@@ -24,7 +24,7 @@ namespace SigmaR
 TransformabilityDependsOnOperation T F means that transformability
 valuation T is structurally dependent on operation F.
 -/
-constant TransformabilityDependsOnOperation :
+axiom TransformabilityDependsOnOperation :
   TransformabilityValuation → Operation → Prop
 
 end SigmaR

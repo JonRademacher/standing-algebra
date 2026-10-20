@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Standing valuation does not imply intervention.
 -/
-constant StandingValuationDoesNotImplyIntervention : Prop
+axiom StandingValuationDoesNotImplyIntervention : Prop
 
 end SigmaR

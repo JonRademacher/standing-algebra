@@ -23,7 +23,7 @@ namespace SigmaR
 /--
 A response induces a transition between states.
 -/
-constant ResponseTransition :
+axiom ResponseTransition :
   Response → State → State → Prop
 
 end SigmaR

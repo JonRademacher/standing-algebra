@@ -19,7 +19,7 @@ namespace SigmaR
 A structural postcondition describing the result
 of a response.
 -/
-constant ResponsePostcondition :
+axiom ResponsePostcondition :
   Response → State → Prop
 
 end SigmaR

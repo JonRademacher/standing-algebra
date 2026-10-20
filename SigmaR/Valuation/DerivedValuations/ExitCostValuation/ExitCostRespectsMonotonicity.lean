@@ -24,7 +24,7 @@ namespace SigmaR
 ExitCostRespectsMonotonicity E means that exit cost valuation E
 does not violate declared monotonicity constraints.
 -/
-constant ExitCostRespectsMonotonicity :
+axiom ExitCostRespectsMonotonicity :
   ExitCostValuation → Prop
 
 end SigmaR

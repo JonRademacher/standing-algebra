@@ -1,4 +1,4 @@
-import SigmaR_Core
+import SigmaR.SigmaR_Core
 
 open Nat
 open SigmaR
@@ -8,19 +8,9 @@ namespace SigmaR
 axiom legitimate_implies_admissible :
   ∀ F : Operation, Legitimate F → Admissible F
 
-def StandingPreserved (F : Operation) : Prop :=
-  ∀ a : Agent, σ a ≤ σ (apply F a)
-
+/-- Standing is strictly raised by an operation for a given agent. -/
 def RaisesStanding (F : Operation) (a : Agent) : Prop :=
   σ a < σ (apply F a)
-
-theorem admissible_preserves_standing :
-  ∀ F : Operation,
-    Admissible F →
-    StandingPreserved F :=
-by
-  intro F hAdm a
-  exact ALRP_standing_preservation F a hAdm
 
 theorem legitimate_preserves_standing :
   ∀ F : Operation,
@@ -42,12 +32,12 @@ by
     legitimate_implies_admissible F hLeg
   exact DomPressure_monotonic F s hAdm
 
-theorem realize_S_strict :
+theorem successor_strict :
   ∀ a : Agent,
-    σ a < σ (Realize_S a) :=
+    σ a < σ (SucRealizer a) :=
 by
   intro a
-  rewrite [realize_S_spec]
+  rewrite [SucRealizer_spec]
   exact Nat.lt_succ_self _
 
 def EscalatesDomination (F : Operation) (s : State) : Prop :=

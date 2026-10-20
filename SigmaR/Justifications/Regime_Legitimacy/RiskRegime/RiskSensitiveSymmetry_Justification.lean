@@ -55,7 +55,7 @@ namespace SigmaR
 
 /-- Predicate: the operation performs risk‑sensitive
     asymmetrical intervention at state `s`. -/
-constant RiskSensitiveSymmetry : Operation → State → Prop
+axiom RiskSensitiveSymmetry : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Risk‑Sensitive Symmetry:

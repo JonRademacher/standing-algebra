@@ -24,7 +24,7 @@ namespace SigmaR
 CapacityThreshold C means that capacity valuation C
 is associated with a structural threshold.
 -/
-constant CapacityThreshold :
+axiom CapacityThreshold :
   CapacityValuation → Prop
 
 end SigmaR

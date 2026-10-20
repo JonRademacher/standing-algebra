@@ -25,7 +25,7 @@ namespace SigmaR
 CapacityAgreementStabilizedByEvidence A means that capacity
 agreement A is stabilized through non-parochial evidence.
 -/
-constant CapacityAgreementStabilizedByEvidence :
+axiom CapacityAgreementStabilizedByEvidence :
   CapacityAgreement → Prop
 
 end SigmaR

@@ -1,3 +1,5 @@
+import Collapse_Demonstrations.Collapse
+
 /-
   Collapse_Demonstrations.Collapse_WithStanding
 
@@ -11,7 +13,6 @@
 
 namespace Collapse_Demonstrations
 
-import Collapse_Demonstrations.Collapse
 
 /--
   Standing Algebra monotonicity axiom (ALRP):

@@ -24,7 +24,7 @@ namespace SigmaR
 StandingComparable S₁ S₂ means that standing valuations
 S₁ and S₂ are structurally comparable.
 -/
-constant StandingComparable :
+axiom StandingComparable :
   StandingValuation → StandingValuation → Prop
 
 end SigmaR

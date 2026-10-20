@@ -24,7 +24,7 @@ namespace SigmaR
 CouplingIrreversibility C means that coupling valuation C
 is structurally irreversible once lost.
 -/
-constant CouplingIrreversibility :
+axiom CouplingIrreversibility :
   CouplingValuation → Prop
 
 end SigmaR

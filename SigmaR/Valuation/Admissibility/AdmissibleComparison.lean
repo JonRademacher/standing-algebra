@@ -24,6 +24,6 @@ namespace SigmaR
 A comparison between valuation measures is admissible
 under declared structural constraints.
 -/
-constant AdmissibleComparison : Measure → Measure → Prop
+axiom AdmissibleComparison : Measure → Measure → Prop
 
 end SigmaR

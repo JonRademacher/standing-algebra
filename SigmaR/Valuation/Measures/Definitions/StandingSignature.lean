@@ -16,6 +16,6 @@ namespace SigmaR
 StandingSignature i indicates that agent i participates
 in standing-related structure.
 -/
-constant StandingSignature : Agent → Prop
+axiom StandingSignature : Agent → Prop
 
 end SigmaR

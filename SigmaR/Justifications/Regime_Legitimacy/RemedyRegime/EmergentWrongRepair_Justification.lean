@@ -60,10 +60,10 @@ debt‑bearing and autonomy‑restorative.
 namespace SigmaR
 
 /-- Predicate: an Independently Emergent Wrong is present at state `s`. -/
-constant IndependentlyEmergentWrong : State → Prop
+axiom IndependentlyEmergentWrong : State → Prop
 
 /-- Predicate: the operation performs repair in response to IEW at state `s`. -/
-constant IEWRepair : Operation → State → Prop
+axiom IEWRepair : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for IEW Repair:

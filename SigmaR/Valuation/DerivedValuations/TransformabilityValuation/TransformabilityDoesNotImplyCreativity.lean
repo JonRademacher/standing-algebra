@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Transformability valuation does not imply creativity.
 -/
-constant TransformabilityDoesNotImplyCreativity : Prop
+axiom TransformabilityDoesNotImplyCreativity : Prop
 
 end SigmaR

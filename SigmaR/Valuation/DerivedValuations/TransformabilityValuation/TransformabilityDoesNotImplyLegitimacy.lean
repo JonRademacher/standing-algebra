@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Transformability valuation does not imply legitimacy.
 -/
-constant TransformabilityDoesNotImplyLegitimacy : Prop
+axiom TransformabilityDoesNotImplyLegitimacy : Prop
 
 end SigmaR

@@ -24,7 +24,7 @@ namespace SigmaR
 TransformabilityOperationAvailable F means that operation F
 is available for transformation.
 -/
-constant TransformabilityOperationAvailable :
+axiom TransformabilityOperationAvailable :
   Operation → Prop
 
 end SigmaR

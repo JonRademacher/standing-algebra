@@ -16,11 +16,11 @@ namespace SigmaR
 /--
 An abstract operation acting on agents.
 -/
-constant Operation : Type
+axiom Operation : Type
 
 /--
 Application of an operation to an agent.
 -/
-constant Apply : Operation → Agent → Agent
+axiom Apply : Operation → Agent → Agent
 
 end SigmaR

@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Perception valuation does not imply error.
 -/
-constant PerceptionDoesNotImplyError : Prop
+axiom PerceptionDoesNotImplyError : Prop
 
 end SigmaR

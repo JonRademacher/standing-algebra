@@ -28,6 +28,6 @@ namespace SigmaR
 The Exit Cost Valuation layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant ExitCostValuationContract : Prop
+axiom ExitCostValuationContract : Prop
 
 end SigmaR

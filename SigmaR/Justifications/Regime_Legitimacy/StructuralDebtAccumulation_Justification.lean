@@ -64,7 +64,7 @@ namespace SigmaR
 
 /-- Predicate: the operation participates in any regime
     and contributes to structural debt at state `s`. -/
-constant RegimeDebtAccumulated : Operation → State → Prop
+axiom RegimeDebtAccumulated : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Structural Debt Accumulation:

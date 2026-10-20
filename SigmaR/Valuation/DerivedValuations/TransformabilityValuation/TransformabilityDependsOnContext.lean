@@ -25,7 +25,7 @@ namespace SigmaR
 TransformabilityDependsOnContext T means that transformability
 valuation T is explicitly context-dependent.
 -/
-constant TransformabilityDependsOnContext :
+axiom TransformabilityDependsOnContext :
   TransformabilityValuation → Prop
 
 end SigmaR

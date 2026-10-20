@@ -19,6 +19,6 @@ namespace SigmaR
 Assumptions of irreversibility are admissible only when
 explicitly declared.
 -/
-constant AdmissibleIrreversibility : Measure → Prop
+axiom AdmissibleIrreversibility : Measure → Prop
 
 end SigmaR

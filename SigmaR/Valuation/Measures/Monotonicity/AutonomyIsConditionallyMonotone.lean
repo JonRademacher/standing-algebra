@@ -22,7 +22,7 @@ namespace SigmaR
 Autonomy is treated as conditionally monotone decreasing
 with respect to domination pressure along the state preorder.
 -/
-constant AutonomyConditionallyMonotoneUnderDomination :
+axiom AutonomyConditionallyMonotoneUnderDomination :
   Agent → Prop
 
 end SigmaR

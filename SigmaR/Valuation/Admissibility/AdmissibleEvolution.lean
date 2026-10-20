@@ -24,6 +24,6 @@ namespace SigmaR
 Reasoning about the evolution of a valuation measure
 is admissible under declared constraints.
 -/
-constant AdmissibleEvolution : Measure → Prop
+axiom AdmissibleEvolution : Measure → Prop
 
 end SigmaR

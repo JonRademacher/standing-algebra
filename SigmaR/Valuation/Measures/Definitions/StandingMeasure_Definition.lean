@@ -18,6 +18,6 @@ Standing measure for an agent in a given state.
 This is a valuation-level quantity derived from standing,
 not an objective, utility, or preference.
 -/
-constant StandingMeasure : Agent → State → Nat
+axiom StandingMeasure : Agent → State → Nat
 
 end SigmaR

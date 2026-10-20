@@ -25,7 +25,7 @@ namespace SigmaR
 ResponseAffectsAutonomy R A means that response R
 has a structural effect on autonomy valuation A.
 -/
-constant ResponseAffectsAutonomy :
+axiom ResponseAffectsAutonomy :
   Response → AutonomyValuation → Prop
 
 end SigmaR

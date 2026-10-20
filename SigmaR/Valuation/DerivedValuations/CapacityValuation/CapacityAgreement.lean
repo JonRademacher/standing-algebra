@@ -22,7 +22,7 @@ namespace SigmaR
 /--
 An abstract structure representing capacity agreement.
 -/
-constant CapacityAgreement : Type
+axiom CapacityAgreement : Type
 
 end SigmaR
 ``

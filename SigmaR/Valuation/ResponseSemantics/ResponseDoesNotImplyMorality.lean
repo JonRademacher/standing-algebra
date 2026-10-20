@@ -21,6 +21,6 @@ namespace SigmaR
 Response semantics do not imply moral evaluation
 or ethical judgment.
 -/
-constant ResponseDoesNotImplyMorality : Prop
+axiom ResponseDoesNotImplyMorality : Prop
 
 end SigmaR

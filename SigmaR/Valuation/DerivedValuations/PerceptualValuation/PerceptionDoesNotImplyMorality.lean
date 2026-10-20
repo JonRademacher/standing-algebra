@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Perception valuation does not imply morality.
 -/
-constant PerceptionDoesNotImplyMorality : Prop
+axiom PerceptionDoesNotImplyMorality : Prop
 
 end SigmaR

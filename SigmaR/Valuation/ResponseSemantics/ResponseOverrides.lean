@@ -25,7 +25,7 @@ namespace SigmaR
 ResponseOverrides R₁ R₂ means that response R₁
 structurally supersedes the effect of response R₂.
 -/
-constant ResponseOverrides :
+axiom ResponseOverrides :
   Response → Response → Prop
 
 end SigmaR

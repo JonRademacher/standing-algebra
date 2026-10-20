@@ -25,7 +25,7 @@ namespace SigmaR
 StandingThreshold S means that standing valuation S
 is associated with a structural threshold.
 -/
-constant StandingThreshold :
+axiom StandingThreshold :
   StandingValuation → Prop
 
 end SigmaR

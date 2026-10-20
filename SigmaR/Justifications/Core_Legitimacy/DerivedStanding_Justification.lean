@@ -83,7 +83,7 @@ namespace SigmaR
     at state `s`
     is derived from
     autonomy‑bearing agents. -/
-constant DerivedStanding : State → Prop
+axiom DerivedStanding : State → Prop
 
 /--
 Core legitimacy axiom:

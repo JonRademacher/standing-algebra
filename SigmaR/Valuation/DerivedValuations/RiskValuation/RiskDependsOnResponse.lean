@@ -25,7 +25,7 @@ namespace SigmaR
 RiskDependsOnResponse R S means that risk valuation R
 is structurally sensitive to response S.
 -/
-constant RiskDependsOnResponse :
+axiom RiskDependsOnResponse :
   RiskValuation → Response → Prop
 
 end SigmaR

@@ -29,6 +29,6 @@ agent a in state s.
 Higher values indicate greater temporal binding or loss
 of future admissible freedom.
 -/
-constant TemporalAccumulation : Agent → State → Nat
+axiom TemporalAccumulation : Agent → State → Nat
 
 end SigmaR

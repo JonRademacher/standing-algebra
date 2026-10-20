@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Capacity valuation does not imply legitimacy.
 -/
-constant CapacityDoesNotImplyLegitimacy : Prop
+axiom CapacityDoesNotImplyLegitimacy : Prop
 
 end SigmaR

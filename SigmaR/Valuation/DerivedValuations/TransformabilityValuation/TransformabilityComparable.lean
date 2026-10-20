@@ -25,7 +25,7 @@ namespace SigmaR
 TransformabilityComparable T₁ T₂ means that transformability
 valuations T₁ and T₂ are structurally comparable.
 -/
-constant TransformabilityComparable :
+axiom TransformabilityComparable :
   TransformabilityValuation → TransformabilityValuation → Prop
 
 end SigmaR

@@ -32,23 +32,23 @@ namespace SigmaR
 ------------------------------------------------------------------------
 
 /-- Gate 1: Risk inheritance & validation -/
-constant RiskInheritanceValidated :
+axiom RiskInheritanceValidated :
   Operation → State → Prop
 
 /-- Gate 2: Non‑parochial evidence -/
-constant NonParochialEvidence :
+axiom NonParochialEvidence :
   Operation → State → Prop
 
 /-- Gate 3: NRPP fit -/
-constant NRPP_Fit :
+axiom NRPP_Fit :
   Operation → State → Prop
 
 /-- Gate 4: Alternatives considered -/
-constant AlternativesConsidered :
+axiom AlternativesConsidered :
   Operation → State → Prop
 
 /-- Gate 5: Off‑ramps and correction -/
-constant OffRampsAndCorrection :
+axiom OffRampsAndCorrection :
   Operation → State → Prop
 
 ------------------------------------------------------------------------

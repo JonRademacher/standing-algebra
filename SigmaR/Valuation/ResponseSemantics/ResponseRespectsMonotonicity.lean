@@ -22,7 +22,7 @@ namespace SigmaR
 ResponseRespectsMonotonicity R means that response R
 does not violate declared monotonicity constraints.
 -/
-constant ResponseRespectsMonotonicity :
+axiom ResponseRespectsMonotonicity :
   Response → Prop
 
 end SigmaR

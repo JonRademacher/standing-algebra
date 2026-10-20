@@ -24,7 +24,7 @@ namespace SigmaR
 CapacityProgressOptionSet S means that S is a set
 of capacity-progress options.
 -/
-constant CapacityProgressOptionSet :
+axiom CapacityProgressOptionSet :
   CapacityProgressOption → Prop
 
 end SigmaR

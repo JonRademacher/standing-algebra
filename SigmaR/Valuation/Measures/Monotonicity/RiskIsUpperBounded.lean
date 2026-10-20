@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Risk exposure is treated as upper bounded.
 -/
-constant RiskUpperBounded : Prop
+axiom RiskUpperBounded : Prop
 
 end SigmaR

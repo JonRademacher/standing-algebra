@@ -1,5 +1,5 @@
 import SigmaR.Operations.LegitimacyInterface
-import SigmaR.Justifications.Regimes.ExitRegime.ExitPreservation_Justification
+import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitPreservation_Justification
 import SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification
 
 /-!

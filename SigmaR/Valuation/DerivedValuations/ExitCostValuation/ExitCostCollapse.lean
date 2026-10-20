@@ -25,7 +25,7 @@ namespace SigmaR
 ExitCostCollapse E means that exit cost valuation E
 has structurally collapsed.
 -/
-constant ExitCostCollapse :
+axiom ExitCostCollapse :
   ExitCostValuation → Prop
 
 end SigmaR

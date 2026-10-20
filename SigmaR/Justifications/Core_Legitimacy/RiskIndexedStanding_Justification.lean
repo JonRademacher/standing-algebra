@@ -68,7 +68,7 @@ namespace SigmaR
 /-- Predicate: standing at state `s`
     is indexed by exposure
     to autonomy‑impacting constraint. -/
-constant RiskIndexedStanding : State → Prop
+axiom RiskIndexedStanding : State → Prop
 
 /--
 Core legitimacy axiom:

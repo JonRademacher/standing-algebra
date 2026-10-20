@@ -25,7 +25,7 @@ namespace SigmaR
 TransformabilityHysteresis T means that transformability valuation T
 exhibits path-dependent behavior.
 -/
-constant TransformabilityHysteresis :
+axiom TransformabilityHysteresis :
   TransformabilityValuation → Prop
 
 end SigmaR

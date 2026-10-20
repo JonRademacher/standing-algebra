@@ -18,6 +18,6 @@ namespace SigmaR
 Admissibility requires satisfaction of well-formedness constraints,
 but does not collapse into them.
 -/
-constant AdmissibleUnderWellFormedness : Prop
+axiom AdmissibleUnderWellFormedness : Prop
 
 end SigmaR

@@ -18,6 +18,6 @@ Capacity measure for an agent in a given state.
 This reflects structural capability or autonomy bandwidth,
 not authority or merit.
 -/
-constant CapacityMeasure : Agent → State → Nat
+axiom CapacityMeasure : Agent → State → Nat
 
 end SigmaR

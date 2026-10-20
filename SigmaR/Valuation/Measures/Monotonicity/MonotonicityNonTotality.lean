@@ -24,6 +24,6 @@ namespace SigmaR
 The state ordering used for monotonicity is treated
 as potentially non-total.
 -/
-constant MonotonicityAllowsNonTotalOrder : Prop
+axiom MonotonicityAllowsNonTotalOrder : Prop
 
 end SigmaR

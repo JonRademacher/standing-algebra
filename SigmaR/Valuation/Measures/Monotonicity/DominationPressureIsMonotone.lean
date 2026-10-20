@@ -22,6 +22,6 @@ namespace SigmaR
 Domination pressure is treated as monotone
 along the state preorder.
 -/
-constant DominationPressureMonotone : Prop
+axiom DominationPressureMonotone : Prop
 
 end SigmaR

@@ -23,7 +23,7 @@ namespace SigmaR
 /--
 A transformability level associated with a transformability valuation.
 -/
-constant TransformabilityLevel :
+axiom TransformabilityLevel :
   TransformabilityValuation → Val
 
 end SigmaR

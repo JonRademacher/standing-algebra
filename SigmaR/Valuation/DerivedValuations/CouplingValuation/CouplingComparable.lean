@@ -25,7 +25,7 @@ namespace SigmaR
 CouplingComparable C₁ C₂ means that coupling valuations
 C₁ and C₂ are structurally comparable.
 -/
-constant CouplingComparable :
+axiom CouplingComparable :
   CouplingValuation → CouplingValuation → Prop
 
 end SigmaR

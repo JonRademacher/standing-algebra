@@ -24,6 +24,6 @@ namespace SigmaR
 An admissible measure is used only within its declared domain
 and scope.
 -/
-constant AdmissibleMeasureUsage : Measure → Prop
+axiom AdmissibleMeasureUsage : Measure → Prop
 
 end SigmaR

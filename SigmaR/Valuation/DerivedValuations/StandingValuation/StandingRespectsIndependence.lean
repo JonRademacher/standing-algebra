@@ -20,7 +20,7 @@ namespace SigmaR
 StandingRespectsIndependence S means that standing valuation S
 does not violate Independence constraints.
 -/
-constant StandingRespectsIndependence :
+axiom StandingRespectsIndependence :
   StandingValuation → Prop
 
 end SigmaR

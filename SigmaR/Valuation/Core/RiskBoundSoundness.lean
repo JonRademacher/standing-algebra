@@ -17,12 +17,12 @@ namespace SigmaR
 /--
 Risk load valuation.
 -/
-constant RiskLoad : Agent → State → Nat
+axiom RiskLoad : Agent → State → Nat
 
 /--
 Predicate: operation respects risk bounds.
 -/
-constant RiskBounded : Operation → Prop
+axiom RiskBounded : Operation → Prop
 
 /--
 Risk soundness axiom:

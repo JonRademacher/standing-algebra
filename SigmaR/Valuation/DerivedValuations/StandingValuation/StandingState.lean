@@ -23,7 +23,7 @@ namespace SigmaR
 /--
 A standing valuation relative to a specific agent and state.
 -/
-constant StandingState :
+axiom StandingState :
   Agent → State → StandingValuation
 
 end SigmaR

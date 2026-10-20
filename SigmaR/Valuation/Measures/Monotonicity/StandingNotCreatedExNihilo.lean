@@ -21,7 +21,7 @@ namespace SigmaR
 Standing is treated as requiring enabling structure
 to increase along the state preorder.
 -/
-constant StandingRequiresEnablingStructure :
+axiom StandingRequiresEnablingStructure :
   Agent → Prop
 
 end SigmaR

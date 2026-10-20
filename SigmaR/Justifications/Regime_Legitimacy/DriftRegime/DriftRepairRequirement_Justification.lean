@@ -1,5 +1,5 @@
-import SigmaR.Justifications.Regimes.RemedyRegime.RemedyRegime_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegime_Justification
 
 /-!
 ###############################################################################
@@ -28,7 +28,7 @@ namespace SigmaR
 Predicate: drift operation `D` requires
 a repair operation `R` after accumulation.
 -/
-constant DriftRequiresRepair : Operation → Operation → Prop
+axiom DriftRequiresRepair : Operation → Operation → Prop
 
 /--
 Tier-2 legitimacy axiom (Drift Repair Requirement):

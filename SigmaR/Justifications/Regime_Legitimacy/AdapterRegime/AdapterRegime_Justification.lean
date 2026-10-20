@@ -1,8 +1,8 @@
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
-import SigmaR.Justifications.Regimes.Adapter.EpistemicAdapter_Justification
-import SigmaR.Justifications.Regimes.Adapter.AdapterScopeIntegrity_Justification
+import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.EpistemicAdapter_Justification
+import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterScopeIntegrity_Justification
 
 /-!
 ###############################################################################
@@ -92,7 +92,7 @@ namespace SigmaR
 /-- Predicate: the operation participates
     in the Adapter Regime
     at state `s`. -/
-constant AdapterRegimeOp : Operation → State → Prop
+axiom AdapterRegimeOp : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom

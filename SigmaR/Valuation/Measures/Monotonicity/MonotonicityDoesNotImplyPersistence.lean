@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Monotonicity relations are treated as non-persistent.
 -/
-constant MonotonicityDoesNotGuaranteePersistence : Prop
+axiom MonotonicityDoesNotGuaranteePersistence : Prop
 
 end SigmaR

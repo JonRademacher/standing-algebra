@@ -24,7 +24,7 @@ namespace SigmaR
 /--
 A risk valuation relative to a specific agent and state.
 -/
-constant RiskState :
+axiom RiskState :
   Agent → State → RiskValuation
 
 end SigmaR

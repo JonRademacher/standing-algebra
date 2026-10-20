@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Transformability valuation does not imply competence.
 -/
-constant TransformabilityDoesNotImplyCompetence : Prop
+axiom TransformabilityDoesNotImplyCompetence : Prop
 
 end SigmaR

@@ -8,7 +8,7 @@ Operations-level predicate:
 `F` represents a compromise operation
 where agents accept bounded concessions.
 -/
-constant CompromiseOp : Operation → Prop
+axiom CompromiseOp : Operation → Prop
 
 /--
 Operations-level invariant (Compromise):

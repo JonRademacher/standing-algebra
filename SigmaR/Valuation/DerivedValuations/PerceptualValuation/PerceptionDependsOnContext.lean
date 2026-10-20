@@ -27,7 +27,7 @@ namespace SigmaR
 PerceptionDependsOnContext P means that perception valuation P
 is explicitly context-dependent.
 -/
-constant PerceptionDependsOnContext :
+axiom PerceptionDependsOnContext :
   PerceptionValuation → Prop
 
 end SigmaR

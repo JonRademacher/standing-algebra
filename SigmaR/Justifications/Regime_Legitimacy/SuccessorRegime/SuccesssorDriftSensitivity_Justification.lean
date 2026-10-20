@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegime_Justification
 
 /-!
 ###############################################################################
@@ -34,13 +34,13 @@ namespace SigmaR
 Predicate: operation `F` performs successor-based
 standing change for agent `a` at state `s`.
 -/
-constant SuccessorChange : Agent → Operation → State → Prop
+axiom SuccessorChange : Agent → Operation → State → Prop
 
 /--
 Predicate: operation `D` performs drift-based
 perturbation for agent `a` at state `s`.
 -/
-constant DriftChange : Agent → Operation → State → Prop
+axiom DriftChange : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Successor–Drift Sensitivity):

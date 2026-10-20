@@ -25,7 +25,7 @@ namespace SigmaR
 /--
 Predicate: `R` is a regime predicate over operations.
 -/
-constant RegimePredicate : (Operation → Prop) → Prop
+axiom RegimePredicate : (Operation → Prop) → Prop
 
 /--
 Regime presupposition axiom:

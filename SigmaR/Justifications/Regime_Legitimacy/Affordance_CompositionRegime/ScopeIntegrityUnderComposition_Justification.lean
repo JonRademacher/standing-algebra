@@ -1,5 +1,5 @@
-import SigmaR.Justifications.Regimes.AdapterRegime.AdapterScopeIntegrity_Justification
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterScopeIntegrity_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
 
 /-!
 ###############################################################################
@@ -25,12 +25,12 @@ namespace SigmaR
 /--
 Predicate: operation `F` is justified within scope `S`.
 -/
-constant Scoped : Operation → Scope → Prop
+axiom Scoped : Operation → Scope → Prop
 
 /--
 Predicate: operation `G` produces effects outside scope `S`.
 -/
-constant ScopeEscalates : Operation → Scope → Prop
+axiom ScopeEscalates : Operation → Scope → Prop
 
 /--
 Tier-2 legitimacy axiom (Scope Integrity Under Composition):

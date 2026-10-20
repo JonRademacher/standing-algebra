@@ -19,7 +19,7 @@ namespace SigmaR
 CapacityProgressEndorsable S means that the capacity-progress
 options in S are structurally endorsable.
 -/
-constant CapacityProgressEndorsable :
+axiom CapacityProgressEndorsable :
   CapacityProgressOptionSet → Prop
 
 end SigmaR

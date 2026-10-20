@@ -18,6 +18,6 @@ namespace SigmaR
 Admissibility is treated as explicitly scoped and
 never globally applicable by default.
 -/
-constant AdmissibilityScope : Prop
+axiom AdmissibilityScope : Prop
 
 end SigmaR

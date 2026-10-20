@@ -25,6 +25,6 @@ namespace SigmaR
 Transformability valuation is explicitly scoped and
 never globally applicable by default.
 -/
-constant TransformabilityValuationScope : Prop
+axiom TransformabilityValuationScope : Prop
 
 end SigmaR

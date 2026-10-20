@@ -24,7 +24,7 @@ namespace SigmaR
 PerceptionDependsOnMeasure P M means that perception valuation P
 structurally depends on valuation measure M.
 -/
-constant PerceptionDependsOnMeasure :
+axiom PerceptionDependsOnMeasure :
   PerceptionValuation → Measure → Prop
 
 end SigmaR

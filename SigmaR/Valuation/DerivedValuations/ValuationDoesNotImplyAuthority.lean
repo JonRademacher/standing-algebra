@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Derived valuation does not imply authority.
 -/
-constant ValuationDoesNotImplyAuthority : Prop
+axiom ValuationDoesNotImplyAuthority : Prop
 
 end SigmaR

@@ -25,7 +25,7 @@ namespace SigmaR
 ValuationLoss V₁ V₂ means that valuation V₂
 represents a loss relative to valuation V₁.
 -/
-constant ValuationLoss :
+axiom ValuationLoss :
   DerivedValuation → DerivedValuation → Prop
 
 end SigmaR

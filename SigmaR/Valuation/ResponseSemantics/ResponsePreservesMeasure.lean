@@ -25,7 +25,7 @@ namespace SigmaR
 ResponsePreservesMeasure R M means that response R
 does not alter valuation measure M.
 -/
-constant ResponsePreservesMeasure :
+axiom ResponsePreservesMeasure :
   Response → Measure → Prop
 
 end SigmaR

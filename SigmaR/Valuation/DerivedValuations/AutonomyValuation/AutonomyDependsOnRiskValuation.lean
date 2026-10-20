@@ -26,7 +26,7 @@ namespace SigmaR
 AutonomyDependsOnRiskValuation A R means that autonomy
 valuation A is structurally dependent on risk valuation R.
 -/
-constant AutonomyDependsOnRiskValuation :
+axiom AutonomyDependsOnRiskValuation :
   AutonomyValuation → RiskValuation → Prop
 
 end SigmaR

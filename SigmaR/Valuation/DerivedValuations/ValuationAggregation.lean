@@ -25,7 +25,7 @@ namespace SigmaR
 ValuationAggregation V₁ V₂ V₃ means that valuation V₃
 is an aggregation of valuations V₁ and V₂.
 -/
-constant ValuationAggregation :
+axiom ValuationAggregation :
   DerivedValuation → DerivedValuation → DerivedValuation → Prop
 
 end SigmaR

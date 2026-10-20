@@ -19,7 +19,7 @@ namespace SigmaR
 AutonomyProgressEndorsable S means that the autonomy-progress
 options in S are structurally endorsable.
 -/
-constant AutonomyProgressEndorsable :
+axiom AutonomyProgressEndorsable :
   AutonomyProgressOptionSet → Prop
 
 end SigmaR

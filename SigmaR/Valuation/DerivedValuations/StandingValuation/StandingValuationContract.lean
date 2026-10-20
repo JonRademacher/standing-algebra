@@ -27,6 +27,6 @@ namespace SigmaR
 The Standing Valuation layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant StandingValuationContract : Prop
+axiom StandingValuationContract : Prop
 
 end SigmaR

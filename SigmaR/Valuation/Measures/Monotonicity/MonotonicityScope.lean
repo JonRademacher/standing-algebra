@@ -22,6 +22,6 @@ namespace SigmaR
 Monotonicity relations are treated as scoped to
 an explicit state ordering and system context.
 -/
-constant MonotonicityRequiresScope : Prop
+axiom MonotonicityRequiresScope : Prop
 
 end SigmaR

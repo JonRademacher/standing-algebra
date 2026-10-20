@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Exit cost valuation does not imply legitimacy.
 -/
-constant ExitCostDoesNotImplyLegitimacy : Prop
+axiom ExitCostDoesNotImplyLegitimacy : Prop
 
 end SigmaR

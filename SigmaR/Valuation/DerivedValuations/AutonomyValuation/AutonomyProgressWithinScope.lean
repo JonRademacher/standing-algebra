@@ -19,7 +19,7 @@ namespace SigmaR
 AutonomyProgressWithinScope S means that the autonomy-progress
 options in S are within scope.
 -/
-constant AutonomyProgressWithinScope :
+axiom AutonomyProgressWithinScope :
   AutonomyProgressOptionSet → Prop
 
 end SigmaR

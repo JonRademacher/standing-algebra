@@ -24,6 +24,6 @@ namespace SigmaR
 An agent-relative perspective is admissible for valuation reasoning
 under explicitly declared constraints.
 -/
-constant AdmissibleAgentPerspective : Agent → Prop
+axiom AdmissibleAgentPerspective : Agent → Prop
 
 end SigmaR

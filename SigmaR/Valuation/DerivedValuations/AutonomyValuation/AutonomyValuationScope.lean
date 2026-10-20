@@ -25,6 +25,6 @@ namespace SigmaR
 Autonomy valuation is explicitly scoped and
 never globally applicable by default.
 -/
-constant AutonomyValuationScope : Prop
+axiom AutonomyValuationScope : Prop
 
 end SigmaR

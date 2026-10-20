@@ -16,7 +16,7 @@ namespace SigmaR
 /--
 Predicate: μ depends only on dependency structure.
 -/
-constant DependsOnlyOnDependency :
+axiom DependsOnlyOnDependency :
   (Agent → State → Nat) → Prop
 
 /--

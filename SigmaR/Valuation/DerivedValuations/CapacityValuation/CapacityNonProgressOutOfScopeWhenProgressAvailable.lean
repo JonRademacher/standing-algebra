@@ -23,7 +23,7 @@ CapacityNonProgressOutOfScopeWhenProgressAvailable S
 means that non-progress options are out of scope
 when progress options S are available.
 -/
-constant CapacityNonProgressOutOfScopeWhenProgressAvailable :
+axiom CapacityNonProgressOutOfScopeWhenProgressAvailable :
   CapacityProgressOptionSet → Prop
 
 end SigmaR

@@ -28,7 +28,7 @@ TransformabilityDependsOnPerceptualValuation T P means that
 transformability valuation T is structurally dependent
 on perceptual valuation P.
 -/
-constant TransformabilityDependsOnPerceptualValuation :
+axiom TransformabilityDependsOnPerceptualValuation :
   TransformabilityValuation → PerceptionValuation → Prop
 
 end SigmaR

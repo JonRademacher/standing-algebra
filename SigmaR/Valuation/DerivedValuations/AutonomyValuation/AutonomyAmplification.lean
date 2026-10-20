@@ -24,7 +24,7 @@ namespace SigmaR
 AutonomyAmplification A₁ A₂ means that autonomy valuation A₁
 amplifies the autonomy effects represented by A₂.
 -/
-constant AutonomyAmplification :
+axiom AutonomyAmplification :
   AutonomyValuation → AutonomyValuation → Prop
 
 end SigmaR

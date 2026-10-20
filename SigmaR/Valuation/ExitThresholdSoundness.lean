@@ -1,3 +1,8 @@
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.StandingValuation
+import SigmaR.Valuation.StandingWellDefined
+import SigmaR.Valuation.DebtWellDefined
+
 /-!
 ###############################################################################
 # Exit Threshold Soundness (Validation Layer)
@@ -17,10 +22,6 @@ This file is validation-only and downstream of valuation.
 
 namespace SigmaR
 
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.StandingValuation
-import SigmaR.Valuation.StandingWellDefined
-import SigmaR.Valuation.DebtWellDefined
 
 /* -------------------------------------------------------------------------- */
 /* Primitive exit structure                                                    */
@@ -32,7 +33,7 @@ agent i claims structural ability to exit at state s.
 
 No action, operation, or enforcement is implied.
 -/
-constant ExitThreshold : Agent → State → Prop
+axiom ExitThreshold : Agent → State → Prop
 
 /* -------------------------------------------------------------------------- */
 /* Basic extensionality                                                        */

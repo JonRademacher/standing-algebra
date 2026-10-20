@@ -1,12 +1,12 @@
-import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftScopeIntegrity_Justification
+import SigmaR.Valuation.DerivedValuations.CapacityValuation.CapacityValuation
 
 /-!
 ###############################################################################
-# DriftScopeIntegrity_Justification — compatibility module
+# CapacityValuation — compatibility module
 ###############################################################################
 
 This module is the path the rest of the repository imports.  The material it
-carries lives in `SigmaR/Justifications/Regime_Legitimacy/DriftRegime/DriftScopeIntegrity_Justification.lean`; re-exporting it here keeps every existing import in the
+carries lives in `SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityValuation.lean`; re-exporting it here keeps every existing import in the
 tree valid.
 ###############################################################################
 -/

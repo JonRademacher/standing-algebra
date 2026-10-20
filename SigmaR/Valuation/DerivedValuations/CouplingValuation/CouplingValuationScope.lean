@@ -20,6 +20,6 @@ namespace SigmaR
 Coupling valuation is explicitly scoped and
 never globally applicable by default.
 -/
-constant CouplingValuationScope : Prop
+axiom CouplingValuationScope : Prop
 
 end SigmaR

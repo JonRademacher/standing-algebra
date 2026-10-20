@@ -25,7 +25,7 @@ namespace SigmaR
 PerceptionHysteresis P means that perception valuation P
 exhibits path-dependent behavior.
 -/
-constant PerceptionHysteresis :
+axiom PerceptionHysteresis :
   PerceptionValuation → Prop
 
 end SigmaR

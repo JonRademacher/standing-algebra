@@ -20,6 +20,6 @@ namespace SigmaR
 Exit cost valuation is explicitly scoped and
 never globally applicable by default.
 -/
-constant ExitCostValuationScope : Prop
+axiom ExitCostValuationScope : Prop
 
 end SigmaR

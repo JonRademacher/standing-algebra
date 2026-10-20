@@ -24,7 +24,7 @@ namespace SigmaR
 PerceptionIrreversibility P means that perception valuation P
 is structurally irreversible once degraded.
 -/
-constant PerceptionIrreversibility :
+axiom PerceptionIrreversibility :
   PerceptionValuation → Prop
 
 end SigmaR

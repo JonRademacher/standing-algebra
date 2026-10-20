@@ -24,7 +24,7 @@ namespace SigmaR
 StandingIrreversibility S means that standing valuation S
 is structurally irreversible once lost.
 -/
-constant StandingIrreversibility :
+axiom StandingIrreversibility :
   StandingValuation → Prop
 
 end SigmaR

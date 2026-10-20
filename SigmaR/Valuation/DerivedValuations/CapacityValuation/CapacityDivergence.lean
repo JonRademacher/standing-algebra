@@ -24,7 +24,7 @@ namespace SigmaR
 CapacityDivergence C₁ C₂ means that capacity valuations
 C₁ and C₂ are structurally diverging.
 -/
-constant CapacityDivergence :
+axiom CapacityDivergence :
   CapacityValuation → CapacityValuation → Prop
 
 end SigmaR

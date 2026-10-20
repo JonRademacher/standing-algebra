@@ -1,6 +1,6 @@
-import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorConsistency_Justification
-import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorAvailability_Justification
-import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorNonDeprivation_Justification
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorConsistency_Justification
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorAvailability_Justification
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorNonDeprivation_Justification
 
 /-!
 ###############################################################################
@@ -39,7 +39,7 @@ Successor Regime.
 This marks operations whose legitimacy depends
 on successor-based standing change constraints.
 -/
-constant SuccessorRegimeOp : Operation → Prop
+axiom SuccessorRegimeOp : Operation → Prop
 
 /--
 Tier-2 regime declaration:

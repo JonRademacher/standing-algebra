@@ -26,6 +26,6 @@ namespace SigmaR
 /--
 The transformability progress boundary does not imply selection.
 -/
-constant TransformabilityProgressBoundaryDoesNotImplySelection : Prop
+axiom TransformabilityProgressBoundaryDoesNotImplySelection : Prop
 
 end SigmaR

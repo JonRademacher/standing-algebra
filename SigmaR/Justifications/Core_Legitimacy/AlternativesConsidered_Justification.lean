@@ -36,7 +36,7 @@ at the given state.
 This captures that coercive intervention is not applied prematurely
 without evaluating viable non‑coercive responses.
 -/
-constant AlternativesConsidered : Operation → State → Prop
+axiom AlternativesConsidered : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom:

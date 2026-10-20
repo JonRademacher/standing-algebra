@@ -20,7 +20,7 @@ namespace SigmaR
 AutonomyFragility A means that autonomy valuation A
 is structurally sensitive to certain changes.
 -/
-constant AutonomyFragility :
+axiom AutonomyFragility :
   AutonomyValuation → Prop
 
 end SigmaR

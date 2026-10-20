@@ -22,6 +22,6 @@ namespace SigmaR
 Temporal accumulation is treated as irreversible
 along the state preorder.
 -/
-constant TemporalAccumulationIrreversible : Prop
+axiom TemporalAccumulationIrreversible : Prop
 
 end SigmaR

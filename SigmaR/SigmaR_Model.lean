@@ -1,4 +1,4 @@
-import SigmaR_Basics
+import SigmaR.SigmaR_Basics
 
 open SigmaR
 

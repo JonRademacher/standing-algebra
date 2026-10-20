@@ -24,7 +24,7 @@ namespace SigmaR
 CapacityDependsOnMeasure C M means that capacity valuation C
 structurally depends on valuation measure M.
 -/
-constant CapacityDependsOnMeasure :
+axiom CapacityDependsOnMeasure :
   CapacityValuation → Measure → Prop
 
 end SigmaR

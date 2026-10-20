@@ -28,7 +28,7 @@ namespace SigmaR
 PerceptionAggregation P₁ P₂ P₃ means that perception valuation P₃
 is an aggregation of perception valuations P₁ and P₂.
 -/
-constant PerceptionAggregation :
+axiom PerceptionAggregation :
   PerceptionValuation → PerceptionValuation → PerceptionValuation → Prop
 
 end SigmaR

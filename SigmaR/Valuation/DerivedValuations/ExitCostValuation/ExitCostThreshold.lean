@@ -25,7 +25,7 @@ namespace SigmaR
 ExitCostThreshold E means that exit cost valuation E
 is associated with a structural threshold.
 -/
-constant ExitCostThreshold :
+axiom ExitCostThreshold :
   ExitCostValuation → Prop
 
 end SigmaR

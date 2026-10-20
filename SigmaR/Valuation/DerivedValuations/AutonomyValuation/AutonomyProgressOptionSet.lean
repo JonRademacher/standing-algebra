@@ -21,7 +21,7 @@ namespace SigmaR
 AutonomyProgressOptionSet S means that S is a set
 of autonomy-progress options.
 -/
-constant AutonomyProgressOptionSet :
+axiom AutonomyProgressOptionSet :
   AutonomyProgressOption → Prop
 
 end SigmaR

@@ -1,6 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.NonSelection_Justification
 import SigmaR.Justifications.Core_Legitimacy.StandingMonotonicity
-import SigmaR.Justifications.Regimes.AdapterRegime.AdapterRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterRegime_Justification
 
 /-!
 ###############################################################################
@@ -36,7 +36,7 @@ as a constituent step.
 
 This predicate abstracts over the internal structure of adapter pipelines.
 -/
-constant AdapterComposed : Operation → Operation → Prop
+axiom AdapterComposed : Operation → Operation → Prop
 
 /--
 Tier-2 legitimacy axiom (Adapter Composition Non-Selection):

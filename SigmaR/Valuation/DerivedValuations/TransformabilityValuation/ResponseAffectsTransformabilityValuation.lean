@@ -26,7 +26,7 @@ namespace SigmaR
 ResponseAffectsTransformabilityValuation R T means that response R
 has a structural effect on transformability valuation T.
 -/
-constant ResponseAffectsTransformabilityValuation :
+axiom ResponseAffectsTransformabilityValuation :
   Response → TransformabilityValuation → Prop
 
 end SigmaR

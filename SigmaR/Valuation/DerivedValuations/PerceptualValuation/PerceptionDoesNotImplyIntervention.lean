@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Perception valuation does not imply intervention.
 -/
-constant PerceptionDoesNotImplyIntervention : Prop
+axiom PerceptionDoesNotImplyIntervention : Prop
 
 end SigmaR

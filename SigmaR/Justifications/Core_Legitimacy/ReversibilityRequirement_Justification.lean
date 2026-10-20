@@ -69,7 +69,7 @@ namespace SigmaR
 /-- Predicate: the intervention
     at state `s`
     admits CIA‑restoring reversal. -/
-constant Reversible : State → Prop
+axiom Reversible : State → Prop
 
 /--
 Core legitimacy axiom:

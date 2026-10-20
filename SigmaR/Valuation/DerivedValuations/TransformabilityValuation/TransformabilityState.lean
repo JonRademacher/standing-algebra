@@ -24,7 +24,7 @@ namespace SigmaR
 /--
 A transformability valuation relative to a specific agent and state.
 -/
-constant TransformabilityState :
+axiom TransformabilityState :
   Agent → State → TransformabilityValuation
 
 end SigmaR

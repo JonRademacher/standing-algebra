@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.ContestationCondition_Justification
-import SigmaR.Justifications.Regimes.Adapter.AdapterInference_Justification
+import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterInterference_Justification
 
 /-!
 ###############################################################################
@@ -65,7 +65,7 @@ namespace SigmaR
     at state `s`
     preserves contestability
     within the target PFA. -/
-constant AdapterContestable : State → Prop
+axiom AdapterContestable : State → Prop
 
 /--
 Regime legitimacy axiom:

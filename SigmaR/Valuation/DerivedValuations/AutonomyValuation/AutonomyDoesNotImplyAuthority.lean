@@ -18,6 +18,6 @@ namespace SigmaR
 /--
 Autonomy valuation does not imply authority.
 -/
-constant AutonomyDoesNotImplyAuthority : Prop
+axiom AutonomyDoesNotImplyAuthority : Prop
 
 end SigmaR

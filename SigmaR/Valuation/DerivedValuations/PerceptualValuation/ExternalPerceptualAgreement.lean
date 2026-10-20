@@ -22,7 +22,7 @@ namespace SigmaR
 ExternalPerceptualAgreement A means that perceptual agreement A
 is externalized across multiple agents.
 -/
-constant ExternalPerceptualAgreement :
+axiom ExternalPerceptualAgreement :
   PerceptualAgreement → Prop
 
 end SigmaR

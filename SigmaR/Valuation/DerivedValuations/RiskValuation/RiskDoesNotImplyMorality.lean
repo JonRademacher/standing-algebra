@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Risk valuation does not imply morality.
 -/
-constant RiskDoesNotImplyMorality : Prop
+axiom RiskDoesNotImplyMorality : Prop
 
 end SigmaR

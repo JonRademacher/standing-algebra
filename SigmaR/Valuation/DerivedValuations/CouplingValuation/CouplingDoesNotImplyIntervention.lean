@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Coupling valuation does not imply intervention.
 -/
-constant CouplingDoesNotImplyIntervention : Prop
+axiom CouplingDoesNotImplyIntervention : Prop
 
 end SigmaR

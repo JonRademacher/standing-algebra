@@ -17,12 +17,12 @@ namespace SigmaR
 /--
 Generic valuation quantity over agents and states.
 -/
-constant ValuationQty : Agent → State → Nat
+axiom ValuationQty : Agent → State → Nat
 
 /--
 Predicate: an operation is a repair for agent `i`.
 -/
-constant Repairs : Operation → Agent → Prop
+axiom Repairs : Operation → Agent → Prop
 
 /--
 Temporal monotonicity axiom:

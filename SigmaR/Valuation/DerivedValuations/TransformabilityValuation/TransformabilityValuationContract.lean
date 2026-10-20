@@ -36,6 +36,6 @@ namespace SigmaR
 The Transformability Valuation layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant TransformabilityValuationContract : Prop
+axiom TransformabilityValuationContract : Prop
 
 end SigmaR

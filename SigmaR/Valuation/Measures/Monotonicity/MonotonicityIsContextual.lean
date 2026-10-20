@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Monotonicity relations are treated as context-dependent.
 -/
-constant MonotonicityIsContextual : Prop
+axiom MonotonicityIsContextual : Prop
 
 end SigmaR

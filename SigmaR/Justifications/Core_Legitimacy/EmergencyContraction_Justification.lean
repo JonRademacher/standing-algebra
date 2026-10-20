@@ -32,7 +32,7 @@ when moving from state `s` to state `s'`.
 The internal semantics of this relation are left open for
 future refinement.
 -/
-constant EmergencyExpanded : Operation → State → State → Prop
+axiom EmergencyExpanded : Operation → State → State → Prop
 
 /--
 Emergency expansion contracts legitimacy:

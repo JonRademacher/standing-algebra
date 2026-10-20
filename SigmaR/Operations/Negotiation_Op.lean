@@ -9,7 +9,7 @@ Operations-level predicate:
 constraints symmetrically without reducing standing
 or collapsing exit.
 -/
-constant NegotiationOp : Operation → Prop
+axiom NegotiationOp : Operation → Prop
 
 /--
 Operations-level invariant (Negotiation):

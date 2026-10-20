@@ -18,6 +18,6 @@ namespace SigmaR
 Transformable i F means that applying operation F
 changes agent i.
 -/
-constant Transformable : Agent → Operation → Prop
+axiom Transformable : Agent → Operation → Prop
 
 end SigmaR

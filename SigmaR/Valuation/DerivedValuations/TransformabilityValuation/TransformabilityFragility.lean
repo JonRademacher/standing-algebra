@@ -24,7 +24,7 @@ namespace SigmaR
 TransformabilityFragility T means that transformability valuation T
 is structurally fragile.
 -/
-constant TransformabilityFragility :
+axiom TransformabilityFragility :
   TransformabilityValuation → Prop
 
 end SigmaR

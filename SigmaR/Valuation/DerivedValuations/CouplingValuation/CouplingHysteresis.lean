@@ -25,7 +25,7 @@ namespace SigmaR
 CouplingHysteresis C means that coupling valuation C
 exhibits path-dependent behavior.
 -/
-constant CouplingHysteresis :
+axiom CouplingHysteresis :
   CouplingValuation → Prop
 
 end SigmaR

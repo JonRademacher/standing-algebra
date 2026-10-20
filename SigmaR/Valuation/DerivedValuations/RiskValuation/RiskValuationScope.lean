@@ -25,6 +25,6 @@ namespace SigmaR
 Risk valuation is explicitly scoped and
 never globally applicable by default.
 -/
-constant RiskValuationScope : Prop
+axiom RiskValuationScope : Prop
 
 end SigmaR

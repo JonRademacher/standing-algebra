@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Capacity valuation does not imply intervention.
 -/
-constant CapacityDoesNotImplyIntervention : Prop
+axiom CapacityDoesNotImplyIntervention : Prop
 
 end SigmaR

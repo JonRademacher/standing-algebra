@@ -23,7 +23,7 @@ namespace SigmaR
 /--
 An autonomy valuation relative to a specific state.
 -/
-constant AutonomyState :
+axiom AutonomyState :
   Agent → State → AutonomyValuation
 
 end SigmaR

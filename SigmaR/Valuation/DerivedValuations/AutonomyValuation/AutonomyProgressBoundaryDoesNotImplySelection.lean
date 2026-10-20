@@ -26,6 +26,6 @@ namespace SigmaR
 /--
 The autonomy progress boundary does not imply selection.
 -/
-constant AutonomyProgressBoundaryDoesNotImplySelection : Prop
+axiom AutonomyProgressBoundaryDoesNotImplySelection : Prop
 
 end SigmaR

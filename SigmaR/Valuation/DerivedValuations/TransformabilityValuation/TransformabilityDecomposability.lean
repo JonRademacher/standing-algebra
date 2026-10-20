@@ -24,7 +24,7 @@ namespace SigmaR
 TransformabilityDecomposability T means that transformability
 valuation T admits decomposition into simpler operations.
 -/
-constant TransformabilityDecomposability :
+axiom TransformabilityDecomposability :
   TransformabilityValuation → Prop
 
 end SigmaR

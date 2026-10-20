@@ -24,7 +24,7 @@ namespace SigmaR
 CapacitySaturation C means that capacity valuation C
 has reached a saturation boundary.
 -/
-constant CapacitySaturation :
+axiom CapacitySaturation :
   CapacityValuation → Prop
 
 end SigmaR

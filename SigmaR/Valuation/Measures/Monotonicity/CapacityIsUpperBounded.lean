@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Capacity is treated as upper bounded.
 -/
-constant CapacityUpperBounded : Prop
+axiom CapacityUpperBounded : Prop
 
 end SigmaR

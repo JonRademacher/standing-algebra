@@ -17,12 +17,12 @@ namespace SigmaR
 /--
 Structural debt measure.
 -/
-constant StructuralDebt : Agent → State → Nat
+axiom StructuralDebt : Agent → State → Nat
 
 /--
 Predicate: a repair operation applies to agent `i`.
 -/
-constant Repairs : Operation → Agent → Prop
+axiom Repairs : Operation → Agent → Prop
 
 /--
 Debt coherence axioms.

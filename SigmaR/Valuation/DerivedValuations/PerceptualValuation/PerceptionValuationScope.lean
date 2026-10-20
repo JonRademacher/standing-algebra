@@ -25,6 +25,6 @@ namespace SigmaR
 Perception valuation is explicitly scoped and
 never globally applicable by default.
 -/
-constant PerceptionValuationScope : Prop
+axiom PerceptionValuationScope : Prop
 
 end SigmaR

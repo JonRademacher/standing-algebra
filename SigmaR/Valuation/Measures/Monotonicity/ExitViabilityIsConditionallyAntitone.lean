@@ -22,7 +22,7 @@ namespace SigmaR
 Exit viability is treated as conditionally antitone
 with respect to temporal accumulation.
 -/
-constant ExitViabilityConditionallyAntitoneUnderTemporalAccumulation :
+axiom ExitViabilityConditionallyAntitoneUnderTemporalAccumulation :
   Agent → Prop
 
 end SigmaR

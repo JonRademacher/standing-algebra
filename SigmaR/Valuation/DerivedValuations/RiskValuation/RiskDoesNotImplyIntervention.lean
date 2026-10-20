@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Risk valuation does not imply intervention.
 -/
-constant RiskDoesNotImplyIntervention : Prop
+axiom RiskDoesNotImplyIntervention : Prop
 
 end SigmaR

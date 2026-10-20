@@ -26,7 +26,7 @@ namespace SigmaR
 AutonomyDependsOnCapacityValuation A C means that autonomy
 valuation A is structurally dependent on capacity valuation C.
 -/
-constant AutonomyDependsOnCapacityValuation :
+axiom AutonomyDependsOnCapacityValuation :
   AutonomyValuation → CapacityValuation → Prop
 
 end SigmaR

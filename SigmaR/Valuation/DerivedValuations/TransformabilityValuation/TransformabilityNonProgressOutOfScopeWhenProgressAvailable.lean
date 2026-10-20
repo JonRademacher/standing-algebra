@@ -23,7 +23,7 @@ TransformabilityNonProgressOutOfScopeWhenProgressAvailable S
 means that non-progress options are out of scope when
 progress options S are available.
 -/
-constant TransformabilityNonProgressOutOfScopeWhenProgressAvailable :
+axiom TransformabilityNonProgressOutOfScopeWhenProgressAvailable :
   TransformabilityProgressOptionSet → Prop
 
 end SigmaR

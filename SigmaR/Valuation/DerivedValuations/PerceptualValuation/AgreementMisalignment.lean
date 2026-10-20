@@ -26,7 +26,7 @@ AgreementMisalignment Aᵢ Aₑ means that internal perceptual
 agreement Aᵢ and external perceptual agreement Aₑ
 are structurally misaligned.
 -/
-constant AgreementMisalignment :
+axiom AgreementMisalignment :
   PerceptualAgreement → PerceptualAgreement → Prop
 
 end SigmaR

@@ -24,7 +24,7 @@ namespace SigmaR
 RiskAmplification R₁ R₂ means that risk valuation R₁
 amplifies the effective risk represented by R₂.
 -/
-constant RiskAmplification :
+axiom RiskAmplification :
   RiskValuation → RiskValuation → Prop
 
 end SigmaR

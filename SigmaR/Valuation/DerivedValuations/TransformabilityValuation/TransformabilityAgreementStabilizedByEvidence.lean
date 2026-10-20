@@ -26,7 +26,7 @@ TransformabilityAgreementStabilizedByEvidence A means that
 transformability agreement A is stabilized through
 non-parochial evidence.
 -/
-constant TransformabilityAgreementStabilizedByEvidence :
+axiom TransformabilityAgreementStabilizedByEvidence :
   TransformabilityAgreement → Prop
 
 end SigmaR

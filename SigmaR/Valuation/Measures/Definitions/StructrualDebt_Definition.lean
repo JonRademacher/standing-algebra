@@ -20,6 +20,6 @@ namespace SigmaR
 StructuralDebt a is the successor-native measure
 of unresolved structural fragility affecting agent a.
 -/
-constant StructuralDebt : Agent → Nat
+axiom StructuralDebt : Agent → Nat
 
 end SigmaR

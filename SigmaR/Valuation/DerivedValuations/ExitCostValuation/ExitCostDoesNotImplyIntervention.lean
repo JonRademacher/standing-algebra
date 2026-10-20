@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Exit cost valuation does not imply intervention.
 -/
-constant ExitCostDoesNotImplyIntervention : Prop
+axiom ExitCostDoesNotImplyIntervention : Prop
 
 end SigmaR

@@ -19,7 +19,7 @@ namespace SigmaR
 
 /-- Marker predicate for permissible actions/interventions.
     (Defined elsewhere; only referenced structurally here.) -/
-constant ActionPossible : State → State → Prop
+axiom ActionPossible : State → State → Prop
 
 /--
 No implication from the absence of optimization

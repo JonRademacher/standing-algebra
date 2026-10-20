@@ -21,6 +21,6 @@ namespace SigmaR
 An admissible reasoning configuration respects all
 Independence inference firewalls.
 -/
-constant AdmissibleUnderIndependence : Prop
+axiom AdmissibleUnderIndependence : Prop
 
 end SigmaR

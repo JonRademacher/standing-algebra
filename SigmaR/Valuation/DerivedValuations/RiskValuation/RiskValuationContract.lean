@@ -34,6 +34,6 @@ namespace SigmaR
 The Risk Valuation layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant RiskValuationContract : Prop
+axiom RiskValuationContract : Prop
 
 end SigmaR

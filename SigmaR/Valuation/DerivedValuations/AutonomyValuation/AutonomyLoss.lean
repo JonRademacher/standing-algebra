@@ -24,7 +24,7 @@ namespace SigmaR
 AutonomyLoss A₁ A₂ means that autonomy valuation A₂
 represents a loss relative to autonomy valuation A₁.
 -/
-constant AutonomyLoss :
+axiom AutonomyLoss :
   AutonomyValuation → AutonomyValuation → Prop
 
 end SigmaR

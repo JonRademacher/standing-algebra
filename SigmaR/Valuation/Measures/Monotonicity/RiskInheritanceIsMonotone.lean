@@ -22,6 +22,6 @@ namespace SigmaR
 Risk inheritance is treated as monotone
 along the state preorder.
 -/
-constant RiskInheritanceMonotone : Prop
+axiom RiskInheritanceMonotone : Prop
 
 end SigmaR

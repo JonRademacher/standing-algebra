@@ -17,6 +17,6 @@ namespace SigmaR
 /--
 Admissibility of reasoning does not imply logical validity.
 -/
-constant AdmissibilityDoesNotImplyValidity : Prop
+axiom AdmissibilityDoesNotImplyValidity : Prop
 
 end SigmaR

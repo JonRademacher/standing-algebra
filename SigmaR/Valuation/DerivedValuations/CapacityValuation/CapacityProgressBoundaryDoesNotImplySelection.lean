@@ -26,6 +26,6 @@ namespace SigmaR
 /--
 The capacity progress boundary does not imply selection.
 -/
-constant CapacityProgressBoundaryDoesNotImplySelection : Prop
+axiom CapacityProgressBoundaryDoesNotImplySelection : Prop
 
 end SigmaR

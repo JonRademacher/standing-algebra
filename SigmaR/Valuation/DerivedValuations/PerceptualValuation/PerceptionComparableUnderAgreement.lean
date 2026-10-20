@@ -27,7 +27,7 @@ PerceptionComparableUnderAgreement P₁ P₂ A means that
 perception valuations P₁ and P₂ are structurally comparable
 under perceptual agreement A.
 -/
-constant PerceptionComparableUnderAgreement :
+axiom PerceptionComparableUnderAgreement :
   PerceptionValuation → PerceptionValuation → PerceptualAgreement → Prop
 
 end SigmaR

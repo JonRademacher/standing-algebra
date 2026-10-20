@@ -20,7 +20,7 @@ namespace SigmaR
 CouplingRespectsIndependence C means that coupling valuation C
 does not violate Independence constraints.
 -/
-constant CouplingRespectsIndependence :
+axiom CouplingRespectsIndependence :
   CouplingValuation → Prop
 
 end SigmaR

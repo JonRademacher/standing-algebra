@@ -26,6 +26,6 @@ namespace SigmaR
 The ResponseSemantics layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant ResponseSemanticsContract : Prop
+axiom ResponseSemanticsContract : Prop
 
 end SigmaR

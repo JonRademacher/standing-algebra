@@ -1,6 +1,6 @@
-import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
-import SigmaR.Justifications.Regimes.ExitRegime.ExitRegime_Justification
-import SigmaR.Justifications.Regimes.RemedyRegime.RemedyRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyRegime_Justification
 
 /-!
 ###############################################################################
@@ -35,7 +35,7 @@ namespace SigmaR
 Predicate: operation `G` is a legitimate continuation
 of operation `F` at state `s`.
 -/
-constant LegitimateContinuation : Operation → Operation → State → Prop
+axiom LegitimateContinuation : Operation → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Successor Continuation):

@@ -19,6 +19,6 @@ namespace SigmaR
 /--
 Transformability valuation does not imply intervention.
 -/
-constant TransformabilityDoesNotImplyIntervention : Prop
+axiom TransformabilityDoesNotImplyIntervention : Prop
 
 end SigmaR

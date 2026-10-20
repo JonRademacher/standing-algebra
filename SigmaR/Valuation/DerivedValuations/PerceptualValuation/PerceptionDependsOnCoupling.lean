@@ -27,7 +27,7 @@ namespace SigmaR
 PerceptionDependsOnCoupling P C means that perception valuation P
 is structurally grounded in coupling valuation C.
 -/
-constant PerceptionDependsOnCoupling :
+axiom PerceptionDependsOnCoupling :
   PerceptionValuation → CouplingValuation → Prop
 
 end SigmaR

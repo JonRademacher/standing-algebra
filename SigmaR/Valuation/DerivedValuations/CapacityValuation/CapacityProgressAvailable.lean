@@ -19,7 +19,7 @@ namespace SigmaR
 CapacityProgressAvailable S means that a set of capacity-progress
 options S exists in the current context.
 -/
-constant CapacityProgressAvailable :
+axiom CapacityProgressAvailable :
   CapacityProgressOptionSet → Prop
 
 end SigmaR

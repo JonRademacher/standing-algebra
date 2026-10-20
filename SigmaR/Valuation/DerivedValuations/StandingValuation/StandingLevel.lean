@@ -23,6 +23,6 @@ namespace SigmaR
 /--
 A standing level associated with a standing valuation.
 -/
-constant StandingLevel : StandingValuation → Val
+axiom StandingLevel : StandingValuation → Val
 
 end SigmaR

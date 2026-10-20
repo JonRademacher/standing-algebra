@@ -21,7 +21,7 @@ namespace SigmaR
 A valuation measure is treated as admitting projection
 or restriction without reversing its structural monotonicity.
 -/
-constant ProjectionPreservesMonotonicity :
+axiom ProjectionPreservesMonotonicity :
   Measure → Prop
 
 end SigmaR

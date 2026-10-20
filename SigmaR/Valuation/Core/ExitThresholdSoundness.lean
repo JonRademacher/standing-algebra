@@ -17,12 +17,12 @@ namespace SigmaR
 /--
 Predicate: exit is viable for agent `i` in state `s`.
 -/
-constant ExitViable : Agent → State → Prop
+axiom ExitViable : Agent → State → Prop
 
 /--
 Predicate: agent `i` has crossed an exit threshold in state `s`.
 -/
-constant ExitThresholdCrossed : Agent → State → Prop
+axiom ExitThresholdCrossed : Agent → State → Prop
 
 /--
 Exit threshold soundness:

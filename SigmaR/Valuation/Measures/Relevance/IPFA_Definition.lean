@@ -18,6 +18,6 @@ namespace SigmaR
 /--
 IPFA is a predicate indicating personal informational warrant.
 -/
-constant IPFA : Agent → State → Prop
+axiom IPFA : Agent → State → Prop
 
 end SigmaR

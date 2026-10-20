@@ -18,7 +18,7 @@ namespace SigmaR
 A valuation measure is structurally monotone with respect to
 the state preorder.
 -/
-constant StructurallyMonotone :
+axiom StructurallyMonotone :
   Measure → Prop
 
 end SigmaR

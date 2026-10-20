@@ -22,6 +22,6 @@ namespace SigmaR
 Exit collapse is treated as irreversible
 along the state preorder.
 -/
-constant ExitCollapseIrreversible : Prop
+axiom ExitCollapseIrreversible : Prop
 
 end SigmaR

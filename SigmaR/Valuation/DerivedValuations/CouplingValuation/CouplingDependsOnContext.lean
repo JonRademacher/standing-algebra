@@ -24,7 +24,7 @@ namespace SigmaR
 CouplingDependsOnContext C means that coupling valuation C
 is explicitly context-dependent.
 -/
-constant CouplingDependsOnContext :
+axiom CouplingDependsOnContext :
   CouplingValuation → Prop
 
 end SigmaR

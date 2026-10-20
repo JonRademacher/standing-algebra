@@ -24,7 +24,7 @@ namespace SigmaR
 RiskAccumulation R₁ R₂ means that risk valuation R₂
 represents accumulated risk relative to R₁.
 -/
-constant RiskAccumulation :
+axiom RiskAccumulation :
   RiskValuation → RiskValuation → Prop
 
 end SigmaR

@@ -19,7 +19,7 @@ namespace SigmaR
 TransformabilityProgressWithinScope S means that the
 transformability-progress options in S are within scope.
 -/
-constant TransformabilityProgressWithinScope :
+axiom TransformabilityProgressWithinScope :
   TransformabilityProgressOptionSet → Prop
 
 end SigmaR

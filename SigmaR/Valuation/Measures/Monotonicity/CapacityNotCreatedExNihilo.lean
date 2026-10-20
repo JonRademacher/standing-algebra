@@ -21,7 +21,7 @@ namespace SigmaR
 Capacity is treated as requiring enabling structure
 to increase along the state preorder.
 -/
-constant CapacityRequiresEnablingStructure :
+axiom CapacityRequiresEnablingStructure :
   Agent → Prop
 
 end SigmaR

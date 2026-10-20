@@ -26,7 +26,7 @@ ResponseReversesMeasure R M means that response R
 structurally reverses the effect or direction
 of valuation measure M.
 -/
-constant ResponseReversesMeasure :
+axiom ResponseReversesMeasure :
   Response → Measure → Prop
 
 end SigmaR

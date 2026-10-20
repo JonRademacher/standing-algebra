@@ -27,7 +27,7 @@ TransformabilityComparableUnderAgreement T₁ T₂ A means that
 transformability valuations T₁ and T₂ are structurally comparable
 under transformability agreement A.
 -/
-constant TransformabilityComparableUnderAgreement :
+axiom TransformabilityComparableUnderAgreement :
   TransformabilityValuation → TransformabilityValuation → TransformabilityAgreement → Prop
 
 end SigmaR

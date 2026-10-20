@@ -20,6 +20,6 @@ namespace SigmaR
 /--
 Autonomy valuation does not imply consent.
 -/
-constant AutonomyDoesNotImplyConsent : Prop
+axiom AutonomyDoesNotImplyConsent : Prop
 
 end SigmaR

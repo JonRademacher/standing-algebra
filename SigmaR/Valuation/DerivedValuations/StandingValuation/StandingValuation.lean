@@ -26,6 +26,6 @@ namespace SigmaR
 /--
 An abstract derived valuation associated with standing.
 -/
-constant StandingValuation : Type
+axiom StandingValuation : Type
 
 end SigmaR

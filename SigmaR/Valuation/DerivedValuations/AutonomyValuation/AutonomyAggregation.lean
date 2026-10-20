@@ -24,7 +24,7 @@ namespace SigmaR
 AutonomyAggregation A₁ A₂ A₃ means that autonomy valuation A₃
 is an aggregation of autonomy valuations A₁ and A₂.
 -/
-constant AutonomyAggregation :
+axiom AutonomyAggregation :
   AutonomyValuation → AutonomyValuation → AutonomyValuation → Prop
 
 end SigmaR

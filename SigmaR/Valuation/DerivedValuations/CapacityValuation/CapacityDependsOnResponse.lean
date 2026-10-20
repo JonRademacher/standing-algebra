@@ -25,7 +25,7 @@ namespace SigmaR
 CapacityDependsOnResponse C R means that capacity valuation C
 is structurally sensitive to response R.
 -/
-constant CapacityDependsOnResponse :
+axiom CapacityDependsOnResponse :
   CapacityValuation → Response → Prop
 
 end SigmaR

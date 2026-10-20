@@ -1,6 +1,6 @@
-import SigmaR.Justifications.Regimes.ExitRegime.ExitRegime_Justification
-import SigmaR.Justifications.Regimes.ExitRegime.ExitPreservation_Justification
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitPreservation_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
 
 /-!
 ###############################################################################
@@ -33,13 +33,13 @@ namespace SigmaR
 /--
 Predicate: operation `G` is a composition of affordance operations.
 -/
-constant AffordanceComposed : Operation → Prop
+axiom AffordanceComposed : Operation → Prop
 
 /--
 Predicate: agent `a` has a viable exit under operation `F`
 at state `s`.
 -/
-constant HasExit : Agent → Operation → State → Prop
+axiom HasExit : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Exit Preservation Under Composition):

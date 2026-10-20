@@ -25,7 +25,7 @@ namespace SigmaR
 PerceptionDependsOnResponse P R means that perception valuation P
 is structurally sensitive to response R.
 -/
-constant PerceptionDependsOnResponse :
+axiom PerceptionDependsOnResponse :
   PerceptionValuation → Response → Prop
 
 end SigmaR

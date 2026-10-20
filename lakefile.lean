@@ -3,6 +3,19 @@ open Lake DSL
 
 package SigmaR
 
-lean_lib SigmaR
+/--
+The Σᴿ Lean 4 development.  The library is rooted at `SigmaR/`; the module
+`SigmaR.lean` does not exist, so the globs are declared explicitly and every
+submodule of the tree is built.
+-/
+@[default_target]
+lean_lib SigmaR where
+  globs := #[.submodules `SigmaR]
 
-lean_lib Collapse_Demonstrations
+/--
+The collapse and Goodhart-drift demonstrations, rooted at
+`Collapse_Demonstrations/`.
+-/
+@[default_target]
+lean_lib Collapse_Demonstrations where
+  globs := #[.submodules `Collapse_Demonstrations]
