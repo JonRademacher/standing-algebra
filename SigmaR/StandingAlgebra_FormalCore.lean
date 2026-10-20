@@ -52,6 +52,20 @@ axiom σ_ext :
   ∀ {a₁ a₂ : Agent}, a₁ = a₂ → σ a₁ = σ a₂
 
 /- -----------------
+   Configuration Carrier
+   ----------------- -/
+
+/--
+Standing Algebra is stated over one carrier: an agent *is* a state of the
+algebra, so `State` is the same type as `Agent` under another name.
+
+This keeps the two levels of the signature — agent-indexed standing `σ` and
+state-indexed pressure `DomPressure` — comparable without introducing a second
+primitive sort.
+-/
+abbrev State : Type := Agent
+
+/- -----------------
    Operations
    ----------------- -/
 
@@ -74,6 +88,35 @@ axiom Admissible : Operation → Prop
 /- -----------------
    Core Invariants (Axiomatic)
    ----------------- -/
+
+/--
+Legitimacy (Primitive)
+
+Legitimacy is the structural predicate on operations whose content is fixed by
+the Tier‑2 axioms. It is *not* derived here: the justifications in
+`SigmaR/Justifications` characterise it as invariant preservation.
+-/
+axiom Legitimate : Operation → Prop
+
+/--
+Domination Pressure (Primitive)
+
+`DomPressure s` is the domination pressure of a configuration, the supremum of
+dependency growth and exit fragility over its agents
+(Σᴿ, *Definition — Domination Pressure*).
+-/
+axiom DomPressure : State → Nat
+
+/--
+Domination pressure does not escalate under admissible operations.
+
+This is the structural form of the Tier‑1 guarantee that admissibility cannot
+buy autonomy with domination.
+-/
+axiom DomPressure_monotonic :
+  ∀ (F : Operation) (s : State),
+    Admissible F →
+    DomPressure (apply F s) ≤ DomPressure s
 
 /--
 ALRP — Autonomy-Limiting Reflex Principle (structural form)
