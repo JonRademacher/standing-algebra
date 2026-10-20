@@ -1,0 +1,14 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyNonProgressOutOfScopeWhenProgressAvailable",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyProgressOptionSet":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyProgressOptionSet.olean"]],
+  "SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyProgressOption":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyProgressOption.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegime_Justification
+import SigmaR.Regimes.StandingAlgebra_SuccessorRegime
 
 /-!
 ###############################################################################

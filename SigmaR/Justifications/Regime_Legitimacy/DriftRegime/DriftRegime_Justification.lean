@@ -1,3 +1,4 @@
+import SigmaR.Regimes.StandingAlgebra_DriftRegime
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.BoundedDrift_Justification
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftStandingMonotonicity_Justification
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftDependencyMonotonicity_Justification
@@ -31,11 +32,6 @@ explicit structural constraints.
 namespace SigmaR
 
 /--
-Predicate: operation `D` participates in the Drift Regime.
--/
-axiom DriftRegimeOp : Operation → Prop
-
-/--
 Tier-2 regime declaration:
 
 Drift operations are standing-relevant
@@ -47,4 +43,3 @@ axiom drift_is_regime :
     DriftRegimeOp D
 
 end SigmaR
-``

@@ -56,6 +56,19 @@ def Conflict : Prop :=
 -- Operations that reshape the affordance space
 axiom Reshape : Operation → Prop
 
+-- Operations that are compositions of affordances.
+-- Declared here (once) so that every constraint module in the
+-- Affordance Composition Regime can refer to it without redeclaring it.
+axiom AffordanceComposed : Operation → Prop
+
+-- Operations that participate in the Affordance Composition Regime.
+-- This is the regime-level carrier of the composition constraints; the
+-- justification modules constrain `AffordanceCompositionRegimeOp`, the umbrella
+-- module
+-- `SigmaR/Justifications/Regime_Legitimacy/Affordance_CompositionRegime/AffordanceCompositionRegime_Justification.lean`
+-- aggregates them and relates it to `AffordanceComposed`.
+axiom AffordanceCompositionRegimeOp : Operation → Prop
+
 -- Reshaping operations must be admissible
 axiom Reshape_admissible :
   ∀ F : Operation, Reshape F → Admissible F

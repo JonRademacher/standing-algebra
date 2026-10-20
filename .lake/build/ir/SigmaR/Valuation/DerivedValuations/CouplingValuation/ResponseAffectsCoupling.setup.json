@@ -1,0 +1,16 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.CouplingValuation.ResponseAffectsCoupling",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.ResponseSemantics.Response":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/ResponseSemantics/Response.olean"]],
+  "SigmaR.Valuation.DerivedValuations.CouplingValuation.CouplingValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/CouplingValuation/CouplingValuation.olean"]],
+  "SigmaR.Valuation.DerivedValuations.CouplingValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/CouplingValuation.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

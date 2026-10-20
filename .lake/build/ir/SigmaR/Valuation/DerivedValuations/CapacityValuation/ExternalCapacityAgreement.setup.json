@@ -1,0 +1,12 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.CapacityValuation.ExternalCapacityAgreement",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.DerivedValuations.CapacityValuation.CapacityAgreement":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityAgreement.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

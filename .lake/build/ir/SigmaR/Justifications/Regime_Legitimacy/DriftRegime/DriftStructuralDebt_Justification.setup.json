@@ -1,0 +1,12 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftStructuralDebt_Justification",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_DriftRegime":
+  [["/w/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_DriftRegime.olean"]]},
+ "dynlibs": []}

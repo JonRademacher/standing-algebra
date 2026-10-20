@@ -1,0 +1,37 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["bcc0ea2fc5614bbd.olean"],
+  "m": false,
+  "i": "3387220a819cfa1f.ilean",
+  "c": "5041157bcb1a8a88.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Theorems/First_Order/StructuralSafety.lean -o /w/.lake/build/lib/lean/SigmaR/Theorems/First_Order/StructuralSafety.olean -i /w/.lake/build/lib/lean/SigmaR/Theorems/First_Order/StructuralSafety.ilean -c /w/.lake/build/ir/SigmaR/Theorems/First_Order/StructuralSafety.c --setup /w/.lake/build/ir/SigmaR/Theorems/First_Order/StructuralSafety.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "SigmaR/Theorems/First_Order/StructuralSafety.lean:37:5: Variable name `a` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _a\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["SigmaR.StandingAlgebra_RegimeStacked transitive imports (legacy)",
+       "559210f556fd9a65"],
+      ["SigmaR.StandingAlgebra_RegimeStacked:importAllArts",
+       "7d0fa550ad1050c9"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["/w/SigmaR/Theorems/First_Order/StructuralSafety.lean", "8b735ac85b0a9dd3"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: SigmaR.Theorems.First_Order.StructuralSafety",
+   "d48473d2c2bd6592"],
+  ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "598e275a4f7c9240"}

@@ -1,0 +1,35 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f2dfa19dc52a3209.olean"],
+  "m": false,
+  "i": "20c6bbd3b2b7d3c0.ilean",
+  "c": "bf97b3f562c25008.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/ModelCollapseDemo.lean -o /w/.lake/build/lib/lean/SigmaR/ModelCollapseDemo.olean -i /w/.lake/build/lib/lean/SigmaR/ModelCollapseDemo.ilean -c /w/.lake/build/ir/SigmaR/ModelCollapseDemo.c --setup /w/.lake/build/ir/SigmaR/ModelCollapseDemo.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "SigmaR/ModelCollapseDemo.lean:45:48: This simp argument is unused:\n  WellDefined\n\nHint: Omit it from the simp argument list.\n  [apply] simp [collapseModel]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "SigmaR/ModelCollapseDemo.lean:79:48: This simp argument is unused:\n  WellDefined\n\nHint: Omit it from the simp argument list.\n  [apply] simp [distinctModel]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
+    ["imports", "00000000000006bb"]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["/w/SigmaR/ModelCollapseDemo.lean", "d84e7eae9188e98d"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: SigmaR.ModelCollapseDemo", "fac743ed78c1182c"],
+  ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "06dcfd650697d5be"}

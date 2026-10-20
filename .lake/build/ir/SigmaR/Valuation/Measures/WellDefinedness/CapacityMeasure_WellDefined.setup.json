@@ -1,0 +1,14 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.Measures.WellDefinedness.CapacityMeasure_WellDefined",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/CapacityMeasure_Definition.olean"]],
+  "SigmaR.Valuation.Measures.CapacityMeasure_Definition":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/CapacityMeasure_Definition.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

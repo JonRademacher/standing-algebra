@@ -143,4 +143,3 @@ theorem existsModelWithIndependence :
   · exact distinctModel_standingNotRisk
 
 end SigmaR_CollapseCountermodel
-``

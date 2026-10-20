@@ -1,0 +1,12 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.AutonomyValuation.InternalAutonomyAgreement",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyAgreement":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyAgreement.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

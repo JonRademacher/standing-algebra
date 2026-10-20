@@ -1,0 +1,11 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name": "SigmaR.Valuation.Measures.Monotonicity.MonotonicityNonTotality",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.Measures.Monotonicity.MonotonicityScope":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/MonotonicityScope.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

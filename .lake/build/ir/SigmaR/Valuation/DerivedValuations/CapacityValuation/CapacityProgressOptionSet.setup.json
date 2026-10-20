@@ -1,0 +1,12 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.CapacityValuation.CapacityProgressOptionSet",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.DerivedValuations.CapacityValuation.CapacityProgressOption":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityProgressOption.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

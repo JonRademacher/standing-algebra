@@ -1,0 +1,11 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name": "SigmaR.Valuation.ResponseSemantics.ResponseAffectsMeasure",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.ResponseSemantics.Response":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/ResponseSemantics/Response.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

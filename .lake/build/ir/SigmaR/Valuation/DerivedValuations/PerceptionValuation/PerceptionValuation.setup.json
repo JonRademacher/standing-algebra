@@ -1,0 +1,12 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.PerceptionValuation.PerceptionValuation",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/PerceptualValuation/PerceptionValuation.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

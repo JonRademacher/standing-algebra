@@ -1,0 +1,10 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Justifications.Regime_Legitimacy.RegimesPresupposeOperations_Justification",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

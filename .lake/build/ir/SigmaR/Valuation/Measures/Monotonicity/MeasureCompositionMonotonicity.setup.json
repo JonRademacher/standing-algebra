@@ -1,0 +1,12 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.Measures.Monotonicity.MeasureCompositionMonotonicity",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/MeasureStructuralMonotonicity.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

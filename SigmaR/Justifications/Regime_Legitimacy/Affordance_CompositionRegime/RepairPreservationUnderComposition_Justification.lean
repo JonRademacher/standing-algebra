@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyRegime_Justification
-import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
+import SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime
 
 /-!
 ###############################################################################

@@ -1,0 +1,13 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name": "SigmaR.Valuation.DerivedValuations.StandingValuation.StandingState",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.DerivedValuations.StandingValuation.StandingValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuation.olean"]],
+  "SigmaR.Valuation.DerivedValuations.StandingValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/StandingValuation.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

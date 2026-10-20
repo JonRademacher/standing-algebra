@@ -1,0 +1,33 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["90e46f991e328033.olean"],
+  "m": false,
+  "i": "8cc139b8b4a2438c.ilean",
+  "c": "29729034a6c8f8a9.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Standing/ConsentState_Definition.lean -o /w/.lake/build/lib/lean/SigmaR/Standing/ConsentState_Definition.olean -i /w/.lake/build/lib/lean/SigmaR/Standing/ConsentState_Definition.ilean -c /w/.lake/build/ir/SigmaR/Standing/ConsentState_Definition.c --setup /w/.lake/build/ir/SigmaR/Standing/ConsentState_Definition.setup.json --json",
+   "level": "trace"}],
+ "inputs":
+ [["deps",
+   [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["SigmaR.Valuation.Measures.Definitions.ConsentState_Definition transitive imports (legacy)",
+       "483afcf7c183d378"],
+      ["SigmaR.Valuation.Measures.Definitions.ConsentState_Definition:importAllArts",
+       "ebf396a65abee93f"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["/w/SigmaR/Standing/ConsentState_Definition.lean", "c60cc410f0ce8cd4"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: SigmaR.Standing.ConsentState_Definition", "2e1e26e2e51940cc"],
+  ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a0bf444795a0f177"}

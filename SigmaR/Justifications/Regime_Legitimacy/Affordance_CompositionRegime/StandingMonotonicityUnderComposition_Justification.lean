@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.ALRP_Justification
-import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
+import SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime
 
 /-!
 ###############################################################################
@@ -29,7 +29,6 @@ namespace SigmaR
 /--
 Predicate: operation `G` is a composition of affordance operations.
 -/
-axiom AffordanceComposed : Operation → Prop
 
 /--
 Predicate: operation `F` preserves standing

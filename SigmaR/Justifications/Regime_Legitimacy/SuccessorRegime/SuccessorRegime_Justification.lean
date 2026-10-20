@@ -1,3 +1,4 @@
+import SigmaR.Regimes.StandingAlgebra_SuccessorRegime
 import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorConsistency_Justification
 import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorAvailability_Justification
 import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorNonDeprivation_Justification
@@ -31,15 +32,6 @@ Therefore:
 -/
 
 namespace SigmaR
-
-/--
-Predicate: operation `F` participates in the
-Successor Regime.
-
-This marks operations whose legitimacy depends
-on successor-based standing change constraints.
--/
-axiom SuccessorRegimeOp : Operation → Prop
 
 /--
 Tier-2 regime declaration:

@@ -1,4 +1,4 @@
-import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegime_Justification
+import SigmaR.Regimes.StandingAlgebra_SuccessorRegime
 import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification
 import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyRegime_Justification
 

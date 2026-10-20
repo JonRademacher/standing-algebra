@@ -1,0 +1,14 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.PerceptualValuation.AgreementMisalignment",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptualAgreement":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/PerceptualValuation/PerceptualAgreement.olean"]],
+  "SigmaR.Valuation.DerivedValuations.PerceptualAgreement":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/PerceptualAgreement.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

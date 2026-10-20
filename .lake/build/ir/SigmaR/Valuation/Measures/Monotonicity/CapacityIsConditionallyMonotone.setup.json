@@ -1,0 +1,20 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.Measures.Monotonicity.CapacityIsConditionallyMonotone",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.Measures.StructuralDebt_Definition":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/StructuralDebt_Definition.olean"]],
+  "SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/MeasureStructuralMonotonicity.olean"]],
+  "SigmaR.Valuation.Measures.Definitions.StructrualDebt_Definition":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/StructrualDebt_Definition.olean"]],
+  "SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/CapacityMeasure_Definition.olean"]],
+  "SigmaR.Valuation.Measures.CapacityMeasure_Definition":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/CapacityMeasure_Definition.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

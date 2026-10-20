@@ -1,0 +1,14 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.RiskValuation.RiskDependsOnCapacityValuation",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.DerivedValuations.RiskValuation.RiskValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/RiskValuation/RiskValuation.olean"]],
+  "SigmaR.Valuation.DerivedValuations.CapacityValuation.CapacityValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityValuation.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

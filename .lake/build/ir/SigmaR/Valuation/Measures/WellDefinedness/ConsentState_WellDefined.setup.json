@@ -1,0 +1,13 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name": "SigmaR.Valuation.Measures.WellDefinedness.ConsentState_WellDefined",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.Measures.Definitions.ConsentState_Definition":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/ConsentState_Definition.olean"]],
+  "SigmaR.Valuation.Measures.ConsentState_Definition":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/ConsentState_Definition.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

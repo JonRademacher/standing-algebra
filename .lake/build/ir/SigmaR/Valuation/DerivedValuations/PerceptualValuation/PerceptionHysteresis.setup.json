@@ -1,0 +1,14 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionHysteresis",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/PerceptualValuation/PerceptionValuation.olean"]],
+  "SigmaR.Valuation.DerivedValuations.PerceptionValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/PerceptionValuation.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

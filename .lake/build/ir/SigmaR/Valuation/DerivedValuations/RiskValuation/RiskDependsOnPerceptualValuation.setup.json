@@ -1,0 +1,16 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.RiskValuation.RiskDependsOnPerceptualValuation",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.DerivedValuations.RiskValuation.RiskValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/RiskValuation/RiskValuation.olean"]],
+  "SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/PerceptualValuation/PerceptionValuation.olean"]],
+  "SigmaR.Valuation.DerivedValuations.PerceptionValuation.PerceptionValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/PerceptionValuation/PerceptionValuation.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

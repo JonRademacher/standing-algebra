@@ -1,0 +1,29 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f910a948a323b038.olean"],
+  "m": false,
+  "i": "57d8668fbfb1c6bd.ilean",
+  "c": "cd5d26e79f1163c9.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/StandingAlgebra_FormalCore.lean -o /w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean -i /w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.ilean -c /w/.lake/build/ir/SigmaR/StandingAlgebra_FormalCore.c --setup /w/.lake/build/ir/SigmaR/StandingAlgebra_FormalCore.setup.json --json",
+   "level": "trace"}],
+ "inputs":
+ [["deps",
+   [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
+    ["imports", "00000000000006bb"]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["/w/SigmaR/StandingAlgebra_FormalCore.lean", "d21b6c82d444f000"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: SigmaR.StandingAlgebra_FormalCore", "dcabb47668d57d2c"],
+  ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a893b46da8431207"}

@@ -20,6 +20,13 @@ namespace SigmaR
 -- Operations that are considered drift operations
 axiom Drift : Operation → Prop
 
+-- Operations that participate in the Drift Regime.
+-- This is the regime-level carrier of the drift constraints: the
+-- justification modules constrain `DriftRegimeOp`, the umbrella module
+-- `SigmaR/Justifications/Regime_Legitimacy/DriftRegime/DriftRegime_Justification.lean`
+-- aggregates them and relates it to `Drift`.
+axiom DriftRegimeOp : Operation → Prop
+
 -- One-step bounded difference predicate
 def OneStepDiff (x y : Nat) : Prop :=
   x = y ∨ x = Nat.succ y ∨ y = Nat.succ x

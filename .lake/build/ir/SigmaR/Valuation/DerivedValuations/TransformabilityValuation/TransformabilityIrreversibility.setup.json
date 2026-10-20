@@ -1,0 +1,12 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.TransformabilityValuation.TransformabilityIrreversibility",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.DerivedValuations.TransformabilityValuation.TransformabilityValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityValuation.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

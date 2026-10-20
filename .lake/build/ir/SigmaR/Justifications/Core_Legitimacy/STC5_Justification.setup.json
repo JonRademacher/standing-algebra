@@ -1,0 +1,29 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name": "SigmaR.Justifications.Core_Legitimacy.STC5_Justification",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.StandingAlgebra_RegimeStacked":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_RegimeStacked.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_SuccessorRegime":
+  [["/w/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_SuccessorRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_RiskRegime":
+  [["/w/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_RiskRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_RemedyRegime":
+  [["/w/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_RemedyRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_RegimesStacked":
+  [["/w/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_RegimesStacked.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_ExitRegime":
+  [["/w/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_ExitRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_EmergencyRegime":
+  [["/w/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_EmergencyRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_DriftRegime":
+  [["/w/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_DriftRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime":
+  [["/w/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_AffordanceCompositionRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_AdapterRegime":
+  [["/w/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_AdapterRegime.olean"]]},
+ "dynlibs": []}

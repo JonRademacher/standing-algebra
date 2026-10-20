@@ -25,4 +25,3 @@ An abstract structure representing capacity agreement.
 axiom CapacityAgreement : Type
 
 end SigmaR
-``

@@ -27,4 +27,3 @@ axiom measurement_limits_not_invalidity :
   )
 
 end SigmaR
-``

@@ -1,0 +1,14 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.TransformabilityValuation.TransformabilityProgressRequiredForNonDomination",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.DerivedValuations.TransformabilityValuation.TransformabilityProgressOptionSet":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityProgressOptionSet.olean"]],
+  "SigmaR.Valuation.DerivedValuations.TransformabilityValuation.TransformabilityProgressOption":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityProgressOption.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

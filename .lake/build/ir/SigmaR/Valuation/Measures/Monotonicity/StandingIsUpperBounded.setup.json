@@ -1,0 +1,13 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name": "SigmaR.Valuation.Measures.Monotonicity.StandingIsUpperBounded",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.Measures.StandingMeasure_Definition":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/StandingMeasure_Definition.olean"]],
+  "SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/StandingMeasure_Definition.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

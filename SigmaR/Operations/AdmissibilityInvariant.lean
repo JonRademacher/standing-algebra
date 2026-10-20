@@ -102,4 +102,3 @@ by
       exact Nat.le_trans h1 h2
 
 end SigmaR
-``

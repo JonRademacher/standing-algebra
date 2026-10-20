@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.NonSelection_Justification
-import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
+import SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime
 
 /-!
 ###############################################################################
@@ -39,7 +39,6 @@ each individually admissible.
 This abstracts over finite sequences, pipelines,
 or structured compositions of affordances.
 -/
-axiom AffordanceComposed : Operation → Prop
 
 /--
 Tier-2 legitimacy axiom (Non-Selective Composition):

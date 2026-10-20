@@ -1,0 +1,14 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.DerivedValuations.TransformabilityValuation.ResponseAffectsTransformabilityValuation",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.ResponseSemantics.Response":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/ResponseSemantics/Response.olean"]],
+  "SigmaR.Valuation.DerivedValuations.TransformabilityValuation.TransformabilityValuation":
+  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityValuation.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

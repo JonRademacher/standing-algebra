@@ -26,6 +26,13 @@ namespace SigmaR
 -- Operations that realize successor standing
 axiom SuccessorOp : Operation → Prop
 
+-- Operations that participate in the Successor Regime.
+-- This is the regime-level carrier of the successor constraints: the
+-- justification modules constrain `SuccessorRegimeOp`, the umbrella module
+-- `SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorRegime_Justification.lean`
+-- aggregates them and relates it to successor consistency.
+axiom SuccessorRegimeOp : Operation → Prop
+
 /- -----------------
    Successor Admissibility
    ----------------- -/

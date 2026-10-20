@@ -1,0 +1,11 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name": "SigmaR.Operations.AdmissibilityInvariant",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.StandingAlgebra_FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
+  "SigmaR.Core.FormalCore":
+  [["/w/.lake/build/lib/lean/SigmaR/Core/FormalCore.olean"]]},
+ "dynlibs": []}

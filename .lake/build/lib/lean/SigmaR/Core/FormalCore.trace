@@ -1,0 +1,33 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f40e305f842d9232.olean"],
+  "m": false,
+  "i": "e79dbdf0166432b3.ilean",
+  "c": "c7df4ed0081cedbe.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Core/FormalCore.lean -o /w/.lake/build/lib/lean/SigmaR/Core/FormalCore.olean -i /w/.lake/build/lib/lean/SigmaR/Core/FormalCore.ilean -c /w/.lake/build/ir/SigmaR/Core/FormalCore.c --setup /w/.lake/build/ir/SigmaR/Core/FormalCore.setup.json --json",
+   "level": "trace"}],
+ "inputs":
+ [["deps",
+   [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
+       "00000000000006bb"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts",
+       "db5c4617a8ee0430"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["/w/SigmaR/Core/FormalCore.lean", "2fb94942924483ec"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: SigmaR.Core.FormalCore", "23cddef8bca5297d"],
+  ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "c1a2fa8bff095742"}
