@@ -12,7 +12,7 @@ axiom CoreConstraintInvariant :
   ∀ (F G : Operation),
     CoreConstraintsSatisfied F →
     CoreConstraintsSatisfied G →
-    CoreConstraintsSatisfied (G ∘ F)
+    CoreConstraintsSatisfied (composeOp F G)
 
 /--
 Derived theorem:
@@ -23,7 +23,7 @@ theorem CoreConstraintsClosedUnderComposition
   (F G : Operation)
   (hF : CoreConstraintsSatisfied F)
   (hG : CoreConstraintsSatisfied G) :
-  CoreConstraintsSatisfied (G ∘ F) :=
+  CoreConstraintsSatisfied (composeOp F G) :=
 by
   exact CoreConstraintInvariant F G hF hG
 

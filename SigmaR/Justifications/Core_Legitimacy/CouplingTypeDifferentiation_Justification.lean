@@ -1,6 +1,3 @@
----
-
-```lean
 /-!
 ###############################################################################
 # Justification of Coupling Type Differentiation

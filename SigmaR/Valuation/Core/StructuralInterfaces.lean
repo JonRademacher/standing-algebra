@@ -803,8 +803,7 @@ axiom CapacitySaturation :
 
 -- Capacity-progress (ratchet) boundary
 axiom CapacityProgressOption : Type
-axiom CapacityProgressOptionSet :
-  CapacityProgressOption → Prop
+abbrev CapacityProgressOptionSet : Type := Set CapacityProgressOption
 axiom CapacityProgressAvailable :
   CapacityProgressOptionSet → Prop
 axiom CapacityProgressWithinScope :
@@ -921,8 +920,7 @@ axiom TransformabilityDecomposability :
 -- Operation availability and scope
 axiom TransformabilityOperationAvailable :
   Operation → Prop
-axiom TransformabilityOperationSet :
-  Operation → Prop
+abbrev TransformabilityOperationSet : Type := Set Operation
 axiom TransformabilityOperationWithinScope :
   TransformabilityOperationSet → Prop
 
@@ -960,8 +958,7 @@ axiom ResponseAffectsTransformabilityValuation :
 
 -- Transformability-progress (ratchet) boundary
 axiom TransformabilityProgressOption : Type
-axiom TransformabilityProgressOptionSet :
-  TransformabilityProgressOption → Prop
+abbrev TransformabilityProgressOptionSet : Type := Set TransformabilityProgressOption
 axiom TransformabilityProgressAvailable :
   TransformabilityProgressOptionSet → Prop
 axiom TransformabilityProgressWithinScope :
@@ -1203,8 +1200,7 @@ axiom ResponseAffectsAutonomyValuation :
 
 -- Autonomy-progress (ratchet) boundary
 axiom AutonomyProgressOption : Type
-axiom AutonomyProgressOptionSet :
-  AutonomyProgressOption → Prop
+abbrev AutonomyProgressOptionSet : Type := Set AutonomyProgressOption
 axiom AutonomyProgressAvailable :
   AutonomyProgressOptionSet → Prop
 axiom AutonomyProgressWithinScope :

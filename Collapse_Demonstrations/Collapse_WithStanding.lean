@@ -14,7 +14,7 @@ import Collapse_Demonstrations.Collapse
 namespace Collapse_Demonstrations
 
 
-/--
+/-
   Standing Algebra monotonicity axiom (ALRP):
 
   Admissible operations never decrease standing.

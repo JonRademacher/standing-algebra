@@ -13,7 +13,7 @@ axiom SuccessorContinuationInvariant :
     SuccessorConsistent F →
     ∀ s : State,
       ∃ G : Operation,
-        Admissible (G ∘ F)
+        Admissible (composeOp F G)
 
 /--
 Derived theorem:
@@ -25,7 +25,7 @@ theorem SuccessorHasOperationalContinuation
   (hSucc : SuccessorConsistent F) :
   ∀ s : State,
     ∃ G : Operation,
-      Admissible (G ∘ F) :=
+      Admissible (composeOp F G) :=
 by
   intro s
   exact SuccessorContinuationInvariant F hSucc s

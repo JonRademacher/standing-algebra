@@ -13,7 +13,7 @@ axiom ContinuationAdmissibilityStable :
     Admissible F →
     ∀ n : Nat,
       ∃ G : Operation,
-        Admissible (Iterate G n ∘ F)
+        Admissible (composeOp F (Iterate G n))
 
 /--
 Derived theorem:
@@ -25,7 +25,7 @@ theorem AdmissibilityStableUnderContinuation
   (hF : Admissible F) :
   ∀ n : Nat,
     ∃ G : Operation,
-      Admissible (Iterate G n ∘ F) :=
+      Admissible (composeOp F (Iterate G n)) :=
 by
   intro n
   exact ContinuationAdmissibilityStable F hF n

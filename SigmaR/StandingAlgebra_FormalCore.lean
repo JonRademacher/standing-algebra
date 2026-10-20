@@ -2,6 +2,23 @@ import Std
 
 open Nat
 
+/- -------------------------------------------------------------------------
+   Sets
+
+   Lean's core library has no `Set` type.  The Σᴿ layers are stated over
+   *sets* of agents, measures, operations and options (`Set Agent`,
+   `Set Measure`, …), so the notion is fixed once here as a predicate,
+   together with the usual membership notation.
+   ------------------------------------------------------------------------- -/
+
+/--
+A set is a predicate on its elements.
+-/
+abbrev Set (α : Type) : Type := α → Prop
+
+instance instMembershipSet {α : Type} : Membership α (Set α) where
+  mem s a := s a
+
 namespace SigmaR
 
 /- =========================================================
@@ -78,6 +95,30 @@ This enforces functional extensionality of `apply`.
 axiom apply_ext :
   ∀ {F : Operation} {a₁ a₂ : Agent},
     a₁ = a₂ → apply F a₁ = apply F a₂
+
+/- -----------------
+   Operation Combinators
+   ----------------- -/
+
+/--
+Sequential composition of operations.
+
+`composeOp F G` is the operation that first applies `F` and then `G` — the
+algebra's informal `G ∘ F`.  `Operation` is an abstract sort, so composition
+is a primitive of the signature (Σᴿ, *Operation composition*), not the
+function-space `∘`.
+-/
+axiom composeOp : Operation → Operation → Operation
+
+/--
+The identity operation.
+-/
+axiom IdOp : Operation
+
+/--
+`Iterate G n` is the operation that applies `G` exactly `n` times.
+-/
+axiom Iterate : Operation → Nat → Operation
 
 /- -----------------
    Admissibility (Primitive)

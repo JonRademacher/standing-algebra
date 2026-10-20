@@ -18,7 +18,7 @@ axiom Suc : Nat → Nat               -- successor function S (Lean has Nat.succ
 axiom B : Nat → Nat                 -- capacity-indexed standing bound B(c)
 
 axiom comp : Agent → Agent → Agent  -- entity composition (⊕)
-axiom Id : Operation                -- identity operation (Id ∈ O)
+axiom IdOp : Operation              -- identity operation (Id ∈ O; `IdOp` avoids the core `Id`)
 axiom composeOp : Operation → Operation → Operation  -- operation composition
 
 axiom Null : Agent → Prop

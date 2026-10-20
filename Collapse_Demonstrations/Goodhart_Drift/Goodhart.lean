@@ -14,7 +14,7 @@
 
 namespace Collapse_Demonstrations.Goodhart_Drift
 
-/--
+/-
   Abstract time index.
 
   We intentionally keep this abstract (not ℕ, not ℤ)
@@ -22,12 +22,12 @@ namespace Collapse_Demonstrations.Goodhart_Drift
 -/
 variable (Time : Type)
 
-/--
+/-
   Proxy metric being optimized.
 -/
 variable (proxy : Time → Int)
 
-/--
+/-
   True underlying value the proxy is intended to represent.
 -/
 variable (trueValue : Time → Int)

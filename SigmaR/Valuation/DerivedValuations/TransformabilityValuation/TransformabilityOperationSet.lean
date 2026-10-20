@@ -22,7 +22,6 @@ namespace SigmaR
 TransformabilityOperationSet S means that S is a set
 of transformation operations.
 -/
-axiom TransformabilityOperationSet :
-  Operation → Prop
+abbrev TransformabilityOperationSet : Type := Set Operation
 
 end SigmaR

@@ -22,8 +22,13 @@ Main results:
 /- Definition: n-fold application of a single operation                         -/
 /- -------------------------------------------------------------------------- -/
 
-/-- Apply an operation `F` repeatedly `n` times to an agent `a`. -/
-def iterApply : Nat → Operation → Agent → Agent
+/--
+Apply an operation `F` repeatedly `n` times to an agent `a`.
+
+`Operation` is an abstract sort, so its effect `apply` has no code: the
+definition is non-computable.
+-/
+noncomputable def iterApply : Nat → Operation → Agent → Agent
 | 0,     _, a => a
 | n + 1, F, a => apply F (iterApply n F a)
 

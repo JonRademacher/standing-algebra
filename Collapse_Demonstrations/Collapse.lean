@@ -11,26 +11,26 @@
 
 namespace Collapse_Demonstrations
 
-/--
+/-
   Abstract types, mirroring the SMT-level structure.
 -/
 variable
   (Agent : Type)
   (Operation : Type)
 
-/--
+/-
   Standing / score / value function.
 -/
 variable
   (σ : Agent → Int)
 
-/--
+/-
   Application of an operation to an agent.
 -/
 variable
   (Apply : Operation → Agent → Agent)
 
-/--
+/-
   Predicate stating an operation is admissible.
 -/
 variable

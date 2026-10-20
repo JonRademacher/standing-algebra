@@ -32,13 +32,10 @@ by
     legitimate_implies_admissible F hLeg
   exact DomPressure_monotonic F s hAdm
 
-theorem successor_strict :
-  ∀ a : Agent,
-    σ a < σ (SucRealizer a) :=
-by
-  intro a
-  rewrite [SucRealizer_spec]
-  exact Nat.lt_succ_self _
+/--
+`successor_strict` (σ strictly increases under `SucRealizer`) is a derived
+lemma of the formal core.
+-/
 
 def EscalatesDomination (F : Operation) (s : State) : Prop :=
   DomPressure (apply F s) > DomPressure s

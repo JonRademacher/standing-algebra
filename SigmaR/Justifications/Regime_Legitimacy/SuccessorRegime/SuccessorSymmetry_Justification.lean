@@ -24,11 +24,11 @@ Therefore:
 
 namespace SigmaR
 
-/--
-Predicate: operation `F` is a successor-generating operation
-at state `s`.
+/-
+Predicate: operation `F` is a successor-generating operation.  It is
+introduced by the successor regime layer
+(`SigmaR.Regimes.StandingAlgebra_SuccessorRegime`).
 -/
-axiom SuccessorOp : Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Successor Symmetry):
@@ -40,7 +40,7 @@ axiom successor_symmetry_required :
   ∀ {F : Operation},
     Legitimate F →
       ∀ s : State,
-        SuccessorOp F s →
+        SuccessorOp F →
         STC5 F
 
 /--
@@ -52,7 +52,7 @@ theorem SuccessorPreservesSymmetry
   {F : Operation}
   (hLeg : Legitimate F) :
   ∀ s : State,
-    SuccessorOp F s →
+    SuccessorOp F →
     STC5 F :=
 by
   intros s hSucc

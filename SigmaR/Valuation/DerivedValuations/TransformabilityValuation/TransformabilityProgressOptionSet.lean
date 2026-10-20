@@ -21,7 +21,6 @@ namespace SigmaR
 TransformabilityProgressOptionSet S means that S is a set
 of transformability-progress options.
 -/
-axiom TransformabilityProgressOptionSet :
-  TransformabilityProgressOption → Prop
+abbrev TransformabilityProgressOptionSet : Type := Set TransformabilityProgressOption
 
 end SigmaR

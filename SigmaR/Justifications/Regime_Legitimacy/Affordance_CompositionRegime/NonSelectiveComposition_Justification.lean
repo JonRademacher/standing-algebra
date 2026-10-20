@@ -32,7 +32,7 @@ Therefore:
 
 namespace SigmaR
 
-/--
+/-
 Predicate: operation `G` is a composition of affordance operations,
 each individually admissible.
 

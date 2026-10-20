@@ -18,7 +18,7 @@ namespace Collapse_Demonstrations.Goodhart_Drift
 -- Import SigmaR core Standing Algebra
 -- Adjust the import path if your core file name differs
 
-/--
+/-
   We align Goodhart with SigmaR as follows:
 
   * Time          ≙ Agent
@@ -30,19 +30,19 @@ variable
   (Time : Type)
   (Operation : Type)
 
-/-- True value = standing function σ -/
+/- True value = standing function σ -/
 variable
   (trueValue : Time → Int)
 
-/-- Application of an operation to a time state -/
+/- Application of an operation to a time state -/
 variable
   (Apply : Operation → Time → Time)
 
-/-- Admissibility of an operation -/
+/- Admissibility of an operation -/
 variable
   (Admissible : Operation → Prop)
 
-/--
+/-
   Standing Algebra axiom (from SigmaR core):
 
   Admissible operations do not decrease standing.
@@ -53,7 +53,7 @@ variable
       Admissible F →
       trueValue (Apply F t) ≥ trueValue t)
 
-/--
+/-
   Proxy improvement assumption:
 
   A Goodhart proxy-improving transition corresponds
