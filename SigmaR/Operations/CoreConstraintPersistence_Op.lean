@@ -3,6 +3,17 @@ import SigmaR.StandingAlgebra_FormalCore
 namespace SigmaR
 
 /--
+Operations-level predicate:
+
+`F` satisfies all core non-domination constraints
+(ALRP, CIA, NRPP, STC-5).
+
+Declared here, at the operations layer, because it classifies operations;
+the Tier‑2 justification imports it rather than redeclaring it.
+-/
+axiom CoreConstraintsSatisfied : Operation → Prop
+
+/--
 Operations-level invariant:
 
 All operations preserve core constraints under composition.

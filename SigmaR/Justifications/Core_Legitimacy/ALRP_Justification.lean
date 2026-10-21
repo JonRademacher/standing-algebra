@@ -34,10 +34,11 @@ namespace SigmaR
 -- Agent       : Type
 -- State       : Type
 -- Operation   : Type
--- σ           : State → Agent → ℝ      (standing function)
--- apply       : Operation → State → State
+-- σ           : Agent → Nat             (standing function; `State` and
+--                                        `Agent` are the same carrier)
+-- apply       : Operation → Agent → Agent
 -- Legitimate  : Operation → Prop
--- DomPressure : State → ℝ
+-- DomPressure : State → Nat
 
 ------------------------------------------------------------------------
 -- Justification‑layer axioms (operational, not normative)
@@ -57,8 +58,8 @@ axiom nondomination :
     This reflects the fact that DomPressure is a monotone aggregator of the
     σ‑profile (as discussed in *On Relevance*, §6). -/
 axiom dp_increase_for_sigma_decrease :
-  ∀ {F : Operation} {s : State} {a : Agent},
-    σ (apply F s) a < σ s a →
+  ∀ {F : Operation} {s : State},
+    σ (apply F s) < σ s →
     DomPressure (apply F s) > DomPressure s
 
 ------------------------------------------------------------------------
@@ -72,23 +73,22 @@ Allowing such a reduction would contradict the nondomination invariant.
 
 This is the formal counterpart of the Maxim of Mutual Autonomy. -/
 theorem ALRP_required_for_legitimacy
-  {F : Operation} {s : State} (hLegit : Legitimate F) (a : Agent) :
-  σ (apply F s) a ≥ σ s a :=
+  {F : Operation} {s : State} (hLegit : Legitimate F) :
+  σ (apply F s) ≥ σ s :=
 by
-  -- Assume, for contradiction, that standing decreases.
-  by_contra h_lt
-
-  -- A decrease in σ forces an increase in domination pressure.
-  have h_dp_inc :
-    DomPressure (apply F s) > DomPressure s :=
-    dp_increase_for_sigma_decrease h_lt
-
-  -- But legitimacy forbids any increase in domination pressure.
-  have h_dp_noninc :
-    DomPressure (apply F s) ≤ DomPressure s :=
-    nondomination hLegit
-
-  -- Contradiction: something cannot be both strictly greater and ≤.
-  exact lt_asymm h_dp_inc (not_lt_of_ge h_dp_noninc)
+  -- Split on whether standing decreases; a decrease is contradictory.
+  cases Nat.lt_or_ge (σ (apply F s)) (σ s) with
+  | inl h_lt =>
+    -- A decrease in σ forces an increase in domination pressure …
+    have h_dp_inc :
+      DomPressure (apply F s) > DomPressure s :=
+      dp_increase_for_sigma_decrease h_lt
+    -- … but legitimacy forbids any increase in domination pressure.
+    have h_dp_noninc :
+      DomPressure (apply F s) ≤ DomPressure s :=
+      nondomination hLegit
+    -- Contradiction: pressure cannot both strictly increase and not increase.
+    exact absurd (Nat.lt_of_lt_of_le h_dp_inc h_dp_noninc) (Nat.lt_irrefl _)
+  | inr h_ge => exact h_ge
 
 end SigmaR

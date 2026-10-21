@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Operations.RegimeInteractionNormalization_Op
 
 /-!
 ###############################################################################
@@ -31,21 +32,15 @@ Therefore:
 
 namespace SigmaR
 
-/--
-Predicate: operation `F` satisfies all
-constraints of all applicable regimes.
--/
-axiom AllRegimeConstraintsSatisfied : Operation → Prop
-
-/--
-Predicate: operation `F` has a normal form `F'`.
-
-Normalization is the operation-level carrier of regime-interaction
-normalization: an operation that satisfies every applicable constraint can be
-put in a form in which those constraints are simultaneously visible
-(Σᴿ, *Regime Interaction Normalization*).
--/
-axiom NormalizedForm : Operation → Operation → Prop
+-- The predicates `AllRegimeConstraintsSatisfied` and `NormalizedForm` are
+-- declared once, at the operations layer
+-- (`SigmaR.Operations.RegimeInteractionNormalization_Op`) and are imported here
+-- rather than redeclared.
+--
+-- `NormalizedForm` is the operation-level carrier of regime-interaction
+-- normalization: an operation that satisfies every applicable constraint can be
+-- put in a form in which those constraints are simultaneously visible
+-- (Σᴿ, *Regime Interaction Normalization*).
 
 /--
 Tier-2 legitimacy axiom (Regime Interaction Normalization):

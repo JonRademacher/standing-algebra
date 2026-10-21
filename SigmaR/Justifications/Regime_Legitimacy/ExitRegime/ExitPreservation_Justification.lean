@@ -42,8 +42,9 @@ introduce legitimacy‑preserving proxy optimization.
 
 namespace SigmaR
 
-/-- Predicate: the operation preserves an exit pathway across states. -/
-axiom ExitPreserved : Operation → State → Prop
+-- The predicate `ExitPreserved : Operation → State → Prop` is declared once,
+-- at the base Exit Regime (`SigmaR.Regimes.StandingAlgebra_ExitRegime`) and is
+-- imported here rather than redeclared.
 
 /--
 Tier‑2 legitimacy axiom for Exit Preservation:

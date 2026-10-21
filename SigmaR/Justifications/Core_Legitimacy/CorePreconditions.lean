@@ -54,7 +54,7 @@ requires Perceptual Frame Agreement.
 -/
 axiom admissible_requires_pfa :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    Admissible F →
     PFA s
 
 /--
@@ -65,7 +65,7 @@ requires contestability.
 -/
 axiom admissible_requires_contestation :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    Admissible F →
     Contestable s
 
 /--
@@ -76,7 +76,7 @@ require frame resolution.
 -/
 axiom admissible_requires_resolution :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    Admissible F →
     FrameResolved s
 
 /--
@@ -86,7 +86,7 @@ Standing must be derived.
 -/
 axiom admissible_requires_derivation :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    Admissible F →
     DerivedStanding s
 
 /--
@@ -96,7 +96,7 @@ Standing must be exposure‑indexed.
 -/
 axiom admissible_requires_risk_index :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    Admissible F →
     RiskIndexedStanding s
 
 /--
@@ -106,7 +106,7 @@ Coupling must be exhaustively represented.
 -/
 axiom admissible_requires_coupling :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    Admissible F →
     CouplingExhaustive s
 
 /--
@@ -116,7 +116,7 @@ Dominant coupling must be identifiable.
 -/
 axiom admissible_requires_dominance :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    Admissible F →
     DominantCouplingIdentified s
 
 /--
@@ -126,7 +126,7 @@ Constraint must respect domain boundary.
 -/
 axiom admissible_requires_boundary :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    Admissible F →
     BoundaryRespected s
 
 /--
@@ -136,7 +136,7 @@ Constraint must remain temporally rerunnable.
 -/
 axiom admissible_requires_rerunnable :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    Admissible F →
     Rerunnable s
 
 end SigmaR

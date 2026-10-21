@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
 
 namespace SigmaR
 

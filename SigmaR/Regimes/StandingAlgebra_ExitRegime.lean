@@ -27,6 +27,11 @@ axiom Exit : Operation → Prop
 -- Minimum viable standing (non-lethal threshold)
 axiom MinStanding : Nat
 
+-- Predicate: the operation preserves an exit pathway across states.
+-- Declared at the regime level so that the exit justification and the
+-- operations layer can both refer to it without importing each other.
+axiom ExitPreserved : Operation → State → Prop
+
 /- -----------------
    Exit Existence
    ----------------- -/

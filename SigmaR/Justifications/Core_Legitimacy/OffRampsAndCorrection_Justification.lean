@@ -30,7 +30,7 @@ at every state s.
 
 namespace SigmaR
 
-/--
+/-
 Predicate: the operation preserves off‑ramps or corrective pathways
 at the given state.
 

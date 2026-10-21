@@ -25,7 +25,7 @@ legitimacy condition: any Legitimate operation must satisfy it at every state.
 
 namespace SigmaR
 
-/--
+/-
 Predicate: the operation is supported by evidence that is non‑parochial
 at the given state.
 

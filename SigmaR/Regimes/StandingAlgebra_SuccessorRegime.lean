@@ -33,6 +33,11 @@ axiom SuccessorOp : Operation → Prop
 -- aggregates them and relates it to successor consistency.
 axiom SuccessorRegimeOp : Operation → Prop
 
+-- Predicate: operation `F` is successor-consistent with respect to standing.
+-- Declared at the regime level so that the successor justification and the
+-- operations layer can both refer to it without importing each other.
+axiom SuccessorConsistent : Operation → Prop
+
 /- -----------------
    Successor Admissibility
    ----------------- -/

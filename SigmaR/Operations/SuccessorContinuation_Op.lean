@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Regimes.StandingAlgebra_SuccessorRegime
 
 namespace SigmaR
 

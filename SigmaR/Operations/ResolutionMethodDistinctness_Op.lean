@@ -1,4 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Operations.Negotiation_Op
+import SigmaR.Operations.Cooperation_Op
+import SigmaR.Operations.Compromise_Op
+import SigmaR.Operations.TragicAcceptance_Op
 
 namespace SigmaR
 
@@ -17,10 +21,9 @@ It asserts only that:
 Joint use is explicitly allowed.
 -/
 
-axiom NegotiationOp       : Operation → Prop
-axiom CooperationOp       : Operation → Prop
-axiom CompromiseOp        : Operation → Prop
-axiom TragicAcceptanceOp  : Operation → Prop
+-- The four resolution-mode predicates are declared once, in their own
+-- operations modules (`Negotiation_Op`, `Cooperation_Op`, `Compromise_Op`,
+-- `TragicAcceptance_Op`) and are imported here rather than redeclared.
 
 /--
 Resolution method non-reducibility.

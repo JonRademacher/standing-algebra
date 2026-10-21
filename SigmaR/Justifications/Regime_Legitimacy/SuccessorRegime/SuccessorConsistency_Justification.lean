@@ -28,11 +28,9 @@ Therefore:
 
 namespace SigmaR
 
-/--
-Predicate: operation `F` is successor-consistent
-with respect to standing.
--/
-axiom SuccessorConsistent : Operation → Prop
+-- The predicate `SuccessorConsistent : Operation → Prop` is declared once, at
+-- the base Successor Regime (`SigmaR.Regimes.StandingAlgebra_SuccessorRegime`)
+-- and is imported here rather than redeclared.
 
 /--
 Tier-2 legitimacy axiom (Successor Consistency):

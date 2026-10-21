@@ -1,4 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Operations.Negotiation_Op
+import SigmaR.Operations.Cooperation_Op
+import SigmaR.Operations.Compromise_Op
+import SigmaR.Operations.TragicAcceptance_Op
 
 namespace SigmaR
 

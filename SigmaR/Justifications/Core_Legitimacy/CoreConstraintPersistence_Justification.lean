@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Operations.CoreConstraintPersistence_Op
 import SigmaR.Justifications.Core_Legitimacy.ALRP_Justification
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 import SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
@@ -31,11 +32,9 @@ Therefore:
 
 namespace SigmaR
 
-/--
-Predicate: operation `F` satisfies all core
-non-domination constraints.
--/
-axiom CoreConstraintsSatisfied : Operation → Prop
+-- The predicate `CoreConstraintsSatisfied : Operation → Prop` is declared once,
+-- at the operations layer (`SigmaR.Operations.CoreConstraintPersistence_Op`)
+-- and is imported here rather than redeclared.
 
 /--
 Tier-2 legitimacy axiom (Core Constraint Persistence):

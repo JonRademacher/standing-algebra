@@ -12,6 +12,13 @@ constraints on non-participants.
 axiom CooperationOp : Operation → Prop
 
 /--
+Operations-level predicate:
+
+`F` does not increase the dependency carried by any agent.
+-/
+axiom DependencyNonIncreasing : Operation → Prop
+
+/--
 Operations-level invariant (Cooperation):
 
 Cooperation does not increase dependency

@@ -29,7 +29,7 @@ at every state s.
 
 namespace SigmaR
 
-/--
+/-
 Predicate: the operation has considered less autonomy‑reducing alternatives
 at the given state.
 

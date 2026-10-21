@@ -42,7 +42,7 @@ axiom successor_availability_required :
     Legitimate F →
     ∀ s : State,
       ∀ a : Agent,
-        σ s a = 0 →
+        σ a = 0 →
         SuccessorAvailable a F s
 
 /--
@@ -55,7 +55,7 @@ theorem SuccessorAvailableForNull
   (hLeg : Legitimate F) :
   ∀ s : State,
     ∀ a : Agent,
-      σ s a = 0 →
+      σ a = 0 →
       SuccessorAvailable a F s :=
 by
   intros s a hNull

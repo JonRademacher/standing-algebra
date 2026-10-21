@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Regimes.StandingAlgebra_ExitRegime
 
 namespace SigmaR
 
@@ -20,7 +21,7 @@ for all affected agents.
 axiom NegotiationInvariant :
   ∀ (F : Operation),
     NegotiationOp F →
-    Admissible F ∧ ExitPreserved F
+    Admissible F ∧ (∀ s : State, ExitPreserved F s)
 
 /--
 Derived theorem:
