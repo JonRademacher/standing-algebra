@@ -7,7 +7,7 @@
   "c": "77cc115358a700a6.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityLevel.lean -o /w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityLevel.olean -i /w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityLevel.ilean -c /w/.lake/build/ir/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityLevel.c --setup /w/.lake/build/ir/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityLevel.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityLevel.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityLevel.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityLevel.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityLevel.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityLevel.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
@@ -15,9 +15,9 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "db5c4617a8ee0430"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
       ["SigmaR.Valuation.DerivedValuations.CapacityValuation transitive imports (legacy)",
-       "472bc3797bd12763"],
+       "0690c9a0f8972daa"],
       ["SigmaR.Valuation.DerivedValuations.CapacityValuation:importAllArts",
        "67a8eeda03c7b5eb"]]]]],
   ["libs",
@@ -27,7 +27,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityLevel.lean",
+  ["/workspace/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityLevel.lean",
    "30e8ba4aab3dfa58"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -35,4 +35,4 @@
    "02baa1328a4bccaa"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "cef8ce5dee85b055"}
+ "depHash": "63f74cdf51f6c2c2"}

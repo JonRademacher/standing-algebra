@@ -6,9 +6,9 @@
  "isModule": false,
  "importArts":
  {"SigmaR.Valuation.Measures.DependencyDegree_Definition":
-  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/DependencyDegree_Definition.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/DependencyDegree_Definition.olean"]],
   "SigmaR.Valuation.Measures.Definitions.DependencyDegree_Definition":
-  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/DependencyDegree_Definition.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/DependencyDegree_Definition.olean"]],
   "SigmaR.StandingAlgebra_FormalCore":
-  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
  "dynlibs": []}

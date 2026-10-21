@@ -1,0 +1,13 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name": "Collapse_Demonstrations.Goodhart_Drift.Goodhart_WithStanding",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.StandingAlgebra_FormalCore":
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
+  "SigmaR.SigmaR_Core":
+  [["/workspace/.lake/build/lib/lean/SigmaR/SigmaR_Core.olean"]],
+  "Collapse_Demonstrations.Goodhart_Drift.Goodhart":
+  [["/workspace/.lake/build/lib/lean/Collapse_Demonstrations/Goodhart_Drift/Goodhart.olean"]]},
+ "dynlibs": []}

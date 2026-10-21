@@ -1,0 +1,45 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["41af454bbb760bf9.olean"],
+  "m": false,
+  "i": "99fcee1312fea36c.ilean",
+  "c": "18ba3dee9d9f84ec.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/Collapse_Demonstrations/Collapse_NoStanding.lean -o /workspace/.lake/build/lib/lean/Collapse_Demonstrations/Collapse_NoStanding.olean -i /workspace/.lake/build/lib/lean/Collapse_Demonstrations/Collapse_NoStanding.ilean -c /workspace/.lake/build/ir/Collapse_Demonstrations/Collapse_NoStanding.c --setup /workspace/.lake/build/ir/Collapse_Demonstrations/Collapse_NoStanding.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Collapse_Demonstrations/Collapse_NoStanding.lean:31:3: Variable name `σ` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _σ\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Collapse_Demonstrations/Collapse_NoStanding.lean:32:3: Variable name `Apply` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _Apply\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Collapse_Demonstrations/Collapse_NoStanding.lean:33:3: Variable name `Admissible` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _Admissible\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["SigmaR/Collapse_Demonstrations:extraDep",
+     [["@SigmaR:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Collapse_Demonstrations.Collapse transitive imports (legacy)",
+       "00000000000006bb"],
+      ["Collapse_Demonstrations.Collapse:importAllArts",
+       "6f13eb234158a31f"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["/workspace/Collapse_Demonstrations/Collapse_NoStanding.lean",
+   "1dca73d0c5f1626c"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Collapse_Demonstrations.Collapse_NoStanding",
+   "209d77e29834a824"],
+  ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "f44363bb04192828"}

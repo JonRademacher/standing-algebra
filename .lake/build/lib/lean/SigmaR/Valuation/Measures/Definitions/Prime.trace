@@ -7,7 +7,7 @@
   "c": "7655848780ced6f6.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Valuation/Measures/Definitions/Prime.lean -o /w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/Prime.olean -i /w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/Prime.ilean -c /w/.lake/build/ir/SigmaR/Valuation/Measures/Definitions/Prime.c --setup /w/.lake/build/ir/SigmaR/Valuation/Measures/Definitions/Prime.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/Measures/Definitions/Prime.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/Prime.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/Prime.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/Measures/Definitions/Prime.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/Measures/Definitions/Prime.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
@@ -16,7 +16,7 @@
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
       ["SigmaR.StandingAlgebra_FormalCore:importAllArts",
-       "db5c4617a8ee0430"]]]]],
+       "3fa9b8d096b9358b"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -24,11 +24,12 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Valuation/Measures/Definitions/Prime.lean", "7aab12e62f14d3e4"],
+  ["/workspace/SigmaR/Valuation/Measures/Definitions/Prime.lean",
+   "7aab12e62f14d3e4"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: SigmaR.Valuation.Measures.Definitions.Prime",
    "b04d04f09d95fd17"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "b22cb78c2c3e1076"}
+ "depHash": "5be29fadddb8bebe"}

@@ -7,14 +7,14 @@
   "c": "844d8af14c42f41f.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Valuation/Measures/CapacityMeasure_Definition.lean -o /w/.lake/build/lib/lean/SigmaR/Valuation/Measures/CapacityMeasure_Definition.olean -i /w/.lake/build/lib/lean/SigmaR/Valuation/Measures/CapacityMeasure_Definition.ilean -c /w/.lake/build/ir/SigmaR/Valuation/Measures/CapacityMeasure_Definition.c --setup /w/.lake/build/ir/SigmaR/Valuation/Measures/CapacityMeasure_Definition.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/Measures/CapacityMeasure_Definition.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/CapacityMeasure_Definition.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/CapacityMeasure_Definition.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/Measures/CapacityMeasure_Definition.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/Measures/CapacityMeasure_Definition.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition transitive imports (legacy)",
-       "483afcf7c183d378"],
+       "f4e8494e02083c49"],
       ["SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition:importAllArts",
        "62fabbc458c56ed2"]]]]],
   ["libs",
@@ -24,7 +24,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Valuation/Measures/CapacityMeasure_Definition.lean",
+  ["/workspace/SigmaR/Valuation/Measures/CapacityMeasure_Definition.lean",
    "ff67b24f36e8c9ee"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -32,4 +32,4 @@
    "1fc0332f880b4183"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "57a336b2a105b4c8"}
+ "depHash": "797fe1a5e2f43719"}

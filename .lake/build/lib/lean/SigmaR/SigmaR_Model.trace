@@ -1,0 +1,43 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["8bc591df20242706.olean"],
+  "m": false,
+  "i": "51e2b6eb4d13466a.ilean",
+  "c": "135211a85e902b3a.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/SigmaR_Model.lean -o /workspace/.lake/build/lib/lean/SigmaR/SigmaR_Model.olean -i /workspace/.lake/build/lib/lean/SigmaR/SigmaR_Model.ilean -c /workspace/.lake/build/ir/SigmaR/SigmaR_Model.c --setup /workspace/.lake/build/ir/SigmaR/SigmaR_Model.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "SigmaR/SigmaR_Model.lean:10:3: Variable name `sigma_const` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _sigma_const\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "SigmaR/SigmaR_Model.lean:11:3: Variable name `apply_identity` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _apply_identity\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "SigmaR/SigmaR_Model.lean:12:3: Variable name `dompressure_zero` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _dompressure_zero\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "SigmaR/SigmaR_Model.lean:14:3: Variable name `F_id_legitimate` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _F_id_legitimate\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["SigmaR.SigmaR_Basics transitive imports (legacy)", "ab48a9acd4cfee7c"],
+      ["SigmaR.SigmaR_Basics:importAllArts", "3769f44ff0510767"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["/workspace/SigmaR/SigmaR_Model.lean", "815629c310253c95"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: SigmaR.SigmaR_Model", "d814337810229e53"],
+  ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "89949a832a682f87"}

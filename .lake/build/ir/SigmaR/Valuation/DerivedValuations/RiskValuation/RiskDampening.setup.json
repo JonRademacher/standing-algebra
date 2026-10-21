@@ -5,7 +5,7 @@
  "isModule": false,
  "importArts":
  {"SigmaR.Valuation.DerivedValuations.RiskValuation.RiskValuation":
-  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/RiskValuation/RiskValuation.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/RiskValuation/RiskValuation.olean"]],
   "SigmaR.StandingAlgebra_FormalCore":
-  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
  "dynlibs": []}

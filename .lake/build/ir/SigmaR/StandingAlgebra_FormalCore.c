@@ -13,6 +13,33 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+LEAN_EXPORT lean_object* lp_SigmaR_instMembershipSet___redArg();
+LEAN_EXPORT lean_object* lp_SigmaR_instMembershipSet___redArg___boxed(lean_object*);
+LEAN_EXPORT lean_object* lp_SigmaR_instMembershipSet(lean_object*);
+LEAN_EXPORT lean_object* lp_SigmaR_instMembershipSet___redArg(){
+_start:
+{
+lean_object* v___x_2_; 
+v___x_2_ = lean_box(0);
+return v___x_2_;
+}
+}
+LEAN_EXPORT lean_object* lp_SigmaR_instMembershipSet___redArg___boxed(lean_object* v___dummy_3_){
+_start:
+{
+lean_object* v_res_4_; 
+v_res_4_ = lp_SigmaR_instMembershipSet___redArg();
+return v_res_4_;
+}
+}
+LEAN_EXPORT lean_object* lp_SigmaR_instMembershipSet(lean_object* v_00_u03b1_5_){
+_start:
+{
+lean_object* v___x_6_; 
+v___x_6_ = lean_box(0);
+return v___x_6_;
+}
+}
 lean_object* initialize_Init(uint8_t builtin);
 lean_object* initialize_Init(uint8_t builtin);
 lean_object* initialize_Std(uint8_t builtin);

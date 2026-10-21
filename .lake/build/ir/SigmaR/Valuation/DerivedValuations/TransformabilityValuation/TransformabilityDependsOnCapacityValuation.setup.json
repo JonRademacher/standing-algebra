@@ -6,9 +6,9 @@
  "isModule": false,
  "importArts":
  {"SigmaR.Valuation.DerivedValuations.TransformabilityValuation.TransformabilityValuation":
-  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityValuation.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityValuation.olean"]],
   "SigmaR.Valuation.DerivedValuations.CapacityValuation.CapacityValuation":
-  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityValuation.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/CapacityValuation/CapacityValuation.olean"]],
   "SigmaR.StandingAlgebra_FormalCore":
-  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
  "dynlibs": []}

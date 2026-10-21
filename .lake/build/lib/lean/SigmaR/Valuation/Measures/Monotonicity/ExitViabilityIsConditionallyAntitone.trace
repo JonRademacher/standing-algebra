@@ -7,7 +7,7 @@
   "c": "7f8417a0d9192e87.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Valuation/Measures/Monotonicity/ExitViabilityIsConditionallyAntitone.lean -o /w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/ExitViabilityIsConditionallyAntitone.olean -i /w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/ExitViabilityIsConditionallyAntitone.ilean -c /w/.lake/build/ir/SigmaR/Valuation/Measures/Monotonicity/ExitViabilityIsConditionallyAntitone.c --setup /w/.lake/build/ir/SigmaR/Valuation/Measures/Monotonicity/ExitViabilityIsConditionallyAntitone.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/Measures/Monotonicity/ExitViabilityIsConditionallyAntitone.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/ExitViabilityIsConditionallyAntitone.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/ExitViabilityIsConditionallyAntitone.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/Measures/Monotonicity/ExitViabilityIsConditionallyAntitone.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/Measures/Monotonicity/ExitViabilityIsConditionallyAntitone.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
@@ -15,17 +15,17 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "db5c4617a8ee0430"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
       ["SigmaR.Valuation.Measures.ExitViability_Definition transitive imports (legacy)",
-       "800189adf3bd6efb"],
+       "257dc404550e49e2"],
       ["SigmaR.Valuation.Measures.ExitViability_Definition:importAllArts",
        "b019741c8694eea9"],
       ["SigmaR.Valuation.Measures.TemporalAccumulation_Definition transitive imports (legacy)",
-       "32064287a50c8608"],
+       "a2c325246099f1c1"],
       ["SigmaR.Valuation.Measures.TemporalAccumulation_Definition:importAllArts",
        "7e294600f81f9b4c"],
       ["SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity transitive imports (legacy)",
-       "483afcf7c183d378"],
+       "f4e8494e02083c49"],
       ["SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity:importAllArts",
        "27bf3fed49ad83e9"]]]]],
   ["libs",
@@ -35,7 +35,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Valuation/Measures/Monotonicity/ExitViabilityIsConditionallyAntitone.lean",
+  ["/workspace/SigmaR/Valuation/Measures/Monotonicity/ExitViabilityIsConditionallyAntitone.lean",
    "5a7f419d3e079746"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -43,4 +43,4 @@
    "79e64c142ec0769f"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "d6327fc096404d76"}
+ "depHash": "8d5a53ffa2c351b7"}

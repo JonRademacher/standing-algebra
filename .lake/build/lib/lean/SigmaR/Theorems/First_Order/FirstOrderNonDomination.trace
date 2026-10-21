@@ -1,13 +1,13 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["2a6fe7ae455cc1ff.olean"],
+ {"o": ["f3c2459f9c9395bf.olean"],
   "m": false,
   "i": "2b1b33b39c29fb10.ilean",
   "c": "d90fce4cf7d0a6c0.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Theorems/First_Order/FirstOrderNonDomination.lean -o /w/.lake/build/lib/lean/SigmaR/Theorems/First_Order/FirstOrderNonDomination.olean -i /w/.lake/build/lib/lean/SigmaR/Theorems/First_Order/FirstOrderNonDomination.ilean -c /w/.lake/build/ir/SigmaR/Theorems/First_Order/FirstOrderNonDomination.c --setup /w/.lake/build/ir/SigmaR/Theorems/First_Order/FirstOrderNonDomination.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Theorems/First_Order/FirstOrderNonDomination.lean -o /workspace/.lake/build/lib/lean/SigmaR/Theorems/First_Order/FirstOrderNonDomination.olean -i /workspace/.lake/build/lib/lean/SigmaR/Theorems/First_Order/FirstOrderNonDomination.ilean -c /workspace/.lake/build/ir/SigmaR/Theorems/First_Order/FirstOrderNonDomination.c --setup /workspace/.lake/build/ir/SigmaR/Theorems/First_Order/FirstOrderNonDomination.setup.json --json",
    "level": "trace"},
   {"message":
    "SigmaR/Theorems/First_Order/FirstOrderNonDomination.lean:34:5: Variable name `a` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _a\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
@@ -17,7 +17,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.StandingAlgebra_RegimeStacked transitive imports (legacy)",
-       "559210f556fd9a65"],
+       "059f473d821a8ebb"],
       ["SigmaR.StandingAlgebra_RegimeStacked:importAllArts",
        "7d0fa550ad1050c9"]]]]],
   ["libs",
@@ -27,7 +27,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Theorems/First_Order/FirstOrderNonDomination.lean",
+  ["/workspace/SigmaR/Theorems/First_Order/FirstOrderNonDomination.lean",
    "fdf9b8c2b9dc7bd7"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -35,4 +35,4 @@
    "654419ea461d46f1"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "31cc5a3f5f1259a7"}
+ "depHash": "9e480493b462ff43"}

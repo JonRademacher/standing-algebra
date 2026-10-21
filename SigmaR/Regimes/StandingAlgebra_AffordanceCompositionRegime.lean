@@ -69,6 +69,19 @@ axiom AffordanceComposed : Operation → Prop
 -- aggregates them and relates it to `AffordanceComposed`.
 axiom AffordanceCompositionRegimeOp : Operation → Prop
 
+-- Operations that are components of a composed operation `G`: a component is
+-- one of the affordances that `G` composes.
+axiom ComponentOf : Operation → Operation → Prop
+
+-- Operations that do not select outcomes: no outcome is singled out, for any
+-- agent, by exercising the operation.
+axiom NonSelecting : Operation → Prop
+
+-- Two agents have equal standing and equal capacity — the symmetry condition
+-- of STC‑5, stated at the level of affordance exposure.
+def EqualStandingAndCapacity (a b : Agent) : Prop :=
+  σ a = σ b ∧ cap a = cap b
+
 -- Reshaping operations must be admissible
 axiom Reshape_admissible :
   ∀ F : Operation, Reshape F → Admissible F

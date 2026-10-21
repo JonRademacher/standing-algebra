@@ -7,14 +7,14 @@
   "c": "67361ca3ce4a3d3d.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.lean -o /w/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.olean -i /w/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.ilean -c /w/.lake/build/ir/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.c --setup /w/.lake/build/ir/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.lean -o /workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.olean -i /workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.ilean -c /workspace/.lake/build/ir/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.c --setup /workspace/.lake/build/ir/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.StandingAlgebra_RegimeStacked transitive imports (legacy)",
-       "559210f556fd9a65"],
+       "059f473d821a8ebb"],
       ["SigmaR.StandingAlgebra_RegimeStacked:importAllArts",
        "7d0fa550ad1050c9"]]]]],
   ["libs",
@@ -24,7 +24,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.lean",
+  ["/workspace/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.lean",
    "2451c6a83693ff40"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -32,4 +32,4 @@
    "da20aecf55e18662"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "dbcf2dc62cb8adfd"}
+ "depHash": "7a8bc6e6e8da1971"}

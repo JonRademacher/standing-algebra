@@ -96,6 +96,18 @@ axiom apply_ext :
   ∀ {F : Operation} {a₁ a₂ : Agent},
     a₁ = a₂ → apply F a₁ = apply F a₂
 
+/--
+State-level application of an operation.
+
+`State` and `Agent` are the same carrier (see above), so a state transition is
+operation application under its state-level name.  The first-order theorems and
+the collapse demonstrations are stated over *states*, and the attached
+mathematics carries both `apply` and `apply_state` (Σᴿ, *Definition — state
+transition*); this keeps both readings of the same transition available without
+introducing a second primitive.
+-/
+abbrev apply_state : Operation → State → State := apply
+
 /- -----------------
    Operation Combinators
    ----------------- -/

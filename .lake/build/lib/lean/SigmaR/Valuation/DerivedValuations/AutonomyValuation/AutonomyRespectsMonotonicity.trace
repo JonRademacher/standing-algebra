@@ -7,7 +7,7 @@
   "c": "27b3e2cc091385f7.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyRespectsMonotonicity.lean -o /w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyRespectsMonotonicity.olean -i /w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyRespectsMonotonicity.ilean -c /w/.lake/build/ir/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyRespectsMonotonicity.c --setup /w/.lake/build/ir/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyRespectsMonotonicity.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyRespectsMonotonicity.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyRespectsMonotonicity.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyRespectsMonotonicity.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyRespectsMonotonicity.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyRespectsMonotonicity.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
@@ -15,9 +15,9 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "db5c4617a8ee0430"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
       ["SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyValuation transitive imports (legacy)",
-       "b696840eb7650cc9"],
+       "873f52246c4d2dd9"],
       ["SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyValuation:importAllArts",
        "95675926cd38b51a"]]]]],
   ["libs",
@@ -27,7 +27,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyRespectsMonotonicity.lean",
+  ["/workspace/SigmaR/Valuation/DerivedValuations/AutonomyValuation/AutonomyRespectsMonotonicity.lean",
    "4b0ca13e83079f34"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -35,4 +35,4 @@
    "79763fa29b50a457"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "2881d8ab123e5655"}
+ "depHash": "e8d2823163856760"}

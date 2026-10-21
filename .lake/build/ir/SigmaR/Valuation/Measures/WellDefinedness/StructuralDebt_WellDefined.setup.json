@@ -1,0 +1,13 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name": "SigmaR.Valuation.Measures.WellDefinedness.StructuralDebt_WellDefined",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.Measures.Definitions.Operation":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/Operation.olean"]],
+  "SigmaR.Valuation.Core.DebtCoherence":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Core/DebtCoherence.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

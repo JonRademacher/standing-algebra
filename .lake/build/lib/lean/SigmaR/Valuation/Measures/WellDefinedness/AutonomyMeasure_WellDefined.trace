@@ -7,7 +7,7 @@
   "c": "5cd671ab6070df04.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Valuation/Measures/WellDefinedness/AutonomyMeasure_WellDefined.lean -o /w/.lake/build/lib/lean/SigmaR/Valuation/Measures/WellDefinedness/AutonomyMeasure_WellDefined.olean -i /w/.lake/build/lib/lean/SigmaR/Valuation/Measures/WellDefinedness/AutonomyMeasure_WellDefined.ilean -c /w/.lake/build/ir/SigmaR/Valuation/Measures/WellDefinedness/AutonomyMeasure_WellDefined.c --setup /w/.lake/build/ir/SigmaR/Valuation/Measures/WellDefinedness/AutonomyMeasure_WellDefined.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/Measures/WellDefinedness/AutonomyMeasure_WellDefined.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/WellDefinedness/AutonomyMeasure_WellDefined.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/WellDefinedness/AutonomyMeasure_WellDefined.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/Measures/WellDefinedness/AutonomyMeasure_WellDefined.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/Measures/WellDefinedness/AutonomyMeasure_WellDefined.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
@@ -15,9 +15,9 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "db5c4617a8ee0430"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
       ["SigmaR.Valuation.Measures.AutonomyMeasure_Definition transitive imports (legacy)",
-       "a3979afe2595e4c3"],
+       "d3a6cb4b1b0f000a"],
       ["SigmaR.Valuation.Measures.AutonomyMeasure_Definition:importAllArts",
        "12aaefd672532603"]]]]],
   ["libs",
@@ -27,7 +27,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Valuation/Measures/WellDefinedness/AutonomyMeasure_WellDefined.lean",
+  ["/workspace/SigmaR/Valuation/Measures/WellDefinedness/AutonomyMeasure_WellDefined.lean",
    "a1b39f5c7d7b40d2"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -35,4 +35,4 @@
    "a2272a934163d9d2"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "e7b33094f5d20326"}
+ "depHash": "acbef3e9190bc41e"}

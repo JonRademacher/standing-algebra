@@ -36,7 +36,8 @@ at the given state.
 This captures that coercive intervention is not applied prematurely
 without evaluating viable non‑coercive responses.
 -/
-axiom AlternativesConsidered : Operation → State → Prop
+-- The predicate itself is declared once, as gate 4 of STC‑5, in
+-- `SigmaR.Justifications.Core_Legitimacy.STC5_Justification`.
 
 /--
 Tier‑2 legitimacy axiom:

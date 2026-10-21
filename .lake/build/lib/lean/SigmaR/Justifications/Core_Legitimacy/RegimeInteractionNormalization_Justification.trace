@@ -7,7 +7,7 @@
   "c": "e379166cc4709340.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.lean -o /w/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.olean -i /w/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.ilean -c /w/.lake/build/ir/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.c --setup /w/.lake/build/ir/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.lean -o /workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.olean -i /workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.ilean -c /workspace/.lake/build/ir/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.c --setup /workspace/.lake/build/ir/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
@@ -16,7 +16,7 @@
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
       ["SigmaR.StandingAlgebra_FormalCore:importAllArts",
-       "db5c4617a8ee0430"]]]]],
+       "3fa9b8d096b9358b"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -24,7 +24,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.lean",
+  ["/workspace/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.lean",
    "c7f390034ae7ebf1"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -32,4 +32,4 @@
    "ebb47d48c55b66c9"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "3f2ade9391f68d2b"}
+ "depHash": "032974ace4617083"}

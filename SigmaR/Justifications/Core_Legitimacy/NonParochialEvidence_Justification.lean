@@ -34,7 +34,8 @@ Non‑parochial evidence is:
   • not restricted to a single perceptual frame,
   • rerunnable by affected agents.
 -/
-axiom NonParochialEvidence : Operation → State → Prop
+-- The predicate itself is declared once, as gate 2 of STC‑5, in
+-- `SigmaR.Justifications.Core_Legitimacy.STC5_Justification`.
 
 /--
 Tier‑2 legitimacy axiom:

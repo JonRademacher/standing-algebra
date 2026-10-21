@@ -1,0 +1,33 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["d51fc912aaa6bad2.olean"],
+  "m": false,
+  "i": "29ee13f675bbbb6a.ilean",
+  "c": "d9ce20920b6cda04.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Operations/AdmissibilityInvariant.lean -o /workspace/.lake/build/lib/lean/SigmaR/Operations/AdmissibilityInvariant.olean -i /workspace/.lake/build/lib/lean/SigmaR/Operations/AdmissibilityInvariant.ilean -c /workspace/.lake/build/ir/SigmaR/Operations/AdmissibilityInvariant.c --setup /workspace/.lake/build/ir/SigmaR/Operations/AdmissibilityInvariant.setup.json --json",
+   "level": "trace"}],
+ "inputs":
+ [["deps",
+   [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["SigmaR.Core.FormalCore transitive imports (legacy)",
+       "f4e8494e02083c49"],
+      ["SigmaR.Core.FormalCore:importAllArts", "d5ec50e62e9e41e3"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["/workspace/SigmaR/Operations/AdmissibilityInvariant.lean",
+   "b9bb09234a37a850"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: SigmaR.Operations.AdmissibilityInvariant", "b647d2057db9e9d2"],
+  ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "1e15c0a646ef6266"}

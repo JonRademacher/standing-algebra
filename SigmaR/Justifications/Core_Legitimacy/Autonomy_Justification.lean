@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_RegimeStacked
+import SigmaR.Justifications.Core_Legitimacy.Agency_Justification
 
 /-!
 ###############################################################################

@@ -6,11 +6,11 @@
  "isModule": false,
  "importArts":
  {"SigmaR.Valuation.ResponseSemantics.Response":
-  [["/w/.lake/build/lib/lean/SigmaR/Valuation/ResponseSemantics/Response.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/ResponseSemantics/Response.olean"]],
   "SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation":
-  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/PerceptualValuation/PerceptionValuation.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/PerceptualValuation/PerceptionValuation.olean"]],
   "SigmaR.Valuation.DerivedValuations.PerceptionValuation":
-  [["/w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/PerceptionValuation.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/PerceptionValuation.olean"]],
   "SigmaR.StandingAlgebra_FormalCore":
-  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
  "dynlibs": []}

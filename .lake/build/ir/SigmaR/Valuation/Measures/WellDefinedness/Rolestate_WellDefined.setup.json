@@ -5,9 +5,9 @@
  "isModule": false,
  "importArts":
  {"SigmaR.Valuation.Measures.RoleState_Definition":
-  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/RoleState_Definition.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/RoleState_Definition.olean"]],
   "SigmaR.Valuation.Measures.Definitions.RoleState_Definition":
-  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/RoleState_Definition.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/RoleState_Definition.olean"]],
   "SigmaR.StandingAlgebra_FormalCore":
-  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
  "dynlibs": []}

@@ -6,7 +6,7 @@
  "isModule": false,
  "importArts":
  {"SigmaR.Valuation.Measures.Equivalence.EquivalenceContract":
-  [["/w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Equivalence/EquivalenceContract.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Equivalence/EquivalenceContract.olean"]],
   "SigmaR.StandingAlgebra_FormalCore":
-  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
  "dynlibs": []}

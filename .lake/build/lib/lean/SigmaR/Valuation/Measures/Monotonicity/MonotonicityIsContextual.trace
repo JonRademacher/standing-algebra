@@ -7,7 +7,7 @@
   "c": "a67557ff0f9f2324.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Valuation/Measures/Monotonicity/MonotonicityIsContextual.lean -o /w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/MonotonicityIsContextual.olean -i /w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/MonotonicityIsContextual.ilean -c /w/.lake/build/ir/SigmaR/Valuation/Measures/Monotonicity/MonotonicityIsContextual.c --setup /w/.lake/build/ir/SigmaR/Valuation/Measures/Monotonicity/MonotonicityIsContextual.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/Measures/Monotonicity/MonotonicityIsContextual.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/MonotonicityIsContextual.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/MonotonicityIsContextual.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/Measures/Monotonicity/MonotonicityIsContextual.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/Measures/Monotonicity/MonotonicityIsContextual.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
@@ -16,7 +16,7 @@
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
       ["SigmaR.StandingAlgebra_FormalCore:importAllArts",
-       "db5c4617a8ee0430"]]]]],
+       "3fa9b8d096b9358b"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -24,7 +24,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Valuation/Measures/Monotonicity/MonotonicityIsContextual.lean",
+  ["/workspace/SigmaR/Valuation/Measures/Monotonicity/MonotonicityIsContextual.lean",
    "3637336c176edfb4"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -32,4 +32,4 @@
    "fce52ca57d7f2380"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "c0892695a4c6dfa5"}
+ "depHash": "72d3692f2520b2fd"}

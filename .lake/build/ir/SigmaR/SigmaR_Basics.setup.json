@@ -5,6 +5,7 @@
  "isModule": false,
  "importArts":
  {"SigmaR.StandingAlgebra_FormalCore":
-  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
-  "SigmaR.SigmaR_Core": [["/w/.lake/build/lib/lean/SigmaR/SigmaR_Core.olean"]]},
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
+  "SigmaR.SigmaR_Core":
+  [["/workspace/.lake/build/lib/lean/SigmaR/SigmaR_Core.olean"]]},
  "dynlibs": []}

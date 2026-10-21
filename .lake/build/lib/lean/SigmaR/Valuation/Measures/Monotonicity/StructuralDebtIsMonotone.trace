@@ -7,7 +7,7 @@
   "c": "61d10c74c95af7e8.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Valuation/Measures/Monotonicity/StructuralDebtIsMonotone.lean -o /w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/StructuralDebtIsMonotone.olean -i /w/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/StructuralDebtIsMonotone.ilean -c /w/.lake/build/ir/SigmaR/Valuation/Measures/Monotonicity/StructuralDebtIsMonotone.c --setup /w/.lake/build/ir/SigmaR/Valuation/Measures/Monotonicity/StructuralDebtIsMonotone.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/Measures/Monotonicity/StructuralDebtIsMonotone.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/StructuralDebtIsMonotone.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/StructuralDebtIsMonotone.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/Measures/Monotonicity/StructuralDebtIsMonotone.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/Measures/Monotonicity/StructuralDebtIsMonotone.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
@@ -15,13 +15,13 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "db5c4617a8ee0430"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
       ["SigmaR.Valuation.Measures.StructuralDebt_Definition transitive imports (legacy)",
-       "ef6d92f524b5cc4a"],
+       "2240fc19abca4e03"],
       ["SigmaR.Valuation.Measures.StructuralDebt_Definition:importAllArts",
        "0e49354205d59c58"],
       ["SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity transitive imports (legacy)",
-       "483afcf7c183d378"],
+       "f4e8494e02083c49"],
       ["SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity:importAllArts",
        "27bf3fed49ad83e9"]]]]],
   ["libs",
@@ -31,7 +31,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Valuation/Measures/Monotonicity/StructuralDebtIsMonotone.lean",
+  ["/workspace/SigmaR/Valuation/Measures/Monotonicity/StructuralDebtIsMonotone.lean",
    "1746d1c051655fb6"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -39,4 +39,4 @@
    "1bb4a954eaa345ba"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "86cbd14aeb0bb1d8"}
+ "depHash": "a976ec856e63d08e"}

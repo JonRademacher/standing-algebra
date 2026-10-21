@@ -6,9 +6,9 @@
  "isModule": false,
  "importArts":
  {"SigmaR.StandingAlgebra_FormalCore":
-  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
   "SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime":
-  [["/w/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_AffordanceCompositionRegime.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_AffordanceCompositionRegime.olean"]],
   "SigmaR.Justifications.Core_Legitimacy.NonSelection_Justification":
-  [["/w/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/NonSelection_Justification.olean"]]},
+  [["/workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/NonSelection_Justification.olean"]]},
  "dynlibs": []}

@@ -38,6 +38,16 @@ constraints of all applicable regimes.
 axiom AllRegimeConstraintsSatisfied : Operation → Prop
 
 /--
+Predicate: operation `F` has a normal form `F'`.
+
+Normalization is the operation-level carrier of regime-interaction
+normalization: an operation that satisfies every applicable constraint can be
+put in a form in which those constraints are simultaneously visible
+(Σᴿ, *Regime Interaction Normalization*).
+-/
+axiom NormalizedForm : Operation → Operation → Prop
+
+/--
 Tier-2 legitimacy axiom (Regime Interaction Normalization):
 
 An operation is legitimate iff it satisfies

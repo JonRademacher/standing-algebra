@@ -6,7 +6,7 @@
  "isModule": false,
  "importArts":
  {"SigmaR.StandingAlgebra_FormalCore":
-  [["/w/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
   "SigmaR.Regimes.StandingAlgebra_SuccessorRegime":
-  [["/w/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_SuccessorRegime.olean"]]},
+  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_SuccessorRegime.olean"]]},
  "dynlibs": []}

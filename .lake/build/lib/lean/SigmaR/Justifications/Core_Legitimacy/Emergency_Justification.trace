@@ -7,14 +7,14 @@
   "c": "050d6f9303402f14.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Justifications/Core_Legitimacy/Emergency_Justification.lean -o /w/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/Emergency_Justification.olean -i /w/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/Emergency_Justification.ilean -c /w/.lake/build/ir/SigmaR/Justifications/Core_Legitimacy/Emergency_Justification.c --setup /w/.lake/build/ir/SigmaR/Justifications/Core_Legitimacy/Emergency_Justification.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Justifications/Core_Legitimacy/Emergency_Justification.lean -o /workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/Emergency_Justification.olean -i /workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/Emergency_Justification.ilean -c /workspace/.lake/build/ir/SigmaR/Justifications/Core_Legitimacy/Emergency_Justification.c --setup /workspace/.lake/build/ir/SigmaR/Justifications/Core_Legitimacy/Emergency_Justification.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Justifications.Core_Legitimacy.STC5_Justification transitive imports (legacy)",
-       "1dfdcec4c70b0dc8"],
+       "ae14d5daa25af2a7"],
       ["SigmaR.Justifications.Core_Legitimacy.STC5_Justification:importAllArts",
        "ea9826225fe78c68"]]]]],
   ["libs",
@@ -24,7 +24,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Justifications/Core_Legitimacy/Emergency_Justification.lean",
+  ["/workspace/SigmaR/Justifications/Core_Legitimacy/Emergency_Justification.lean",
    "57743e788e56d3d4"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -32,4 +32,4 @@
    "190ce4ad0636e93b"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "f502ea3aa0cf2997"}
+ "depHash": "0b5b9c1105894c3b"}

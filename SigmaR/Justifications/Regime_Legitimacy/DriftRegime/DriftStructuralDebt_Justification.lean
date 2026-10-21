@@ -47,7 +47,7 @@ Derived theorem:
 
 Drift increases structural debt.
 -/
-theorem DriftAccruesDebt
+theorem DriftAccruesStructuralDebt
   {D : Operation}
   (hDrift : DriftRegimeOp D) :
   ∀ s : State,

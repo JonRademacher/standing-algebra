@@ -7,20 +7,20 @@
   "c": "3d1fb1138e1690ad.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorNonAccumulation_Justification.lean -o /w/.lake/build/lib/lean/SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorNonAccumulation_Justification.olean -i /w/.lake/build/lib/lean/SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorNonAccumulation_Justification.ilean -c /w/.lake/build/ir/SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorNonAccumulation_Justification.c --setup /w/.lake/build/ir/SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorNonAccumulation_Justification.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorNonAccumulation_Justification.lean -o /workspace/.lake/build/lib/lean/SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorNonAccumulation_Justification.olean -i /workspace/.lake/build/lib/lean/SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorNonAccumulation_Justification.ilean -c /workspace/.lake/build/ir/SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorNonAccumulation_Justification.c --setup /workspace/.lake/build/ir/SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorNonAccumulation_Justification.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Justifications.Core_Legitimacy.Rerunnability_Justification transitive imports (legacy)",
-       "483afcf7c183d378"],
+       "f4e8494e02083c49"],
       ["SigmaR.Justifications.Core_Legitimacy.Rerunnability_Justification:importAllArts",
        "f24e259f764e6c27"],
       ["SigmaR.Regimes.StandingAlgebra_SuccessorRegime transitive imports (legacy)",
-       "483afcf7c183d378"],
+       "f4e8494e02083c49"],
       ["SigmaR.Regimes.StandingAlgebra_SuccessorRegime:importAllArts",
-       "777b5255626a2559"]]]]],
+       "fdc588d2290b8606"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -28,7 +28,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorNonAccumulation_Justification.lean",
+  ["/workspace/SigmaR/Justifications/Regime_Legitimacy/SuccessorRegime/SuccessorNonAccumulation_Justification.lean",
    "728be27efddba88c"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -36,4 +36,4 @@
    "4f16f5c17d810c9e"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "cab494adda934018"}
+ "depHash": "32bc501fa86aec8f"}

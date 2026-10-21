@@ -1,0 +1,9 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name": "Collapse_Demonstrations.Collapse_WithStanding",
+ "isModule": false,
+ "importArts":
+ {"Collapse_Demonstrations.Collapse":
+  [["/workspace/.lake/build/lib/lean/Collapse_Demonstrations/Collapse.olean"]]},
+ "dynlibs": []}

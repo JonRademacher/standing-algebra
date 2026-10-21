@@ -7,14 +7,14 @@
   "c": "8475e95a9dedcbce.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Compositions/First_Order_Compositions/AutonomyRemedy.lean -o /w/.lake/build/lib/lean/SigmaR/Compositions/First_Order_Compositions/AutonomyRemedy.olean -i /w/.lake/build/lib/lean/SigmaR/Compositions/First_Order_Compositions/AutonomyRemedy.ilean -c /w/.lake/build/ir/SigmaR/Compositions/First_Order_Compositions/AutonomyRemedy.c --setup /w/.lake/build/ir/SigmaR/Compositions/First_Order_Compositions/AutonomyRemedy.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Compositions/First_Order_Compositions/AutonomyRemedy.lean -o /workspace/.lake/build/lib/lean/SigmaR/Compositions/First_Order_Compositions/AutonomyRemedy.olean -i /workspace/.lake/build/lib/lean/SigmaR/Compositions/First_Order_Compositions/AutonomyRemedy.ilean -c /workspace/.lake/build/ir/SigmaR/Compositions/First_Order_Compositions/AutonomyRemedy.c --setup /workspace/.lake/build/ir/SigmaR/Compositions/First_Order_Compositions/AutonomyRemedy.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.StandingAlgebra_RegimeStacked transitive imports (legacy)",
-       "559210f556fd9a65"],
+       "059f473d821a8ebb"],
       ["SigmaR.StandingAlgebra_RegimeStacked:importAllArts",
        "7d0fa550ad1050c9"]]]]],
   ["libs",
@@ -24,7 +24,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Compositions/First_Order_Compositions/AutonomyRemedy.lean",
+  ["/workspace/SigmaR/Compositions/First_Order_Compositions/AutonomyRemedy.lean",
    "5fd5039e52a1476b"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -32,4 +32,4 @@
    "36419ef585ac30f7"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "86f79e4316b26506"}
+ "depHash": "6f1b0bf93fb58382"}

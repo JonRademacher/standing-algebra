@@ -7,7 +7,7 @@
   "c": "873b690f84311413.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuationScope.lean -o /w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuationScope.olean -i /w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuationScope.ilean -c /w/.lake/build/ir/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuationScope.c --setup /w/.lake/build/ir/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuationScope.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuationScope.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuationScope.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuationScope.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuationScope.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuationScope.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
@@ -16,7 +16,7 @@
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
       ["SigmaR.StandingAlgebra_FormalCore:importAllArts",
-       "db5c4617a8ee0430"]]]]],
+       "3fa9b8d096b9358b"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -24,7 +24,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuationScope.lean",
+  ["/workspace/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingValuationScope.lean",
    "866110b6c55fae34"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -32,4 +32,4 @@
    "e98e92df6bfd489c"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "84adc309b8e3d684"}
+ "depHash": "0ca44ad2a7364bdc"}

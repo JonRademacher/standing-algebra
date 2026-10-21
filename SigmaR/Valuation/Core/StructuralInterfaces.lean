@@ -1116,12 +1116,9 @@ axiom RiskValuationContract : Prop
 ------------------------------------------------------------------------------
 -/
 
--- Core autonomy valuation entities
-axiom AutonomyValuation : Type
-axiom AutonomyState :
-  Agent → State → AutonomyValuation
-axiom AutonomyLevel :
-  AutonomyValuation → Val
+-- The core autonomy valuation entities (`AutonomyValuation`, `AutonomyState`,
+-- `AutonomyLevel`) are declared once, in the autonomy valuation block earlier in
+-- this file; this section adds only the v2 material.
 
 -- Autonomy agreement structures
 axiom AutonomyAgreement : Type
@@ -1134,13 +1131,9 @@ axiom ExternalAutonomyAgreement :
 axiom AutonomyAgreementStabilizedByEvidence :
   AutonomyAgreement → Prop
 
--- Structural dependencies of autonomy valuation
-axiom AutonomyDependsOnMeasure :
-  AutonomyValuation → Measure → Prop
-axiom AutonomyDependsOnResponse :
-  AutonomyValuation → Response → Prop
-axiom AutonomyDependsOnContext :
-  AutonomyValuation → Prop
+-- Structural dependencies of autonomy valuation on the other derived
+-- valuations.  The dependencies on `Measure`, `Response` and `Context` are
+-- declared once, in the autonomy valuation block earlier in this file.
 axiom AutonomyDependsOnPerceptualValuation :
   AutonomyValuation → PerceptionValuation → Prop
 axiom AutonomyDependsOnCapacityValuation :
@@ -1154,16 +1147,11 @@ axiom AutonomyDependsOnExitCostValuation :
 axiom AutonomyDependsOnCouplingValuation :
   AutonomyValuation → CouplingValuation → Prop
 
--- Aggregation semantics
-axiom AutonomyAggregation :
-  AutonomyValuation → AutonomyValuation → AutonomyValuation → Prop
+-- Aggregation semantics and the loss / fragility predicates are declared once,
+-- in the autonomy valuation block earlier in this file.
 
--- Loss, erosion, and fragility
-axiom AutonomyLoss :
-  AutonomyValuation → AutonomyValuation → Prop
+-- Erosion
 axiom AutonomyErosion :
-  AutonomyValuation → Prop
-axiom AutonomyFragility :
   AutonomyValuation → Prop
 
 -- Propagation and modulation
@@ -1174,21 +1162,10 @@ axiom AutonomyAmplification :
 axiom AutonomyDampening :
   AutonomyValuation → AutonomyValuation → Prop
 
--- Irreversibility and hysteresis
-axiom AutonomyIrreversibility :
-  AutonomyValuation → Prop
-axiom AutonomyHysteresis :
-  AutonomyValuation → Prop
+-- Irreversibility, hysteresis, thresholds, collapse and comparability are
+-- declared once, in the autonomy valuation block earlier in this file.
 
--- Thresholds and collapse
-axiom AutonomyThreshold :
-  AutonomyValuation → Prop
-axiom AutonomyCollapse :
-  AutonomyValuation → Prop
-
--- Comparability
-axiom AutonomyComparable :
-  AutonomyValuation → AutonomyValuation → Prop
+-- Comparability under an agreement
 axiom AutonomyComparableUnderAgreement :
   AutonomyValuation → AutonomyValuation → AutonomyAgreement → Prop
 

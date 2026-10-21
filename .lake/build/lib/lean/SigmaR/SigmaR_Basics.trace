@@ -1,0 +1,31 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["068e3a450d1e2c5b.olean"],
+  "m": false,
+  "i": "53a36065423c78a1.ilean",
+  "c": "f4a04538be3cfca7.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/SigmaR_Basics.lean -o /workspace/.lake/build/lib/lean/SigmaR/SigmaR_Basics.olean -i /workspace/.lake/build/lib/lean/SigmaR/SigmaR_Basics.ilean -c /workspace/.lake/build/ir/SigmaR/SigmaR_Basics.c --setup /workspace/.lake/build/ir/SigmaR/SigmaR_Basics.setup.json --json",
+   "level": "trace"}],
+ "inputs":
+ [["deps",
+   [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["SigmaR.SigmaR_Core transitive imports (legacy)", "f4e8494e02083c49"],
+      ["SigmaR.SigmaR_Core:importAllArts", "c74225903c55c124"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["/workspace/SigmaR/SigmaR_Basics.lean", "da4c0c5e1be05f61"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: SigmaR.SigmaR_Basics", "b36976680d7c3123"],
+  ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "5ca038eb5ec60dce"}

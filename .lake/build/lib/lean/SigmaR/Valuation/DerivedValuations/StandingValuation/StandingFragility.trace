@@ -7,7 +7,7 @@
   "c": "2fd02c1197eaf9b1.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingFragility.lean -o /w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingFragility.olean -i /w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingFragility.ilean -c /w/.lake/build/ir/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingFragility.c --setup /w/.lake/build/ir/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingFragility.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingFragility.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingFragility.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingFragility.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingFragility.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingFragility.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
@@ -15,9 +15,9 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "db5c4617a8ee0430"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
       ["SigmaR.Valuation.DerivedValuations.StandingValuation transitive imports (legacy)",
-       "06d2c7702016cee1"],
+       "221b62a139507928"],
       ["SigmaR.Valuation.DerivedValuations.StandingValuation:importAllArts",
        "cca6c97806f31fcd"]]]]],
   ["libs",
@@ -27,7 +27,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingFragility.lean",
+  ["/workspace/SigmaR/Valuation/DerivedValuations/StandingValuation/StandingFragility.lean",
    "dcd141ebc39ada98"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -35,4 +35,4 @@
    "634fc44dd90b98b6"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "01b066cd8d2ea69b"}
+ "depHash": "df67102b2050d8d7"}

@@ -25,6 +25,16 @@ This file extracts NRPP as a necessary condition of legitimacy.
 namespace SigmaR
 
 /--
+Predicate: operation `F` satisfies NRPP without reference to a state, i.e. it
+is NRPP‑fit in every state.
+
+This is the state‑free form of gate (3) of STC‑5, used by the
+operations layer where operations are classified without naming a state.
+-/
+def NRPP_Satisfied (F : Operation) : Prop :=
+  ∀ s : State, NRPP_Fit F s
+
+/--
 Any operation deemed `Legitimate` must satisfy the Non‑Retributive
 Proportionality Principle (NRPP) in every state.
 

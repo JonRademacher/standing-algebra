@@ -7,7 +7,7 @@
   "c": "0f2fae3c8f71f43b.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Operations/ProceduralVsJustificatoryExclusivity_Op.lean -o /w/.lake/build/lib/lean/SigmaR/Operations/ProceduralVsJustificatoryExclusivity_Op.olean -i /w/.lake/build/lib/lean/SigmaR/Operations/ProceduralVsJustificatoryExclusivity_Op.ilean -c /w/.lake/build/ir/SigmaR/Operations/ProceduralVsJustificatoryExclusivity_Op.c --setup /w/.lake/build/ir/SigmaR/Operations/ProceduralVsJustificatoryExclusivity_Op.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Operations/ProceduralVsJustificatoryExclusivity_Op.lean -o /workspace/.lake/build/lib/lean/SigmaR/Operations/ProceduralVsJustificatoryExclusivity_Op.olean -i /workspace/.lake/build/lib/lean/SigmaR/Operations/ProceduralVsJustificatoryExclusivity_Op.ilean -c /workspace/.lake/build/ir/SigmaR/Operations/ProceduralVsJustificatoryExclusivity_Op.c --setup /workspace/.lake/build/ir/SigmaR/Operations/ProceduralVsJustificatoryExclusivity_Op.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
@@ -16,7 +16,7 @@
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
       ["SigmaR.StandingAlgebra_FormalCore:importAllArts",
-       "db5c4617a8ee0430"]]]]],
+       "3fa9b8d096b9358b"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -24,7 +24,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Operations/ProceduralVsJustificatoryExclusivity_Op.lean",
+  ["/workspace/SigmaR/Operations/ProceduralVsJustificatoryExclusivity_Op.lean",
    "919308a4c71b6ad8"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -32,4 +32,4 @@
    "2125a504337d208a"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "c5c0e51b000f2353"}
+ "depHash": "d39dd3553927e26b"}

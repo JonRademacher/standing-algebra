@@ -1,0 +1,13 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name": "SigmaR.SigmaR_Model",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.StandingAlgebra_FormalCore":
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
+  "SigmaR.SigmaR_Core":
+  [["/workspace/.lake/build/lib/lean/SigmaR/SigmaR_Core.olean"]],
+  "SigmaR.SigmaR_Basics":
+  [["/workspace/.lake/build/lib/lean/SigmaR/SigmaR_Basics.olean"]]},
+ "dynlibs": []}

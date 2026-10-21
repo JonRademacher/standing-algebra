@@ -7,7 +7,7 @@
   "c": "39662c3a1d058881.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/w/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /w/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityDependsOnMeasure.lean -o /w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityDependsOnMeasure.olean -i /w/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityDependsOnMeasure.ilean -c /w/.lake/build/ir/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityDependsOnMeasure.c --setup /w/.lake/build/ir/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityDependsOnMeasure.setup.json --json",
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityDependsOnMeasure.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityDependsOnMeasure.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityDependsOnMeasure.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityDependsOnMeasure.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityDependsOnMeasure.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["deps",
@@ -15,9 +15,9 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "db5c4617a8ee0430"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
       ["SigmaR.Valuation.DerivedValuations.TransformabilityValuation.TransformabilityValuation transitive imports (legacy)",
-       "483afcf7c183d378"],
+       "f4e8494e02083c49"],
       ["SigmaR.Valuation.DerivedValuations.TransformabilityValuation.TransformabilityValuation:importAllArts",
        "d4690fd1eb6a4725"]]]]],
   ["libs",
@@ -27,7 +27,7 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/w/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityDependsOnMeasure.lean",
+  ["/workspace/SigmaR/Valuation/DerivedValuations/TransformabilityValuation/TransformabilityDependsOnMeasure.lean",
    "bbde9011971a3b6e"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
@@ -35,4 +35,4 @@
    "de6bbad9dcabc47b"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "1b69c5a524f7e2ba"}
+ "depHash": "af940c16d4951435"}

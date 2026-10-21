@@ -39,7 +39,8 @@ This captures that coercive intervention remains:
   • terminable,
   • or repairable.
 -/
-axiom OffRampsAndCorrection : Operation → State → Prop
+-- The predicate itself is declared once, as gate 5 of STC‑5, in
+-- `SigmaR.Justifications.Core_Legitimacy.STC5_Justification`.
 
 /--
 Tier‑2 legitimacy axiom:
