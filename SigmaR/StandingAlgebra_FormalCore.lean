@@ -106,7 +106,10 @@ mathematics carries both `apply` and `apply_state` (Σᴿ, *Definition — state
 transition*); this keeps both readings of the same transition available without
 introducing a second primitive.
 -/
-abbrev apply_state : Operation → State → State := apply
+-- `apply` is a primitive of the signature (an axiom, hence without executable
+-- code), so this alias is `noncomputable`: it renames the transition, it does
+-- not compute one.
+noncomputable abbrev apply_state : Operation → State → State := apply
 
 /- -----------------
    Operation Combinators

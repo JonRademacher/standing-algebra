@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition transitive imports (legacy)",
-       "f4e8494e02083c49"],
+       "89cc5b322ac37987"],
       ["SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition:importAllArts",
        "fb2ef9726776e286"]]]]],
   ["libs",
@@ -32,4 +32,4 @@
    "d0611f9a19cc9e05"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "6694be23c4b7442f"}
+ "depHash": "f7a66c4db70c2c16"}

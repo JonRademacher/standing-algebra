@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Valuation.DerivedValuations.CapacityValuation.CapacityValuation transitive imports (legacy)",
-       "f4e8494e02083c49"],
+       "89cc5b322ac37987"],
       ["SigmaR.Valuation.DerivedValuations.CapacityValuation.CapacityValuation:importAllArts",
        "71548b9a75d901da"]]]]],
   ["libs",
@@ -32,4 +32,4 @@
    "6100e617f64ffbdf"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "ec3c308f56f3f49c"}
+ "depHash": "aaa73654679beb3d"}

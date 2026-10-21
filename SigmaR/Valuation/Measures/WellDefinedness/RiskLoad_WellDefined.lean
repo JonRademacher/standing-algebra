@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.RiskInheritance_Definition
+import SigmaR.Valuation.Measures.Definitions.RiskInheritance_Definition
 
 /-!
 ###############################################################################

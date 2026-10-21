@@ -23,7 +23,7 @@ axiom no_scalar_comparison :
       IsMeasure M₁ ∧
       IsMeasure M₂ ∧
       NonComparable M₁ M₂ ∧
-      Scalarizes {M₁, M₂} O
+      Scalarizes (fun M => M = M₁ ∨ M = M₂) O
   )
 
 end SigmaR

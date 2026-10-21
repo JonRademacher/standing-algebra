@@ -29,6 +29,3 @@ axiom no_self_optimization :
   )
 
 end SigmaR
-
-
-end SigmaR

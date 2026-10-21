@@ -6,5 +6,7 @@
  "isModule": false,
  "importArts":
  {"SigmaR.StandingAlgebra_FormalCore":
-  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
+  "SigmaR.Justifications.Core_Legitimacy.OperationsPresupposition_Justification":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/OperationsPresupposition_Justification.olean"]]},
  "dynlibs": []}

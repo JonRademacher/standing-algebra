@@ -1,9 +1,9 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["a5328f0ee9a5bd1c.olean"],
+ {"o": ["09cd49f128667af7.olean"],
   "m": false,
-  "i": "f96725acae8b4202.ilean",
+  "i": "8c01f98ea3bdb620.ilean",
   "c": "67361ca3ce4a3d3d.c"},
  "log":
  [{"message":
@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.StandingAlgebra_RegimeStacked transitive imports (legacy)",
-       "059f473d821a8ebb"],
+       "cd35cf11e1160908"],
       ["SigmaR.StandingAlgebra_RegimeStacked:importAllArts",
        "7d0fa550ad1050c9"]]]]],
   ["libs",
@@ -25,11 +25,11 @@
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
   ["/workspace/SigmaR/Justifications/Core_Legitimacy/STC5_Justification.lean",
-   "2451c6a83693ff40"],
+   "9945069155a6a26c"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: SigmaR.Justifications.Core_Legitimacy.STC5_Justification",
    "da20aecf55e18662"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "7a8bc6e6e8da1971"}
+ "depHash": "c879e91880a361b5"}

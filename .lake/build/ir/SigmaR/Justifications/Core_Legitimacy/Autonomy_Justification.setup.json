@@ -25,5 +25,7 @@
   "SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime":
   [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_AffordanceCompositionRegime.olean"]],
   "SigmaR.Regimes.StandingAlgebra_AdapterRegime":
-  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_AdapterRegime.olean"]]},
+  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_AdapterRegime.olean"]],
+  "SigmaR.Justifications.Core_Legitimacy.Agency_Justification":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/Agency_Justification.olean"]]},
  "dynlibs": []}

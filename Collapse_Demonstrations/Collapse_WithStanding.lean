@@ -50,6 +50,6 @@ by
     SA F a hAdm
 
   -- Contradiction: σ(Apply F a) < σ a and ≥ σ a
-  exact lt_irrefl _ (lt_of_lt_of_le hDecrease hNonDecrease)
+  exact (Int.not_le.mpr hDecrease) hNonDecrease
 
 end Collapse_Demonstrations

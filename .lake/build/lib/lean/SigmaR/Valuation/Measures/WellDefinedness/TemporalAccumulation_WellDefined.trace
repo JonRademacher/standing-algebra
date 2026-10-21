@@ -15,9 +15,9 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "8179365a682d8f9b"],
       ["SigmaR.Valuation.Measures.TemporalAccumulation_Definition transitive imports (legacy)",
-       "a2c325246099f1c1"],
+       "5928b47819dc224a"],
       ["SigmaR.Valuation.Measures.TemporalAccumulation_Definition:importAllArts",
        "7e294600f81f9b4c"]]]]],
   ["libs",
@@ -35,4 +35,4 @@
    "cc3907eba3917fe9"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "ba699c7ec371d643"}
+ "depHash": "c761bff9e60ebead"}

@@ -63,6 +63,12 @@ namespace SigmaR
     capacity‑indexed. -/
 axiom VoluntaryAutonomyLimitation : State → Prop
 
+/-- Predicate: structural debt is incurred at state `s`.
+
+This is the state-level reading of the layer's structural-debt notion; the
+operation-level reading lives in `StructuralDebt_Justification`. -/
+axiom StructuralDebtAt : State → Prop
+
 /--
 Core legitimacy axiom:
 
@@ -72,6 +78,6 @@ does not generate structural debt.
 axiom voluntary_limitation_no_debt :
   ∀ s : State,
     VoluntaryAutonomyLimitation s →
-    ¬ StructuralDebt.default s
+    ¬ StructuralDebtAt s
 
 end SigmaR

@@ -1,0 +1,16 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.Measures.Relevance.GoodhartDriftFromPartialObservability",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.Measures.Relevance.ObservabilityIsLocal":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Relevance/ObservabilityIsLocal.olean"]],
+  "SigmaR.Valuation.Measures.MeasurementLimits.ObservabilityIsLocal":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/MeasurementLimits/ObservabilityIsLocal.olean"]],
+  "SigmaR.Valuation.Core.StructuralInterfaces":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Core/StructuralInterfaces.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

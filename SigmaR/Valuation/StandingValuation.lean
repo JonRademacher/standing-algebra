@@ -51,6 +51,17 @@ by
   intro h₁ h₂
   exact Int.le_trans h₁ h₂
 
+/--
+A preorder packaged as a structure.
+
+The core library available to this development has no `Preorder` class, so the
+order induced by the valuation is packaged here explicitly.
+-/
+structure Preorder (α : Type) where
+  le        : α → α → Prop
+  le_refl   : ∀ a, le a a
+  le_trans  : ∀ a b c, le a b → le b c → le a c
+
 /-- Preorder induced by valuation. -/
 theorem ValLe_preorder (i : Agent) : Preorder State :=
 { le := ValLe i
@@ -62,7 +73,7 @@ theorem ValLe_preorder (i : Agent) : Preorder State :=
 /- -------------------------------------------------------------------------- -/
 
 /-- Change in standing (delta). -/
-def Δσ (i : Agent) (s₁ s₂ : State) : Int :=
+noncomputable def Δσ (i : Agent) (s₁ s₂ : State) : Int :=
   σv i s₂ - σv i s₁
 
 /-- Non-decrease iff delta ≥ 0. -/

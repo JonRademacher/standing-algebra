@@ -15,9 +15,9 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "8179365a682d8f9b"],
       ["SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyAgreement transitive imports (legacy)",
-       "f4e8494e02083c49"],
+       "89cc5b322ac37987"],
       ["SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyAgreement:importAllArts",
        "10dc25b8518e9282"]]]]],
   ["libs",
@@ -35,4 +35,4 @@
    "be9f2d039c20ace1"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "14220b42b42e7e83"}
+ "depHash": "0e96e257ea55e52f"}

@@ -1,0 +1,32 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b0d8953435485bed.olean"],
+  "m": false,
+  "i": "7eef0126de032e57.ilean",
+  "c": "e2f51c9678f5c9ed.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Standing Algebra (Σᴿ) full.lean -o /workspace/.lake/build/lib/lean/SigmaR/Standing Algebra (Σᴿ) full.olean -i /workspace/.lake/build/lib/lean/SigmaR/Standing Algebra (Σᴿ) full.ilean -c /workspace/.lake/build/ir/SigmaR/Standing Algebra (Σᴿ) full.c --setup /workspace/.lake/build/ir/SigmaR/Standing Algebra (Σᴿ) full.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "SigmaR/Standing Algebra (Σᴿ) full.lean:10:29: `inductive ... :=` has been deprecated in favor of `inductive ... where`\n\nNote: This linter can be disabled with `set_option linter.deprecated false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
+    ["imports", "00000000000006bb"]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["/workspace/SigmaR/Standing Algebra (Σᴿ) full.lean", "8990371f94b29153"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: SigmaR.«Standing Algebra (Σᴿ) full»", "9851ac68b471d09c"],
+  ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "dc16024351df5df3"}

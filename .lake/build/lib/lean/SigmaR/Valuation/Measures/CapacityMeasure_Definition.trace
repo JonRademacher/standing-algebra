@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition transitive imports (legacy)",
-       "f4e8494e02083c49"],
+       "89cc5b322ac37987"],
       ["SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition:importAllArts",
        "62fabbc458c56ed2"]]]]],
   ["libs",
@@ -32,4 +32,4 @@
    "1fc0332f880b4183"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "797fe1a5e2f43719"}
+ "depHash": "59bcb9130603906c"}

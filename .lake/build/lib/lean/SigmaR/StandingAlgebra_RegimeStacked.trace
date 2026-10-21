@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Regimes.StandingAlgebra_RegimesStacked transitive imports (legacy)",
-       "1151b75bb4180365"],
+       "a15d62becf969d8a"],
       ["SigmaR.Regimes.StandingAlgebra_RegimesStacked:importAllArts",
        "e332e7c11c2a57cb"]]]]],
   ["libs",
@@ -30,4 +30,4 @@
   ["Module.name: SigmaR.StandingAlgebra_RegimeStacked", "852b1784ff0e41d6"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "39be300a79ed4637"}
+ "depHash": "979d9f8f2c2d679d"}

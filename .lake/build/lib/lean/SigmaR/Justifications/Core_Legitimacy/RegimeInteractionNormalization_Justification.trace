@@ -1,9 +1,9 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["480da52f5be233b2.olean"],
+ {"o": ["99c0987ede7b4d4b.olean"],
   "m": false,
-  "i": "3e47f5a43da25b14.ilean",
+  "i": "85f37075b7d9d114.ilean",
   "c": "e379166cc4709340.c"},
  "log":
  [{"message":
@@ -16,7 +16,7 @@
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
       ["SigmaR.StandingAlgebra_FormalCore:importAllArts",
-       "3fa9b8d096b9358b"]]]]],
+       "8179365a682d8f9b"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -25,11 +25,11 @@
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
   ["/workspace/SigmaR/Justifications/Core_Legitimacy/RegimeInteractionNormalization_Justification.lean",
-   "c7f390034ae7ebf1"],
+   "0b33fde7ac0125e2"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: SigmaR.Justifications.Core_Legitimacy.RegimeInteractionNormalization_Justification",
    "ebb47d48c55b66c9"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "032974ace4617083"}
+ "depHash": "525074e0f0f85522"}

@@ -270,6 +270,71 @@ axiom TreatedAsDominationPressureFromStructuralDebt : Agent → State → Prop
 axiom TreatedAsDominationPressureFromExitViable : Agent → State → Prop
 axiom TreatedAsDominationPressureFromTemporalAccumulation : Agent → State → Prop
 
+-- Misuses whose source is the autonomy measure
+axiom TreatedAsCapacityFromAutonomy : Agent → State → Prop
+axiom TreatedAsConsentFromAutonomy : Agent → State → Prop
+axiom TreatedAsAutonomyFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsConsentFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsDebtFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsExitViableFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsRiskFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsDominationPressureFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsAutonomyFromStructuralDebt : Agent → State → Prop
+
+-- Misuses whose source is the capacity measure
+axiom TreatedAsConsentFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsDebtFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsExitViableFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsRiskFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsDominationPressureFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsAutonomyFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsCapacityFromStructuralDebt : Agent → State → Prop
+
+-- Misuses whose source is the consent state
+axiom TreatedAsAutonomyFromConsentState : Agent → State → Prop
+axiom TreatedAsCapacityFromConsentState : Agent → State → Prop
+axiom TreatedAsStandingFromConsentState : Agent → State → Prop
+axiom TreatedAsExitViableFromConsentState : Agent → State → Prop
+axiom TreatedAsRoleFromConsentState : Agent → State → Prop
+axiom TreatedAsRiskResolvedFromConsentState : Agent → State → Prop
+axiom TreatedAsDebtResolvedFromConsentState : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationResolvedFromConsentState : Agent → State → Prop
+axiom TreatedAsDominationPressureResolvedFromConsentState : Agent → State → Prop
+
+-- Misuses whose source is structural debt, a role state, risk load,
+-- exit viability, temporal accumulation or domination pressure
+axiom TreatedAsConsentInvalidFromStructuralDebt : Agent → State → Prop
+axiom TreatedAsRoleFromStructuralDebt : Agent → State → Prop
+axiom TreatedAsRoleFromStandingMeasure : Agent → State → Prop
+axiom TreatedAsRoleFromExitViable : Agent → State → Prop
+axiom TreatedAsRoleFromRiskLoad : Agent → State → Prop
+axiom TreatedAsRoleFromTemporalAccumulation : Agent → State → Prop
+axiom TreatedAsRoleFromDominationPressure : Agent → State → Prop
+axiom TreatedAsDominationPressureFromRoleState : Agent → State → Prop
+axiom TreatedAsDominationPressureResolvedFromExitViable : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromDominationPressure : Agent → State → Prop
+
+/-!
+------------------------------------------------------------------------------
+9b. Measurement-limit, relevance and independence interfaces
+------------------------------------------------------------------------------
+-/
+
+-- Measurement limits
+axiom InfinitelyResolvable : Val → Prop
+
+-- Relevance / framing
+axiom TreatedAsAuthoritative : PredS
+axiom TreatedAsTrue : PredS
+axiom TreatedAsObligatory : PredS
+axiom TreatedAsPlurality : PredS
+axiom TreatedAsAggregationOfAgents : Set Agent → State → Prop
+
+-- Independence of measures
+axiom IndependentMeasures : Measure → Measure → Prop
+
 /-!
 ------------------------------------------------------------------------------
 10. Monotonicity interfaces

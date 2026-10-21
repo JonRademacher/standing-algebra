@@ -27,4 +27,3 @@ axiom no_monotone_improvement :
   )
 
 end SigmaR
-end SigmaR

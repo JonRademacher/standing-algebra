@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Valuation.Measures.Definitions.RoleState_Definition transitive imports (legacy)",
-       "f4e8494e02083c49"],
+       "89cc5b322ac37987"],
       ["SigmaR.Valuation.Measures.Definitions.RoleState_Definition:importAllArts",
        "a00db864cdd1ead5"]]]]],
   ["libs",
@@ -30,4 +30,4 @@
   ["Module.name: SigmaR.Standing.RoleState_Definition", "569d282e83edab4c"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "01f730b88f0f893a"}
+ "depHash": "77750ce3edd70543"}

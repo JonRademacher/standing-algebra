@@ -1,0 +1,38 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Justifications.Core_Legitimacy.ContestationCondition_Justification",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.StandingAlgebra_RegimeStacked":
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_RegimeStacked.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_SuccessorRegime":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_SuccessorRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_RiskRegime":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_RiskRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_RemedyRegime":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_RemedyRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_RegimesStacked":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_RegimesStacked.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_ExitRegime":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_ExitRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_EmergencyRegime":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_EmergencyRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_DriftRegime":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_DriftRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_AffordanceCompositionRegime.olean"]],
+  "SigmaR.Regimes.StandingAlgebra_AdapterRegime":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Regimes/StandingAlgebra_AdapterRegime.olean"]],
+  "SigmaR.Justifications.Core_Legitimacy.PFA_Justification":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/PFA_Justification.olean"]],
+  "SigmaR.Justifications.Core_Legitimacy.CIA_Justification":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/CIA_Justification.olean"]],
+  "SigmaR.Justifications.Core_Legitimacy.Autonomy_Justification":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/Autonomy_Justification.olean"]],
+  "SigmaR.Justifications.Core_Legitimacy.Agency_Justification":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Justifications/Core_Legitimacy/Agency_Justification.olean"]]},
+ "dynlibs": []}

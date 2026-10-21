@@ -1,9 +1,9 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["24cfb1af5badbcc4.olean"],
+ {"o": ["0f48a8a055e209a9.olean"],
   "m": false,
-  "i": "0b75a882adc9190e.ilean",
+  "i": "2fd732dea727418c.ilean",
   "c": "95d4bd0056a0a9da.c"},
  "log":
  [{"message":
@@ -20,10 +20,10 @@
     ["module plugins", "00000000000006bb"]]],
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
-  ["/workspace/SigmaR/StandingAlgebra_FormalCore.lean", "66caaec9752d619e"],
+  ["/workspace/SigmaR/StandingAlgebra_FormalCore.lean", "21d7c25142a89312"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: SigmaR.StandingAlgebra_FormalCore", "dcabb47668d57d2c"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "46b30f4427fe9c78"}
+ "depHash": "727baeadc2f438a5"}

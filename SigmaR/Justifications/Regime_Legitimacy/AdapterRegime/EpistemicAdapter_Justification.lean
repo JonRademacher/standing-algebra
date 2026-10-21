@@ -1,6 +1,7 @@
 import SigmaR.Justifications.Core_Legitimacy.PFA_Justification
 import SigmaR.Justifications.Core_Legitimacy.ScopeScaleRelativity_Justification
 import SigmaR.Justifications.Core_Legitimacy.DerivedStanding_Justification
+import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 
 /-!
 ###############################################################################

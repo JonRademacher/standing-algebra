@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Valuation.Measures.Definitions.TemporalAccumulation_Definition transitive imports (legacy)",
-       "f4e8494e02083c49"],
+       "89cc5b322ac37987"],
       ["SigmaR.Valuation.Measures.Definitions.TemporalAccumulation_Definition:importAllArts",
        "3c1097d99b11ceb7"]]]]],
   ["libs",
@@ -32,4 +32,4 @@
    "5112bd8669339cc7"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "981ce62d00b4bca2"}
+ "depHash": "39b5654c3ba389df"}

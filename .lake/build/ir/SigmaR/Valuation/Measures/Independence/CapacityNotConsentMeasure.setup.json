@@ -1,0 +1,19 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name": "SigmaR.Valuation.Measures.Independence.CapacityNotConsentMeasure",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.Measures.Definitions.ConsentState_Definition":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/ConsentState_Definition.olean"]],
+  "SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/CapacityMeasure_Definition.olean"]],
+  "SigmaR.Valuation.Measures.CapacityMeasure_Definition":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/CapacityMeasure_Definition.olean"]],
+  "SigmaR.Valuation.Core.StructuralInterfaces":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Core/StructuralInterfaces.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]],
+  "SigmaR.Standing.ConsentState_Definition":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Standing/ConsentState_Definition.olean"]]},
+ "dynlibs": []}

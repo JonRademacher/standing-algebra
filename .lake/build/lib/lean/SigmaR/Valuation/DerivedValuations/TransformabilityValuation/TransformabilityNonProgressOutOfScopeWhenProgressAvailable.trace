@@ -15,9 +15,9 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "8179365a682d8f9b"],
       ["SigmaR.Valuation.DerivedValuations.TransformabilityValuation.TransformabilityProgressOptionSet transitive imports (legacy)",
-       "7c3568cd814bdcb4"],
+       "44c82338b262ce51"],
       ["SigmaR.Valuation.DerivedValuations.TransformabilityValuation.TransformabilityProgressOptionSet:importAllArts",
        "5d6f9d53421b3f2f"]]]]],
   ["libs",
@@ -35,4 +35,4 @@
    "d739cbd191cdad86"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "193af21c26cc4d1d"}
+ "depHash": "f54a134faa3aaa0e"}

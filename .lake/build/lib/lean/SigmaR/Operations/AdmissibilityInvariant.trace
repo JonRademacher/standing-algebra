@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Core.FormalCore transitive imports (legacy)",
-       "f4e8494e02083c49"],
+       "89cc5b322ac37987"],
       ["SigmaR.Core.FormalCore:importAllArts", "d5ec50e62e9e41e3"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
@@ -30,4 +30,4 @@
   ["Module.name: SigmaR.Operations.AdmissibilityInvariant", "b647d2057db9e9d2"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "1e15c0a646ef6266"}
+ "depHash": "95e29689d6088598"}

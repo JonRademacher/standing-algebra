@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -21,8 +22,8 @@ invalidity is permitted.
 -/
 axiom measurement_limits_not_invalidity :
   ¬ (
-    ∀ (s : State),
-      MeasurementLimited s →
+    ∀ (a : Agent) (s : State),
+      MeasurementLimited a s →
       SystemInvalid
   )
 

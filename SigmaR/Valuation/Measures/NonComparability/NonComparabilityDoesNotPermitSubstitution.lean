@@ -16,7 +16,7 @@ namespace SigmaR
 Non-comparability does not license substitution.
 -/
 axiom noncomparability_no_substitution :
-  ∀ (M₁ M₂ : Agent → State → Nat),
+  ∀ (M₁ M₂ : Agent → State → Prop),
     ¬ (∀ a s, M₁ a s → M₂ a s)
 
 end SigmaR

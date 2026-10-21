@@ -15,13 +15,13 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "8179365a682d8f9b"],
       ["SigmaR.Valuation.DerivedValuations.PerceptionValuation transitive imports (legacy)",
-       "03f0c9fff68ab8cd"],
+       "f8e6e20f9fb035fe"],
       ["SigmaR.Valuation.DerivedValuations.PerceptionValuation:importAllArts",
        "05eead444385ed10"],
       ["SigmaR.Valuation.DerivedValuations.CouplingValuation transitive imports (legacy)",
-       "83c2d3f3aa99cab3"],
+       "def9175e83eeb358"],
       ["SigmaR.Valuation.DerivedValuations.CouplingValuation:importAllArts",
        "4fd374796e1b448c"]]]]],
   ["libs",
@@ -39,4 +39,4 @@
    "9df116402b2b0520"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "08e6ef185d87098f"}
+ "depHash": "6d6062e7906211ed"}

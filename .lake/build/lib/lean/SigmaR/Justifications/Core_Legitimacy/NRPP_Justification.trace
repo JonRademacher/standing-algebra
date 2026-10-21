@@ -1,9 +1,9 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["93dd94610e00047f.olean"],
+ {"o": ["c6ebdc34fb6b31a5.olean"],
   "m": false,
-  "i": "a1895973f28491b5.ilean",
+  "i": "26f3d60d356d5178.ilean",
   "c": "d1af976aa6fdec0d.c"},
  "log":
  [{"message":
@@ -14,13 +14,13 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.StandingAlgebra_RegimeStacked transitive imports (legacy)",
-       "059f473d821a8ebb"],
+       "cd35cf11e1160908"],
       ["SigmaR.StandingAlgebra_RegimeStacked:importAllArts",
        "7d0fa550ad1050c9"],
       ["SigmaR.Justifications.Core_Legitimacy.STC5_Justification transitive imports (legacy)",
-       "ae14d5daa25af2a7"],
+       "b245aab55f5eabc3"],
       ["SigmaR.Justifications.Core_Legitimacy.STC5_Justification:importAllArts",
-       "ea9826225fe78c68"]]]]],
+       "1528bafdeb23c2e8"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -29,11 +29,11 @@
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
   ["/workspace/SigmaR/Justifications/Core_Legitimacy/NRPP_Justification.lean",
-   "37f2cdd7ce88b446"],
+   "15e5a828a4f01d57"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: SigmaR.Justifications.Core_Legitimacy.NRPP_Justification",
    "49f6cb01fd0c563f"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "215df3b8afe866f0"}
+ "depHash": "071d935a992855ff"}

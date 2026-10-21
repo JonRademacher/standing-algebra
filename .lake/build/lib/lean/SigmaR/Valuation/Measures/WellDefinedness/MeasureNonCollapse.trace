@@ -15,13 +15,13 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "8179365a682d8f9b"],
       ["SigmaR.Valuation.Measures.StandingMeasure_Definition transitive imports (legacy)",
-       "6fe3e93d49cdaf2d"],
+       "04fb4d7d2790cede"],
       ["SigmaR.Valuation.Measures.StandingMeasure_Definition:importAllArts",
        "0369f68dba226b9d"],
       ["SigmaR.Valuation.Measures.CapacityMeasure_Definition transitive imports (legacy)",
-       "8b74d022e87bf760"],
+       "70bfdbc59c4d46ab"],
       ["SigmaR.Valuation.Measures.CapacityMeasure_Definition:importAllArts",
        "9ce88fa38dae7f0a"]]]]],
   ["libs",
@@ -39,4 +39,4 @@
    "f23f7d7ebb5e96b2"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "f872a32a638361e4"}
+ "depHash": "eb8ef72e11d9115e"}

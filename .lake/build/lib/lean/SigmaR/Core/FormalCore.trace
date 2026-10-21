@@ -16,7 +16,7 @@
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
       ["SigmaR.StandingAlgebra_FormalCore:importAllArts",
-       "3fa9b8d096b9358b"]]]]],
+       "8179365a682d8f9b"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -30,4 +30,4 @@
   ["Module.name: SigmaR.Core.FormalCore", "23cddef8bca5297d"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "b39737bd918197aa"}
+ "depHash": "8927d70a3715bc1d"}

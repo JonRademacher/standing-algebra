@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Valuation.DerivedValuations.CouplingValuation.CouplingValuation transitive imports (legacy)",
-       "f4e8494e02083c49"],
+       "89cc5b322ac37987"],
       ["SigmaR.Valuation.DerivedValuations.CouplingValuation.CouplingValuation:importAllArts",
        "44ff43ecc206ac01"]]]]],
   ["libs",
@@ -32,4 +32,4 @@
    "7dc1ff8b8caa256d"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "eb91f721d4217732"}
+ "depHash": "4ed419750f360e2f"}

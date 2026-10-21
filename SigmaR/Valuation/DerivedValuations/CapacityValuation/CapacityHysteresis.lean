@@ -21,4 +21,11 @@ It does NOT:
 namespace SigmaR
 
 /--
-CapacityHysteresis C means
+CapacityHysteresis C means that capacity valuation C
+is path dependent: its value at a state depends on
+the history through which that state was reached.
+-/
+axiom CapacityHysteresis :
+  CapacityValuation → Prop
+
+end SigmaR

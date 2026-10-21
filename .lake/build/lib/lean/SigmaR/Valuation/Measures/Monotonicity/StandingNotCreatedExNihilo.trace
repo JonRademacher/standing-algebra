@@ -15,13 +15,13 @@
     ["imports",
      [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
        "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "3fa9b8d096b9358b"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "8179365a682d8f9b"],
       ["SigmaR.Valuation.Measures.StandingMeasure_Definition transitive imports (legacy)",
-       "6fe3e93d49cdaf2d"],
+       "04fb4d7d2790cede"],
       ["SigmaR.Valuation.Measures.StandingMeasure_Definition:importAllArts",
        "0369f68dba226b9d"],
       ["SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity transitive imports (legacy)",
-       "f4e8494e02083c49"],
+       "89cc5b322ac37987"],
       ["SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity:importAllArts",
        "27bf3fed49ad83e9"]]]]],
   ["libs",
@@ -39,4 +39,4 @@
    "b2b025621827d368"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "07e58bb5c3d6df00"}
+ "depHash": "8992fb6e859b47e9"}

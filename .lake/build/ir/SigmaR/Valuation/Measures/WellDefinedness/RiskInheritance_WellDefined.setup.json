@@ -1,0 +1,18 @@
+{"plugins": [],
+ "package": "SigmaR",
+ "options": {},
+ "name":
+ "SigmaR.Valuation.Measures.WellDefinedness.RiskInheritance_WellDefined",
+ "isModule": false,
+ "importArts":
+ {"SigmaR.Valuation.Measures.RiskInheritance_Definition":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/RiskInheritance_Definition.olean"]],
+  "SigmaR.Valuation.Measures.DependencyDegree_Definition":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/DependencyDegree_Definition.olean"]],
+  "SigmaR.Valuation.Measures.Definitions.DependencyDegree_Definition":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Definitions/DependencyDegree_Definition.olean"]],
+  "SigmaR.Valuation.Core.StructuralInterfaces":
+  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Core/StructuralInterfaces.olean"]],
+  "SigmaR.StandingAlgebra_FormalCore":
+  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
+ "dynlibs": []}

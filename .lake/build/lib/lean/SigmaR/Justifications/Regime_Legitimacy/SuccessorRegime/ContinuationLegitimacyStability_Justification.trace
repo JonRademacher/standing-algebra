@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Regimes.StandingAlgebra_SuccessorRegime transitive imports (legacy)",
-       "f4e8494e02083c49"],
+       "89cc5b322ac37987"],
       ["SigmaR.Regimes.StandingAlgebra_SuccessorRegime:importAllArts",
        "fdc588d2290b8606"]]]]],
   ["libs",
@@ -32,4 +32,4 @@
    "fff9624803937657"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "8935330310f0495d"}
+ "depHash": "10317d0fbc4c62db"}

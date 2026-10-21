@@ -43,12 +43,8 @@ from entering the legitimacy domain.
 
 namespace SigmaR
 
-/--
-Predicate: operation F
-may be evaluated for legitimacy
-at state s.
--/
-axiom Admissible : Operation → State → Prop
+-- `Admissible` is the core admissibility predicate `Admissible : Operation → Prop`
+-- of `SigmaR.StandingAlgebra_FormalCore`; it is imported, not redeclared here.
 
 /--
 Precondition:

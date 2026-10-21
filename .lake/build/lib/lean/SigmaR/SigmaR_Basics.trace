@@ -13,7 +13,7 @@
  [["deps",
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
-     [["SigmaR.SigmaR_Core transitive imports (legacy)", "f4e8494e02083c49"],
+     [["SigmaR.SigmaR_Core transitive imports (legacy)", "89cc5b322ac37987"],
       ["SigmaR.SigmaR_Core:importAllArts", "c74225903c55c124"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
@@ -28,4 +28,4 @@
   ["Module.name: SigmaR.SigmaR_Basics", "b36976680d7c3123"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "5ca038eb5ec60dce"}
+ "depHash": "9e6ad8888b6cd851"}

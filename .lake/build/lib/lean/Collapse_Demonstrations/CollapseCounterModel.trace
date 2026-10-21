@@ -1,0 +1,32 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["9c1ca145781715f5.olean"],
+  "m": false,
+  "i": "439047b4e3493b94.ilean",
+  "c": "66df18b44496be18.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/Collapse_Demonstrations/CollapseCounterModel.lean -o /workspace/.lake/build/lib/lean/Collapse_Demonstrations/CollapseCounterModel.olean -i /workspace/.lake/build/lib/lean/Collapse_Demonstrations/CollapseCounterModel.ilean -c /workspace/.lake/build/ir/Collapse_Demonstrations/CollapseCounterModel.c --setup /workspace/.lake/build/ir/Collapse_Demonstrations/CollapseCounterModel.setup.json --json",
+   "level": "trace"}],
+ "inputs":
+ [["deps",
+   [["SigmaR/Collapse_Demonstrations:extraDep",
+     [["@SigmaR:extraDep", "00000000000006bb"]]],
+    ["imports", "00000000000006bb"]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["/workspace/Collapse_Demonstrations/CollapseCounterModel.lean",
+   "0235f6a6239335fe"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Collapse_Demonstrations.CollapseCounterModel",
+   "40ff7b96fe5340ad"],
+  ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "75712d04fe512904"}

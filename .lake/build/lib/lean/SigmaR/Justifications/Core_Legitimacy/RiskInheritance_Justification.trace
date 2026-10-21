@@ -14,9 +14,9 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Justifications.Core_Legitimacy.STC5_Justification transitive imports (legacy)",
-       "ae14d5daa25af2a7"],
+       "b245aab55f5eabc3"],
       ["SigmaR.Justifications.Core_Legitimacy.STC5_Justification:importAllArts",
-       "ea9826225fe78c68"]]]]],
+       "1528bafdeb23c2e8"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -32,4 +32,4 @@
    "24667658e91ff4ee"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "e2d53639b60613bb"}
+ "depHash": "d51298868911fd00"}
