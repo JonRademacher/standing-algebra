@@ -13,11 +13,11 @@ may be considered relevant for a specific agent.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
 
 /--
 IPFA is a predicate indicating personal informational warrant.
 -/
-constant IPFA : Agent → State → Prop
+axiom IPFA : Agent → State → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

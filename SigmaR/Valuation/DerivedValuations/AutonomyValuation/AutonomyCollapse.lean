@@ -19,13 +19,13 @@ It is a valuation-level condition only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyCollapse A means that autonomy valuation A
 has structurally collapsed.
 -/
-constant AutonomyCollapse :
+axiom AutonomyCollapse :
   AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

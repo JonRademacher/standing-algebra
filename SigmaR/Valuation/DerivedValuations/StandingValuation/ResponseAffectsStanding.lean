@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.ResponseSemantics.Response
-import SigmaR.Valuation.DerivedValuations.StandingValuation
+import SigmaR.Valuation.DerivedValuations.StandingValuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -19,13 +19,13 @@ It is descriptive only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.StandingValuation
 
 /--
 ResponseAffectsStanding R S means that response R
 has a structural effect on standing valuation S.
 -/
-constant ResponseAffectsStanding :
+axiom ResponseAffectsStanding :
   Response → StandingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.StandingValuation

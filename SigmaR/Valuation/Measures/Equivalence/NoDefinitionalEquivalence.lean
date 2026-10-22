@@ -9,7 +9,7 @@ Distinct valuation measures are not definitionally identical.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Equivalence
 
 /--
 Distinct measures are not definitionally equal.
@@ -18,4 +18,4 @@ axiom no_definitional_equivalence :
   ∀ (M₁ M₂ : Agent → State → Nat),
     M₁ ≠ M₂
 
-end SigmaR
+end SigmaR.Valuation.Measures.Equivalence

@@ -1,4 +1,4 @@
-import SigmaR.Core.FormalCore
+import SigmaR.StandingAlgebra_FormalCore
 
 namespace SigmaR
 
@@ -18,18 +18,18 @@ Main results:
 ###############################################################################
 -/
 
-/- -------------------------------------------------------------------------- */
-/* Definition: n-fold application of a single operation                         */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Definition: n-fold application of a single operation                         -/
+/- -------------------------------------------------------------------------- -/
 
 /-- Apply an operation `F` repeatedly `n` times to an agent `a`. -/
-def iterApply : Nat → Operation → Agent → Agent
+noncomputable def iterApply : Nat → Operation → Agent → Agent
 | 0,     _, a => a
 | n + 1, F, a => apply F (iterApply n F a)
 
-/- -------------------------------------------------------------------------- */
-/* Admissibility Invariant (one-step)                                          */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Admissibility Invariant (one-step)                                          -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Admissibility Invariant (one-step):
@@ -56,9 +56,9 @@ by
   intro a hAdm
   exact ALRP F a hAdm
 
-/- -------------------------------------------------------------------------- */
-/* Strong carry-forward form: invariance under repeated application             */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Strong carry-forward form: invariance under repeated application             -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Monotone step across iterates:
@@ -102,4 +102,3 @@ by
       exact Nat.le_trans h1 h2
 
 end SigmaR
-``

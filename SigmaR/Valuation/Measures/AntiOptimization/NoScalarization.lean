@@ -11,7 +11,9 @@ a single scalar quantity by default.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting scalar collapse of multiple
@@ -24,4 +26,4 @@ axiom no_scalarization :
       Scalarizes Ms O
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

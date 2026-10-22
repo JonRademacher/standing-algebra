@@ -17,13 +17,13 @@ external validation.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 InternalCapacityAgreement A means that capacity agreement A
 is internalized within a single agent.
 -/
-constant InternalCapacityAgreement :
+axiom InternalCapacityAgreement :
   CapacityAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

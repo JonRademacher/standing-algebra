@@ -48,7 +48,7 @@ Predicate: operation F
 may be evaluated for legitimacy
 at state s.
 -/
-constant Admissible : Operation → State → Prop
+axiom LegitimacyEvaluable : Operation → State → Prop
 
 /--
 Precondition:
@@ -58,7 +58,7 @@ requires Perceptual Frame Agreement.
 -/
 axiom admissible_requires_pfa :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    LegitimacyEvaluable F s →
     PFA s
 
 /--
@@ -69,7 +69,7 @@ requires contestability.
 -/
 axiom admissible_requires_contestation :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    LegitimacyEvaluable F s →
     Contestable s
 
 /--
@@ -80,7 +80,7 @@ require frame resolution.
 -/
 axiom admissible_requires_resolution :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    LegitimacyEvaluable F s →
     FrameResolved s
 
 /--
@@ -90,7 +90,7 @@ Standing must be derived.
 -/
 axiom admissible_requires_derivation :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    LegitimacyEvaluable F s →
     DerivedStanding s
 
 /--
@@ -100,7 +100,7 @@ Standing must be exposure‑indexed.
 -/
 axiom admissible_requires_risk_index :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    LegitimacyEvaluable F s →
     RiskIndexedStanding s
 
 /--
@@ -110,7 +110,7 @@ Coupling must be exhaustively represented.
 -/
 axiom admissible_requires_coupling :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    LegitimacyEvaluable F s →
     CouplingExhaustive s
 
 /--
@@ -120,7 +120,7 @@ Dominant coupling must be identifiable.
 -/
 axiom admissible_requires_dominance :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    LegitimacyEvaluable F s →
     DominantCouplingIdentified s
 
 /--
@@ -130,7 +130,7 @@ Constraint must respect domain boundary.
 -/
 axiom admissible_requires_boundary :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    LegitimacyEvaluable F s →
     BoundaryRespected s
 
 /--
@@ -140,7 +140,7 @@ Constraint must remain temporally rerunnable.
 -/
 axiom admissible_requires_rerunnable :
   ∀ {F : Operation} {s : State},
-    Admissible F s →
+    LegitimacyEvaluable F s →
     Rerunnable s
 
 end SigmaR

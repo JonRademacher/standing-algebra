@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegimeCore
 
 /-!
 ###############################################################################
@@ -29,7 +29,7 @@ namespace SigmaR
 Predicate: agent `a` is deprived of successor access
 under operation `F` at state `s`.
 -/
-constant SuccessorDeprived : Agent → Operation → State → Prop
+axiom SuccessorDeprived : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Successor Non-Deprivation):

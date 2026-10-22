@@ -15,11 +15,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 Risk valuation does not imply culpability.
 -/
-constant RiskDoesNotImplyCulpability : Prop
+axiom RiskDoesNotImplyCulpability : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

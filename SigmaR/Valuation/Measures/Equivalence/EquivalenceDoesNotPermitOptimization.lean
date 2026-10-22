@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Equivalence Does Not Permit Optimization
@@ -11,7 +13,7 @@ license optimization or maximization.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Equivalence
 
 /--
 No implication from equivalence to optimization
@@ -26,5 +28,5 @@ axiom equivalence_not_optimization :
       Optimizes O
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Equivalence
 

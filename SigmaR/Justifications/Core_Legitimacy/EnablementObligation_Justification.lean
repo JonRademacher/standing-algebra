@@ -78,7 +78,7 @@ namespace SigmaR
     at state `s`
     preserves capacity‑indexed
     emancipatory routes. -/
-constant EnablementPreserved : State → Prop
+axiom EnablementPreserved : State → Prop
 
 /--
 Core legitimacy axiom:

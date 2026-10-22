@@ -19,12 +19,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 Risk valuation is explicitly scoped and
 never globally applicable by default.
 -/
-constant RiskValuationScope : Prop
+axiom RiskValuationScope : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

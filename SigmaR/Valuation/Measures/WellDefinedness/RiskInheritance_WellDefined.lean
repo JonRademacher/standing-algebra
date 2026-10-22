@@ -1,6 +1,6 @@
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.RiskInheritance_Definition
-import SigmaR.Valuation.Measures.DependencyDegree_Definition
+import SigmaR.Valuation.StandingValuation
+import SigmaR.Valuation.Measures.Definitions.RiskInheritance_Definition
+import SigmaR.Valuation.Measures.Definitions.DependencyDegree_Definition
 
 /-!
 ###############################################################################
@@ -12,7 +12,9 @@ in dependency and not arbitrarily assigned.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 Risk inheritance is well-defined if it is determined
@@ -21,4 +23,4 @@ as a function of agent and state.
 def RiskInheritance_WellDefined : Prop :=
   ∀ (i : Agent) (s : State), ∃ (n : Nat), RiskInheritance i s = n
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

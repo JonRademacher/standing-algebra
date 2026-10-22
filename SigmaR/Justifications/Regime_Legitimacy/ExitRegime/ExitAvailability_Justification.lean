@@ -41,7 +41,7 @@ proxy optimization channel.
 namespace SigmaR
 
 /-- Predicate: the operation provides an available exit at state `s`. -/
-constant ExitAvailable : Operation → State → Prop
+axiom ExitAvailable : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Exit Availability:
@@ -54,7 +54,7 @@ axiom exit_availability_requires_debt :
     Legitimate F →
       ∀ s : State,
         ExitAvailable F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -67,7 +67,7 @@ theorem ExitAvailability_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     ExitAvailable F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hExit
   exact exit_availability_requires_debt hLeg s hExit

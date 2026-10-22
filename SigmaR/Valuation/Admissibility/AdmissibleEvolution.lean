@@ -18,12 +18,12 @@ It ONLY governs when evolutionary reasoning is permitted.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 Reasoning about the evolution of a valuation measure
 is admissible under declared constraints.
 -/
-constant AdmissibleEvolution : Measure → Prop
+axiom AdmissibleEvolution : Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

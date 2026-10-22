@@ -18,12 +18,12 @@ It ONLY governs when frame-relative reasoning is permitted.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 A valuation frame is admissible for use in reasoning
 under explicitly declared constraints.
 -/
-constant AdmissibleFrame : Frame → Prop
+axiom AdmissibleFrame : Frame → Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

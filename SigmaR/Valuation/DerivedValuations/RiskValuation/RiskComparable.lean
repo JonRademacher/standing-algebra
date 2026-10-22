@@ -19,13 +19,13 @@ It is structural only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskComparable R₁ R₂ means that risk valuations
 R₁ and R₂ are structurally comparable.
 -/
-constant RiskComparable :
+axiom RiskComparable :
   RiskValuation → RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

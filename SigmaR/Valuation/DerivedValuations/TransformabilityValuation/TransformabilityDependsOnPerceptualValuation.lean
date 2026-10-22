@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.DerivedValuations.TransformabilityValuation.TransformabilityValuation
-import SigmaR.Valuation.DerivedValuations.PerceptionValuation.PerceptionValuation
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation
 
 /-!
 ###############################################################################
@@ -21,14 +21,14 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityDependsOnPerceptualValuation T P means that
 transformability valuation T is structurally dependent
 on perceptual valuation P.
 -/
-constant TransformabilityDependsOnPerceptualValuation :
+axiom TransformabilityDependsOnPerceptualValuation :
   TransformabilityValuation → PerceptionValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

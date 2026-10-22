@@ -18,12 +18,12 @@ They do NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 A transformability level associated with a transformability valuation.
 -/
-constant TransformabilityLevel :
+axiom TransformabilityLevel :
   TransformabilityValuation → Val
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

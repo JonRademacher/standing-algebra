@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_RegimeStacked
+import SigmaR.Justifications.Core_Legitimacy.Agency_Justification
 
 /-!
 ###############################################################################
@@ -34,13 +35,13 @@ This yields:
 namespace SigmaR
 
 /-- Predicate: the agent has an internalized perceptual frame agreement (IPFA). -/
-constant InternalizedFrameAgreement : Agent → Prop
+axiom InternalizedFrameAgreement : Agent → Prop
 
 /-- Predicate: the agent's internalized frames are validated across time. -/
-constant TemporalValidation : Agent → Prop
+axiom TemporalValidation : Agent → Prop
 
 /-- Predicate: the agent is autonomous (self‑authorized). -/
-constant Autonomous : Agent → Prop
+axiom Autonomous : Agent → Prop
 
 /--
 Tier‑2 legitimacy axiom for autonomy:

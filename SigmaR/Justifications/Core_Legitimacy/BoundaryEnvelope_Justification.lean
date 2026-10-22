@@ -66,7 +66,7 @@ namespace SigmaR
     at state `s` respects
     domain boundary
     of represented standing. -/
-constant BoundaryRespected : State → Prop
+axiom BoundaryRespected : State → Prop
 
 /--
 Core legitimacy axiom:

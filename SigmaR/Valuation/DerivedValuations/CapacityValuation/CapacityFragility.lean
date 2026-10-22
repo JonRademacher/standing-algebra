@@ -18,13 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityFragility C means that capacity valuation C
 is structurally fragile.
 -/
-constant CapacityFragility :
+axiom CapacityFragility :
   CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

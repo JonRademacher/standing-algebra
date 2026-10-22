@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
-import SigmaR.Justifications.Regimes.ExitRegime.ExitRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification
 
 /-!
 ###############################################################################
@@ -28,7 +28,7 @@ namespace SigmaR
 Predicate: exiting via operation `F` imposes a punitive burden
 on agent `a` at state `s`.
 -/
-constant PunitiveExit : Agent → Operation → State → Prop
+axiom PunitiveExit : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Exit Non-Punitiveness):

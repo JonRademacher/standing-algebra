@@ -20,7 +20,7 @@ AgencyScope is descriptive, not normative.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 AgencyScope a s is a successor-native valuation
@@ -29,6 +29,6 @@ actions available to agent a in state s.
 
 Higher values indicate wider remaining agency.
 -/
-constant AgencyScope : Agent → State → Nat
+axiom AgencyScope : Agent → State → Nat
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

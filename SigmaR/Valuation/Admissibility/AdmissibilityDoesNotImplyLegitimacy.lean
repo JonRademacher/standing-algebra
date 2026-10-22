@@ -12,12 +12,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 Admissibility of a configuration or reasoning pattern
 does not imply legitimacy.
 -/
-constant AdmissibilityDoesNotImplyLegitimacy : Prop
+axiom AdmissibilityDoesNotImplyLegitimacy : Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

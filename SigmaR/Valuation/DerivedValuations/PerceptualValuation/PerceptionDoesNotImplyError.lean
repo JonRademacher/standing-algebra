@@ -14,11 +14,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 Perception valuation does not imply error.
 -/
-constant PerceptionDoesNotImplyError : Prop
+axiom PerceptionDoesNotImplyError : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

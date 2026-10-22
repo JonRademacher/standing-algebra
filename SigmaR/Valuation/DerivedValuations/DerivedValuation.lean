@@ -20,11 +20,11 @@ It is a valuation artifact only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 An abstract derived valuation.
 -/
-constant DerivedValuation : Type
+axiom DerivedValuation : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

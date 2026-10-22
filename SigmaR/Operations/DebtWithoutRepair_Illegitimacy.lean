@@ -24,7 +24,7 @@ directionally repair that debt cannot be legitimate.
 -/
 theorem debt_without_directed_repair_implies_illegitimacy
   {F : Operation} {s : State}
-  (hDebt : StructuralDebt F s)
+  (hDebt : HasStructuralDebt F s)
   (hNoRepair : ¬ DirectedRepair F s) :
   ¬ Legitimate F :=
 by

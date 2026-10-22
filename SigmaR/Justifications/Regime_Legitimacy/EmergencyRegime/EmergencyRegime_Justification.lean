@@ -1,9 +1,9 @@
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
-import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
-import SigmaR.Justifications.Regimes.Emergency.EmergencyAuthorization_Justification
-import SigmaR.Justifications.Regimes.Emergency.EmergencyTermination_Justification
-import SigmaR.Justifications.Regimes.Emergency.RiskBoundEmergency_Justification
+import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justifrication
+import SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.EmergencyAuthorization_Justification
+import SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.EmergencyTermination_Justification
+import SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.RiskBoundEmergency_Justification
 
 /-!
 ###############################################################################
@@ -70,7 +70,7 @@ under iteration.
 namespace SigmaR
 
 /-- Predicate: the operation participates in the Emergency Regime at state `s`. -/
-constant EmergencyRegimeOp : Operation → State → Prop
+axiom EmergencyRegimeOp : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Emergency Regime Closure:
@@ -83,7 +83,7 @@ axiom emergency_regime_requires_debt :
     Legitimate F →
       ∀ s : State,
         EmergencyRegimeOp F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -96,7 +96,7 @@ theorem EmergencyRegime_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     EmergencyRegimeOp F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hEmer
   exact emergency_regime_requires_debt hLeg s hEmer

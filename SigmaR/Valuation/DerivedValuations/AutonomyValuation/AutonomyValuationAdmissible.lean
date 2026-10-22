@@ -19,13 +19,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyValuationAdmissible A means that autonomy valuation A
 is admissible under declared structural constraints.
 -/
-constant AutonomyValuationAdmissible :
+axiom AutonomyValuationAdmissible :
   AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

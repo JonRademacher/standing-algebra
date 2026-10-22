@@ -117,4 +117,3 @@ import SigmaR.Justifications.Regime_Legitimacy.DebtDissipationByRepair_Justifica
 import SigmaR.Justifications.Regime_Legitimacy.NegationLemmas
 import SigmaR.Justifications.Regime_Legitimacy.RegimesPresupposeOperations_Justification
 import SigmaR.Justifications.Regime_Legitimacy.StructuralDebtAccumulation_Justification
-``

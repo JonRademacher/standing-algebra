@@ -14,11 +14,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 Transformability valuation does not imply competence.
 -/
-constant TransformabilityDoesNotImplyCompetence : Prop
+axiom TransformabilityDoesNotImplyCompetence : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

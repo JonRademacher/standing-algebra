@@ -18,12 +18,12 @@ They do NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 An autonomy level associated with an autonomy valuation.
 -/
-constant AutonomyLevel :
+axiom AutonomyLevel :
   AutonomyValuation → Val
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

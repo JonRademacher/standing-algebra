@@ -1,4 +1,5 @@
-import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
+import SigmaR.Valuation.Measures.Definitions.Operation
 
 /-!
 ###############################################################################
@@ -12,17 +13,14 @@ This blocks "death by a thousand cuts" domination.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Core
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 Generic valuation quantity over agents and states.
 -/
-constant ValuationQty : Agent → State → Nat
-
-/--
-Predicate: an operation is a repair for agent `i`.
--/
-constant Repairs : Operation → Agent → Prop
+axiom ValuationQty : Agent → State → Nat
 
 /--
 Temporal monotonicity axiom:
@@ -45,4 +43,4 @@ theorem NoValuationDecreaseWithoutRepair
 by
   exact ValuationMonotoneUnlessRepaired F i s h
 
-end SigmaR
+end SigmaR.Valuation.Core

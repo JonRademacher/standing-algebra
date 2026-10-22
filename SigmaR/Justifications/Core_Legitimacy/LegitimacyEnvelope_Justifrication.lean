@@ -43,7 +43,7 @@ This predicate stands for the conjunction of:
 
 Its internal structure is intentionally abstract at this layer.
 -/
-constant LegitimacyEnvelope : Operation → State → Prop
+axiom LegitimacyEnvelope : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom:

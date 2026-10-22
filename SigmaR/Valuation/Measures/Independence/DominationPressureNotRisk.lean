@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.DominationPressure_Definition
-import SigmaR.Valuation.Measures.RiskLoad_Definition
+import SigmaR.Valuation.Measures.Definitions.DominationPressure_Definition
+import SigmaR.Valuation.Measures.Definitions.RiskLoad_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -17,7 +19,7 @@ exposure is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating domination pressure as implying
@@ -29,4 +31,4 @@ axiom domination_pressure_not_risk :
       TreatedAsRiskFromDominationPressure a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

@@ -1,4 +1,6 @@
 import SigmaR.StandingAlgebra_RegimeStacked
+import SigmaR_Core
+import SigmaR.Compositions.First_Order_Compositions.RiskEmergency
 
 namespace SigmaR
 
@@ -35,6 +37,6 @@ axiom Risk_bound_emergency_termination :
     (∃ a : Agent, RiskLoad a > 0) →
     ¬ (∀ F : Operation,
          Emergency F →
-         EmergentWrong (apply_state F s))
+         EmergentWrong (apply F s))
 
 end SigmaR

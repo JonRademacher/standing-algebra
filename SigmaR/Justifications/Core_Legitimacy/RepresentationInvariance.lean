@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
-import SigmaR.Core.StandingValuation
+import SigmaR_Core
 
 /-!
 ###############################################################################
@@ -38,7 +38,7 @@ State isomorphism:
 Two states represent
 equivalent structural relation.
 -/
-constant Isomorphic :
+axiom Isomorphic :
   State → State → Prop
 
 /--
@@ -46,9 +46,9 @@ Standing valuation
 is invariant under isomorphism.
 -/
 axiom valuation_invariant :
-  ∀ {s₁ s₂ : State} {i : Agent},
+  ∀ {s₁ s₂ : State},
     Isomorphic s₁ s₂ →
-    σ s₁ i = σ s₂ i
+    σ s₁ = σ s₂
 
 /--
 Structural admissibility

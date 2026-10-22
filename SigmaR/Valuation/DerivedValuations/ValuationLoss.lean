@@ -19,13 +19,13 @@ It is a descriptive change in valuation only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 ValuationLoss V₁ V₂ means that valuation V₂
 represents a loss relative to valuation V₁.
 -/
-constant ValuationLoss :
+axiom ValuationLoss :
   DerivedValuation → DerivedValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

@@ -21,11 +21,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 The transformability progress boundary does not imply selection.
 -/
-constant TransformabilityProgressBoundaryDoesNotImplySelection : Prop
+axiom TransformabilityProgressBoundaryDoesNotImplySelection : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

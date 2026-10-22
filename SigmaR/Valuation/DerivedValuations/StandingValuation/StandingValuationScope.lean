@@ -14,12 +14,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.StandingValuation
 
 /--
 Standing valuation is explicitly scoped and never
 globally applicable by default.
 -/
-constant StandingValuationScope : Prop
+axiom StandingValuationScope : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.StandingValuation

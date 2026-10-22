@@ -19,13 +19,13 @@ It does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseConflicts R₁ R₂ means that responses R₁ and R₂
 cannot be jointly applied without structural inconsistency.
 -/
-constant ResponseConflicts :
+axiom ResponseConflicts :
   Response → Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

@@ -19,13 +19,13 @@ It is directional structure only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseDampensMeasure R M means that response R
 decreases valuation measure M.
 -/
-constant ResponseDampensMeasure :
+axiom ResponseDampensMeasure :
   Response → Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

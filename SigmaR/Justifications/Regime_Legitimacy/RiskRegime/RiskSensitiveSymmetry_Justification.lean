@@ -55,7 +55,7 @@ namespace SigmaR
 
 /-- Predicate: the operation performs risk‑sensitive
     asymmetrical intervention at state `s`. -/
-constant RiskSensitiveSymmetry : Operation → State → Prop
+axiom RiskSensitiveSymmetry : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Risk‑Sensitive Symmetry:
@@ -70,7 +70,7 @@ axiom risk_sensitive_symmetry_requires_debt :
     Legitimate F →
       ∀ s : State,
         RiskSensitiveSymmetry F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -83,7 +83,7 @@ theorem RiskSensitiveSymmetry_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     RiskSensitiveSymmetry F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hRisk
   exact risk_sensitive_symmetry_requires_debt hLeg s hRisk

@@ -18,13 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskLoad R means that risk valuation R
 carries accumulated structural load.
 -/
-constant RiskLoad :
+axiom RiskLoad :
   RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

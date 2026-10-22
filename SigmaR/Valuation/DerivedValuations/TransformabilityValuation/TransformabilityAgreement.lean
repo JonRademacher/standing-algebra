@@ -18,11 +18,11 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 An abstract structure representing transformability agreement.
 -/
-constant TransformabilityAgreement : Type
+axiom TransformabilityAgreement : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

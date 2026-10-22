@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.CouplingValuation
+import SigmaR.Valuation.DerivedValuations.CouplingValuation.CouplingValuation
 import SigmaR.Valuation.ResponseSemantics.Response
 
 /-!
@@ -19,13 +19,13 @@ It is structural sensitivity only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 CouplingDependsOnResponse C R means that coupling valuation C
 is structurally sensitive to response R.
 -/
-constant CouplingDependsOnResponse :
+axiom CouplingDependsOnResponse :
   CouplingValuation → Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

@@ -1,5 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
-import SigmaR.Justifications.Regimes.ExitRegime.ExitAvailability_Justification
+import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitAvailability_Justification
+import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification
 
 /-!
 ###############################################################################
@@ -28,7 +29,7 @@ namespace SigmaR
 Predicate: agent `a` has a feasible exit path
 under operation `F` at state `s`.
 -/
-constant FeasibleExit : Agent → Operation → State → Prop
+axiom FeasibleExit : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Exit Feasibility):

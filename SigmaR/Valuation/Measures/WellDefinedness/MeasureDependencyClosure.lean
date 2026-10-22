@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.DependencyDegree_Definition
+import SigmaR.Valuation.Measures.Definitions.DependencyDegree_Definition
 
 /-!
 ###############################################################################
@@ -11,12 +11,12 @@ not on preferences, narratives, or external metadata.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
 
 /--
 Predicate: μ depends only on dependency structure.
 -/
-constant DependsOnlyOnDependency :
+axiom DependsOnlyOnDependency :
   (Agent → State → Nat) → Prop
 
 /--
@@ -25,4 +25,4 @@ Dependency closure axiom.
 axiom DependencyClosed :
   DependsOnlyOnDependency DependencyDegree
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

@@ -73,7 +73,7 @@ namespace SigmaR
 /-- Predicate: standing‑altering
     action at state `s`
     is not belief‑based. -/
-constant BeliefNonAuthoritative : State → Prop
+axiom BeliefNonAuthoritative : State → Prop
 
 /--
 Core legitimacy axiom:

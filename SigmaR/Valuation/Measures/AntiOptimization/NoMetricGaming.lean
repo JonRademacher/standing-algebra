@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Metric Gaming
@@ -11,7 +13,7 @@ can be gamed to achieve legitimate outcomes.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication permitting metric manipulation as a
@@ -25,4 +27,4 @@ axiom no_metric_gaming :
       GamesMetric O M
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

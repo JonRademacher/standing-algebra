@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
-import SigmaR.Justifications.Regimes.RemedyRegime.RemedyRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyRegime_Justification
 
 /-!
 ###############################################################################
@@ -28,7 +28,7 @@ namespace SigmaR
 Predicate: operation `F` introduces new standing-relevant harm
 distinct from the harm it is intended to repair.
 -/
-constant RemedyEscalates : Operation → State → Prop
+axiom RemedyEscalates : Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Remedy Non-Escalation):

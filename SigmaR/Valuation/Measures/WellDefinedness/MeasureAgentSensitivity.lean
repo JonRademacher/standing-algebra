@@ -10,7 +10,7 @@ They may coincide for some agents, but not all.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
 
 /--
 An agent-indexed valuation measure must depend on agent identity.
@@ -20,4 +20,4 @@ axiom measure_agent_sensitive :
     ∃ (a₁ a₂ : Agent) (s : State),
       M a₁ s ≠ M a₂ s
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

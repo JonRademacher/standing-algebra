@@ -15,13 +15,13 @@ It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 A valuation measure is treated as admitting projection
 or restriction without reversing its structural monotonicity.
 -/
-constant ProjectionPreservesMonotonicity :
+axiom ProjectionPreservesMonotonicity :
   Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

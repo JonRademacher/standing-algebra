@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.ExitCostValuation
+import SigmaR.Valuation.DerivedValuations.ExitCostValuation.ExitCostValuation
 
 /-!
 ###############################################################################
@@ -19,13 +19,13 @@ It is a valuation-level condition only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 ExitCostCollapse E means that exit cost valuation E
 has structurally collapsed.
 -/
-constant ExitCostCollapse :
+axiom ExitCostCollapse :
   ExitCostValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

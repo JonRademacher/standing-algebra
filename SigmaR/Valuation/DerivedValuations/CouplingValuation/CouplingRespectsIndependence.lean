@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.CouplingValuation
+import SigmaR.Valuation.DerivedValuations.CouplingValuation.CouplingValuation
 
 /-!
 ###############################################################################
@@ -14,13 +14,13 @@ cross-measure implications.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 CouplingRespectsIndependence C means that coupling valuation C
 does not violate Independence constraints.
 -/
-constant CouplingRespectsIndependence :
+axiom CouplingRespectsIndependence :
   CouplingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

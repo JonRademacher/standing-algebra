@@ -15,13 +15,12 @@ This is not selection.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyProgressOptionSet S means that S is a set
 of autonomy-progress options.
 -/
-constant AutonomyProgressOptionSet :
-  AutonomyProgressOption → Prop
+axiom AutonomyProgressOptionSet : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

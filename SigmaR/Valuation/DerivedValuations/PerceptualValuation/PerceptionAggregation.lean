@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.PerceptionValuation
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation
 
 /-!
 ###############################################################################
@@ -22,13 +22,13 @@ Aggregation does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 PerceptionAggregation P₁ P₂ P₃ means that perception valuation P₃
 is an aggregation of perception valuations P₁ and P₂.
 -/
-constant PerceptionAggregation :
+axiom PerceptionAggregation :
   PerceptionValuation → PerceptionValuation → PerceptionValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

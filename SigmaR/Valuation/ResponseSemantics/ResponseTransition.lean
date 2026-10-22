@@ -18,12 +18,12 @@ It is a purely structural mapping.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 A response induces a transition between states.
 -/
-constant ResponseTransition :
+axiom ResponseTransition :
   Response → State → State → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

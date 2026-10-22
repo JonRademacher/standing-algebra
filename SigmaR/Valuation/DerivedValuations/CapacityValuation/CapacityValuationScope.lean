@@ -19,12 +19,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 Capacity valuation is explicitly scoped and
 never globally applicable by default.
 -/
-constant CapacityValuationScope : Prop
+axiom CapacityValuationScope : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

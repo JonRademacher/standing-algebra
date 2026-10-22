@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
-import SigmaR.Justifications.Regimes.RemedyRegime.RemedyRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyRegime_Justification
 
 /-!
 ###############################################################################
@@ -27,7 +27,7 @@ namespace SigmaR
 Predicate: operation `F` produces a measurable reduction
 in the standing-relevant harm at state `s`.
 -/
-constant RemedyEffective : Operation → State → Prop
+axiom RemedyEffective : Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Remedy Effectiveness):

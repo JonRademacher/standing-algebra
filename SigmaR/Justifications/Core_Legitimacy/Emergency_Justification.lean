@@ -30,12 +30,12 @@ namespace SigmaR
 /-- Predicate: emergency conditions obtain for operation `F` at state `s`.
     This abstracts over triggers such as imminent harm, loss of viability,
     or systemic collapse. -/
-constant EmergencyCondition : Operation → State → Prop
+axiom EmergencyCondition : Operation → State → Prop
 
 /-- Predicate: emergency intervention is permitted for operation `F` at state `s`.
     Even under emergency, intervention must remain bounded, contestable,
     and subject to repair and termination. -/
-constant EmergencyPermitted : Operation → State → Prop
+axiom EmergencyPermitted : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Emergency:

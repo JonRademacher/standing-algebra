@@ -11,7 +11,7 @@ of state altogether.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
 
 /--
 A valuation measure must depend on the state dimension.
@@ -21,4 +21,4 @@ axiom measure_state_sensitive :
     ∃ (a : Agent) (s₁ s₂ : State),
       M a s₁ ≠ M a s₂
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

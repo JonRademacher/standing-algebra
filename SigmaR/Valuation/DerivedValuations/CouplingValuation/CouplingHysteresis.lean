@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.CouplingValuation
+import SigmaR.Valuation.DerivedValuations.CouplingValuation.CouplingValuation
 
 /-!
 ###############################################################################
@@ -19,13 +19,13 @@ It does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 CouplingHysteresis C means that coupling valuation C
 exhibits path-dependent behavior.
 -/
-constant CouplingHysteresis :
+axiom CouplingHysteresis :
   CouplingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

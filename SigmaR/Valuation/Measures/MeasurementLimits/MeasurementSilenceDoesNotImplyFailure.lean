@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Measurement Silence Does Not Imply Failure
@@ -13,7 +15,7 @@ Silence may result from occlusion or unobservability.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.MeasurementLimits
 
 /--
 No implication from measurement silence to failure
@@ -26,4 +28,4 @@ axiom measurement_silence_not_failure :
       Failure s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.MeasurementLimits

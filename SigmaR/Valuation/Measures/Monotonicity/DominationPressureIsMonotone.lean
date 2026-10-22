@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.DominationPressure_Definition
+import SigmaR.Valuation.Measures.Definitions.DominationPressure_Definition
 import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
@@ -16,12 +16,12 @@ It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Domination pressure is treated as monotone
 along the state preorder.
 -/
-constant DominationPressureMonotone : Prop
+axiom DominationPressureMonotone : Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

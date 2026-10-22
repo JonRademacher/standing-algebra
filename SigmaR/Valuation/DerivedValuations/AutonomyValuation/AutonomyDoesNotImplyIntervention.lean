@@ -15,11 +15,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 Autonomy valuation does not imply intervention.
 -/
-constant AutonomyDoesNotImplyIntervention : Prop
+axiom AutonomyDoesNotImplyIntervention : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

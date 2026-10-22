@@ -18,13 +18,13 @@ It only prevents illicit violations.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 ValuationRespectsMonotonicity V means that derived valuation V
 does not violate declared monotonicity constraints.
 -/
-constant ValuationRespectsMonotonicity :
+axiom ValuationRespectsMonotonicity :
   DerivedValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

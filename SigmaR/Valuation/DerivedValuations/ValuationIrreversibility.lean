@@ -18,13 +18,13 @@ It is a valuation-level property only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 ValuationIrreversibility V means that valuation V
 cannot be structurally restored once lost.
 -/
-constant ValuationIrreversibility :
+axiom ValuationIrreversibility :
   DerivedValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

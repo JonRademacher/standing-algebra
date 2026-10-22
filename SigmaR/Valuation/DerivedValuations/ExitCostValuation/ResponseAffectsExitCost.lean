@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.ResponseSemantics.Response
-import SigmaR.Valuation.DerivedValuations.ExitCostValuation
+import SigmaR.Valuation.DerivedValuations.ExitCostValuation.ExitCostValuation
 
 /-!
 ###############################################################################
@@ -19,13 +19,13 @@ It is descriptive only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 ResponseAffectsExitCost R E means that response R
 has a structural effect on exit cost valuation E.
 -/
-constant ResponseAffectsExitCost :
+axiom ResponseAffectsExitCost :
   Response → ExitCostValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

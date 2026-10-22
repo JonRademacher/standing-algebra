@@ -23,19 +23,19 @@ All regimes inherit these consequences uniformly.
 namespace SigmaR
 
 /-- Generic constraint predicate over operations. -/
-constant Constraint : Operation → Prop
+axiom Constraint : Operation → Prop
 
 /-- Generic regime condition predicate over operations. -/
-constant RegimeCondition : Operation → Prop
+axiom RegimeCondition : Operation → Prop
 
 /-- Generic accumulation predicate (e.g. risk, debt, drift). -/
-constant Accumulates : Operation → Prop
+axiom Accumulates : Operation → Prop
 
-/-- Generic repair availability predicate. -/
-constant RepairAvailable : Operation → Prop
+/-- Operation-level repair availability without a specific state. -/
+axiom OperationRepairAvailable : Operation → Prop
 
 /-- Generic resolution availability predicate. -/
-constant ResolutionAvailable : Operation → Prop
+axiom ResolutionAvailable : Operation → Prop
 
 /-
 -----------------------------------------------------------------------------
@@ -81,7 +81,7 @@ is structurally illegitimate.
 axiom AccumulationWithoutRepair_Illegitimate :
   ∀ F : Operation,
     Accumulates F →
-    ¬ RepairAvailable F →
+    ¬ OperationRepairAvailable F →
     ¬ Legitimate F
 
 /-

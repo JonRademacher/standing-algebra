@@ -18,13 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityDecomposability T means that transformability
 valuation T admits decomposition into simpler operations.
 -/
-constant TransformabilityDecomposability :
+axiom TransformabilityDecomposability :
   TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

@@ -19,13 +19,13 @@ Context dependence does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskDependsOnContext R means that risk valuation R
 is explicitly context-dependent.
 -/
-constant RiskDependsOnContext :
+axiom RiskDependsOnContext :
   RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.ExitCostValuation
+import SigmaR.Valuation.DerivedValuations.ExitCostValuation.ExitCostValuation
 
 /-!
 ###############################################################################
@@ -19,13 +19,13 @@ It does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 ExitCostHysteresis E means that exit cost valuation E
 exhibits path-dependent behavior.
 -/
-constant ExitCostHysteresis :
+axiom ExitCostHysteresis :
   ExitCostValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

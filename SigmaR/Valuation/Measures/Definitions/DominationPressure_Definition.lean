@@ -14,13 +14,13 @@ accumulated structural domination pressure.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 DominationPressure a is the successor-native measure
 of accumulated domination pressure affecting agent a
 (or designated system carriers in Σᴿ⁺).
 -/
-constant DominationPressure : Agent → Nat
+axiom DominationPressure : Agent → Nat
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

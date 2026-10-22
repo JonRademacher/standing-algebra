@@ -15,11 +15,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 Capacity valuation does not imply competence.
 -/
-constant CapacityDoesNotImplyCompetence : Prop
+axiom CapacityDoesNotImplyCompetence : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

@@ -1,5 +1,5 @@
-import SigmaR.Justifications.Regimes.RemedyRegime.RemedyRegime_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegimeCore
 
 /-!
 ###############################################################################
@@ -28,7 +28,7 @@ namespace SigmaR
 Predicate: drift operation `D` requires
 a repair operation `R` after accumulation.
 -/
-constant DriftRequiresRepair : Operation → Operation → Prop
+axiom DriftRequiresRepair : Operation → Operation → Prop
 
 /--
 Tier-2 legitimacy axiom (Drift Repair Requirement):
@@ -39,8 +39,9 @@ that dissipates accumulated debt.
 axiom drift_requires_repair :
   ∀ {D : Operation},
     DriftRegimeOp D →
-    ∃ R : Operation,
-      RepairRegimeOp R ∧ DriftRequiresRepair D R
+    ∀ s : State,
+      ∃ R : Operation,
+        RepairAvailable R s ∧ DriftRequiresRepair D R
 
 /--
 Derived theorem:
@@ -50,9 +51,11 @@ Drift terminates in repair.
 theorem DriftTerminatesInRepair
   {D : Operation}
   (hDrift : DriftRegimeOp D) :
-  ∃ R : Operation,
-    RepairRegimeOp R ∧ DriftRequiresRepair D R :=
+  ∀ s : State,
+    ∃ R : Operation,
+      RepairAvailable R s ∧ DriftRequiresRepair D R :=
 by
-  exact drift_requires_repair hDrift
+  intro s
+  exact drift_requires_repair hDrift s
 
 end SigmaR

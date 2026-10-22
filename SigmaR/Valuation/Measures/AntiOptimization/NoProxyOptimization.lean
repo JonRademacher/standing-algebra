@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Proxy Optimization
@@ -11,7 +13,7 @@ for optimizing another measure.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication permitting proxy-based optimization
@@ -26,5 +28,5 @@ axiom no_proxy_optimization :
       ProxiesFor M₁ M₂
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization
 

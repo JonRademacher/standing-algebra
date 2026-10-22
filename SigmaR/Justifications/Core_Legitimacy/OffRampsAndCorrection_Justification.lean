@@ -31,17 +31,6 @@ at every state s.
 namespace SigmaR
 
 /--
-Predicate: the operation preserves off‑ramps or corrective pathways
-at the given state.
-
-This captures that coercive intervention remains:
-  • reversible,
-  • terminable,
-  • or repairable.
--/
-constant OffRampsAndCorrection : Operation → State → Prop
-
-/--
 Tier‑2 legitimacy axiom:
 
 If an operation is Legitimate, then at every state it must preserve

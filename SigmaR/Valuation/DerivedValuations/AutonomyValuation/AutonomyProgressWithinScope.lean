@@ -13,13 +13,13 @@ Scope captures feasibility and control, not preference.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyProgressWithinScope S means that the autonomy-progress
 options in S are within scope.
 -/
-constant AutonomyProgressWithinScope :
+axiom AutonomyProgressWithinScope :
   AutonomyProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

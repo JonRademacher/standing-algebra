@@ -75,7 +75,7 @@ namespace SigmaR
 /-- Predicate: adapter‑mediated
     recoupling at state `s`
     preserves scope integrity. -/
-constant AdapterScopeSafe : Operation → State → Prop
+axiom AdapterScopeSafe : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom

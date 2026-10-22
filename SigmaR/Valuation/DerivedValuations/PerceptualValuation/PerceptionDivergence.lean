@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.PerceptionValuation
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation
 
 /-!
 ###############################################################################
@@ -19,13 +19,13 @@ It does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 PerceptionDivergence P₁ P₂ means that perception valuation P₁
 and P₂ are structurally diverging.
 -/
-constant PerceptionDivergence :
+axiom PerceptionDivergence :
   PerceptionValuation → PerceptionValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

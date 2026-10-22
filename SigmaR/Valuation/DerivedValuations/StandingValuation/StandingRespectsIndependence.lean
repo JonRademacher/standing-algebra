@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.StandingValuation
+import SigmaR.Valuation.DerivedValuations.StandingValuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -14,13 +14,13 @@ cross-measure implications.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.StandingValuation
 
 /--
 StandingRespectsIndependence S means that standing valuation S
 does not violate Independence constraints.
 -/
-constant StandingRespectsIndependence :
+axiom StandingRespectsIndependence :
   StandingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.StandingValuation

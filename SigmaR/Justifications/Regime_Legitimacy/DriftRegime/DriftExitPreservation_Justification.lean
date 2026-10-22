@@ -1,5 +1,5 @@
-import SigmaR.Justifications.Regimes.ExitRegime.ExitRegime_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegimeCore
 
 /-!
 ###############################################################################
@@ -28,7 +28,7 @@ namespace SigmaR
 Predicate: drift operation `D` preserves exit
 for agent `a` at state `s`.
 -/
-constant DriftPreservesExit : Agent → Operation → State → Prop
+axiom DriftPreservesExit : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Exit Preservation Under Drift):

@@ -1,3 +1,7 @@
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.StandingValuation
+import SigmaR.Valuation.StandingWellDefined
+
 /-!
 ###############################################################################
 # Debt — Well-Definedness (Valuation Layer)
@@ -18,15 +22,11 @@ No enforcement or obligation is assumed.
 This file closes the valuation-level properties of debt.
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation
 
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.StandingValuation
-import SigmaR.Valuation.StandingWellDefined
-
-/* -------------------------------------------------------------------------- */
-/* Primitive debt structure                                                    */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Primitive debt structure                                                    -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Debt is a valuation-level quantity indexed by agent and state.
@@ -34,11 +34,11 @@ Debt is a valuation-level quantity indexed by agent and state.
 Interpretation:
 accumulated standing-relevant exposure.
 -/
-constant debt : Agent → State → Nat
+axiom debt : Agent → State → Nat
 
-/* -------------------------------------------------------------------------- */
-/* Basic coherence axioms                                                      */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Basic coherence axioms                                                      -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Debt is non-negative by construction.
@@ -58,9 +58,9 @@ axiom debt_ext :
     s₁ = s₂ →
     debt i s₁ = debt i s₂
 
-/* -------------------------------------------------------------------------- */
-/* Order coherence                                                             */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Order coherence                                                             -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Debt ordering is reflexive.
@@ -83,9 +83,9 @@ by
   intro h₁ h₂
   exact Nat.le_trans h₁ h₂
 
-/* -------------------------------------------------------------------------- */
-/* Standing–debt independence                                                  */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Standing–debt independence                                                  -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Debt does not alter standing.
@@ -99,9 +99,9 @@ theorem debt_does_not_affect_standing
 by
   rfl
 
-/* -------------------------------------------------------------------------- */
-/* Accumulation coherence                                                      */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Accumulation coherence                                                      -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Debt accumulation is monotone in time/state progression.
@@ -129,9 +129,9 @@ by
   cases h2
   exact h
 
-/* -------------------------------------------------------------------------- */
-/* Boundary conditions                                                         */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Boundary conditions                                                         -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Debt can be zero.
@@ -152,4 +152,4 @@ theorem debt_unbounded_allowed :
 by
   trivial
 
-end SigmaR
+end SigmaR.Valuation

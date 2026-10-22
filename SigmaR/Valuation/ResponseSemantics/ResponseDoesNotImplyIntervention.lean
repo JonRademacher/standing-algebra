@@ -13,12 +13,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 Response semantics do not imply intervention,
 execution, or action.
 -/
-constant ResponseDoesNotImplyIntervention : Prop
+axiom ResponseDoesNotImplyIntervention : Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

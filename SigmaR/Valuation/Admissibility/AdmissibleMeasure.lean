@@ -19,11 +19,11 @@ It ONLY permits use under declared constraints.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 A valuation measure is admissible for use in reasoning.
 -/
-constant AdmissibleMeasure : Measure → Prop
+axiom AdmissibleMeasure : Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

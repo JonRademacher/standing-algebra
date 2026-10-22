@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_RegimeStacked
+import SigmaR_Core
 
 namespace SigmaR
 
@@ -31,6 +32,6 @@ axiom No_permanent_emergency :
     EmergentWrong s →
     ¬ (∀ F : Operation,
          Admissible F →
-         EmergentWrong (apply_state F s))
+         EmergentWrong (apply F s))
 
 end SigmaR

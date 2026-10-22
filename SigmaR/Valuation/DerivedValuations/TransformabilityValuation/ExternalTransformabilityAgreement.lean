@@ -18,13 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 ExternalTransformabilityAgreement A means that transformability
 agreement A is externalized across multiple agents.
 -/
-constant ExternalTransformabilityAgreement :
+axiom ExternalTransformabilityAgreement :
   TransformabilityAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

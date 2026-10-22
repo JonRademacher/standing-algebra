@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.CapacityMeasure_Definition
-import SigmaR.Valuation.Measures.StructuralDebt_Definition
+import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.StructrualDebt_Definition
 import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
@@ -16,13 +16,13 @@ It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Capacity is treated as conditionally monotone decreasing
 with respect to structural debt.
 -/
-constant CapacityConditionallyMonotoneUnderDebt :
+axiom CapacityConditionallyMonotoneUnderDebt :
   Agent → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

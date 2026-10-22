@@ -21,11 +21,11 @@ It is a valuation artifact only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 An abstract derived valuation associated with exit cost.
 -/
-constant ExitCostValuation : Type
+axiom ExitCostValuation : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

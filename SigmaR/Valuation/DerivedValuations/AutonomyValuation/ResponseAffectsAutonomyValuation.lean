@@ -21,13 +21,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 ResponseAffectsAutonomyValuation R A means that response R
 has a structural effect on autonomy valuation A.
 -/
-constant ResponseAffectsAutonomyValuation :
+axiom ResponseAffectsAutonomyValuation :
   Response → AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

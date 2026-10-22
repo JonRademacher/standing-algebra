@@ -16,13 +16,13 @@ external validation.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 InternalAutonomyAgreement A means that autonomy agreement A
 is internalized within a single agent.
 -/
-constant InternalAutonomyAgreement :
+axiom InternalAutonomyAgreement :
   AutonomyAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

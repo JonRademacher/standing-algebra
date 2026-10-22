@@ -1,11 +1,12 @@
-import SigmaR.Justifications.Regimes.DriftRegime.BoundedDrift_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftStandingMonotonicity_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftDependencyMonotonicity_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftNonAccumulation_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftStructuralDebt_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftRepairRequirement_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftExitPreservation_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftScopeIntegrity_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.BoundedDrift_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftStandingMonotonicity_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftDependencyMonotonicity_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftNonAccumulation_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftStructuralDebt_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRepairRequirement_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftExitPreservation_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftScopeIntegrity_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegimeCore
 
 /-!
 ###############################################################################
@@ -31,11 +32,6 @@ explicit structural constraints.
 namespace SigmaR
 
 /--
-Predicate: operation `D` participates in the Drift Regime.
--/
-constant DriftRegimeOp : Operation → Prop
-
-/--
 Tier-2 regime declaration:
 
 Drift operations are standing-relevant
@@ -47,4 +43,3 @@ axiom drift_is_regime :
     DriftRegimeOp D
 
 end SigmaR
-``

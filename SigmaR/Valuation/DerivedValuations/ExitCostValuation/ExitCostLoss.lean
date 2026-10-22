@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.ExitCostValuation
+import SigmaR.Valuation.DerivedValuations.ExitCostValuation.ExitCostValuation
 
 /-!
 ###############################################################################
@@ -18,13 +18,13 @@ It is a descriptive valuation change only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 ExitCostLoss E₁ E₂ means that exit cost valuation E₂
 represents a loss relative to exit cost valuation E₁.
 -/
-constant ExitCostLoss :
+axiom ExitCostLoss :
   ExitCostValuation → ExitCostValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

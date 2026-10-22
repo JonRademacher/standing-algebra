@@ -1,3 +1,6 @@
+import Collapse_Demonstrations.Collapse
+import Mathlib.Data.Int.Basic
+
 /-
   Collapse_Demonstrations.Collapse_WithStanding
 
@@ -11,25 +14,16 @@
 
 namespace Collapse_Demonstrations
 
-import Collapse_Demonstrations.Collapse
-
-/--
-  Standing Algebra monotonicity axiom (ALRP):
-
-  Admissible operations never decrease standing.
--/
-variable
-  (Agent : Type)
-  (Operation : Type)
-  (σ : Agent → Int)
-  (Apply : Operation → Agent → Agent)
-  (Admissible : Operation → Prop)
-
 /--
   Standing Algebra axiom:
   admissible operations preserve or increase standing.
 -/
-def StandingAlgebra : Prop :=
+def StandingAlgebra
+  (Agent : Type)
+  (Operation : Type)
+  (σ : Agent → Int)
+  (Apply : Operation → Agent → Agent)
+  (Admissible : Operation → Prop) : Prop :=
   ∀ (F : Operation) (a : Agent),
     Admissible F →
     σ (Apply F a) ≥ σ a
@@ -38,8 +32,13 @@ def StandingAlgebra : Prop :=
   Under Standing Algebra, collapse is impossible.
 -/
 theorem noCollapse_under_StandingAlgebra
+  (Agent : Type)
+  (Operation : Type)
+  (σ : Agent → Int)
+  (Apply : Operation → Agent → Agent)
+  (Admissible : Operation → Prop)
   (SA : StandingAlgebra Agent Operation σ Apply Admissible) :
-  ¬ Collapse Agent Operation σ Apply Admissible :=
+  ¬ StandingAlgebra.Collapse Agent Operation σ Apply Admissible :=
 by
   intro hCollapse
   rcases hCollapse with ⟨F, a, hAdm, hDecrease⟩
@@ -49,6 +48,6 @@ by
     SA F a hAdm
 
   -- Contradiction: σ(Apply F a) < σ a and ≥ σ a
-  exact lt_irrefl _ (lt_of_lt_of_le hDecrease hNonDecrease)
+  exact (Int.not_lt.mpr hNonDecrease) hDecrease
 
 end Collapse_Demonstrations

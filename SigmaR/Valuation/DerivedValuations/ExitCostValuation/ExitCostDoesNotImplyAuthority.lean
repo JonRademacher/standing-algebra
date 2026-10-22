@@ -12,11 +12,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 Exit cost valuation does not imply authority.
 -/
-constant ExitCostDoesNotImplyAuthority : Prop
+axiom ExitCostDoesNotImplyAuthority : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

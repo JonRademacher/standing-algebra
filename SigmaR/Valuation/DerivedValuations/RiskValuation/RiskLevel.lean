@@ -18,12 +18,12 @@ They do NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 A risk level associated with a risk valuation.
 -/
-constant RiskLevel :
+axiom RiskLevel :
   RiskValuation → Val
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

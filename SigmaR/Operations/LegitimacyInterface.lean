@@ -5,9 +5,9 @@ import SigmaR.Justifications.Core_Legitimacy.BoundedDrift_Justification
 import SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
 import SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification
 
-import SigmaR.Justifications.Regimes.RiskRegime.RiskDiscountingProhibition_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskInheritance_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskLoadMonotonicity_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskDiscountingProhibition_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskInheritance_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskLoadMonotonicity_Justification
 
 /-!
 ###############################################################################
@@ -37,9 +37,9 @@ namespace SigmaR
 
 /-- Legitimate operations preserve standing (ALRP). -/
 theorem legitimacy_preserves_standing
-  {F : Operation} {s : State} (hLeg : Legitimate F) (a : Agent) :
-  σ (apply F s) a ≥ σ s a :=
-ALRP_required_for_legitimacy hLeg a
+  {F : Operation} {s : State} (hLeg : Legitimate F) :
+  σ (apply F s) ≥ σ s :=
+ALRP_required_for_legitimacy hLeg s
 
 ------------------------------------------------------------------------
 -- Directed Repair Obligation
@@ -69,8 +69,10 @@ ExitViabilityMonotonicity_required hLeg
 /-- Legitimate operations satisfy bounded drift under iteration. -/
 theorem legitimacy_bounded_drift
   {F : Operation} (hLeg : Legitimate F) :
-  BoundedDrift F :=
-BoundedDrift_required_for_legitimacy hLeg
+  ∀ a : Agent, DriftBounded F a :=
+by
+  intro a
+  exact BoundedDrift_required_for_legitimacy hLeg
 
 ------------------------------------------------------------------------
 -- Non-Reciprocal Power Prevention
@@ -79,7 +81,7 @@ BoundedDrift_required_for_legitimacy hLeg
 /-- Legitimate operations satisfy NRPP. -/
 theorem legitimacy_satisfies_NRPP
   {F : Operation} (hLeg : Legitimate F) :
-  NRPP F :=
+  ∀ s : State, NRPP_Fit F s :=
 NRPP_required_for_legitimacy hLeg
 
 ------------------------------------------------------------------------

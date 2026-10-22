@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.CouplingValuation
+import SigmaR.Valuation.DerivedValuations.CouplingValuation.CouplingValuation
 
 /-!
 ###############################################################################
@@ -18,13 +18,13 @@ It is directional structure only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 CouplingAmplification C₁ C₂ means that coupling valuation C₁
 amplifies the effect of coupling valuation C₂.
 -/
-constant CouplingAmplification :
+axiom CouplingAmplification :
   CouplingValuation → CouplingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

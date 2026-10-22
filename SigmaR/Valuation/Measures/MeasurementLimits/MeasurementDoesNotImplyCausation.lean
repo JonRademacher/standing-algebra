@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Measurement Does Not Imply Causation
@@ -13,7 +15,7 @@ Causation cannot be inferred from observation alone.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.MeasurementLimits
 
 /--
 No implication from measurement to causation is permitted.
@@ -26,4 +28,4 @@ axiom measurement_not_causation :
       Causes s₁ s₂
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.MeasurementLimits

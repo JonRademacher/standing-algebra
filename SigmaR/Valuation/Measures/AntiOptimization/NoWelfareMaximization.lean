@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Welfare Maximization
@@ -11,7 +13,7 @@ represents welfare to be maximized.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication treating valuation measures as welfare
@@ -25,4 +27,4 @@ axiom no_welfare_maximization :
       Optimizes O
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

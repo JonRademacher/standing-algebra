@@ -11,7 +11,7 @@ definitionally incapable of change.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
 
 /--
 A valuation measure is non-vacuous if there exist two
@@ -22,4 +22,4 @@ axiom measure_non_vacuous :
     ∃ (a : Agent) (s₁ s₂ : State),
       M a s₁ ≠ M a s₂
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

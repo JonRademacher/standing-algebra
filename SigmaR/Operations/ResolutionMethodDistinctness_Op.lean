@@ -17,10 +17,10 @@ It asserts only that:
 Joint use is explicitly allowed.
 -/
 
-constant NegotiationOp       : Operation → Prop
-constant CooperationOp       : Operation → Prop
-constant CompromiseOp        : Operation → Prop
-constant TragicAcceptanceOp  : Operation → Prop
+axiom NegotiationOp       : Operation → Prop
+axiom CooperationOp       : Operation → Prop
+axiom CompromiseOp        : Operation → Prop
+axiom TragicAcceptanceOp  : Operation → Prop
 
 /--
 Resolution method non-reducibility.

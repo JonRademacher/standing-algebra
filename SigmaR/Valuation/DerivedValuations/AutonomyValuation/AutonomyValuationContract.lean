@@ -33,12 +33,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 The Autonomy Valuation layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant AutonomyValuationContract : Prop
+axiom AutonomyValuationContract : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

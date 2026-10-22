@@ -13,7 +13,9 @@ It does not constrain interpretation, usage, or consequence.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 Well-formedness does not constrain interpretation,
@@ -28,5 +30,4 @@ axiom wellformedness_does_not_constrain_interpretation :
       ConstrainsInterpretation M
   )
 
-end SigmaR
-
+end SigmaR.Valuation.WellFormedness

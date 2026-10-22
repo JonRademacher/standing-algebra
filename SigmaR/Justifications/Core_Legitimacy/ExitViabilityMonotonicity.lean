@@ -1,4 +1,5 @@
-import SigmaR.Core.StandingValuation
+import Mathlib.Data.Real.Basic
+import SigmaR_Core
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 
 /-!
@@ -28,8 +29,11 @@ Therefore:
 
 namespace SigmaR
 
-variables
+variable
   (θ : Agent → ℝ)
+
+/-- Dominant dependency of an agent in a state. -/
+axiom deg_dom : State → Agent → ℝ
 
 /--
 Exit viability definition.
@@ -55,16 +59,22 @@ theorem exit_viability_monotone :
     StructurallyAdmissible F s →
     ExitViable θ s i →
     ExitViable θ (apply F s) i :=
-begin
-  intros F s i hAdm hExit,
+by
+  intro F s i hAdm hExit
+  unfold ExitViable at *
+  exact le_trans (dominant_dependency_bounded hAdm) hExit
 
-  unfold ExitViable at *,
+/-- Exit viability is preserved at every state by a legitimate operation. -/
+def ExitViabilityMonotone (F : Operation) : Prop :=
+  ∀ (θ : Agent → ℝ) (s : State) (i : Agent),
+    ExitViable θ s i → ExitViable θ (apply F s) i
 
-  have hDeg :
-    deg_dom (apply F s) i ≤ deg_dom s i,
-    from dominant_dependency_bounded hAdm,
-
-  linarith
-end
+/-- Legitimacy provides structural admissibility, hence exit monotonicity. -/
+theorem ExitViabilityMonotonicity_required
+  {F : Operation} (hLeg : Legitimate F) :
+  ExitViabilityMonotone F := by
+  intro θ s i hExit
+  exact exit_viability_monotone θ
+    ((legitimacy_characterization (F := F) (s := s)).mp hLeg) hExit
 
 end SigmaR

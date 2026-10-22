@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Equivalence Is Contextual
@@ -11,7 +13,7 @@ and does not persist universally.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Equivalence
 
 /--
 No implication asserting context-free or global
@@ -27,4 +29,4 @@ axiom equivalence_is_contextual :
          EquivalentInContext C M₁ M₂)
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Equivalence

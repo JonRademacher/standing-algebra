@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
+import SigmaR.Valuation.Measures.Definitions.TemporalAccumulation_Definition
 import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
@@ -16,12 +16,12 @@ It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Temporal accumulation is treated as irreversible
 along the state preorder.
 -/
-constant TemporalAccumulationIrreversible : Prop
+axiom TemporalAccumulationIrreversible : Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

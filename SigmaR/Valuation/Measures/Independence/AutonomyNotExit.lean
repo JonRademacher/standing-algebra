@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
-import SigmaR.Valuation.Measures.ExitViability_Definition
+import SigmaR.Valuation.Measures.Definitions.AutonomyMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.ExitViability_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -14,7 +16,7 @@ explicitly in higher layers or models.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating autonomy measures as guaranteeing
@@ -26,4 +28,4 @@ axiom autonomy_not_exit :
       TreatedAsExitViableFromAutonomyMeasure a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

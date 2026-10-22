@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.CouplingValuation
+import SigmaR.Valuation.DerivedValuations.CouplingValuation.CouplingValuation
 
 /-!
 ###############################################################################
@@ -18,13 +18,13 @@ It is structural scoping only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 CouplingDependsOnContext C means that coupling valuation C
 is explicitly context-dependent.
 -/
-constant CouplingDependsOnContext :
+axiom CouplingDependsOnContext :
   CouplingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

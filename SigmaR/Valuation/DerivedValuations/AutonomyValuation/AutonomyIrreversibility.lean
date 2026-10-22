@@ -18,13 +18,13 @@ It is descriptive only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyIrreversibility A means that autonomy valuation A
 is structurally irreversible once lost.
 -/
-constant AutonomyIrreversibility :
+axiom AutonomyIrreversibility :
   AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

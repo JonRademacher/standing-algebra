@@ -16,14 +16,14 @@ This is NOT preference or optimization.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyNonProgressOutOfScopeWhenProgressAvailable S
 means that non-progress options are out of scope
 when progress options S are available.
 -/
-constant AutonomyNonProgressOutOfScopeWhenProgressAvailable :
+axiom AutonomyNonProgressOutOfScopeWhenProgressAvailable :
   AutonomyProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

@@ -41,8 +41,9 @@ axiom Exit_preserved_under_remedy :
 axiom Remedy_cannot_foreclose_exit :
   ∀ (a : Agent),
     (∃ F : Operation, Exit F ∧ MinStanding ≤ σ (apply F a)) →
+    (∃ R : Operation, Remedy R) →
     (∃ F : Operation, Exit F ∧
-       MinStanding ≤ σ (apply F (apply (choose (by trivial)) a)))
+       MinStanding ≤ σ (apply F (apply R a)))
 
 /-
 NOTE:

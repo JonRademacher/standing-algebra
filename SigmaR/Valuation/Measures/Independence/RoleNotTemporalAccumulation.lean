@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Standing.RoleState_Definition
-import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
+import SigmaR.Valuation.Measures.Definitions.RoleState_Definition
+import SigmaR.Valuation.Measures.Definitions.TemporalAccumulation_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -20,7 +22,7 @@ or resolution of temporal accumulation is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating role occupancy as preventing,
@@ -33,4 +35,4 @@ axiom role_not_temporal_accumulation :
       TreatedAsTemporalAccumulationResolvedFromRoleState a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

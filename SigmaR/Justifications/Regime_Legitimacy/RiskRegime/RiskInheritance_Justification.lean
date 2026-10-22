@@ -53,9 +53,12 @@ proxy optimization channel.
 
 namespace SigmaR
 
+/-- Agent-indexed attribution of an operation's risk at state `s`. -/
+axiom RiskInheritance : Agent → Operation → State → Prop
+
 /-- Predicate: the operation performs standing‑weighted
     risk‑based intervention at state `s`. -/
-constant RiskInherited : Operation → State → Prop
+axiom RiskInterventionInherited : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Risk Inheritance (Regime‑Level):
@@ -69,8 +72,8 @@ axiom risk_inheritance_requires_debt :
   ∀ {F : Operation},
     Legitimate F →
       ∀ s : State,
-        RiskInherited F s →
-        StructuralDebt F s
+        RiskInterventionInherited F s →
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -82,8 +85,8 @@ theorem RiskInheritance_requires_debt
   {F : Operation}
   (hLeg : Legitimate F) :
   ∀ s : State,
-    RiskInherited F s →
-    StructuralDebt F s :=
+    RiskInterventionInherited F s →
+    HasStructuralDebt F s :=
 by
   intros s hRisk
   exact risk_inheritance_requires_debt hLeg s hRisk

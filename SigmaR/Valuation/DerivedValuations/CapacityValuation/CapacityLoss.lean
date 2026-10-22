@@ -19,13 +19,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityLoss C₁ C₂ means that capacity valuation C₂
 represents a loss relative to capacity valuation C₁.
 -/
-constant CapacityLoss :
+axiom CapacityLoss :
   CapacityValuation → CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

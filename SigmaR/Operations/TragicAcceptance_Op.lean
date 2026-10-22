@@ -1,15 +1,7 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Operations.ResolutionMethodDistinctness_Op
 
 namespace SigmaR
-
-/--
-Operations-level predicate:
-
-`F` represents tragic acceptance when
-no admissible operation can reduce harm
-without violating autonomy.
--/
-constant TragicAcceptanceOp : Operation → Prop
 
 /--
 Operations-level invariant (Tragic Acceptance):

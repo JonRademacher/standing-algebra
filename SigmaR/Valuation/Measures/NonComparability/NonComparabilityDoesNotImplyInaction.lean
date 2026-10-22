@@ -2,6 +2,8 @@ import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.NonComparability.NonComparabilityContract
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Non-Comparability Does Not Imply Inaction
@@ -15,7 +17,7 @@ not the possibility of action.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.NonComparability
 
 /--
 No implication treating non-comparability as implying
@@ -30,5 +32,4 @@ axiom noncomparability_not_inaction :
       TreatedAsInaction M₁ M₂
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.NonComparability

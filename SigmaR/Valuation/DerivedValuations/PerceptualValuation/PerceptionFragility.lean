@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.PerceptionValuation
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation
 
 /-!
 ###############################################################################
@@ -18,13 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 PerceptionFragility P means that perception valuation P
 is structurally sensitive to certain changes.
 -/
-constant PerceptionFragility :
+axiom PerceptionFragility :
   PerceptionValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

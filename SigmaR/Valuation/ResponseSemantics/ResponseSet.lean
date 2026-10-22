@@ -18,11 +18,11 @@ It is a descriptive space of possibilities only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 A set of responses considered jointly.
 -/
-constant ResponseSet : Type
+axiom ResponseSet : Type
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

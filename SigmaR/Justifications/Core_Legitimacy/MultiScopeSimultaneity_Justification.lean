@@ -58,7 +58,7 @@ namespace SigmaR
 
 /-- Predicate: the claim at state `s`
     is evaluated across all relevant PFAs. -/
-constant MultiScopeEvaluated : State → Prop
+axiom MultiScopeEvaluated : State → Prop
 
 /--
 Core legitimacy axiom:

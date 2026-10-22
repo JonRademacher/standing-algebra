@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.StandingValuation
+import SigmaR.Valuation.DerivedValuations.StandingValuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -19,13 +19,13 @@ It does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.StandingValuation
 
 /--
 StandingHysteresis S means that standing valuation S
 exhibits path-dependent behavior.
 -/
-constant StandingHysteresis :
+axiom StandingHysteresis :
   StandingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.StandingValuation

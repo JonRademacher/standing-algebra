@@ -14,11 +14,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 Exit cost valuation does not imply morality.
 -/
-constant ExitCostDoesNotImplyMorality : Prop
+axiom ExitCostDoesNotImplyMorality : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

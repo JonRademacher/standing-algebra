@@ -12,13 +12,13 @@ It does NOT assert that any particular measure is monotone.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 A valuation measure is structurally monotone with respect to
 the state preorder.
 -/
-constant StructurallyMonotone :
+axiom StructurallyMonotone :
   Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.CapacityMeasure_Definition
-import SigmaR.Standing.ConsentState_Definition
+import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.ConsentState_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -16,7 +18,7 @@ is licensed. Any relationship must be introduced explicitly.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating capacity measures as implying
@@ -28,4 +30,4 @@ axiom capacity_not_consent :
       TreatedAsConsentFromCapacityMeasure a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

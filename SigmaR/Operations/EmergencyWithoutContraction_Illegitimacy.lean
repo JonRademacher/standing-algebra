@@ -1,6 +1,6 @@
 import SigmaR.Operations.LegitimacyInterface
-import SigmaR.Justifications.Regimes.Emergency.EmergencyRegime_Justification
-import SigmaR.Justifications.Regimes.Emergency.EmergencyContraction_Justification
+import SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.EmergencyRegime_Justification
+import SigmaR.Justifications.Core_Legitimacy.EmergencyContraction_Justification
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 
 /-!
@@ -30,7 +30,7 @@ to contract or repair that debt cannot be legitimate.
 theorem emergency_without_contraction_implies_illegitimacy
   {F : Operation} {s : State}
   (hEmer : EmergencyRegimeOp F s)
-  (hDebt : StructuralDebt F s)
+  (hDebt : HasStructuralDebt F s)
   (hNoContraction : ¬ EmergencyContraction F s) :
   ¬ Legitimate F :=
 by

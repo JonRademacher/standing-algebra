@@ -15,13 +15,13 @@ It does not assert it as a universal semantic law.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 A valuation measure is treated as admitting monotone
 post-composition without violating its structural monotonicity.
 -/
-constant MonotoneCompositionAdmissible :
+axiom MonotoneCompositionAdmissible :
   Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

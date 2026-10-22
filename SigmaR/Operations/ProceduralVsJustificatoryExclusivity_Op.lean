@@ -27,18 +27,18 @@ namespace SigmaR
 /--
 Procedural method predicates.
 -/
-constant UsesNegotiation      : Operation → Prop
-constant UsesCooperation      : Operation → Prop
-constant UsesCompromise       : Operation → Prop
-constant UsesTragicAcceptance : Operation → Prop
+axiom UsesNegotiation      : Operation → Prop
+axiom UsesCooperation      : Operation → Prop
+axiom UsesCompromise       : Operation → Prop
+axiom UsesTragicAcceptance : Operation → Prop
 
 /--
 Justificatory predicates (structural obligations).
 -/
-constant NegotiationJustified : Operation → Prop
-constant CooperationJustified : Operation → Prop
-constant CompromiseJustified  : Operation → Prop
-constant TragicJustified      : Operation → Prop
+axiom NegotiationJustified : Operation → Prop
+axiom CooperationJustified : Operation → Prop
+axiom CompromiseJustified  : Operation → Prop
+axiom TragicJustified      : Operation → Prop
 
 /--
 Procedural non-substitution axiom:

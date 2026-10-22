@@ -30,10 +30,10 @@ justifications of autonomy and capacity-indexed autonomy (CIA).
 namespace SigmaR
 
 /-- Predicate: the agent possesses the capacity for abstraction. -/
-constant AbstractionCapable : Agent → Prop
+axiom AbstractionCapable : Agent → Prop
 
 /-- Predicate: the agent is agentic (has a locus of will). -/
-constant Agentic : Agent → Prop
+axiom Agentic : Agent → Prop
 
 /--
 Philosophical justification for agency:

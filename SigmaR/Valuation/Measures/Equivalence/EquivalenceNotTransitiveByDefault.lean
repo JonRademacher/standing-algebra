@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Equivalence Not Transitive by Default
@@ -11,7 +13,7 @@ automatically propagate transitively.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Equivalence
 
 /--
 No implication asserting transitive closure of
@@ -29,4 +31,4 @@ axiom equivalence_not_transitive_by_default :
       EquivalentMeasures M₁ M₃
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Equivalence

@@ -1,5 +1,5 @@
-import SigmaR.Justifications.Regimes.RiskRegime.RiskLoadMonotonicity_Justification
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskLoadMonotonicity_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionCore
 
 /-!
 ###############################################################################
@@ -26,15 +26,10 @@ Therefore:
 namespace SigmaR
 
 /--
-Predicate: operation `G` is a composition of affordance operations.
--/
-constant AffordanceComposed : Operation → Prop
-
-/--
 Predicate: risk introduced by operation `F`
 at state `s` is bounded.
 -/
-constant RiskBounded : Operation → State → Prop
+axiom RiskBounded : Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Risk Accumulation Bound):

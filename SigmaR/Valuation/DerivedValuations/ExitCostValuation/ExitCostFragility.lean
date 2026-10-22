@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.ExitCostValuation
+import SigmaR.Valuation.DerivedValuations.ExitCostValuation.ExitCostValuation
 
 /-!
 ###############################################################################
@@ -14,13 +14,13 @@ or moral vulnerability.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 ExitCostFragility E means that exit cost valuation E
 is structurally sensitive to certain changes.
 -/
-constant ExitCostFragility :
+axiom ExitCostFragility :
   ExitCostValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Equilibrium Assumption
@@ -11,7 +13,7 @@ of equilibria or steady states.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication from valuation structure to the
@@ -24,4 +26,4 @@ axiom no_equilibrium_assumption :
       HasEquilibrium M
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.StructuralDebt_Definition
-import SigmaR.Valuation.Measures.ExitViability_Definition
+import SigmaR.Valuation.Measures.Definitions.StructrualDebt_Definition
+import SigmaR.Valuation.Measures.Definitions.ExitViability_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -17,7 +19,7 @@ is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating structural debt as eliminating,
@@ -30,4 +32,4 @@ axiom debt_not_exit :
       TreatedAsExitViableResolvedFromStructuralDebt a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.MeasurementLimits.ObservabilityIsLocal
+import SigmaR.Valuation.Measures.Relevance.ObservabilityIsLocal
 
 /-!
 ###############################################################################
@@ -12,7 +12,9 @@ collective drift may arise even without local failure.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication treating reliance on IPFA alone as
@@ -25,4 +27,4 @@ axiom goodhart_drift_from_partial_observability :
       TreatedAsAuthoritative s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

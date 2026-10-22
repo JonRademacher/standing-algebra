@@ -18,13 +18,13 @@ It does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseIdempotent R means that repeated application
 of response R does not accumulate additional effect.
 -/
-constant ResponseIdempotent :
+axiom ResponseIdempotent :
   Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

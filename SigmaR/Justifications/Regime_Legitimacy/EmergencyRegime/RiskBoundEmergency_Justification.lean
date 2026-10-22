@@ -56,7 +56,7 @@ proxy optimization channel.
 namespace SigmaR
 
 /-- Predicate: the operation performs risk‑weighted emergency intervention at state `s`. -/
-constant RiskBoundEmergency : Operation → State → Prop
+axiom RiskBoundEmergency : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Risk‑Bound Emergency:
@@ -71,7 +71,7 @@ axiom risk_bound_emergency_requires_debt :
     Legitimate F →
       ∀ s : State,
         RiskBoundEmergency F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -84,7 +84,7 @@ theorem RiskBoundEmergency_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     RiskBoundEmergency F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hEmerg
   exact risk_bound_emergency_requires_debt hLeg s hEmerg

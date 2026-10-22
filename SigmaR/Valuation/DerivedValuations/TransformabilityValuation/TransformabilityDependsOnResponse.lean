@@ -17,13 +17,13 @@ Dependency does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityDependsOnResponse T R means that transformability
 valuation T is structurally sensitive to response R.
 -/
-constant TransformabilityDependsOnResponse :
+axiom TransformabilityDependsOnResponse :
   TransformabilityValuation → Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

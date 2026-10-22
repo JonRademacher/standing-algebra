@@ -1,5 +1,5 @@
-import SigmaR.Justifications.Core_Legitimacy.Rerunnability_Justification
-import SigmaR.Justifications.Regimes.SuccessorRegime.SuccessorRegime_Justification
+import SigmaR.Justifications.Core_Legitimacy.TransitionCriteriaRerunnability_Justification
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegimeCore
 
 /-!
 ###############################################################################
@@ -28,7 +28,7 @@ namespace SigmaR
 Predicate: operation `F` accumulates standing
 under repeated application.
 -/
-constant SuccessorAccumulates : Operation → Prop
+axiom SuccessorAccumulates : Operation → Prop
 
 /--
 Tier-2 legitimacy axiom (Successor Non-Accumulation):

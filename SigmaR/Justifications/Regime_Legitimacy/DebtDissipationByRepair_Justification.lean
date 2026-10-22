@@ -60,11 +60,11 @@ namespace SigmaR
 
 /-- Predicate: the operation reduces StructuralDebt
     at state `s`. -/
-constant DebtReduced : Operation → State → Prop
+axiom DebtReduced : Operation → State → Prop
 
 /-- Predicate: the operation is a Repair operation
     restoring CIA‑indexed autonomy. -/
-constant RepairOp : Operation → State → Prop
+axiom RepairOp : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Debt Dissipation:

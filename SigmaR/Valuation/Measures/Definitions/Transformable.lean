@@ -12,12 +12,12 @@ Transformability denotes the capacity to be changed by some operation.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 Transformable i F means that applying operation F
 changes agent i.
 -/
-constant Transformable : Agent → Operation → Prop
+axiom Transformable : Agent → Operation → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

@@ -1,8 +1,8 @@
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.StandingMeasure_Definition
-import SigmaR.Valuation.Measures.CapacityMeasure_Definition
-import SigmaR.Valuation.Measures.DependencyDegree_Definition
-import SigmaR.Valuation.Measures.RiskInheritance_Definition
+import SigmaR.Valuation.StandingValuation
+import SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.DependencyDegree_Definition
+import SigmaR.Valuation.Measures.Definitions.RiskInheritance_Definition
 
 /-!
 ###############################################################################
@@ -20,24 +20,29 @@ No quantitative relations are asserted here—only non-identity.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 Independence of standing and capacity measures.
 -/
 axiom StandingCapacityIndependent :
-  ∀ a s, StandingMeasure a s ≠ CapacityMeasure a s
+  ∀ (a : Agent) (s : SigmaR.Valuation.State),
+    StandingMeasure a s ≠ CapacityMeasure a s
 
 /--
 Independence of standing and dependency degree.
 -/
 axiom StandingDependencyIndependent :
-  ∀ a s, StandingMeasure a s ≠ DependencyDegree a s
+  ∀ (a : Agent) (s : SigmaR.Valuation.State),
+    StandingMeasure a s ≠ DependencyDegree a s
 
 /--
 Independence of risk inheritance and dependency degree.
 -/
 axiom RiskNotIdenticalToDependency :
-  ∀ a s, RiskInheritance a s ≠ DependencyDegree a s
+  ∀ (a : Agent) (s : SigmaR.Valuation.State),
+    RiskInheritance a s ≠ DependencyDegree a s
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

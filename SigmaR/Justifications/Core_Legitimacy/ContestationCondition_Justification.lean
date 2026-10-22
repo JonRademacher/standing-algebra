@@ -57,7 +57,7 @@ namespace SigmaR
 
 /-- Predicate: the perceptual frame agreement
     at state `s` remains contestable. -/
-constant Contestable : State → Prop
+axiom Contestable : State → Prop
 
 /--
 Core legitimacy axiom:

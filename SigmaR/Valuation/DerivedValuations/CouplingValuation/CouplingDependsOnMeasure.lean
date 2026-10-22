@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.CouplingValuation
+import SigmaR.Valuation.DerivedValuations.CouplingValuation.CouplingValuation
 
 /-!
 ###############################################################################
@@ -18,13 +18,13 @@ It is declarative only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 CouplingDependsOnMeasure C M means that coupling valuation C
 structurally depends on valuation measure M.
 -/
-constant CouplingDependsOnMeasure :
+axiom CouplingDependsOnMeasure :
   CouplingValuation → Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

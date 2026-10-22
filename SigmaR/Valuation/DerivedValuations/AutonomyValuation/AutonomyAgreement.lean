@@ -17,11 +17,11 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 An abstract structure representing autonomy agreement.
 -/
-constant AutonomyAgreement : Type
+axiom AutonomyAgreement : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

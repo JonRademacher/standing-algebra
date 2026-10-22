@@ -35,7 +35,7 @@ namespace SigmaR
 Predicate: operation `F` satisfies all
 constraints of all applicable regimes.
 -/
-constant AllRegimeConstraintsSatisfied : Operation → Prop
+axiom AllRegimeConstraintsSatisfied : Operation → Prop
 
 /--
 Tier-2 legitimacy axiom (Regime Interaction Normalization):

@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_RegimeStacked
+import SigmaR.Compositions.First_Order_Compositions.RiskEmergency
 
 namespace SigmaR
 
@@ -27,6 +28,6 @@ theorem Risk_non_authorization :
     ¬ Admissible F :=
 by
   intro F a hRisk
-  exact Risk_cannot_authorize_admissibility F a hRisk
+  exact Risk_not_authoritative F a hRisk
 
 end SigmaR

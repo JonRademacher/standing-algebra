@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.ExitCostValuation
+import SigmaR.Valuation.DerivedValuations.ExitCostValuation.ExitCostValuation
 
 /-!
 ###############################################################################
@@ -18,13 +18,13 @@ It prevents illicit violations only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 ExitCostRespectsMonotonicity E means that exit cost valuation E
 does not violate declared monotonicity constraints.
 -/
-constant ExitCostRespectsMonotonicity :
+axiom ExitCostRespectsMonotonicity :
   ExitCostValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

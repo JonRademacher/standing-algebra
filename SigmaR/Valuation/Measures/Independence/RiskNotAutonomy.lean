@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.RiskLoad_Definition
-import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.RiskLoad_Definition
+import SigmaR.Valuation.Measures.Definitions.AutonomyMeasure_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -18,7 +20,7 @@ loss is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating risk exposure as eliminating,
@@ -30,4 +32,4 @@ axiom risk_not_autonomy :
       TreatedAsAutonomyLostFromRiskLoad a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

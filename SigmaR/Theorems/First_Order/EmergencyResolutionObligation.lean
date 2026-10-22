@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_RegimeStacked
+import SigmaR.Compositions.First_Order_Compositions.EmergencyRemedy
 
 namespace SigmaR
 
@@ -27,7 +28,7 @@ theorem Emergency_resolution_obligation :
     (∃ R : Operation, Remedy R) →
     ∃ R : Operation,
       Remedy R ∧
-      ¬ EmergentWrong (apply_state R s) :=
+      ¬ EmergentWrong (apply R s) :=
 by
   intro s hEmergency hRemedyExists
   exact Emergency_requires_remedy_when_possible s hEmergency hRemedyExists

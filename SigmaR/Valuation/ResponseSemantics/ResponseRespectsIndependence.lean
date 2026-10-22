@@ -16,13 +16,13 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseRespectsIndependence R means that response R
 does not violate Independence constraints.
 -/
-constant ResponseRespectsIndependence :
+axiom ResponseRespectsIndependence :
   Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

@@ -5,7 +5,7 @@ namespace SigmaR
 /--
 Predicate: no resolution method is admissible.
 -/
-constant NoResolutionAvailable : Operation → Prop
+axiom NoResolutionAvailable : Operation → Prop
 
 /--
 Resolution fallback rule:

@@ -13,7 +13,9 @@ or collectives.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting IPFA to generate collective
@@ -26,7 +28,4 @@ axiom ipfa_not_collective :
       TreatedAsAuthoritative s
   )
 
-end SigmaR
-
-
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

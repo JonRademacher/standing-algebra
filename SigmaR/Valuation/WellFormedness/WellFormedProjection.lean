@@ -14,7 +14,9 @@ structure and silently yielding a valuation measure.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 There is no general rule that projecting a valuation
@@ -29,4 +31,4 @@ axiom no_arbitrary_projection_as_measure :
       IsMeasure (Project M)
   )
 
-end SigmaR
+end SigmaR.Valuation.WellFormedness

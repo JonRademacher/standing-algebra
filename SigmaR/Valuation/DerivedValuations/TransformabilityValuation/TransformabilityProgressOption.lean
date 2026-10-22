@@ -15,12 +15,12 @@ It is a structural possibility, not a preference.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityProgressOption O means that O represents
 a transformability-increasing option.
 -/
-constant TransformabilityProgressOption : Type
+axiom TransformabilityProgressOption : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

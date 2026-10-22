@@ -1,6 +1,7 @@
 import SigmaR.Justifications.Core_Legitimacy.PFA_Justification
 import SigmaR.Justifications.Core_Legitimacy.ScopeScaleRelativity_Justification
 import SigmaR.Justifications.Core_Legitimacy.DerivedStanding_Justification
+import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 
 /-!
 ###############################################################################
@@ -65,7 +66,7 @@ namespace SigmaR
 /-- Predicate: adapter‑mediated
     identity or role recoupling
     occurs at state `s`. -/
-constant EpistemicAdapter : Operation → State → Prop
+axiom EpistemicAdapter : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom
@@ -76,6 +77,6 @@ axiom adapter_requires_debt :
     Legitimate F →
       ∀ s : State,
         EpistemicAdapter F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 end SigmaR

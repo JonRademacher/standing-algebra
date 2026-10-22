@@ -8,19 +8,8 @@ namespace SigmaR
 axiom legitimate_implies_admissible :
   ∀ F : Operation, Legitimate F → Admissible F
 
-def StandingPreserved (F : Operation) : Prop :=
-  ∀ a : Agent, σ a ≤ σ (apply F a)
-
 def RaisesStanding (F : Operation) (a : Agent) : Prop :=
-  σ a < σ (apply F a)
-
-theorem admissible_preserves_standing :
-  ∀ F : Operation,
-    Admissible F →
-    StandingPreserved F :=
-by
-  intro F hAdm a
-  exact ALRP_standing_preservation F a hAdm
+ σ a < σ (apply F a)
 
 theorem legitimate_preserves_standing :
   ∀ F : Operation,

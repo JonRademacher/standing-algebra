@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegimeCore
 
 /-!
 ###############################################################################
@@ -28,7 +28,7 @@ namespace SigmaR
 Predicate: drift operation `D` increases
 structural debt for agent `a` at state `s`.
 -/
-constant DriftAccruesDebt : Agent → Operation → State → Prop
+axiom DriftAccruesDebt : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Drift Structural Debt):
@@ -47,7 +47,7 @@ Derived theorem:
 
 Drift increases structural debt.
 -/
-theorem DriftAccruesDebt
+theorem DriftAccruesDebt_from_regime
   {D : Operation}
   (hDrift : DriftRegimeOp D) :
   ∀ s : State,

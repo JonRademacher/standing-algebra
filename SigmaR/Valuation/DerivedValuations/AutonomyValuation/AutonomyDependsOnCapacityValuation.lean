@@ -20,13 +20,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyDependsOnCapacityValuation A C means that autonomy
 valuation A is structurally dependent on capacity valuation C.
 -/
-constant AutonomyDependsOnCapacityValuation :
+axiom AutonomyDependsOnCapacityValuation :
   AutonomyValuation → CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

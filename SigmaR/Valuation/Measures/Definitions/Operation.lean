@@ -1,4 +1,4 @@
-import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -11,16 +11,16 @@ Operations are structural and uninterpreted.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
-An abstract operation acting on agents.
+An abstract operation acting on valuation states.
 -/
-constant Operation : Type
+abbrev Operation := SigmaR.Operation
 
 /--
-Application of an operation to an agent.
+Application of an operation to a valuation state.
 -/
-constant Apply : Operation → Agent → Agent
+axiom Apply : SigmaR.Operation → SigmaR.Valuation.State → SigmaR.Valuation.State
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

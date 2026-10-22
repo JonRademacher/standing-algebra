@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.ExitCostValuation
+import SigmaR.Valuation.DerivedValuations.ExitCostValuation.ExitCostValuation
 
 /-!
 ###############################################################################
@@ -18,13 +18,13 @@ It is declarative only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 ExitCostDependsOnMeasure E M means that exit cost valuation E
 structurally depends on valuation measure M.
 -/
-constant ExitCostDependsOnMeasure :
+axiom ExitCostDependsOnMeasure :
   ExitCostValuation → Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

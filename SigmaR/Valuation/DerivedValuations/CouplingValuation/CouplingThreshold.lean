@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.CouplingValuation
+import SigmaR.Valuation.DerivedValuations.CouplingValuation.CouplingValuation
 
 /-!
 ###############################################################################
@@ -19,13 +19,13 @@ They are structural demarcations only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 CouplingThreshold C means that coupling valuation C
 is associated with a structural threshold.
 -/
-constant CouplingThreshold :
+axiom CouplingThreshold :
   CouplingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

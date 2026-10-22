@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Finite Measurement Resolution
@@ -13,7 +15,7 @@ infinitely precise measurement.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.MeasurementLimits
 
 /--
 There is no general rule that measurement admits
@@ -24,7 +26,7 @@ Measurements must not be treated as arbitrarily precise.
 axiom no_infinite_measurement_resolution :
   ¬ (
     ∀ (a : Agent) (s : State),
-      InfinitelyResolvable (MeasuredValue a s)
+      InfinitelyResolvable (Measured a s)
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.MeasurementLimits

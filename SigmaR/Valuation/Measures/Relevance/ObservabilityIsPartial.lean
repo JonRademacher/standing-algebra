@@ -10,7 +10,9 @@ Not all aspects of a state are observable by any agent.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 There exist states that are not observable by some agents.
@@ -19,4 +21,4 @@ axiom observability_is_partial :
   ∃ (a : Agent) (s : State),
     ¬ Observable a s
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

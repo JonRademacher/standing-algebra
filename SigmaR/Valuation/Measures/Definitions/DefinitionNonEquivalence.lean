@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Definition Non-Equivalence
@@ -16,7 +18,7 @@ at the definition layer.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 No implication from the mere existence of valuation
@@ -31,4 +33,4 @@ axiom definition_non_equivalence :
       EquivalentMeasures M₁ M₂
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

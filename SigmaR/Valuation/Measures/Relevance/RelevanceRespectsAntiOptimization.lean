@@ -12,7 +12,9 @@ objective, target, or optimization criterion.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting relevance to authorize
@@ -25,4 +27,4 @@ axiom relevance_respects_antioptimization :
       Optimizes O
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

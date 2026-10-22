@@ -11,7 +11,9 @@ There is no global perspective that reveals all information.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication asserting a globally uniform or
@@ -24,4 +26,4 @@ axiom observability_is_local :
         Observable a s ↔ O s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

@@ -20,13 +20,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 ResponseAffectsCapacityAgreement R A means that response R
 has a structural effect on capacity agreement A.
 -/
-constant ResponseAffectsCapacityAgreement :
+axiom ResponseAffectsCapacityAgreement :
   Response → CapacityAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

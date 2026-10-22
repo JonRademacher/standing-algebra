@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.ALRP_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegimeCore
 
 /-!
 ###############################################################################
@@ -27,7 +27,7 @@ namespace SigmaR
 Predicate: drift operation `D` preserves standing
 for agent `a` at state `s`.
 -/
-constant DriftPreservesStanding : Agent → Operation → State → Prop
+axiom DriftPreservesStanding : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Standing Monotonicity Under Drift):

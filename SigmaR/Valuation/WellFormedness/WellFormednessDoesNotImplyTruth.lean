@@ -13,16 +13,16 @@ Truth is not a structural property.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
 
 /--
 No implication from well-formedness to truth is permitted.
 -/
 axiom wellformedness_not_truth :
   ¬ (
-    ∀ (M : Agent → State → Nat),
-      WellFormed M → TrueMeasure M
+    ∀ (M : SigmaR.Valuation.Core.Measure),
+      SigmaR.Valuation.Core.WellFormed M →
+        SigmaR.Valuation.Core.TrueMeasure M
   )
 
-end SigmaR
-
+end SigmaR.Valuation.WellFormedness

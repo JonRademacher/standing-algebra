@@ -19,13 +19,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityAgreementStabilizedByEvidence A means that capacity
 agreement A is stabilized through non-parochial evidence.
 -/
-constant CapacityAgreementStabilizedByEvidence :
+axiom CapacityAgreementStabilizedByEvidence :
   CapacityAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

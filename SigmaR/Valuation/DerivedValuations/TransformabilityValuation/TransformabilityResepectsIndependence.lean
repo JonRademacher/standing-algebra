@@ -16,14 +16,14 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityRespectsIndependence T means that
 transformability valuation T does not violate
 Independence constraints.
 -/
-constant TransformabilityRespectsIndependence :
+axiom TransformabilityRespectsIndependence :
   TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

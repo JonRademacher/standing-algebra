@@ -14,14 +14,14 @@ This names omission structurally, not morally.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityOmissionMaintainsConstraint S means that
 failure to engage available transformability-progress options
 maintains the transformability constraint structurally.
 -/
-constant TransformabilityOmissionMaintainsConstraint :
+axiom TransformabilityOmissionMaintainsConstraint :
   TransformabilityProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

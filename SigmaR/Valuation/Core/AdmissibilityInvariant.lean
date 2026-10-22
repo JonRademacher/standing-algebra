@@ -1,4 +1,5 @@
-import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
+import SigmaR.Valuation.Measures.Definitions.Operation
 
 /-!
 ###############################################################################
@@ -16,12 +17,14 @@ the valuation quantities they reference.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Core
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 Valuation-level invariant predicate.
 -/
-constant ValuationInvariant : State → Prop
+axiom ValuationInvariant : State → Prop
 
 /--
 Admissibility preserves valuation invariants.
@@ -43,4 +46,4 @@ theorem ValuationInvariantUnderAdmissible
 by
   exact AdmissibilityPreservesValuation F s hA hV
 
-end SigmaR
+end SigmaR.Valuation.Core

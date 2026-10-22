@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.StandingMeasure_Definition
-import SigmaR.Valuation.Measures.DominationPressure_Definition
+import SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.DominationPressure_Definition
 import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
@@ -16,13 +16,13 @@ It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Standing is treated as conditionally monotone decreasing
 with respect to domination pressure.
 -/
-constant StandingConditionallyMonotoneUnderDomination :
+axiom StandingConditionallyMonotoneUnderDomination :
   Agent → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

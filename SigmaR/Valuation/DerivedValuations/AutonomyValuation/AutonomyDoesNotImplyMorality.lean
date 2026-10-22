@@ -14,11 +14,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 Autonomy valuation does not imply morality.
 -/
-constant AutonomyDoesNotImplyMorality : Prop
+axiom AutonomyDoesNotImplyMorality : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

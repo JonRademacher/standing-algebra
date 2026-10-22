@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Equivalence Does Not Imply Ordering
@@ -11,7 +13,7 @@ agents, states, or measures.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Equivalence
 
 /--
 No implication from equivalence to induced ordering
@@ -26,5 +28,5 @@ axiom equivalence_not_ordering :
       EquivalenceInducesOrdering M₁ M₂
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Equivalence
 

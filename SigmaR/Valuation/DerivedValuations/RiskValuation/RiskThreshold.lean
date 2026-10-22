@@ -18,13 +18,13 @@ They do NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskThreshold R means that risk valuation R
 is associated with a structural threshold.
 -/
-constant RiskThreshold :
+axiom RiskThreshold :
   RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

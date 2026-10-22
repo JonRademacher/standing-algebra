@@ -38,6 +38,7 @@ axiom Operation : Type
 axiom σ   : Agent → Nat        -- standing (autonomy-relevant)
 axiom cap : Agent → Nat        -- capacity index
 axiom B   : Nat → Nat          -- capacity-to-standing bound
+axiom deg : Agent → Nat        -- coupling degree
 
 /- -----------------
    Basic Extensionality
@@ -57,6 +58,19 @@ axiom σ_ext :
 
 axiom apply : Operation → Agent → Agent
 
+/-- Sequential composition of operations, with the first operation applied first. -/
+axiom composeOp : Operation → Operation → Operation
+
+axiom apply_composeOp :
+  ∀ (F G : Operation) (a : Agent),
+    apply (composeOp G F) a = apply G (apply F a)
+
+axiom identityOp : Operation
+
+noncomputable def Iterate (F : Operation) : Nat → Operation
+  | 0 => identityOp
+  | n + 1 => composeOp F (Iterate F n)
+
 /--
 Operation application respects agent equality.
 This enforces functional extensionality of `apply`.
@@ -70,6 +84,7 @@ axiom apply_ext :
    ----------------- -/
 
 axiom Admissible : Operation → Prop
+axiom Legitimate : Operation → Prop
 
 /- -----------------
    Core Invariants (Axiomatic)

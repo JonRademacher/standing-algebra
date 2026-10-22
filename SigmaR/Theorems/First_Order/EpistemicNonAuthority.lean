@@ -23,12 +23,11 @@ namespace SigmaR
    ----------------- -/
 
 theorem Epistemic_non_authority :
-  ∀ (F : Operation) (a : Agent),
-    (∃ c : Claim, usesClaim F c) →
-    ¬ Admissible F :=
+  ∀ (F : Operation) (c : Claim),
+    usesClaim F c →
+    ¬ Authority c :=
 by
-  intro F a hClaim
-  rcases hClaim with ⟨c, hUses⟩
-  exact Claim_cannot_authorize_admissibility F c hUses
+  intro F c hUses
+  exact Claim_not_Admissible F c hUses
 
 end SigmaR

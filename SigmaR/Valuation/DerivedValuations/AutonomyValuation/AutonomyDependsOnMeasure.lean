@@ -18,13 +18,13 @@ It is a declarative dependency only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyDependsOnMeasure A M means that autonomy valuation A
 structurally depends on valuation measure M.
 -/
-constant AutonomyDependsOnMeasure :
+axiom AutonomyDependsOnMeasure :
   AutonomyValuation → Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation
