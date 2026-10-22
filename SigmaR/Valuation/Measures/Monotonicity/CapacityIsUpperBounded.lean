@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
 import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
@@ -15,11 +15,11 @@ It does not assert it globally.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Capacity is treated as upper bounded.
 -/
-constant CapacityUpperBounded : Prop
+axiom CapacityUpperBounded : Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.ResponseSemantics.Response
-import SigmaR.Valuation.DerivedValuations.PerceptualAgreement
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptualAgreement
 
 /-!
 ###############################################################################
@@ -20,13 +20,13 @@ It does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 ResponseAffectsPerceptualAgreement R A means that response R
 has a structural effect on perceptual agreement A.
 -/
-constant ResponseAffectsPerceptualAgreement :
+axiom ResponseAffectsPerceptualAgreement :
   Response → PerceptualAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

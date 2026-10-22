@@ -14,11 +14,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 Transformability valuation does not imply intervention.
 -/
-constant TransformabilityDoesNotImplyIntervention : Prop
+axiom TransformabilityDoesNotImplyIntervention : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

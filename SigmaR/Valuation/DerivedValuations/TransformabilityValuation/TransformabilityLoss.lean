@@ -19,13 +19,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityLoss T₁ T₂ means that transformability valuation T₂
 represents a loss relative to transformability valuation T₁.
 -/
-constant TransformabilityLoss :
+axiom TransformabilityLoss :
   TransformabilityValuation → TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

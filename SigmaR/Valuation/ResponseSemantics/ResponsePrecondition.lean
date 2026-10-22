@@ -13,12 +13,12 @@ without asserting that it should be applied.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 A structural precondition under which a response may apply.
 -/
-constant ResponsePrecondition :
+axiom ResponsePrecondition :
   Response → State → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

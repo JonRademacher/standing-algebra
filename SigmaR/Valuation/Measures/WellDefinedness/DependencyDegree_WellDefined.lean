@@ -1,5 +1,5 @@
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.DependencyDegree_Definition
+import SigmaR.Valuation.StandingValuation
+import SigmaR.Valuation.Measures.Definitions.DependencyDegree_Definition
 
 /-!
 ###############################################################################
@@ -10,7 +10,9 @@ DependencyDegree is total and structural.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 Dependency degree is total and non-negative.
@@ -19,4 +21,4 @@ axiom DependencyDegreeTotal :
   ∀ (a : Agent) (s : State),
     DependencyDegree a s ≥ 0
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

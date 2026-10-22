@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.PerceptionValuation
-import SigmaR.Valuation.DerivedValuations.PerceptualAgreement
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptualAgreement
 
 /-!
 ###############################################################################
@@ -20,14 +20,14 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 PerceptionComparableUnderAgreement P₁ P₂ A means that
 perception valuations P₁ and P₂ are structurally comparable
 under perceptual agreement A.
 -/
-constant PerceptionComparableUnderAgreement :
+axiom PerceptionComparableUnderAgreement :
   PerceptionValuation → PerceptionValuation → PerceptualAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

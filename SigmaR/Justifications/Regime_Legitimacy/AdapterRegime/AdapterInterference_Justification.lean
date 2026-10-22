@@ -70,7 +70,7 @@ namespace SigmaR
     at state `s`
     preserves autonomy‑relevant coupling
     across PFAs. -/
-constant AdapterCoupled : State → Prop
+axiom AdapterCoupled : State → Prop
 
 /--
 Regime legitimacy axiom:

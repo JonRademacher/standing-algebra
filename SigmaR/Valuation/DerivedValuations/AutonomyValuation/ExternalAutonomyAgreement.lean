@@ -18,13 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 ExternalAutonomyAgreement A means that autonomy agreement A
 is externalized across multiple agents.
 -/
-constant ExternalAutonomyAgreement :
+axiom ExternalAutonomyAgreement :
   AutonomyAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

@@ -12,11 +12,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 Risk valuation does not imply authority.
 -/
-constant RiskDoesNotImplyAuthority : Prop
+axiom RiskDoesNotImplyAuthority : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

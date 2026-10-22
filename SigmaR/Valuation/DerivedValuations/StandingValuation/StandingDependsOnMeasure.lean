@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.StandingValuation
+import SigmaR.Valuation.DerivedValuations.StandingValuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -16,13 +16,13 @@ Dependency does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.StandingValuation
 
 /--
 StandingDependsOnMeasure S M means that standing valuation S
 structurally depends on valuation measure M.
 -/
-constant StandingDependsOnMeasure :
+axiom StandingDependsOnMeasure :
   StandingValuation → Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.StandingValuation

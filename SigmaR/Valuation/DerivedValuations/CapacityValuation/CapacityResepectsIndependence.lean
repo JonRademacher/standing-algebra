@@ -16,13 +16,13 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityRespectsIndependence C means that capacity valuation C
 does not violate Independence constraints.
 -/
-constant CapacityRespectsIndependence :
+axiom CapacityRespectsIndependence :
   CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

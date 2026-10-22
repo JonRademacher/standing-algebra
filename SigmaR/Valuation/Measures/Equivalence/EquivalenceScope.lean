@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Equivalence Scope
@@ -13,7 +15,7 @@ Equivalence is not global, not timeless, and not implicit.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Equivalence
 
 /--
 No implication asserting equivalence without an explicit
@@ -29,5 +31,4 @@ axiom equivalence_requires_scope :
          EquivalentInContext C M₁ M₂)
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.Equivalence

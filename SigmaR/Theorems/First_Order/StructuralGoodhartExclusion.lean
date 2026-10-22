@@ -25,11 +25,11 @@ namespace SigmaR
    ----------------- -/
 
 theorem Structural_Goodhart_exclusion :
-  ∀ (F : Operation) (a : Agent),
-    (∃ c : Claim, usesClaim F c) →
+  ∀ (A : Adapter) (F : Operation) (a : Agent),
+    usesClaim F (interpret A (observe A a)) →
     σ (apply F a) ≥ σ a :=
 by
-  intro F a hClaim
-  exact Structural_Goodhart_exclusion_axiom F a hClaim
+  intro A F a hClaim
+  exact Adapter_no_standing_decrease A F a hClaim
 
 end SigmaR

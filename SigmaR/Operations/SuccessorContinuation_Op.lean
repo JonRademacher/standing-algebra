@@ -1,4 +1,5 @@
-import SigmaR.StandingAlgebra_FormalCore
+import SigmaR_Core
+import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegimeCore
 
 namespace SigmaR
 
@@ -13,7 +14,7 @@ axiom SuccessorContinuationInvariant :
     SuccessorConsistent F →
     ∀ s : State,
       ∃ G : Operation,
-        Admissible (G ∘ F)
+        Admissible (composeOp G F)
 
 /--
 Derived theorem:
@@ -25,7 +26,7 @@ theorem SuccessorHasOperationalContinuation
   (hSucc : SuccessorConsistent F) :
   ∀ s : State,
     ∃ G : Operation,
-      Admissible (G ∘ F) :=
+      Admissible (composeOp G F) :=
 by
   intro s
   exact SuccessorContinuationInvariant F hSucc s

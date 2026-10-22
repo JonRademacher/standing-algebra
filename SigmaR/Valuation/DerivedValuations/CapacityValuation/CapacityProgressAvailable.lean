@@ -13,13 +13,13 @@ Availability states existence, not obligation or choice.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityProgressAvailable S means that a set of capacity-progress
 options S exists in the current context.
 -/
-constant CapacityProgressAvailable :
+axiom CapacityProgressAvailable :
   CapacityProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

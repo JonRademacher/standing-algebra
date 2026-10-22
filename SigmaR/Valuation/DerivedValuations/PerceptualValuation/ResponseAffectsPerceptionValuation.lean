@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.ResponseSemantics.Response
-import SigmaR.Valuation.DerivedValuations.PerceptionValuation
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation
 
 /-!
 ###############################################################################
@@ -20,13 +20,13 @@ It does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 ResponseAffectsPerceptionValuation R P means that response R
 has a structural effect on perception valuation P.
 -/
-constant ResponseAffectsPerceptionValuation :
+axiom ResponseAffectsPerceptionValuation :
   Response → PerceptionValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

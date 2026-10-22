@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.DominationPressure_Definition
-import SigmaR.Valuation.Measures.ExitViability_Definition
+import SigmaR.Valuation.Measures.Definitions.DominationPressure_Definition
+import SigmaR.Valuation.Measures.Definitions.ExitViability_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -18,7 +20,7 @@ exit viability is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating domination pressure as eliminating,
@@ -31,4 +33,4 @@ axiom domination_pressure_not_exit :
       TreatedAsExitViableLostFromDominationPressure a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

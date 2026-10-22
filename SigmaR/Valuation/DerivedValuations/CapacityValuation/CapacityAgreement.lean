@@ -17,12 +17,11 @@ without collapsing either into authority.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 An abstract structure representing capacity agreement.
 -/
-constant CapacityAgreement : Type
+axiom CapacityAgreement : Type
 
-end SigmaR
-``
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

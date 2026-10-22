@@ -18,13 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskDampening R₁ R₂ means that risk valuation R₁
 dampens the effective risk represented by R₂.
 -/
-constant RiskDampening :
+axiom RiskDampening :
   RiskValuation → RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

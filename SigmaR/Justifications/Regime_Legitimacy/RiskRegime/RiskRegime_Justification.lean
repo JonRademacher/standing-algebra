@@ -1,9 +1,9 @@
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
-import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
-import SigmaR.Justifications.Regimes.Risk.RiskInheritance_Justification
-import SigmaR.Justifications.Regimes.Risk.RiskSensitiveSymmetry_Justification
-import SigmaR.Justifications.Regimes.Risk.RiskLoadMonotonicity_Justification
+import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justifrication
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskInheritance_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskSensitiveSymmetry_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskLoadMonotonicity_Justification
 
 /-!
 ###############################################################################
@@ -70,7 +70,7 @@ under iteration.
 namespace SigmaR
 
 /-- Predicate: the operation participates in the Risk Regime at state `s`. -/
-constant RiskRegimeOp : Operation → State → Prop
+axiom RiskRegimeOp : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Risk Regime Closure:
@@ -83,7 +83,7 @@ axiom risk_regime_requires_debt :
     Legitimate F →
       ∀ s : State,
         RiskRegimeOp F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -96,7 +96,7 @@ theorem RiskRegime_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     RiskRegimeOp F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hRisk
   exact risk_regime_requires_debt hLeg s hRisk

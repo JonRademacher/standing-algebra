@@ -18,12 +18,12 @@ It is a snapshot of valuation only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 An autonomy valuation relative to a specific state.
 -/
-constant AutonomyState :
+axiom AutonomyState :
   Agent → State → AutonomyValuation
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

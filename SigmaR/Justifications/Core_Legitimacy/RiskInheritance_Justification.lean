@@ -24,10 +24,10 @@ any Legitimate operation must inherit and validate risk at every state.
 namespace SigmaR
 
 /-- Predicate: the operation properly inherits autonomy‑relevant risk at state s. -/
-constant RiskInherited : Operation → State → Prop
+axiom RiskInherited : Operation → State → Prop
 
 /-- Predicate: the operation is validated by its risk‑bearers at state s. -/
-constant RiskValidated : Operation → State → Prop
+axiom RiskValidated : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Risk Inheritance & Validation.

@@ -14,7 +14,9 @@ from being treated as valuation measures.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 There is no general rule that composing valuation measures
@@ -31,5 +33,4 @@ axiom no_arbitrary_composition_as_measure :
       IsMeasure (fun a s => M₁ a s + M₂ a s)
   )
 
-end SigmaR
-
+end SigmaR.Valuation.WellFormedness

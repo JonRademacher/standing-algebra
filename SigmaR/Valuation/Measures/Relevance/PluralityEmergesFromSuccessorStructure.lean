@@ -14,7 +14,9 @@ whether agents exist or whether observations agree.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 Plurality exists whenever there is more than one reachable
@@ -25,5 +27,4 @@ axiom plurality_emerges_from_successor_structure :
     f₁ ≠ f₂ ∧
     (FrameSucc f₁ f₂ ∨ FrameSucc f₂ f₁)
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.Relevance

@@ -1,4 +1,5 @@
-import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
+import SigmaR.Valuation.Measures.Definitions.Operation
 
 /-!
 ###############################################################################
@@ -12,17 +13,14 @@ not a legitimacy judgment, and not a market concept.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Core
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 Structural debt measure.
 -/
-constant StructuralDebt : Agent → State → Nat
-
-/--
-Predicate: a repair operation applies to agent `i`.
--/
-constant Repairs : Operation → Agent → Prop
+axiom StructuralDebt : Agent → State → Nat
 
 /--
 Debt coherence axioms.
@@ -44,4 +42,4 @@ theorem NoDebtReductionWithoutRepair
 by
   exact DebtOnlyReducedByRepair F i s h
 
-end SigmaR
+end SigmaR.Valuation.Core

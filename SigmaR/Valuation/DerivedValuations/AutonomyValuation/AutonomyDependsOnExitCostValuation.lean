@@ -20,13 +20,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyDependsOnExitCostValuation A E means that autonomy
 valuation A is structurally dependent on exit cost valuation E.
 -/
-constant AutonomyDependsOnExitCostValuation :
+axiom AutonomyDependsOnExitCostValuation :
   AutonomyValuation → ExitCostValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

@@ -15,12 +15,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 Response semantics do not imply moral evaluation
 or ethical judgment.
 -/
-constant ResponseDoesNotImplyMorality : Prop
+axiom ResponseDoesNotImplyMorality : Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

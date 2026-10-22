@@ -1,5 +1,5 @@
-import SigmaR.Justifications.Regimes.RemedyRegime.RemedyRegime_Justification
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionCore
 
 /-!
 ###############################################################################
@@ -29,7 +29,7 @@ namespace SigmaR
 Predicate: repair operation `R` is available
 for agent `a` at state `s`.
 -/
-constant RepairAvailable : Agent → Operation → State → Prop
+axiom RepairAvailableForAgent : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Repair Preservation Under Composition):
@@ -44,9 +44,9 @@ axiom repair_preserved_under_composition :
       (∀ F : Operation,
          ComponentOf F G →
          ∀ s : State,
-           RepairAvailable a F s) →
+           RepairAvailableForAgent a F s) →
       ∀ s : State,
-        RepairAvailable a G s
+        RepairAvailableForAgent a G s
 
 /--
 Derived theorem:
@@ -60,9 +60,9 @@ theorem RepairPreservedUnderComposition
     (∀ F : Operation,
        ComponentOf F G →
        ∀ s : State,
-         RepairAvailable a F s) →
+         RepairAvailableForAgent a F s) →
     ∀ s : State,
-      RepairAvailable a G s :=
+      RepairAvailableForAgent a G s :=
 by
   intros a hEach s
   exact repair_preserved_under_composition hComp a hEach s

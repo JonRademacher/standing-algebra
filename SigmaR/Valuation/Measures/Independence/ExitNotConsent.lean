@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.ExitViability_Definition
-import SigmaR.Standing.ConsentState_Definition
+import SigmaR.Valuation.Measures.Definitions.ExitViability_Definition
+import SigmaR.Valuation.Measures.Definitions.ConsentState_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -20,7 +22,7 @@ is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating exit viability as constituting
@@ -32,4 +34,4 @@ axiom exit_not_consent :
       TreatedAsConsentFromExitViable a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

@@ -18,12 +18,12 @@ It ONLY constrains structurally permissible usage.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 An admissible measure is used only within its declared domain
 and scope.
 -/
-constant AdmissibleMeasureUsage : Measure → Prop
+axiom AdmissibleMeasureUsage : Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

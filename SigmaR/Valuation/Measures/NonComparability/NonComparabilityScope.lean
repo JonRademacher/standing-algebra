@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Non-Comparability Scope
@@ -12,7 +14,7 @@ where asserted.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.NonComparability
 
 /--
 No implication permitting declared non-comparability
@@ -29,5 +31,4 @@ axiom noncomparability_scope :
       ¬ NonComparable M₁ M₂
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.NonComparability

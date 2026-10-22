@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.RiskInheritance_Definition
-import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.RiskInheritance_Definition
+import SigmaR.Valuation.Measures.Definitions.AutonomyMeasure_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -20,7 +22,7 @@ loss is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating risk inheritance as eliminating,
@@ -32,4 +34,4 @@ axiom risk_inheritance_not_autonomy :
       TreatedAsAutonomyLostFromRiskInheritance a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

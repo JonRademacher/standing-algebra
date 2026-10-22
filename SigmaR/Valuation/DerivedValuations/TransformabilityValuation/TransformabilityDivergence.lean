@@ -19,13 +19,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityDivergence T₁ T₂ means that transformability
 valuations T₁ and T₂ are structurally diverging.
 -/
-constant TransformabilityDivergence :
+axiom TransformabilityDivergence :
   TransformabilityValuation → TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

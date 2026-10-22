@@ -19,11 +19,11 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 An abstract derived valuation associated with transformability.
 -/
-constant TransformabilityValuation : Type
+axiom TransformabilityValuation : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

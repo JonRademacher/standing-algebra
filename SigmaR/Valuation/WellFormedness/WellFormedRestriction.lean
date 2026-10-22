@@ -14,7 +14,9 @@ silently preserve measure status.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 There is no general rule that restricting a valuation
@@ -29,5 +31,4 @@ axiom no_arbitrary_restriction_as_measure :
       IsMeasure (Restrict M P)
   )
 
-end SigmaR
-
+end SigmaR.Valuation.WellFormedness

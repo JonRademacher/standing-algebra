@@ -18,13 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityFragility T means that transformability valuation T
 is structurally fragile.
 -/
-constant TransformabilityFragility :
+axiom TransformabilityFragility :
   TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

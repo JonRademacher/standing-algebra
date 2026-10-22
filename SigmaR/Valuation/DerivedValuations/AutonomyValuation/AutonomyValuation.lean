@@ -25,11 +25,11 @@ It is a descriptive valuation only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 An autonomy-specific derived valuation.
 -/
-constant AutonomyValuation : Type
+axiom AutonomyValuation : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

@@ -18,13 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyErosion A means that autonomy valuation A
 is undergoing structural erosion.
 -/
-constant AutonomyErosion :
+axiom AutonomyErosion :
   AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

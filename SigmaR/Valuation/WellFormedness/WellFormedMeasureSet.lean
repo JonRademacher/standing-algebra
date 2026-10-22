@@ -1,4 +1,4 @@
-import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -18,34 +18,38 @@ It ONLY constrains structural admissibility of measure collections.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
+
+open SigmaR.Valuation.Core
 
 /--
 A set of measures is well-formed if all members are individually
 well-formed valuation measures.
 -/
-constant WellFormedMeasureSet :
+axiom WellFormedMeasureSet :
   Set Measure → Prop
 
 /--
 A set of measures must not contain structurally redundant or
 self-referential measures.
 -/
-constant MeasureSetNoRedundancy :
+axiom MeasureSetNoRedundancy :
   Set Measure → Prop
 
 /--
 Measures grouped together must have compatible domains and codomains.
 This does not imply semantic compatibility or comparability.
 -/
-constant MeasureSetDomainCompatible :
+axiom MeasureSetDomainCompatible :
   Set Measure → Prop
 
 /--
 A well-formed measure set does not imply any aggregation,
 ordering, or tradeoff between its members.
 -/
-constant MeasureSetNonAggregative :
+axiom MeasureSetNonAggregative :
   Set Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.WellFormedness

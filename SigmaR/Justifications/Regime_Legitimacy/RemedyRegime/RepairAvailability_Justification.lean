@@ -1,6 +1,7 @@
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.EmergentWrongRepair_Justification
 
 /-!
 ###############################################################################
@@ -42,11 +43,8 @@ channel.
 
 namespace SigmaR
 
-/-- Predicate: an Independently Emergent Wrong is present at state `s`. -/
-constant IndependentlyEmergentWrong : State → Prop
-
 /-- Predicate: the operation is a Repair operation available at state `s`. -/
-constant RepairAvailable : Operation → State → Prop
+axiom RepairAvailable : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Repair Availability:

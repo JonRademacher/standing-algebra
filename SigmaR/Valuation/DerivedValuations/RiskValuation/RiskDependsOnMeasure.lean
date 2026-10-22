@@ -18,13 +18,13 @@ It is declarative only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskDependsOnMeasure R M means that risk valuation R
 structurally depends on valuation measure M.
 -/
-constant RiskDependsOnMeasure :
+axiom RiskDependsOnMeasure :
   RiskValuation → Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

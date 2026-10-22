@@ -21,12 +21,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 The Derived Valuations layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant DerivedValuationsContract : Prop
+axiom DerivedValuationsContract : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

@@ -28,12 +28,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 The Capacity Valuation layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant CapacityValuationContract : Prop
+axiom CapacityValuationContract : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

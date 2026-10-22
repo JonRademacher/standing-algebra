@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyValuation
-import SigmaR.Valuation.DerivedValuations.PerceptionValuation.PerceptionValuation
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation
 
 /-!
 ###############################################################################
@@ -21,13 +21,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyDependsOnPerceptualValuation A P means that autonomy
 valuation A is structurally dependent on perceptual valuation P.
 -/
-constant AutonomyDependsOnPerceptualValuation :
+axiom AutonomyDependsOnPerceptualValuation :
   AutonomyValuation → PerceptionValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

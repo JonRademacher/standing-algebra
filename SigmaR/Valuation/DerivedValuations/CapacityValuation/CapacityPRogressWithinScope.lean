@@ -13,13 +13,13 @@ This captures feasibility and control, not preference.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityProgressWithinScope S means that the capacity-progress
 options in S are within the effective scope of control.
 -/
-constant CapacityProgressWithinScope :
+axiom CapacityProgressWithinScope :
   CapacityProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

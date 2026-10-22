@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.ExitCostValuation
+import SigmaR.Valuation.DerivedValuations.ExitCostValuation.ExitCostValuation
 import SigmaR.Valuation.ResponseSemantics.Response
 
 /-!
@@ -19,13 +19,13 @@ It is structural sensitivity only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 ExitCostDependsOnResponse E R means that exit cost valuation E
 is structurally sensitive to response R.
 -/
-constant ExitCostDependsOnResponse :
+axiom ExitCostDependsOnResponse :
   ExitCostValuation → Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

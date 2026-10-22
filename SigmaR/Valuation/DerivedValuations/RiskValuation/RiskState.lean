@@ -19,12 +19,12 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 A risk valuation relative to a specific agent and state.
 -/
-constant RiskState :
+axiom RiskState :
   Agent → State → RiskValuation
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.StandingValuation
+import SigmaR.Valuation.DerivedValuations.StandingValuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -14,13 +14,13 @@ or moral vulnerability.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.StandingValuation
 
 /--
 StandingFragility S means that standing valuation S
 is structurally sensitive to certain changes.
 -/
-constant StandingFragility :
+axiom StandingFragility :
   StandingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.StandingValuation

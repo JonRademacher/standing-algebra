@@ -27,12 +27,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 The Perception Valuation layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant PerceptionValuationContract : Prop
+axiom PerceptionValuationContract : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

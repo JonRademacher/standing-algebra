@@ -18,13 +18,13 @@ It prevents illicit violations only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityRespectsMonotonicity C means that capacity valuation C
 does not violate declared monotonicity constraints.
 -/
-constant CapacityRespectsMonotonicity :
+axiom CapacityRespectsMonotonicity :
   CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

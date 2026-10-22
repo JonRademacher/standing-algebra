@@ -15,11 +15,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 Risk valuation does not imply legitimacy.
 -/
-constant RiskDoesNotImplyLegitimacy : Prop
+axiom RiskDoesNotImplyLegitimacy : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

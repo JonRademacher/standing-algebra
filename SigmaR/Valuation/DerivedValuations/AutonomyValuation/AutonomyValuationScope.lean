@@ -19,12 +19,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 Autonomy valuation is explicitly scoped and
 never globally applicable by default.
 -/
-constant AutonomyValuationScope : Prop
+axiom AutonomyValuationScope : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

@@ -20,13 +20,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityDependsOnCoupling T K means that transformability
 valuation T is structurally grounded in coupling valuation K.
 -/
-constant TransformabilityDependsOnCoupling :
+axiom TransformabilityDependsOnCoupling :
   TransformabilityValuation → CouplingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

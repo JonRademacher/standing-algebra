@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.ExitCostValuation
+import SigmaR.Valuation.DerivedValuations.ExitCostValuation.ExitCostValuation
 
 /-!
 ###############################################################################
@@ -18,11 +18,11 @@ They do NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 An exit cost level associated with an exit cost valuation.
 -/
-constant ExitCostLevel : ExitCostValuation → Val
+axiom ExitCostLevel : ExitCostValuation → Val
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.RiskInheritance_Definition
+import SigmaR.Valuation.Measures.Definitions.RiskLoad_Definition
 
 /-!
 ###############################################################################
@@ -11,13 +11,13 @@ No assumptions about probability, expectation, or aggregation are made.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
 
 /--
 Risk load is well-defined if it assigns a natural number
-to every agent in every state.
+to every agent.
 -/
 def RiskLoad_WellDefined : Prop :=
-  ∀ (i : Agent) (s : State), ∃ (n : Nat), RiskInheritance i s = n
+  ∀ (i : Agent), ∃ (n : Nat), SigmaR.Valuation.Measures.Definitions.RiskLoad i = n
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

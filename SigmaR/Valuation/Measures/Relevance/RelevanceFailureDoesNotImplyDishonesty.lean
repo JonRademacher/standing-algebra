@@ -13,7 +13,9 @@ It does not imply dishonesty or bad faith.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication treating absence of IPFA as dishonesty
@@ -26,5 +28,4 @@ axiom relevance_failure_not_dishonesty :
       TreatedAsDishonest a s
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.Relevance

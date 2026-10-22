@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
 import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
@@ -15,13 +15,13 @@ It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Capacity is treated as requiring enabling structure
 to increase along the state preorder.
 -/
-constant CapacityRequiresEnablingStructure :
+axiom CapacityRequiresEnablingStructure :
   Agent → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

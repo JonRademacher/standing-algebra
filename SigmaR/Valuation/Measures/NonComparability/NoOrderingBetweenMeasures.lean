@@ -10,7 +10,7 @@ relation between them.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.NonComparability
 
 /--
 No ordering relation exists between non-comparable measures.
@@ -19,4 +19,4 @@ axiom no_ordering_between_measures :
   ∀ (M₁ M₂ : Agent → State → Nat),
     ¬ (∀ a s, M₁ a s ≤ M₂ a s ∨ M₂ a s ≤ M₁ a s)
 
-end SigmaR
+end SigmaR.Valuation.Measures.NonComparability

@@ -12,11 +12,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 Coupling valuation does not imply authority.
 -/
-constant CouplingDoesNotImplyAuthority : Prop
+axiom CouplingDoesNotImplyAuthority : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

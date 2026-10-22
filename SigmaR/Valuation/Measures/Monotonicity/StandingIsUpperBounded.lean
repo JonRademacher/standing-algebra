@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.StandingMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition
 
 /-!
 ###############################################################################
@@ -14,11 +14,11 @@ It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Standing is treated as upper bounded.
 -/
-constant StandingUpperBounded : Prop
+axiom StandingUpperBounded : Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

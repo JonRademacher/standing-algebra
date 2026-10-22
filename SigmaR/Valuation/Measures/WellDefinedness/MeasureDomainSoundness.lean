@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.MeasureTypingAndScope
+import SigmaR.Valuation.Measures.Definitions.MeasureTypingAndScope
 
 /-!
 ###############################################################################
@@ -14,7 +14,7 @@ This file prevents category errors and domain misuse.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
 
 /--
 Domain soundness for valuation measures.
@@ -23,4 +23,4 @@ axiom MeasureDomainSound :
   ∀ (μ : ValuationMeasure) (a : Agent) (s : State),
     True
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

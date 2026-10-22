@@ -21,13 +21,13 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityCollapse C means that capacity valuation C
 has structurally collapsed.
 -/
-constant CapacityCollapse :
+axiom CapacityCollapse :
   CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

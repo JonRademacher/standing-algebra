@@ -13,11 +13,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 Perception valuation does not imply authority.
 -/
-constant PerceptionDoesNotImplyAuthority : Prop
+axiom PerceptionDoesNotImplyAuthority : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

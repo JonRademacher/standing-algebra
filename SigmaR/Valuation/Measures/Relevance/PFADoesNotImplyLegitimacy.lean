@@ -11,7 +11,9 @@ legitimacy, or justification for action or policy.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication from PFA to legitimacy, authority,
@@ -24,4 +26,4 @@ axiom pfa_not_legitimacy :
       LegitimateMeasure (fun _ _ => 0)
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

@@ -12,12 +12,12 @@ It must never be assumed to apply globally.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 Admissibility is treated as explicitly scoped and
 never globally applicable by default.
 -/
-constant AdmissibilityScope : Prop
+axiom AdmissibilityScope : Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

@@ -20,13 +20,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskDependsOnCapacityValuation R C means that risk valuation R
 is structurally dependent on capacity valuation C.
 -/
-constant RiskDependsOnCapacityValuation :
+axiom RiskDependsOnCapacityValuation :
   RiskValuation → CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

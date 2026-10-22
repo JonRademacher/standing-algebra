@@ -30,15 +30,6 @@ at every state s.
 namespace SigmaR
 
 /--
-Predicate: the operation has considered less autonomy‑reducing alternatives
-at the given state.
-
-This captures that coercive intervention is not applied prematurely
-without evaluating viable non‑coercive responses.
--/
-constant AlternativesConsidered : Operation → State → Prop
-
-/--
 Tier‑2 legitimacy axiom:
 
 If an operation is Legitimate, then at every state it must

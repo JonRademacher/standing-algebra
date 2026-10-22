@@ -56,7 +56,7 @@ namespace SigmaR
 /-- Predicate: all autonomy‑relevant dependencies
     at state `s` are classifiable
     under known coupling types. -/
-constant CouplingExhaustive : State → Prop
+axiom CouplingExhaustive : State → Prop
 
 /--
 Core legitimacy axiom:

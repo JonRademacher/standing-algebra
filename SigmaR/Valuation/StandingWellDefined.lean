@@ -1,3 +1,6 @@
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.StandingValuation
+
 /-!
 ###############################################################################
 # Standing Valuation — Well-Definedness
@@ -12,14 +15,11 @@ are extensional and invariant under state equality.
 No new structure or authority is introduced here.
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation
 
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.StandingValuation
-
-/* -------------------------------------------------------------------------- */
-/* 1. Standing extensionality                                                  */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- 1. Standing extensionality                                                  -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Standing is extensional in the state argument.
@@ -32,9 +32,9 @@ by
   cases h
   rfl
 
-/* -------------------------------------------------------------------------- */
-/* 2. Order extensionality                                                     */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- 2. Order extensionality                                                     -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Standing order respects state equality.
@@ -52,9 +52,9 @@ by
   cases h2
   exact h
 
-/* -------------------------------------------------------------------------- */
-/* 3. Delta valuation well-definedness                                        */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- 3. Delta valuation well-definedness                                        -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Delta valuation respects equality in both arguments.
@@ -71,9 +71,9 @@ by
   cases h2
   rfl
 
-/* -------------------------------------------------------------------------- */
-/* 4. CIA compatibility consistency                                           */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- 4. CIA compatibility consistency                                           -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 CIA boundedness is invariant under state equality.
@@ -100,12 +100,13 @@ theorem CIA_does_not_distort_order
   CIA_BoundedDelta i s₁ s₂ →
   ValLe i s₁ s₂ ∨ ValLe i s₂ s₁ :=
 by
+  intro _
   unfold ValLe
   exact le_total (σ i s₁) (σ i s₂)
 
-/* -------------------------------------------------------------------------- */
-/* 5. Risk inheritance invariance                                             */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- 5. Risk inheritance invariance                                             -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Risk inheritance is invariant under state equality.
@@ -125,9 +126,9 @@ by
   apply h
   exact (hΔ.symm ▸ hzero)
 
-/* -------------------------------------------------------------------------- */
-/* 6. No hidden semantics                                                     */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- 6. No hidden semantics                                                     -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Standing order carries no structure beyond σ itself.
@@ -138,4 +139,4 @@ theorem ValLe_depends_only_on_sigma
 by
   rfl
 
-end SigmaR
+end SigmaR.Valuation

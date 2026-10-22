@@ -12,11 +12,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 Admissibility of reasoning does not imply logical validity.
 -/
-constant AdmissibilityDoesNotImplyValidity : Prop
+axiom AdmissibilityDoesNotImplyValidity : Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

@@ -19,13 +19,13 @@ It is purely descriptive.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseAffectsMeasure R M means that response R
 has a structural effect on valuation measure M.
 -/
-constant ResponseAffectsMeasure :
+axiom ResponseAffectsMeasure :
   Response → Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

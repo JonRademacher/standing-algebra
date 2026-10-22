@@ -3,6 +3,9 @@ import SigmaR.Justifications.Core_Legitimacy.RiskIndexedStanding_Justification
 import SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification
 import SigmaR.Justifications.Core_Legitimacy.BoundaryEnvelope_Justification
 import SigmaR.Justifications.Core_Legitimacy.TransitionCriteriaRerunnability_Justification
+import SigmaR.Justifications.Core_Legitimacy.ExitViabilityMonotonicity
+import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
+import SigmaR.StandingAlgebra_RegimeStacked
 
 /-!
 ###############################################################################
@@ -47,9 +50,9 @@ Legitimate operations
 must preserve CIA‑indexed standing.
 -/
 axiom legitimacy_preserves_standing :
-  ∀ {F : Operation} {s : State} {i : Agent},
+  ∀ {F : Operation} {a : Agent},
     Legitimate F →
-    σ (apply F s) i ≥ σ s i
+    σ (apply F a) ≥ σ a
 
 /--
 Propagation:
@@ -59,9 +62,9 @@ must not increase
 dominant dependency.
 -/
 axiom legitimacy_bounded_dependency :
-  ∀ {F : Operation} {s : State} {i : Agent},
+  ∀ {F : Operation} {a : Agent},
     Legitimate F →
-    deg (apply F s) i ≤ deg s i
+    deg (apply F a) ≤ deg a
 
 /--
 Propagation:
@@ -70,9 +73,9 @@ Legitimate operations
 must not externalize risk.
 -/
 axiom legitimacy_preserves_risk :
-  ∀ {F : Operation} {s : State} {i : Agent},
+  ∀ {F : Operation} {a : Agent},
     Legitimate F →
-    RiskLoad (apply F s) i ≤ RiskLoad s i
+    RiskLoad (apply F a) ≤ RiskLoad a
 
 /--
 Propagation:
@@ -82,9 +85,10 @@ must preserve exit viability
 from dominant coupling.
 -/
 axiom legitimacy_preserves_exit :
-  ∀ {F : Operation} {s : State} {i : Agent},
+  ∀ {F : Operation} {a i : Agent} (θ : Agent → ℝ),
     Legitimate F →
-    ExitViable (apply F s) i
+    ExitViable θ a i →
+    ExitViable θ (apply F a) i
 
 /--
 Propagation:
@@ -93,9 +97,9 @@ Autonomy‑reducing legitimate operations
 must accumulate structural debt.
 -/
 axiom legitimacy_accumulates_debt :
-  ∀ {F : Operation} {s : State} {i : Agent},
+  ∀ {F : Operation} {a : Agent},
     Legitimate F →
-    σ (apply F s) i < σ s i →
-    StructuralDebt (apply F s) i > StructuralDebt s i
+    σ (apply F a) < σ a →
+    HasStructuralDebt F a
 
 end SigmaR

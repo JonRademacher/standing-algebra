@@ -14,7 +14,10 @@ measures merely because their type matches.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
+attribute [local instance] Classical.propDecidable
 
 /--
 Having the correct function type is not sufficient
@@ -35,5 +38,4 @@ axiom no_predicate_as_measure :
       IsMeasure (fun a s => if P a s then 1 else 0)
   )
 
-end SigmaR
-
+end SigmaR.Valuation.WellFormedness

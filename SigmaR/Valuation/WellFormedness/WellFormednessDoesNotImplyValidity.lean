@@ -13,7 +13,9 @@ Validity is governed by separate admissibility criteria.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 No implication from well-formedness to validity is permitted.
@@ -24,4 +26,4 @@ axiom wellformedness_not_validity :
       WellFormed M → ValidMeasure M
   )
 
-end SigmaR
+end SigmaR.Valuation.WellFormedness

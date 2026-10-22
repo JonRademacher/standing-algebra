@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.NonSelection_Justification
-import SigmaR.Justifications.Regimes.Affordance_CompositionRegime.AffordanceCompositionRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionCore
 
 /-!
 ###############################################################################
@@ -31,15 +31,6 @@ Therefore:
 -/
 
 namespace SigmaR
-
-/--
-Predicate: operation `G` is a composition of affordance operations,
-each individually admissible.
-
-This abstracts over finite sequences, pipelines,
-or structured compositions of affordances.
--/
-constant AffordanceComposed : Operation → Prop
 
 /--
 Tier-2 legitimacy axiom (Non-Selective Composition):

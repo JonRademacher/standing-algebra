@@ -20,14 +20,14 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskDependsOnTransformabilityValuation R T means that
 risk valuation R is structurally dependent on
 transformability valuation T.
 -/
-constant RiskDependsOnTransformabilityValuation :
+axiom RiskDependsOnTransformabilityValuation :
   RiskValuation → TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

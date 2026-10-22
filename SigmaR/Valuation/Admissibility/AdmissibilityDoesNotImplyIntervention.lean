@@ -13,12 +13,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 Admissibility of a configuration or reasoning pattern
 does not imply permission or obligation to intervene.
 -/
-constant AdmissibilityDoesNotImplyIntervention : Prop
+axiom AdmissibilityDoesNotImplyIntervention : Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

@@ -14,11 +14,11 @@ monotonicity within SigmaR.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Monotonicity relations are treated as context-dependent.
 -/
-constant MonotonicityIsContextual : Prop
+axiom MonotonicityIsContextual : Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

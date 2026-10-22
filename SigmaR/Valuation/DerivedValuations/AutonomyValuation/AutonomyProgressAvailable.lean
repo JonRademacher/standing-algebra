@@ -13,13 +13,13 @@ Availability states existence, not obligation.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyProgressAvailable S means that a set of
 autonomy-progress options S exists.
 -/
-constant AutonomyProgressAvailable :
+axiom AutonomyProgressAvailable :
   AutonomyProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

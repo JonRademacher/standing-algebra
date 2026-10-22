@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
-import SigmaR.Justifications.Regimes.DriftRegime.DriftRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegimeCore
 
 /-!
 ###############################################################################
@@ -28,7 +28,7 @@ Predicate: drift operation `D` preserves
 dependency (coupling degree) for agent `a`
 at state `s`.
 -/
-constant DriftPreservesDependency : Agent → Operation → State → Prop
+axiom DriftPreservesDependency : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Dependency Monotonicity Under Drift):

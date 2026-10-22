@@ -11,7 +11,9 @@ in one measure by improvement in another.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting tradeoff-based justification
@@ -26,5 +28,4 @@ axiom no_tradeoff_justification :
       TradeoffJustifies M₁ M₂
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.AntiOptimization

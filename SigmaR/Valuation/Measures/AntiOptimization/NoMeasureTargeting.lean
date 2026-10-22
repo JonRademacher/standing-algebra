@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Measure Targeting
@@ -11,7 +13,7 @@ They are descriptive, not prescriptive.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication treating valuation measures as targets
@@ -25,4 +27,4 @@ axiom no_measure_targeting :
       TargetsMeasure O M
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

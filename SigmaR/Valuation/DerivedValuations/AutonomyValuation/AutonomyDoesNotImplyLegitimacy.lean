@@ -15,11 +15,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 Autonomy valuation does not imply legitimacy.
 -/
-constant AutonomyDoesNotImplyLegitimacy : Prop
+axiom AutonomyDoesNotImplyLegitimacy : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

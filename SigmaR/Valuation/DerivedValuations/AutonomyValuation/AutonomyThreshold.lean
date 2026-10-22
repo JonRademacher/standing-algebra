@@ -19,13 +19,13 @@ They are structural demarcations only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyThreshold A means that autonomy valuation A
 is associated with a structural threshold.
 -/
-constant AutonomyThreshold :
+axiom AutonomyThreshold :
   AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

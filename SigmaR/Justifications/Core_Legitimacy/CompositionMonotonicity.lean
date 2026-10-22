@@ -44,10 +44,10 @@ namespace SigmaR
 Sequential application
 of operations.
 -/
-def compose
+noncomputable def compose
   (F₁ F₂ : Operation)
   (s : State) : State :=
-  apply F₂ (apply F₁ s)
+  apply (composeOp F₂ F₁) s
 
 /--
 Standing is monotone
@@ -55,10 +55,10 @@ under composition
 of structurally admissible operations.
 -/
 theorem composition_preserves_standing :
-  ∀ {F₁ F₂ : Operation} {s : State} {i : Agent},
+  ∀ {F₁ F₂ : Operation} {s : State},
     StructurallyAdmissible F₁ s →
     StructurallyAdmissible F₂ (apply F₁ s) →
-    σ (compose F₁ F₂ s) i ≥ σ s i :=
+    σ (compose F₁ F₂ s) ≥ σ s :=
 by
   -- proof outline:
 
@@ -79,10 +79,10 @@ Exit viability is preserved
 under composition.
 -/
 theorem composition_preserves_exit :
-  ∀ {F₁ F₂ : Operation} {s : State} {i : Agent},
+  ∀ {F₁ F₂ : Operation} {s : State} {θ : Agent → ℝ} {i : Agent},
     StructurallyAdmissible F₁ s →
     StructurallyAdmissible F₂ (apply F₁ s) →
-    ExitViable (compose F₁ F₂ s) i :=
+    ExitViable θ (compose F₁ F₂ s) i :=
 by
   admit
 

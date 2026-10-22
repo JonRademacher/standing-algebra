@@ -10,7 +10,7 @@ explicitly. It is never inferred implicitly.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Equivalence
 
 /--
 No implicit equivalence is assumed between measures.
@@ -19,4 +19,4 @@ axiom no_implicit_equivalence :
   ∀ (M₁ M₂ : Agent → State → Nat),
     ¬ (∀ a s, M₁ a s = M₂ a s)
 
-end SigmaR
+end SigmaR.Valuation.Measures.Equivalence

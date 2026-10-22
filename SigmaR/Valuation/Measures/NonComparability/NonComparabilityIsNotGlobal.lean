@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Non-Comparability Is Not Global
@@ -11,7 +13,7 @@ in all contexts by default.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.NonComparability
 
 /--
 No implication asserting universal or global
@@ -27,5 +29,4 @@ axiom noncomparability_not_global :
          NonComparableInContext C M₁ M₂)
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.NonComparability

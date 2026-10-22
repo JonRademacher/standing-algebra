@@ -14,11 +14,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 Risk valuation does not imply intervention.
 -/
-constant RiskDoesNotImplyIntervention : Prop
+axiom RiskDoesNotImplyIntervention : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

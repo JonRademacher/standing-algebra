@@ -1,4 +1,4 @@
-import SigmaR.Justifications.Regimes.ExitRegime.ExitRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification
 import SigmaR.Justifications.Core_Legitimacy.ContestationCondition_Justification
 
 /-!
@@ -29,7 +29,7 @@ namespace SigmaR
 Predicate: operation `F` treats contestation or appeal
 as a substitute for exit at state `s`.
 -/
-constant ExitSubstitutedByContestation : Operation → State → Prop
+axiom ExitSubstitutedByContestation : Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Exit Non-Substitutability):

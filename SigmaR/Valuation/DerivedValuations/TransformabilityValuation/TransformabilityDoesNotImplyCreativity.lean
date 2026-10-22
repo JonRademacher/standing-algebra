@@ -15,11 +15,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 Transformability valuation does not imply creativity.
 -/
-constant TransformabilityDoesNotImplyCreativity : Prop
+axiom TransformabilityDoesNotImplyCreativity : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

@@ -19,13 +19,13 @@ It is structural invariance only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponsePreservesMeasure R M means that response R
 does not alter valuation measure M.
 -/
-constant ResponsePreservesMeasure :
+axiom ResponsePreservesMeasure :
   Response → Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

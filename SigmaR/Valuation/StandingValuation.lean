@@ -1,3 +1,6 @@
+import Mathlib.Data.Real.Basic
+import SigmaR.StandingAlgebra_FormalCore
+
 /-!
 ###############################################################################
 # Standing Valuation Layer (Full Extension)
@@ -18,19 +21,16 @@ No aggregation, optimization, or authority primitives appear here.
 This file is purely structural.
 -/
 
-namespace SigmaR
-
-import SigmaR.StandingAlgebra_FormalCore
+namespace SigmaR.Valuation
 
 /-- Core sorts (defined elsewhere in Σᴿ). -/
-constant Agent : Type
-constant State : Type
+axiom State : Type
 
 /-- Standing valuation (autonomy-relevant). -/
-constant σ : Agent → State → ℝ
+axiom σ : Agent → State → ℝ
 
 /-- Capacity bound for each agent (CIA input). -/
-constant cap : Agent → ℝ
+axiom cap : Agent → ℝ
 
 /-- Standing order relation. -/
 def ValLe (i : Agent) (s₁ s₂ : State) : Prop :=
@@ -53,40 +53,41 @@ by
   exact le_trans h₁ h₂
 
 /-- Preorder induced by valuation. -/
-theorem ValLe_preorder (i : Agent) : Preorder State :=
+@[instance_reducible]
+def ValLe_preorder (i : Agent) : Preorder State :=
 { le := ValLe i
   le_refl := ValLe_refl i
   le_trans := ValLe_trans i }
 
-/* -------------------------------------------------------------------------- */
-/* Delta valuation                                                            */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Delta valuation                                                            -/
+/- -------------------------------------------------------------------------- -/
 
 /-- Change in standing (delta). -/
-def Δσ (i : Agent) (s₁ s₂ : State) : ℝ :=
+noncomputable def Δσ (i : Agent) (s₁ s₂ : State) : ℝ :=
   σ i s₂ - σ i s₁
 
 /-- Non-decrease iff delta ≥ 0. -/
 theorem delta_nonneg_iff
   (i : Agent) (s₁ s₂ : State) :
   Δσ i s₁ s₂ ≥ 0 ↔ ValLe i s₁ s₂ :=
-by unfold Δσ ValLe; linarith
+by unfold Δσ ValLe; exact sub_nonneg
 
 /-- Strict decrease iff delta < 0. -/
 theorem delta_neg_iff
   (i : Agent) (s₁ s₂ : State) :
   Δσ i s₁ s₂ < 0 ↔ σ i s₂ < σ i s₁ :=
-by unfold Δσ; linarith
+by unfold Δσ; exact sub_neg
 
 /-- Standing preserved iff delta = 0. -/
 theorem delta_zero_iff
   (i : Agent) (s₁ s₂ : State) :
   Δσ i s₁ s₂ = 0 ↔ σ i s₂ = σ i s₁ :=
-by unfold Δσ; linarith
+by unfold Δσ; exact sub_eq_zero
 
-/* -------------------------------------------------------------------------- */
-/* Risk inheritance                                                           */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Risk inheritance                                                           -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Valuation-level risk inheritance:
@@ -101,9 +102,9 @@ theorem no_risk_if_preserved
   σ i s₂ = σ i s₁ →
   ¬ InheritsRisk i s₁ s₂ :=
 by
-  intro h
-  unfold InheritsRisk Δσ
-  linarith
+  intro h hne
+  apply hne
+  exact (delta_zero_iff i s₁ s₂).2 h
 
 /-- Any strict decrease implies inherited risk. -/
 theorem risk_if_decrease
@@ -111,12 +112,13 @@ theorem risk_if_decrease
   σ i s₂ < σ i s₁ →
   InheritsRisk i s₁ s₂ :=
 by
+  intro h
   unfold InheritsRisk Δσ
-  linarith
+  exact sub_ne_zero.mpr (ne_of_lt h)
 
-/* -------------------------------------------------------------------------- */
-/* Capacity-indexed autonomy (CIA)                                             */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Capacity-indexed autonomy (CIA)                                             -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 CIA-compatible valuation:
@@ -131,9 +133,9 @@ Delta bounded by capacity difference (CIA bound).
 def CIA_BoundedDelta (i : Agent) (s₁ s₂ : State) : Prop :=
   Δσ i s₁ s₂ ≤ cap i - σ i s₁
 
-/* -------------------------------------------------------------------------- */
-/* Repair operators                                                           */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Repair operators                                                           -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 A repair transition strictly restores standing.
@@ -150,18 +152,16 @@ theorem repair_has_positive_delta
   Δσ i s₁ s₂ ≥ 0 :=
 by
   intro h
-  have hmono : σ i s₁ ≤ σ i s₂ := h.left i
-  unfold Δσ
-  linarith
+  exact (delta_nonneg_iff i s₁ s₂).2 (h.left i)
 
-/* -------------------------------------------------------------------------- */
-/* Admissible update hook                                                      */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Admissible update hook                                                      -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Abstract admissible update relation (defined later).
 -/
-constant AdmissibleUpdate : State → State → Prop
+axiom AdmissibleUpdate : State → State → Prop
 
 /--
 Valuation monotonicity constraint for admissible updates.
@@ -195,4 +195,4 @@ def CIA_AdmissibleUpdate : Prop :=
     AdmissibleUpdate s₁ s₂ →
     CIA_BoundedDelta i s₁ s₂
 
-end SigmaR
+end SigmaR.Valuation

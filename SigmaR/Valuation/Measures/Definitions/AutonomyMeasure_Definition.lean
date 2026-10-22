@@ -17,7 +17,7 @@ This file introduces NO normative claims and NO dynamics.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 AutonomyMeasure a s is a successor-native valuation
@@ -25,6 +25,6 @@ of agent a’s autonomy in state s.
 
 Higher values indicate greater preserved autonomy.
 -/
-constant AutonomyMeasure : Agent → State → Nat
+axiom AutonomyMeasure : Agent → State → Nat
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

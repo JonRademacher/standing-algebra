@@ -19,13 +19,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskValuationAdmissible R means that risk valuation R
 is admissible under declared structural constraints.
 -/
-constant RiskValuationAdmissible :
+axiom RiskValuationAdmissible :
   RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

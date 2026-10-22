@@ -13,12 +13,12 @@ They must never be assumed to apply globally.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 Response semantics are explicitly scoped
 and never globally applicable by default.
 -/
-constant ResponseScope : Prop
+axiom ResponseScope : Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

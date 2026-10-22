@@ -1,7 +1,7 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
-import SigmaR.Valuation.Measures.StandingMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.AutonomyMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition
 
 /-!
 ###############################################################################
@@ -15,7 +15,7 @@ No default implication from standing to autonomy is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating standing measures as implying
@@ -23,8 +23,8 @@ or licensing autonomy is permitted.
 -/
 axiom standing_not_autonomy :
   ¬ (
-    ∀ (a : Agent) (s : State),
-      TreatedAsAutonomyFromStandingMeasure a s
+    ∀ (a : Agent) (s : SigmaR.Valuation.State),
+      SigmaR.Valuation.Core.TreatedAsAutonomyFromStandingMeasure a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

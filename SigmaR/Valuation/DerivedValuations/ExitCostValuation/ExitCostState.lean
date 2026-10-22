@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.ExitCostValuation
+import SigmaR.Valuation.DerivedValuations.ExitCostValuation.ExitCostValuation
 
 /-!
 ###############################################################################
@@ -18,12 +18,12 @@ It is a valuation snapshot only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 An exit cost valuation relative to a specific agent and state.
 -/
-constant ExitCostState :
+axiom ExitCostState :
   Agent → State → ExitCostValuation
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

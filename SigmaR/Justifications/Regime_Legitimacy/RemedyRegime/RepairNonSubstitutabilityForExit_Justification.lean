@@ -1,5 +1,5 @@
-import SigmaR.Justifications.Regimes.RemedyRegime.RemedyRegime_Justification
-import SigmaR.Justifications.Regimes.ExitRegime.ExitRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RemedyRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification
 
 /-!
 ###############################################################################
@@ -29,7 +29,7 @@ namespace SigmaR
 Predicate: operation `F` treats repair as a substitute
 for exit at state `s`.
 -/
-constant RepairSubstitutesExit : Operation → State → Prop
+axiom RepairSubstitutesExit : Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Repair ≠ Exit):

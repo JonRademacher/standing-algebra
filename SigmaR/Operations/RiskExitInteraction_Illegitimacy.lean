@@ -1,6 +1,6 @@
 import SigmaR.Operations.LegitimacyInterface
-import SigmaR.Justifications.Regimes.RiskRegime.RiskRegime_Justification
-import SigmaR.Justifications.Regimes.ExitRegime.ExitPreservation_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitPreservation_Justification
 
 /-!
 ###############################################################################

@@ -1,4 +1,4 @@
-import SigmaR.StandingAlgebra_FormalCore
+import SigmaR_Core
 
 /-!
 ###############################################################################
@@ -10,7 +10,7 @@ over states.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
 
 /--
 Domination pressure is well-defined if it assigns
@@ -19,4 +19,4 @@ a natural number to every state.
 def DominationPressure_WellDefined : Prop :=
   ∀ (s : State), ∃ (n : Nat), DomPressure s = n
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

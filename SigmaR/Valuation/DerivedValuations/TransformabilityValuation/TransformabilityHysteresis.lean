@@ -19,13 +19,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityHysteresis T means that transformability valuation T
 exhibits path-dependent behavior.
 -/
-constant TransformabilityHysteresis :
+axiom TransformabilityHysteresis :
   TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

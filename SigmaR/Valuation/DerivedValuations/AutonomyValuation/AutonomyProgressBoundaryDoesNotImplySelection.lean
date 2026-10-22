@@ -21,11 +21,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 The autonomy progress boundary does not imply selection.
 -/
-constant AutonomyProgressBoundaryDoesNotImplySelection : Prop
+axiom AutonomyProgressBoundaryDoesNotImplySelection : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

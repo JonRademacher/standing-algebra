@@ -20,11 +20,11 @@ It is structural only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 A coupling weight associated with dependency valuation.
 -/
-constant CouplingWeight : Type
+axiom CouplingWeight : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

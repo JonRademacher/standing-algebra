@@ -10,7 +10,7 @@ Capacity is distinct from standing and is not substitutable for it.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 Capacity measure for an agent in a given state.
@@ -18,6 +18,6 @@ Capacity measure for an agent in a given state.
 This reflects structural capability or autonomy bandwidth,
 not authority or merit.
 -/
-constant CapacityMeasure : Agent → State → Nat
+axiom CapacityMeasure : Agent → State → Nat
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

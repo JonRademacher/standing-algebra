@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.StructuralDebt_Definition
+import SigmaR.Valuation.Measures.Definitions.StructrualDebt_Definition
 import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
@@ -16,12 +16,12 @@ It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Structural debt is treated as monotone
 along the state preorder.
 -/
-constant StructuralDebtMonotone : Prop
+axiom StructuralDebtMonotone : Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

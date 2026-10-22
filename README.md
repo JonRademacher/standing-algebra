@@ -31,3 +31,7 @@ Status
 ✔ Satisfiability demonstrated in Z3
 ✔ Valuation measures and independence guarantees enforced at the type and axiom level
 ✔ Deliberately scoped to avoid optimization, selection, or reward semantics
+
+Interoperability Constraint Geometry (ICG)
+------------------------------------------
+The `ICG` Lean library formalizes finite interaction closure and its algebraic realization: polynomial derivations coincide with ideal generation, affine varieties are common zero loci, and Hilbert's Nullstellensatz is imported as Mathlib's proved theorem. This is the foundational algebraic layer of the ICG treatise; the later geometric constructions remain separate formalization work.

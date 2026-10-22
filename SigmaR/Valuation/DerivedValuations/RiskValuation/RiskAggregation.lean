@@ -18,13 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskAggregation R₁ R₂ R₃ means that risk valuation R₃
 is an aggregation of risk valuations R₁ and R₂.
 -/
-constant RiskAggregation :
+axiom RiskAggregation :
   RiskValuation → RiskValuation → RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

@@ -17,11 +17,11 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 An abstract structure representing perceptual agreement.
 -/
-constant PerceptualAgreement : Type
+axiom PerceptualAgreement : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

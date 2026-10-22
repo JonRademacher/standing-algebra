@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Ranked Operations
@@ -11,7 +13,7 @@ over agents or states by default.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication from valuation measures to induced
@@ -24,5 +26,5 @@ axiom no_ranked_operations :
       InducesRanking M
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization
 

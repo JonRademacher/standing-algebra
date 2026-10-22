@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Adaptive Objective Shift
@@ -13,7 +15,7 @@ Goals are not endogenously redefined by measured outcomes.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication from valuation measures to the endogenous
@@ -27,4 +29,4 @@ axiom no_adaptive_objective_shift :
       GeneratedFromMeasure O M
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

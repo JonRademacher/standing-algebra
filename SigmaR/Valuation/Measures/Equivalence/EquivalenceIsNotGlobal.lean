@@ -2,6 +2,8 @@ import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.Equivalence.EquivalenceScope
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Equivalence Is Not Global
@@ -12,7 +14,7 @@ hold globally across all states, agents, or contexts.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Equivalence
 
 /--
 No implication asserting universal or global equivalence
@@ -27,5 +29,5 @@ axiom equivalence_not_global :
          EquivalentInContext C M₁ M₂)
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Equivalence
 

@@ -1,6 +1,3 @@
----
-
-```lean
 /-!
 ###############################################################################
 # Justification of Coupling Type Differentiation
@@ -76,7 +73,7 @@ namespace SigmaR
 
 /-- Predicate: coupling types at state `s`
     are differentiated by autonomy impact. -/
-constant CouplingTyped : State → Prop
+axiom CouplingTyped : State → Prop
 
 /--
 Core legitimacy axiom:

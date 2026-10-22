@@ -1,9 +1,9 @@
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.StandingMeasure_Definition
-import SigmaR.Valuation.Measures.CapacityMeasure_Definition
-import SigmaR.Valuation.Measures.DependencyDegree_Definition
-import SigmaR.Valuation.Measures.RiskInheritance_Definition
-import SigmaR.Valuation.Measures.ExitCollapse_Definition
+import SigmaR.Valuation.StandingValuation
+import SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.DependencyDegree_Definition
+import SigmaR.Valuation.Measures.Definitions.RiskInheritance_Definition
+import SigmaR.Valuation.Measures.Definitions.ExitCollapse_Definition
 
 /-!
 ###############################################################################
@@ -15,37 +15,37 @@ Prevents measures from being misused as objectives or selectors.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 Type alias for valuation measures.
 
 All valuation measures map (Agent × State) to Nat.
 -/
-def ValuationMeasure := Agent → State → Nat
+abbrev ValuationMeasure := Agent → SigmaR.Valuation.State → Nat
 
 /--
 StandingMeasure is a valuation measure.
 -/
-def standingMeasureTyped : ValuationMeasure :=
+noncomputable def standingMeasureTyped : ValuationMeasure :=
   StandingMeasure
 
 /--
 CapacityMeasure is a valuation measure.
 -/
-def capacityMeasureTyped : ValuationMeasure :=
+noncomputable def capacityMeasureTyped : ValuationMeasure :=
   CapacityMeasure
 
 /--
 DependencyDegree is a valuation measure.
 -/
-def dependencyDegreeTyped : ValuationMeasure :=
+noncomputable def dependencyDegreeTyped : ValuationMeasure :=
   DependencyDegree
 
 /--
 RiskInheritance is a valuation measure.
 -/
-def riskInheritanceTyped : ValuationMeasure :=
+noncomputable def riskInheritanceTyped : ValuationMeasure :=
   RiskInheritance
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

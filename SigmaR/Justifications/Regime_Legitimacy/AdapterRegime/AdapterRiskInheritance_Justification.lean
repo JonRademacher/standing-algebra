@@ -1,5 +1,4 @@
 import SigmaR.Justifications.Core_Legitimacy.RiskIndexedStanding_Justification
-import SigmaR.Justifications.Regimes.Adapter.AdapterInference_Justification
 
 /-!
 ###############################################################################
@@ -66,7 +65,7 @@ namespace SigmaR
     at state `s`
     preserves risk inheritance
     across PFAs. -/
-constant AdapterRiskInherited : State → Prop
+axiom AdapterRiskInherited : State → Prop
 
 /--
 Regime legitimacy axiom:

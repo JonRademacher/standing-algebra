@@ -43,7 +43,7 @@ introduce legitimacy‑preserving proxy optimization.
 namespace SigmaR
 
 /-- Predicate: the operation preserves an exit pathway across states. -/
-constant ExitPreserved : Operation → State → Prop
+axiom ExitPreserved : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Exit Preservation:
@@ -57,7 +57,7 @@ axiom exit_preservation_requires_debt :
     Legitimate F →
       ∀ s : State,
         ExitPreserved F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -70,7 +70,7 @@ theorem ExitPreservation_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     ExitPreserved F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hExit
   exact exit_preservation_requires_debt hLeg s hExit

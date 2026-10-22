@@ -19,13 +19,13 @@ Context dependence does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityDependsOnContext T means that transformability
 valuation T is explicitly context-dependent.
 -/
-constant TransformabilityDependsOnContext :
+axiom TransformabilityDependsOnContext :
   TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.DominationPressure_Definition
-import SigmaR.Valuation.Measures.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.DominationPressure_Definition
+import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -17,7 +19,7 @@ or absence of capacity is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating domination pressure as eliminating,
@@ -30,4 +32,4 @@ axiom domination_pressure_not_capacity :
       TreatedAsCapacityLostFromDominationPressure a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

@@ -14,11 +14,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 Risk valuation does not imply morality.
 -/
-constant RiskDoesNotImplyMorality : Prop
+axiom RiskDoesNotImplyMorality : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

@@ -19,14 +19,14 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityDependsOnCapacityValuation T C means that
 transformability valuation T is structurally dependent
 on capacity valuation C.
 -/
-constant TransformabilityDependsOnCapacityValuation :
+axiom TransformabilityDependsOnCapacityValuation :
   TransformabilityValuation → CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

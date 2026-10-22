@@ -14,11 +14,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 Derived valuation does not imply morality.
 -/
-constant ValuationDoesNotImplyMorality : Prop
+axiom ValuationDoesNotImplyMorality : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

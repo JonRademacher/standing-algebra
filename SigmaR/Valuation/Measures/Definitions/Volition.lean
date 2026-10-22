@@ -18,11 +18,11 @@ It does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 Volition i indicates that agent i has a volitional component.
 -/
-constant Volition : Agent → Prop
+axiom Volition : Agent → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

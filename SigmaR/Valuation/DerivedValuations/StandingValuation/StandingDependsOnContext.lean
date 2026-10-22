@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.StandingValuation
+import SigmaR.Valuation.DerivedValuations.StandingValuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -16,13 +16,13 @@ Context dependence does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.StandingValuation
 
 /--
 StandingDependsOnContext S means that standing valuation S
 is explicitly context-dependent.
 -/
-constant StandingDependsOnContext :
+axiom StandingDependsOnContext :
   StandingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.StandingValuation

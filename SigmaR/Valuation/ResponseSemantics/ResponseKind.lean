@@ -19,11 +19,11 @@ They exist to distinguish response structure, not value.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 A structural classification of responses.
 -/
-constant ResponseKind : Response → Prop
+axiom ResponseKind : Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

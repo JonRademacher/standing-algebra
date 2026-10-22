@@ -15,11 +15,11 @@ only in higher layers or specific models.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 ExitViable a means agent a retains meaningful exit options.
 -/
-constant ExitViable : Agent → Prop
+axiom ExitViable : Agent → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

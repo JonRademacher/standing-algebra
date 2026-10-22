@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.CouplingValuation
+import SigmaR.Valuation.DerivedValuations.CouplingValuation.CouplingValuation
 
 /-!
 ###############################################################################
@@ -19,13 +19,13 @@ It is structural composition only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 CouplingAggregation C₁ C₂ C₃ means that coupling valuation C₃
 is an aggregation of coupling valuations C₁ and C₂.
 -/
-constant CouplingAggregation :
+axiom CouplingAggregation :
   CouplingValuation → CouplingValuation → CouplingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

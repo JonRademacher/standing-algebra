@@ -12,11 +12,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 Exit cost valuation does not imply legitimacy.
 -/
-constant ExitCostDoesNotImplyLegitimacy : Prop
+axiom ExitCostDoesNotImplyLegitimacy : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

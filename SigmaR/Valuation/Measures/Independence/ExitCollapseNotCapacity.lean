@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.ExitCollapse_Definition
-import SigmaR.Valuation.Measures.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.ExitCollapse_Definition
+import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -18,7 +20,7 @@ capacity is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating exit collapse as eliminating,
@@ -31,4 +33,4 @@ axiom exit_collapse_not_capacity :
       TreatedAsCapacityLostFromExitCollapse a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

@@ -18,13 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacitySaturation C means that capacity valuation C
 has reached a saturation boundary.
 -/
-constant CapacitySaturation :
+axiom CapacitySaturation :
   CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

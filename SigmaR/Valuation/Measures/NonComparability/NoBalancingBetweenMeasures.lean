@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Balancing Between Measures
@@ -11,7 +13,7 @@ offset, or averaged against each other.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.NonComparability
 
 /--
 No implication permitting balancing between
@@ -26,4 +28,4 @@ axiom no_balancing_between_measures :
       BalancedAgainst M₁ M₂
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.NonComparability

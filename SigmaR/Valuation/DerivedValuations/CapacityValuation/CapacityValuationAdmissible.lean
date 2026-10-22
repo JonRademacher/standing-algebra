@@ -19,13 +19,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityValuationAdmissible C means that capacity valuation C
 is admissible under declared structural constraints.
 -/
-constant CapacityValuationAdmissible :
+axiom CapacityValuationAdmissible :
   CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

@@ -19,13 +19,13 @@ They are purely computational mappings.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 A valuation function maps agents and states
 to derived valuations.
 -/
-constant ValuationFunction :
+axiom ValuationFunction :
   Agent → State → DerivedValuation
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

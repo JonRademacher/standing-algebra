@@ -19,13 +19,13 @@ Context dependence does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityDependsOnContext C means that capacity valuation C
 is explicitly context-dependent.
 -/
-constant CapacityDependsOnContext :
+axiom CapacityDependsOnContext :
   CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

@@ -1,15 +1,8 @@
-import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.StandingAlgebra_RegimeStacked
+import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitPreservation_Justification
+import SigmaR.Operations.ResolutionMethodDistinctness_Op
 
 namespace SigmaR
-
-/--
-Operations-level predicate:
-
-`F` represents a negotiation operation if it adjusts
-constraints symmetrically without reducing standing
-or collapsing exit.
--/
-constant NegotiationOp : Operation → Prop
 
 /--
 Operations-level invariant (Negotiation):
@@ -20,7 +13,7 @@ for all affected agents.
 axiom NegotiationInvariant :
   ∀ (F : Operation),
     NegotiationOp F →
-    Admissible F ∧ ExitPreserved F
+    Admissible F ∧ ∀ s : State, ExitPreserved F s
 
 /--
 Derived theorem:
@@ -30,7 +23,7 @@ Negotiation operations are non-coercive adjustments.
 theorem NegotiationAdmissible
   (F : Operation)
   (hN : NegotiationOp F) :
-  Admissible F ∧ ExitPreserved F :=
+  Admissible F ∧ ∀ s : State, ExitPreserved F s :=
 by
   exact NegotiationInvariant F hN
 

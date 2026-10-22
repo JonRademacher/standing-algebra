@@ -10,13 +10,13 @@ This is a structural boundary, not a decision rule.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 Predicate indicating exit collapse for an agent in a given state.
 
 True means no admissible continuation preserves exit viability.
 -/
-constant ExitCollapse : Agent → State → Prop
+axiom ExitCollapse : Agent → State → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

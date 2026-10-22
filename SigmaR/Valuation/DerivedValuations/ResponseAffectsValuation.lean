@@ -19,13 +19,13 @@ It is purely descriptive.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 ResponseAffectsValuation R V means that response R
 has a structural effect on derived valuation V.
 -/
-constant ResponseAffectsValuation :
+axiom ResponseAffectsValuation :
   Response → DerivedValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

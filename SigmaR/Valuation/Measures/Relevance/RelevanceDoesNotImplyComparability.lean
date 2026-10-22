@@ -11,7 +11,9 @@ or ordering of valuation measures.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting relevance to authorize
@@ -25,5 +27,4 @@ axiom relevance_not_comparable :
       InducesRanking M₁ ∨ InducesRanking M₂
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.Relevance

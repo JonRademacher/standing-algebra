@@ -22,12 +22,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 The Exit Cost Valuation layer is governed by an explicit
 interpretive contract defining its scope and limits.
 -/
-constant ExitCostValuationContract : Prop
+axiom ExitCostValuationContract : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

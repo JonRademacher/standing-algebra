@@ -18,13 +18,13 @@ It is structural scoping only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyDependsOnContext A means that autonomy valuation A
 is explicitly context-dependent.
 -/
-constant AutonomyDependsOnContext :
+axiom AutonomyDependsOnContext :
   AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

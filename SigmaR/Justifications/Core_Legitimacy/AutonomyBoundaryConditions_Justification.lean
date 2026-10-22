@@ -61,7 +61,7 @@ namespace SigmaR
 /-- Predicate: the autonomy‑limiting action
     at state `s` is voluntary and
     capacity‑indexed. -/
-constant VoluntaryAutonomyLimitation : State → Prop
+axiom VoluntaryAutonomyLimitation : State → Prop
 
 /--
 Core legitimacy axiom:
@@ -72,6 +72,6 @@ does not generate structural debt.
 axiom voluntary_limitation_no_debt :
   ∀ s : State,
     VoluntaryAutonomyLimitation s →
-    ¬ StructuralDebt.default s
+    StructuralDebt s = 0
 
 end SigmaR

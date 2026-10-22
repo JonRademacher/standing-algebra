@@ -43,23 +43,20 @@ namespace SigmaR
 -- Justification‑layer axioms (operational, not normative)
 ------------------------------------------------------------------------
 
-/-- Nondomination invariant:
-    A legitimate operation cannot increase domination pressure. -/
+/-- A legitimate operation cannot increase domination pressure. -/
 axiom nondomination :
-  ∀ {F : Operation} {s : State},
+  ∀ {F : Operation} {a : Agent},
     Legitimate F →
-    DomPressure (apply F s) ≤ DomPressure s
+    DomPressure (apply F a) ≤ DomPressure a
 
 /-- Structural monotonicity of domination pressure:
     If an agent’s standing strictly decreases, domination pressure strictly
     increases.
-
-    This reflects the fact that DomPressure is a monotone aggregator of the
-    σ‑profile (as discussed in *On Relevance*, §6). -/
+    This captures the non-domination invariant used in this justification. -/
 axiom dp_increase_for_sigma_decrease :
-  ∀ {F : Operation} {s : State} {a : Agent},
-    σ (apply F s) a < σ s a →
-    DomPressure (apply F s) > DomPressure s
+  ∀ {F : Operation} {a : Agent},
+    σ (apply F a) < σ a →
+    DomPressure (apply F a) > DomPressure a
 
 ------------------------------------------------------------------------
 -- ALRP as a derived necessity
@@ -72,23 +69,18 @@ Allowing such a reduction would contradict the nondomination invariant.
 
 This is the formal counterpart of the Maxim of Mutual Autonomy. -/
 theorem ALRP_required_for_legitimacy
-  {F : Operation} {s : State} (hLegit : Legitimate F) (a : Agent) :
-  σ (apply F s) a ≥ σ s a :=
+  {F : Operation} (hLegit : Legitimate F) (a : Agent) :
+  σ a ≤ σ (apply F a) :=
 by
-  -- Assume, for contradiction, that standing decreases.
-  by_contra h_lt
-
-  -- A decrease in σ forces an increase in domination pressure.
-  have h_dp_inc :
-    DomPressure (apply F s) > DomPressure s :=
-    dp_increase_for_sigma_decrease h_lt
-
-  -- But legitimacy forbids any increase in domination pressure.
-  have h_dp_noninc :
-    DomPressure (apply F s) ≤ DomPressure s :=
-    nondomination hLegit
-
-  -- Contradiction: something cannot be both strictly greater and ≤.
-  exact lt_asymm h_dp_inc (not_lt_of_ge h_dp_noninc)
+  by_cases h : σ a ≤ σ (apply F a)
+  · exact h
+  · have h_lt : σ (apply F a) < σ a := Nat.lt_of_not_ge h
+    have h_dp_inc :
+      DomPressure (apply F a) > DomPressure a :=
+      dp_increase_for_sigma_decrease h_lt
+    have h_dp_noninc :
+      DomPressure (apply F a) ≤ DomPressure a :=
+      nondomination hLegit
+    exact False.elim (Nat.not_lt_of_ge h_dp_noninc h_dp_inc)
 
 end SigmaR

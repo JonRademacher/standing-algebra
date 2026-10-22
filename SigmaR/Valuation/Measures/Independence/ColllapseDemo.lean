@@ -34,8 +34,8 @@ abbrev State := Nat
 Two valuation-style measures, intended to be conceptually distinct
 (e.g. StandingMeasure and RiskLoad).
 -/
-constant StandingMeasure : Agent → State → Nat
-constant RiskLoad       : Agent → State → Nat
+axiom StandingMeasure : Agent → State → Nat
+axiom RiskLoad       : Agent → State → Nat
 
 /-!
 ------------------------------------------------------------------------------
@@ -87,7 +87,8 @@ is *treated as* licensing inference to the other.
 -/
 
 /-- Demo-only misuse predicate: standing is treated as implying risk. -/
-constant TreatedAsRiskFromStanding : Agent → State → Prop
+def TreatedAsRiskFromStanding (a : Agent) (s : State) : Prop :=
+  StandingMeasure_model a s = RiskLoad_model a s
 
 /-!
 In the collapsing model, this misuse is trivial: since the

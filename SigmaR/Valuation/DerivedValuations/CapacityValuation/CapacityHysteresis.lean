@@ -18,7 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
-CapacityHysteresis C means
+CapacityHysteresis C means that capacity valuation C
+exhibits path-dependent behavior.
+-/
+axiom CapacityHysteresis :
+  CapacityValuation → Prop
+
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

@@ -13,11 +13,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 Response semantics do not imply legitimacy.
 -/
-constant ResponseDoesNotImplyLegitimacy : Prop
+axiom ResponseDoesNotImplyLegitimacy : Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

@@ -1,4 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Operations.Negotiation_Op
+import SigmaR.Operations.Cooperation_Op
+import SigmaR.Operations.Compromise_Op
+import SigmaR.Operations.TragicAcceptance_Op
+import SigmaR.Operations.ResolutionMethodDistinctness_Op
 
 namespace SigmaR
 
@@ -8,10 +13,10 @@ Semantic behavior predicates.
 These capture what an operation *does*,
 not how it is labeled.
 -/
-constant BehavesAsNegotiation      : Operation → Prop
-constant BehavesAsCooperation      : Operation → Prop
-constant BehavesAsCompromise       : Operation → Prop
-constant BehavesAsTragicAcceptance : Operation → Prop
+axiom BehavesAsNegotiation      : Operation → Prop
+axiom BehavesAsCooperation      : Operation → Prop
+axiom BehavesAsCompromise       : Operation → Prop
+axiom BehavesAsTragicAcceptance : Operation → Prop
 
 /--
 Resolution soundness:

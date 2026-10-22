@@ -1,6 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.DerivedStanding_Justification
-import SigmaR.Justifications.Regimes.AdapterRegime.AdapterRegime_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskInheritance_Justification
+import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskInheritance_Justification
 
 /-!
 ###############################################################################
@@ -31,7 +31,7 @@ namespace SigmaR
 Predicate: adapter operation `F` claims to represent agent `a`
 in a standing-relevant way.
 -/
-constant AdapterClaimsRepresentation : Operation → Agent → Prop
+axiom AdapterClaimsRepresentation : Operation → Agent → Prop
 
 /--
 Tier-2 legitimacy axiom (Adapter Non-Representational Standing):
@@ -48,8 +48,9 @@ axiom adapter_non_representational_standing :
     Legitimate F →
     ∀ a : Agent,
       AdapterClaimsRepresentation F a →
-      RiskInheritance a F →
-      False
+      ∀ s : State,
+        ¬ RiskInheritance a F s →
+        False
 
 /--
 Derived theorem:
@@ -62,10 +63,11 @@ theorem AdapterCannotLaunderStanding
   (hLeg : Legitimate F) :
   ∀ a : Agent,
     AdapterClaimsRepresentation F a →
-    RiskInheritance a F →
-    False :=
+    ∀ s : State,
+      ¬ RiskInheritance a F s →
+      False :=
 by
-  intros a hRep hRisk
-  exact adapter_non_representational_standing hLeg a hRep hRisk
+  intros a hRep s hNoRisk
+  exact adapter_non_representational_standing hLeg a hRep s hNoRisk
 
 end SigmaR

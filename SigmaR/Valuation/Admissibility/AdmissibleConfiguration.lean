@@ -18,12 +18,12 @@ It ONLY governs permission to reason with a configuration.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 A valuation configuration is admissible if it is explicitly declared
 and structurally coherent under the system's constraints.
 -/
-constant AdmissibleConfiguration : Prop
+axiom AdmissibleConfiguration : Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

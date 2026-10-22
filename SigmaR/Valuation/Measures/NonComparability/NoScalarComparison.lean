@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Scalar Comparison
@@ -11,7 +13,7 @@ them into a shared scalar representation.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.NonComparability
 
 /--
 No implication permitting scalar embedding or comparison
@@ -26,5 +28,4 @@ axiom no_scalar_comparison :
       Scalarizes {M₁, M₂} O
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.NonComparability

@@ -1,7 +1,7 @@
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
 import SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskRegime_Justification
-import SigmaR.Justifications.Regimes.RiskRegime.RiskInheritance_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskRegime_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskInheritance_Justification
 
 /-!
 ###############################################################################
@@ -37,7 +37,7 @@ at state `s`.
 
 This predicate is agent-indexed and non-aggregative by design.
 -/
-constant RiskConsent : Agent → Operation → State → Prop
+axiom RiskConsent : Agent → Operation → State → Prop
 
 /--
 Predicate: operation `F` treats consent by one agent as sufficient
@@ -45,7 +45,7 @@ to justify risk imposed on another agent.
 
 This captures the forbidden pattern of consent laundering.
 -/
-constant ConsentTransferred : Agent → Agent → Operation → State → Prop
+axiom ConsentTransferred : Agent → Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Risk Consent Non-Transitivity):

@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Endogenous Goal Formation
@@ -11,7 +13,7 @@ from internal measures or dynamics.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication from valuation measures to the endogenous
@@ -24,4 +26,4 @@ axiom no_endogenous_goal_formation :
       GeneratedFromMeasure O M
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

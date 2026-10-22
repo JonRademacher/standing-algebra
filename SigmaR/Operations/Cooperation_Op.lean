@@ -1,15 +1,10 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Operations.ResolutionMethodDistinctness_Op
 
 namespace SigmaR
 
-/--
-Operations-level predicate:
-
-`F` represents a cooperation operation
-where agents jointly act without imposing
-constraints on non-participants.
--/
-constant CooperationOp : Operation → Prop
+/-- Cooperation does not increase structural dependency. -/
+axiom DependencyNonIncreasing : Operation → Prop
 
 /--
 Operations-level invariant (Cooperation):

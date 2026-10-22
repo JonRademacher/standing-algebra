@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Definition No Dynamics
@@ -16,7 +18,7 @@ Intervention, or explicit models.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 No implication from the mere existence of a valuation
@@ -33,4 +35,4 @@ axiom definition_no_dynamics :
        GuaranteesProgress M)
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

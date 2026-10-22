@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -31,7 +32,7 @@ authority, obligation, or necessity.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Core
 
 /-!
 ------------------------------------------------------------------------------
@@ -51,21 +52,21 @@ abbrev Obj    : Type := State → Val
 ------------------------------------------------------------------------------
 -/
 
-constant WellFormed : Measure → Prop
-constant IsMeasure : Measure → Prop
+axiom WellFormed : Measure → Prop
+axiom IsMeasure : Measure → Prop
 
-constant ContextBound : Measure → Prop
-constant IsGlobalScope : Measure → Prop
-constant IsLocalScope : Measure → Prop
+axiom ContextBound : Measure → Prop
+axiom IsGlobalScope : Measure → Prop
+axiom IsLocalScope : Measure → Prop
 
-constant RestrictsDomain : Measure → Prop
-constant StructurallyConstant : Measure → Prop
+axiom RestrictsDomain : Measure → Prop
+axiom StructurallyConstant : Measure → Prop
 
-constant CompatibleDomainCodomain : Measure → Measure → Prop
-constant DependsOn : Measure → Measure → Prop
+axiom CompatibleDomainCodomain : Measure → Measure → Prop
+axiom DependsOn : Measure → Measure → Prop
 
-constant Project : Measure → Measure
-constant Restrict : Measure → PredAS → Measure
+axiom Project : Measure → Measure
+axiom Restrict : Measure → PredAS → Measure
 
 /-!
 ------------------------------------------------------------------------------
@@ -73,10 +74,10 @@ constant Restrict : Measure → PredAS → Measure
 ------------------------------------------------------------------------------
 -/
 
-constant TrueMeasure : Measure → Prop
-constant ValidMeasure : Measure → Prop
-constant LegitimateMeasure : Measure → Prop
-constant ConstrainsInterpretation : Measure → Prop
+axiom TrueMeasure : Measure → Prop
+axiom ValidMeasure : Measure → Prop
+axiom LegitimateMeasure : Measure → Prop
+axiom ConstrainsInterpretation : Measure → Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -84,7 +85,7 @@ constant ConstrainsInterpretation : Measure → Prop
 ------------------------------------------------------------------------------
 -/
 
-constant StateLe : State → State → Prop
+axiom StateLe : State → State → Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -92,26 +93,27 @@ constant StateLe : State → State → Prop
 ------------------------------------------------------------------------------
 -/
 
-constant Observable : Agent → State → Prop
-constant Measured : Agent → State → Val
+axiom Observable : Agent → State → Prop
+axiom Measured : Agent → State → Val
+axiom InfinitelyResolvable : Val → Prop
 
-constant PerfectMeasurement : Agent → State → Prop
-constant Noisy : Agent → State → Prop
-constant Error : Agent → State → Prop
+axiom PerfectMeasurement : Agent → State → Prop
+axiom Noisy : Agent → State → Prop
+axiom Error : Agent → State → Prop
 
-constant Understands : Agent → State → Prop
-constant Controls : Agent → State → Prop
+axiom Understands : Agent → State → Prop
+axiom Controls : Agent → State → Prop
 
-constant Optimizes : Obj → Prop
+axiom Optimizes : Obj → Prop
 
-constant Causes : State → State → Prop
-constant StateExists : PredS
+axiom Causes : State → State → Prop
+axiom StateExists : PredS
 
-constant MeasurementLimited : Agent → State → Prop
-constant ConstrainsState : PredS
+axiom MeasurementLimited : Agent → State → Prop
+axiom ConstrainsState : PredS
 
-constant SystemInvalid : Prop
-constant Failure : PredS
+axiom SystemInvalid : Prop
+axiom Failure : PredS
 
 /-!
 ------------------------------------------------------------------------------
@@ -119,12 +121,19 @@ constant Failure : PredS
 ------------------------------------------------------------------------------
 -/
 
-constant IPFA : Agent → State → Prop
-constant PFA : Set Agent → State → Prop
+axiom IPFA : Agent → State → Prop
+axiom PFA : Set Agent → State → Prop
+axiom TreatedAsIncompetent : Agent → State → Prop
+axiom TreatedAsDishonest : Agent → State → Prop
+axiom TreatedAsObligatory : State → Prop
+axiom TreatedAsAuthoritative : State → Prop
+axiom TreatedAsTrue : State → Prop
+axiom TreatedAsPlurality : State → Prop
+axiom TreatedAsAggregationOfAgents : Set Agent → State → Prop
 
-constant Frame : Type
-constant ObservableInFrame : Agent → Frame → State → Prop
-constant FrameSucc : Frame → Frame → Prop
+axiom Frame : Type
+axiom ObservableInFrame : Agent → Frame → State → Prop
+axiom FrameSucc : Frame → Frame → Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -132,29 +141,29 @@ constant FrameSucc : Frame → Frame → Prop
 ------------------------------------------------------------------------------
 -/
 
-constant GlobalObjective : Obj → Prop
-constant GeneratedFromMeasure : Obj → Measure → Prop
-constant TargetsMeasure : Obj → Measure → Prop
+axiom GlobalObjective : Obj → Prop
+axiom GeneratedFromMeasure : Obj → Measure → Prop
+axiom TargetsMeasure : Obj → Measure → Prop
 
-constant AggregatesFromMeasure : Obj → Measure → Prop
-constant Scalarizes : Set Measure → Obj → Prop
+axiom AggregatesFromMeasure : Obj → Measure → Prop
+axiom Scalarizes : Set Measure → Obj → Prop
 
-constant Compensates : Measure → Measure → Prop
-constant TradeoffJustifies : Measure → Measure → Prop
-constant ProxiesFor : Measure → Measure → Prop
-constant InducesRanking : Measure → Prop
+axiom Compensates : Measure → Measure → Prop
+axiom TradeoffJustifies : Measure → Measure → Prop
+axiom ProxiesFor : Measure → Measure → Prop
+axiom InducesRanking : Measure → Prop
 
-constant TreatedAsUtility : Measure → Prop
-constant TreatedAsWelfare : Measure → Prop
-constant InterpretedAsImprovement : Measure → Prop
+axiom TreatedAsUtility : Measure → Prop
+axiom TreatedAsWelfare : Measure → Prop
+axiom InterpretedAsImprovement : Measure → Prop
 
-constant Converges : Measure → Prop
-constant HasEquilibrium : Measure → Prop
-constant HasFixedPoint : Measure → Prop
-constant GuaranteesProgress : Measure → Prop
-constant AssumesSelection : Measure → Prop
+axiom Converges : Measure → Prop
+axiom HasEquilibrium : Measure → Prop
+axiom HasFixedPoint : Measure → Prop
+axiom GuaranteesProgress : Measure → Prop
+axiom AssumesSelection : Measure → Prop
 
-constant GamesMetric : Obj → Measure → Prop
+axiom GamesMetric : Obj → Measure → Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -162,11 +171,11 @@ constant GamesMetric : Obj → Measure → Prop
 ------------------------------------------------------------------------------
 -/
 
-constant EquivalentMeasures : Measure → Measure → Prop
-constant EquivalenceInducesOrdering : Measure → Measure → Prop
+axiom EquivalentMeasures : Measure → Measure → Prop
+axiom EquivalenceInducesOrdering : Measure → Measure → Prop
 
-constant EquivalenceContext : Type
-constant EquivalentInContext :
+axiom EquivalenceContext : Type
+axiom EquivalentInContext :
   EquivalenceContext → Measure → Measure → Prop
 
 /-!
@@ -175,14 +184,15 @@ constant EquivalentInContext :
 ------------------------------------------------------------------------------
 -/
 
-constant NonComparable : Measure → Measure → Prop
-constant BalancedAgainst : Measure → Measure → Prop
+axiom NonComparable : Measure → Measure → Prop
+axiom BalancedAgainst : Measure → Measure → Prop
+axiom IndependentMeasures : Measure → Measure → Prop
 
-constant TreatedAsIgnorance : Measure → Measure → Prop
-constant TreatedAsInaction : Measure → Measure → Prop
+axiom TreatedAsIgnorance : Measure → Measure → Prop
+axiom TreatedAsInaction : Measure → Measure → Prop
 
-constant NonComparabilityContext : Type
-constant NonComparableInContext :
+axiom NonComparabilityContext : Type
+axiom NonComparableInContext :
   NonComparabilityContext → Measure → Measure → Prop
 
 /-!
@@ -192,83 +202,119 @@ constant NonComparableInContext :
 -/
 
 -- Autonomy misuses
-constant TreatedAsAutonomyFromStandingMeasure : Agent → State → Prop
-constant TreatedAsAutonomyFromRoleState : Agent → State → Prop
-constant TreatedAsAutonomyFromExitViable : Agent → State → Prop
-constant TreatedAsAutonomyLostFromRiskLoad : Agent → State → Prop
-constant TreatedAsAutonomyLostFromTemporalAccumulation : Agent → State → Prop
-constant TreatedAsAutonomyLostFromExitCollapse : Agent → State → Prop
-constant TreatedAsAutonomyLostFromRiskInheritance : Agent → State → Prop
-constant TreatedAsAutonomyFromDominationPressure : Agent → State → Prop
+axiom TreatedAsAutonomyFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsAutonomyFromConsentState : Agent → State → Prop
+axiom TreatedAsAutonomyFromStructuralDebt : Agent → State → Prop
+axiom TreatedAsAutonomyFromStandingMeasure : Agent → State → Prop
+axiom TreatedAsAutonomyFromRoleState : Agent → State → Prop
+axiom TreatedAsAutonomyFromExitViable : Agent → State → Prop
+axiom TreatedAsAutonomyLostFromRiskLoad : Agent → State → Prop
+axiom TreatedAsAutonomyLostFromTemporalAccumulation : Agent → State → Prop
+axiom TreatedAsAutonomyLostFromExitCollapse : Agent → State → Prop
+axiom TreatedAsAutonomyLostFromRiskInheritance : Agent → State → Prop
+axiom TreatedAsAutonomyFromDominationPressure : Agent → State → Prop
 
 -- Capacity misuses
-constant TreatedAsCapacityFromStandingMeasure : Agent → State → Prop
-constant TreatedAsCapacityFromRoleState : Agent → State → Prop
-constant TreatedAsCapacityFromExitViable : Agent → State → Prop
-constant TreatedAsCapacityLostFromRiskLoad : Agent → State → Prop
-constant TreatedAsCapacityLostFromTemporalAccumulation : Agent → State → Prop
-constant TreatedAsCapacityLostFromExitCollapse : Agent → State → Prop
-constant TreatedAsCapacityLostFromRiskInheritance : Agent → State → Prop
-constant TreatedAsCapacityLostFromDominationPressure : Agent → State → Prop
+axiom TreatedAsCapacityFromAutonomy : Agent → State → Prop
+axiom TreatedAsCapacityFromConsentState : Agent → State → Prop
+axiom TreatedAsCapacityFromStructuralDebt : Agent → State → Prop
+axiom TreatedAsCapacityFromStandingMeasure : Agent → State → Prop
+axiom TreatedAsCapacityFromRoleState : Agent → State → Prop
+axiom TreatedAsCapacityFromExitViable : Agent → State → Prop
+axiom TreatedAsCapacityLostFromRiskLoad : Agent → State → Prop
+axiom TreatedAsCapacityLostFromTemporalAccumulation : Agent → State → Prop
+axiom TreatedAsCapacityLostFromExitCollapse : Agent → State → Prop
+axiom TreatedAsCapacityLostFromRiskInheritance : Agent → State → Prop
+axiom TreatedAsCapacityLostFromDominationPressure : Agent → State → Prop
 
 -- Consent misuses
-constant TreatedAsConsentFromStandingMeasure : Agent → State → Prop
-constant TreatedAsConsentFromRoleState : Agent → State → Prop
-constant TreatedAsConsentFromExitViable : Agent → State → Prop
-constant TreatedAsConsentInvalidFromRiskLoad : Agent → State → Prop
-constant TreatedAsConsentInvalidFromTemporalAccumulation : Agent → State → Prop
-constant TreatedAsConsentInvalidFromExitCollapse : Agent → State → Prop
-constant TreatedAsConsentInvalidFromRiskInheritance : Agent → State → Prop
-constant TreatedAsConsentInvalidFromDominationPressure : Agent → State → Prop
+axiom TreatedAsConsentFromAutonomy : Agent → State → Prop
+axiom TreatedAsConsentFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsConsentFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsConsentFromStandingMeasure : Agent → State → Prop
+axiom TreatedAsConsentFromRoleState : Agent → State → Prop
+axiom TreatedAsConsentFromExitViable : Agent → State → Prop
+axiom TreatedAsConsentInvalidFromRiskLoad : Agent → State → Prop
+axiom TreatedAsConsentInvalidFromTemporalAccumulation : Agent → State → Prop
+axiom TreatedAsConsentInvalidFromExitCollapse : Agent → State → Prop
+axiom TreatedAsConsentInvalidFromRiskInheritance : Agent → State → Prop
+axiom TreatedAsConsentInvalidFromDominationPressure : Agent → State → Prop
+axiom TreatedAsConsentInvalidFromStructuralDebt : Agent → State → Prop
 
 -- Standing misuses
-constant TreatedAsStandingFromRoleState : Agent → State → Prop
-constant TreatedAsStandingFromExitViable : Agent → State → Prop
-constant TreatedAsStandingFromRiskInheritance : Agent → State → Prop
-constant TreatedAsStandingFromTemporalAccumulation : Agent → State → Prop
-constant TreatedAsStandingRevokedFromStructuralDebt : Agent → State → Prop
-constant TreatedAsStandingRevokedFromExitCollapse : Agent → State → Prop
-constant TreatedAsStandingRevokedFromDominationPressure : Agent → State → Prop
+axiom TreatedAsStandingFromConsentState : Agent → State → Prop
+axiom TreatedAsStandingFromRoleState : Agent → State → Prop
+axiom TreatedAsStandingFromExitViable : Agent → State → Prop
+axiom TreatedAsStandingFromRiskInheritance : Agent → State → Prop
+axiom TreatedAsStandingFromTemporalAccumulation : Agent → State → Prop
+axiom TreatedAsStandingRevokedFromStructuralDebt : Agent → State → Prop
+axiom TreatedAsStandingRevokedFromExitCollapse : Agent → State → Prop
+axiom TreatedAsStandingRevokedFromDominationPressure : Agent → State → Prop
 
 -- Structural debt misuses
-constant TreatedAsStructuralDebtFromRiskLoad : Agent → State → Prop
-constant TreatedAsStructuralDebtFromTemporalAccumulation : Agent → State → Prop
-constant TreatedAsStructuralDebtFromExitCollapse : Agent → State → Prop
-constant TreatedAsStructuralDebtFromDominationPressure : Agent → State → Prop
-constant TreatedAsStructuralDebtResolvedFromStandingMeasure : Agent → State → Prop
-constant TreatedAsStructuralDebtResolvedFromRoleState : Agent → State → Prop
+axiom TreatedAsDebtFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsDebtFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsStructuralDebtFromRiskLoad : Agent → State → Prop
+axiom TreatedAsStructuralDebtFromTemporalAccumulation : Agent → State → Prop
+axiom TreatedAsStructuralDebtFromExitCollapse : Agent → State → Prop
+axiom TreatedAsStructuralDebtFromDominationPressure : Agent → State → Prop
+axiom TreatedAsStructuralDebtResolvedFromStandingMeasure : Agent → State → Prop
+axiom TreatedAsStructuralDebtResolvedFromRoleState : Agent → State → Prop
+axiom TreatedAsDebtResolvedFromConsentState : Agent → State → Prop
 
 -- Exit viability / collapse misuses
-constant TreatedAsExitViableFromStandingMeasure : Agent → State → Prop
-constant TreatedAsExitViableFromRoleState : Agent → State → Prop
-constant TreatedAsExitViableFromRiskLoad : Agent → State → Prop
-constant TreatedAsExitViableFromTemporalAccumulation : Agent → State → Prop
-constant TreatedAsExitViableResolvedFromStructuralDebt : Agent → State → Prop
-constant TreatedAsExitViableLostFromDominationPressure : Agent → State → Prop
+axiom TreatedAsExitViableFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsExitViableFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsExitViableFromConsentState : Agent → State → Prop
+axiom TreatedAsExitViableFromStandingMeasure : Agent → State → Prop
+axiom TreatedAsExitViableFromRoleState : Agent → State → Prop
+axiom TreatedAsExitViableFromRiskLoad : Agent → State → Prop
+axiom TreatedAsExitViableFromTemporalAccumulation : Agent → State → Prop
+axiom TreatedAsExitViableResolvedFromStructuralDebt : Agent → State → Prop
+axiom TreatedAsExitViableLostFromDominationPressure : Agent → State → Prop
 
-constant TreatedAsExitCollapseFromStandingMeasure : Agent → State → Prop
+axiom TreatedAsExitCollapseFromStandingMeasure : Agent → State → Prop
 
 -- Risk misuses
-constant TreatedAsRiskFromStandingMeasure : Agent → State → Prop
-constant TreatedAsRiskFromRoleState : Agent → State → Prop
-constant TreatedAsRiskFromTemporalAccumulation : Agent → State → Prop
-constant TreatedAsRiskFromStructuralDebt : Agent → State → Prop
-constant TreatedAsRiskFromDominationPressure : Agent → State → Prop
-constant TreatedAsRiskFromExitViable : Agent → State → Prop
+axiom TreatedAsRiskFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsRiskFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsRiskFromStandingMeasure : Agent → State → Prop
+axiom TreatedAsRiskFromRoleState : Agent → State → Prop
+axiom TreatedAsRiskFromTemporalAccumulation : Agent → State → Prop
+axiom TreatedAsRiskFromStructuralDebt : Agent → State → Prop
+axiom TreatedAsRiskFromDominationPressure : Agent → State → Prop
+axiom TreatedAsRiskFromExitViable : Agent → State → Prop
+axiom TreatedAsRiskResolvedFromConsentState : Agent → State → Prop
 
 -- Temporal accumulation misuses
-constant TreatedAsTemporalAccumulationFromStandingMeasure : Agent → State → Prop
-constant TreatedAsTemporalAccumulationFromRiskLoad : Agent → State → Prop
-constant TreatedAsTemporalAccumulationFromStructuralDebt : Agent → State → Prop
-constant TreatedAsTemporalAccumulationFromExitViable : Agent → State → Prop
-constant TreatedAsTemporalAccumulationResolvedFromRoleState : Agent → State → Prop
+axiom TreatedAsRoleFromStandingMeasure : Agent → State → Prop
+axiom TreatedAsRoleFromConsentState : Agent → State → Prop
+axiom TreatedAsRoleFromStructuralDebt : Agent → State → Prop
+axiom TreatedAsRoleFromExitViable : Agent → State → Prop
+axiom TreatedAsRoleFromRiskLoad : Agent → State → Prop
+axiom TreatedAsRoleFromDominationPressure : Agent → State → Prop
+axiom TreatedAsRoleFromTemporalAccumulation : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromStandingMeasure : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromRiskLoad : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromStructuralDebt : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromExitViable : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromDominationPressure : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationResolvedFromRoleState : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationResolvedFromConsentState : Agent → State → Prop
 
 -- Domination pressure misuses
-constant TreatedAsDominationPressureFromStandingMeasure : Agent → State → Prop
-constant TreatedAsDominationPressureFromRiskLoad : Agent → State → Prop
-constant TreatedAsDominationPressureFromStructuralDebt : Agent → State → Prop
-constant TreatedAsDominationPressureFromExitViable : Agent → State → Prop
-constant TreatedAsDominationPressureFromTemporalAccumulation : Agent → State → Prop
+axiom TreatedAsDominationPressureFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsDominationPressureFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsDominationPressureFromStandingMeasure : Agent → State → Prop
+axiom TreatedAsDominationPressureFromRiskLoad : Agent → State → Prop
+axiom TreatedAsDominationPressureFromRoleState : Agent → State → Prop
+axiom TreatedAsDominationPressureFromStructuralDebt : Agent → State → Prop
+axiom TreatedAsDominationPressureFromExitViable : Agent → State → Prop
+axiom TreatedAsDominationPressureFromTemporalAccumulation : Agent → State → Prop
+axiom TreatedAsDominationPressureResolvedFromConsentState : Agent → State → Prop
+axiom TreatedAsDominationPressureResolvedFromExitViable : Agent → State → Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -276,22 +322,22 @@ constant TreatedAsDominationPressureFromTemporalAccumulation : Agent → State �
 ------------------------------------------------------------------------------
 -/
 
-constant StructurallyMonotone : Measure → Prop
-constant StructurallyAntitone : Measure → Prop
+axiom StructurallyMonotone : Measure → Prop
+axiom StructurallyAntitone : Measure → Prop
 
-constant UpperBounded : Measure → Prop
-constant Irreversible : Measure → Prop
-constant RequiresEnablingStructure : Measure → Prop
+axiom UpperBounded : Measure → Prop
+axiom Irreversible : Measure → Prop
+axiom RequiresEnablingStructure : Measure → Prop
 
-constant MonotoneUnder : Measure → Measure → Prop
-constant AntitoneUnder : Measure → Measure → Prop
+axiom MonotoneUnder : Measure → Measure → Prop
+axiom AntitoneUnder : Measure → Measure → Prop
 
-constant MonotonicityIsContextual : Prop
-constant MonotonicityRequiresScope : Prop
-constant MonotonicityIsNonCausal : Prop
-constant MonotonicityDoesNotGuaranteePersistence : Prop
-constant MonotonicityAllowsNonTotalOrder : Prop
-constant MonotonicityRespectsIndependence : Prop
+axiom MonotonicityIsContextual : Prop
+axiom MonotonicityRequiresScope : Prop
+axiom MonotonicityIsNonCausal : Prop
+axiom MonotonicityDoesNotGuaranteePersistence : Prop
+axiom MonotonicityAllowsNonTotalOrder : Prop
+axiom MonotonicityRespectsIndependence : Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -299,30 +345,31 @@ constant MonotonicityRespectsIndependence : Prop
 ------------------------------------------------------------------------------
 -/
 
-constant AdmissibleConfiguration : Prop
-constant AdmissibleMeasure : Measure → Prop
-constant AdmissibleMeasureSet : Set Measure → Prop
-constant AdmissibleInference : Prop
-constant AdmissibleComparison : Measure → Measure → Prop
-constant AdmissibleEvolution : Measure → Prop
-constant AdmissibleIrreversibility : Measure → Prop
+axiom AdmissibleConfiguration : Prop
+axiom AdmissibleMeasure : Measure → Prop
+axiom AdmissibleMeasureSet : Set Measure → Prop
+axiom Repairs : Operation → Agent → Prop
+axiom AdmissibleInference : Prop
+axiom AdmissibleComparison : Measure → Measure → Prop
+axiom AdmissibleEvolution : Measure → Prop
+axiom AdmissibleIrreversibility : Measure → Prop
 
-constant AdmissibleUnderWellFormedness : Prop
-constant AdmissibleUnderIndependence : Prop
-constant AdmissibleUnderMonotonicity : Prop
-constant AdmissibleMeasureUsage : Measure → Prop
-constant AdmissibleContextBinding : Prop
-constant AdmissibleFrame : Frame → Prop
-constant AdmissibleAgentPerspective : Agent → Prop
+axiom AdmissibleUnderWellFormedness : Prop
+axiom AdmissibleUnderIndependence : Prop
+axiom AdmissibleUnderMonotonicity : Prop
+axiom AdmissibleMeasureUsage : Measure → Prop
+axiom AdmissibleContextBinding : Prop
+axiom AdmissibleFrame : Frame → Prop
+axiom AdmissibleAgentPerspective : Agent → Prop
 
-constant AdmissibilityDoesNotImplyTruth : Prop
-constant AdmissibilityDoesNotImplyValidity : Prop
-constant AdmissibilityDoesNotImplyLegitimacy : Prop
-constant AdmissibilityDoesNotImplyAuthority : Prop
-constant AdmissibilityDoesNotImplyIntervention : Prop
+axiom AdmissibilityDoesNotImplyTruth : Prop
+axiom AdmissibilityDoesNotImplyValidity : Prop
+axiom AdmissibilityDoesNotImplyLegitimacy : Prop
+axiom AdmissibilityDoesNotImplyAuthority : Prop
+axiom AdmissibilityDoesNotImplyIntervention : Prop
 
-constant AdmissibilityScope : Prop
-constant AdmissibilityContract : Prop
+axiom AdmissibilityScope : Prop
+axiom AdmissibilityContract : Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -331,44 +378,44 @@ constant AdmissibilityContract : Prop
 -/
 
 -- Core response entities
-constant Response : Type
-constant ResponseSet : Type
-constant ResponseKind : Response → Prop
+axiom Response : Type
+axiom ResponseSet : Type
+axiom ResponseKind : Response → Prop
 
 -- Response–state relations
-constant ResponsePrecondition : Response → State → Prop
-constant ResponsePostcondition : Response → State → Prop
-constant ResponseTransition : Response → State → State → Prop
+axiom ResponsePrecondition : Response → State → Prop
+axiom ResponsePostcondition : Response → State → Prop
+axiom ResponseTransition : Response → State → State → Prop
 
 -- Response effects on measures
-constant ResponseAffectsMeasure : Response → Measure → Prop
-constant ResponsePreservesMeasure : Response → Measure → Prop
-constant ResponseAmplifiesMeasure : Response → Measure → Prop
-constant ResponseDampensMeasure : Response → Measure → Prop
-constant ResponseReversesMeasure : Response → Measure → Prop
+axiom ResponseAffectsMeasure : Response → Measure → Prop
+axiom ResponsePreservesMeasure : Response → Measure → Prop
+axiom ResponseAmplifiesMeasure : Response → Measure → Prop
+axiom ResponseDampensMeasure : Response → Measure → Prop
+axiom ResponseReversesMeasure : Response → Measure → Prop
 
 -- Structural properties of responses
-constant ResponseReversible : Response → Prop
-constant ResponseIrreversible : Response → Prop
-constant ResponseIdempotent : Response → Prop
-constant ResponseComposable : Response → Response → Prop
-constant ResponseInterfering : Response → Response → Prop
+axiom ResponseReversible : Response → Prop
+axiom ResponseIrreversible : Response → Prop
+axiom ResponseIdempotent : Response → Prop
+axiom ResponseComposable : Response → Response → Prop
+axiom ResponseInterfering : Response → Response → Prop
 
 -- Response interaction & compliance
-constant ResponseConflicts : Response → Response → Prop
-constant ResponseOverrides : Response → Response → Prop
-constant ResponseRequiresStructure : Response → Prop
-constant ResponseAdmissible : Response → Prop
-constant ResponseRespectsMonotonicity : Response → Prop
-constant ResponseRespectsIndependence : Response → Prop
+axiom ResponseConflicts : Response → Response → Prop
+axiom ResponseOverrides : Response → Response → Prop
+axiom ResponseRequiresStructure : Response → Prop
+axiom ResponseAdmissible : Response → Prop
+axiom ResponseRespectsMonotonicity : Response → Prop
+axiom ResponseRespectsIndependence : Response → Prop
 
 -- Response non-implication firewalls & contracts
-constant ResponseDoesNotImplyAuthority : Prop
-constant ResponseDoesNotImplyIntervention : Prop
-constant ResponseDoesNotImplyLegitimacy : Prop
-constant ResponseDoesNotImplyMorality : Prop
-constant ResponseScope : Prop
-constant ResponseSemanticsContract : Prop
+axiom ResponseDoesNotImplyAuthority : Prop
+axiom ResponseDoesNotImplyIntervention : Prop
+axiom ResponseDoesNotImplyLegitimacy : Prop
+axiom ResponseDoesNotImplyMorality : Prop
+axiom ResponseScope : Prop
+axiom ResponseSemanticsContract : Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -377,79 +424,79 @@ constant ResponseSemanticsContract : Prop
 -/
 
 -- Core derived valuation entities
-constant DerivedValuation : Type
-constant ValuationFunction : Agent → State → DerivedValuation
+axiom DerivedValuation : Type
+axiom ValuationFunction : Agent → State → DerivedValuation
 
 -- Autonomy-specific derived valuation
-constant AutonomyValuation : Type
-constant AutonomyState : Agent → State → AutonomyValuation
-constant AutonomyLevel : AutonomyValuation → Val
+axiom AutonomyValuation : Type
+axiom AutonomyState : Agent → State → AutonomyValuation
+axiom AutonomyLevel : AutonomyValuation → Val
 
 -- Structural dependencies of autonomy valuation
-constant AutonomyDependsOnMeasure :
+axiom AutonomyDependsOnMeasure :
   AutonomyValuation → Measure → Prop
-constant AutonomyDependsOnResponse :
+axiom AutonomyDependsOnResponse :
   AutonomyValuation → Response → Prop
-constant AutonomyDependsOnContext :
+axiom AutonomyDependsOnContext :
   AutonomyValuation → Prop
 
 -- Aggregation semantics
-constant ValuationAggregation :
+axiom ValuationAggregation :
   DerivedValuation → DerivedValuation → DerivedValuation → Prop
-constant AutonomyAggregation :
+axiom AutonomyAggregation :
   AutonomyValuation → AutonomyValuation → AutonomyValuation → Prop
 
 -- Loss and degradation semantics
-constant ValuationLoss :
+axiom ValuationLoss :
   DerivedValuation → DerivedValuation → Prop
-constant AutonomyLoss :
+axiom AutonomyLoss :
   AutonomyValuation → AutonomyValuation → Prop
-constant AutonomyFragility :
+axiom AutonomyFragility :
   AutonomyValuation → Prop
 
 -- Irreversibility and hysteresis
-constant ValuationIrreversibility :
+axiom ValuationIrreversibility :
   DerivedValuation → Prop
-constant AutonomyIrreversibility :
+axiom AutonomyIrreversibility :
   AutonomyValuation → Prop
-constant AutonomyHysteresis :
+axiom AutonomyHysteresis :
   AutonomyValuation → Prop
 
 -- Response effects on valuation
-constant ResponseAffectsValuation :
+axiom ResponseAffectsValuation :
   Response → DerivedValuation → Prop
-constant ResponseAffectsAutonomy :
+axiom ResponseAffectsAutonomy :
   Response → AutonomyValuation → Prop
 
 -- Thresholds and collapse
-constant AutonomyThreshold :
+axiom AutonomyThreshold :
   AutonomyValuation → Prop
-constant AutonomyCollapse :
+axiom AutonomyCollapse :
   AutonomyValuation → Prop
 
 -- Comparability
-constant ValuationComparable :
+axiom ValuationComparable :
   DerivedValuation → DerivedValuation → Prop
-constant AutonomyComparable :
+axiom AutonomyComparable :
   AutonomyValuation → AutonomyValuation → Prop
 
 -- Compliance with prior layers
-constant ValuationAdmissible :
+axiom ValuationAdmissible :
   DerivedValuation → Prop
-constant ValuationRespectsMonotonicity :
+axiom ValuationRespectsMonotonicity :
   DerivedValuation → Prop
-constant ValuationRespectsIndependence :
+axiom ValuationRespectsIndependence :
   DerivedValuation → Prop
 
 -- Derived valuation non-implication firewalls
-constant ValuationDoesNotImplyLegitimacy : Prop
-constant ValuationDoesNotImplyAuthority : Prop
-constant ValuationDoesNotImplyIntervention : Prop
-constant ValuationDoesNotImplyMorality : Prop
+axiom ValuationDoesNotImplyLegitimacy : Prop
+axiom ValuationDoesNotImplyAuthority : Prop
+axiom ValuationDoesNotImplyIntervention : Prop
+axiom ValuationDoesNotImplyMorality : Prop
 
 -- Scope and contract
-constant ValuationScope : Prop
-constant DerivedValuationsContract : Prop
+axiom ValuationScope : Prop
+axiom DerivedValuationsContract : Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -458,67 +505,67 @@ constant DerivedValuationsContract : Prop
 -/
 
 -- Core standing valuation entities
-constant StandingValuation : Type
-constant StandingState :
+axiom StandingValuation : Type
+axiom StandingState :
   Agent → State → StandingValuation
-constant StandingLevel :
+axiom StandingLevel :
   StandingValuation → Val
 
 -- Structural dependencies of standing valuation
-constant StandingDependsOnMeasure :
+axiom StandingDependsOnMeasure :
   StandingValuation → Measure → Prop
-constant StandingDependsOnResponse :
+axiom StandingDependsOnResponse :
   StandingValuation → Response → Prop
-constant StandingDependsOnContext :
+axiom StandingDependsOnContext :
   StandingValuation → Prop
 
 -- Aggregation semantics
-constant StandingAggregation :
+axiom StandingAggregation :
   StandingValuation → StandingValuation → StandingValuation → Prop
 
 -- Loss and degradation semantics
-constant StandingLoss :
+axiom StandingLoss :
   StandingValuation → StandingValuation → Prop
-constant StandingFragility :
+axiom StandingFragility :
   StandingValuation → Prop
 
 -- Irreversibility and hysteresis
-constant StandingIrreversibility :
+axiom StandingIrreversibility :
   StandingValuation → Prop
-constant StandingHysteresis :
+axiom StandingHysteresis :
   StandingValuation → Prop
 
 -- Thresholds and collapse
-constant StandingThreshold :
+axiom StandingThreshold :
   StandingValuation → Prop
-constant StandingCollapse :
+axiom StandingCollapse :
   StandingValuation → Prop
 
 -- Comparability
-constant StandingComparable :
+axiom StandingComparable :
   StandingValuation → StandingValuation → Prop
 
 -- Response effects on standing valuation
-constant ResponseAffectsStanding :
+axiom ResponseAffectsStanding :
   Response → StandingValuation → Prop
 
 -- Compliance with prior layers
-constant StandingValuationAdmissible :
+axiom StandingValuationAdmissible :
   StandingValuation → Prop
-constant StandingRespectsMonotonicity :
+axiom StandingRespectsMonotonicity :
   StandingValuation → Prop
-constant StandingRespectsIndependence :
+axiom StandingRespectsIndependence :
   StandingValuation → Prop
 
 -- Standing valuation non-implication firewalls
-constant StandingValuationDoesNotImplyLegitimacy : Prop
-constant StandingValuationDoesNotImplyAuthority : Prop
-constant StandingValuationDoesNotImplyIntervention : Prop
-constant StandingValuationDoesNotImplyMorality : Prop
+axiom StandingValuationDoesNotImplyLegitimacy : Prop
+axiom StandingValuationDoesNotImplyAuthority : Prop
+axiom StandingValuationDoesNotImplyIntervention : Prop
+axiom StandingValuationDoesNotImplyMorality : Prop
 
 -- Scope and contract
-constant StandingValuationScope : Prop
-constant StandingValuationContract : Prop
+axiom StandingValuationScope : Prop
+axiom StandingValuationContract : Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -527,68 +574,68 @@ constant StandingValuationContract : Prop
 -/
 
 -- Core coupling valuation entities
-constant CouplingValuation : Type
-constant CouplingState :
+axiom CouplingValuation : Type
+axiom CouplingState :
   Agent → State → CouplingValuation
-constant CouplingWeight : Type
+axiom CouplingWeight : Type
 
 -- Structural dependencies of coupling valuation
-constant CouplingDependsOnMeasure :
+axiom CouplingDependsOnMeasure :
   CouplingValuation → Measure → Prop
-constant CouplingDependsOnResponse :
+axiom CouplingDependsOnResponse :
   CouplingValuation → Response → Prop
-constant CouplingDependsOnContext :
+axiom CouplingDependsOnContext :
   CouplingValuation → Prop
 
 -- Aggregation semantics
-constant CouplingAggregation :
+axiom CouplingAggregation :
   CouplingValuation → CouplingValuation → CouplingValuation → Prop
 
 -- Loss propagation and modulation
-constant CouplingLossPropagation :
+axiom CouplingLossPropagation :
   CouplingValuation → CouplingValuation → Prop
-constant CouplingAmplification :
+axiom CouplingAmplification :
   CouplingValuation → CouplingValuation → Prop
-constant CouplingDampening :
+axiom CouplingDampening :
   CouplingValuation → CouplingValuation → Prop
 
 -- Irreversibility and hysteresis
-constant CouplingIrreversibility :
+axiom CouplingIrreversibility :
   CouplingValuation → Prop
-constant CouplingHysteresis :
+axiom CouplingHysteresis :
   CouplingValuation → Prop
 
 -- Thresholds and collapse
-constant CouplingThreshold :
+axiom CouplingThreshold :
   CouplingValuation → Prop
-constant CouplingCollapse :
+axiom CouplingCollapse :
   CouplingValuation → Prop
 
 -- Comparability
-constant CouplingComparable :
+axiom CouplingComparable :
   CouplingValuation → CouplingValuation → Prop
 
 -- Response effects on coupling valuation
-constant ResponseAffectsCoupling :
+axiom ResponseAffectsCoupling :
   Response → CouplingValuation → Prop
 
 -- Compliance with prior layers
-constant CouplingValuationAdmissible :
+axiom CouplingValuationAdmissible :
   CouplingValuation → Prop
-constant CouplingRespectsMonotonicity :
+axiom CouplingRespectsMonotonicity :
   CouplingValuation → Prop
-constant CouplingRespectsIndependence :
+axiom CouplingRespectsIndependence :
   CouplingValuation → Prop
 
 -- Coupling valuation non-implication firewalls
-constant CouplingDoesNotImplyLegitimacy : Prop
-constant CouplingDoesNotImplyAuthority : Prop
-constant CouplingDoesNotImplyIntervention : Prop
-constant CouplingDoesNotImplyMorality : Prop
+axiom CouplingDoesNotImplyLegitimacy : Prop
+axiom CouplingDoesNotImplyAuthority : Prop
+axiom CouplingDoesNotImplyIntervention : Prop
+axiom CouplingDoesNotImplyMorality : Prop
 
 -- Scope and contract
-constant CouplingValuationScope : Prop
-constant CouplingValuationContract : Prop
+axiom CouplingValuationScope : Prop
+axiom CouplingValuationContract : Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -597,69 +644,69 @@ constant CouplingValuationContract : Prop
 -/
 
 -- Core exit cost valuation entities
-constant ExitCostValuation : Type
-constant ExitCostState :
+axiom ExitCostValuation : Type
+axiom ExitCostState :
   Agent → State → ExitCostValuation
-constant ExitCostLevel :
+axiom ExitCostLevel :
   ExitCostValuation → Val
 
 -- Structural dependencies of exit cost valuation
-constant ExitCostDependsOnMeasure :
+axiom ExitCostDependsOnMeasure :
   ExitCostValuation → Measure → Prop
-constant ExitCostDependsOnResponse :
+axiom ExitCostDependsOnResponse :
   ExitCostValuation → Response → Prop
-constant ExitCostDependsOnContext :
+axiom ExitCostDependsOnContext :
   ExitCostValuation → Prop
 
 -- Aggregation and accumulation semantics
-constant ExitCostAggregation :
+axiom ExitCostAggregation :
   ExitCostValuation → ExitCostValuation → ExitCostValuation → Prop
-constant ExitCostAccumulation :
+axiom ExitCostAccumulation :
   ExitCostValuation → ExitCostValuation → Prop
 
 -- Loss and fragility semantics
-constant ExitCostLoss :
+axiom ExitCostLoss :
   ExitCostValuation → ExitCostValuation → Prop
-constant ExitCostFragility :
+axiom ExitCostFragility :
   ExitCostValuation → Prop
 
 -- Irreversibility and hysteresis
-constant ExitCostIrreversibility :
+axiom ExitCostIrreversibility :
   ExitCostValuation → Prop
-constant ExitCostHysteresis :
+axiom ExitCostHysteresis :
   ExitCostValuation → Prop
 
 -- Thresholds and collapse
-constant ExitCostThreshold :
+axiom ExitCostThreshold :
   ExitCostValuation → Prop
-constant ExitCostCollapse :
+axiom ExitCostCollapse :
   ExitCostValuation → Prop
 
 -- Comparability
-constant ExitCostComparable :
+axiom ExitCostComparable :
   ExitCostValuation → ExitCostValuation → Prop
 
 -- Response effects on exit cost valuation
-constant ResponseAffectsExitCost :
+axiom ResponseAffectsExitCost :
   Response → ExitCostValuation → Prop
 
 -- Compliance with prior layers
-constant ExitCostValuationAdmissible :
+axiom ExitCostValuationAdmissible :
   ExitCostValuation → Prop
-constant ExitCostRespectsMonotonicity :
+axiom ExitCostRespectsMonotonicity :
   ExitCostValuation → Prop
-constant ExitCostRespectsIndependence :
+axiom ExitCostRespectsIndependence :
   ExitCostValuation → Prop
 
 -- Exit cost valuation non-implication firewalls
-constant ExitCostDoesNotImplyLegitimacy : Prop
-constant ExitCostDoesNotImplyAuthority : Prop
-constant ExitCostDoesNotImplyIntervention : Prop
-constant ExitCostDoesNotImplyMorality : Prop
+axiom ExitCostDoesNotImplyLegitimacy : Prop
+axiom ExitCostDoesNotImplyAuthority : Prop
+axiom ExitCostDoesNotImplyIntervention : Prop
+axiom ExitCostDoesNotImplyMorality : Prop
 
 -- Scope and contract
-constant ExitCostValuationScope : Prop
-constant ExitCostValuationContract : Prop
+axiom ExitCostValuationScope : Prop
+axiom ExitCostValuationContract : Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -668,92 +715,92 @@ constant ExitCostValuationContract : Prop
 -/
 
 -- Core perceptual valuation entities
-constant PerceptionValuation : Type
-constant PerceptionState :
+axiom PerceptionValuation : Type
+axiom PerceptionState :
   Agent → State → PerceptionValuation
-constant PerceptionLevel :
+axiom PerceptionLevel :
   PerceptionValuation → Val
 
 -- Perceptual agreement structures (agreement is valuated, not perception)
-constant PerceptualAgreement : Type
-constant InternalPerceptualAgreement :
+axiom PerceptualAgreement : Type
+axiom InternalPerceptualAgreement :
   PerceptualAgreement → Prop        -- iPFA
-constant ExternalPerceptualAgreement :
+axiom ExternalPerceptualAgreement :
   PerceptualAgreement → Prop        -- PFA
 
 -- Agreement stabilization
-constant AgreementStabilizedByEvidence :
+axiom AgreementStabilizedByEvidence :
   PerceptualAgreement → Prop        -- non-parochial evidence
 
 -- Structural dependencies of perceptual valuation
-constant PerceptionDependsOnMeasure :
+axiom PerceptionDependsOnMeasure :
   PerceptionValuation → Measure → Prop
-constant PerceptionDependsOnResponse :
+axiom PerceptionDependsOnResponse :
   PerceptionValuation → Response → Prop
-constant PerceptionDependsOnContext :
+axiom PerceptionDependsOnContext :
   PerceptionValuation → Prop
-constant PerceptionDependsOnCoupling :
+axiom PerceptionDependsOnCoupling :
   PerceptionValuation → CouplingValuation → Prop
 
 -- Aggregation semantics
-constant PerceptionAggregation :
+axiom PerceptionAggregation :
   PerceptionValuation → PerceptionValuation → PerceptionValuation → Prop
 
 -- Loss, divergence, and disagreement
-constant PerceptionLoss :
+axiom PerceptionLoss :
   PerceptionValuation → PerceptionValuation → Prop
-constant PerceptionDivergence :
+axiom PerceptionDivergence :
   PerceptionValuation → PerceptionValuation → Prop
-constant PerceptualDisagreement :
+axiom PerceptualDisagreement :
   PerceptualAgreement → PerceptualAgreement → Prop
-constant AgreementMisalignment :
+axiom AgreementMisalignment :
   PerceptualAgreement → PerceptualAgreement → Prop   -- iPFA vs PFA
-constant PerceptionFragility :
+axiom PerceptionFragility :
   PerceptionValuation → Prop
 
 -- Irreversibility and hysteresis
-constant PerceptionIrreversibility :
+axiom PerceptionIrreversibility :
   PerceptionValuation → Prop
-constant PerceptionHysteresis :
+axiom PerceptionHysteresis :
   PerceptionValuation → Prop
 
 -- Thresholds and collapse
-constant PerceptionThreshold :
+axiom PerceptionThreshold :
   PerceptionValuation → Prop
-constant PerceptionCollapse :
+axiom PerceptionCollapse :
   PerceptionValuation → Prop
 
 -- Comparability
-constant PerceptionComparable :
+axiom PerceptionComparable :
   PerceptionValuation → PerceptionValuation → Prop
-constant PerceptionComparableUnderAgreement :
+axiom PerceptionComparableUnderAgreement :
   PerceptionValuation → PerceptionValuation → PerceptualAgreement → Prop
 
 -- Response effects
-constant ResponseAffectsPerceptualAgreement :
+axiom ResponseAffectsPerceptualAgreement :
   Response → PerceptualAgreement → Prop
-constant ResponseAffectsPerceptionValuation :
+axiom ResponseAffectsPerceptionValuation :
   Response → PerceptionValuation → Prop
 
 -- Compliance with prior layers
-constant PerceptionValuationAdmissible :
+axiom PerceptionValuationAdmissible :
   PerceptionValuation → Prop
-constant PerceptionRespectsMonotonicity :
+axiom PerceptionRespectsMonotonicity :
   PerceptionValuation → Prop
-constant PerceptionRespectsIndependence :
+axiom PerceptionRespectsIndependence :
   PerceptionValuation → Prop
 
 -- Perceptual valuation non-implication firewalls
-constant PerceptionDoesNotImplyTruth : Prop
-constant PerceptionDoesNotImplyError : Prop
-constant PerceptionDoesNotImplyLegitimacy : Prop
-constant PerceptionDoesNotImplyAuthority : Prop
-constant PerceptionDoesNotImplyIntervention : Prop
-constant PerceptionDoesNotImplyMorality : Prop
+axiom PerceptionDoesNotImplyTruth : Prop
+axiom PerceptionDoesNotImplyError : Prop
+axiom PerceptionDoesNotImplyLegitimacy : Prop
+axiom PerceptionDoesNotImplyAuthority : Prop
+axiom PerceptionDoesNotImplyIntervention : Prop
+axiom PerceptionDoesNotImplyMorality : Prop
 
 -- Scope and contract
-constant PerceptionValuationScope : Prop
-constant PerceptionValuationContract : Prop
+axiom PerceptionValuationScope : Prop
+axiom PerceptionValuationContract : Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -762,113 +809,112 @@ constant PerceptionValuationContract : Prop
 -/
 
 -- Core capacity valuation entities
-constant CapacityValuation : Type
-constant CapacityState :
+axiom CapacityValuation : Type
+axiom CapacityState :
   Agent → State → CapacityValuation
-constant CapacityLevel :
+axiom CapacityLevel :
   CapacityValuation → Val
 
 -- Capacity agreement structures
-constant CapacityAgreement : Type
-constant InternalCapacityAgreement :
+axiom CapacityAgreement : Type
+axiom InternalCapacityAgreement :
   CapacityAgreement → Prop
-constant ExternalCapacityAgreement :
+axiom ExternalCapacityAgreement :
   CapacityAgreement → Prop
 
 -- Agreement stabilization
-constant CapacityAgreementStabilizedByEvidence :
+axiom CapacityAgreementStabilizedByEvidence :
   CapacityAgreement → Prop
 
 -- Structural dependencies of capacity valuation
-constant CapacityDependsOnMeasure :
+axiom CapacityDependsOnMeasure :
   CapacityValuation → Measure → Prop
-constant CapacityDependsOnResponse :
+axiom CapacityDependsOnResponse :
   CapacityValuation → Response → Prop
-constant CapacityDependsOnContext :
+axiom CapacityDependsOnContext :
   CapacityValuation → Prop
-constant CapacityDependsOnCoupling :
+axiom CapacityDependsOnCoupling :
   CapacityValuation → CouplingValuation → Prop
-constant CapacityDependsOnPerceptionValuation :
+axiom CapacityDependsOnPerceptionValuation :
   CapacityValuation → PerceptionValuation → Prop
 
 -- Aggregation, load, and constraint semantics
-constant CapacityAggregation :
+axiom CapacityAggregation :
   CapacityValuation → CapacityValuation → CapacityValuation → Prop
-constant CapacityLoad :
+axiom CapacityLoad :
   CapacityValuation → Prop
-constant CapacityConsumption :
+axiom CapacityConsumption :
   CapacityValuation → CapacityValuation → Prop
-constant CapacitySaturation :
+axiom CapacitySaturation :
   CapacityValuation → Prop
 
 -- Capacity-progress (ratchet) boundary
-constant CapacityProgressOption : Type
-constant CapacityProgressOptionSet :
-  CapacityProgressOption → Prop
-constant CapacityProgressAvailable :
+axiom CapacityProgressOption : Type
+axiom CapacityProgressOptionSet : Type
+axiom CapacityProgressAvailable :
   CapacityProgressOptionSet → Prop
-constant CapacityProgressWithinScope :
+axiom CapacityProgressWithinScope :
   CapacityProgressOptionSet → Prop
-constant CapacityProgressEndorsable :
+axiom CapacityProgressEndorsable :
   CapacityProgressOptionSet → Prop
-constant CapacityProgressRequiredForNonDomination :
+axiom CapacityProgressRequiredForNonDomination :
   CapacityProgressOptionSet → Prop
-constant CapacityNonProgressOutOfScopeWhenProgressAvailable :
+axiom CapacityNonProgressOutOfScopeWhenProgressAvailable :
   CapacityProgressOptionSet → Prop
-constant CapacityOmissionMaintainsConstraint :
+axiom CapacityOmissionMaintainsConstraint :
   CapacityProgressOptionSet → Prop
 
 -- Loss, divergence, and fragility
-constant CapacityLoss :
+axiom CapacityLoss :
   CapacityValuation → CapacityValuation → Prop
-constant CapacityDivergence :
+axiom CapacityDivergence :
   CapacityValuation → CapacityValuation → Prop
-constant CapacityFragility :
+axiom CapacityFragility :
   CapacityValuation → Prop
 
 -- Irreversibility and hysteresis
-constant CapacityIrreversibility :
+axiom CapacityIrreversibility :
   CapacityValuation → Prop
-constant CapacityHysteresis :
+axiom CapacityHysteresis :
   CapacityValuation → Prop
 
 -- Thresholds and collapse
-constant CapacityThreshold :
+axiom CapacityThreshold :
   CapacityValuation → Prop
-constant CapacityCollapse :
+axiom CapacityCollapse :
   CapacityValuation → Prop
 
 -- Comparability
-constant CapacityComparable :
+axiom CapacityComparable :
   CapacityValuation → CapacityValuation → Prop
-constant CapacityComparableUnderAgreement :
+axiom CapacityComparableUnderAgreement :
   CapacityValuation → CapacityValuation → CapacityAgreement → Prop
 
 -- Response effects
-constant ResponseAffectsCapacityAgreement :
+axiom ResponseAffectsCapacityAgreement :
   Response → CapacityAgreement → Prop
-constant ResponseAffectsCapacityValuation :
+axiom ResponseAffectsCapacityValuation :
   Response → CapacityValuation → Prop
 
 -- Compliance with prior layers
-constant CapacityValuationAdmissible :
+axiom CapacityValuationAdmissible :
   CapacityValuation → Prop
-constant CapacityRespectsMonotonicity :
+axiom CapacityRespectsMonotonicity :
   CapacityValuation → Prop
-constant CapacityRespectsIndependence :
+axiom CapacityRespectsIndependence :
   CapacityValuation → Prop
 
 -- Capacity valuation non-implication firewalls
-constant CapacityDoesNotImplyCompetence : Prop
-constant CapacityDoesNotImplyLegitimacy : Prop
-constant CapacityDoesNotImplyAuthority : Prop
-constant CapacityDoesNotImplyIntervention : Prop
-constant CapacityDoesNotImplyMorality : Prop
-constant CapacityProgressBoundaryDoesNotImplySelection : Prop
+axiom CapacityDoesNotImplyCompetence : Prop
+axiom CapacityDoesNotImplyLegitimacy : Prop
+axiom CapacityDoesNotImplyAuthority : Prop
+axiom CapacityDoesNotImplyIntervention : Prop
+axiom CapacityDoesNotImplyMorality : Prop
+axiom CapacityProgressBoundaryDoesNotImplySelection : Prop
 
 -- Scope and contract
-constant CapacityValuationScope : Prop
-constant CapacityValuationContract : Prop
+axiom CapacityValuationScope : Prop
+axiom CapacityValuationContract : Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -877,124 +923,122 @@ constant CapacityValuationContract : Prop
 -/
 
 -- Core transformability valuation entities
-constant TransformabilityValuation : Type
-constant TransformabilityState :
+axiom TransformabilityValuation : Type
+axiom TransformabilityState :
   Agent → State → TransformabilityValuation
-constant TransformabilityLevel :
+axiom TransformabilityLevel :
   TransformabilityValuation → Val
 
 -- Transformability agreement structures
-constant TransformabilityAgreement : Type
-constant InternalTransformabilityAgreement :
+axiom TransformabilityAgreement : Type
+axiom InternalTransformabilityAgreement :
   TransformabilityAgreement → Prop
-constant ExternalTransformabilityAgreement :
+axiom ExternalTransformabilityAgreement :
   TransformabilityAgreement → Prop
 
 -- Agreement stabilization
-constant TransformabilityAgreementStabilizedByEvidence :
+axiom TransformabilityAgreementStabilizedByEvidence :
   TransformabilityAgreement → Prop
 
 -- Structural dependencies of transformability valuation
-constant TransformabilityDependsOnOperation :
+axiom TransformabilityDependsOnOperation :
   TransformabilityValuation → Operation → Prop
-constant TransformabilityDependsOnMeasure :
+axiom TransformabilityDependsOnMeasure :
   TransformabilityValuation → Measure → Prop
-constant TransformabilityDependsOnResponse :
+axiom TransformabilityDependsOnResponse :
   TransformabilityValuation → Response → Prop
-constant TransformabilityDependsOnContext :
+axiom TransformabilityDependsOnContext :
   TransformabilityValuation → Prop
-constant TransformabilityDependsOnCoupling :
+axiom TransformabilityDependsOnCoupling :
   TransformabilityValuation → CouplingValuation → Prop
-constant TransformabilityDependsOnCapacityValuation :
+axiom TransformabilityDependsOnCapacityValuation :
   TransformabilityValuation → CapacityValuation → Prop
-constant TransformabilityDependsOnPerceptionValuation :
+axiom TransformabilityDependsOnPerceptionValuation :
   TransformabilityValuation → PerceptionValuation → Prop
 
 -- Aggregation and composability semantics
-constant TransformabilityAggregation :
+axiom TransformabilityAggregation :
   TransformabilityValuation → TransformabilityValuation → TransformabilityValuation → Prop
-constant TransformabilityComposability :
+axiom TransformabilityComposability :
   TransformabilityValuation → Prop
-constant TransformabilityDecomposability :
+axiom TransformabilityDecomposability :
   TransformabilityValuation → Prop
 
 -- Operation availability and scope
-constant TransformabilityOperationAvailable :
+axiom TransformabilityOperationAvailable :
   Operation → Prop
-constant TransformabilityOperationSet :
-  Operation → Prop
-constant TransformabilityOperationWithinScope :
+axiom TransformabilityOperationSet : Type
+axiom TransformabilityOperationWithinScope :
   TransformabilityOperationSet → Prop
 
 -- Loss, divergence, and fragility
-constant TransformabilityLoss :
+axiom TransformabilityLoss :
   TransformabilityValuation → TransformabilityValuation → Prop
-constant TransformabilityDivergence :
+axiom TransformabilityDivergence :
   TransformabilityValuation → TransformabilityValuation → Prop
-constant TransformabilityFragility :
+axiom TransformabilityFragility :
   TransformabilityValuation → Prop
 
 -- Irreversibility and hysteresis
-constant TransformabilityIrreversibility :
+axiom TransformabilityIrreversibility :
   TransformabilityValuation → Prop
-constant TransformabilityHysteresis :
+axiom TransformabilityHysteresis :
   TransformabilityValuation → Prop
 
 -- Thresholds and collapse
-constant TransformabilityThreshold :
+axiom TransformabilityThreshold :
   TransformabilityValuation → Prop
-constant TransformabilityCollapse :
+axiom TransformabilityCollapse :
   TransformabilityValuation → Prop
 
 -- Comparability
-constant TransformabilityComparable :
+axiom TransformabilityComparable :
   TransformabilityValuation → TransformabilityValuation → Prop
-constant TransformabilityComparableUnderAgreement :
+axiom TransformabilityComparableUnderAgreement :
   TransformabilityValuation → TransformabilityValuation → TransformabilityAgreement → Prop
 
 -- Response effects
-constant ResponseAffectsTransformabilityAgreement :
+axiom ResponseAffectsTransformabilityAgreement :
   Response → TransformabilityAgreement → Prop
-constant ResponseAffectsTransformabilityValuation :
+axiom ResponseAffectsTransformabilityValuation :
   Response → TransformabilityValuation → Prop
 
 -- Transformability-progress (ratchet) boundary
-constant TransformabilityProgressOption : Type
-constant TransformabilityProgressOptionSet :
-  TransformabilityProgressOption → Prop
-constant TransformabilityProgressAvailable :
+axiom TransformabilityProgressOption : Type
+axiom TransformabilityProgressOptionSet : Type
+axiom TransformabilityProgressAvailable :
   TransformabilityProgressOptionSet → Prop
-constant TransformabilityProgressWithinScope :
+axiom TransformabilityProgressWithinScope :
   TransformabilityProgressOptionSet → Prop
-constant TransformabilityProgressEndorsable :
+axiom TransformabilityProgressEndorsable :
   TransformabilityProgressOptionSet → Prop
-constant TransformabilityProgressRequiredForNonDomination :
+axiom TransformabilityProgressRequiredForNonDomination :
   TransformabilityProgressOptionSet → Prop
-constant TransformabilityNonProgressOutOfScopeWhenProgressAvailable :
+axiom TransformabilityNonProgressOutOfScopeWhenProgressAvailable :
   TransformabilityProgressOptionSet → Prop
-constant TransformabilityOmissionMaintainsConstraint :
+axiom TransformabilityOmissionMaintainsConstraint :
   TransformabilityProgressOptionSet → Prop
 
 -- Compliance with prior layers
-constant TransformabilityValuationAdmissible :
+axiom TransformabilityValuationAdmissible :
   TransformabilityValuation → Prop
-constant TransformabilityRespectsMonotonicity :
+axiom TransformabilityRespectsMonotonicity :
   TransformabilityValuation → Prop
-constant TransformabilityRespectsIndependence :
+axiom TransformabilityRespectsIndependence :
   TransformabilityValuation → Prop
 
 -- Transformability valuation non-implication firewalls
-constant TransformabilityDoesNotImplyCreativity : Prop
-constant TransformabilityDoesNotImplyCompetence : Prop
-constant TransformabilityDoesNotImplyLegitimacy : Prop
-constant TransformabilityDoesNotImplyAuthority : Prop
-constant TransformabilityDoesNotImplyIntervention : Prop
-constant TransformabilityDoesNotImplyMorality : Prop
-constant TransformabilityProgressBoundaryDoesNotImplySelection : Prop
+axiom TransformabilityDoesNotImplyCreativity : Prop
+axiom TransformabilityDoesNotImplyCompetence : Prop
+axiom TransformabilityDoesNotImplyLegitimacy : Prop
+axiom TransformabilityDoesNotImplyAuthority : Prop
+axiom TransformabilityDoesNotImplyIntervention : Prop
+axiom TransformabilityDoesNotImplyMorality : Prop
+axiom TransformabilityProgressBoundaryDoesNotImplySelection : Prop
 
 -- Scope and contract
-constant TransformabilityValuationScope : Prop
-constant TransformabilityValuationContract : Prop
+axiom TransformabilityValuationScope : Prop
+axiom TransformabilityValuationContract : Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -1003,115 +1047,115 @@ constant TransformabilityValuationContract : Prop
 -/
 
 -- Core risk valuation entities
-constant RiskValuation : Type
-constant RiskState :
+axiom RiskValuation : Type
+axiom RiskState :
   Agent → State → RiskValuation
-constant RiskLevel :
+axiom RiskLevel :
   RiskValuation → Val
 
 -- Risk agreement structures
-constant RiskAgreement : Type
-constant InternalRiskAgreement :
+axiom RiskAgreement : Type
+axiom InternalRiskAgreement :
   RiskAgreement → Prop
-constant ExternalRiskAgreement :
+axiom ExternalRiskAgreement :
   RiskAgreement → Prop
 
 -- Agreement stabilization
-constant RiskAgreementStabilizedByEvidence :
+axiom RiskAgreementStabilizedByEvidence :
   RiskAgreement → Prop
 
 -- Structural dependencies of risk valuation
-constant RiskDependsOnMeasure :
+axiom RiskDependsOnMeasure :
   RiskValuation → Measure → Prop
-constant RiskDependsOnResponse :
+axiom RiskDependsOnResponse :
   RiskValuation → Response → Prop
-constant RiskDependsOnContext :
+axiom RiskDependsOnContext :
   RiskValuation → Prop
-constant RiskDependsOnCoupling :
+axiom RiskDependsOnCoupling :
   RiskValuation → CouplingValuation → Prop
-constant RiskDependsOnCapacityValuation :
+axiom RiskDependsOnCapacityValuation :
   RiskValuation → CapacityValuation → Prop
-constant RiskDependsOnTransformabilityValuation :
+axiom RiskDependsOnTransformabilityValuation :
   RiskValuation → TransformabilityValuation → Prop
-constant RiskDependsOnPerceptualValuation :
+axiom RiskDependsOnPerceptualValuation :
   RiskValuation → PerceptionValuation → Prop
 
 -- Aggregation semantics
-constant RiskAggregation :
+axiom RiskAggregation :
   RiskValuation → RiskValuation → RiskValuation → Prop
 
 -- Exposure, load, and accumulation
-constant RiskExposure :
+axiom RiskExposure :
   RiskValuation → Prop
-constant RiskLoad :
+axiom RiskLoad :
   RiskValuation → Prop
-constant RiskAccumulation :
+axiom RiskAccumulation :
   RiskValuation → RiskValuation → Prop
 
 -- Inheritance and transfer
-constant RiskInheritance :
+axiom RiskInheritance :
   RiskValuation → RiskValuation → Prop
-constant RiskTransfer :
+axiom RiskTransfer :
   RiskValuation → RiskValuation → Prop
 
 -- Propagation and modulation
-constant RiskPropagation :
+axiom RiskPropagation :
   RiskValuation → RiskValuation → Prop
-constant RiskAmplification :
+axiom RiskAmplification :
   RiskValuation → RiskValuation → Prop
-constant RiskDampening :
+axiom RiskDampening :
   RiskValuation → RiskValuation → Prop
 
 -- Loss and fragility
-constant RiskLoss :
+axiom RiskLoss :
   RiskValuation → RiskValuation → Prop
-constant RiskFragility :
+axiom RiskFragility :
   RiskValuation → Prop
 
 -- Irreversibility and hysteresis
-constant RiskIrreversibility :
+axiom RiskIrreversibility :
   RiskValuation → Prop
-constant RiskHysteresis :
+axiom RiskHysteresis :
   RiskValuation → Prop
 
 -- Thresholds and collapse
-constant RiskThreshold :
+axiom RiskThreshold :
   RiskValuation → Prop
-constant RiskCollapse :
+axiom RiskCollapse :
   RiskValuation → Prop
 
 -- Comparability
-constant RiskComparable :
+axiom RiskComparable :
   RiskValuation → RiskValuation → Prop
-constant RiskComparableUnderAgreement :
+axiom RiskComparableUnderAgreement :
   RiskValuation → RiskValuation → RiskAgreement → Prop
 
 -- Response effects
-constant ResponseAffectsRiskAgreement :
+axiom ResponseAffectsRiskAgreement :
   Response → RiskAgreement → Prop
-constant ResponseAffectsRiskValuation :
+axiom ResponseAffectsRiskValuation :
   Response → RiskValuation → Prop
 
 -- Compliance with prior layers
-constant RiskValuationAdmissible :
+axiom RiskValuationAdmissible :
   RiskValuation → Prop
-constant RiskRespectsMonotonicity :
+axiom RiskRespectsMonotonicity :
   RiskValuation → Prop
-constant RiskRespectsIndependence :
+axiom RiskRespectsIndependence :
   RiskValuation → Prop
 
 -- Risk valuation non-implication firewalls
-constant RiskDoesNotImplyFault : Prop
-constant RiskDoesNotImplyCulpability : Prop
-constant RiskDoesNotImplyLegitimacy : Prop
-constant RiskDoesNotImplyAuthority : Prop
-constant RiskDoesNotImplyIntervention : Prop
-constant RiskDoesNotImplyMorality : Prop
-constant RiskDoesNotImplyProbabilityBelief : Prop
+axiom RiskDoesNotImplyFault : Prop
+axiom RiskDoesNotImplyCulpability : Prop
+axiom RiskDoesNotImplyLegitimacy : Prop
+axiom RiskDoesNotImplyAuthority : Prop
+axiom RiskDoesNotImplyIntervention : Prop
+axiom RiskDoesNotImplyMorality : Prop
+axiom RiskDoesNotImplyProbabilityBelief : Prop
 
 -- Scope and contract
-constant RiskValuationScope : Prop
-constant RiskValuationContract : Prop
+axiom RiskValuationScope : Prop
+axiom RiskValuationContract : Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -1119,124 +1163,86 @@ constant RiskValuationContract : Prop
 ------------------------------------------------------------------------------
 -/
 
--- Core autonomy valuation entities
-constant AutonomyValuation : Type
-constant AutonomyState :
-  Agent → State → AutonomyValuation
-constant AutonomyLevel :
-  AutonomyValuation → Val
-
 -- Autonomy agreement structures
-constant AutonomyAgreement : Type
-constant InternalAutonomyAgreement :
+axiom AutonomyAgreement : Type
+axiom InternalAutonomyAgreement :
   AutonomyAgreement → Prop
-constant ExternalAutonomyAgreement :
+axiom ExternalAutonomyAgreement :
   AutonomyAgreement → Prop
 
 -- Agreement stabilization
-constant AutonomyAgreementStabilizedByEvidence :
+axiom AutonomyAgreementStabilizedByEvidence :
   AutonomyAgreement → Prop
 
--- Structural dependencies of autonomy valuation
-constant AutonomyDependsOnMeasure :
-  AutonomyValuation → Measure → Prop
-constant AutonomyDependsOnResponse :
-  AutonomyValuation → Response → Prop
-constant AutonomyDependsOnContext :
-  AutonomyValuation → Prop
-constant AutonomyDependsOnPerceptualValuation :
+axiom AutonomyDependsOnPerceptualValuation :
   AutonomyValuation → PerceptionValuation → Prop
-constant AutonomyDependsOnCapacityValuation :
+axiom AutonomyDependsOnCapacityValuation :
   AutonomyValuation → CapacityValuation → Prop
-constant AutonomyDependsOnTransformabilityValuation :
+axiom AutonomyDependsOnTransformabilityValuation :
   AutonomyValuation → TransformabilityValuation → Prop
-constant AutonomyDependsOnRiskValuation :
+axiom AutonomyDependsOnRiskValuation :
   AutonomyValuation → RiskValuation → Prop
-constant AutonomyDependsOnExitCostValuation :
+axiom AutonomyDependsOnExitCostValuation :
   AutonomyValuation → ExitCostValuation → Prop
-constant AutonomyDependsOnCouplingValuation :
+axiom AutonomyDependsOnCouplingValuation :
   AutonomyValuation → CouplingValuation → Prop
 
--- Aggregation semantics
-constant AutonomyAggregation :
-  AutonomyValuation → AutonomyValuation → AutonomyValuation → Prop
-
 -- Loss, erosion, and fragility
-constant AutonomyLoss :
-  AutonomyValuation → AutonomyValuation → Prop
-constant AutonomyErosion :
-  AutonomyValuation → Prop
-constant AutonomyFragility :
-  AutonomyValuation → Prop
+axiom AutonomyErosion : AutonomyValuation → Prop
 
 -- Propagation and modulation
-constant AutonomyPropagation :
+axiom AutonomyPropagation :
   AutonomyValuation → AutonomyValuation → Prop
-constant AutonomyAmplification :
+axiom AutonomyAmplification :
   AutonomyValuation → AutonomyValuation → Prop
-constant AutonomyDampening :
+axiom AutonomyDampening :
   AutonomyValuation → AutonomyValuation → Prop
-
--- Irreversibility and hysteresis
-constant AutonomyIrreversibility :
-  AutonomyValuation → Prop
-constant AutonomyHysteresis :
-  AutonomyValuation → Prop
-
--- Thresholds and collapse
-constant AutonomyThreshold :
-  AutonomyValuation → Prop
-constant AutonomyCollapse :
-  AutonomyValuation → Prop
 
 -- Comparability
-constant AutonomyComparable :
-  AutonomyValuation → AutonomyValuation → Prop
-constant AutonomyComparableUnderAgreement :
+axiom AutonomyComparableUnderAgreement :
   AutonomyValuation → AutonomyValuation → AutonomyAgreement → Prop
 
 -- Response effects
-constant ResponseAffectsAutonomyAgreement :
+axiom ResponseAffectsAutonomyAgreement :
   Response → AutonomyAgreement → Prop
-constant ResponseAffectsAutonomyValuation :
+axiom ResponseAffectsAutonomyValuation :
   Response → AutonomyValuation → Prop
 
 -- Autonomy-progress (ratchet) boundary
-constant AutonomyProgressOption : Type
-constant AutonomyProgressOptionSet :
-  AutonomyProgressOption → Prop
-constant AutonomyProgressAvailable :
+axiom AutonomyProgressOption : Type
+axiom AutonomyProgressOptionSet : Type
+axiom AutonomyProgressAvailable :
   AutonomyProgressOptionSet → Prop
-constant AutonomyProgressWithinScope :
+axiom AutonomyProgressWithinScope :
   AutonomyProgressOptionSet → Prop
-constant AutonomyProgressEndorsable :
+axiom AutonomyProgressEndorsable :
   AutonomyProgressOptionSet → Prop
-constant AutonomyProgressRequiredForNonDomination :
+axiom AutonomyProgressRequiredForNonDomination :
   AutonomyProgressOptionSet → Prop
-constant AutonomyNonProgressOutOfScopeWhenProgressAvailable :
+axiom AutonomyNonProgressOutOfScopeWhenProgressAvailable :
   AutonomyProgressOptionSet → Prop
-constant AutonomyOmissionMaintainsConstraint :
+axiom AutonomyOmissionMaintainsConstraint :
   AutonomyProgressOptionSet → Prop
 
 -- Compliance with prior layers
-constant AutonomyValuationAdmissible :
+axiom AutonomyValuationAdmissible :
   AutonomyValuation → Prop
-constant AutonomyRespectsMonotonicity :
+axiom AutonomyRespectsMonotonicity :
   AutonomyValuation → Prop
-constant AutonomyRespectsIndependence :
+axiom AutonomyRespectsIndependence :
   AutonomyValuation → Prop
 
 -- Autonomy valuation non-implication firewalls
-constant AutonomyDoesNotImplyConsent : Prop
-constant AutonomyDoesNotImplyLegitimacy : Prop
-constant AutonomyDoesNotImplyAuthority : Prop
-constant AutonomyDoesNotImplyIntervention : Prop
-constant AutonomyDoesNotImplyMorality : Prop
-constant AutonomyProgressBoundaryDoesNotImplySelection : Prop
+axiom AutonomyDoesNotImplyConsent : Prop
+axiom AutonomyDoesNotImplyLegitimacy : Prop
+axiom AutonomyDoesNotImplyAuthority : Prop
+axiom AutonomyDoesNotImplyIntervention : Prop
+axiom AutonomyDoesNotImplyMorality : Prop
+axiom AutonomyProgressBoundaryDoesNotImplySelection : Prop
 
 -- Scope and contract
-constant AutonomyValuationScope : Prop
-constant AutonomyValuationContract : Prop
+axiom AutonomyValuationScope : Prop
+axiom AutonomyValuationContract : Prop
 
 
-end SigmaR
+end SigmaR.Valuation.Core

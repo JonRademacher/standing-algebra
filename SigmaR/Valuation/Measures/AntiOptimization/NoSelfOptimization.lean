@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Self Optimization
@@ -13,7 +15,7 @@ self-referential optimization.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication permitting a valuation measure to be
@@ -28,7 +30,4 @@ axiom no_self_optimization :
       GeneratedFromMeasure O M
   )
 
-end SigmaR
-
-
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

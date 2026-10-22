@@ -14,12 +14,12 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 Coupling valuation is explicitly scoped and
 never globally applicable by default.
 -/
-constant CouplingValuationScope : Prop
+axiom CouplingValuationScope : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

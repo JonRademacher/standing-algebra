@@ -14,7 +14,9 @@ valuation measures based solely on superficial type alignment.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 There is no general rule that the domain–codomain structure
@@ -30,5 +32,4 @@ axiom no_implicit_domain_codomain_compatibility :
       CompatibleDomainCodomain M₁ M₂
   )
 
-end SigmaR
-
+end SigmaR.Valuation.WellFormedness

@@ -11,7 +11,9 @@ context used by the agent.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 Different perceptual frames may yield different observables
@@ -22,4 +24,4 @@ axiom observability_is_frame_dependent :
     f₁ ≠ f₂ ∧
     (ObservableInFrame a f₁ s ↔ ¬ ObservableInFrame a f₂ s)
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

@@ -11,7 +11,9 @@ constitute collective perceptual agreement.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication reducing PFA to a conjunction
@@ -24,4 +26,4 @@ axiom ipfa_insufficient_for_pfa :
       (∀ a ∈ G, IPFA a s)
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

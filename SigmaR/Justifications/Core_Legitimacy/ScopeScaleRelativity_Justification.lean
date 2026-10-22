@@ -63,11 +63,11 @@ namespace SigmaR
 
 /-- Predicate: the standing at state `s`
     is evaluated relative to the relevant scope. -/
-constant ScopeSensitive : State → Prop
+axiom ScopeSensitive : State → Prop
 
 /-- Predicate: autonomy claims at state `s`
     are scale‑relative across PFAs. -/
-constant ScaleRelative : State → Prop
+axiom ScaleRelative : State → Prop
 
 /--
 Core legitimacy axiom:

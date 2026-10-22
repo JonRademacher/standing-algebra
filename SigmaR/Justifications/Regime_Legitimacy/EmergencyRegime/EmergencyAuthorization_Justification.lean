@@ -54,7 +54,7 @@ proxy optimization channel.
 namespace SigmaR
 
 /-- Predicate: the operation is emergency‑authorized at state `s`. -/
-constant EmergencyAuthorized : Operation → State → Prop
+axiom EmergencyAuthorized : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Emergency Authorization:
@@ -68,7 +68,7 @@ axiom emergency_authorization_requires_debt :
     Legitimate F →
       ∀ s : State,
         EmergencyAuthorized F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -81,7 +81,7 @@ theorem EmergencyAuthorization_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     EmergencyAuthorized F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hEmerg
   exact emergency_authorization_requires_debt hLeg s hEmerg

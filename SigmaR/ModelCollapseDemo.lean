@@ -90,4 +90,3 @@ theorem exists_model_satisfying_both :
   · exact distinctModel_independent
 
 end ModelCollapseDemo
-``

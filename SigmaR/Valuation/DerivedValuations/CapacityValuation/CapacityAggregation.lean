@@ -19,13 +19,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityAggregation C₁ C₂ C₃ means that capacity valuation C₃
 is an aggregation of capacity valuations C₁ and C₂.
 -/
-constant CapacityAggregation :
+axiom CapacityAggregation :
   CapacityValuation → CapacityValuation → CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Justifications.Core_Legitimacy.CoreConstraintPersistence_Justification
 
 namespace SigmaR
 
@@ -12,7 +13,7 @@ axiom CoreConstraintInvariant :
   ∀ (F G : Operation),
     CoreConstraintsSatisfied F →
     CoreConstraintsSatisfied G →
-    CoreConstraintsSatisfied (G ∘ F)
+    CoreConstraintsSatisfied (composeOp G F)
 
 /--
 Derived theorem:
@@ -23,7 +24,7 @@ theorem CoreConstraintsClosedUnderComposition
   (F G : Operation)
   (hF : CoreConstraintsSatisfied F)
   (hG : CoreConstraintsSatisfied G) :
-  CoreConstraintsSatisfied (G ∘ F) :=
+  CoreConstraintsSatisfied (composeOp G F) :=
 by
   exact CoreConstraintInvariant F G hF hG
 

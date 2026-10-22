@@ -11,7 +11,9 @@ does not by itself establish Perceptual Frame Agreement (PFA).
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting IPFA alone to establish
@@ -24,5 +26,4 @@ axiom ipfa_not_escalate_to_pfa :
       PFA G s
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.Relevance

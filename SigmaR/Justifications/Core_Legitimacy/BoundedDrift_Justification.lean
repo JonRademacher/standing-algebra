@@ -33,9 +33,9 @@ standing is at most one unit in either direction.
 This encodes the absolute bound:
   |σ (apply F s) a − σ s a| ≤ 1
 -/
-def DriftBounded (F : Operation) (s : State) (a : Agent) : Prop :=
-  (σ (apply F s) a ≤ σ s a + 1) ∧
-  (σ s a ≤ σ (apply F s) a + 1)
+def DriftBounded (F : Operation) (a : Agent) : Prop :=
+  (σ (apply F a) ≤ σ a + 1) ∧
+  (σ a ≤ σ (apply F a) + 1)
 
 /--
 Tier‑2 legitimacy constraint:
@@ -49,8 +49,8 @@ Theorem 6.13 and the “drift budget” argument in *On Relevance*.
 axiom legit_implies_drift_bounded :
   ∀ {F : Operation},
     Legitimate F →
-    ∀ {s : State} {a : Agent},
-      DriftBounded F s a
+    ∀ {a : Agent},
+      DriftBounded F a
 
 /--
 Bounded Drift is required for legitimacy.
@@ -61,10 +61,10 @@ legitimate coercion.
 theorem BoundedDrift_required_for_legitimacy
   {F : Operation}
   (hLegit : Legitimate F) :
-  ∀ {s : State} {a : Agent},
-    DriftBounded F s a :=
+  ∀ {a : Agent},
+    DriftBounded F a :=
 by
-  intro s a
+  intro a
   exact legit_implies_drift_bounded hLegit
 
 end SigmaR

@@ -18,13 +18,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyAmplification A₁ A₂ means that autonomy valuation A₁
 amplifies the autonomy effects represented by A₂.
 -/
-constant AutonomyAmplification :
+axiom AutonomyAmplification :
   AutonomyValuation → AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

@@ -19,14 +19,14 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityAgreementStabilizedByEvidence A means that
 transformability agreement A is stabilized through
 non-parochial evidence.
 -/
-constant TransformabilityAgreementStabilizedByEvidence :
+axiom TransformabilityAgreementStabilizedByEvidence :
   TransformabilityAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

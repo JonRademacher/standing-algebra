@@ -18,14 +18,14 @@ It prevents illicit violations only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityRespectsMonotonicity T means that
 transformability valuation T does not violate declared
 monotonicity constraints.
 -/
-constant TransformabilityRespectsMonotonicity :
+axiom TransformabilityRespectsMonotonicity :
   TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

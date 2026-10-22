@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Measurement Does Not Imply Optimization
@@ -13,7 +15,7 @@ Observation does not license optimization.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.MeasurementLimits
 
 /--
 No implication from measurement to optimization is permitted.
@@ -25,4 +27,4 @@ axiom measurement_not_optimization :
       Optimizes O
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.MeasurementLimits

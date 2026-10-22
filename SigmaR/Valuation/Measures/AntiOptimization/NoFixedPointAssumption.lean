@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Fixed Point Assumption
@@ -11,7 +13,7 @@ of fixed points under state progression or valuation.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication from valuation structure to the existence
@@ -24,4 +26,4 @@ axiom no_fixed_point_assumption :
       HasFixedPoint M
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

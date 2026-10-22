@@ -37,7 +37,7 @@ Predicate: the operation is a repair step that moves the system toward:
   • reduced dependency, or
   • improved CIA‑indexed autonomy.
 -/
-constant DirectedRepair : Operation → State → Prop
+axiom DirectedRepair : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom:

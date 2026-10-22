@@ -15,14 +15,14 @@ not moral fault.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityOmissionMaintainsConstraint S means that
 failure to engage available capacity-progress options
 maintains the capacity constraint structurally.
 -/
-constant CapacityOmissionMaintainsConstraint :
+axiom CapacityOmissionMaintainsConstraint :
   CapacityProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

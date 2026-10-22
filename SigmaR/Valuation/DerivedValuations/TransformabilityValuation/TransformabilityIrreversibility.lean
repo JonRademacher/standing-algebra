@@ -19,13 +19,13 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityIrreversibility T means that transformability
 valuation T is structurally irreversible once degraded.
 -/
-constant TransformabilityIrreversibility :
+axiom TransformabilityIrreversibility :
   TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

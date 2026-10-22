@@ -1,3 +1,8 @@
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.StandingValuation
+import SigmaR.Valuation.StandingWellDefined
+import SigmaR.Valuation.DebtWellDefined
+
 /-!
 ###############################################################################
 # Exit Threshold Soundness (Validation Layer)
@@ -15,16 +20,11 @@ is introduced in this file.
 This file is validation-only and downstream of valuation.
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation
 
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.StandingValuation
-import SigmaR.Valuation.StandingWellDefined
-import SigmaR.Valuation.DebtWellDefined
-
-/* -------------------------------------------------------------------------- */
-/* Primitive exit structure                                                    */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Primitive exit structure                                                    -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 ExitThreshold i s means:
@@ -32,11 +32,12 @@ agent i claims structural ability to exit at state s.
 
 No action, operation, or enforcement is implied.
 -/
-constant ExitThreshold : Agent → State → Prop
+def ExitThreshold (i : Agent) (s : State) : Prop :=
+  0 ≤ σ i s ∧ σ i s ≤ cap i
 
-/* -------------------------------------------------------------------------- */
-/* Basic extensionality                                                        */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Basic extensionality                                                        -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Exit thresholds respect state equality.
@@ -47,9 +48,9 @@ axiom ExitThreshold_ext :
     ExitThreshold i s₁ →
     ExitThreshold i s₂
 
-/* -------------------------------------------------------------------------- */
-/* Standing soundness                                                          */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Standing soundness                                                          -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Exit must not require standing below zero.
@@ -62,13 +63,12 @@ theorem exit_requires_nonnegative_standing :
     ExitThreshold i s →
     0 ≤ σ i s :=
 by
-  intro i s _
-  -- Standing is Nat-valued; non-negativity is structural
-  exact Nat.zero_le _
+  intro i s hExit
+  exact hExit.1
 
-/* -------------------------------------------------------------------------- */
-/* Capacity soundness                                                          */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Capacity soundness                                                          -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Exit thresholds are compatible with capacity bounds.
@@ -78,14 +78,14 @@ Exit cannot demand standing beyond capacity.
 theorem exit_respects_capacity :
   ∀ (i : Agent) (s : State),
     ExitThreshold i s →
-    σ i s ≤ B (cap i) :=
+    σ i s ≤ cap i :=
 by
-  intro i s _
-  exact (CapacityBound.left i)
+  intro i s hExit
+  exact hExit.2
 
-/* -------------------------------------------------------------------------- */
-/* Debt compatibility                                                          */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Debt compatibility                                                          -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Debt does not, by itself, invalidate exit.
@@ -100,7 +100,6 @@ by
   intro i s _
   -- debt is always a well-defined Nat
   exists (debt i s)
-  rfl
 
 /--
 Exit availability does not reduce or increase debt
@@ -114,9 +113,9 @@ by
   intro _ _ _
   rfl
 
-/* -------------------------------------------------------------------------- */
-/* No implicit domination                                                      */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- No implicit domination                                                      -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Exit thresholds do not imply obligation to exit.
@@ -132,9 +131,9 @@ by
   intro i s h
   exact Or.inl h
 
-/* -------------------------------------------------------------------------- */
-/* Structural isolation                                                        */
-/* -------------------------------------------------------------------------- */
+/- -------------------------------------------------------------------------- -/
+/- Structural isolation                                                        -/
+/- -------------------------------------------------------------------------- -/
 
 /--
 Exit threshold soundness does not imply admissibility,
@@ -150,4 +149,4 @@ by
   intro _ _ _
   trivial
 
-end SigmaR
+end SigmaR.Valuation

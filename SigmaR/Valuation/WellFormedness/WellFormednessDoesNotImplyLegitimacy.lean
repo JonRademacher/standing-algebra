@@ -11,7 +11,9 @@ authority, or justification.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 No implication from well-formedness to legitimacy is permitted.
@@ -22,4 +24,4 @@ axiom wellformedness_not_legitimacy :
       WellFormed M → LegitimateMeasure M
   )
 
-end SigmaR
+end SigmaR.Valuation.WellFormedness

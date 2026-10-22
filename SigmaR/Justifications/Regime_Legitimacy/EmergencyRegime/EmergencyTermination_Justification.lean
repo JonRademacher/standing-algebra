@@ -1,6 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
-import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
+import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justifrication
 
 /-!
 ###############################################################################
@@ -58,7 +58,7 @@ proxy optimization channel.
 namespace SigmaR
 
 /-- Predicate: the operation terminates emergency conditions at state `s`. -/
-constant EmergencyTerminated : Operation → State → Prop
+axiom EmergencyTerminated : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Emergency Termination:
@@ -72,7 +72,7 @@ axiom emergency_termination_requires_debt :
     Legitimate F →
       ∀ s : State,
         EmergencyTerminated F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -85,7 +85,7 @@ theorem EmergencyTermination_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     EmergencyTerminated F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hTerm
   exact emergency_termination_requires_debt hLeg s hTerm

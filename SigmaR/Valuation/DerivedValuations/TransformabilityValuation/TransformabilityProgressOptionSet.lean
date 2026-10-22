@@ -15,13 +15,12 @@ This is not selection.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityProgressOptionSet S means that S is a set
 of transformability-progress options.
 -/
-constant TransformabilityProgressOptionSet :
-  TransformabilityProgressOption → Prop
+axiom TransformabilityProgressOptionSet : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

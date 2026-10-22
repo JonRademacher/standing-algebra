@@ -14,7 +14,9 @@ fixed-point style definitions.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 No valuation measure may directly depend on itself.
@@ -26,5 +28,4 @@ axiom no_self_reference :
       DependsOn M M
   )
 
-end SigmaR
-
+end SigmaR.Valuation.WellFormedness

@@ -1,57 +1,57 @@
 -- Standing Algebra (Σᴿ) formalization in Lean 4.
 
 -- Sort declarations for Agents, Operations, and global States:
-constant Agent : Type
-constant Operation : Type
-constant State : Type
+axiom Agent : Type
+axiom Operation : Type
+axiom State : Type
 
 -- Additional sorts for optional constructs:
-constant CouplingKind : Type             -- sort for coupling relation kinds (K)
+axiom CouplingKind : Type             -- sort for coupling relation kinds (K)
 inductive RemedyLevel : Type :=          -- remedy ladder levels
 | CounterSpeech | Friction | Damping | Removal | Exceptional
 
 -- Primitive function and predicate symbols:
-constant sigma : Agent → Nat            -- standing value σ(i)
-constant cap : Agent → Nat             -- capacity value C(i)
-constant deg : Agent → Nat             -- coupling degree D(i)
-constant Suc : Nat → Nat               -- successor function S (Lean has Nat.succ, but we use Suc for clarity)
-constant B : Nat → Nat                 -- capacity-indexed standing bound B(c)
+axiom sigma : Agent → Nat            -- standing value σ(i)
+axiom cap : Agent → Nat             -- capacity value C(i)
+axiom deg : Agent → Nat             -- coupling degree D(i)
+axiom Suc : Nat → Nat               -- successor function S (Lean has Nat.succ, but we use Suc for clarity)
+axiom B : Nat → Nat                 -- capacity-indexed standing bound B(c)
 
-constant comp : Agent → Agent → Agent  -- entity composition (⊕)
-constant Id : Operation                -- identity operation (Id ∈ O)
-constant composeOp : Operation → Operation → Operation  -- operation composition
+axiom comp : Agent → Agent → Agent  -- entity composition (⊕)
+axiom identityOperation : Operation -- identity operation
+axiom composeOp : Operation → Operation → Operation  -- operation composition
 
-constant Null : Agent → Prop
-constant Prime : Agent → Prop
-constant Composite : Agent → Prop
-constant Coupled : Agent → Agent → Prop
-constant Coupled_k : Agent → Agent → CouplingKind → Prop
-constant DomCoupling : Agent → CouplingKind → Prop
+axiom Null : Agent → Prop
+axiom Prime : Agent → Prop
+axiom Composite : Agent → Prop
+axiom Coupled : Agent → Agent → Prop
+axiom Coupled_k : Agent → Agent → CouplingKind → Prop
+axiom DomCoupling : Agent → CouplingKind → Prop
 
-constant Admissible : Operation → Prop
-constant Legitimate : Operation → Prop
-constant Repair : Operation → Prop
-constant Drift : Operation → Prop
+axiom Admissible : Operation → Prop
+axiom Legitimate : Operation → Prop
+axiom Repair : Operation → Prop
+axiom Drift : Operation → Prop
 -- (Idempotent and STC5 will be specified via axioms/definitions rather than primitives)
 
 -- Extended (Σᴿ⁺) predicates:
-constant PFAEligible : Agent → Prop
-constant Coercive : Prop
-constant LegitimateSystem : Prop
-constant RiskLoad : Agent → Nat
-constant RiskBearer : Operation → Agent → Prop
-constant ExitPreserved_k : Operation → Agent → CouplingKind → Prop
-constant EmergentWrong : State → Prop
-constant ARV : Operation → Agent → Prop
-constant StructuralDebt : Agent → Nat
-constant PublicAct : Operation → Prop
-constant PFAResolved : Operation → Prop
-constant Emergency : Operation → Prop
-constant RemedyHigher : RemedyLevel → RemedyLevel → Prop
+axiom PFAEligible : Agent → Prop
+axiom Coercive : Prop
+axiom LegitimateSystem : Prop
+axiom RiskLoad : Agent → Nat
+axiom RiskBearer : Operation → Agent → Prop
+axiom ExitPreserved_k : Operation → Agent → CouplingKind → Prop
+axiom EmergentWrong : State → Prop
+axiom ARV : Operation → Agent → Prop
+axiom StructuralDebt : Agent → Nat
+axiom PublicAct : Operation → Prop
+axiom PFAResolved : Operation → Prop
+axiom Emergency : Operation → Prop
+axiom RemedyHigher : RemedyLevel → RemedyLevel → Prop
 
 -- Application of an Operation on an Agent (effect on individual agent's state), and on a State (global transition):
-constant apply : Operation → Agent → Agent
-constant apply_state : Operation → State → State
+axiom apply : Operation → Agent → Agent
+axiom apply_state : Operation → State → State
 
 -- One-step difference predicate (for drift bounds and emergency bounds):
 def OneStepDiff (x y : Nat) : Prop :=
@@ -224,7 +224,7 @@ axiom RL2_Irreflexive : ∀ r : RemedyLevel, ¬ RemedyHigher r r
 -- (Optional: We could also formalize extended Tier-3 constraints like P0–P7, EE0–EE5 if needed, following the same pattern.)
 
 -- O1: Identity operation is Legitimate, and composition closure:
-axiom O1_IdentityLegit : Legitimate Id
+axiom O1_IdentityLegit : Legitimate identityOperation
 axiom O2_Extensionality : ∀ (F G : Operation), (∀ x : Agent, apply F x = apply G x) → F = G
 
 -- The axioms above fully encode the formal system. We can use Lean's logic to check consistency (Lean accepts this theory with no contradictions if no `sorry` remains).

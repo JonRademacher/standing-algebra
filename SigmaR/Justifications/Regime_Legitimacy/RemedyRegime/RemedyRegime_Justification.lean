@@ -1,8 +1,8 @@
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
-import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
-import SigmaR.Justifications.Regimes.Remedy.EmergentWrongRepair_Justification
-import SigmaR.Justifications.Regimes.Remedy.RepairAvailability_Justification
+import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justifrication
+import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.EmergentWrongRepair_Justification
+import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RepairAvailability_Justification
 
 /-!
 ###############################################################################
@@ -66,7 +66,7 @@ and autonomy‑restorative under iteration.
 namespace SigmaR
 
 /-- Predicate: the operation participates in the Remedy Regime at state `s`. -/
-constant RemedyRegimeOp : Operation → State → Prop
+axiom RemedyRegimeOp : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Remedy Regime Closure:
@@ -79,7 +79,7 @@ axiom remedy_regime_requires_debt :
     Legitimate F →
       ∀ s : State,
         RemedyRegimeOp F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -92,7 +92,7 @@ theorem RemedyRegime_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     RemedyRegimeOp F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hRem
   exact remedy_regime_requires_debt hLeg s hRem

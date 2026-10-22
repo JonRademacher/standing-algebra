@@ -26,17 +26,6 @@ legitimacy condition: any Legitimate operation must satisfy it at every state.
 namespace SigmaR
 
 /--
-Predicate: the operation is supported by evidence that is non‑parochial
-at the given state.
-
-Non‑parochial evidence is:
-  • publicly legible,
-  • not restricted to a single perceptual frame,
-  • rerunnable by affected agents.
--/
-constant NonParochialEvidence : Operation → State → Prop
-
-/--
 Tier‑2 legitimacy axiom:
 
 If an operation is Legitimate, then it must be supported by

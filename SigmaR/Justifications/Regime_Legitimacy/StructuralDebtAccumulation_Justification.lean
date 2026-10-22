@@ -1,6 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
-import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
+import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justifrication
 
 /-!
 ###############################################################################
@@ -64,7 +64,7 @@ namespace SigmaR
 
 /-- Predicate: the operation participates in any regime
     and contributes to structural debt at state `s`. -/
-constant RegimeDebtAccumulated : Operation → State → Prop
+axiom RegimeDebtAccumulated : Operation → State → Prop
 
 /--
 Tier‑2 legitimacy axiom for Structural Debt Accumulation:
@@ -79,7 +79,7 @@ axiom structural_debt_accumulation_requires_debt :
     Legitimate F →
       ∀ s : State,
         RegimeDebtAccumulated F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -92,7 +92,7 @@ theorem StructuralDebtAccumulation_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     RegimeDebtAccumulated F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hDebt
   exact structural_debt_accumulation_requires_debt hLeg s hDebt
