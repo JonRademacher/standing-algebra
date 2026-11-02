@@ -16,7 +16,7 @@
      [["SigmaR.Regimes.StandingAlgebra_SuccessorRegime transitive imports (legacy)",
        "89cc5b322ac37987"],
       ["SigmaR.Regimes.StandingAlgebra_SuccessorRegime:importAllArts",
-       "fdc588d2290b8606"]]]]],
+       "f2eac761a925883c"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -32,4 +32,4 @@
    "fff9624803937657"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "10317d0fbc4c62db"}
+ "depHash": "c33951cacbdeda78"}

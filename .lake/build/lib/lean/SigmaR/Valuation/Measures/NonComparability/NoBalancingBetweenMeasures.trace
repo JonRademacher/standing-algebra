@@ -19,7 +19,7 @@
       ["SigmaR.Valuation.Core.StructuralInterfaces transitive imports (legacy)",
        "89cc5b322ac37987"],
       ["SigmaR.Valuation.Core.StructuralInterfaces:importAllArts",
-       "2ab6ca9b7c9b6e79"]]]]],
+       "83dfcf2070fcada3"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -35,4 +35,4 @@
    "a4b21022663fcbff"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "6a2f28f4753b4c2a"}
+ "depHash": "449d92c6e9b12816"}

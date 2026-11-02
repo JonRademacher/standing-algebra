@@ -273,7 +273,6 @@ axiom TreatedAsDominationPressureFromTemporalAccumulation : Agent → State → 
 -- Misuses whose source is the autonomy measure
 axiom TreatedAsCapacityFromAutonomy : Agent → State → Prop
 axiom TreatedAsConsentFromAutonomy : Agent → State → Prop
-axiom TreatedAsAutonomyFromCapacityMeasure : Agent → State → Prop
 axiom TreatedAsConsentFromAutonomyMeasure : Agent → State → Prop
 axiom TreatedAsDebtFromAutonomyMeasure : Agent → State → Prop
 axiom TreatedAsExitViableFromAutonomyMeasure : Agent → State → Prop
@@ -328,6 +327,8 @@ axiom InfinitelyResolvable : Val → Prop
 -- Relevance / framing
 axiom TreatedAsAuthoritative : PredS
 axiom TreatedAsTrue : PredS
+axiom TreatedAsDishonest : Agent → State → Prop
+axiom TreatedAsIncompetent : Agent → State → Prop
 axiom TreatedAsObligatory : PredS
 axiom TreatedAsPlurality : PredS
 axiom TreatedAsAggregationOfAgents : Set Agent → State → Prop

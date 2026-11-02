@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: SigmaR.Valuation.Measures.Relevance.IPFA_Definition
-// Imports: public import Init public meta import Init public import SigmaR.StandingAlgebra_FormalCore
+// Imports: public import Init public meta import Init public import SigmaR.Valuation.Core.StructuralInterfaces
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -15,7 +15,7 @@ extern "C" {
 #endif
 lean_object* initialize_Init(uint8_t builtin);
 lean_object* initialize_Init(uint8_t builtin);
-lean_object* initialize_SigmaR_SigmaR_StandingAlgebra__FormalCore(uint8_t builtin);
+lean_object* initialize_SigmaR_SigmaR_Valuation_Core_StructuralInterfaces(uint8_t builtin);
 void lean_initialize_runtime_module();
 static bool _G_initialized = false;
 LEAN_EXPORT lean_object* initialize_SigmaR_SigmaR_Valuation_Measures_Relevance_IPFA__Definition(uint8_t builtin) {
@@ -29,7 +29,7 @@ lean_dec_ref(res);
 res = initialize_Init(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_SigmaR_SigmaR_StandingAlgebra__FormalCore(builtin);
+res = initialize_SigmaR_SigmaR_Valuation_Core_StructuralInterfaces(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 return lean_io_result_mk_ok(lean_box(0));

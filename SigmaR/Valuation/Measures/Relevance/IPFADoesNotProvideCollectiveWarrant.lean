@@ -27,6 +27,3 @@ axiom ipfa_not_collective :
   )
 
 end SigmaR
-
-
-end SigmaR

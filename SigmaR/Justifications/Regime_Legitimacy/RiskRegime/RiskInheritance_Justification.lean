@@ -1,4 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
+import SigmaR.Justifications.Core_Legitimacy.RiskInheritance_Justification
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
 
@@ -53,9 +54,9 @@ proxy optimization channel.
 
 namespace SigmaR
 
-/-- Predicate: the operation performs standing‑weighted
-    risk‑based intervention at state `s`. -/
-axiom RiskInherited : Operation → State → Prop
+-- `RiskInherited` is declared once, in
+-- `SigmaR.Justifications.Core_Legitimacy.RiskInheritance_Justification`, and
+-- imported here rather than redeclared.
 
 /--
 Tier‑2 legitimacy axiom for Risk Inheritance (Regime‑Level):

@@ -63,7 +63,7 @@ structure Preorder (α : Type) where
   le_trans  : ∀ a b c, le a b → le b c → le a c
 
 /-- Preorder induced by valuation. -/
-theorem ValLe_preorder (i : Agent) : Preorder State :=
+def ValLe_preorder (i : Agent) : Preorder State :=
 { le := ValLe i
   le_refl := ValLe_refl i
   le_trans := ValLe_trans i }
@@ -149,14 +149,14 @@ def CIA_BoundedDelta (i : Agent) (s₁ s₂ : State) : Prop :=
 A repair transition strictly restores standing.
 (No standing decrease allowed; at least one agent improves.)
 -/
-def Repair (s₁ s₂ : State) : Prop :=
+def RepairTransition (s₁ s₂ : State) : Prop :=
   (∀ i : Agent, σv i s₁ ≤ σv i s₂) ∧
   (∃ i : Agent, σv i s₁ < σv i s₂)
 
 /-- Repairs strictly reduce valuation-level risk debt. -/
 theorem repair_has_positive_delta
   (i : Agent) (s₁ s₂ : State) :
-  Repair s₁ s₂ →
+  RepairTransition s₁ s₂ →
   Δσ i s₁ s₂ ≥ 0 :=
 by
   intro h

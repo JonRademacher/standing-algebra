@@ -19,7 +19,7 @@
       ["SigmaR.Valuation.Core.StructuralInterfaces transitive imports (legacy)",
        "89cc5b322ac37987"],
       ["SigmaR.Valuation.Core.StructuralInterfaces:importAllArts",
-       "2ab6ca9b7c9b6e79"],
+       "83dfcf2070fcada3"],
       ["SigmaR.Valuation.Measures.NonComparability.NonComparabilityContract transitive imports (legacy)",
        "89cc5b322ac37987"],
       ["SigmaR.Valuation.Measures.NonComparability.NonComparabilityContract:importAllArts",
@@ -39,4 +39,4 @@
    "ead93a6cd3337b4a"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "b018d19a31606bb5"}
+ "depHash": "c848f50d44e2db6f"}

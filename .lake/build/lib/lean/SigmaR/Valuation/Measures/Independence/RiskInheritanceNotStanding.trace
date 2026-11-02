@@ -19,9 +19,9 @@
       ["SigmaR.Valuation.Core.StructuralInterfaces transitive imports (legacy)",
        "89cc5b322ac37987"],
       ["SigmaR.Valuation.Core.StructuralInterfaces:importAllArts",
-       "2ab6ca9b7c9b6e79"],
+       "83dfcf2070fcada3"],
       ["SigmaR.Valuation.Measures.RiskInheritance_Definition transitive imports (legacy)",
-       "00895a922cbae60f"],
+       "b714223cf8d1a6ae"],
       ["SigmaR.Valuation.Measures.RiskInheritance_Definition:importAllArts",
        "617d723a69680aff"],
       ["SigmaR.Valuation.Measures.StandingMeasure_Definition transitive imports (legacy)",
@@ -43,4 +43,4 @@
    "0ca597cdaddfbeea"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "6a6ebddf136aad28"}
+ "depHash": "05065788e60e9323"}

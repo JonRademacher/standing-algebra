@@ -32,6 +32,11 @@ axiom MinStanding : Nat
 -- operations layer can both refer to it without importing each other.
 axiom ExitPreserved : Operation → State → Prop
 
+-- Predicate: the operation participates in the Exit regime at state `s`.
+-- Declared here (regime level) so that every exit justification module can
+-- refer to it without redeclaring or importing a sibling.
+axiom ExitRegimeOp : Operation → State → Prop
+
 /- -----------------
    Exit Existence
    ----------------- -/

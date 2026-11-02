@@ -36,9 +36,9 @@ axiom Risk_cannot_authorize_emergency :
 
 -- Risk may not justify persistence of emergency conditions
 axiom Risk_cannot_normalize_emergency :
-  ∀ (s : State),
+  ∀ (s : State) (a : Agent),
     EmergentWrong s →
-    (∀ F : Operation, RiskBearer F (choose (by trivial)) → Emergency F) →
+    (∀ F : Operation, RiskBearer F a → Emergency F) →
     False
 
 /- -----------------

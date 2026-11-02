@@ -19,7 +19,7 @@
       ["SigmaR.Valuation.Core.StructuralInterfaces transitive imports (legacy)",
        "89cc5b322ac37987"],
       ["SigmaR.Valuation.Core.StructuralInterfaces:importAllArts",
-       "2ab6ca9b7c9b6e79"],
+       "83dfcf2070fcada3"],
       ["SigmaR.Valuation.Measures.DominationPressure_Definition transitive imports (legacy)",
        "554f803e374db4e1"],
       ["SigmaR.Valuation.Measures.DominationPressure_Definition:importAllArts",
@@ -43,4 +43,4 @@
    "6a438581ce369284"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "083c0a27daf21b01"}
+ "depHash": "a51b9474e379d8cb"}

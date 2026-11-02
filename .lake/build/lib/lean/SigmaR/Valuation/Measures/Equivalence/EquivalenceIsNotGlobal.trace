@@ -19,9 +19,9 @@
       ["SigmaR.Valuation.Core.StructuralInterfaces transitive imports (legacy)",
        "89cc5b322ac37987"],
       ["SigmaR.Valuation.Core.StructuralInterfaces:importAllArts",
-       "2ab6ca9b7c9b6e79"],
+       "83dfcf2070fcada3"],
       ["SigmaR.Valuation.Measures.Equivalence.EquivalenceScope transitive imports (legacy)",
-       "e2f6ad1bb3a796db"],
+       "4b4e3b02fee74592"],
       ["SigmaR.Valuation.Measures.Equivalence.EquivalenceScope:importAllArts",
        "d52076914fca44f6"]]]]],
   ["libs",
@@ -39,4 +39,4 @@
    "a66d3029e5a7582c"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "78de258a5217305c"}
+ "depHash": "7e5ade4cf6b6d8c4"}

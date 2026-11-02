@@ -43,7 +43,7 @@ axiom PFA : State → Prop
 
 /-- Predicate: the evidence available at state `s` is non-parochial,
     i.e. not controlled solely by the claimant. -/
-axiom NonParochialEvidence : State → Prop
+axiom NonParochialEvidenceAt : State → Prop
 
 /--
 Core evidential axiom:
@@ -55,6 +55,6 @@ resulting evidence is publicly corrigible and not privately controlled.
 axiom pfa_implies_non_parochial :
   ∀ s : State,
     PFA s →
-    NonParochialEvidence s
+    NonParochialEvidenceAt s
 
 end SigmaR

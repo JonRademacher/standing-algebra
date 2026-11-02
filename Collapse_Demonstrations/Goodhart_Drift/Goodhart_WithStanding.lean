@@ -13,11 +13,6 @@ import SigmaR.SigmaR_Core
 
 namespace Collapse_Demonstrations.Goodhart_Drift
 
--- Import the Goodhart drift definition
-
--- Import SigmaR core Standing Algebra
--- Adjust the import path if your core file name differs
-
 /-
   We align Goodhart with SigmaR as follows:
 
@@ -25,51 +20,36 @@ namespace Collapse_Demonstrations.Goodhart_Drift
   * Step/Update   ≙ Operation
   * trueValue     ≙ σ (standing)
   * proxy-improving steps are admissible
+
+  Every carrier and hypothesis below is an explicit argument of the
+  theorem: Lean only propagates a `variable` into a declaration when it
+  occurs in the declaration's *type*, and these occur only in the proof.
 -/
-variable
+
+/--
+  Under SigmaR Standing Algebra, Goodhart drift is impossible.
+
+  `StandingAlgebra` is the Standing Algebra axiom from the SigmaR core
+  (admissible operations do not decrease standing); `ProxyImproves` says a
+  proxy‑improving transition is the application of some admissible
+  operation.
+-/
+theorem noGoodhartDrift_under_StandingAlgebra
   (Time : Type)
   (Operation : Type)
-
-/- True value = standing function σ -/
-variable
+  (proxy : Time → Int)
   (trueValue : Time → Int)
-
-/- Application of an operation to a time state -/
-variable
   (Apply : Operation → Time → Time)
-
-/- Admissibility of an operation -/
-variable
   (Admissible : Operation → Prop)
-
-/-
-  Standing Algebra axiom (from SigmaR core):
-
-  Admissible operations do not decrease standing.
--/
-variable
   (StandingAlgebra :
     ∀ (F : Operation) (t : Time),
       Admissible F →
       trueValue (Apply F t) ≥ trueValue t)
-
-/-
-  Proxy improvement assumption:
-
-  A Goodhart proxy-improving transition corresponds
-  to applying some admissible operation.
--/
-variable
   (ProxyImproves :
     ∀ t₁ t₂ : Time,
       proxy t₂ > proxy t₁ →
-      ∃ F : Operation, Admissible F ∧ Apply F t₁ = t₂)
-
-/--
-  Under SigmaR Standing Algebra, Goodhart drift is impossible.
--/
-theorem noGoodhartDrift_under_StandingAlgebra :
-  ¬ GoodhartDrift Time proxy trueValue :=
+      ∃ F : Operation, Admissible F ∧ Apply F t₁ = t₂) :
+  ¬ GoodhartDrift (Time := Time) (proxy := proxy) (trueValue := trueValue) :=
 by
   intro hDrift
   rcases hDrift with ⟨t₁, t₂, hNe, hProxyUp, hTrueDown⟩
@@ -83,6 +63,6 @@ by
     StandingAlgebra F t₁ hAdm
 
   -- Contradiction: decrease and non-decrease
-  exact lt_irrefl _ (lt_of_lt_of_le hTrueDown hNonDecrease)
+  exact absurd hTrueDown (not_lt_of_ge hNonDecrease)
 
 end Collapse_Demonstrations.Goodhart_Drift

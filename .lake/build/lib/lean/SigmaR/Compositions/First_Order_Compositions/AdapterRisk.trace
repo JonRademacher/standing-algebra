@@ -1,9 +1,9 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["a40d01f0d48166f2.olean"],
+ {"o": ["42df85637229cc68.olean"],
   "m": false,
-  "i": "5f7cf2e4c8ecf1a8.ilean",
+  "i": "e8915042ccc99e93.ilean",
   "c": "d4b114ea048d0573.c"},
  "log":
  [{"message":
@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.StandingAlgebra_RegimeStacked transitive imports (legacy)",
-       "cd35cf11e1160908"],
+       "ae6c41533120c498"],
       ["SigmaR.StandingAlgebra_RegimeStacked:importAllArts",
        "7d0fa550ad1050c9"]]]]],
   ["libs",
@@ -25,11 +25,11 @@
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
   ["/workspace/SigmaR/Compositions/First_Order_Compositions/AdapterRisk.lean",
-   "d13c08f30677777a"],
+   "9d7a729057f4571d"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: SigmaR.Compositions.First_Order_Compositions.AdapterRisk",
    "8b1c580723c9d59b"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "58b90863bcf06e76"}
+ "depHash": "740c5735e30b1a7c"}

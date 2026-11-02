@@ -31,10 +31,6 @@ Therefore:
 namespace SigmaR
 
 /--
-Predicate: operation `G` is a composition of affordance operations.
--/
-
-/--
 Predicate: agent `a` has a viable exit under operation `F`
 at state `s`.
 -/

@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: SigmaR.Operations.ResolutionMethodDistinctness_Op
-// Imports: public import Init public meta import Init public import SigmaR.StandingAlgebra_FormalCore
+// Imports: public import Init public meta import Init public import SigmaR.StandingAlgebra_FormalCore public import SigmaR.Operations.Negotiation_Op public import SigmaR.Operations.Cooperation_Op public import SigmaR.Operations.Compromise_Op public import SigmaR.Operations.TragicAcceptance_Op
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -16,6 +16,10 @@ extern "C" {
 lean_object* initialize_Init(uint8_t builtin);
 lean_object* initialize_Init(uint8_t builtin);
 lean_object* initialize_SigmaR_SigmaR_StandingAlgebra__FormalCore(uint8_t builtin);
+lean_object* initialize_SigmaR_SigmaR_Operations_Negotiation__Op(uint8_t builtin);
+lean_object* initialize_SigmaR_SigmaR_Operations_Cooperation__Op(uint8_t builtin);
+lean_object* initialize_SigmaR_SigmaR_Operations_Compromise__Op(uint8_t builtin);
+lean_object* initialize_SigmaR_SigmaR_Operations_TragicAcceptance__Op(uint8_t builtin);
 void lean_initialize_runtime_module();
 static bool _G_initialized = false;
 LEAN_EXPORT lean_object* initialize_SigmaR_SigmaR_Operations_ResolutionMethodDistinctness__Op(uint8_t builtin) {
@@ -30,6 +34,18 @@ res = initialize_Init(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 res = initialize_SigmaR_SigmaR_StandingAlgebra__FormalCore(builtin);
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_SigmaR_SigmaR_Operations_Negotiation__Op(builtin);
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_SigmaR_SigmaR_Operations_Cooperation__Op(builtin);
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_SigmaR_SigmaR_Operations_Compromise__Op(builtin);
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_SigmaR_SigmaR_Operations_TragicAcceptance__Op(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 return lean_io_result_mk_ok(lean_box(0));

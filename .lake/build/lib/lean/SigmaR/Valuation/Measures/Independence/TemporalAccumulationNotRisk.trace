@@ -19,13 +19,13 @@
       ["SigmaR.Valuation.Core.StructuralInterfaces transitive imports (legacy)",
        "89cc5b322ac37987"],
       ["SigmaR.Valuation.Core.StructuralInterfaces:importAllArts",
-       "2ab6ca9b7c9b6e79"],
+       "83dfcf2070fcada3"],
       ["SigmaR.Valuation.Measures.TemporalAccumulation_Definition transitive imports (legacy)",
        "5928b47819dc224a"],
       ["SigmaR.Valuation.Measures.TemporalAccumulation_Definition:importAllArts",
        "7e294600f81f9b4c"],
       ["SigmaR.Valuation.Measures.RiskLoad_Definition transitive imports (legacy)",
-       "00895a922cbae60f"],
+       "b714223cf8d1a6ae"],
       ["SigmaR.Valuation.Measures.RiskLoad_Definition:importAllArts",
        "c410119e3c1c955a"]]]]],
   ["libs",
@@ -43,4 +43,4 @@
    "b7afa1a8d8ec1eef"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "c6c16e9965713c31"}
+ "depHash": "147642abe7ddaf2f"}

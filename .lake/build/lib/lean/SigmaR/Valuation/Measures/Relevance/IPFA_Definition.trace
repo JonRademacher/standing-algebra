@@ -1,10 +1,10 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["75f62c6a10f6b1db.olean"],
+ {"o": ["f7bdec80d7fb1c70.olean"],
   "m": false,
-  "i": "65ddff7ee2ecfd99.ilean",
-  "c": "fccfd200a8ebb02e.c"},
+  "i": "ba2f7433a5d61371.ilean",
+  "c": "5d35732b738ef309.c"},
  "log":
  [{"message":
    ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/Measures/Relevance/IPFA_Definition.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Relevance/IPFA_Definition.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Relevance/IPFA_Definition.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/Measures/Relevance/IPFA_Definition.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/Measures/Relevance/IPFA_Definition.setup.json --json",
@@ -13,10 +13,10 @@
  [["deps",
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
-     [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
-       "00000000000006bb"],
-      ["SigmaR.StandingAlgebra_FormalCore:importAllArts",
-       "8179365a682d8f9b"]]]]],
+     [["SigmaR.Valuation.Core.StructuralInterfaces transitive imports (legacy)",
+       "89cc5b322ac37987"],
+      ["SigmaR.Valuation.Core.StructuralInterfaces:importAllArts",
+       "83dfcf2070fcada3"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -25,11 +25,11 @@
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
   ["/workspace/SigmaR/Valuation/Measures/Relevance/IPFA_Definition.lean",
-   "22f9d72e922bfb36"],
+   "3f39d322ee44567d"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: SigmaR.Valuation.Measures.Relevance.IPFA_Definition",
    "530b341e34b0e272"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "a3a136a389aeef07"}
+ "depHash": "9c61197f0037f53a"}

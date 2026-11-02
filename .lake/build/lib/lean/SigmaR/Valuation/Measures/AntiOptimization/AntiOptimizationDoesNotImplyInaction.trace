@@ -19,7 +19,7 @@
       ["SigmaR.Valuation.Core.StructuralInterfaces transitive imports (legacy)",
        "89cc5b322ac37987"],
       ["SigmaR.Valuation.Core.StructuralInterfaces:importAllArts",
-       "2ab6ca9b7c9b6e79"],
+       "83dfcf2070fcada3"],
       ["SigmaR.Valuation.Measures.AntiOptimization.AntiOptimizationContract transitive imports (legacy)",
        "89cc5b322ac37987"],
       ["SigmaR.Valuation.Measures.AntiOptimization.AntiOptimizationContract:importAllArts",
@@ -39,4 +39,4 @@
    "6c0b7250ec884b1b"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "3d92dd298311e7a3"}
+ "depHash": "1555ed02634d5065"}

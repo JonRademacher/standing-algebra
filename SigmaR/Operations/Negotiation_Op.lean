@@ -31,7 +31,7 @@ Negotiation operations are non-coercive adjustments.
 theorem NegotiationAdmissible
   (F : Operation)
   (hN : NegotiationOp F) :
-  Admissible F ∧ ExitPreserved F :=
+  Admissible F ∧ (∀ s : State, ExitPreserved F s) :=
 by
   exact NegotiationInvariant F hN
 

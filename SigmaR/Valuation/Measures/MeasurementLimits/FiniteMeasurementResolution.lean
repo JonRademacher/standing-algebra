@@ -24,7 +24,7 @@ Measurements must not be treated as arbitrarily precise.
 axiom no_infinite_measurement_resolution :
   ¬ (
     ∀ (a : Agent) (s : State),
-      InfinitelyResolvable (MeasuredValue a s)
+      InfinitelyResolvable (Measured a s)
   )
 
 end SigmaR

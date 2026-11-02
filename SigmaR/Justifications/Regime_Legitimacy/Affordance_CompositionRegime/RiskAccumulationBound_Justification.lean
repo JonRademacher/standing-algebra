@@ -26,10 +26,6 @@ Therefore:
 namespace SigmaR
 
 /--
-Predicate: operation `G` is a composition of affordance operations.
--/
-
-/--
 Predicate: risk introduced by operation `F`
 at state `s` is bounded.
 -/

@@ -1,0 +1,47 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["12b484a4e04e4b89.olean"],
+  "m": false,
+  "i": "68514141f7011937.ilean",
+  "c": "f8a238570b0331c4.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/workspace/.lake/build/lib/lean /opt/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/SigmaR/Valuation/Measures/WellDefinedness/MeasureDomainSoundness.lean -o /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/WellDefinedness/MeasureDomainSoundness.olean -i /workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/WellDefinedness/MeasureDomainSoundness.ilean -c /workspace/.lake/build/ir/SigmaR/Valuation/Measures/WellDefinedness/MeasureDomainSoundness.c --setup /workspace/.lake/build/ir/SigmaR/Valuation/Measures/WellDefinedness/MeasureDomainSoundness.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "SigmaR/Valuation/Measures/WellDefinedness/MeasureDomainSoundness.lean:23:5: Variable name `μ` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _μ\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "SigmaR/Valuation/Measures/WellDefinedness/MeasureDomainSoundness.lean:23:28: Variable name `a` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _a\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "SigmaR/Valuation/Measures/WellDefinedness/MeasureDomainSoundness.lean:23:40: Variable name `s` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _s\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["SigmaR.StandingAlgebra_FormalCore transitive imports (legacy)",
+       "00000000000006bb"],
+      ["SigmaR.StandingAlgebra_FormalCore:importAllArts", "8179365a682d8f9b"],
+      ["SigmaR.Valuation.Measures.MeasureTypingAndScope transitive imports (legacy)",
+       "8b40013b28757ba9"],
+      ["SigmaR.Valuation.Measures.MeasureTypingAndScope:importAllArts",
+       "6a5f1441de773033"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["/workspace/SigmaR/Valuation/Measures/WellDefinedness/MeasureDomainSoundness.lean",
+   "3e015495740249b0"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: SigmaR.Valuation.Measures.WellDefinedness.MeasureDomainSoundness",
+   "baa3d23ab27beb72"],
+  ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4be05cd385df10b7"}

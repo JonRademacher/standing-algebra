@@ -19,7 +19,7 @@
       ["SigmaR.Valuation.Core.StructuralInterfaces transitive imports (legacy)",
        "89cc5b322ac37987"],
       ["SigmaR.Valuation.Core.StructuralInterfaces:importAllArts",
-       "2ab6ca9b7c9b6e79"],
+       "83dfcf2070fcada3"],
       ["SigmaR.Standing.RoleState_Definition transitive imports (legacy)",
        "9e534d2ac1948223"],
       ["SigmaR.Standing.RoleState_Definition:importAllArts",
@@ -43,4 +43,4 @@
    "98201a705b2c7414"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "0020433805ee3d1e"}
+ "depHash": "f319333ae03f0033"}

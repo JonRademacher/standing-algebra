@@ -27,10 +27,6 @@ Therefore:
 namespace SigmaR
 
 /--
-Predicate: operation `G` is a composition of affordance operations.
--/
-
-/--
 Predicate: operation `F` preserves standing
 for agent `a` at state `s`.
 -/

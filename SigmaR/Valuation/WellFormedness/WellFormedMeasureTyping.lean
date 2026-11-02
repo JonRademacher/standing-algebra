@@ -16,6 +16,10 @@ measures merely because their type matches.
 
 namespace SigmaR
 
+-- The numeric encoding of a predicate below is non-computable, so the
+-- classical decision procedure supplies its `Decidable` instance.
+attribute [local instance] Classical.propDecidable
+
 /--
 Having the correct function type is not sufficient
 to be a valuation measure.

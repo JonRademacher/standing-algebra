@@ -38,6 +38,6 @@ axiom StandingDependencyIndependent :
 Independence of risk inheritance and dependency degree.
 -/
 axiom RiskNotIdenticalToDependency :
-  ∀ a s, RiskInheritance a s ≠ DependencyDegree a s
+  ∀ a s, RiskLevel (RiskState a s) ≠ DependencyDegree a s
 
 end SigmaR

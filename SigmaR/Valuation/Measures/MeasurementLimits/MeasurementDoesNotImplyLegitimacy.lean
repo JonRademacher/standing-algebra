@@ -20,9 +20,9 @@ No implication from measurement to legitimacy is permitted.
 -/
 axiom measurement_not_legitimacy :
   ¬ (
-    ∀ (a : Agent) (s : State),
+    ∀ (a : Agent) (s : State) (F : Operation),
       Observable a s →
-      Legitimate s
+      Legitimate F
   )
 
 end SigmaR

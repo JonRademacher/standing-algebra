@@ -6,7 +6,7 @@ import SigmaR.Operations.TragicAcceptance_Op
 
 namespace SigmaR
 
-/--
+/-
 Resolution methods are distinct structural modes.
 
 IMPORTANT:

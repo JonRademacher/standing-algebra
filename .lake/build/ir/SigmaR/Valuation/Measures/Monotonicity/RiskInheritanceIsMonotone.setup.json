@@ -6,8 +6,6 @@
  "importArts":
  {"SigmaR.Valuation.Measures.RiskInheritance_Definition":
   [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/RiskInheritance_Definition.olean"]],
-  "SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity":
-  [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Measures/Monotonicity/MeasureStructuralMonotonicity.olean"]],
   "SigmaR.Valuation.Core.StructuralInterfaces":
   [["/workspace/.lake/build/lib/lean/SigmaR/Valuation/Core/StructuralInterfaces.olean"]],
   "SigmaR.StandingAlgebra_FormalCore":
