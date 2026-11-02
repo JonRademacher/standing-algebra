@@ -75,7 +75,7 @@ axiom Successor_class_uniform :
 
 -- Denial of successor access constitutes coercion
 axiom Successor_no_denial :
-  ∀ a : Agent,
+  ∀ _a : Agent,
     ∃ F : Operation, SuccessorOp F
 
 /- -----------------

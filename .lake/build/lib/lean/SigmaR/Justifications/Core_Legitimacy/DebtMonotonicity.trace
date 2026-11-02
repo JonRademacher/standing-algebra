@@ -17,11 +17,11 @@
        "a876d8685b9fd6bc"],
       ["SigmaR.Core.StandingValuation:importAllArts", "6abb5bd77ebea791"],
       ["SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization transitive imports (legacy)",
-       "3f6b2c62938fe31c"],
+       "eeb8173c15319258"],
       ["SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization:importAllArts",
-       "774cad93cc570f92"],
+       "46276ddbaab808f8"],
       ["SigmaR.Justifications.Core_Legitimacy.StandingMonotonicity transitive imports (legacy)",
-       "0634b6edafa8c302"],
+       "bed0c16eabcdff9a"],
       ["SigmaR.Justifications.Core_Legitimacy.StandingMonotonicity:importAllArts",
        "3eae5c9a2629d3b3"]]]]],
   ["libs",
@@ -39,4 +39,4 @@
    "8c7573c9b4205a09"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "aa3baee38b42872b"}
+ "depHash": "2392ad45301f1f9d"}

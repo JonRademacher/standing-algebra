@@ -12,7 +12,7 @@ that preserve admissibility.
 axiom SuccessorContinuationInvariant :
   ∀ (F : Operation),
     SuccessorConsistent F →
-    ∀ s : State,
+    ∀ _s : State,
       ∃ G : Operation,
         Admissible (composeOp F G)
 
@@ -24,7 +24,7 @@ Successor operations are not operational dead-ends.
 theorem SuccessorHasOperationalContinuation
   (F : Operation)
   (hSucc : SuccessorConsistent F) :
-  ∀ s : State,
+  ∀ _s : State,
     ∃ G : Operation,
       Admissible (composeOp F G) :=
 by

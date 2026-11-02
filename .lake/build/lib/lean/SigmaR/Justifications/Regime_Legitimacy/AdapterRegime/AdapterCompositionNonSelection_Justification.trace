@@ -18,11 +18,11 @@
       ["SigmaR.Justifications.Core_Legitimacy.NonSelection_Justification:importAllArts",
        "6e7d943e22b0d7a0"],
       ["SigmaR.Justifications.Core_Legitimacy.StandingMonotonicity transitive imports (legacy)",
-       "0634b6edafa8c302"],
+       "bed0c16eabcdff9a"],
       ["SigmaR.Justifications.Core_Legitimacy.StandingMonotonicity:importAllArts",
        "3eae5c9a2629d3b3"],
       ["SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterRegime_Justification transitive imports (legacy)",
-       "417fbe97716d4319"],
+       "f909f1150d3efd6c"],
       ["SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterRegime_Justification:importAllArts",
        "7c97f8d651db8149"],
       ["SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime transitive imports (legacy)",
@@ -44,4 +44,4 @@
    "615e22ed3f1d6ae9"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "9754a85d361536e7"}
+ "depHash": "36c8aeb739e1a8c0"}

@@ -17,9 +17,9 @@
        "a876d8685b9fd6bc"],
       ["SigmaR.Core.StandingValuation:importAllArts", "6abb5bd77ebea791"],
       ["SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization transitive imports (legacy)",
-       "3f6b2c62938fe31c"],
+       "eeb8173c15319258"],
       ["SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization:importAllArts",
-       "774cad93cc570f92"]]]]],
+       "46276ddbaab808f8"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -35,4 +35,4 @@
    "5cb2386fcb176268"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "13a4742e0488080a"}
+ "depHash": "73f2d76bfd1b1063"}

@@ -14,11 +14,11 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Justifications.Core_Legitimacy.CIA_Justification transitive imports (legacy)",
-       "3c693f38cf227a56"],
+       "10c9ba5c95ca8fd7"],
       ["SigmaR.Justifications.Core_Legitimacy.CIA_Justification:importAllArts",
        "ceb258186960f023"],
       ["SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification transitive imports (legacy)",
-       "0ffdadfc9e0f83fe"],
+       "5e9f7a936b6fac32"],
       ["SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification:importAllArts",
        "a12649a2ad80c7e3"]]]]],
   ["libs",
@@ -36,4 +36,4 @@
    "f629a0d636fa1129"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "d451acf5fd001eb1"}
+ "depHash": "079b592cf050d330"}

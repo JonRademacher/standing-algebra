@@ -29,7 +29,7 @@ to contract or repair that debt cannot be legitimate.
 -/
 theorem emergency_without_contraction_implies_illegitimacy
   {F : Operation} {s : State}
-  (hEmer : EmergencyRegimeOp F s)
+  (_hEmer : EmergencyRegimeOp F s)
   (hDebt : StructuralDebt F s)
   (hNoContraction : ¬ EmergencyContraction F s) :
   ¬ Legitimate F :=

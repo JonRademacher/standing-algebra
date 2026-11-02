@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Justifications.Core_Legitimacy.CIA_Justification transitive imports (legacy)",
-       "3c693f38cf227a56"],
+       "10c9ba5c95ca8fd7"],
       ["SigmaR.Justifications.Core_Legitimacy.CIA_Justification:importAllArts",
        "ceb258186960f023"],
       ["SigmaR.Justifications.Core_Legitimacy.CouplingTypeDifferentiation_Justification transitive imports (legacy)",
@@ -36,4 +36,4 @@
    "ddf4fbe7c348f07d"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "e5730add4336f927"}
+ "depHash": "cf70e1e93280c983"}

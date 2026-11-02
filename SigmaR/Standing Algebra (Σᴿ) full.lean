@@ -7,7 +7,7 @@ axiom State : Type
 
 -- Additional sorts for optional constructs:
 axiom CouplingKind : Type             -- sort for coupling relation kinds (K)
-inductive RemedyLevel : Type :=          -- remedy ladder levels
+inductive RemedyLevel : Type where        -- remedy ladder levels
 | CounterSpeech | Friction | Damping | Removal | Exceptional
 
 -- Primitive function and predicate symbols:

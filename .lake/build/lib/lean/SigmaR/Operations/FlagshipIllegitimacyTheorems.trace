@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Operations.LegitimacyInterface transitive imports (legacy)",
-       "8c63706219ca319b"],
+       "9dcb5eab14428fef"],
       ["SigmaR.Operations.LegitimacyInterface:importAllArts",
        "b05dc4be3205bfa1"]]]]],
   ["libs",
@@ -32,4 +32,4 @@
    "98f434c02e61018a"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "ef4abb86596e45c2"}
+ "depHash": "25dc3f3f331ec481"}

@@ -14,11 +14,11 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.StandingAlgebra_RegimeStacked transitive imports (legacy)",
-       "ae6c41533120c498"],
+       "da767b6431417f7d"],
       ["SigmaR.StandingAlgebra_RegimeStacked:importAllArts",
        "7d0fa550ad1050c9"],
       ["SigmaR.Justifications.Core_Legitimacy.Agency_Justification transitive imports (legacy)",
-       "ba954d7cca1a28dd"],
+       "cb67426995baa85f"],
       ["SigmaR.Justifications.Core_Legitimacy.Agency_Justification:importAllArts",
        "fab091a489f19a84"]]]]],
   ["libs",
@@ -36,4 +36,4 @@
    "d7304b9a6de3c333"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "7017024320f94b6c"}
+ "depHash": "81db1a9438d19c40"}

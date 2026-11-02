@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterScopeIntegrity_Justification transitive imports (legacy)",
-       "f969c5a6beb14c1e"],
+       "5ba1e3ae35466ecf"],
       ["SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterScopeIntegrity_Justification:importAllArts",
        "50c985a7eecf4b9d"],
       ["SigmaR.Regimes.StandingAlgebra_DriftRegime transitive imports (legacy)",
@@ -36,4 +36,4 @@
    "9a62ea3bed8d3a86"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "32723ac9864fa162"}
+ "depHash": "f3a9c501faaaab22"}

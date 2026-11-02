@@ -14,9 +14,9 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization transitive imports (legacy)",
-       "3f6b2c62938fe31c"],
+       "eeb8173c15319258"],
       ["SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization:importAllArts",
-       "774cad93cc570f92"],
+       "46276ddbaab808f8"],
       ["SigmaR.Core.StandingValuation transitive imports (legacy)",
        "a876d8685b9fd6bc"],
       ["SigmaR.Core.StandingValuation:importAllArts", "6abb5bd77ebea791"]]]]],
@@ -35,4 +35,4 @@
    "a6f870640effe308"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "169ec23ea2d20db5"}
+ "depHash": "d7a491f134f9ad69"}

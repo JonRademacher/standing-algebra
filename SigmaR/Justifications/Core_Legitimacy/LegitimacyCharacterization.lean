@@ -71,7 +71,7 @@ autonomy‑relevant invariants
 at state s.
 -/
 def StructurallyAdmissible
-  (F : Operation) (s : State) : Prop :=
+  (_F : Operation) (s : State) : Prop :=
     PFA s
     ∧ Contestable s
     ∧ FrameResolved s

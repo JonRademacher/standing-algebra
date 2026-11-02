@@ -42,7 +42,7 @@ def collapseModel : Model :=
 
 /-- The collapsing model satisfies WellDefined. -/
 theorem collapseModel_wellDefined : WellDefined collapseModel := by
-  constructor <;> intro a <;> intro s <;> simp [WellDefined, collapseModel]
+  constructor <;> intro a <;> intro s <;> simp [collapseModel]
 
 /--
 But the collapsing model violates Independence, because the two fields are equal pointwise.
@@ -76,7 +76,7 @@ def distinctModel : Model :=
 }
 
 theorem distinctModel_wellDefined : WellDefined distinctModel := by
-  constructor <;> intro a <;> intro s <;> simp [WellDefined, distinctModel]
+  constructor <;> intro a <;> intro s <;> simp [distinctModel]
 
 theorem distinctModel_independent : Independence distinctModel := by
   intro a s

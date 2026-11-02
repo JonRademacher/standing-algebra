@@ -34,7 +34,7 @@ namespace SigmaR
    ----------------- -/
 
 axiom Structural_safety :
-  ∀ (a : Agent),
+  ∀ (_a : Agent),
     True
 
 end SigmaR

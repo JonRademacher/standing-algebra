@@ -39,7 +39,7 @@ then it must preserve standing symmetry.
 axiom successor_symmetry_required :
   ∀ {F : Operation},
     Legitimate F →
-      ∀ s : State,
+      ∀ _s : State,
         SuccessorOp F →
         STC5 F
 
@@ -51,7 +51,7 @@ Legitimate successor operations preserve symmetry.
 theorem SuccessorPreservesSymmetry
   {F : Operation}
   (hLeg : Legitimate F) :
-  ∀ s : State,
+  ∀ _s : State,
     SuccessorOp F →
     STC5 F :=
 by

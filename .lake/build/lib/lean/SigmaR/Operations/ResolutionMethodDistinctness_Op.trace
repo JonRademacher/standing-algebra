@@ -23,7 +23,7 @@
        "89cc5b322ac37987"],
       ["SigmaR.Operations.Cooperation_Op:importAllArts", "be8d7b56978ace50"],
       ["SigmaR.Operations.Compromise_Op transitive imports (legacy)",
-       "c15e8d4b80f78b01"],
+       "d506e199e1906481"],
       ["SigmaR.Operations.Compromise_Op:importAllArts", "396255d8584af998"],
       ["SigmaR.Operations.TragicAcceptance_Op transitive imports (legacy)",
        "89cc5b322ac37987"],
@@ -44,4 +44,4 @@
    "2e8813345a830be4"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "2a0b2daea3e9bf57"}
+ "depHash": "6c062a7ca2b2caef"}
