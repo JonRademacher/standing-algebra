@@ -33,7 +33,8 @@ agent i claims structural ability to exit at state s.
 
 No action, operation, or enforcement is implied.
 -/
-axiom ExitThreshold : Agent → State → Prop
+def ExitThreshold (i : Agent) (_s : State) : Prop :=
+  0 ≤ σ i ∧ σ i ≤ B (cap i)
 
 /- -------------------------------------------------------------------------- -/
 /- Basic extensionality                                                        -/

@@ -3,6 +3,7 @@ import SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition
 import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
 import SigmaR.Valuation.Measures.Definitions.DependencyDegree_Definition
 import SigmaR.Valuation.Measures.Definitions.RiskInheritance_Definition
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
