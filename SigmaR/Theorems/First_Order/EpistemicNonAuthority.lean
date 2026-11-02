@@ -30,6 +30,6 @@ theorem Epistemic_non_authority :
 by
   intro F hUses
   obtain ⟨c, hUses⟩ := hUses
-  exact Claim_not_Admissible F c hUses
+  exact Claim_cannot_authorize_admissibility F c hUses
 
 end SigmaR

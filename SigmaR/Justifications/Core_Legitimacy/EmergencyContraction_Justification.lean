@@ -70,13 +70,4 @@ by
   intros s s' hExp hEnv
   exact envelope_required_for_legitimacy hLeg s
 
-/-- A legitimate emergency operation carrying debt must contract it. -/
-theorem EmergencyContraction_required_for_legitimacy
-  {F : Operation} {s : State}
-  (hLeg : Legitimate F)
-  (hEmer : EmergencyRegimeOp F s)
-  (hDebt : HasStructuralDebt F s) :
-  EmergencyContraction F s :=
-legitimate_emergency_requires_contraction hLeg hEmer hDebt
-
 end SigmaR

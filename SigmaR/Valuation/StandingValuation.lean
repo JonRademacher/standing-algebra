@@ -26,7 +26,7 @@ signed integer so that deltas are meaningful; `cap` is the core's capacity
 index, coerced to `Int`.
 -/
 
-namespace SigmaR.Valuation.Valuation
+namespace SigmaR.Valuation
 
 abbrev State := SigmaR.State
 

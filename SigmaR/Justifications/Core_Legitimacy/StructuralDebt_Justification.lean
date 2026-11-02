@@ -24,6 +24,11 @@ of structural debt dissipation.
 namespace SigmaR
 /-- Predicate: the operation incurs structural debt at state `s`. -/
 axiom StructuralDebt : Operation → State → Prop
+
+/-- Compatibility name used by regime-level justifications. -/
+abbrev HasStructuralDebt (F : Operation) (s : State) : Prop :=
+  StructuralDebt F s
+
 /-- Predicate: structural debt incurred by `F` at `s`
    is dissipated via directed repair. -/
 axiom DebtDissipated : Operation → State → Prop

@@ -80,7 +80,6 @@ This ensures that:
 
 namespace SigmaR
 
-/-- An operation induces dominant coupling. -/
 /-- Predicate: agent `i`
     has a uniquely identifiable
     dominant coupling
