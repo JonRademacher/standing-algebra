@@ -103,7 +103,6 @@ theorem CIA_does_not_distort_order
 by
   intro _
   unfold ValLe
-  intro _
   exact Int.le_total (σv i s₁) (σv i s₂)
 
 /- -------------------------------------------------------------------------- -/

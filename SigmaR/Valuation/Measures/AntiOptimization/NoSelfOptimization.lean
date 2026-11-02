@@ -30,4 +30,4 @@ axiom no_self_optimization :
       GeneratedFromMeasure O M
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

@@ -16,6 +16,8 @@ not defects.
 
 namespace SigmaR.Valuation.Measures.MeasurementLimits
 
+open SigmaR.Valuation.Core
+
 /--
 No implication from measurement limitations to system
 invalidity is permitted.
@@ -27,4 +29,4 @@ axiom measurement_limits_not_invalidity :
       SystemInvalid
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.MeasurementLimits

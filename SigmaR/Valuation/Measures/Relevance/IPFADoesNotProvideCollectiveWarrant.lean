@@ -28,4 +28,4 @@ axiom ipfa_not_collective :
       TreatedAsAuthoritative s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

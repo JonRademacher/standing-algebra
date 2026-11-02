@@ -1,5 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 import SigmaR_Core
+import SigmaR.Valuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -32,6 +33,8 @@ Thus:
 
 namespace SigmaR
 
+open SigmaR.Valuation
+
 /--
 State isomorphism:
 
@@ -46,7 +49,7 @@ Standing valuation
 is invariant under isomorphism.
 -/
 axiom valuation_invariant :
-  ∀ {s₁ s₂ : State},
+  ∀ {s₁ s₂ : State} {i : Agent},
     Isomorphic s₁ s₂ →
     σv i s₁ = σv i s₂
 

@@ -23,6 +23,7 @@ No quantitative relations are asserted here—only non-identity.
 namespace SigmaR.Valuation.Measures.WellDefinedness
 
 open SigmaR.Valuation.Measures.Definitions
+open SigmaR.Valuation.Core
 
 /--
 Independence of standing and capacity measures.

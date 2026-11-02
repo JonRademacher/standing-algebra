@@ -28,4 +28,4 @@ axiom no_monotone_improvement :
       InterpretedAsImprovement M
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

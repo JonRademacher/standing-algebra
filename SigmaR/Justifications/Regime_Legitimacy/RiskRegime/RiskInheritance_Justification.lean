@@ -70,7 +70,7 @@ axiom risk_inheritance_requires_debt :
   ∀ {F : Operation},
     Legitimate F →
       ∀ s : State,
-        RiskInterventionInherited F s →
+        RiskInherited F s →
         HasStructuralDebt F s
 
 /--
@@ -83,7 +83,7 @@ theorem RiskInheritance_requires_debt
   {F : Operation}
   (hLeg : Legitimate F) :
   ∀ s : State,
-    RiskInterventionInherited F s →
+    RiskInherited F s →
     HasStructuralDebt F s :=
 by
   intros s hRisk

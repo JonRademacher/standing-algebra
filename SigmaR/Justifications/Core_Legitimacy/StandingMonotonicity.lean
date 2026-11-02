@@ -1,5 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
+import SigmaR.Valuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -32,6 +33,8 @@ ordered-ring combination, which this library does not carry.
 -/
 
 namespace SigmaR
+
+open SigmaR.Valuation
 
 /--
 Predicate: operation `F` never decreases any agent's standing,

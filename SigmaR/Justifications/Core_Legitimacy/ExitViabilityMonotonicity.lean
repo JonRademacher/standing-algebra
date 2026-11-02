@@ -1,4 +1,3 @@
-import Mathlib.Data.Real.Basic
 import SigmaR_Core
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 
@@ -38,9 +37,6 @@ axiom dominantDependency : Agent → State → Int
 
 /-- Agent‑specific exit threshold. -/
 axiom exitThreshold : Agent → Int
-
-/-- Dominant dependency of an agent in a state. -/
-axiom deg_dom : State → Agent → ℝ
 
 /--
 Exit viability definition
