@@ -1,4 +1,4 @@
-import SigmaR.Valuation.Core.StructuralInterfaces
+import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Measures.Definitions.Operation
 
 /-!
@@ -21,6 +21,11 @@ open SigmaR.Valuation.Measures.Definitions
 Structural debt measure.
 -/
 axiom StructuralDebt : Agent → State → Nat
+
+/--
+Predicate: a repair operation applies to agent `i`.
+-/
+axiom Repairs : Operation → Agent → Prop
 
 /--
 Debt coherence axioms.

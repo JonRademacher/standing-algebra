@@ -23,7 +23,7 @@ or licensing autonomy is permitted.
 -/
 axiom standing_not_autonomy :
   ¬ (
-    ∀ (a : Agent) (s : SigmaR.Valuation.State),
+    ∀ (a : Agent) (s : SigmaR.State),
       SigmaR.Valuation.Core.TreatedAsAutonomyFromStandingMeasure a s
   )
 

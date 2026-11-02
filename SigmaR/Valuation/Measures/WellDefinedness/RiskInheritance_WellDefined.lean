@@ -1,6 +1,6 @@
-import SigmaR.Valuation.StandingValuation
+import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Measures.Definitions.RiskInheritance_Definition
-import SigmaR.Valuation.Measures.Definitions.DependencyDegree_Definition
+import SigmaR.Valuation.Measures.DependencyDegree_Definition
 
 /-!
 ###############################################################################

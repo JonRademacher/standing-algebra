@@ -22,6 +22,7 @@ This file is validation-only and downstream of valuation.
 
 namespace SigmaR.Valuation
 
+
 /- -------------------------------------------------------------------------- -/
 /- Primitive exit structure                                                    -/
 /- -------------------------------------------------------------------------- -/
@@ -32,8 +33,7 @@ agent i claims structural ability to exit at state s.
 
 No action, operation, or enforcement is implied.
 -/
-def ExitThreshold (i : Agent) (s : State) : Prop :=
-  0 ≤ σ i s ∧ σ i s ≤ cap i
+axiom ExitThreshold : Agent → State → Prop
 
 /- -------------------------------------------------------------------------- -/
 /- Basic extensionality                                                        -/
@@ -61,7 +61,7 @@ and non-negative.
 theorem exit_requires_nonnegative_standing :
   ∀ (i : Agent) (s : State),
     ExitThreshold i s →
-    0 ≤ σ i s :=
+    0 ≤ σ i :=
 by
   intro i s hExit
   exact hExit.1
@@ -78,7 +78,7 @@ Exit cannot demand standing beyond capacity.
 theorem exit_respects_capacity :
   ∀ (i : Agent) (s : State),
     ExitThreshold i s →
-    σ i s ≤ cap i :=
+    σ i ≤ B (cap i) :=
 by
   intro i s hExit
   exact hExit.2

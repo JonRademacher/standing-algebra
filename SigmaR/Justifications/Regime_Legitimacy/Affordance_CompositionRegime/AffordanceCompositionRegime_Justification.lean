@@ -1,5 +1,5 @@
+import SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime
 import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.NonSelectiveComposition_Justification
-import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionCore
 import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.ExitPreservationUnderComposition_Justification
 import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.StandingMonotonicityUnderComposition_Justification
 import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.RiskAccumulationBound_Justification
@@ -45,13 +45,6 @@ local admissibility of its components.
 -/
 
 namespace SigmaR
-
-/--
-Tier-2 regime declaration:
-
-Affordance composition is a standing-relevant regime.
--/
-axiom AffordanceCompositionRegimeOp : Operation → Prop
 
 axiom affordance_composition_is_regime :
   ∀ {G : Operation},

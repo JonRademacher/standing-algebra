@@ -1,6 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
-import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justifrication
+import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
 import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitAvailability_Justification
 import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitPreservation_Justification
 
@@ -39,8 +39,8 @@ legitimacy‑preserving proxy optimization channel.
 
 namespace SigmaR
 
-/-- Predicate: the operation participates in the Exit Regime at state `s`. -/
-axiom ExitRegimeOp : Operation → State → Prop
+/- The Exit Regime predicate `ExitRegimeOp` is declared at the regime level,
+   in `SigmaR.Regimes.StandingAlgebra_ExitRegime`, and imported here. -/
 
 /--
 Tier‑2 legitimacy axiom for Exit Regime Closure:

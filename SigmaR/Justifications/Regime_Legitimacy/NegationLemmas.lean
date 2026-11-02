@@ -31,8 +31,8 @@ axiom RegimeCondition : Operation → Prop
 /-- Generic accumulation predicate (e.g. risk, debt, drift). -/
 axiom Accumulates : Operation → Prop
 
-/-- Operation-level repair availability without a specific state. -/
-axiom OperationRepairAvailable : Operation → Prop
+/-- Generic repair-path availability predicate (state-free). -/
+axiom RepairPathAvailable : Operation → Prop
 
 /-- Generic resolution availability predicate. -/
 axiom ResolutionAvailable : Operation → Prop
@@ -81,7 +81,7 @@ is structurally illegitimate.
 axiom AccumulationWithoutRepair_Illegitimate :
   ∀ F : Operation,
     Accumulates F →
-    ¬ OperationRepairAvailable F →
+    ¬ RepairPathAvailable F →
     ¬ Legitimate F
 
 /-

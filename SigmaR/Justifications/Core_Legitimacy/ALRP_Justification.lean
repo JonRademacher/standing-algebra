@@ -34,10 +34,11 @@ namespace SigmaR
 -- Agent       : Type
 -- State       : Type
 -- Operation   : Type
--- σ           : State → Agent → ℝ      (standing function)
--- apply       : Operation → State → State
+-- σ           : Agent → Nat             (standing function; `State` and
+--                                        `Agent` are the same carrier)
+-- apply       : Operation → Agent → Agent
 -- Legitimate  : Operation → Prop
--- DomPressure : State → ℝ
+-- DomPressure : State → Nat
 
 ------------------------------------------------------------------------
 -- Justification‑layer axioms (operational, not normative)
@@ -54,9 +55,9 @@ axiom nondomination :
     increases.
     This captures the non-domination invariant used in this justification. -/
 axiom dp_increase_for_sigma_decrease :
-  ∀ {F : Operation} {a : Agent},
-    σ (apply F a) < σ a →
-    DomPressure (apply F a) > DomPressure a
+  ∀ {F : Operation} {s : State},
+    σ (apply F s) < σ s →
+    DomPressure (apply F s) > DomPressure s
 
 ------------------------------------------------------------------------
 -- ALRP as a derived necessity
@@ -69,18 +70,22 @@ Allowing such a reduction would contradict the nondomination invariant.
 
 This is the formal counterpart of the Maxim of Mutual Autonomy. -/
 theorem ALRP_required_for_legitimacy
-  {F : Operation} (hLegit : Legitimate F) (a : Agent) :
-  σ a ≤ σ (apply F a) :=
+  {F : Operation} {s : State} (hLegit : Legitimate F) :
+  σ (apply F s) ≥ σ s :=
 by
-  by_cases h : σ a ≤ σ (apply F a)
-  · exact h
-  · have h_lt : σ (apply F a) < σ a := Nat.lt_of_not_ge h
+  -- Split on whether standing decreases; a decrease is contradictory.
+  cases Nat.lt_or_ge (σ (apply F s)) (σ s) with
+  | inl h_lt =>
+    -- A decrease in σ forces an increase in domination pressure …
     have h_dp_inc :
-      DomPressure (apply F a) > DomPressure a :=
+      DomPressure (apply F s) > DomPressure s :=
       dp_increase_for_sigma_decrease h_lt
+    -- … but legitimacy forbids any increase in domination pressure.
     have h_dp_noninc :
-      DomPressure (apply F a) ≤ DomPressure a :=
+      DomPressure (apply F s) ≤ DomPressure s :=
       nondomination hLegit
-    exact False.elim (Nat.not_lt_of_ge h_dp_noninc h_dp_inc)
+    -- Contradiction: pressure cannot both strictly increase and not increase.
+    exact absurd (Nat.lt_of_lt_of_le h_dp_inc h_dp_noninc) (Nat.lt_irrefl _)
+  | inr h_ge => exact h_ge
 
 end SigmaR

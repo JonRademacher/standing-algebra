@@ -1,6 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
-import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justifrication
+import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
 import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.EpistemicAdapter_Justification
 import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterScopeIntegrity_Justification
 

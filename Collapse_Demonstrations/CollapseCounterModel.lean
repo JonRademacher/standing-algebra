@@ -85,15 +85,16 @@ def collapseModel : SigmaRModel :=
 
 /-- The collapsing model satisfies valuation well-definedness. -/
 theorem collapseModel_measuresWellDefined : MeasuresWellDefined collapseModel := by
-  change (∀ a : Nat, ∀ s : Unit, 0 ≤ a) ∧
-    (∀ a : Nat, ∀ s : Unit, 0 ≤ a)
-  constructor <;> intro a s <;> exact Nat.zero_le a
+  constructor <;> intro a s <;> exact Nat.zero_le _
 
 /-- But it violates independence, because the measures are equal everywhere. -/
 theorem collapseModel_notStandingNotRisk : ¬ StandingNotRisk collapseModel := by
   change ¬ (∀ a : Nat, ∀ s : Unit, a ≠ a)
   intro h
-  exact h 0 () rfl
+  -- pick a = 0, s = ()
+  have eq0 : collapseModel.StandingMeasure (0 : Nat) () = collapseModel.RiskLoad (0 : Nat) () := by
+    simp [collapseModel]
+  exact (h (0 : Nat) ()) eq0
 
 /-
 -----------------------------------------------------------------------------
@@ -129,13 +130,7 @@ def distinctModel : SigmaRModel :=
 }
 
 theorem distinctModel_measuresWellDefined : MeasuresWellDefined distinctModel := by
-  change (∀ a : Nat, ∀ s : Unit, 0 ≤ a) ∧
-    (∀ a : Nat, ∀ s : Unit, 0 ≤ a + 1)
-  constructor
-  · intro a s
-    exact Nat.zero_le a
-  · intro a s
-    exact Nat.zero_le (a + 1)
+  constructor <;> intro a s <;> exact Nat.zero_le _
 
 theorem distinctModel_standingNotRisk : StandingNotRisk distinctModel := by
   change ∀ a : Nat, ∀ s : Unit, a ≠ a + 1

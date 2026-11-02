@@ -1,9 +1,21 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Operations.ResolutionMethodDistinctness_Op
 
 namespace SigmaR
 
-/-- Cooperation does not increase structural dependency. -/
+/--
+Operations-level predicate:
+
+`F` represents a cooperation operation
+where agents jointly act without imposing
+constraints on non-participants.
+-/
+axiom CooperationOp : Operation → Prop
+
+/--
+Operations-level predicate:
+
+`F` does not increase the dependency carried by any agent.
+-/
 axiom DependencyNonIncreasing : Operation → Prop
 
 /--

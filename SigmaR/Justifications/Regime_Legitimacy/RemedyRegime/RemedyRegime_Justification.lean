@@ -1,6 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
-import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justifrication
+import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
 import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.EmergentWrongRepair_Justification
 import SigmaR.Justifications.Regime_Legitimacy.RemedyRegime.RepairAvailability_Justification
 
@@ -67,6 +67,14 @@ namespace SigmaR
 
 /-- Predicate: the operation participates in the Remedy Regime at state `s`. -/
 axiom RemedyRegimeOp : Operation → State → Prop
+
+/--
+Predicate: the operation is a repair operation of the Remedy Regime.
+
+State-free: a repair path exists independently of the state at which the
+drift it remedies accumulated.
+-/
+axiom RepairRegimeOp : Operation → Prop
 
 /--
 Tier‑2 legitimacy axiom for Remedy Regime Closure:

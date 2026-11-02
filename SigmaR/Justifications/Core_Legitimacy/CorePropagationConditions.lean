@@ -1,4 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
+import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.RiskIndexedStanding_Justification
 import SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification
 import SigmaR.Justifications.Core_Legitimacy.BoundaryEnvelope_Justification
@@ -43,6 +44,12 @@ with normative legitimacy.
 
 namespace SigmaR
 
+/-- Coupling degree of a standing carrier. -/
+axiom deg : Agent → Nat
+
+/-- Exit viability of a standing carrier. -/
+axiom ExitViable : State → Prop
+
 /--
 Propagation:
 
@@ -85,10 +92,9 @@ must preserve exit viability
 from dominant coupling.
 -/
 axiom legitimacy_preserves_exit :
-  ∀ {F : Operation} {a i : Agent} (θ : Agent → ℝ),
+  ∀ {F : Operation} {a : Agent},
     Legitimate F →
-    ExitViable θ a i →
-    ExitViable θ (apply F a) i
+    ExitViable (apply F a)
 
 /--
 Propagation:
@@ -100,6 +106,6 @@ axiom legitimacy_accumulates_debt :
   ∀ {F : Operation} {a : Agent},
     Legitimate F →
     σ (apply F a) < σ a →
-    HasStructuralDebt F a
+    StructuralDebt F a
 
 end SigmaR

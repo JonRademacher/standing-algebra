@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegimeCore
+import SigmaR.Regimes.StandingAlgebra_DriftRegime
 
 /-!
 ###############################################################################
@@ -47,7 +47,7 @@ Derived theorem:
 
 Drift increases structural debt.
 -/
-theorem DriftAccruesDebt_from_regime
+theorem DriftAccruesStructuralDebt
   {D : Operation}
   (hDrift : DriftRegimeOp D) :
   ∀ s : State,

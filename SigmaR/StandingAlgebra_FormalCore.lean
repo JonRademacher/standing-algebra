@@ -2,6 +2,23 @@ import Std
 
 open Nat
 
+/- -------------------------------------------------------------------------
+   Sets
+
+   Lean's core library has no `Set` type.  The Σᴿ layers are stated over
+   *sets* of agents, measures, operations and options (`Set Agent`,
+   `Set Measure`, …), so the notion is fixed once here as a predicate,
+   together with the usual membership notation.
+   ------------------------------------------------------------------------- -/
+
+/--
+A set is a predicate on its elements.
+-/
+abbrev Set (α : Type) : Type := α → Prop
+
+instance instMembershipSet {α : Type} : Membership α (Set α) where
+  mem s a := s a
+
 namespace SigmaR
 
 /- =========================================================
@@ -53,6 +70,20 @@ axiom σ_ext :
   ∀ {a₁ a₂ : Agent}, a₁ = a₂ → σ a₁ = σ a₂
 
 /- -----------------
+   Configuration Carrier
+   ----------------- -/
+
+/--
+Standing Algebra is stated over one carrier: an agent *is* a state of the
+algebra, so `State` is the same type as `Agent` under another name.
+
+This keeps the two levels of the signature — agent-indexed standing `σ` and
+state-indexed pressure `DomPressure` — comparable without introducing a second
+primitive sort.
+-/
+abbrev State : Type := Agent
+
+/- -----------------
    Operations
    ----------------- -/
 
@@ -79,16 +110,68 @@ axiom apply_ext :
   ∀ {F : Operation} {a₁ a₂ : Agent},
     a₁ = a₂ → apply F a₁ = apply F a₂
 
+/--
+State-level application of an operation.
+
+`State` and `Agent` are the same carrier (see above), so a state transition is
+operation application under its state-level name.  The first-order theorems and
+the collapse demonstrations are stated over *states*, and the attached
+mathematics carries both `apply` and `apply_state` (Σᴿ, *Definition — state
+transition*); this keeps both readings of the same transition available without
+introducing a second primitive.
+-/
+-- `apply` is a primitive of the signature (an axiom, hence without executable
+-- code), so this alias is `noncomputable`: it renames the transition, it does
+-- not compute one.
+noncomputable abbrev apply_state : Operation → State → State := apply
+
+/- -----------------
+   Operation Combinators
+   ----------------- -/
+
+/--
+The identity operation.
+-/
+axiom IdOp : Operation
+
 /- -----------------
    Admissibility (Primitive)
    ----------------- -/
 
 axiom Admissible : Operation → Prop
-axiom Legitimate : Operation → Prop
 
 /- -----------------
    Core Invariants (Axiomatic)
    ----------------- -/
+
+/--
+Legitimacy (Primitive)
+
+Legitimacy is the structural predicate on operations whose content is fixed by
+the Tier‑2 axioms. It is *not* derived here: the justifications in
+`SigmaR/Justifications` characterise it as invariant preservation.
+-/
+axiom Legitimate : Operation → Prop
+
+/--
+Domination Pressure (Primitive)
+
+`DomPressure s` is the domination pressure of a configuration, the supremum of
+dependency growth and exit fragility over its agents
+(Σᴿ, *Definition — Domination Pressure*).
+-/
+axiom DomPressure : State → Nat
+
+/--
+Domination pressure does not escalate under admissible operations.
+
+This is the structural form of the Tier‑1 guarantee that admissibility cannot
+buy autonomy with domination.
+-/
+axiom DomPressure_monotonic :
+  ∀ (F : Operation) (s : State),
+    Admissible F →
+    DomPressure (apply F s) ≤ DomPressure s
 
 /--
 ALRP — Autonomy-Limiting Reflex Principle (structural form)

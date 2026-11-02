@@ -62,6 +62,14 @@ def STC5_valid (F : Operation) : Prop :=
   (∀ s : State, AlternativesConsidered F s) ∧
   (∀ s : State, OffRampsAndCorrection F s)
 
+/--
+`STC5 F`: operation `F` passes the Standing‑to‑Coerce test.
+
+The regime justifications refer to the test by this name; it is the same
+predicate as `STC5_valid` (Σᴿ, *Definition — STC‑5*).
+-/
+def STC5 (F : Operation) : Prop := STC5_valid F
+
 ------------------------------------------------------------------------
 -- Legitimacy implies each STC‑5 gate
 -- (Operational legitimacy constraints from On Relevance)

@@ -1,3 +1,4 @@
+import SigmaR.Regimes.StandingAlgebra_DriftRegime
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.BoundedDrift_Justification
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftStandingMonotonicity_Justification
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftDependencyMonotonicity_Justification
@@ -6,7 +7,6 @@ import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftStructuralDebt_J
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRepairRequirement_Justification
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftExitPreservation_Justification
 import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftScopeIntegrity_Justification
-import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegimeCore
 
 /-!
 ###############################################################################

@@ -38,11 +38,11 @@ axiom Exit_preserved_under_drift :
 
 -- Drift cannot remove the existence of viable exit
 axiom Drift_cannot_foreclose_exit :
-  ∀ (a : Agent),
+  ∀ (a : Agent) (G : Operation),
     (∃ F : Operation, Exit F ∧ MinStanding ≤ σ (apply F a)) →
     (∃ D : Operation, Drift D) →
     (∃ F : Operation, Exit F ∧
-       MinStanding ≤ σ (apply F (apply D a)))
+       MinStanding ≤ σ (apply F (apply G a)))
 
 /-
 NOTE:

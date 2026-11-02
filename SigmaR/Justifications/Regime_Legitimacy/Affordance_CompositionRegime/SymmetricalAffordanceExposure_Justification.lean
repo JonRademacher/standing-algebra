@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.STC5_Justification
-import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionCore
+import SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime
 
 /-!
 ###############################################################################
@@ -24,10 +24,6 @@ Therefore:
 -/
 
 namespace SigmaR
-
-/-- Agents are symmetric when both standing and capacity agree. -/
-def EqualStandingAndCapacity (a b : Agent) : Prop :=
-  σ a = σ b ∧ cap a = cap b
 
 /--
 Predicate: agent `a` is exposed to affordance `F`

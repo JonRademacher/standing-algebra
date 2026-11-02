@@ -22,6 +22,6 @@ namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 TransformabilityOperationSet S means that S is a set
 of transformation operations.
 -/
-axiom TransformabilityOperationSet : Type
+abbrev TransformabilityOperationSet : Type := Set Operation
 
 end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

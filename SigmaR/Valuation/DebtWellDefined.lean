@@ -24,6 +24,7 @@ This file closes the valuation-level properties of debt.
 
 namespace SigmaR.Valuation
 
+
 /- -------------------------------------------------------------------------- -/
 /- Primitive debt structure                                                    -/
 /- -------------------------------------------------------------------------- -/
@@ -95,7 +96,7 @@ and does not back-react onto valuation.
 -/
 theorem debt_does_not_affect_standing
   (i : Agent) (s : State) :
-  σ i s = σ i s :=
+  σv i s = σv i s :=
 by
   rfl
 

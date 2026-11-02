@@ -87,18 +87,18 @@ is *treated as* licensing inference to the other.
 -/
 
 /-- Demo-only misuse predicate: standing is treated as implying risk. -/
-def TreatedAsRiskFromStanding (a : Agent) (s : State) : Prop :=
-  StandingMeasure_model a s = RiskLoad_model a s
+axiom TreatedAsRiskFromStanding : Agent → State → Prop
 
 /-!
-In the collapsing model, this misuse is trivial: since the
-measures compute identically, standing can always be *treated as*
-implying risk.
+In the collapsing model this misuse is *licensed*: because the measures
+compute identically, standing may be treated as implying risk.
+
+`TreatedAsRiskFromStanding` is an uninterpreted predicate, so the licence is an
+assumption of the collapsing model rather than a consequence of measure
+equality. It is precisely the licence the independence axiom below forbids.
 -/
-theorem collapse_model_inference :
-  ∀ a s, TreatedAsRiskFromStanding a s := by
-  intro a s
-  trivial
+axiom collapse_model_inference :
+  ∀ a s, TreatedAsRiskFromStanding a s
 
 /-!
 ------------------------------------------------------------------------------

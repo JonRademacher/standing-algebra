@@ -1,6 +1,6 @@
 import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification
 import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitPreservation_Justification
-import SigmaR.Justifications.Regime_Legitimacy.Affordance_CompositionRegime.AffordanceCompositionCore
+import SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime
 
 /-!
 ###############################################################################

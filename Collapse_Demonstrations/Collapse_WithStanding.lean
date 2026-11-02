@@ -1,5 +1,4 @@
 import Collapse_Demonstrations.Collapse
-import Mathlib.Data.Int.Basic
 
 /-
   Collapse_Demonstrations.Collapse_WithStanding
@@ -13,6 +12,19 @@ import Mathlib.Data.Int.Basic
 -/
 
 namespace Collapse_Demonstrations
+
+
+/-
+  Standing Algebra monotonicity axiom (ALRP):
+
+  Admissible operations never decrease standing.
+-/
+variable
+  (Agent : Type)
+  (Operation : Type)
+  (σ : Agent → Int)
+  (Apply : Operation → Agent → Agent)
+  (Admissible : Operation → Prop)
 
 /--
   Standing Algebra axiom:
@@ -48,6 +60,6 @@ by
     SA F a hAdm
 
   -- Contradiction: σ(Apply F a) < σ a and ≥ σ a
-  exact (Int.not_lt.mpr hNonDecrease) hDecrease
+  exact (Int.not_le.mpr hDecrease) hNonDecrease
 
 end Collapse_Demonstrations

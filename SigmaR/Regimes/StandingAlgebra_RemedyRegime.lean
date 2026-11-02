@@ -26,8 +26,10 @@ namespace SigmaR
 -- Repair / remedy operations
 axiom Remedy : Operation → Prop
 
--- Structural harm or debt measure
-axiom StructuralDebt : Agent → Nat
+-- Structural harm or debt measure.
+-- Named distinctly from the justification-layer predicate
+-- `StructuralDebt : Operation → State → Prop` so that both can be imported.
+axiom StructuralDebtLevel : Agent → Nat
 
 /- -----------------
    Remedy Admissibility
@@ -55,7 +57,7 @@ axiom Remedy_preserves_standing :
 axiom Remedy_reduces_debt :
   ∀ (R : Operation) (a : Agent),
     Remedy R →
-    StructuralDebt (apply R a) < StructuralDebt a
+    StructuralDebtLevel (apply R a) < StructuralDebtLevel a
 
 /- -----------------
    Remedy Boundedness
@@ -65,7 +67,7 @@ axiom Remedy_reduces_debt :
 axiom Remedy_not_escalatory :
   ∀ (R : Operation),
     Remedy R →
-    ¬ (∀ a : Agent, StructuralDebt (apply R a) > StructuralDebt a)
+    ¬ (∀ a : Agent, StructuralDebtLevel (apply R a) > StructuralDebtLevel a)
 
 /- -----------------
    Remedy Optionality

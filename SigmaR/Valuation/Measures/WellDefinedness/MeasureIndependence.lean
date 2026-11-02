@@ -23,26 +23,26 @@ No quantitative relations are asserted here—only non-identity.
 namespace SigmaR.Valuation.Measures.WellDefinedness
 
 open SigmaR.Valuation.Measures.Definitions
+open SigmaR.Valuation.Core
 
 /--
 Independence of standing and capacity measures.
 -/
 axiom StandingCapacityIndependent :
-  ∀ (a : Agent) (s : SigmaR.Valuation.State),
+  ∀ (a : Agent) (s : SigmaR.State),
     StandingMeasure a s ≠ CapacityMeasure a s
 
 /--
 Independence of standing and dependency degree.
 -/
 axiom StandingDependencyIndependent :
-  ∀ (a : Agent) (s : SigmaR.Valuation.State),
+  ∀ (a : Agent) (s : SigmaR.State),
     StandingMeasure a s ≠ DependencyDegree a s
 
 /--
 Independence of risk inheritance and dependency degree.
 -/
 axiom RiskNotIdenticalToDependency :
-  ∀ (a : Agent) (s : SigmaR.Valuation.State),
-    RiskInheritance a s ≠ DependencyDegree a s
+  ∀ a s, RiskLevel (RiskState a s) ≠ DependencyDegree a s
 
 end SigmaR.Valuation.Measures.WellDefinedness

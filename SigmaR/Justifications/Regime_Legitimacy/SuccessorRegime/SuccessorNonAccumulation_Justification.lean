@@ -1,5 +1,5 @@
-import SigmaR.Justifications.Core_Legitimacy.TransitionCriteriaRerunnability_Justification
-import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegimeCore
+import SigmaR.Justifications.Core_Legitimacy.Rerunnability_Justification
+import SigmaR.Regimes.StandingAlgebra_SuccessorRegime
 
 /-!
 ###############################################################################

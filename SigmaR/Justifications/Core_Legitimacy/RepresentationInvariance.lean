@@ -1,5 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 import SigmaR_Core
+import SigmaR.Valuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -32,6 +33,8 @@ Thus:
 
 namespace SigmaR
 
+open SigmaR.Valuation
+
 /--
 State isomorphism:
 
@@ -46,9 +49,9 @@ Standing valuation
 is invariant under isomorphism.
 -/
 axiom valuation_invariant :
-  ∀ {s₁ s₂ : State},
+  ∀ {s₁ s₂ : State} {i : Agent},
     Isomorphic s₁ s₂ →
-    σ s₁ = σ s₂
+    σv i s₁ = σv i s₂
 
 /--
 Structural admissibility
@@ -61,22 +64,12 @@ theorem admissibility_invariant :
     StructurallyAdmissible F s₁ →
     StructurallyAdmissible F s₂ :=
 by
-  -- proof outline:
-
-  -- 1. Isomorphic states preserve:
-  --      PFA
-  --      Contestability
-  --      DerivedStanding
-  --      RiskIndexedStanding
-  --      CouplingExhaustiveness
-  --      DominantCouplingIdentified
-  --      BoundaryRespected
-  --      Rerunnable
-  --
-  -- 2. Therefore:
-  --      StructurallyAdmissible preserved.
-
-  admit
+  -- `StructurallyAdmissible` is the state-side of the Core Alignment equation,
+  -- so it travels with `F` alone: whatever state realises `F` as legitimate
+  -- realises its structural invariants.
+  intro F s₁ s₂ _ hAdm
+  exact (legitimacy_characterization (F := F) (s := s₂)).mp
+    ((legitimacy_characterization (F := F) (s := s₁)).mpr hAdm)
 
 /--
 Legitimacy
@@ -89,10 +82,9 @@ theorem legitimacy_invariant :
     Legitimate F →
     Legitimate F :=
 by
-  -- follows from:
-  -- legitimacy_characterization
-  -- admissibility_invariant
-
-  admit
+  -- legitimacy is a property of the operation, so re-encoding the state
+  -- leaves it untouched (cf. `admissibility_invariant`).
+  intro _ _ _ _ hLeg
+  exact hLeg
 
 end SigmaR

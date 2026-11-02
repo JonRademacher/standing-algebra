@@ -1,5 +1,5 @@
-import SigmaR_Core
-import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegimeCore
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Regimes.StandingAlgebra_SuccessorRegime
 
 namespace SigmaR
 
@@ -12,9 +12,9 @@ that preserve admissibility.
 axiom SuccessorContinuationInvariant :
   ∀ (F : Operation),
     SuccessorConsistent F →
-    ∀ s : State,
+    ∀ _s : State,
       ∃ G : Operation,
-        Admissible (composeOp G F)
+        Admissible (composeOp F G)
 
 /--
 Derived theorem:
@@ -24,9 +24,9 @@ Successor operations are not operational dead-ends.
 theorem SuccessorHasOperationalContinuation
   (F : Operation)
   (hSucc : SuccessorConsistent F) :
-  ∀ s : State,
+  ∀ _s : State,
     ∃ G : Operation,
-      Admissible (composeOp G F) :=
+      Admissible (composeOp F G) :=
 by
   intro s
   exact SuccessorContinuationInvariant F hSucc s

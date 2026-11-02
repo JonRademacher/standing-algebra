@@ -14,6 +14,24 @@
 
 namespace Collapse_Demonstrations.Goodhart_Drift
 
+/-
+  Abstract time index.
+
+  We intentionally keep this abstract (not ℕ, not ℤ)
+  to avoid smuggling in ordering or algebraic structure.
+-/
+variable (Time : Type)
+
+/-
+  Proxy metric being optimized.
+-/
+variable (proxy : Time → Int)
+
+/-
+  True underlying value the proxy is intended to represent.
+-/
+variable (trueValue : Time → Int)
+
 /--
   Goodhart drift occurs if there exist two distinct times
   such that the proxy improves while the true value worsens.

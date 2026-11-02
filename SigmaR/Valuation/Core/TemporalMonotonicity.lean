@@ -1,4 +1,4 @@
-import SigmaR.Valuation.Core.StructuralInterfaces
+import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Measures.Definitions.Operation
 
 /-!
@@ -21,6 +21,11 @@ open SigmaR.Valuation.Measures.Definitions
 Generic valuation quantity over agents and states.
 -/
 axiom ValuationQty : Agent → State → Nat
+
+/--
+Predicate: an operation is a repair for agent `i`.
+-/
+axiom Repairs : Operation → Agent → Prop
 
 /--
 Temporal monotonicity axiom:

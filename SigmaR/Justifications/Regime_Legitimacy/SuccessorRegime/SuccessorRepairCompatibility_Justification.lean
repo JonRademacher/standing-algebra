@@ -1,5 +1,4 @@
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
-import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegimeCore
 import SigmaR.Regimes.StandingAlgebra_SuccessorRegime
 
 /-!
@@ -40,8 +39,8 @@ then it must not block directed repair.
 axiom successor_repair_compatible :
   ∀ {F : Operation},
     Legitimate F →
+      SuccessorOp F →
       ∀ s : State,
-        SuccessorOp F →
         ¬ SuccessorBlocksRepair F s
 
 /--
@@ -51,12 +50,12 @@ Legitimate successor operations preserve repair compatibility.
 -/
 theorem SuccessorRepairCompatible
   {F : Operation}
-  (hLeg : Legitimate F) :
+  (hLeg : Legitimate F)
+  (hSucc : SuccessorOp F) :
   ∀ s : State,
-    SuccessorOp F →
     ¬ SuccessorBlocksRepair F s :=
 by
-  intros s hSucc
-  exact successor_repair_compatible hLeg s hSucc
+  intro s
+  exact successor_repair_compatible hLeg hSucc s
 
 end SigmaR

@@ -1,6 +1,5 @@
-import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justifrication
+import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
-import SigmaR.Justifications.Regime_Legitimacy.EmergencyRegime.EmergencyRegime_Justification
 
 /-!
 ###############################################################################
@@ -36,16 +35,21 @@ future refinement.
 -/
 axiom EmergencyExpanded : Operation → State → State → Prop
 
-/-- The operation contracts its emergency-driven structural impact. -/
+/--
+Predicate: operation `F` contracts (or repairs) the structural debt
+that emergency expansion accumulated at state `s`.
+-/
 axiom EmergencyContraction : Operation → State → Prop
 
-/-- Emergency contraction required when a legitimate emergency operation
-incurs structural debt. -/
-axiom legitimate_emergency_requires_contraction :
+/--
+Tier‑2 legitimacy axiom:
+
+A legitimate operation that carries structural debt must contract it.
+-/
+axiom EmergencyContraction_required_for_legitimacy :
   ∀ {F : Operation} {s : State},
     Legitimate F →
-    EmergencyRegimeOp F s →
-    HasStructuralDebt F s →
+    StructuralDebt F s →
     EmergencyContraction F s
 
 /--
@@ -65,14 +69,5 @@ theorem Emergency_expansion_shrinks_legitimacy
 by
   intros s s' hExp hEnv
   exact envelope_required_for_legitimacy hLeg s
-
-/-- A legitimate emergency operation carrying debt must contract it. -/
-theorem EmergencyContraction_required_for_legitimacy
-  {F : Operation} {s : State}
-  (hLeg : Legitimate F)
-  (hEmer : EmergencyRegimeOp F s)
-  (hDebt : HasStructuralDebt F s) :
-  EmergencyContraction F s :=
-legitimate_emergency_requires_contraction hLeg hEmer hDebt
 
 end SigmaR

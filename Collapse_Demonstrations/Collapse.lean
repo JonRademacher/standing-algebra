@@ -11,20 +11,28 @@
 
 namespace StandingAlgebra
 
--- Abstract types
+/-
+  Abstract types, mirroring the SMT-level structure.
+-/
 variable
   (Agent : Type)
   (Operation : Type)
 
--- Standing / value function
+/-
+  Standing / score / value function.
+-/
 variable
   (σ : Agent → Int)
 
--- Application of an operation
+/-
+  Application of an operation to an agent.
+-/
 variable
   (Apply : Operation → Agent → Agent)
 
--- Admissibility predicate
+/-
+  Predicate stating an operation is admissible.
+-/
 variable
   (Admissible : Operation → Prop)
 

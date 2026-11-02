@@ -1,4 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.CIA_Justification
+import SigmaR.Justifications.Core_Legitimacy.RiskInheritance_Justification
 import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 import SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification
 
@@ -53,12 +54,9 @@ proxy optimization channel.
 
 namespace SigmaR
 
-/-- Agent-indexed attribution of an operation's risk at state `s`. -/
-axiom RiskInheritance : Agent → Operation → State → Prop
-
-/-- Predicate: the operation performs standing‑weighted
-    risk‑based intervention at state `s`. -/
-axiom RiskInterventionInherited : Operation → State → Prop
+-- `RiskInherited` is declared once, in
+-- `SigmaR.Justifications.Core_Legitimacy.RiskInheritance_Justification`, and
+-- imported here rather than redeclared.
 
 /--
 Tier‑2 legitimacy axiom for Risk Inheritance (Regime‑Level):
@@ -72,7 +70,7 @@ axiom risk_inheritance_requires_debt :
   ∀ {F : Operation},
     Legitimate F →
       ∀ s : State,
-        RiskInterventionInherited F s →
+        RiskInherited F s →
         HasStructuralDebt F s
 
 /--
@@ -85,7 +83,7 @@ theorem RiskInheritance_requires_debt
   {F : Operation}
   (hLeg : Legitimate F) :
   ∀ s : State,
-    RiskInterventionInherited F s →
+    RiskInherited F s →
     HasStructuralDebt F s :=
 by
   intros s hRisk

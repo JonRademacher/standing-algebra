@@ -22,9 +22,9 @@ No implication from measurement to legitimacy is permitted.
 -/
 axiom measurement_not_legitimacy :
   ¬ (
-    ∀ (a : Agent) (s : State),
+    ∀ (a : Agent) (s : State) (F : Operation),
       Observable a s →
-      LegitimateMeasure (fun _ _ => 0)
+      Legitimate F
   )
 
 end SigmaR.Valuation.Measures.MeasurementLimits

@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegimeCore
+import SigmaR.Regimes.StandingAlgebra_DriftRegime
 
 /-!
 ###############################################################################

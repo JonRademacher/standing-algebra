@@ -7,7 +7,7 @@ axiom State : Type
 
 -- Additional sorts for optional constructs:
 axiom CouplingKind : Type             -- sort for coupling relation kinds (K)
-inductive RemedyLevel : Type :=          -- remedy ladder levels
+inductive RemedyLevel : Type where        -- remedy ladder levels
 | CounterSpeech | Friction | Damping | Removal | Exceptional
 
 -- Primitive function and predicate symbols:
@@ -18,7 +18,7 @@ axiom Suc : Nat → Nat               -- successor function S (Lean has Nat.succ
 axiom B : Nat → Nat                 -- capacity-indexed standing bound B(c)
 
 axiom comp : Agent → Agent → Agent  -- entity composition (⊕)
-axiom identityOperation : Operation -- identity operation
+axiom IdOp : Operation              -- identity operation (Id ∈ O; `IdOp` avoids the core `Id`)
 axiom composeOp : Operation → Operation → Operation  -- operation composition
 
 axiom Null : Agent → Prop
@@ -224,7 +224,7 @@ axiom RL2_Irreflexive : ∀ r : RemedyLevel, ¬ RemedyHigher r r
 -- (Optional: We could also formalize extended Tier-3 constraints like P0–P7, EE0–EE5 if needed, following the same pattern.)
 
 -- O1: Identity operation is Legitimate, and composition closure:
-axiom O1_IdentityLegit : Legitimate identityOperation
+axiom O1_IdentityLegit : Legitimate IdOp
 axiom O2_Extensionality : ∀ (F G : Operation), (∀ x : Agent, apply F x = apply G x) → F = G
 
 -- The axioms above fully encode the formal system. We can use Lean's logic to check consistency (Lean accepts this theory with no contradictions if no `sorry` remains).
