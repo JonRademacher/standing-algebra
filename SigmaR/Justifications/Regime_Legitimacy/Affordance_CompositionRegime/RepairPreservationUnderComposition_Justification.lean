@@ -29,7 +29,7 @@ namespace SigmaR
 Predicate: repair operation `R` is available
 for agent `a` at state `s`.
 -/
-axiom RepairAvailable : Agent → Operation → State → Prop
+axiom RepairAvailableFor : Agent → Operation → State → Prop
 
 /--
 Tier-2 legitimacy axiom (Repair Preservation Under Composition):
@@ -44,9 +44,9 @@ axiom repair_preserved_under_composition :
       (∀ F : Operation,
          ComponentOf F G →
          ∀ s : State,
-           RepairAvailable a F s) →
+           RepairAvailableFor a F s) →
       ∀ s : State,
-        RepairAvailable a G s
+        RepairAvailableFor a G s
 
 /--
 Derived theorem:
@@ -60,9 +60,9 @@ theorem RepairPreservedUnderComposition
     (∀ F : Operation,
        ComponentOf F G →
        ∀ s : State,
-         RepairAvailable a F s) →
+         RepairAvailableFor a F s) →
     ∀ s : State,
-      RepairAvailable a G s :=
+      RepairAvailableFor a G s :=
 by
   intros a hEach s
   exact repair_preserved_under_composition hComp a hEach s

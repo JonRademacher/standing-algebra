@@ -3,7 +3,7 @@
  "outputs":
  {"o": ["ad7e645d45236f1d.olean"],
   "m": false,
-  "i": "0c8d0657e188ac32.ilean",
+  "i": "636a121cf73f1d1d.ilean",
   "c": "12e3895d5d38f8b2.c"},
  "log":
  [{"message":
@@ -14,13 +14,13 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Justifications.Core_Legitimacy.CIA_Justification transitive imports (legacy)",
-       "ed1532626184986c"],
+       "3c693f38cf227a56"],
       ["SigmaR.Justifications.Core_Legitimacy.CIA_Justification:importAllArts",
        "ceb258186960f023"],
       ["SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification transitive imports (legacy)",
-       "0c7068bd2e50bae1"],
+       "0ce5ca47a4a2f897"],
       ["SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification:importAllArts",
-       "41874238f07fa6d2"]]]]],
+       "a897afa3bd2e5e36"]]]]],
   ["libs",
    [["import dynlibs", "00000000000006bb"],
     ["package external libraries", "00000000000006bb"],
@@ -36,4 +36,4 @@
    "8f61eab9a550c06e"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "bd00ebb23eaefba1"}
+ "depHash": "a8432eda5eaa70d1"}

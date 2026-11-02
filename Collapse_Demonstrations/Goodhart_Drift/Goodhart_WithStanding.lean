@@ -63,6 +63,6 @@ by
     StandingAlgebra F t₁ hAdm
 
   -- Contradiction: decrease and non-decrease
-  exact absurd hTrueDown (not_lt_of_ge hNonDecrease)
+  exact absurd (Int.lt_of_lt_of_le hTrueDown hNonDecrease) (Int.lt_irrefl _)
 
 end Collapse_Demonstrations.Goodhart_Drift

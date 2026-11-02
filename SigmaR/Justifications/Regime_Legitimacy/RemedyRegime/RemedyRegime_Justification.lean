@@ -69,6 +69,14 @@ namespace SigmaR
 axiom RemedyRegimeOp : Operation → State → Prop
 
 /--
+Predicate: the operation is a repair operation of the Remedy Regime.
+
+State-free: a repair path exists independently of the state at which the
+drift it remedies accumulated.
+-/
+axiom RepairRegimeOp : Operation → Prop
+
+/--
 Tier‑2 legitimacy axiom for Remedy Regime Closure:
 
 If an operation is Legitimate and belongs to the Remedy Regime,

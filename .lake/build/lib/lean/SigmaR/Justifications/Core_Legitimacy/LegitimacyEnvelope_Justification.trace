@@ -14,7 +14,7 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justifrication transitive imports (legacy)",
-       "6ade5d5b84384bed"],
+       "253485e319a93dad"],
       ["SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justifrication:importAllArts",
        "62f1646f104763a0"]]]]],
   ["libs",
@@ -32,4 +32,4 @@
    "6cdb82e1289af520"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "4af031fa6b10020f"}
+ "depHash": "9d8e00f7498d9f79"}

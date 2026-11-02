@@ -18,7 +18,7 @@
       ["SigmaR.Justifications.Core_Legitimacy.CIA_Justification:importAllArts",
        "ceb258186960f023"],
       ["SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskRegime_Justification transitive imports (legacy)",
-       "9b12cd78c71f2887"],
+       "4048c10f79d23c70"],
       ["SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskRegime_Justification:importAllArts",
        "1edcad86aade15e1"],
       ["SigmaR.Justifications.Regime_Legitimacy.RiskRegime.RiskLoadMonotonicity_Justification transitive imports (legacy)",
@@ -40,4 +40,4 @@
    "801f01f393b190a5"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "5cd37964770e935e"}
+ "depHash": "52d5bba4619a2ffc"}

@@ -60,7 +60,7 @@ axiom successor_drift_insensitive :
     ∀ s : State,
       ∀ a : Agent,
         SuccessorChange a F s →
-        ¬ (DriftChange a D s ∧ SuccessorChange a (D ∘ F) s)
+        ¬ (DriftChange a D s ∧ SuccessorChange a (composeOp D F) s)
 
 /--
 Derived theorem:
@@ -74,7 +74,7 @@ theorem SuccessorDriftInsensitive
   ∀ s : State,
     ∀ a : Agent,
       SuccessorChange a F s →
-      ¬ (DriftChange a D s ∧ SuccessorChange a (D ∘ F) s) :=
+      ¬ (DriftChange a D s ∧ SuccessorChange a (composeOp D F) s) :=
 by
   intros s a hSC
   exact successor_drift_insensitive hSucc hDrift s a hSC

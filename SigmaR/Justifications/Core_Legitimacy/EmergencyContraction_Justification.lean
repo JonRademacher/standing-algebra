@@ -1,4 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification
+import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
 
 /-!
 ###############################################################################
@@ -33,6 +34,23 @@ The internal semantics of this relation are left open for
 future refinement.
 -/
 axiom EmergencyExpanded : Operation → State → State → Prop
+
+/--
+Predicate: operation `F` contracts (or repairs) the structural debt
+that emergency expansion accumulated at state `s`.
+-/
+axiom EmergencyContraction : Operation → State → Prop
+
+/--
+Tier‑2 legitimacy axiom:
+
+A legitimate operation that carries structural debt must contract it.
+-/
+axiom EmergencyContraction_required_for_legitimacy :
+  ∀ {F : Operation} {s : State},
+    Legitimate F →
+    StructuralDebt F s →
+    EmergencyContraction F s
 
 /--
 Emergency expansion contracts legitimacy:

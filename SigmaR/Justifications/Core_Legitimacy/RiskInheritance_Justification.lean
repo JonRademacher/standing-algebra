@@ -30,6 +30,17 @@ axiom RiskInherited : Operation → State → Prop
 axiom RiskValidated : Operation → State → Prop
 
 /--
+Predicate: agent `a` inherits the autonomy‑relevant risk that operation `F`
+carries at state `s`.
+
+This is the agent‑indexed reading of risk inheritance: the regime layers ask
+*who* bears the risk an operation introduces, not only whether the operation
+inherits risk at all (`RiskInherited`).  It is deliberately distinct from the
+valuation layer's `RiskInheritance`, which relates valuation objects.
+-/
+axiom InheritsOperationRisk : Agent → Operation → State → Prop
+
+/--
 Tier‑2 legitimacy axiom for Risk Inheritance & Validation.
 
 If an operation is Legitimate, then for every state it must both inherit

@@ -44,7 +44,7 @@ namespace SigmaR
 Sequential application
 of operations.
 -/
-def compose
+noncomputable def compose
   (F₁ F₂ : Operation)
   (s : State) : State :=
   apply F₂ (apply F₁ s)
@@ -58,32 +58,35 @@ theorem composition_preserves_standing :
   ∀ {F₁ F₂ : Operation} {s : State} {i : Agent},
     StructurallyAdmissible F₁ s →
     StructurallyAdmissible F₂ (apply F₁ s) →
-    σ (compose F₁ F₂ s) i ≥ σ s i :=
+    σv i (compose F₁ F₂ s) ≥ σv i s :=
 by
-  -- proof outline:
-
-  -- 1. StandingMonotonicity:
-  --      σ(apply F₁ s) i ≥ σ s i
-  --
-  -- 2. StandingMonotonicity:
-  --      σ(apply F₂ (apply F₁ s)) i
-  --      ≥ σ(apply F₁ s) i
-  --
-  -- 3. transitivity of ≥ :
-  --      σ(F₂(F₁(s))) ≥ σ(s)
-
-  admit
+  intro F₁ F₂ s i hAdm₁ hAdm₂
+  -- 1. standing does not decrease under `F₁` at `s`
+  have h₁ : σv i (apply F₁ s) ≥ σv i s :=
+    standing_monotone (F := F₁) (s := s) (i := i) hAdm₁
+  -- 2. nor under `F₂` at the intermediate state `apply F₁ s`
+  have h₂ : σv i (apply F₂ (apply F₁ s)) ≥ σv i (apply F₁ s) :=
+    standing_monotone (F := F₂) (s := apply F₁ s) (i := i) hAdm₂
+  -- 3. transitivity of `≥` on the integer valuation
+  exact Int.le_trans h₁ h₂
 
 /--
 Exit viability is preserved
-under composition.
+under composition, provided it holds at the initial state — the same
+hypothesis `exit_viability_monotone` needs, since admissibility bounds the
+change in dominant dependency but does not by itself place the agent below
+its exit threshold.
 -/
 theorem composition_preserves_exit :
   ∀ {F₁ F₂ : Operation} {s : State} {i : Agent},
     StructurallyAdmissible F₁ s →
     StructurallyAdmissible F₂ (apply F₁ s) →
-    ExitViable (compose F₁ F₂ s) i :=
+    ExitViableWithin s i →
+    ExitViableWithin (compose F₁ F₂ s) i :=
 by
-  admit
+  intro F₁ F₂ s i hAdm₁ hAdm₂ hExit
+  have h₁ : ExitViableWithin (apply F₁ s) i :=
+    exit_viability_monotone (F := F₁) (s := s) (i := i) hAdm₁ hExit
+  exact exit_viability_monotone (F := F₂) (s := apply F₁ s) (i := i) hAdm₂ h₁
 
 end SigmaR

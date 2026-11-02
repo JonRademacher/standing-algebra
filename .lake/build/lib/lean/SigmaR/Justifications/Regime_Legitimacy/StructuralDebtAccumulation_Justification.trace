@@ -22,7 +22,7 @@
       ["SigmaR.Justifications.Core_Legitimacy.DirectedRepair_Justification:importAllArts",
        "a12649a2ad80c7e3"],
       ["SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification transitive imports (legacy)",
-       "73f4b673711d4ba4"],
+       "e09451b675aa8bc7"],
       ["SigmaR.Justifications.Core_Legitimacy.LegitimacyEnvelope_Justification:importAllArts",
        "2b094de824b4a352"]]]]],
   ["libs",
@@ -40,4 +40,4 @@
    "535e1073a167d9b0"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "e68ff597ec0ccf47"}
+ "depHash": "6cfbfb9a0190f70e"}

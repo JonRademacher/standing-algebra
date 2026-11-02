@@ -46,10 +46,11 @@ Representation without risk coupling is illegitimate.
 axiom adapter_non_representational_standing :
   ∀ {F : Operation},
     Legitimate F →
-    ∀ a : Agent,
-      AdapterClaimsRepresentation F a →
-      RiskInheritance a F →
-      False
+    ∀ s : State,
+      ∀ a : Agent,
+        AdapterClaimsRepresentation F a →
+        InheritsOperationRisk a F s →
+        False
 
 /--
 Derived theorem:
@@ -60,12 +61,13 @@ without validated risk inheritance.
 theorem AdapterCannotLaunderStanding
   {F : Operation}
   (hLeg : Legitimate F) :
-  ∀ a : Agent,
-    AdapterClaimsRepresentation F a →
-    RiskInheritance a F →
-    False :=
+  ∀ s : State,
+    ∀ a : Agent,
+      AdapterClaimsRepresentation F a →
+      InheritsOperationRisk a F s →
+      False :=
 by
-  intros a hRep hRisk
-  exact adapter_non_representational_standing hLeg a hRep hRisk
+  intros s a hRep hRisk
+  exact adapter_non_representational_standing hLeg s a hRep hRisk
 
 end SigmaR

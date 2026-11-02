@@ -1,9 +1,9 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["9fb287054f958986.olean"],
+ {"o": ["b2d25adde3473aba.olean"],
   "m": false,
-  "i": "5e37a0250341716a.ilean",
+  "i": "d165ad8d90f9b87b.ilean",
   "c": "c5bfac3afeb4a0ef.c"},
  "log":
  [{"message":
@@ -25,11 +25,11 @@
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
   ["/workspace/SigmaR/Justifications/Regime_Legitimacy/NegationLemmas.lean",
-   "16fc4c92c9ffcfa9"],
+   "41a2b4ae8b0744a9"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: SigmaR.Justifications.Regime_Legitimacy.NegationLemmas",
    "b743d7594e655293"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "abb6e1a920a8edbd"}
+ "depHash": "55ecb24661190e67"}

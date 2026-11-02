@@ -63,7 +63,7 @@ axiom risk_consent_non_transitive :
         RiskRegimeOp F s →
         ∀ a b : Agent,
           a ≠ b →
-          RiskInheritance b F s →
+          InheritsOperationRisk b F s →
           RiskConsent a F s →
           ¬ ConsentTransferred a b F s
 
@@ -80,7 +80,7 @@ theorem RiskConsentNonTransitive
     RiskRegimeOp F s →
     ∀ a b : Agent,
       a ≠ b →
-      RiskInheritance b F s →
+      InheritsOperationRisk b F s →
       RiskConsent a F s →
       ¬ ConsentTransferred a b F s :=
 by

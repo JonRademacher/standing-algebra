@@ -28,7 +28,7 @@
       ["SigmaR.Justifications.Core_Legitimacy.RiskInheritance_Justification transitive imports (legacy)",
        "5aab52ace95b58e2"],
       ["SigmaR.Justifications.Core_Legitimacy.RiskInheritance_Justification:importAllArts",
-       "6d7c7dce23ff72fa"],
+       "6bd11230a19f55cf"],
       ["SigmaR.Justifications.Core_Legitimacy.NonParochialEvidence_Justification transitive imports (legacy)",
        "5aab52ace95b58e2"],
       ["SigmaR.Justifications.Core_Legitimacy.NonParochialEvidence_Justification:importAllArts",
@@ -56,4 +56,4 @@
    "cf630d5364ce30d3"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "3d0d286cdf8bde8c"}
+ "depHash": "d1f25c96c5e192e9"}

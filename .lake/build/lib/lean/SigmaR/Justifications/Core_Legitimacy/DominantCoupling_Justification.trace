@@ -1,9 +1,9 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["b6244d91ef929d05.olean"],
+ {"o": ["948063b07d4fd541.olean"],
   "m": false,
-  "i": "7bfd20ee0fb0d4b7.ilean",
+  "i": "43f94c93afd80b77.ilean",
   "c": "3d6fce4dd9488328.c"},
  "log":
  [{"message":
@@ -29,11 +29,11 @@
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
   ["/workspace/SigmaR/Justifications/Core_Legitimacy/DominantCoupling_Justification.lean",
-   "5697291994b6b887"],
+   "987a3f041201bfcc"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification",
    "1dc6b1d47aa29be6"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "f9b86dafe65bea9c"}
+ "depHash": "165206483b7a12bd"}

@@ -28,7 +28,7 @@
       ["SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification transitive imports (legacy)",
        "12c5e161175106c3"],
       ["SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification:importAllArts",
-       "70c89369139058c5"],
+       "eaca9d64769a2c37"],
       ["SigmaR.Justifications.Core_Legitimacy.BoundaryEnvelope_Justification transitive imports (legacy)",
        "21d0001647f679bd"],
       ["SigmaR.Justifications.Core_Legitimacy.BoundaryEnvelope_Justification:importAllArts",
@@ -52,4 +52,4 @@
    "b47b6f17c06284e8"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "682e6a5b63cadcda"}
+ "depHash": "cd46a40f3b1e7dfb"}

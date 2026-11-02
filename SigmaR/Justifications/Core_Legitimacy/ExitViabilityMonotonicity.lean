@@ -8,14 +8,14 @@ import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 
 Exit viability is defined as:
 
-  ExitViable(s,i)
+  ExitViableWithin(s,i)
     ↔
-  deg_dom(s,i) ≤ θ(i)
+  dominantDependency(i,s) ≤ exitThreshold(i)
 
 where:
 
-  deg_dom = dominant coupling dependency
-  θ(i)    = agent‑specific exit threshold.
+  dominantDependency = dominant coupling dependency
+  exitThreshold      = agent‑specific exit threshold.
 
 Structurally admissible operations
 do not increase dominant dependency.
@@ -24,27 +24,37 @@ Therefore:
 
   exit viability is preserved
   under structurally admissible operations.
+
+Both quantities are read as signed integers, so the comparison and its
+transitivity are core-Lean arithmetic (`omega`) rather than a Mathlib order on
+a real-valued carrier.
 -/
 
 namespace SigmaR
 
-variables
-  (θ : Agent → ℝ)
+/-- Dominant coupling dependency of agent `i` at state `s`. -/
+axiom dominantDependency : Agent → State → Int
+
+/-- Agent‑specific exit threshold. -/
+axiom exitThreshold : Agent → Int
 
 /--
-Exit viability definition.
+Exit viability definition
+(dominant dependency stays within the agent's exit threshold).
 -/
-def ExitViable (s : State) (i : Agent) : Prop :=
-  deg_dom s i ≤ θ i
+def ExitViableWithin (s : State) (i : Agent) : Prop :=
+  dominantDependency i s ≤ exitThreshold i
 
 /--
+Tier‑2 legitimacy axiom:
+
 Dominant dependency
-is monotone under admissibility.
+is not increased by structurally admissible operations.
 -/
 axiom dominant_dependency_bounded :
   ∀ {F : Operation} {s : State} {i : Agent},
     StructurallyAdmissible F s →
-    deg_dom (apply F s) i ≤ deg_dom s i
+    dominantDependency i (apply F s) ≤ dominantDependency i s
 
 /--
 Exit viability is preserved
@@ -53,18 +63,33 @@ under structurally admissible operations.
 theorem exit_viability_monotone :
   ∀ {F : Operation} {s : State} {i : Agent},
     StructurallyAdmissible F s →
-    ExitViable θ s i →
-    ExitViable θ (apply F s) i :=
-begin
-  intros F s i hAdm hExit,
+    ExitViableWithin s i →
+    ExitViableWithin (apply F s) i :=
+by
+  intro F s i hAdm hExit
+  unfold ExitViableWithin at *
+  have hDeg : dominantDependency i (apply F s) ≤ dominantDependency i s :=
+    dominant_dependency_bounded hAdm
+  omega
 
-  unfold ExitViable at *,
+/--
+Predicate: operation `F` preserves exit viability
+wherever it is available.
+-/
+def ExitViabilityMonotone (F : Operation) : Prop :=
+  ∀ (s : State) (i : Agent),
+    ExitViableWithin s i →
+    ExitViableWithin (apply F s) i
 
-  have hDeg :
-    deg_dom (apply F s) i ≤ deg_dom s i,
-    from dominant_dependency_bounded hAdm,
-
-  linarith
-end
+/--
+Legitimacy implies exit viability monotonicity.
+-/
+theorem ExitViabilityMonotonicity_required
+  {F : Operation}
+  (hLeg : Legitimate F) :
+  ExitViabilityMonotone F :=
+by
+  intro s i hExit
+  exact exit_viability_monotone (legitimacy_characterization.1 hLeg) hExit
 
 end SigmaR

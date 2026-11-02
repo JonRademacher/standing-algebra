@@ -1,9 +1,9 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["1fa0ff72886b7e98.olean"],
+ {"o": ["cadbc8fdcc3ff285.olean"],
   "m": false,
-  "i": "a74f3a60531324e4.ilean",
+  "i": "0882008d1d3ed64a.ilean",
   "c": "4ec21b75cf4bbf1e.c"},
  "log":
  [{"message":
@@ -25,11 +25,11 @@
   ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
    "407ce514b71d5a10"],
   ["/workspace/SigmaR/Justifications/Core_Legitimacy/RiskInheritance_Justification.lean",
-   "31cb54bf874775c5"],
+   "70e7d0e5e72c13d1"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: SigmaR.Justifications.Core_Legitimacy.RiskInheritance_Justification",
    "24667658e91ff4ee"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "444f4c5e55210bd8"}
+ "depHash": "b7e47f2fab243aa0"}

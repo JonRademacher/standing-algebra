@@ -39,9 +39,8 @@ legitimacy‑preserving proxy optimization channel.
 
 namespace SigmaR
 
-/-- Predicate: the operation participates in the Exit Regime at state `s`. -/
--- `ExitRegimeOp` is declared at the regime level, in
--- `SigmaR.Regimes.StandingAlgebra_ExitRegime`, and imported here.
+/- The Exit Regime predicate `ExitRegimeOp` is declared at the regime level,
+   in `SigmaR.Regimes.StandingAlgebra_ExitRegime`, and imported here. -/
 
 /--
 Tier‑2 legitimacy axiom for Exit Regime Closure:

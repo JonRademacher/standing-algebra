@@ -85,15 +85,17 @@ def StructurallyAdmissible
 /--
 Legitimacy is equivalent
 to structural admissibility.
+
+This is the Core Alignment equation of the framework: legitimacy is not a
+primitive moral predicate but the preservation of the structural invariants
+listed in `StructurallyAdmissible`.  It is recorded as an axiom because nothing
+below it decides either side; the justifications above establish each of the
+nine invariant component separately.
 -/
-theorem legitimacy_characterization :
+axiom legitimacy_characterization :
   ∀ {F : Operation} {s : State},
     Legitimate F
     ↔
-    StructurallyAdmissible F s :=
-by
-  -- Left as axiomatic equivalence
-  -- justified by Core Alignment
-  admit
+    StructurallyAdmissible F s
 
 end SigmaR

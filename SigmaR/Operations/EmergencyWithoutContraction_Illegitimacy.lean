@@ -39,7 +39,7 @@ by
   -- Legitimate emergency operations must contract or repair debt.
   have hReq :
     EmergencyContraction F s :=
-    EmergencyContraction_required_for_legitimacy hLeg hEmer hDebt
+    EmergencyContraction_required_for_legitimacy hLeg hDebt
 
   exact hNoContraction hReq
 

@@ -37,9 +37,9 @@ namespace SigmaR
 
 /-- Legitimate operations preserve standing (ALRP). -/
 theorem legitimacy_preserves_standing
-  {F : Operation} {s : State} (hLeg : Legitimate F) (a : Agent) :
-  σ (apply F s) a ≥ σ s a :=
-ALRP_required_for_legitimacy hLeg a
+  {F : Operation} {s : State} (hLeg : Legitimate F) :
+  σ (apply F s) ≥ σ s :=
+ALRP_required_for_legitimacy hLeg
 
 ------------------------------------------------------------------------
 -- Directed Repair Obligation
@@ -69,7 +69,7 @@ ExitViabilityMonotonicity_required hLeg
 /-- Legitimate operations satisfy bounded drift under iteration. -/
 theorem legitimacy_bounded_drift
   {F : Operation} (hLeg : Legitimate F) :
-  BoundedDrift F :=
+  ∀ {s : State}, DriftBounded F s :=
 BoundedDrift_required_for_legitimacy hLeg
 
 ------------------------------------------------------------------------
@@ -79,7 +79,7 @@ BoundedDrift_required_for_legitimacy hLeg
 /-- Legitimate operations satisfy NRPP. -/
 theorem legitimacy_satisfies_NRPP
   {F : Operation} (hLeg : Legitimate F) :
-  NRPP F :=
+  NRPP_Satisfied F :=
 NRPP_required_for_legitimacy hLeg
 
 ------------------------------------------------------------------------

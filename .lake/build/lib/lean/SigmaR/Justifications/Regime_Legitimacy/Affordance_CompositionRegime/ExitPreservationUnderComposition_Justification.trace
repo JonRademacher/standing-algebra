@@ -14,11 +14,11 @@
    [["SigmaR/SigmaR:extraDep", [["@SigmaR:extraDep", "00000000000006bb"]]],
     ["imports",
      [["SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification transitive imports (legacy)",
-       "0c7068bd2e50bae1"],
+       "0ce5ca47a4a2f897"],
       ["SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification:importAllArts",
-       "41874238f07fa6d2"],
+       "a897afa3bd2e5e36"],
       ["SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitPreservation_Justification transitive imports (legacy)",
-       "dbd2a1e37e00299f"],
+       "8d8258da4c46b00c"],
       ["SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitPreservation_Justification:importAllArts",
        "e03b648a6ac2df57"],
       ["SigmaR.Regimes.StandingAlgebra_AffordanceCompositionRegime transitive imports (legacy)",
@@ -40,4 +40,4 @@
    "57d1515829ba6fd2"],
   ["Package.id?: (some SigmaR)", "bb9b5dea87aac0b4"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "52a272286cef00eb"}
+ "depHash": "c19486c9b88cc919"}
