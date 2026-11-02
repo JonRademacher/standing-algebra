@@ -1,9 +1,0 @@
-{"plugins": [],
- "package": "SigmaR",
- "options": {},
- "name": "SigmaR.Justifications.Regime_Legitimacy.NegationLemmas",
- "isModule": false,
- "importArts":
- {"SigmaR.StandingAlgebra_FormalCore":
-  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
- "dynlibs": []}

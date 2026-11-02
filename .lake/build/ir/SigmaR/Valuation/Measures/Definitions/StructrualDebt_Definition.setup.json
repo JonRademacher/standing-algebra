@@ -1,9 +1,0 @@
-{"plugins": [],
- "package": "SigmaR",
- "options": {},
- "name": "SigmaR.Valuation.Measures.Definitions.StructrualDebt_Definition",
- "isModule": false,
- "importArts":
- {"SigmaR.StandingAlgebra_FormalCore":
-  [["/workspace/.lake/build/lib/lean/SigmaR/StandingAlgebra_FormalCore.olean"]]},
- "dynlibs": []}
