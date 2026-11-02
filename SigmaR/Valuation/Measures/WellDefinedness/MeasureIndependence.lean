@@ -28,14 +28,14 @@ open SigmaR.Valuation.Measures.Definitions
 Independence of standing and capacity measures.
 -/
 axiom StandingCapacityIndependent :
-  ∀ (a : Agent) (s : SigmaR.Valuation.State),
+  ∀ (a : Agent) (s : SigmaR.State),
     StandingMeasure a s ≠ CapacityMeasure a s
 
 /--
 Independence of standing and dependency degree.
 -/
 axiom StandingDependencyIndependent :
-  ∀ (a : Agent) (s : SigmaR.Valuation.State),
+  ∀ (a : Agent) (s : SigmaR.State),
     StandingMeasure a s ≠ DependencyDegree a s
 
 /--

@@ -28,4 +28,4 @@ the history through which that state was reached.
 axiom CapacityHysteresis :
   CapacityValuation → Prop
 
-end SigmaR
+end CapacityValuation

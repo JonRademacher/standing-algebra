@@ -81,8 +81,6 @@ This ensures that:
 namespace SigmaR
 
 /-- An operation induces dominant coupling. -/
-axiom DominantCoupling : Operation → Prop
-
 /-- Predicate: agent `i`
     has a uniquely identifiable
     dominant coupling
@@ -91,16 +89,6 @@ axiom DominantCouplingIdentified : State → Prop
 
 /-- Predicate: operation `F` induces dominant coupling. -/
 axiom DominantCoupling : Operation → Prop
-
-/--
-Core legitimacy axiom:
-
-A legitimate operation does not induce dominant coupling.
--/
-axiom DominantCoupling_prohibited_for_legitimacy :
-  ∀ {F : Operation},
-    Legitimate F →
-    ¬ DominantCoupling F
 
 /--
 Core legitimacy axiom:

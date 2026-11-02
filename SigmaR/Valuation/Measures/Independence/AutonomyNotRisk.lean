@@ -22,7 +22,7 @@ or licensing assumptions of risk load is permitted.
 -/
 axiom autonomy_not_risk :
   ¬ (
-    ∀ (a : Agent) (s : SigmaR.Valuation.State),
+    ∀ (a : Agent) (s : SigmaR.State),
       SigmaR.Valuation.Core.TreatedAsRiskFromAutonomyMeasure a s
   )
 

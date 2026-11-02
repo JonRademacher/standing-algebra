@@ -37,7 +37,7 @@ axiom debt_requires_repair :
  ∀ {F : Operation},
    Legitimate F →
      ∀ s : State,
-       HasStructuralDebt F s →
+       StructuralDebt F s →
        DebtDissipated F s
 /--
 Derived theorem:
@@ -47,7 +47,7 @@ theorem StructuralDebt_requires_repair
  {F : Operation}
  (hLeg : Legitimate F) :
  ∀ s : State,
-   HasStructuralDebt F s →
+   StructuralDebt F s →
    DebtDissipated F s :=
 by
  intros s hDebt

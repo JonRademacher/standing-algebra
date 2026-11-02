@@ -22,7 +22,7 @@ Type alias for valuation measures.
 
 All valuation measures map (Agent × State) to Nat.
 -/
-abbrev ValuationMeasure := Agent → SigmaR.Valuation.State → Nat
+abbrev ValuationMeasure := Agent → SigmaR.State → Nat
 
 /--
 StandingMeasure is a valuation measure.

@@ -26,7 +26,9 @@ signed integer so that deltas are meaningful; `cap` is the core's capacity
 index, coerced to `Int`.
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Valuation
+
+abbrev State := SigmaR.State
 
 /-- Standing valuation (autonomy-relevant), state-indexed. -/
 axiom σv : Agent → State → Int

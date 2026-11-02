@@ -18,7 +18,7 @@ Exit viability is well-defined if for every agent and state,
 the predicate has a determinate truth value.
 -/
 def ExitViability_WellDefined : Prop :=
-  ∀ (i : Agent) (s : SigmaR.Valuation.State),
+  ∀ (i : Agent) (s : SigmaR.State),
     SigmaR.Valuation.Core.ExitViable i s ∨
       ¬ SigmaR.Valuation.Core.ExitViable i s
 
