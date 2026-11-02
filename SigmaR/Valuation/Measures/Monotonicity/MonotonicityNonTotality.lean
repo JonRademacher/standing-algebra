@@ -18,7 +18,7 @@ of state orderings within SigmaR.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 The state ordering used for monotonicity is treated
@@ -26,4 +26,4 @@ as potentially non-total.
 -/
 axiom MonotonicityAllowsNonTotalOrder : Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

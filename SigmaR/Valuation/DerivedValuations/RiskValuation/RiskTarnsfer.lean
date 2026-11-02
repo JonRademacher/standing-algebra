@@ -18,7 +18,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskTransfer R₁ R₂ means that risk valuation R₁
@@ -27,4 +27,4 @@ is structurally transferred to R₂.
 axiom RiskTransfer :
   RiskValuation → RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

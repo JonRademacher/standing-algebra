@@ -11,7 +11,9 @@ perception, not correctness or objective truth.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication from PFA to objective truth or correctness
@@ -24,5 +26,4 @@ axiom pfa_not_truth :
       TreatedAsTrue s
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.Relevance

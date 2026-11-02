@@ -20,7 +20,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 ResponseAffectsCapacityValuation R C means that response R
@@ -29,4 +29,4 @@ has a structural effect on capacity valuation C.
 axiom ResponseAffectsCapacityValuation :
   Response → CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

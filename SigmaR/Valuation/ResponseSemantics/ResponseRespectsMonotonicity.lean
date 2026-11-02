@@ -16,7 +16,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseRespectsMonotonicity R means that response R
@@ -25,4 +25,4 @@ does not violate declared monotonicity constraints.
 axiom ResponseRespectsMonotonicity :
   Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

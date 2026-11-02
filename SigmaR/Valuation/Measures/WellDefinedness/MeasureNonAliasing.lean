@@ -10,7 +10,7 @@ by default. Aliasing collapses semantic distinction.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
 
 /--
 Distinct measures are not definitionally identical.
@@ -19,4 +19,4 @@ axiom measure_non_aliasing :
   ∀ (M₁ M₂ : Agent → State → Nat),
     M₁ ≠ M₂
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

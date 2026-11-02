@@ -13,7 +13,9 @@ domain functions from being treated as valuation measures.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 No valuation measure may rely on an implicit or restricted domain.
@@ -29,5 +31,4 @@ axiom no_implicit_domain_restriction :
       IsMeasure M
   )
 
-end SigmaR
-
+end SigmaR.Valuation.WellFormedness

@@ -13,7 +13,7 @@ declared to be admissible.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 Assumptions of irreversibility are admissible only when
@@ -21,4 +21,4 @@ explicitly declared.
 -/
 axiom AdmissibleIrreversibility : Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

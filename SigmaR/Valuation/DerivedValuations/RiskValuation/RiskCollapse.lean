@@ -18,7 +18,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskCollapse R means that risk valuation R
@@ -27,4 +27,4 @@ has structurally collapsed.
 axiom RiskCollapse :
   RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

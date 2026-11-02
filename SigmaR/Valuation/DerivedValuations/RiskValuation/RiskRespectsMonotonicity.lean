@@ -16,7 +16,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskRespectsMonotonicity R means that risk valuation R
@@ -25,4 +25,4 @@ does not violate declared monotonicity constraints.
 axiom RiskRespectsMonotonicity :
   RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

@@ -15,7 +15,7 @@ This is not selection.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityProgressOptionSet S means that S is a set
@@ -23,4 +23,4 @@ of transformability-progress options.
 -/
 abbrev TransformabilityProgressOptionSet : Type := Set TransformabilityProgressOption
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

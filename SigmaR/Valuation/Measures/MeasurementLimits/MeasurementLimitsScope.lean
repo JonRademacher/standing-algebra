@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Measurement Limits Scope
@@ -13,7 +15,7 @@ They do not constrain the underlying system state itself.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.MeasurementLimits
 
 /--
 No implication from measurement limits to constraints
@@ -26,4 +28,4 @@ axiom measurement_limits_are_scoped :
       ConstrainsState s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.MeasurementLimits

@@ -11,7 +11,9 @@ It must not determine decisions, outcomes, or selections.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting relevance to determine
@@ -24,4 +26,4 @@ axiom relevance_does_not_determine_decision :
       TreatedAsAuthoritative s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

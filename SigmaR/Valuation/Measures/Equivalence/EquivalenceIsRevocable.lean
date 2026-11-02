@@ -11,7 +11,7 @@ when its defining context or conditions change.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Equivalence
 
 /--
 Equivalence may be revoked when context changes.
@@ -22,4 +22,4 @@ axiom equivalence_revocable :
       M₁ a s₁ = M₂ a s₁ ∧
       M₁ a s₂ ≠ M₂ a s₂
 
-end SigmaR
+end SigmaR.Valuation.Measures.Equivalence

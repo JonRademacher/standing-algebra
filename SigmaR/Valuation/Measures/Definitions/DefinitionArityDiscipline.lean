@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Definition Arity Discipline
@@ -13,7 +15,7 @@ across arity boundaries.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 No implication permitting an agent–state valuation
@@ -40,4 +42,4 @@ axiom pressure_not_agent_indexed :
           M a s = P s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

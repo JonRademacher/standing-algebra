@@ -17,7 +17,7 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyRespectsIndependence A means that autonomy valuation A
@@ -26,4 +26,4 @@ does not violate Independence constraints.
 axiom AutonomyRespectsIndependence :
   AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

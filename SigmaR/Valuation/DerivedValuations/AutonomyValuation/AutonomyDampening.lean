@@ -18,7 +18,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyDampening A₁ A₂ means that autonomy valuation A₁
@@ -27,4 +27,4 @@ dampens the autonomy effects represented by A₂.
 axiom AutonomyDampening :
   AutonomyValuation → AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

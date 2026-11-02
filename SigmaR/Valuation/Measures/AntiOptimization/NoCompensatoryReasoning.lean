@@ -11,7 +11,9 @@ in one dimension by gain in another.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
+
+open SigmaR.Valuation.Core
 
 /--
 No implication from one valuation measure to compensatory
@@ -26,4 +28,4 @@ axiom no_compensatory_reasoning :
       Compensates M₂ M₁
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

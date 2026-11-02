@@ -10,7 +10,7 @@ permit comparison or dominance reasoning.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Equivalence
 
 /--
 Equivalence does not imply that two measures are comparable.
@@ -20,4 +20,4 @@ axiom equivalence_not_comparable :
         (a : Agent) (s : State),
         M₁ a s ≤ M₂ a s ∨ M₂ a s ≤ M₁ a s)
 
-end SigmaR
+end SigmaR.Valuation.Measures.Equivalence

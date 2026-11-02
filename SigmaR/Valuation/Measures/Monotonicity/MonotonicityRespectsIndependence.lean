@@ -21,7 +21,7 @@ It names a binding interpretive boundary between the two layers.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Monotonicity relations are treated as respecting
@@ -29,4 +29,4 @@ Independence inference boundaries.
 -/
 axiom MonotonicityRespectsIndependence : Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

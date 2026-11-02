@@ -13,7 +13,9 @@ agent-free or state-free functions as valuation measures.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 No function that ignores the Agent dimension may be treated
@@ -35,4 +37,4 @@ axiom no_state_free_measure :
       IsMeasure (fun (a : Agent) (_ : State) => f a)
   )
 
-end SigmaR
+end SigmaR.Valuation.WellFormedness

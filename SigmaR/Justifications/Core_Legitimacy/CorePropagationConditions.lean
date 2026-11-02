@@ -4,6 +4,9 @@ import SigmaR.Justifications.Core_Legitimacy.RiskIndexedStanding_Justification
 import SigmaR.Justifications.Core_Legitimacy.DominantCoupling_Justification
 import SigmaR.Justifications.Core_Legitimacy.BoundaryEnvelope_Justification
 import SigmaR.Justifications.Core_Legitimacy.TransitionCriteriaRerunnability_Justification
+import SigmaR.Justifications.Core_Legitimacy.ExitViabilityMonotonicity
+import SigmaR.Justifications.Core_Legitimacy.StructuralDebt_Justification
+import SigmaR.StandingAlgebra_RegimeStacked
 
 /-!
 ###############################################################################

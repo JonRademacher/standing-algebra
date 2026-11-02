@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Measurement Disagreement Does Not Imply Error
@@ -14,7 +16,7 @@ frame dependence, or locality.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.MeasurementLimits
 
 /--
 No implication from measurement disagreement to error
@@ -27,4 +29,4 @@ axiom measurement_disagreement_not_error :
       Error a₁ s ∨ Error a₂ s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.MeasurementLimits

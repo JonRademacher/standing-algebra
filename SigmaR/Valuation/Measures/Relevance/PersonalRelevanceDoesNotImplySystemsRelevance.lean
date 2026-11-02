@@ -11,7 +11,9 @@ establish relevance for collective or system-level evaluation.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting personal relevance to
@@ -25,4 +27,4 @@ axiom personal_not_system_relevance :
       TreatedAsAuthoritative s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

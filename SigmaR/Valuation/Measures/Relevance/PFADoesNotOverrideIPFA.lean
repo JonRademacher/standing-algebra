@@ -11,7 +11,9 @@ personal informational warrant.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting PFA to cancel or override
@@ -25,4 +27,4 @@ axiom pfa_not_override_ipfa :
       ¬ IPFA a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

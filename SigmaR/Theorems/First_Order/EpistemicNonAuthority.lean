@@ -28,8 +28,7 @@ theorem Epistemic_non_authority :
     (∃ c : Claim, usesClaim F c) →
     ¬ Admissible F :=
 by
-  intro F a hClaim
-  rcases hClaim with ⟨c, hUses⟩
-  exact Claim_cannot_authorize_admissibility F c hUses
+  intro F c hUses
+  exact Claim_not_Admissible F c hUses
 
 end SigmaR

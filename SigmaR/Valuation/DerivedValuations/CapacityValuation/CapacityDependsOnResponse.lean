@@ -19,7 +19,7 @@ It is structural sensitivity only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityDependsOnResponse C R means that capacity valuation C
@@ -28,4 +28,4 @@ is structurally sensitive to response R.
 axiom CapacityDependsOnResponse :
   CapacityValuation → Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

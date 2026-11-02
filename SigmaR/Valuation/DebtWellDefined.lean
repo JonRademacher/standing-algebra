@@ -22,7 +22,7 @@ No enforcement or obligation is assumed.
 This file closes the valuation-level properties of debt.
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation
 
 
 /- -------------------------------------------------------------------------- -/
@@ -153,4 +153,4 @@ theorem debt_unbounded_allowed :
 by
   trivial
 
-end SigmaR
+end SigmaR.Valuation

@@ -18,7 +18,7 @@ They do NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityThreshold T means that transformability valuation T
@@ -27,4 +27,4 @@ is associated with a structural threshold.
 axiom TransformabilityThreshold :
   TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

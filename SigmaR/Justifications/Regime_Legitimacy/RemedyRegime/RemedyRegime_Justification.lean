@@ -87,7 +87,7 @@ axiom remedy_regime_requires_debt :
     Legitimate F →
       ∀ s : State,
         RemedyRegimeOp F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -100,7 +100,7 @@ theorem RemedyRegime_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     RemedyRegimeOp F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hRem
   exact remedy_regime_requires_debt hLeg s hRem

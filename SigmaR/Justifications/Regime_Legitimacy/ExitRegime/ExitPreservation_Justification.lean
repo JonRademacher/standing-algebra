@@ -58,7 +58,7 @@ axiom exit_preservation_requires_debt :
     Legitimate F →
       ∀ s : State,
         ExitPreserved F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -71,7 +71,7 @@ theorem ExitPreservation_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     ExitPreserved F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hExit
   exact exit_preservation_requires_debt hLeg s hExit

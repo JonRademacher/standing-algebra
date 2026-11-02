@@ -19,7 +19,7 @@ This file introduces NO dynamics, NO norms, NO urgency authority.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 TemporalAccumulation a s is a successor-native valuation
@@ -31,4 +31,4 @@ of future admissible freedom.
 -/
 axiom TemporalAccumulation : Agent → State → Nat
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

@@ -15,7 +15,7 @@ not moral fault.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityOmissionMaintainsConstraint S means that
@@ -25,4 +25,4 @@ maintains the capacity constraint structurally.
 axiom CapacityOmissionMaintainsConstraint :
   CapacityProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

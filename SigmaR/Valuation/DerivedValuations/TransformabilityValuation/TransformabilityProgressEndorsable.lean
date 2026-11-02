@@ -13,7 +13,7 @@ Endorsability does NOT imply preference or selection.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityProgressEndorsable S means that the
@@ -22,4 +22,4 @@ transformability-progress options in S are structurally endorsable.
 axiom TransformabilityProgressEndorsable :
   TransformabilityProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

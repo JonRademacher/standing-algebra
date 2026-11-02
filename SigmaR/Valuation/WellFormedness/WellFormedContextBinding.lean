@@ -14,7 +14,9 @@ expressions from being treated as measures.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 No valuation measure may be treated as context-free.
@@ -27,5 +29,4 @@ axiom no_context_free_measure :
       IsMeasure M → ¬ ContextBound M
   )
 
-end SigmaR
-
+end SigmaR.Valuation.WellFormedness

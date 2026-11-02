@@ -20,7 +20,7 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 The ResponseSemantics layer is governed by an explicit
@@ -28,4 +28,4 @@ interpretive contract defining its scope and limits.
 -/
 axiom ResponseSemanticsContract : Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

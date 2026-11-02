@@ -12,7 +12,9 @@ that are not observable by any agent.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 There exist failures that occur in unobservable states.
@@ -23,5 +25,4 @@ axiom occlusion_permits_undetected_failure :
     ∀ (a : Agent),
       ¬ Observable a s
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.Relevance

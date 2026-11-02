@@ -40,6 +40,7 @@ axiom Exit_preserved_under_drift :
 axiom Drift_cannot_foreclose_exit :
   ∀ (a : Agent) (G : Operation),
     (∃ F : Operation, Exit F ∧ MinStanding ≤ σ (apply F a)) →
+    (∃ D : Operation, Drift D) →
     (∃ F : Operation, Exit F ∧
        MinStanding ≤ σ (apply F (apply G a)))
 

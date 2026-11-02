@@ -18,7 +18,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskExposure R means that risk valuation R
@@ -27,4 +27,4 @@ includes structural exposure.
 axiom RiskExposure :
   RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

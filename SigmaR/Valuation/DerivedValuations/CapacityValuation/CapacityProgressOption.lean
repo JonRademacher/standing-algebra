@@ -15,7 +15,7 @@ It is a structural possibility, not a preference.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityProgressOption O means that O represents
@@ -23,4 +23,4 @@ a capacity-increasing option.
 -/
 axiom CapacityProgressOption : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

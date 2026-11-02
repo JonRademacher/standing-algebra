@@ -1,5 +1,5 @@
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.StandingMeasure_Definition
+import SigmaR.Valuation.StandingValuation
+import SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition
 
 /-!
 ###############################################################################
@@ -11,7 +11,9 @@ for all agents and states.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 Standing measure is total.
@@ -20,4 +22,4 @@ axiom StandingMeasureTotal :
   ∀ (a : Agent) (s : State),
     StandingMeasure a s ≥ 0
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

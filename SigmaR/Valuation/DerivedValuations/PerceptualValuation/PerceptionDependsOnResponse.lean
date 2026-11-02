@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.PerceptionValuation
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation
 import SigmaR.Valuation.ResponseSemantics.Response
 
 /-!
@@ -19,7 +19,7 @@ It is structural sensitivity only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 PerceptionDependsOnResponse P R means that perception valuation P
@@ -28,4 +28,4 @@ is structurally sensitive to response R.
 axiom PerceptionDependsOnResponse :
   PerceptionValuation → Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

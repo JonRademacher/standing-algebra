@@ -40,7 +40,14 @@ jobs:
       # Lake + Lean build
       # -------------------------------
       - name: Lake update
-        run: lake update
+        run: |
+          export MATHLIB_NO_CACHE_ON_UPDATE=1
+          lake update
+
+      - name: Fetch Mathlib cache
+        run: |
+          cd .lake/packages/mathlib
+          lake exe cache get Mathlib/RingTheory/Nullstellensatz.lean Mathlib/Data/Set/Basic.lean
 
       - name: Lake build
-        run: lake build
+        run: lake build @/SigmaR @/Collapse_Demonstrations @/ICG

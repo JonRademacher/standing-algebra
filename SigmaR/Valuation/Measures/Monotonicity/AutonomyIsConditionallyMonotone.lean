@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
-import SigmaR.Valuation.Measures.DominationPressure_Definition
+import SigmaR.Valuation.Measures.Definitions.AutonomyMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.DominationPressure_Definition
 import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
@@ -16,7 +16,7 @@ It does not assert it globally or unconditionally.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Autonomy is treated as conditionally monotone decreasing
@@ -25,4 +25,4 @@ with respect to domination pressure along the state preorder.
 axiom AutonomyConditionallyMonotoneUnderDomination :
   Agent → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

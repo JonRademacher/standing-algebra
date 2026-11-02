@@ -14,7 +14,7 @@ accumulated unresolved structural asymmetry affecting an agent.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 StructuralDebt a is the successor-native measure
@@ -22,4 +22,4 @@ of unresolved structural fragility affecting agent a.
 -/
 axiom StructuralDebt : Agent → Nat
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

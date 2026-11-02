@@ -19,7 +19,7 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 Perception valuation is explicitly scoped and
@@ -27,4 +27,4 @@ never globally applicable by default.
 -/
 axiom PerceptionValuationScope : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

@@ -14,7 +14,7 @@ This names omission structurally, not morally.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyOmissionMaintainsConstraint S means that
@@ -24,4 +24,4 @@ maintains the autonomy constraint structurally.
 axiom AutonomyOmissionMaintainsConstraint :
   AutonomyProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

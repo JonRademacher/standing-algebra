@@ -20,7 +20,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyDependsOnRiskValuation A R means that autonomy
@@ -29,4 +29,4 @@ valuation A is structurally dependent on risk valuation R.
 axiom AutonomyDependsOnRiskValuation :
   AutonomyValuation → RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

@@ -13,7 +13,9 @@ This blocks "death by a thousand cuts" domination.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Core
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 Generic valuation quantity over agents and states.
@@ -46,4 +48,4 @@ theorem NoValuationDecreaseWithoutRepair
 by
   exact ValuationMonotoneUnlessRepaired F i s h
 
-end SigmaR
+end SigmaR.Valuation.Core

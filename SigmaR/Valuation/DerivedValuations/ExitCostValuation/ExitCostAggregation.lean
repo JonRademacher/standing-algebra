@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.ExitCostValuation
+import SigmaR.Valuation.DerivedValuations.ExitCostValuation.ExitCostValuation
 
 /-!
 ###############################################################################
@@ -19,7 +19,7 @@ It is structural composition only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.ExitCostValuation
 
 /--
 ExitCostAggregation E₁ E₂ E₃ means that exit cost valuation E₃
@@ -28,4 +28,4 @@ is an aggregation of exit cost valuations E₁ and E₂.
 axiom ExitCostAggregation :
   ExitCostValuation → ExitCostValuation → ExitCostValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.ExitCostValuation

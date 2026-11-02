@@ -1,4 +1,4 @@
-import SigmaR.Core.StandingValuation
+import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 
 /-!

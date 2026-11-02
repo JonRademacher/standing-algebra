@@ -77,6 +77,6 @@ axiom adapter_requires_debt :
     Legitimate F →
       ∀ s : State,
         EpistemicAdapter F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 end SigmaR

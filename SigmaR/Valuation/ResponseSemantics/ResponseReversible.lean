@@ -18,7 +18,7 @@ It only characterizes structural possibility.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseReversible R means that response R admits
@@ -27,4 +27,4 @@ a structural reversal.
 axiom ResponseReversible :
   Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

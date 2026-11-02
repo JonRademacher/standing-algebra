@@ -14,7 +14,7 @@ cross-measure implications.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 ValuationRespectsIndependence V means that derived valuation V
@@ -23,4 +23,4 @@ does not violate Independence constraints.
 axiom ValuationRespectsIndependence :
   DerivedValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

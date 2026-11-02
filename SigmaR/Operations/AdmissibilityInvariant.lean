@@ -1,4 +1,4 @@
-import SigmaR.Core.FormalCore
+import SigmaR.StandingAlgebra_FormalCore
 
 namespace SigmaR
 

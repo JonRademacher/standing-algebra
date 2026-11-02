@@ -74,7 +74,7 @@ axiom risk_load_monotonicity_requires_debt :
     Legitimate F →
       ∀ s : State,
         RiskLoadReduced F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -87,7 +87,7 @@ theorem RiskLoadMonotonicity_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     RiskLoadReduced F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hRisk
   exact risk_load_monotonicity_requires_debt hLeg s hRisk

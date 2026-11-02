@@ -19,7 +19,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskIrreversibility R means that risk valuation R
@@ -28,4 +28,4 @@ is structurally irreversible once accumulated.
 axiom RiskIrreversibility :
   RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Measurement Noise Permitted
@@ -14,7 +16,7 @@ not a defect.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.MeasurementLimits
 
 /--
 No implication from measurement noise to error is permitted.
@@ -26,4 +28,4 @@ axiom measurement_noise_permitted :
       Error a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.MeasurementLimits

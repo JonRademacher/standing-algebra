@@ -14,7 +14,9 @@ from being treated as valuation measures.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 Not every Nat-valued function is a valuation measure.
@@ -29,4 +31,4 @@ axiom no_arbitrary_nat_codomain_measure :
       IsMeasure f
   )
 
-end SigmaR
+end SigmaR.Valuation.WellFormedness

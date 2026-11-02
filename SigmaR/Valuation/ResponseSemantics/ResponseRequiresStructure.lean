@@ -16,7 +16,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseRequiresStructure R means that response R
@@ -25,4 +25,4 @@ depends on some enabling structure to apply.
 axiom ResponseRequiresStructure :
   Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

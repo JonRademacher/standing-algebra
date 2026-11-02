@@ -17,7 +17,7 @@ This is a structural descriptor only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 RoleState a s holds if agent a occupies
@@ -25,4 +25,4 @@ a role or permissioned position in state s.
 -/
 axiom RoleState : Agent → State → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

@@ -19,7 +19,7 @@ It is purely descriptive.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 An abstract response representing a possible transformation
@@ -27,4 +27,4 @@ of system state.
 -/
 axiom Response : Type
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

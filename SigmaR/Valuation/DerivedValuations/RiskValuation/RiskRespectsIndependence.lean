@@ -16,7 +16,7 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskRespectsIndependence R means that risk valuation R
@@ -25,4 +25,4 @@ does not violate Independence constraints.
 axiom RiskRespectsIndependence :
   RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

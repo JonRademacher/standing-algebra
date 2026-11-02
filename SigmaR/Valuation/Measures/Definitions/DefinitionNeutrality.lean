@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Definition Neutrality
@@ -16,7 +18,7 @@ in higher layers or explicit models.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 No implication from the mere existence of a valuation
@@ -32,4 +34,4 @@ axiom definition_neutrality :
        InterpretedAsImprovement M)
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

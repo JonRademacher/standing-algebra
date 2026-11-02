@@ -21,7 +21,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyDependsOnTransformabilityValuation A T means that
@@ -31,4 +31,4 @@ transformability valuation T.
 axiom AutonomyDependsOnTransformabilityValuation :
   AutonomyValuation → TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

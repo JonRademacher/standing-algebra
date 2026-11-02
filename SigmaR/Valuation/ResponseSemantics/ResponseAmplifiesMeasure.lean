@@ -19,7 +19,7 @@ It is directional structure only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseAmplifiesMeasure R M means that response R
@@ -28,4 +28,4 @@ increases valuation measure M.
 axiom ResponseAmplifiesMeasure :
   Response → Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

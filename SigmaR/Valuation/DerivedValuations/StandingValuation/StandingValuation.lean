@@ -21,11 +21,11 @@ It is a valuation artifact only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.StandingValuation
 
 /--
 An abstract derived valuation associated with standing.
 -/
 axiom StandingValuation : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.StandingValuation

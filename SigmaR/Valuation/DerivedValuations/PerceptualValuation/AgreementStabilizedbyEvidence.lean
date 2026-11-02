@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.PerceptualAgreement
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptualAgreement
 
 /-!
 ###############################################################################
@@ -19,7 +19,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 AgreementStabilizedByEvidence A means that perceptual agreement A
@@ -28,4 +28,4 @@ is stabilized through non-parochial evidence.
 axiom AgreementStabilizedByEvidence :
   PerceptualAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

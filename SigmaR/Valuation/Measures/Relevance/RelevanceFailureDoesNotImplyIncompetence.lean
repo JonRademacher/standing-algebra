@@ -14,7 +14,9 @@ Divergence may arise from structural plurality alone.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication treating absence of IPFA as incompetence
@@ -27,4 +29,4 @@ axiom relevance_failure_not_incompetence :
       TreatedAsIncompetent a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

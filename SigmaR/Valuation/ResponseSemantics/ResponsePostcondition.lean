@@ -13,7 +13,7 @@ desirability, success, or improvement.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 A structural postcondition describing the result
@@ -22,4 +22,4 @@ of a response.
 axiom ResponsePostcondition :
   Response → State → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

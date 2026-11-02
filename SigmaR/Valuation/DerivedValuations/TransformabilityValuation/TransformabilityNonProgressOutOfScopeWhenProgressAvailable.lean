@@ -16,7 +16,7 @@ This is NOT preference or optimization.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityNonProgressOutOfScopeWhenProgressAvailable S
@@ -26,4 +26,4 @@ progress options S are available.
 axiom TransformabilityNonProgressOutOfScopeWhenProgressAvailable :
   TransformabilityProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

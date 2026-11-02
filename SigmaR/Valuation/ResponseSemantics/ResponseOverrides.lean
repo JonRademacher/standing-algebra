@@ -19,7 +19,7 @@ It does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseOverrides R₁ R₂ means that response R₁
@@ -28,4 +28,4 @@ structurally supersedes the effect of response R₂.
 axiom ResponseOverrides :
   Response → Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

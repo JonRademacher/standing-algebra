@@ -13,7 +13,7 @@ or moral responsibility.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 AgencyCondition i indicates that agent i satisfies
@@ -21,4 +21,4 @@ a structural agency-related condition under some theory.
 -/
 axiom AgencyCondition : Agent → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

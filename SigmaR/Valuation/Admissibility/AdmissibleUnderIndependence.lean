@@ -15,7 +15,7 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 An admissible reasoning configuration respects all
@@ -23,4 +23,4 @@ Independence inference firewalls.
 -/
 axiom AdmissibleUnderIndependence : Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

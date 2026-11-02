@@ -1,7 +1,7 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.AutonomyMeasure_Definition
-import SigmaR.Valuation.Measures.RiskLoad_Definition
+import SigmaR.Valuation.Measures.Definitions.AutonomyMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.RiskLoad_Definition
 
 /-!
 ###############################################################################
@@ -14,7 +14,7 @@ explicitly in higher layers or models.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating autonomy measures as implying
@@ -22,8 +22,8 @@ or licensing assumptions of risk load is permitted.
 -/
 axiom autonomy_not_risk :
   ¬ (
-    ∀ (a : Agent) (s : State),
-      TreatedAsRiskFromAutonomyMeasure a s
+    ∀ (a : Agent) (s : SigmaR.Valuation.State),
+      SigmaR.Valuation.Core.TreatedAsRiskFromAutonomyMeasure a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

@@ -18,7 +18,7 @@ It ONLY constrains admissible comparison patterns.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 A comparison between valuation measures is admissible
@@ -26,4 +26,4 @@ under declared structural constraints.
 -/
 axiom AdmissibleComparison : Measure → Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

@@ -19,7 +19,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityDependsOnCapacityValuation T C means that
@@ -29,4 +29,4 @@ on capacity valuation C.
 axiom TransformabilityDependsOnCapacityValuation :
   TransformabilityValuation → CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

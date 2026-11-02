@@ -16,7 +16,7 @@ They do NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityOperationSet S means that S is a set
@@ -24,4 +24,4 @@ of transformation operations.
 -/
 abbrev TransformabilityOperationSet : Type := Set Operation
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

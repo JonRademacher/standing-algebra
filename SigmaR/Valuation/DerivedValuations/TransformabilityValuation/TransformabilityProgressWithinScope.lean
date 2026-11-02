@@ -13,7 +13,7 @@ Scope captures feasibility and control, not preference.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityProgressWithinScope S means that the
@@ -22,4 +22,4 @@ transformability-progress options in S are within scope.
 axiom TransformabilityProgressWithinScope :
   TransformabilityProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

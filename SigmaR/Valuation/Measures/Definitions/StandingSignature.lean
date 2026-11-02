@@ -10,7 +10,7 @@ without moral, legal, or authoritative interpretation.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 StandingSignature i indicates that agent i participates
@@ -18,4 +18,4 @@ in standing-related structure.
 -/
 axiom StandingSignature : Agent → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

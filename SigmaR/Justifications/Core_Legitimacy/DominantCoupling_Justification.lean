@@ -80,6 +80,9 @@ This ensures that:
 
 namespace SigmaR
 
+/-- An operation induces dominant coupling. -/
+axiom DominantCoupling : Operation → Prop
+
 /-- Predicate: agent `i`
     has a uniquely identifiable
     dominant coupling
@@ -108,5 +111,17 @@ must admit a dominant type.
 axiom coupling_requires_dominance :
   ∀ s : State,
     DominantCouplingIdentified s
+
+/-- Dominant coupling induced by an operation is incompatible with legitimacy. -/
+axiom legitimate_excludes_dominant_coupling_axiom :
+  ∀ {F : Operation},
+    Legitimate F →
+    ¬ DominantCoupling F
+
+/-- Legitimate operations do not induce dominant coupling. -/
+theorem DominantCoupling_prohibited_for_legitimacy
+  {F : Operation} (hLeg : Legitimate F) :
+  ¬ DominantCoupling F :=
+legitimate_excludes_dominant_coupling_axiom hLeg
 
 end SigmaR

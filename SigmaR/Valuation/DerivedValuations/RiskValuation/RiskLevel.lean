@@ -18,7 +18,7 @@ They do NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 A risk level associated with a risk valuation.
@@ -26,4 +26,4 @@ A risk level associated with a risk valuation.
 axiom RiskLevel :
   RiskValuation → Val
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

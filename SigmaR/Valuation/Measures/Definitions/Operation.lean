@@ -1,4 +1,4 @@
-import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -11,7 +11,7 @@ Operations are structural and uninterpreted.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /-!
 The sorts `Agent` and `Operation` and the effect function `apply` are
@@ -27,4 +27,4 @@ core `apply`, presented with the state in the first argument position.
 -/
 axiom Apply : Operation → State → State
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

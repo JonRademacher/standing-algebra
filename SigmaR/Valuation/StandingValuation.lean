@@ -121,6 +121,7 @@ theorem risk_if_decrease
   σv i s₂ < σv i s₁ →
   InheritsRisk i s₁ s₂ :=
 by
+  intro h
   unfold InheritsRisk Δσ
   omega
 
@@ -205,4 +206,4 @@ def CIA_AdmissibleUpdate : Prop :=
     AdmissibleUpdate s₁ s₂ →
     CIA_BoundedDelta i s₁ s₂
 
-end SigmaR
+end SigmaR.Valuation

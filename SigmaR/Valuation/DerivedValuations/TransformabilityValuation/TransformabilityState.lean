@@ -19,7 +19,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 A transformability valuation relative to a specific agent and state.
@@ -27,4 +27,4 @@ A transformability valuation relative to a specific agent and state.
 axiom TransformabilityState :
   Agent → State → TransformabilityValuation
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

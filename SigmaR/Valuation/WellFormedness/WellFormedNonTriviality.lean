@@ -15,7 +15,9 @@ as valuation measures.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 No structurally trivial valuation may be treated as a measure.
@@ -30,4 +32,4 @@ axiom no_structurally_trivial_measure :
       IsMeasure M
   )
 
-end SigmaR
+end SigmaR.Valuation.WellFormedness

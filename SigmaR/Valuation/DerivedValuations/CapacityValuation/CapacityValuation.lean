@@ -18,11 +18,11 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 An abstract derived valuation associated with agent capacity.
 -/
 axiom CapacityValuation : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

@@ -16,7 +16,7 @@ Composability does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseComposable R₁ R₂ means that responses R₁ and R₂
@@ -25,4 +25,4 @@ may be structurally composed.
 axiom ResponseComposable :
   Response → Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

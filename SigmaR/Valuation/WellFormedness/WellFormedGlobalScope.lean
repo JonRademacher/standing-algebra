@@ -14,7 +14,9 @@ of locally scoped valuation measures.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 No valuation measure may be treated as globally scoped
@@ -27,5 +29,4 @@ axiom no_implicit_global_scope :
       IsGlobalScope M
   )
 
-end SigmaR
-
+end SigmaR.Valuation.WellFormedness

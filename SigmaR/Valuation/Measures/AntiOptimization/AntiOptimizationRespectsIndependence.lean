@@ -3,6 +3,8 @@ import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.Independence.IndependenceContract
 import SigmaR.Valuation.Measures.AntiOptimization.AntiOptimizationContract
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # AntiOptimization Respects Independence
@@ -19,7 +21,7 @@ remain fully in force.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication from anti-optimization to weakened independence
@@ -32,4 +34,4 @@ axiom antioptimization_respects_independence :
       ¬ IndependentMeasures M₁ M₂
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

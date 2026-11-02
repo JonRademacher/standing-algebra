@@ -18,7 +18,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskAccumulation R₁ R₂ means that risk valuation R₂
@@ -27,4 +27,4 @@ represents accumulated risk relative to R₁.
 axiom RiskAccumulation :
   RiskValuation → RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

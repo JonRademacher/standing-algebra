@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.PerceptualAgreement
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptualAgreement
 
 /-!
 ###############################################################################
@@ -16,7 +16,7 @@ external consensus.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 InternalPerceptualAgreement A means that perceptual agreement A
@@ -25,4 +25,4 @@ is internalized within a single agent.
 axiom InternalPerceptualAgreement :
   PerceptualAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

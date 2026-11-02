@@ -18,7 +18,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityOperationWithinScope S means that operations
@@ -27,4 +27,4 @@ in S lie within effective scope of transformation.
 axiom TransformabilityOperationWithinScope :
   TransformabilityOperationSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

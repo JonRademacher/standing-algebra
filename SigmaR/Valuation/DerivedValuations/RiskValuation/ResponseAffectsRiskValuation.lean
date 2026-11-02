@@ -20,7 +20,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 ResponseAffectsRiskValuation R V means that response R
@@ -29,4 +29,4 @@ has a structural effect on risk valuation V.
 axiom ResponseAffectsRiskValuation :
   Response → RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

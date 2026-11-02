@@ -17,7 +17,9 @@ the valuation quantities they reference.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Core
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 Valuation-level invariant predicate.
@@ -44,4 +46,4 @@ theorem ValuationInvariantUnderAdmissible
 by
   exact AdmissibilityPreservesValuation F s hA hV
 
-end SigmaR
+end SigmaR.Valuation.Core

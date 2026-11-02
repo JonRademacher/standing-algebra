@@ -18,7 +18,7 @@ It ONLY governs permission to reason from an agent-relative stance.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 An agent-relative perspective is admissible for valuation reasoning
@@ -26,4 +26,4 @@ under explicitly declared constraints.
 -/
 axiom AdmissibleAgentPerspective : Agent → Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

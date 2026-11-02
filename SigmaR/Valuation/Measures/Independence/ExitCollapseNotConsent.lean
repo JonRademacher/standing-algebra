@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.ExitCollapse_Definition
-import SigmaR.Standing.ConsentState_Definition
+import SigmaR.Valuation.Measures.Definitions.ExitCollapse_Definition
+import SigmaR.Valuation.Measures.Definitions.ConsentState_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -19,7 +21,7 @@ invalidation is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating exit collapse as negating,
@@ -32,4 +34,4 @@ axiom exit_collapse_not_consent :
       TreatedAsConsentInvalidFromExitCollapse a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

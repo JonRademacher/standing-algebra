@@ -18,7 +18,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskAmplification R₁ R₂ means that risk valuation R₁
@@ -27,4 +27,4 @@ amplifies the effective risk represented by R₂.
 axiom RiskAmplification :
   RiskValuation → RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

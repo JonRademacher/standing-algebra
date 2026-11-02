@@ -55,7 +55,7 @@ theorem SuccessorPreservesSymmetry
     SuccessorOp F →
     STC5 F :=
 by
-  intros s hSucc
-  exact successor_symmetry_required hLeg s hSucc
+  intro hSucc
+  exact successor_symmetry_required hLeg hSucc
 
 end SigmaR

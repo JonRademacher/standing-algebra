@@ -18,7 +18,7 @@ It names feasibility only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityDependsOnOperation T F means that transformability
@@ -27,4 +27,4 @@ valuation T is structurally dependent on operation F.
 axiom TransformabilityDependsOnOperation :
   TransformabilityValuation → Operation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

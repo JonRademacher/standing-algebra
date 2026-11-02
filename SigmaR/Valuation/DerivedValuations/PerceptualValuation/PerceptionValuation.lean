@@ -18,7 +18,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 An abstract derived valuation associated with perceptual
@@ -26,4 +26,4 @@ agreement and alignment.
 -/
 axiom PerceptionValuation : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

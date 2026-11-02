@@ -1,6 +1,6 @@
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.StandingMeasure_Definition
-import SigmaR.Valuation.Measures.CapacityMeasure_Definition
+import SigmaR.Valuation.StandingValuation
+import SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
 
 /-!
 ###############################################################################
@@ -14,7 +14,9 @@ are constant or indistinguishable across all agents and states.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 There exist agents or states that valuation measures distinguish.
@@ -24,4 +26,4 @@ axiom MeasuresNonTrivial :
     StandingMeasure a₁ s ≠ StandingMeasure a₂ s ∨
     CapacityMeasure a₁ s ≠ CapacityMeasure a₂ s
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

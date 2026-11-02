@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Progress Guarantee
@@ -11,7 +13,7 @@ advancement, or improvement over state progression.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication from valuation structure to guaranteed
@@ -24,4 +26,4 @@ axiom no_progress_guarantee :
       GuaranteesProgress M
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

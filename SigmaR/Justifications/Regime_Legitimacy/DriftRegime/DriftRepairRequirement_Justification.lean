@@ -39,8 +39,9 @@ that dissipates accumulated debt.
 axiom drift_requires_repair :
   ∀ {D : Operation},
     DriftRegimeOp D →
-    ∃ R : Operation,
-      RepairRegimeOp R ∧ DriftRequiresRepair D R
+    ∀ s : State,
+      ∃ R : Operation,
+        RepairAvailable R s ∧ DriftRequiresRepair D R
 
 /--
 Derived theorem:
@@ -50,9 +51,11 @@ Drift terminates in repair.
 theorem DriftTerminatesInRepair
   {D : Operation}
   (hDrift : DriftRegimeOp D) :
-  ∃ R : Operation,
-    RepairRegimeOp R ∧ DriftRequiresRepair D R :=
+  ∀ s : State,
+    ∃ R : Operation,
+      RepairAvailable R s ∧ DriftRequiresRepair D R :=
 by
-  exact drift_requires_repair hDrift
+  intro s
+  exact drift_requires_repair hDrift s
 
 end SigmaR

@@ -22,7 +22,7 @@ It is purely pre-epistemic interaction.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 Perceives i x means that agent i is structurally affected by,
@@ -32,4 +32,4 @@ The nature of x is intentionally left abstract.
 -/
 axiom Perceives : Agent → Type → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

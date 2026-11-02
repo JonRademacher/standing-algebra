@@ -1,4 +1,4 @@
-import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -18,7 +18,11 @@ It ONLY constrains structural admissibility of measure collections.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
+
+open SigmaR.Valuation.Core
 
 /--
 A set of measures is well-formed if all members are individually
@@ -48,4 +52,4 @@ ordering, or tradeoff between its members.
 axiom MeasureSetNonAggregative :
   Set Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.WellFormedness

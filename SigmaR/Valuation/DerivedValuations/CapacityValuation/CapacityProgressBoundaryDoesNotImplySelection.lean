@@ -21,11 +21,11 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 The capacity progress boundary does not imply selection.
 -/
 axiom CapacityProgressBoundaryDoesNotImplySelection : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

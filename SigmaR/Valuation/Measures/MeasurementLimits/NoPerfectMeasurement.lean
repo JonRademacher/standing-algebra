@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Perfect Measurement
@@ -13,7 +15,7 @@ Measurement is always epistemically limited.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.MeasurementLimits
 
 /--
 No implication from measurement to perfect capture
@@ -26,4 +28,4 @@ axiom no_perfect_measurement :
       PerfectMeasurement a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.MeasurementLimits

@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Partial Observability
@@ -13,7 +15,7 @@ Each agent has blind spots.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.MeasurementLimits
 
 /--
 Observability is partial: for every agent, there exist
@@ -24,4 +26,4 @@ axiom partial_observability :
     ∃ (s : State),
       ¬ Observable a s
 
-end SigmaR
+end SigmaR.Valuation.Measures.MeasurementLimits

@@ -74,7 +74,7 @@ axiom iew_repair_requires_debt :
     Legitimate F →
       ∀ s : State,
         IEWRepair F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -87,7 +87,7 @@ theorem IEWRepair_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     IEWRepair F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hRepair
   exact iew_repair_requires_debt hLeg s hRepair

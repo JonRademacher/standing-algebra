@@ -30,7 +30,7 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 The Transformability Valuation layer is governed by an explicit
@@ -38,4 +38,4 @@ interpretive contract defining its scope and limits.
 -/
 axiom TransformabilityValuationContract : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

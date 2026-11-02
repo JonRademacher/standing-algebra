@@ -13,7 +13,7 @@ Availability states existence, not obligation.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityProgressAvailable S means that a set of
@@ -22,4 +22,4 @@ transformability-progress options S exists.
 axiom TransformabilityProgressAvailable :
   TransformabilityProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.MeasurementLimits.ObservabilityIsLocal
+import SigmaR.Valuation.Measures.Relevance.ObservabilityIsLocal
 
 /-!
 ###############################################################################
@@ -11,7 +11,9 @@ unobservable by all agents.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 There exists a state that no agent observes.
@@ -21,4 +23,4 @@ axiom blind_spots_exist :
     ∀ (a : Agent),
       ¬ Observable a s
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.StandingMeasure_Definition
-import SigmaR.Valuation.Measures.RiskLoad_Definition
+import SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.RiskLoad_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -18,7 +20,7 @@ is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating standing as constituting,
@@ -30,4 +32,4 @@ axiom standing_not_risk :
       TreatedAsRiskFromStandingMeasure a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

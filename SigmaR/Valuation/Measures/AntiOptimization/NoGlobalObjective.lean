@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Global Objective
@@ -13,7 +15,7 @@ No measure is defined relative to an optimizing target.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication asserting the existence of a globally
@@ -26,4 +28,4 @@ axiom no_global_objective :
       Optimizes O
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.PerceptionValuation
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation
 
 /-!
 ###############################################################################
@@ -18,7 +18,7 @@ They do NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 A perception level associated with a perception valuation.
@@ -26,4 +26,4 @@ A perception level associated with a perception valuation.
 axiom PerceptionLevel :
   PerceptionValuation → Val
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

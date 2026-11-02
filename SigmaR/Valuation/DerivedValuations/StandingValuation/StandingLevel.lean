@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.StandingValuation
+import SigmaR.Valuation.DerivedValuations.StandingValuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -18,11 +18,11 @@ They do NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.StandingValuation
 
 /--
 A standing level associated with a standing valuation.
 -/
 axiom StandingLevel : StandingValuation → Val
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.StandingValuation

@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.DerivedValuations.RiskValuation.RiskValuation
-import SigmaR.Valuation.DerivedValuations.PerceptionValuation.PerceptionValuation
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation
 
 /-!
 ###############################################################################
@@ -20,7 +20,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskDependsOnPerceptualValuation R P means that
@@ -30,4 +30,4 @@ perceptual valuation P.
 axiom RiskDependsOnPerceptualValuation :
   RiskValuation → PerceptionValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

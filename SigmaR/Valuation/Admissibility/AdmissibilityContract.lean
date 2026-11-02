@@ -19,7 +19,7 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 The Admissibility layer is governed by an explicit
@@ -27,4 +27,4 @@ interpretive contract defining its scope and limits.
 -/
 axiom AdmissibilityContract : Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

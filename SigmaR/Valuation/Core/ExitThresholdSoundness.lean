@@ -12,7 +12,7 @@ It does NOT authorize exit denial or enforcement.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Core
 
 /--
 Predicate: exit is viable for agent `i` in state `s`.
@@ -44,4 +44,4 @@ theorem ExitThresholdImpliesNoExit
 by
   exact ExitThresholdSound i s h
 
-end SigmaR
+end SigmaR.Valuation.Core

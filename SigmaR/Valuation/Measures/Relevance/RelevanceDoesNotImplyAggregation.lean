@@ -11,7 +11,9 @@ Aggregation requires collective warrant (PFA).
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting relevance (IPFA) to authorize
@@ -25,5 +27,4 @@ axiom relevance_not_aggregation :
       AggregatesFromMeasure O (fun _ _ => 0)
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.Relevance

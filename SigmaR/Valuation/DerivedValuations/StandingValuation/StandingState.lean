@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.StandingValuation
+import SigmaR.Valuation.DerivedValuations.StandingValuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -18,7 +18,7 @@ It is a valuation snapshot only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.StandingValuation
 
 /--
 A standing valuation relative to a specific agent and state.
@@ -26,4 +26,4 @@ A standing valuation relative to a specific agent and state.
 axiom StandingState :
   Agent → State → StandingValuation
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.StandingValuation

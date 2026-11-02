@@ -12,7 +12,9 @@ or policy justification.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting PFA to escalate beyond
@@ -26,4 +28,4 @@ axiom pfa_provides_collective_warrant :
       TreatedAsAuthoritative s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

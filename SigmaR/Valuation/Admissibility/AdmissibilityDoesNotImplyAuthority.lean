@@ -12,7 +12,7 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 Admissibility of reasoning does not imply authority
@@ -20,4 +20,4 @@ to act, decide, or intervene.
 -/
 axiom AdmissibilityDoesNotImplyAuthority : Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

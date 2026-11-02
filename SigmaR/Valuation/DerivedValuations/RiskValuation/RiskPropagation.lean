@@ -18,7 +18,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskPropagation R₁ R₂ means that risk valuation R₁
@@ -27,4 +27,4 @@ propagates structurally to risk valuation R₂.
 axiom RiskPropagation :
   RiskValuation → RiskValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

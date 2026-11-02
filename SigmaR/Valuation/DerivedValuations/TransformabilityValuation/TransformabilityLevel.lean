@@ -18,7 +18,7 @@ They do NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 A transformability level associated with a transformability valuation.
@@ -26,4 +26,4 @@ A transformability level associated with a transformability valuation.
 axiom TransformabilityLevel :
   TransformabilityValuation → Val
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

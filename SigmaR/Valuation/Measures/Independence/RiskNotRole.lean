@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.RiskLoad_Definition
-import SigmaR.Standing.RoleState_Definition
+import SigmaR.Valuation.Measures.Definitions.RiskLoad_Definition
+import SigmaR.Valuation.Measures.Definitions.RoleState_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -19,7 +21,7 @@ is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating risk exposure as constituting,
@@ -32,4 +34,4 @@ axiom risk_not_role :
       TreatedAsRoleFromRiskLoad a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

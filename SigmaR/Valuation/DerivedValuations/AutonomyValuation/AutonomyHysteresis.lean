@@ -19,7 +19,7 @@ It does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyHysteresis A means that autonomy valuation A
@@ -28,4 +28,4 @@ exhibits path-dependent behavior.
 axiom AutonomyHysteresis :
   AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

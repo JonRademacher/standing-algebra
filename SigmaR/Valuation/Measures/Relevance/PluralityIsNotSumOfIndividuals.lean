@@ -13,7 +13,9 @@ It is a structural property of the frame space.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication reducing plurality to enumeration
@@ -26,5 +28,4 @@ axiom plurality_not_sum_of_individuals :
       TreatedAsAggregationOfAgents G s
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.Relevance

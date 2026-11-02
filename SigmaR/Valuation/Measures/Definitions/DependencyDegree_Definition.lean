@@ -10,7 +10,7 @@ Used for risk inheritance and vulnerability reasoning.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 Dependency degree of an agent in a given state.
@@ -19,4 +19,4 @@ Represents inbound structural reliance, not influence or power.
 -/
 axiom DependencyDegree : Agent → State → Nat
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

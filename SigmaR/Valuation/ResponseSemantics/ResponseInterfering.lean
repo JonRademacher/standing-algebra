@@ -18,7 +18,7 @@ It does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseInterfering R₁ R₂ means that responses R₁ and R₂
@@ -27,4 +27,4 @@ structurally interfere with one another.
 axiom ResponseInterfering :
   Response → Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

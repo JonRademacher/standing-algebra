@@ -12,7 +12,9 @@ welfare, or optimality.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
+
+open SigmaR.Valuation.Core
 
 /--
 No implication treating valuation measures as utility
@@ -25,5 +27,4 @@ axiom no_utility_function :
       TreatedAsUtility M
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.AntiOptimization

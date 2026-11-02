@@ -19,7 +19,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityConsumption C₁ C₂ means that capacity valuation C₂
@@ -28,4 +28,4 @@ represents consumption relative to capacity valuation C₁.
 axiom CapacityConsumption :
   CapacityValuation → CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

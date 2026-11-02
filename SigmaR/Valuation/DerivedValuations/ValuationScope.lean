@@ -12,7 +12,7 @@ They must never be assumed to apply globally.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 Derived valuations are explicitly scoped
@@ -20,4 +20,4 @@ and never globally applicable by default.
 -/
 axiom ValuationScope : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

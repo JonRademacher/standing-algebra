@@ -19,7 +19,7 @@ It is purely structural sensitivity.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyDependsOnResponse A R means that autonomy valuation A
@@ -28,4 +28,4 @@ is structurally sensitive to response R.
 axiom AutonomyDependsOnResponse :
   AutonomyValuation → Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

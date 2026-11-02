@@ -17,7 +17,7 @@ external validation.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 InternalTransformabilityAgreement A means that transformability
@@ -26,4 +26,4 @@ agreement A is internalized within a single agent.
 axiom InternalTransformabilityAgreement :
   TransformabilityAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

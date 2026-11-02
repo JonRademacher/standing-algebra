@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.StandingMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition
 import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
@@ -15,7 +15,7 @@ It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Standing is treated as requiring enabling structure
@@ -24,4 +24,4 @@ to increase along the state preorder.
 axiom StandingRequiresEnablingStructure :
   Agent → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

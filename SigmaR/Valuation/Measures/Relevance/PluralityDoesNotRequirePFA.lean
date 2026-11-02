@@ -13,7 +13,9 @@ but it does not generate it.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication treating PFA as a necessary condition
@@ -26,5 +28,4 @@ axiom plurality_does_not_require_pfa :
       PFA G s
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.Relevance

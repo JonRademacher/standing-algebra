@@ -20,7 +20,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 ResponseAffectsTransformabilityValuation R T means that response R
@@ -29,4 +29,4 @@ has a structural effect on transformability valuation T.
 axiom ResponseAffectsTransformabilityValuation :
   Response → TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

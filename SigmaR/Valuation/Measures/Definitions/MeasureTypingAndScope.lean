@@ -15,14 +15,14 @@ Prevents measures from being misused as objectives or selectors.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 Type alias for valuation measures.
 
 All valuation measures map (Agent × State) to Nat.
 -/
-def ValuationMeasure := Agent → State → Nat
+abbrev ValuationMeasure := Agent → SigmaR.Valuation.State → Nat
 
 /--
 StandingMeasure is a valuation measure.
@@ -48,4 +48,4 @@ RiskInheritance is a valuation measure.
 noncomputable def riskInheritanceTyped : ValuationMeasure :=
   RiskInheritance
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

@@ -13,7 +13,7 @@ RiskLoad measures the structural exposure borne by an agent.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 RiskLoad a is the successor-native measure
@@ -21,4 +21,4 @@ of structural risk exposure borne by agent a.
 -/
 axiom RiskLoad : Agent → Nat
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

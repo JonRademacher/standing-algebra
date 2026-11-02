@@ -12,7 +12,7 @@ Well-formedness is necessary but not sufficient for admissibility.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 Admissibility requires satisfaction of well-formedness constraints,
@@ -20,4 +20,4 @@ but does not collapse into them.
 -/
 axiom AdmissibleUnderWellFormedness : Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

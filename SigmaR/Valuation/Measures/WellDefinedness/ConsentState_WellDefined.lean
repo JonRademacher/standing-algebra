@@ -1,5 +1,5 @@
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.ConsentState_Definition
+import SigmaR.Valuation.StandingValuation
+import SigmaR.Valuation.Measures.Definitions.ConsentState_Definition
 
 /-!
 ###############################################################################
@@ -14,7 +14,9 @@ are made here.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 ConsentState is well-defined if it has a determinate
@@ -23,4 +25,4 @@ truth value for every agent and state.
 def ConsentState_WellDefined : Prop :=
   ∀ (a : Agent) (s : State), ConsentState a s ∨ ¬ ConsentState a s
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

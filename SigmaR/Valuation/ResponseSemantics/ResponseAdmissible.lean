@@ -16,7 +16,7 @@ Admissibility does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseAdmissible R means that response R
@@ -26,4 +26,4 @@ under declared constraints.
 axiom ResponseAdmissible :
   Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

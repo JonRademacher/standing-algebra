@@ -19,7 +19,7 @@ It is a structural relation only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 ValuationComparable V₁ V₂ means that derived valuations
@@ -28,4 +28,4 @@ V₁ and V₂ are structurally comparable.
 axiom ValuationComparable :
   DerivedValuation → DerivedValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

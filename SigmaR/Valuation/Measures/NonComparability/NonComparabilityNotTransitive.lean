@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Non-Comparability Not Transitive
@@ -10,7 +12,7 @@ Non-comparability is not transitive by default.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.NonComparability
 
 /--
 No implication asserting transitive propagation of
@@ -28,5 +30,4 @@ axiom noncomparability_not_transitive :
       NonComparable M₁ M₃
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.NonComparability

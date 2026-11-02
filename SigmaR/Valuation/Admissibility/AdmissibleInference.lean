@@ -18,7 +18,7 @@ It ONLY governs permission to apply existing inference.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 An inference pattern is admissible under the system's
@@ -26,4 +26,4 @@ declared constraints.
 -/
 axiom AdmissibleInference : Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

@@ -17,7 +17,7 @@ It ONLY constrains how a state ordering may be *used* if introduced.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
 
 /--
 A state ordering relation is well-formed if it is explicitly declared
@@ -40,4 +40,4 @@ causal, or normative without explicit declaration.
 axiom StateOrderingNonInterpretive :
   (State → State → Prop) → Prop
 
-end SigmaR
+end SigmaR.Valuation.WellFormedness

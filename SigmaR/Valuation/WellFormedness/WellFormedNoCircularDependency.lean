@@ -14,7 +14,9 @@ valuation graphs.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 No valuation measure may be part of a circular dependency
@@ -29,5 +31,4 @@ axiom no_circular_dependency :
       DependsOn M₂ M₁
   )
 
-end SigmaR
-
+end SigmaR.Valuation.WellFormedness

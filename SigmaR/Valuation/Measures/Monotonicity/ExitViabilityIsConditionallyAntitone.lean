@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.ExitViability_Definition
-import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
+import SigmaR.Valuation.Measures.Definitions.ExitViability_Definition
+import SigmaR.Valuation.Measures.Definitions.TemporalAccumulation_Definition
 import SigmaR.Valuation.Measures.Monotonicity.MeasureStructuralMonotonicity
 
 /-!
@@ -16,7 +16,7 @@ It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Exit viability is treated as conditionally antitone
@@ -25,4 +25,4 @@ with respect to temporal accumulation.
 axiom ExitViabilityConditionallyAntitoneUnderTemporalAccumulation :
   Agent → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

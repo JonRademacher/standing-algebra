@@ -12,7 +12,9 @@ in dependency and not arbitrarily assigned.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 Risk inheritance is well-defined if it is determined
@@ -21,4 +23,4 @@ as a function of agent and state.
 def RiskInheritance_WellDefined : Prop :=
   ∀ (i : Agent) (s : State), ∃ (n : Nat), RiskInheritance i s = n
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

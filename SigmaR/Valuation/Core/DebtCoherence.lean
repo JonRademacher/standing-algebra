@@ -13,7 +13,9 @@ not a legitimacy judgment, and not a market concept.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Core
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 Structural debt measure.
@@ -45,4 +47,4 @@ theorem NoDebtReductionWithoutRepair
 by
   exact DebtOnlyReducedByRepair F i s h
 
-end SigmaR
+end SigmaR.Valuation.Core

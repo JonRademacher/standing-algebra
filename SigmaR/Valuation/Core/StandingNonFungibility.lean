@@ -15,7 +15,7 @@ This is a valuation constraint only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Core
 
 /--
 Standing valuation for an agent in a state.
@@ -49,4 +49,4 @@ theorem NoStandingCompensation
 by
   exact StandingNonFungible i j s hij
 
-end SigmaR
+end SigmaR.Valuation.Core

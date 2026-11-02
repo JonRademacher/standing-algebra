@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.TemporalAccumulation_Definition
-import SigmaR.Valuation.Measures.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.Definitions.TemporalAccumulation_Definition
+import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -19,7 +21,7 @@ loss is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating temporal accumulation as eliminating,
@@ -31,4 +33,4 @@ axiom temporal_accumulation_not_capacity :
       TreatedAsCapacityLostFromTemporalAccumulation a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

@@ -13,7 +13,9 @@ Relevance constrains consideration, not resolution.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting relevance to generate
@@ -26,4 +28,4 @@ axiom relevance_does_not_imply_obligation :
       TreatedAsObligatory s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

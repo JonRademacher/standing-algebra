@@ -15,11 +15,11 @@ monotonicity within SigmaR.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Monotonicity relations are treated as non-persistent.
 -/
 axiom MonotonicityDoesNotGuaranteePersistence : Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

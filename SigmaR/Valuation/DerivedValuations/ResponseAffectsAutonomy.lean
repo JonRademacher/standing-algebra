@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.ResponseSemantics.Response
-import SigmaR.Valuation.DerivedValuations.AutonomyValuation
+import SigmaR.Valuation.DerivedValuations.AutonomyValuation.AutonomyValuation
 
 /-!
 ###############################################################################
@@ -19,7 +19,7 @@ It is descriptive only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 ResponseAffectsAutonomy R A means that response R
@@ -28,4 +28,4 @@ has a structural effect on autonomy valuation A.
 axiom ResponseAffectsAutonomy :
   Response → AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

@@ -17,7 +17,7 @@ without collapsing either into authority.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 An abstract structure representing capacity agreement.

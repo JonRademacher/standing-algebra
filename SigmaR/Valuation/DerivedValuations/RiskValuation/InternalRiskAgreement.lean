@@ -16,7 +16,7 @@ external validation.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 InternalRiskAgreement A means that risk agreement A
@@ -25,4 +25,4 @@ is internalized within a single agent.
 axiom InternalRiskAgreement :
   RiskAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

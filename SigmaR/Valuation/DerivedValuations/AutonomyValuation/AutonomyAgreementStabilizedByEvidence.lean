@@ -19,7 +19,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyAgreementStabilizedByEvidence A means that autonomy
@@ -28,4 +28,4 @@ agreement A is stabilized through non-parochial evidence.
 axiom AutonomyAgreementStabilizedByEvidence :
   AutonomyAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

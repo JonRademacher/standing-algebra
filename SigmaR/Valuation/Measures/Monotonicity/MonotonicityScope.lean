@@ -16,7 +16,7 @@ Monotonicity layer.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Monotonicity relations are treated as scoped to
@@ -24,4 +24,4 @@ an explicit state ordering and system context.
 -/
 axiom MonotonicityRequiresScope : Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

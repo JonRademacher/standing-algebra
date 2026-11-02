@@ -19,7 +19,7 @@ It is structural only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityComparable C₁ C₂ means that capacity valuations
@@ -28,4 +28,4 @@ C₁ and C₂ are structurally comparable.
 axiom CapacityComparable :
   CapacityValuation → CapacityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

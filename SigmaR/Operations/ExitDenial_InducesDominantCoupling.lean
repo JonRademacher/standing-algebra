@@ -33,12 +33,15 @@ axiom dominant_coupling_from_exit_denial :
 Any operation that fails to preserve exit viability
 creates a dominant coupling relation.
 -/
+axiom exit_denial_generates_dominant_coupling :
+  ∀ {F : Operation},
+    ¬ ExitViabilityMonotone F →
+    DominantCoupling F
+
 theorem exit_denial_implies_dominant_coupling
   {F : Operation}
   (hExitFail : ¬ ExitViabilityMonotone F) :
   DominantCoupling F :=
-by
-  -- Exit denial is sufficient for dominance by justification.
-  exact dominant_coupling_from_exit_denial hExitFail
+exit_denial_generates_dominant_coupling hExitFail
 
 end SigmaR

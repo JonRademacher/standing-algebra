@@ -19,7 +19,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityAgreementStabilizedByEvidence A means that
@@ -29,4 +29,4 @@ non-parochial evidence.
 axiom TransformabilityAgreementStabilizedByEvidence :
   TransformabilityAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

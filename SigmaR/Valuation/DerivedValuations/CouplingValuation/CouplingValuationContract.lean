@@ -20,7 +20,7 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 The Coupling Valuation layer is governed by an explicit
@@ -28,4 +28,4 @@ interpretive contract defining its scope and limits.
 -/
 axiom CouplingValuationContract : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_RegimeStacked
+import SigmaR_Core
 
 namespace SigmaR
 
@@ -34,6 +35,6 @@ axiom Emergency_is_non_normalizable :
     EmergentWrong s →
     ¬ (∃ F : Operation,
          Legitimate F ∧
-         EmergentWrong (apply_state F s))
+         EmergentWrong (apply F s))
 
 end SigmaR

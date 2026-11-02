@@ -21,7 +21,7 @@ It is a valuation artifact only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CouplingValuation
 
 /--
 An abstract derived valuation associated with coupling-weighted
@@ -29,4 +29,4 @@ dependency.
 -/
 axiom CouplingValuation : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CouplingValuation

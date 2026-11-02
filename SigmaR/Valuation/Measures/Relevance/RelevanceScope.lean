@@ -13,7 +13,9 @@ They are not global and not transferable by default.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting relevance to be treated
@@ -27,5 +29,4 @@ axiom relevance_is_scoped :
       IPFA a₂ s₂
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.Relevance

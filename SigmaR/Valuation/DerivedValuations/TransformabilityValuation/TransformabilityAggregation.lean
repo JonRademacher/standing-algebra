@@ -19,7 +19,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityAggregation T₁ T₂ T₃ means that transformability
@@ -28,4 +28,4 @@ valuation T₃ is an aggregation of T₁ and T₂.
 axiom TransformabilityAggregation :
   TransformabilityValuation → TransformabilityValuation → TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

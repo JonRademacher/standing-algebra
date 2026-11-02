@@ -20,7 +20,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyDependsOnCouplingValuation A C means that autonomy
@@ -29,4 +29,4 @@ valuation A is structurally dependent on coupling valuation C.
 axiom AutonomyDependsOnCouplingValuation :
   AutonomyValuation → CouplingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

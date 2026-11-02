@@ -15,7 +15,7 @@ This is not selection.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyProgressOptionSet S means that S is a set
@@ -23,4 +23,4 @@ of autonomy-progress options.
 -/
 abbrev AutonomyProgressOptionSet : Type := Set AutonomyProgressOption
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

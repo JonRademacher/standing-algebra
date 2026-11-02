@@ -21,7 +21,7 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.StandingValuation
 
 /--
 The Standing Valuation layer is governed by an explicit
@@ -29,4 +29,4 @@ interpretive contract defining its scope and limits.
 -/
 axiom StandingValuationContract : Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.StandingValuation

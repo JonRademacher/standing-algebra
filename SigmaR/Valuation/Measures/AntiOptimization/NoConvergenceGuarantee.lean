@@ -11,7 +11,9 @@ stability, or improvement over progression.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
+
+open SigmaR.Valuation.Core
 
 /--
 No implication from valuation structure to guaranteed
@@ -24,4 +26,4 @@ axiom no_convergence_guarantee :
       Converges M
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

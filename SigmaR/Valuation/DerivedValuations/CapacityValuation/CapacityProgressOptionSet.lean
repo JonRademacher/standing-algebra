@@ -18,7 +18,7 @@ This is not selection.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityProgressOptionSet S means that S is a set
@@ -26,4 +26,4 @@ of capacity-progress options.
 -/
 abbrev CapacityProgressOptionSet : Type := Set CapacityProgressOption
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

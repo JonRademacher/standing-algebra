@@ -21,7 +21,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityDependsOnPerceptionValuation C P means that capacity
@@ -30,4 +30,4 @@ valuation C is structurally dependent on perception valuation P.
 axiom CapacityDependsOnPerceptionValuation :
   CapacityValuation → PerceptionValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

@@ -44,19 +44,16 @@ namespace SigmaR
 -- Justification‑layer axioms (operational, not normative)
 ------------------------------------------------------------------------
 
-/-- Nondomination invariant:
-    A legitimate operation cannot increase domination pressure. -/
+/-- A legitimate operation cannot increase domination pressure. -/
 axiom nondomination :
-  ∀ {F : Operation} {s : State},
+  ∀ {F : Operation} {a : Agent},
     Legitimate F →
-    DomPressure (apply F s) ≤ DomPressure s
+    DomPressure (apply F a) ≤ DomPressure a
 
 /-- Structural monotonicity of domination pressure:
     If an agent’s standing strictly decreases, domination pressure strictly
     increases.
-
-    This reflects the fact that DomPressure is a monotone aggregator of the
-    σ‑profile (as discussed in *On Relevance*, §6). -/
+    This captures the non-domination invariant used in this justification. -/
 axiom dp_increase_for_sigma_decrease :
   ∀ {F : Operation} {s : State},
     σ (apply F s) < σ s →

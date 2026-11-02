@@ -12,7 +12,7 @@ Risk is NOT aggregated, optimized, or traded.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Core
 
 /--
 Risk load valuation.
@@ -44,4 +44,4 @@ theorem RiskBoundedUnderAdmissible
 by
   exact AdmissibleRespectsRiskBound F hA
 
-end SigmaR
+end SigmaR.Valuation.Core

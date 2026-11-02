@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.PerceptionValuation
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptionValuation
 
 /-!
 ###############################################################################
@@ -18,7 +18,7 @@ It is a valuation snapshot only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 A perception valuation relative to a specific agent and state.
@@ -26,4 +26,4 @@ A perception valuation relative to a specific agent and state.
 axiom PerceptionState :
   Agent → State → PerceptionValuation
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

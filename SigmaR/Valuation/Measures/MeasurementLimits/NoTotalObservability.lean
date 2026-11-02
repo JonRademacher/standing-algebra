@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Total Observability
@@ -13,7 +15,7 @@ No observer has complete access to all states.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.MeasurementLimits
 
 /--
 No agent is assumed to observe all states.
@@ -25,4 +27,4 @@ axiom no_total_observability :
         Observable a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.MeasurementLimits

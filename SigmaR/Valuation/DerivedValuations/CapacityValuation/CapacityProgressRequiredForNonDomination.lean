@@ -14,7 +14,7 @@ This is a scope restriction, not a selection rule.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityProgressRequiredForNonDomination S means that
@@ -24,4 +24,4 @@ fall outside the non-dominating option space.
 axiom CapacityProgressRequiredForNonDomination :
   CapacityProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

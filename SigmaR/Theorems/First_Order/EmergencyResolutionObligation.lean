@@ -28,7 +28,7 @@ theorem Emergency_resolution_obligation :
     (∃ R : Operation, Remedy R) →
     ∃ R : Operation,
       Remedy R ∧
-      ¬ EmergentWrong (apply_state R s) :=
+      ¬ EmergentWrong (apply R s) :=
 by
   intro s hEmergency _
   -- If every remedy left the state emergent‑wrong, emergencies would persist

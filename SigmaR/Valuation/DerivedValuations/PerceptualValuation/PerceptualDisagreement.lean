@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.PerceptualAgreement
+import SigmaR.Valuation.DerivedValuations.PerceptualValuation.PerceptualAgreement
 
 /-!
 ###############################################################################
@@ -18,7 +18,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.PerceptualValuation
 
 /--
 PerceptualDisagreement A₁ A₂ means that perceptual agreements
@@ -27,4 +27,4 @@ A₁ and A₂ are not aligned.
 axiom PerceptualDisagreement :
   PerceptualAgreement → PerceptualAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.PerceptualValuation

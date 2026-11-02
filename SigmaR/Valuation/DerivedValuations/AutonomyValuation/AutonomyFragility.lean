@@ -14,7 +14,7 @@ or moral vulnerability.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyFragility A means that autonomy valuation A
@@ -23,4 +23,4 @@ is structurally sensitive to certain changes.
 axiom AutonomyFragility :
   AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

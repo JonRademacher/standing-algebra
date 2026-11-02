@@ -89,6 +89,7 @@ theorem collapseModel_measuresWellDefined : MeasuresWellDefined collapseModel :=
 
 /-- But it violates independence, because the measures are equal everywhere. -/
 theorem collapseModel_notStandingNotRisk : ¬ StandingNotRisk collapseModel := by
+  change ¬ (∀ a : Nat, ∀ s : Unit, a ≠ a)
   intro h
   -- pick a = 0, s = ()
   have eq0 : collapseModel.StandingMeasure (0 : Nat) () = collapseModel.RiskLoad (0 : Nat) () := by
@@ -132,6 +133,7 @@ theorem distinctModel_measuresWellDefined : MeasuresWellDefined distinctModel :=
   constructor <;> intro a s <;> exact Nat.zero_le _
 
 theorem distinctModel_standingNotRisk : StandingNotRisk distinctModel := by
+  change ∀ a : Nat, ∀ s : Unit, a ≠ a + 1
   intro a s
   -- i ≠ i+1
   simp only [distinctModel]

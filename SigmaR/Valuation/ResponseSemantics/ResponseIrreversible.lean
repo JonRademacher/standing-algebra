@@ -18,7 +18,7 @@ It only characterizes non-reversibility.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseIrreversible R means that response R
@@ -27,4 +27,4 @@ does not admit a structural reversal.
 axiom ResponseIrreversible :
   Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

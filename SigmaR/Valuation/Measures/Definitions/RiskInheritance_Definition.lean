@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.DependencyDegree_Definition
+import SigmaR.Valuation.Measures.Definitions.DependencyDegree_Definition
 
 /-!
 ###############################################################################
@@ -11,7 +11,7 @@ No aggregation or optimization is permitted here.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 Risk inheritance measure for an agent in a given state.
@@ -21,4 +21,4 @@ not probabilistic expectation or loss optimization.
 -/
 axiom RiskInheritance : Agent → State → Nat
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

@@ -13,11 +13,11 @@ are enforced elsewhere.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
 
 -- No axioms are required here.
 -- IPFA is already defined as a personal informational warrant.
 -- All misuse is blocked by negative implication axioms in the Relevance layer.
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance
 

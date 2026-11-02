@@ -42,7 +42,10 @@ variable (trueValue : Time → Int)
       proxy(t₂) > proxy(t₁) ∧
       trueValue(t₂) < trueValue(t₁)
 -/
-def GoodhartDrift : Prop :=
+def GoodhartDrift
+  (Time : Type)
+  (proxy : Time → Int)
+  (trueValue : Time → Int) : Prop :=
   ∃ (t₁ t₂ : Time),
     t₁ ≠ t₂ ∧
     proxy t₂ > proxy t₁ ∧

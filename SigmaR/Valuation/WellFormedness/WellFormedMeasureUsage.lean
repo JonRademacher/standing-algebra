@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -18,7 +19,9 @@ It ONLY prevents structural misuse of measures.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.WellFormedness
+
+open SigmaR.Valuation.Core
 
 /--
 A valuation measure must not be applied outside its declared
@@ -47,4 +50,4 @@ Restricted measures must not be treated as globally scoped.
 axiom MeasureUsageRespectsRestriction :
   Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.WellFormedness

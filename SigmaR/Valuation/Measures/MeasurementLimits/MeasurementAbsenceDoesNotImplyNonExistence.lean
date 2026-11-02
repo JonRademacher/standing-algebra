@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Measurement Absence Does Not Imply Non-Existence
@@ -13,7 +15,7 @@ Measurement limits constrain access, not reality.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.MeasurementLimits
 
 /--
 No implication from lack of observation to non-existence
@@ -25,5 +27,4 @@ axiom measurement_absence_not_nonexistence :
       ¬ Observable a s → ¬ StateExists s
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.MeasurementLimits

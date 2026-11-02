@@ -14,11 +14,11 @@ of monotonicity within SigmaR.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Monotonicity relations are treated as non-causal.
 -/
 axiom MonotonicityIsNonCausal : Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

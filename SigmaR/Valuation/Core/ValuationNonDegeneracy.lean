@@ -13,7 +13,7 @@ different states.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Core
 
 /--
 Predicate: two states are structurally distinct.
@@ -47,4 +47,4 @@ theorem ValuationNotTrivial
 by
   exact ValuationNonDegenerate s₁ s₂ h
 
-end SigmaR
+end SigmaR.Valuation.Core

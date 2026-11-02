@@ -11,7 +11,7 @@ that the equivalence persists across states or contexts.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Equivalence
 
 /--
 Equivalence does not persist by default.
@@ -22,4 +22,4 @@ axiom equivalence_not_persistent :
         M₁ a s₁ = M₂ a s₁ →
         M₁ a s₂ = M₂ a s₂)
 
-end SigmaR
+end SigmaR.Valuation.Measures.Equivalence

@@ -1,4 +1,4 @@
-import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Core.StructuralInterfaces
 
 /-!
 ###############################################################################
@@ -18,7 +18,7 @@ It ONLY governs permission to use a collection jointly.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 A set of valuation measures is admissible for joint use
@@ -26,4 +26,4 @@ in reasoning.
 -/
 axiom AdmissibleMeasureSet : Set Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

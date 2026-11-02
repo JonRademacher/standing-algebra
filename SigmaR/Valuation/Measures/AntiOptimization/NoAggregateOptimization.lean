@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Aggregate Optimization
@@ -11,7 +13,7 @@ into a single optimizing quantity.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication from multiple valuation measures to a
@@ -28,4 +30,4 @@ axiom no_aggregate_optimization :
       AggregatesFromMeasure O M₂
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization

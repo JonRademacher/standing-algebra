@@ -18,7 +18,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyPropagation A₁ A₂ means that autonomy valuation A₁
@@ -27,4 +27,4 @@ propagates structurally to autonomy valuation A₂.
 axiom AutonomyPropagation :
   AutonomyValuation → AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

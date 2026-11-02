@@ -16,7 +16,7 @@ This is NOT preference or optimization.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityNonProgressOutOfScopeWhenProgressAvailable S
@@ -26,4 +26,4 @@ when progress options S are available.
 axiom CapacityNonProgressOutOfScopeWhenProgressAvailable :
   CapacityProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

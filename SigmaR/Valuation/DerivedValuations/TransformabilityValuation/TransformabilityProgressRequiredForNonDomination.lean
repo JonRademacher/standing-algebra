@@ -14,7 +14,7 @@ This is a scope restriction, not a selection rule.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityProgressRequiredForNonDomination S means that
@@ -24,4 +24,4 @@ fall outside the non-dominating option space.
 axiom TransformabilityProgressRequiredForNonDomination :
   TransformabilityProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

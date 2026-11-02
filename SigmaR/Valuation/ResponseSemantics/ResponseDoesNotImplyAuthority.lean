@@ -13,7 +13,7 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 Response semantics do not imply authority to enact,
@@ -21,4 +21,4 @@ enforce, or prioritize a response.
 -/
 axiom ResponseDoesNotImplyAuthority : Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

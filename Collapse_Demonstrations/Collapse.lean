@@ -1,15 +1,15 @@
 /-
-  Collapse_Demonstrations.Collapse
+  Collapse.lean
 
-  This file defines the logical notion of "collapse" used by the
-  SMT/Z3 collapse demonstrations.
+  Logical definition of "collapse" shared across
+  Lean, Coq, and SMT-level interpretations.
 
-  Lean does NOT search for collapse models.
-  Instead, this predicate is used later to prove that
-  collapse is impossible under Standing Algebra.
+  This file defines collapse as a predicate.
+  Proofs relating collapse to Standing Algebra
+  are introduced in later files.
 -/
 
-namespace Collapse_Demonstrations
+namespace StandingAlgebra
 
 /-
   Abstract types, mirroring the SMT-level structure.
@@ -48,4 +48,4 @@ def Collapse : Prop :=
     Admissible F ∧
     σ (Apply F a) < σ a
 
-end Collapse_Demonstrations
+end StandingAlgebra

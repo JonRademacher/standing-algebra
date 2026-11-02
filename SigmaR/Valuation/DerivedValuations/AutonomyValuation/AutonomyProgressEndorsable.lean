@@ -13,7 +13,7 @@ Endorsability does NOT imply preference or selection.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyProgressEndorsable S means that the autonomy-progress
@@ -22,4 +22,4 @@ options in S are structurally endorsable.
 axiom AutonomyProgressEndorsable :
   AutonomyProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

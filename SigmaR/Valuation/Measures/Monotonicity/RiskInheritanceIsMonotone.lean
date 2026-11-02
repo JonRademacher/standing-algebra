@@ -15,7 +15,7 @@ It does not assert it as a global semantic law.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Monotonicity
 
 /--
 Risk inheritance is treated as monotone
@@ -23,4 +23,4 @@ along the state preorder.
 -/
 axiom RiskInheritanceMonotone : Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Monotonicity

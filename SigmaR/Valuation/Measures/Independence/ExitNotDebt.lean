@@ -1,7 +1,9 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
-import SigmaR.Valuation.Measures.ExitCollapse_Definition
-import SigmaR.Valuation.Measures.StructuralDebt_Definition
+import SigmaR.Valuation.Measures.Definitions.ExitCollapse_Definition
+import SigmaR.Valuation.Measures.Definitions.StructrualDebt_Definition
+
+open SigmaR.Valuation.Core
 
 /-!
 ###############################################################################
@@ -18,7 +20,7 @@ debt is licensed.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Independence
 
 /--
 No implication treating exit collapse as constituting
@@ -30,4 +32,4 @@ axiom exit_not_debt :
       TreatedAsStructuralDebtFromExitCollapse a s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Independence

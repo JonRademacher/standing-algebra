@@ -19,7 +19,7 @@ It is a structural inversion only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.ResponseSemantics
 
 /--
 ResponseReversesMeasure R M means that response R
@@ -29,4 +29,4 @@ of valuation measure M.
 axiom ResponseReversesMeasure :
   Response → Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.ResponseSemantics

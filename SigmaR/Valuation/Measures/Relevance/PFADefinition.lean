@@ -18,9 +18,11 @@ StructuralInterfaces and is used here by reference only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 -- No definitions or axioms are introduced here.
 -- PFA : Set Agent → State → Prop is declared in StructuralInterfaces.
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

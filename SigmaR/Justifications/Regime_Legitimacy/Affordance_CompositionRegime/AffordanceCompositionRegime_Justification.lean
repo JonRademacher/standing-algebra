@@ -51,6 +51,8 @@ Tier-2 regime declaration:
 
 Affordance composition is a standing-relevant regime.
 -/
+axiom AffordanceCompositionRegimeOp : Operation → Prop
+
 axiom affordance_composition_is_regime :
   ∀ {G : Operation},
     AffordanceComposed G →

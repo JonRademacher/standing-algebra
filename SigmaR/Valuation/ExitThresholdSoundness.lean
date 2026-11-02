@@ -20,7 +20,7 @@ is introduced in this file.
 This file is validation-only and downstream of valuation.
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation
 
 
 /- -------------------------------------------------------------------------- -/
@@ -63,9 +63,8 @@ theorem exit_requires_nonnegative_standing :
     ExitThreshold i s →
     0 ≤ σ i :=
 by
-  intro i s _
-  -- Standing is Nat-valued; non-negativity is structural
-  exact Nat.zero_le _
+  intro i s hExit
+  exact hExit.1
 
 /- -------------------------------------------------------------------------- -/
 /- Capacity soundness                                                          -/
@@ -81,8 +80,8 @@ theorem exit_respects_capacity :
     ExitThreshold i s →
     σ i ≤ B (cap i) :=
 by
-  intro i s _
-  exact (CapacityBound.left i)
+  intro i s hExit
+  exact hExit.2
 
 /- -------------------------------------------------------------------------- -/
 /- Debt compatibility                                                          -/
@@ -150,4 +149,4 @@ by
   intro _ _ _
   trivial
 
-end SigmaR
+end SigmaR.Valuation

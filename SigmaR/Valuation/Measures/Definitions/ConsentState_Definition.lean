@@ -19,7 +19,7 @@ This file introduces NO legitimacy assumptions.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 ConsentState a s holds if agent a’s participation
@@ -27,4 +27,4 @@ in state s is consented.
 -/
 axiom ConsentState : Agent → State → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

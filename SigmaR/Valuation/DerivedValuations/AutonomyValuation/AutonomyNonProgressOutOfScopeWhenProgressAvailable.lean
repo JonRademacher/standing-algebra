@@ -16,7 +16,7 @@ This is NOT preference or optimization.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyNonProgressOutOfScopeWhenProgressAvailable S
@@ -26,4 +26,4 @@ when progress options S are available.
 axiom AutonomyNonProgressOutOfScopeWhenProgressAvailable :
   AutonomyProgressOptionSet → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

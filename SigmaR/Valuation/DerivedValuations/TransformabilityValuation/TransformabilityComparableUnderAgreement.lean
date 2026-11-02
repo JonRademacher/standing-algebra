@@ -20,7 +20,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityComparableUnderAgreement T₁ T₂ A means that
@@ -30,4 +30,4 @@ under transformability agreement A.
 axiom TransformabilityComparableUnderAgreement :
   TransformabilityValuation → TransformabilityValuation → TransformabilityAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

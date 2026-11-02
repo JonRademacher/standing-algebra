@@ -18,11 +18,11 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 An abstract derived valuation associated with risk.
 -/
 axiom RiskValuation : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

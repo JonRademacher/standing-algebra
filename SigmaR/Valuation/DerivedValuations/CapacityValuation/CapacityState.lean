@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.CapacityValuation
+import SigmaR.Valuation.DerivedValuations.CapacityValuation.CapacityValuation
 
 /-!
 ###############################################################################
@@ -19,7 +19,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 A capacity valuation relative to a specific agent and state.
@@ -27,4 +27,4 @@ A capacity valuation relative to a specific agent and state.
 axiom CapacityState :
   Agent → State → CapacityValuation
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

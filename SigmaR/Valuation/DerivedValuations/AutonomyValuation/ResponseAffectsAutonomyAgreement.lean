@@ -20,7 +20,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 ResponseAffectsAutonomyAgreement R A means that response R
@@ -29,4 +29,4 @@ has a structural effect on autonomy agreement A.
 axiom ResponseAffectsAutonomyAgreement :
   Response → AutonomyAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

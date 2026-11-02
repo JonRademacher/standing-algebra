@@ -83,7 +83,7 @@ axiom emergency_regime_requires_debt :
     Legitimate F →
       ∀ s : State,
         EmergencyRegimeOp F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -96,7 +96,7 @@ theorem EmergencyRegime_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     EmergencyRegimeOp F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hEmer
   exact emergency_regime_requires_debt hLeg s hEmer

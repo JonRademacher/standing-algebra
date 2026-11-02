@@ -18,7 +18,7 @@ It prevents illicit violations only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 
 /--
 TransformabilityRespectsMonotonicity T means that
@@ -28,4 +28,4 @@ monotonicity constraints.
 axiom TransformabilityRespectsMonotonicity :
   TransformabilityValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

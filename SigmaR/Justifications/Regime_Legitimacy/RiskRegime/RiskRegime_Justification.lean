@@ -83,7 +83,7 @@ axiom risk_regime_requires_debt :
     Legitimate F →
       ∀ s : State,
         RiskRegimeOp F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -96,7 +96,7 @@ theorem RiskRegime_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     RiskRegimeOp F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hRisk
   exact risk_regime_requires_debt hLeg s hRisk

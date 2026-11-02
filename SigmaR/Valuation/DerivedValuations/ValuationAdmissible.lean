@@ -19,7 +19,7 @@ It only governs permission to reason with a valuation.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations
 
 /--
 ValuationAdmissible V means that derived valuation V
@@ -28,4 +28,4 @@ is admissible under declared structural constraints.
 axiom ValuationAdmissible :
   DerivedValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations

@@ -108,7 +108,7 @@ axiom adapter_regime_requires_debt :
     Legitimate F →
       ∀ s : State,
         AdapterRegimeOp F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -122,7 +122,7 @@ theorem AdapterRegime_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     AdapterRegimeOp F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hAd
   exact adapter_regime_requires_debt hLeg s hAd

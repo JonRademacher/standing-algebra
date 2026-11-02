@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.StandingValuation
+import SigmaR.Valuation.DerivedValuations.StandingValuation.StandingValuation
 import SigmaR.Valuation.ResponseSemantics.Response
 
 /-!
@@ -17,7 +17,7 @@ Dependency does NOT imply:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.StandingValuation
 
 /--
 StandingDependsOnResponse S R means that standing valuation S
@@ -26,4 +26,4 @@ is structurally sensitive to response R.
 axiom StandingDependsOnResponse :
   StandingValuation → Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.StandingValuation

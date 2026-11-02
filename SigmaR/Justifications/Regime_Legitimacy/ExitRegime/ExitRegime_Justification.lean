@@ -53,7 +53,7 @@ axiom exit_regime_requires_debt :
     Legitimate F →
       ∀ s : State,
         ExitRegimeOp F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -66,7 +66,7 @@ theorem ExitRegime_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     ExitRegimeOp F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hExit
   exact exit_regime_requires_debt hLeg s hExit

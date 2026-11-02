@@ -70,7 +70,7 @@ axiom risk_sensitive_symmetry_requires_debt :
     Legitimate F →
       ∀ s : State,
         RiskSensitiveSymmetry F s →
-        StructuralDebt F s
+        HasStructuralDebt F s
 
 /--
 Derived theorem:
@@ -83,7 +83,7 @@ theorem RiskSensitiveSymmetry_requires_debt
   (hLeg : Legitimate F) :
   ∀ s : State,
     RiskSensitiveSymmetry F s →
-    StructuralDebt F s :=
+    HasStructuralDebt F s :=
 by
   intros s hRisk
   exact risk_sensitive_symmetry_requires_debt hLeg s hRisk

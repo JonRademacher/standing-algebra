@@ -18,7 +18,7 @@ It is declarative only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityDependsOnMeasure C M means that capacity valuation C
@@ -27,4 +27,4 @@ structurally depends on valuation measure M.
 axiom CapacityDependsOnMeasure :
   CapacityValuation → Measure → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

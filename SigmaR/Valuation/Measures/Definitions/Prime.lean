@@ -11,7 +11,7 @@ Prime is intentionally uninterpreted at this layer.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 Prime i indicates that agent i is treated as irreducible
@@ -19,4 +19,4 @@ under some theory or model.
 -/
 axiom Prime : Agent → Prop
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

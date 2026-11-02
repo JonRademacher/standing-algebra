@@ -25,6 +25,10 @@ Therefore:
 
 namespace SigmaR
 
+/-- Agents are symmetric when both standing and capacity agree. -/
+def EqualStandingAndCapacity (a b : Agent) : Prop :=
+  σ a = σ b ∧ cap a = cap b
+
 /--
 Predicate: agent `a` is exposed to affordance `F`
 at state `s`.

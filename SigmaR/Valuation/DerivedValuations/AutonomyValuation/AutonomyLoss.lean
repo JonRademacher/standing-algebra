@@ -18,7 +18,7 @@ It is a descriptive valuation change only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyLoss A₁ A₂ means that autonomy valuation A₂
@@ -27,4 +27,4 @@ represents a loss relative to autonomy valuation A₁.
 axiom AutonomyLoss :
   AutonomyValuation → AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

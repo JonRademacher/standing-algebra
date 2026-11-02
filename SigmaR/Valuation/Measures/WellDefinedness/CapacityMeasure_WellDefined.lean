@@ -1,5 +1,5 @@
-import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.CapacityMeasure_Definition
+import SigmaR.Valuation.StandingValuation
+import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
 
 /-!
 ###############################################################################
@@ -10,7 +10,9 @@ CapacityMeasure is total and distinct from standing.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
+
+open SigmaR.Valuation.Measures.Definitions
 
 /--
 Capacity measure is total.
@@ -19,4 +21,4 @@ axiom CapacityMeasureTotal :
   ∀ (a : Agent) (s : State),
     CapacityMeasure a s ≥ 0
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

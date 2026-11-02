@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -31,7 +32,7 @@ authority, obligation, or necessity.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Core
 
 /-!
 ------------------------------------------------------------------------------
@@ -1278,4 +1279,4 @@ axiom AutonomyValuationScope : Prop
 axiom AutonomyValuationContract : Prop
 
 
-end SigmaR
+end SigmaR.Valuation.Core

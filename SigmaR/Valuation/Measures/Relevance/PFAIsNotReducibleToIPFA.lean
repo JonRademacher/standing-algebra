@@ -11,7 +11,9 @@ to a collection of individual personal warrants.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication identifying or reducing PFA
@@ -23,4 +25,4 @@ axiom pfa_not_reducible_to_ipfa :
       PFA G s ↔ (∀ a ∈ G, IPFA a s)
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

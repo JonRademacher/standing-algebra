@@ -15,7 +15,7 @@ are extensional and invariant under state equality.
 No new structure or authority is introduced here.
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation
 
 
 /- -------------------------------------------------------------------------- -/
@@ -101,6 +101,7 @@ theorem CIA_does_not_distort_order
   CIA_BoundedDelta i s₁ s₂ →
   ValLe i s₁ s₂ ∨ ValLe i s₂ s₁ :=
 by
+  intro _
   unfold ValLe
   intro _
   exact Int.le_total (σv i s₁) (σv i s₂)
@@ -140,4 +141,4 @@ theorem ValLe_depends_only_on_sigma
 by
   rfl
 
-end SigmaR
+end SigmaR.Valuation

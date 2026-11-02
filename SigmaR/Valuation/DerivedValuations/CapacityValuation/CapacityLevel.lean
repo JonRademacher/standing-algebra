@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.DerivedValuations.CapacityValuation
+import SigmaR.Valuation.DerivedValuations.CapacityValuation.CapacityValuation
 
 /-!
 ###############################################################################
@@ -18,7 +18,7 @@ They do NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 A capacity level associated with a capacity valuation.
@@ -26,4 +26,4 @@ A capacity level associated with a capacity valuation.
 axiom CapacityLevel :
   CapacityValuation → Val
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

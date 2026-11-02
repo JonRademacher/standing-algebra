@@ -31,7 +31,7 @@ axiom Emergency_requires_remedy_when_possible :
   ∀ (s : State),
     EmergentWrong s →
     (∃ R : Operation, Remedy R) →
-    ∃ R : Operation, Remedy R
+    ∃ R : Operation, Remedy R ∧ ¬ EmergentWrong (apply R s)
 
 /- -----------------
    No Emergency Normalization
@@ -41,6 +41,6 @@ axiom Emergency_requires_remedy_when_possible :
 axiom Emergency_cannot_persist_without_remedy :
   ∀ (s : State),
     EmergentWrong s →
-    ¬ (∀ R : Operation, Remedy R → EmergentWrong (apply_state R s))
+    ¬ (∀ R : Operation, Remedy R → EmergentWrong (apply R s))
 
 end SigmaR

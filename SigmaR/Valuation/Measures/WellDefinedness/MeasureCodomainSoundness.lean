@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Valuation.Measures.MeasureTypingAndScope
+import SigmaR.Valuation.Measures.Definitions.MeasureTypingAndScope
 
 /-!
 ###############################################################################
@@ -11,13 +11,14 @@ No measure escapes Nat or Prop.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.WellDefinedness
 
 /--
 Codomain soundness for valuation measures.
 -/
 axiom MeasureCodomainSound :
-  ∀ (μ : ValuationMeasure) (a : Agent) (s : State),
+  ∀ (μ : SigmaR.Valuation.Measures.Definitions.ValuationMeasure)
+    (a : SigmaR.Agent) (s : SigmaR.Valuation.State),
     μ a s ≥ 0
 
-end SigmaR
+end SigmaR.Valuation.Measures.WellDefinedness

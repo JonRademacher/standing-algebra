@@ -16,7 +16,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyRespectsMonotonicity A means that autonomy valuation A
@@ -25,4 +25,4 @@ does not violate declared monotonicity constraints.
 axiom AutonomyRespectsMonotonicity :
   AutonomyValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

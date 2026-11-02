@@ -14,7 +14,9 @@ evidence sufficient to justify relevance back to PFA.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Relevance
+
+open SigmaR.Valuation.Core
 
 /--
 No implication permitting aggregation without PFA
@@ -27,4 +29,4 @@ axiom aggregation_without_pfa_requires_evaluation :
       TreatedAsAuthoritative s
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.Relevance

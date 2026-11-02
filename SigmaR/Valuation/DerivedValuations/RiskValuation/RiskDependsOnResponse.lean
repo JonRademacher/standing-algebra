@@ -19,7 +19,7 @@ It is structural sensitivity only.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskDependsOnResponse R S means that risk valuation R
@@ -28,4 +28,4 @@ is structurally sensitive to response S.
 axiom RiskDependsOnResponse :
   RiskValuation → Response → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

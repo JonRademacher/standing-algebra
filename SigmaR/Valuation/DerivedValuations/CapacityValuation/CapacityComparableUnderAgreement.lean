@@ -20,7 +20,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityComparableUnderAgreement C₁ C₂ A means that
@@ -30,4 +30,4 @@ under capacity agreement A.
 axiom CapacityComparableUnderAgreement :
   CapacityValuation → CapacityValuation → CapacityAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.CapacityValuation

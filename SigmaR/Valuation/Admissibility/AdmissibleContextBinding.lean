@@ -18,7 +18,7 @@ This file introduces no axioms.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Admissibility
 
 /--
 Admissibility is always relative to an explicit context
@@ -26,4 +26,4 @@ and must not be assumed globally.
 -/
 axiom AdmissibleContextBinding : Prop
 
-end SigmaR
+end SigmaR.Valuation.Admissibility

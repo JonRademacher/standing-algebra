@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Operations.ResolutionMethodDistinctness_Op
 
 namespace SigmaR
 

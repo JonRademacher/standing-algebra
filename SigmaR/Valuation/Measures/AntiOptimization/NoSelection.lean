@@ -1,6 +1,8 @@
 import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # No Selection
@@ -11,7 +13,7 @@ fitness, or survival-based dynamics.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.AntiOptimization
 
 /--
 No implication from valuation structure to assumed
@@ -24,5 +26,5 @@ axiom no_selection :
       AssumesSelection M
   )
 
-end SigmaR
+end SigmaR.Valuation.Measures.AntiOptimization
 

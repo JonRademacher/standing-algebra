@@ -18,11 +18,11 @@ without asserting authority or correctness.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 An abstract structure representing risk agreement.
 -/
 axiom RiskAgreement : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

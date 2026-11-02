@@ -20,7 +20,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskComparableUnderAgreement R₁ R₂ A means that
@@ -30,4 +30,4 @@ under risk agreement A.
 axiom RiskComparableUnderAgreement :
   RiskValuation → RiskValuation → RiskAgreement → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

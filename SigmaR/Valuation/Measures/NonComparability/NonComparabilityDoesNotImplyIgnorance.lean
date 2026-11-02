@@ -2,6 +2,8 @@ import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Core.StructuralInterfaces
 import SigmaR.Valuation.Measures.NonComparability.NonComparabilityContract
 
+open SigmaR.Valuation.Core
+
 /-!
 ###############################################################################
 # Non-Comparability Does Not Imply Ignorance
@@ -14,7 +16,7 @@ Non-comparability is a semantic constraint, not an epistemic failure.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.NonComparability
 
 /--
 No implication treating non-comparability as epistemic
@@ -29,5 +31,4 @@ axiom noncomparability_not_ignorance :
       TreatedAsIgnorance M₁ M₂
   )
 
-end SigmaR
-
+end SigmaR.Valuation.Measures.NonComparability

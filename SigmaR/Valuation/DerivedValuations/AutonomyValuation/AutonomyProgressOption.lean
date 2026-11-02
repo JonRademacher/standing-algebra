@@ -14,7 +14,7 @@ It is a structural possibility, not a preference.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 
 /--
 AutonomyProgressOption O means that O represents
@@ -22,4 +22,4 @@ an autonomy-increasing option.
 -/
 axiom AutonomyProgressOption : Type
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.AutonomyValuation

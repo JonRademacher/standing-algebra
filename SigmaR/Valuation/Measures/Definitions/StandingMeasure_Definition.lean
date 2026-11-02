@@ -10,7 +10,7 @@ This file introduces NO ordering over operations and NO legitimacy claims.
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.Measures.Definitions
 
 /--
 Standing measure for an agent in a given state.
@@ -20,4 +20,4 @@ not an objective, utility, or preference.
 -/
 axiom StandingMeasure : Agent → State → Nat
 
-end SigmaR
+end SigmaR.Valuation.Measures.Definitions

@@ -47,7 +47,7 @@ of operations.
 noncomputable def compose
   (F₁ F₂ : Operation)
   (s : State) : State :=
-  apply F₂ (apply F₁ s)
+  apply (composeOp F₂ F₁) s
 
 /--
 Standing is monotone
@@ -55,7 +55,7 @@ under composition
 of structurally admissible operations.
 -/
 theorem composition_preserves_standing :
-  ∀ {F₁ F₂ : Operation} {s : State} {i : Agent},
+  ∀ {F₁ F₂ : Operation} {s : State},
     StructurallyAdmissible F₁ s →
     StructurallyAdmissible F₂ (apply F₁ s) →
     σv i (compose F₁ F₂ s) ≥ σv i s :=
@@ -78,7 +78,7 @@ change in dominant dependency but does not by itself place the agent below
 its exit threshold.
 -/
 theorem composition_preserves_exit :
-  ∀ {F₁ F₂ : Operation} {s : State} {i : Agent},
+  ∀ {F₁ F₂ : Operation} {s : State} {θ : Agent → ℝ} {i : Agent},
     StructurallyAdmissible F₁ s →
     StructurallyAdmissible F₂ (apply F₁ s) →
     ExitViableWithin s i →

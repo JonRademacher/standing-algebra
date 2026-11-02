@@ -20,7 +20,7 @@ It does NOT:
 ###############################################################################
 -/
 
-namespace SigmaR
+namespace SigmaR.Valuation.DerivedValuations.RiskValuation
 
 /--
 RiskDependsOnCoupling R C means that risk valuation R
@@ -29,4 +29,4 @@ is structurally grounded in coupling valuation C.
 axiom RiskDependsOnCoupling :
   RiskValuation → CouplingValuation → Prop
 
-end SigmaR
+end SigmaR.Valuation.DerivedValuations.RiskValuation

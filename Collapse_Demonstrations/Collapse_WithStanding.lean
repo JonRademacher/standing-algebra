@@ -30,7 +30,12 @@ variable
   Standing Algebra axiom:
   admissible operations preserve or increase standing.
 -/
-def StandingAlgebra : Prop :=
+def StandingAlgebra
+  (Agent : Type)
+  (Operation : Type)
+  (σ : Agent → Int)
+  (Apply : Operation → Agent → Agent)
+  (Admissible : Operation → Prop) : Prop :=
   ∀ (F : Operation) (a : Agent),
     Admissible F →
     σ (Apply F a) ≥ σ a
@@ -39,8 +44,13 @@ def StandingAlgebra : Prop :=
   Under Standing Algebra, collapse is impossible.
 -/
 theorem noCollapse_under_StandingAlgebra
+  (Agent : Type)
+  (Operation : Type)
+  (σ : Agent → Int)
+  (Apply : Operation → Agent → Agent)
+  (Admissible : Operation → Prop)
   (SA : StandingAlgebra Agent Operation σ Apply Admissible) :
-  ¬ Collapse Agent Operation σ Apply Admissible :=
+  ¬ StandingAlgebra.Collapse Agent Operation σ Apply Admissible :=
 by
   intro hCollapse
   rcases hCollapse with ⟨F, a, hAdm, hDecrease⟩
