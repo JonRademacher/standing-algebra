@@ -1,10 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Core_Legitimacy.RegimeInteractionNormalization_Justification
 
 namespace SigmaR
-
-/-- Relation expressing that one operation is a normalized form of another. -/
-axiom NormalizedForm : Operation → Operation → Prop
 
 /--
 Operations-level predicate:

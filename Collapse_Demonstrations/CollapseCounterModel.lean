@@ -135,9 +135,7 @@ theorem distinctModel_measuresWellDefined : MeasuresWellDefined distinctModel :=
 theorem distinctModel_standingNotRisk : StandingNotRisk distinctModel := by
   change ∀ a : Nat, ∀ s : Unit, a ≠ a + 1
   intro a s
-  -- i ≠ i+1
-  simp only [distinctModel]
-  exact fun h => Nat.succ_ne_self a h.symm
+  exact Nat.ne_of_lt (Nat.lt_succ_self a)
 
 theorem existsModelWithIndependence :
   ∃ M : SigmaRModel, MeasuresWellDefined M ∧ StandingNotRisk M := by
