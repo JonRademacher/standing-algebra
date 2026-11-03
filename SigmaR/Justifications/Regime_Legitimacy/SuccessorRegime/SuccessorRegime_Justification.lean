@@ -1,7 +1,7 @@
+import SigmaR.Regimes.StandingAlgebra_SuccessorRegime
 import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorConsistency_Justification
 import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorAvailability_Justification
 import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorNonDeprivation_Justification
-import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegimeCore
 
 /-!
 ###############################################################################

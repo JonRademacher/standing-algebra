@@ -52,7 +52,7 @@ axiom emergency_risk_inheritance_required :
         EmergencyRegimeOp F s →
         ∀ a : Agent,
           ExercisesEmergencyAuthority a F s →
-          RiskInheritance a F s
+          InheritsOperationRisk a F s
 
 /--
 Derived theorem:
@@ -67,7 +67,7 @@ theorem EmergencyAuthorityRequiresRiskInheritance
     EmergencyRegimeOp F s →
     ∀ a : Agent,
       ExercisesEmergencyAuthority a F s →
-      RiskInheritance a F s :=
+      InheritsOperationRisk a F s :=
 by
   intros s hEmer a hAuth
   exact emergency_risk_inheritance_required hLeg s hEmer a hAuth

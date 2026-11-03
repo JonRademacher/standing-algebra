@@ -17,6 +17,17 @@ a dominant coupling structure, violating legitimacy.
 namespace SigmaR
 
 /--
+Tier‑2 legitimacy axiom:
+
+An operation that fails to preserve exit viability induces
+a dominant coupling relation.
+-/
+axiom dominant_coupling_from_exit_denial :
+  ∀ {F : Operation},
+    ¬ ExitViabilityMonotone F →
+    DominantCoupling F
+
+/--
 **Exit denial induces dominant coupling.**
 
 Any operation that fails to preserve exit viability

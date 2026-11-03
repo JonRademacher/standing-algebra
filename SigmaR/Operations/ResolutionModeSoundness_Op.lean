@@ -3,7 +3,6 @@ import SigmaR.Operations.Negotiation_Op
 import SigmaR.Operations.Cooperation_Op
 import SigmaR.Operations.Compromise_Op
 import SigmaR.Operations.TragicAcceptance_Op
-import SigmaR.Operations.ResolutionMethodDistinctness_Op
 
 namespace SigmaR
 

@@ -31,11 +31,14 @@ An operation F is drift‑bounded in state s for agent a if the change in
 standing is at most one unit in either direction.
 
 This encodes the absolute bound:
-  |σ (apply F s) a − σ s a| ≤ 1
+  |σ (apply F s) − σ s| ≤ 1
+
+`State` and `Agent` are the same carrier in the formal core, so the standing
+`σ` of the evolving state carries the agent index implicitly.
 -/
-def DriftBounded (F : Operation) (a : Agent) : Prop :=
-  (σ (apply F a) ≤ σ a + 1) ∧
-  (σ a ≤ σ (apply F a) + 1)
+def DriftBounded (F : Operation) (s : State) : Prop :=
+  (σ (apply F s) ≤ σ s + 1) ∧
+  (σ s ≤ σ (apply F s) + 1)
 
 /--
 Tier‑2 legitimacy constraint:
@@ -49,8 +52,8 @@ Theorem 6.13 and the “drift budget” argument in *On Relevance*.
 axiom legit_implies_drift_bounded :
   ∀ {F : Operation},
     Legitimate F →
-    ∀ {a : Agent},
-      DriftBounded F a
+    ∀ {s : State},
+      DriftBounded F s
 
 /--
 Bounded Drift is required for legitimacy.
@@ -61,10 +64,10 @@ legitimate coercion.
 theorem BoundedDrift_required_for_legitimacy
   {F : Operation}
   (hLegit : Legitimate F) :
-  ∀ {a : Agent},
-    DriftBounded F a :=
+  ∀ {s : State},
+    DriftBounded F s :=
 by
-  intro a
+  intro s
   exact legit_implies_drift_bounded hLegit
 
 end SigmaR

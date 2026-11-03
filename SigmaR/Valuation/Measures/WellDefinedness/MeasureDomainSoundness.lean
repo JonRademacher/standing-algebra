@@ -20,7 +20,7 @@ namespace SigmaR.Valuation.Measures.WellDefinedness
 Domain soundness for valuation measures.
 -/
 axiom MeasureDomainSound :
-  ∀ (μ : ValuationMeasure) (a : Agent) (s : State),
+  ∀ (_μ : ValuationMeasure) (_a : Agent) (_s : State),
     True
 
 end SigmaR.Valuation.Measures.WellDefinedness

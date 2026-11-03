@@ -23,7 +23,12 @@ of structural debt dissipation.
 -/
 namespace SigmaR
 /-- Predicate: the operation incurs structural debt at state `s`. -/
-axiom HasStructuralDebt : Operation → State → Prop
+axiom StructuralDebt : Operation → State → Prop
+
+/-- Compatibility name used by regime-level justifications. -/
+abbrev HasStructuralDebt (F : Operation) (s : State) : Prop :=
+  StructuralDebt F s
+
 /-- Predicate: structural debt incurred by `F` at `s`
    is dissipated via directed repair. -/
 axiom DebtDissipated : Operation → State → Prop
@@ -37,7 +42,7 @@ axiom debt_requires_repair :
  ∀ {F : Operation},
    Legitimate F →
      ∀ s : State,
-       HasStructuralDebt F s →
+       StructuralDebt F s →
        DebtDissipated F s
 /--
 Derived theorem:
@@ -47,7 +52,7 @@ theorem StructuralDebt_requires_repair
  {F : Operation}
  (hLeg : Legitimate F) :
  ∀ s : State,
-   HasStructuralDebt F s →
+   StructuralDebt F s →
    DebtDissipated F s :=
 by
  intros s hDebt

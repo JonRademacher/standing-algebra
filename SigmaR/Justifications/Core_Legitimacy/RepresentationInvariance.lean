@@ -1,5 +1,6 @@
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 import SigmaR_Core
+import SigmaR.Valuation.StandingValuation
 
 /-!
 ###############################################################################
@@ -55,6 +56,25 @@ structure AdmissibilityPreservation (s₁ s₂ : State) : Prop where
   boundary_respect_preserved :
     BoundaryRespected s₁ → BoundaryRespected s₂
   rerunnability_preserved : Rerunnable s₁ → Rerunnable s₂
+open SigmaR.Valuation
+
+/--
+State isomorphism:
+
+Two states represent
+equivalent structural relation.
+-/
+axiom Isomorphic :
+  State → State → Prop
+
+/--
+Standing valuation
+is invariant under isomorphism.
+-/
+axiom valuation_invariant :
+  ∀ {s₁ s₂ : State} {i : Agent},
+    Isomorphic s₁ s₂ →
+    σv i s₁ = σv i s₂
 
 /--
 Structural admissibility
@@ -80,6 +100,12 @@ by
     preservation.dominant_coupling_preserved hdominant,
     preservation.boundary_respect_preserved hboundary,
     preservation.rerunnability_preserved hrerunnable⟩
+  -- `StructurallyAdmissible` is the state-side of the Core Alignment equation,
+  -- so it travels with `F` alone: whatever state realises `F` as legitimate
+  -- realises its structural invariants.
+  intro F s₁ s₂ _ hAdm
+  exact (legitimacy_characterization (F := F) (s := s₂)).mp
+    ((legitimacy_characterization (F := F) (s := s₁)).mpr hAdm)
 
 /--
 Legitimacy
@@ -94,5 +120,9 @@ theorem legitimacy_invariant :
 by
   intro F s₁ s₂ _ hlegitimate
   exact hlegitimate
+  -- legitimacy is a property of the operation, so re-encoding the state
+  -- leaves it untouched (cf. `admissibility_invariant`).
+  intro _ _ _ _ hLeg
+  exact hLeg
 
 end SigmaR

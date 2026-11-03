@@ -1,12 +1,15 @@
-import SigmaR.StandingAlgebra_RegimeStacked
+import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Justifications.Core_Legitimacy.NRPP_Justification
-import SigmaR.Operations.ResolutionMethodDistinctness_Op
 
 namespace SigmaR
 
-/-- An operation satisfies the non-retributive proportionality gate at every state. -/
-def NRPP_Satisfied (F : Operation) : Prop :=
-  ∀ s : State, NRPP_Fit F s
+/--
+Operations-level predicate:
+
+`F` represents a compromise operation
+where agents accept bounded concessions.
+-/
+axiom CompromiseOp : Operation → Prop
 
 /--
 Operations-level invariant (Compromise):

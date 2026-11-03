@@ -1,5 +1,4 @@
 import SigmaR.Justifications.Core_Legitimacy.STC5_Justification
-import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegimeCore
 import SigmaR.Regimes.StandingAlgebra_SuccessorRegime
 
 /-!
@@ -25,6 +24,12 @@ Therefore:
 
 namespace SigmaR
 
+/-
+Predicate: operation `F` is a successor-generating operation.  It is
+introduced by the successor regime layer
+(`SigmaR.Regimes.StandingAlgebra_SuccessorRegime`).
+-/
+
 /--
 Tier-2 legitimacy axiom (Successor Symmetry):
 
@@ -34,8 +39,9 @@ then it must preserve standing symmetry.
 axiom successor_symmetry_required :
   ∀ {F : Operation},
     Legitimate F →
-      SuccessorOp F →
-      STC5_valid F
+      ∀ _s : State,
+        SuccessorOp F →
+        STC5 F
 
 /--
 Derived theorem:
@@ -45,8 +51,9 @@ Legitimate successor operations preserve symmetry.
 theorem SuccessorPreservesSymmetry
   {F : Operation}
   (hLeg : Legitimate F) :
-  SuccessorOp F →
-  STC5_valid F :=
+  ∀ _s : State,
+    SuccessorOp F →
+    STC5 F :=
 by
   intro hSucc
   exact successor_symmetry_required hLeg hSucc

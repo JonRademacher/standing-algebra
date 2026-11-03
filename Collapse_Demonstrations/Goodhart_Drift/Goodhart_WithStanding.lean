@@ -1,6 +1,5 @@
 import Collapse_Demonstrations.Goodhart_Drift.Goodhart
-import Mathlib.Data.Int.Basic
-import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.SigmaR_Core
 
 /-
   Collapse_Demonstrations.Goodhart_Drift.Goodhart_WithStanding
@@ -14,8 +13,26 @@ import SigmaR.StandingAlgebra_FormalCore
 
 namespace Collapse_Demonstrations.Goodhart_Drift
 
+/-
+  We align Goodhart with SigmaR as follows:
+
+  * Time          ≙ Agent
+  * Step/Update   ≙ Operation
+  * trueValue     ≙ σ (standing)
+  * proxy-improving steps are admissible
+
+  Every carrier and hypothesis below is an explicit argument of the
+  theorem: Lean only propagates a `variable` into a declaration when it
+  occurs in the declaration's *type*, and these occur only in the proof.
+-/
+
 /--
   Under SigmaR Standing Algebra, Goodhart drift is impossible.
+
+  `StandingAlgebra` is the Standing Algebra axiom from the SigmaR core
+  (admissible operations do not decrease standing); `ProxyImproves` says a
+  proxy‑improving transition is the application of some admissible
+  operation.
 -/
 theorem noGoodhartDrift_under_StandingAlgebra
   (Time : Type)
@@ -26,12 +43,13 @@ theorem noGoodhartDrift_under_StandingAlgebra
   (Admissible : Operation → Prop)
   (StandingAlgebra :
     ∀ (F : Operation) (t : Time),
-      Admissible F → trueValue (Apply F t) ≥ trueValue t)
+      Admissible F →
+      trueValue (Apply F t) ≥ trueValue t)
   (ProxyImproves :
     ∀ t₁ t₂ : Time,
       proxy t₂ > proxy t₁ →
       ∃ F : Operation, Admissible F ∧ Apply F t₁ = t₂) :
-  ¬ GoodhartDrift Time proxy trueValue :=
+  ¬ GoodhartDrift (Time := Time) (proxy := proxy) (trueValue := trueValue) :=
 by
   intro hDrift
   rcases hDrift with ⟨t₁, t₂, hNe, hProxyUp, hTrueDown⟩
@@ -45,6 +63,6 @@ by
     StandingAlgebra F t₁ hAdm
 
   -- Contradiction: decrease and non-decrease
-  exact (Int.not_lt.mpr hNonDecrease) hTrueDown
+  exact absurd (Int.lt_of_lt_of_le hTrueDown hNonDecrease) (Int.lt_irrefl _)
 
 end Collapse_Demonstrations.Goodhart_Drift

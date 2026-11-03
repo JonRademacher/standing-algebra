@@ -1,17 +1,17 @@
+import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Justifications.Core_Legitimacy.LegitimacyCharacterization
 import SigmaR.Justifications.Core_Legitimacy.StandingMonotonicity
 import SigmaR.Justifications.Core_Legitimacy.DebtMonotonicity
 import SigmaR.Justifications.Core_Legitimacy.ExitViabilityMonotonicity
+import SigmaR.Valuation.StandingValuation
 
 /-!
 ###############################################################################
 # Composition Monotonicity Under Structural Admissibility
 ###############################################################################
 
-This file proves that autonomy‑preserving
-structural invariants hold
-under composition
-of legitimate operations.
+This file proves that autonomy-preserving structural invariants hold
+under composition of legitimate operations.
 
 Given:
 
@@ -40,6 +40,8 @@ under procedurally legitimate constraint.
 
 namespace SigmaR
 
+open SigmaR.Valuation
+
 /--
 Sequential application
 of operations.
@@ -55,10 +57,10 @@ under composition
 of structurally admissible operations.
 -/
 theorem composition_preserves_standing :
-  ∀ {F₁ F₂ : Operation} {s : State},
+  ∀ {F₁ F₂ : Operation} {s : State} {i : Agent},
     StructurallyAdmissible F₁ s →
     StructurallyAdmissible F₂ (apply F₁ s) →
-    σ (compose F₁ F₂ s) ≥ σ s :=
+    σv i (compose F₁ F₂ s) ≥ σv i s :=
 by
   intro F₁ F₂ s hStructuralF₁ hStructuralF₂
   have hF₁ : Admissible F₁ := hStructuralF₁.1
@@ -70,13 +72,24 @@ by
   change σ (apply (composeOp F₂ F₁) s) ≥ σ s
   rw [apply_composeOp]
   exact Nat.le_trans h₁ h₂
+  intro F₁ F₂ s i hAdm₁ hAdm₂
+  have h₁ : σv i (apply F₁ s) ≥ σv i s :=
+    standing_monotone (F := F₁) (s := s) (i := i) hAdm₁
+  have h₂ : σv i (apply F₂ (apply F₁ s)) ≥ σv i (apply F₁ s) :=
+    standing_monotone (F := F₂) (s := apply F₁ s) (i := i) hAdm₂
+  unfold compose
+  rw [apply_composeOp]
+  exact Int.le_trans h₁ h₂
 
 /--
 Exit viability is preserved
-under composition.
+under composition, provided it holds at the initial state — the same
+hypothesis `exit_viability_monotone` needs, since admissibility bounds the
+change in dominant dependency but does not by itself place the agent below
+its exit threshold.
 -/
 theorem composition_preserves_exit :
-  ∀ {F₁ F₂ : Operation} {s : State} {θ : Agent → ℝ} {i : Agent},
+  ∀ {F₁ F₂ : Operation} {s : State} {i : Agent},
     StructurallyAdmissible F₁ s →
     StructurallyAdmissible F₂ (apply F₁ s) →
     ExitViable θ s i →
@@ -90,5 +103,14 @@ by
   change ExitViable θ (apply (composeOp F₂ F₁) s) i
   rw [apply_composeOp]
   exact hAfterSecond
+    ExitViableWithin s i →
+    ExitViableWithin (compose F₁ F₂ s) i :=
+by
+  intro F₁ F₂ s i hAdm₁ hAdm₂ hExit
+  have h₁ : ExitViableWithin (apply F₁ s) i :=
+    exit_viability_monotone (F := F₁) (s := s) (i := i) hAdm₁ hExit
+  unfold compose
+  rw [apply_composeOp]
+  exact exit_viability_monotone (F := F₂) (s := apply F₁ s) (i := i) hAdm₂ h₁
 
 end SigmaR

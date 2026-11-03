@@ -30,6 +30,18 @@ at every state s.
 
 namespace SigmaR
 
+/-
+Predicate: the operation preserves off‑ramps or corrective pathways
+at the given state.
+
+This captures that coercive intervention remains:
+  • reversible,
+  • terminable,
+  • or repairable.
+-/
+-- The predicate itself is declared once, as gate 5 of STC‑5, in
+-- `SigmaR.Justifications.Core_Legitimacy.STC5_Justification`.
+
 /--
 Tier‑2 legitimacy axiom:
 

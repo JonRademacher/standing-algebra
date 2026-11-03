@@ -18,7 +18,7 @@ Codomain soundness for valuation measures.
 -/
 axiom MeasureCodomainSound :
   ∀ (μ : SigmaR.Valuation.Measures.Definitions.ValuationMeasure)
-    (a : SigmaR.Agent) (s : SigmaR.Valuation.State),
+    (a : SigmaR.Agent) (s : SigmaR.State),
     μ a s ≥ 0
 
 end SigmaR.Valuation.Measures.WellDefinedness

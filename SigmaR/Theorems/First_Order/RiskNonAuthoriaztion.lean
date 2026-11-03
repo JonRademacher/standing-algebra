@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_RegimeStacked
-import SigmaR.Compositions.First_Order_Compositions.RiskEmergency
+import SigmaR.Compositions.First_Order_Compositions.AdapterRisk
 
 namespace SigmaR
 

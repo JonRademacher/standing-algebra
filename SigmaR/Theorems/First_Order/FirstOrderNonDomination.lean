@@ -31,7 +31,7 @@ namespace SigmaR
    ----------------- -/
 
 axiom First_order_non_domination :
-  ∀ (a : Agent),
+  ∀ (_a : Agent),
     True
 
 end SigmaR

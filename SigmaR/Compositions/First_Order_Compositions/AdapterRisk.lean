@@ -43,4 +43,31 @@ axiom AdapterRisk_no_standing_override :
     RiskBearer F a →
     σ (apply F a) ≥ σ a
 
+/- -----------------
+   Single‑Component Constraints
+   ----------------- -/
+
+-- The joint constraint above specializes to each of its components:
+-- a claim alone (adapter regime) and a risk signal alone (risk regime)
+-- never confer admissibility.
+
+-- No operation becomes admissible by using a claim
+axiom Claim_cannot_authorize_admissibility :
+  ∀ (F : Operation) (c : Claim),
+    usesClaim F c →
+    ¬ Admissible F
+
+-- No operation becomes admissible by carrying risk
+axiom Risk_cannot_authorize_admissibility :
+  ∀ (F : Operation) (a : Agent),
+    RiskBearer F a →
+    ¬ Admissible F
+
+-- Structural Goodhart exclusion: a claim‑using operation
+-- may not reduce standing
+axiom Structural_Goodhart_exclusion_axiom :
+  ∀ (F : Operation) (a : Agent),
+    (∃ c : Claim, usesClaim F c) →
+    σ (apply F a) ≥ σ a
+
 end SigmaR

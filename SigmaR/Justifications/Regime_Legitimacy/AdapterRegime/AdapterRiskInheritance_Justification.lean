@@ -1,4 +1,5 @@
 import SigmaR.Justifications.Core_Legitimacy.RiskIndexedStanding_Justification
+import SigmaR.Justifications.Regime_Legitimacy.AdapterRegime.AdapterInterference_Justification
 
 /-!
 ###############################################################################

@@ -1,9 +1,9 @@
-import SigmaR.Valuation.StandingValuation
-import SigmaR.Valuation.Measures.Definitions.StandingMeasure_Definition
-import SigmaR.Valuation.Measures.Definitions.CapacityMeasure_Definition
-import SigmaR.Valuation.Measures.Definitions.DependencyDegree_Definition
+import SigmaR.StandingAlgebra_FormalCore
+import SigmaR.Valuation.Measures.StandingMeasure_Definition
+import SigmaR.Valuation.Measures.CapacityMeasure_Definition
+import SigmaR.Valuation.Measures.DependencyDegree_Definition
 import SigmaR.Valuation.Measures.Definitions.RiskInheritance_Definition
-import SigmaR.Valuation.Measures.Definitions.ExitCollapse_Definition
+import SigmaR.Valuation.Measures.ExitCollapse_Definition
 
 /-!
 ###############################################################################
@@ -22,7 +22,7 @@ Type alias for valuation measures.
 
 All valuation measures map (Agent × State) to Nat.
 -/
-abbrev ValuationMeasure := Agent → SigmaR.Valuation.State → Nat
+abbrev ValuationMeasure := Agent → SigmaR.State → Nat
 
 /--
 StandingMeasure is a valuation measure.

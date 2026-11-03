@@ -95,7 +95,6 @@ axiom StateLe : State → State → Prop
 
 axiom Observable : Agent → State → Prop
 axiom Measured : Agent → State → Val
-axiom InfinitelyResolvable : Val → Prop
 
 axiom PerfectMeasurement : Agent → State → Prop
 axiom Noisy : Agent → State → Prop
@@ -123,13 +122,6 @@ axiom Failure : PredS
 
 axiom IPFA : Agent → State → Prop
 axiom PFA : Set Agent → State → Prop
-axiom TreatedAsIncompetent : Agent → State → Prop
-axiom TreatedAsDishonest : Agent → State → Prop
-axiom TreatedAsObligatory : State → Prop
-axiom TreatedAsAuthoritative : State → Prop
-axiom TreatedAsTrue : State → Prop
-axiom TreatedAsPlurality : State → Prop
-axiom TreatedAsAggregationOfAgents : Set Agent → State → Prop
 
 axiom Frame : Type
 axiom ObservableInFrame : Agent → Frame → State → Prop
@@ -186,7 +178,6 @@ axiom EquivalentInContext :
 
 axiom NonComparable : Measure → Measure → Prop
 axiom BalancedAgainst : Measure → Measure → Prop
-axiom IndependentMeasures : Measure → Measure → Prop
 
 axiom TreatedAsIgnorance : Measure → Measure → Prop
 axiom TreatedAsInaction : Measure → Measure → Prop
@@ -202,9 +193,6 @@ axiom NonComparableInContext :
 -/
 
 -- Autonomy misuses
-axiom TreatedAsAutonomyFromCapacityMeasure : Agent → State → Prop
-axiom TreatedAsAutonomyFromConsentState : Agent → State → Prop
-axiom TreatedAsAutonomyFromStructuralDebt : Agent → State → Prop
 axiom TreatedAsAutonomyFromStandingMeasure : Agent → State → Prop
 axiom TreatedAsAutonomyFromRoleState : Agent → State → Prop
 axiom TreatedAsAutonomyFromExitViable : Agent → State → Prop
@@ -215,9 +203,6 @@ axiom TreatedAsAutonomyLostFromRiskInheritance : Agent → State → Prop
 axiom TreatedAsAutonomyFromDominationPressure : Agent → State → Prop
 
 -- Capacity misuses
-axiom TreatedAsCapacityFromAutonomy : Agent → State → Prop
-axiom TreatedAsCapacityFromConsentState : Agent → State → Prop
-axiom TreatedAsCapacityFromStructuralDebt : Agent → State → Prop
 axiom TreatedAsCapacityFromStandingMeasure : Agent → State → Prop
 axiom TreatedAsCapacityFromRoleState : Agent → State → Prop
 axiom TreatedAsCapacityFromExitViable : Agent → State → Prop
@@ -228,9 +213,6 @@ axiom TreatedAsCapacityLostFromRiskInheritance : Agent → State → Prop
 axiom TreatedAsCapacityLostFromDominationPressure : Agent → State → Prop
 
 -- Consent misuses
-axiom TreatedAsConsentFromAutonomy : Agent → State → Prop
-axiom TreatedAsConsentFromAutonomyMeasure : Agent → State → Prop
-axiom TreatedAsConsentFromCapacityMeasure : Agent → State → Prop
 axiom TreatedAsConsentFromStandingMeasure : Agent → State → Prop
 axiom TreatedAsConsentFromRoleState : Agent → State → Prop
 axiom TreatedAsConsentFromExitViable : Agent → State → Prop
@@ -239,10 +221,8 @@ axiom TreatedAsConsentInvalidFromTemporalAccumulation : Agent → State → Prop
 axiom TreatedAsConsentInvalidFromExitCollapse : Agent → State → Prop
 axiom TreatedAsConsentInvalidFromRiskInheritance : Agent → State → Prop
 axiom TreatedAsConsentInvalidFromDominationPressure : Agent → State → Prop
-axiom TreatedAsConsentInvalidFromStructuralDebt : Agent → State → Prop
 
 -- Standing misuses
-axiom TreatedAsStandingFromConsentState : Agent → State → Prop
 axiom TreatedAsStandingFromRoleState : Agent → State → Prop
 axiom TreatedAsStandingFromExitViable : Agent → State → Prop
 axiom TreatedAsStandingFromRiskInheritance : Agent → State → Prop
@@ -252,20 +232,14 @@ axiom TreatedAsStandingRevokedFromExitCollapse : Agent → State → Prop
 axiom TreatedAsStandingRevokedFromDominationPressure : Agent → State → Prop
 
 -- Structural debt misuses
-axiom TreatedAsDebtFromAutonomyMeasure : Agent → State → Prop
-axiom TreatedAsDebtFromCapacityMeasure : Agent → State → Prop
 axiom TreatedAsStructuralDebtFromRiskLoad : Agent → State → Prop
 axiom TreatedAsStructuralDebtFromTemporalAccumulation : Agent → State → Prop
 axiom TreatedAsStructuralDebtFromExitCollapse : Agent → State → Prop
 axiom TreatedAsStructuralDebtFromDominationPressure : Agent → State → Prop
 axiom TreatedAsStructuralDebtResolvedFromStandingMeasure : Agent → State → Prop
 axiom TreatedAsStructuralDebtResolvedFromRoleState : Agent → State → Prop
-axiom TreatedAsDebtResolvedFromConsentState : Agent → State → Prop
 
 -- Exit viability / collapse misuses
-axiom TreatedAsExitViableFromAutonomyMeasure : Agent → State → Prop
-axiom TreatedAsExitViableFromCapacityMeasure : Agent → State → Prop
-axiom TreatedAsExitViableFromConsentState : Agent → State → Prop
 axiom TreatedAsExitViableFromStandingMeasure : Agent → State → Prop
 axiom TreatedAsExitViableFromRoleState : Agent → State → Prop
 axiom TreatedAsExitViableFromRiskLoad : Agent → State → Prop
@@ -276,45 +250,92 @@ axiom TreatedAsExitViableLostFromDominationPressure : Agent → State → Prop
 axiom TreatedAsExitCollapseFromStandingMeasure : Agent → State → Prop
 
 -- Risk misuses
-axiom TreatedAsRiskFromCapacityMeasure : Agent → State → Prop
-axiom TreatedAsRiskFromAutonomyMeasure : Agent → State → Prop
 axiom TreatedAsRiskFromStandingMeasure : Agent → State → Prop
 axiom TreatedAsRiskFromRoleState : Agent → State → Prop
 axiom TreatedAsRiskFromTemporalAccumulation : Agent → State → Prop
 axiom TreatedAsRiskFromStructuralDebt : Agent → State → Prop
 axiom TreatedAsRiskFromDominationPressure : Agent → State → Prop
 axiom TreatedAsRiskFromExitViable : Agent → State → Prop
-axiom TreatedAsRiskResolvedFromConsentState : Agent → State → Prop
 
 -- Temporal accumulation misuses
-axiom TreatedAsRoleFromStandingMeasure : Agent → State → Prop
-axiom TreatedAsRoleFromConsentState : Agent → State → Prop
-axiom TreatedAsRoleFromStructuralDebt : Agent → State → Prop
-axiom TreatedAsRoleFromExitViable : Agent → State → Prop
-axiom TreatedAsRoleFromRiskLoad : Agent → State → Prop
-axiom TreatedAsRoleFromDominationPressure : Agent → State → Prop
-axiom TreatedAsRoleFromTemporalAccumulation : Agent → State → Prop
 axiom TreatedAsTemporalAccumulationFromStandingMeasure : Agent → State → Prop
 axiom TreatedAsTemporalAccumulationFromRiskLoad : Agent → State → Prop
 axiom TreatedAsTemporalAccumulationFromStructuralDebt : Agent → State → Prop
 axiom TreatedAsTemporalAccumulationFromExitViable : Agent → State → Prop
-axiom TreatedAsTemporalAccumulationFromAutonomyMeasure : Agent → State → Prop
-axiom TreatedAsTemporalAccumulationFromCapacityMeasure : Agent → State → Prop
-axiom TreatedAsTemporalAccumulationFromDominationPressure : Agent → State → Prop
 axiom TreatedAsTemporalAccumulationResolvedFromRoleState : Agent → State → Prop
-axiom TreatedAsTemporalAccumulationResolvedFromConsentState : Agent → State → Prop
 
 -- Domination pressure misuses
-axiom TreatedAsDominationPressureFromAutonomyMeasure : Agent → State → Prop
-axiom TreatedAsDominationPressureFromCapacityMeasure : Agent → State → Prop
 axiom TreatedAsDominationPressureFromStandingMeasure : Agent → State → Prop
 axiom TreatedAsDominationPressureFromRiskLoad : Agent → State → Prop
-axiom TreatedAsDominationPressureFromRoleState : Agent → State → Prop
 axiom TreatedAsDominationPressureFromStructuralDebt : Agent → State → Prop
 axiom TreatedAsDominationPressureFromExitViable : Agent → State → Prop
 axiom TreatedAsDominationPressureFromTemporalAccumulation : Agent → State → Prop
+
+-- Misuses whose source is the autonomy measure
+axiom TreatedAsCapacityFromAutonomy : Agent → State → Prop
+axiom TreatedAsConsentFromAutonomy : Agent → State → Prop
+axiom TreatedAsConsentFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsDebtFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsExitViableFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsRiskFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsDominationPressureFromAutonomyMeasure : Agent → State → Prop
+axiom TreatedAsAutonomyFromStructuralDebt : Agent → State → Prop
+
+-- Misuses whose source is the capacity measure
+axiom TreatedAsConsentFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsDebtFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsExitViableFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsRiskFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsDominationPressureFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsAutonomyFromCapacityMeasure : Agent → State → Prop
+axiom TreatedAsCapacityFromStructuralDebt : Agent → State → Prop
+
+-- Misuses whose source is the consent state
+axiom TreatedAsAutonomyFromConsentState : Agent → State → Prop
+axiom TreatedAsCapacityFromConsentState : Agent → State → Prop
+axiom TreatedAsStandingFromConsentState : Agent → State → Prop
+axiom TreatedAsExitViableFromConsentState : Agent → State → Prop
+axiom TreatedAsRoleFromConsentState : Agent → State → Prop
+axiom TreatedAsRiskResolvedFromConsentState : Agent → State → Prop
+axiom TreatedAsDebtResolvedFromConsentState : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationResolvedFromConsentState : Agent → State → Prop
 axiom TreatedAsDominationPressureResolvedFromConsentState : Agent → State → Prop
+
+-- Misuses whose source is structural debt, a role state, risk load,
+-- exit viability, temporal accumulation or domination pressure
+axiom TreatedAsConsentInvalidFromStructuralDebt : Agent → State → Prop
+axiom TreatedAsRoleFromStructuralDebt : Agent → State → Prop
+axiom TreatedAsRoleFromStandingMeasure : Agent → State → Prop
+axiom TreatedAsRoleFromExitViable : Agent → State → Prop
+axiom TreatedAsRoleFromRiskLoad : Agent → State → Prop
+axiom TreatedAsRoleFromTemporalAccumulation : Agent → State → Prop
+axiom TreatedAsRoleFromDominationPressure : Agent → State → Prop
+axiom TreatedAsDominationPressureFromRoleState : Agent → State → Prop
 axiom TreatedAsDominationPressureResolvedFromExitViable : Agent → State → Prop
+axiom TreatedAsTemporalAccumulationFromDominationPressure : Agent → State → Prop
+
+/-!
+------------------------------------------------------------------------------
+9b. Measurement-limit, relevance and independence interfaces
+------------------------------------------------------------------------------
+-/
+
+-- Measurement limits
+axiom InfinitelyResolvable : Val → Prop
+
+-- Relevance / framing
+axiom TreatedAsAuthoritative : PredS
+axiom TreatedAsTrue : PredS
+axiom TreatedAsDishonest : Agent → State → Prop
+axiom TreatedAsIncompetent : Agent → State → Prop
+axiom TreatedAsObligatory : PredS
+axiom TreatedAsPlurality : PredS
+axiom TreatedAsAggregationOfAgents : Set Agent → State → Prop
+
+-- Independence of measures
+axiom IndependentMeasures : Measure → Measure → Prop
 
 /-!
 ------------------------------------------------------------------------------
@@ -348,7 +369,6 @@ axiom MonotonicityRespectsIndependence : Prop
 axiom AdmissibleConfiguration : Prop
 axiom AdmissibleMeasure : Measure → Prop
 axiom AdmissibleMeasureSet : Set Measure → Prop
-axiom Repairs : Operation → Agent → Prop
 axiom AdmissibleInference : Prop
 axiom AdmissibleComparison : Measure → Measure → Prop
 axiom AdmissibleEvolution : Measure → Prop
@@ -850,7 +870,7 @@ axiom CapacitySaturation :
 
 -- Capacity-progress (ratchet) boundary
 axiom CapacityProgressOption : Type
-axiom CapacityProgressOptionSet : Type
+abbrev CapacityProgressOptionSet : Type := Set CapacityProgressOption
 axiom CapacityProgressAvailable :
   CapacityProgressOptionSet → Prop
 axiom CapacityProgressWithinScope :
@@ -967,7 +987,7 @@ axiom TransformabilityDecomposability :
 -- Operation availability and scope
 axiom TransformabilityOperationAvailable :
   Operation → Prop
-axiom TransformabilityOperationSet : Type
+abbrev TransformabilityOperationSet : Type := Set Operation
 axiom TransformabilityOperationWithinScope :
   TransformabilityOperationSet → Prop
 
@@ -1005,7 +1025,7 @@ axiom ResponseAffectsTransformabilityValuation :
 
 -- Transformability-progress (ratchet) boundary
 axiom TransformabilityProgressOption : Type
-axiom TransformabilityProgressOptionSet : Type
+abbrev TransformabilityProgressOptionSet : Type := Set TransformabilityProgressOption
 axiom TransformabilityProgressAvailable :
   TransformabilityProgressOptionSet → Prop
 axiom TransformabilityProgressWithinScope :
@@ -1163,6 +1183,10 @@ axiom RiskValuationContract : Prop
 ------------------------------------------------------------------------------
 -/
 
+-- The core autonomy valuation entities (`AutonomyValuation`, `AutonomyState`,
+-- `AutonomyLevel`) are declared once, in the autonomy valuation block earlier in
+-- this file; this section adds only the v2 material.
+
 -- Autonomy agreement structures
 axiom AutonomyAgreement : Type
 axiom InternalAutonomyAgreement :
@@ -1174,6 +1198,9 @@ axiom ExternalAutonomyAgreement :
 axiom AutonomyAgreementStabilizedByEvidence :
   AutonomyAgreement → Prop
 
+-- Structural dependencies of autonomy valuation on the other derived
+-- valuations.  The dependencies on `Measure`, `Response` and `Context` are
+-- declared once, in the autonomy valuation block earlier in this file.
 axiom AutonomyDependsOnPerceptualValuation :
   AutonomyValuation → PerceptionValuation → Prop
 axiom AutonomyDependsOnCapacityValuation :
@@ -1187,8 +1214,12 @@ axiom AutonomyDependsOnExitCostValuation :
 axiom AutonomyDependsOnCouplingValuation :
   AutonomyValuation → CouplingValuation → Prop
 
--- Loss, erosion, and fragility
-axiom AutonomyErosion : AutonomyValuation → Prop
+-- Aggregation semantics and the loss / fragility predicates are declared once,
+-- in the autonomy valuation block earlier in this file.
+
+-- Erosion
+axiom AutonomyErosion :
+  AutonomyValuation → Prop
 
 -- Propagation and modulation
 axiom AutonomyPropagation :
@@ -1198,7 +1229,10 @@ axiom AutonomyAmplification :
 axiom AutonomyDampening :
   AutonomyValuation → AutonomyValuation → Prop
 
--- Comparability
+-- Irreversibility, hysteresis, thresholds, collapse and comparability are
+-- declared once, in the autonomy valuation block earlier in this file.
+
+-- Comparability under an agreement
 axiom AutonomyComparableUnderAgreement :
   AutonomyValuation → AutonomyValuation → AutonomyAgreement → Prop
 
@@ -1210,7 +1244,7 @@ axiom ResponseAffectsAutonomyValuation :
 
 -- Autonomy-progress (ratchet) boundary
 axiom AutonomyProgressOption : Type
-axiom AutonomyProgressOptionSet : Type
+abbrev AutonomyProgressOptionSet : Type := Set AutonomyProgressOption
 axiom AutonomyProgressAvailable :
   AutonomyProgressOptionSet → Prop
 axiom AutonomyProgressWithinScope :

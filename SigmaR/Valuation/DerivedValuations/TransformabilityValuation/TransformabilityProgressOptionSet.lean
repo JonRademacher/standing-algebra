@@ -21,6 +21,6 @@ namespace SigmaR.Valuation.DerivedValuations.TransformabilityValuation
 TransformabilityProgressOptionSet S means that S is a set
 of transformability-progress options.
 -/
-axiom TransformabilityProgressOptionSet : Type
+abbrev TransformabilityProgressOptionSet : Type := Set TransformabilityProgressOption
 
 end SigmaR.Valuation.DerivedValuations.TransformabilityValuation

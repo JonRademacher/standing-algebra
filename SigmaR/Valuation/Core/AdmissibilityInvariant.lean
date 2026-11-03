@@ -1,4 +1,4 @@
-import SigmaR.Valuation.Core.StructuralInterfaces
+import SigmaR.StandingAlgebra_FormalCore
 import SigmaR.Valuation.Measures.Definitions.Operation
 
 /-!

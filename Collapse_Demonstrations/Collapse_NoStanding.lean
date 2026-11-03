@@ -13,6 +13,8 @@ import Collapse_Demonstrations.Collapse
 
 namespace Collapse_Demonstrations
 
+-- Reuse the collapse definition
+
 /--
   Baseline axiom set WITHOUT Standing Algebra.
 
@@ -26,9 +28,9 @@ namespace Collapse_Demonstrations
 theorem collapse_not_precluded
   (Agent : Type)
   (Operation : Type)
-  (σ : Agent → Int)
-  (Apply : Operation → Agent → Agent)
-  (Admissible : Operation → Prop) :
+  (_σ : Agent → Int)
+  (_Apply : Operation → Agent → Agent)
+  (_Admissible : Operation → Prop) :
   True :=
 by
   -- This theorem is intentionally trivial.

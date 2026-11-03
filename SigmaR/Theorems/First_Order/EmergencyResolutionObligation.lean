@@ -30,7 +30,13 @@ theorem Emergency_resolution_obligation :
       Remedy R ∧
       ¬ EmergentWrong (apply R s) :=
 by
-  intro s hEmergency hRemedyExists
-  exact Emergency_requires_remedy_when_possible s hEmergency hRemedyExists
+  intro s hEmergency _
+  -- If every remedy left the state emergent‑wrong, emergencies would persist
+  -- without repair, which the Emergency + Remedy composition forbids.
+  apply Classical.byContradiction
+  intro hNone
+  apply Emergency_cannot_persist_without_remedy s hEmergency
+  intro R hR
+  exact Classical.byContradiction (fun hStill => hNone ⟨R, hR, hStill⟩)
 
 end SigmaR

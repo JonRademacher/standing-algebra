@@ -1,4 +1,3 @@
-import Mathlib.Data.Real.Basic
 import SigmaR.StandingAlgebra_FormalCore
 
 /-!
@@ -8,7 +7,7 @@ import SigmaR.StandingAlgebra_FormalCore
 
 This file defines:
 
-• scalar standing valuation σ
+• scalar standing valuation σᵥ
 • valuation preorder
 • delta valuation Δσ and its sign
 • minimal risk inheritance
@@ -19,27 +18,29 @@ This file defines:
 
 No aggregation, optimization, or authority primitives appear here.
 This file is purely structural.
+
+The core sorts `Agent`, `State` (= `Agent`), `Operation`, `apply` and the
+agent-indexed standing `σ` come from `SigmaR.StandingAlgebra_FormalCore`.  The
+valuation layer adds its own *state-indexed* standing valuation `σv`, read as a
+signed integer so that deltas are meaningful; `cap` is the core's capacity
+index, coerced to `Int`.
 -/
 
 namespace SigmaR.Valuation
 
-/-- Core sorts (defined elsewhere in Σᴿ). -/
-axiom State : Type
+abbrev State := SigmaR.State
 
-/-- Standing valuation (autonomy-relevant). -/
-axiom σ : Agent → State → ℝ
-
-/-- Capacity bound for each agent (CIA input). -/
-axiom cap : Agent → ℝ
+/-- Standing valuation (autonomy-relevant), state-indexed. -/
+axiom σv : Agent → State → Int
 
 /-- Standing order relation. -/
 def ValLe (i : Agent) (s₁ s₂ : State) : Prop :=
-  σ i s₁ ≤ σ i s₂
+  σv i s₁ ≤ σv i s₂
 
 /-- Reflexivity. -/
 theorem ValLe_refl (i : Agent) (s : State) :
   ValLe i s s :=
-by unfold ValLe; exact le_rfl
+by unfold ValLe; exact Int.le_refl _
 
 /-- Transitivity. -/
 theorem ValLe_trans
@@ -50,10 +51,20 @@ theorem ValLe_trans
 by
   unfold ValLe
   intro h₁ h₂
-  exact le_trans h₁ h₂
+  exact Int.le_trans h₁ h₂
+
+/--
+A preorder packaged as a structure.
+
+The core library available to this development has no `Preorder` class, so the
+order induced by the valuation is packaged here explicitly.
+-/
+structure Preorder (α : Type) where
+  le        : α → α → Prop
+  le_refl   : ∀ a, le a a
+  le_trans  : ∀ a b c, le a b → le b c → le a c
 
 /-- Preorder induced by valuation. -/
-@[instance_reducible]
 def ValLe_preorder (i : Agent) : Preorder State :=
 { le := ValLe i
   le_refl := ValLe_refl i
@@ -64,26 +75,26 @@ def ValLe_preorder (i : Agent) : Preorder State :=
 /- -------------------------------------------------------------------------- -/
 
 /-- Change in standing (delta). -/
-noncomputable def Δσ (i : Agent) (s₁ s₂ : State) : ℝ :=
-  σ i s₂ - σ i s₁
+noncomputable def Δσ (i : Agent) (s₁ s₂ : State) : Int :=
+  σv i s₂ - σv i s₁
 
 /-- Non-decrease iff delta ≥ 0. -/
 theorem delta_nonneg_iff
   (i : Agent) (s₁ s₂ : State) :
   Δσ i s₁ s₂ ≥ 0 ↔ ValLe i s₁ s₂ :=
-by unfold Δσ ValLe; exact sub_nonneg
+by unfold Δσ ValLe; omega
 
 /-- Strict decrease iff delta < 0. -/
 theorem delta_neg_iff
   (i : Agent) (s₁ s₂ : State) :
-  Δσ i s₁ s₂ < 0 ↔ σ i s₂ < σ i s₁ :=
-by unfold Δσ; exact sub_neg
+  Δσ i s₁ s₂ < 0 ↔ σv i s₂ < σv i s₁ :=
+by unfold Δσ; omega
 
 /-- Standing preserved iff delta = 0. -/
 theorem delta_zero_iff
   (i : Agent) (s₁ s₂ : State) :
-  Δσ i s₁ s₂ = 0 ↔ σ i s₂ = σ i s₁ :=
-by unfold Δσ; exact sub_eq_zero
+  Δσ i s₁ s₂ = 0 ↔ σv i s₂ = σv i s₁ :=
+by unfold Δσ; omega
 
 /- -------------------------------------------------------------------------- -/
 /- Risk inheritance                                                           -/
@@ -99,22 +110,22 @@ def InheritsRisk (i : Agent) (s₁ s₂ : State) : Prop :=
 /-- Standing preservation implies no inherited risk. -/
 theorem no_risk_if_preserved
   (i : Agent) (s₁ s₂ : State) :
-  σ i s₂ = σ i s₁ →
+  σv i s₂ = σv i s₁ →
   ¬ InheritsRisk i s₁ s₂ :=
 by
-  intro h hne
-  apply hne
-  exact (delta_zero_iff i s₁ s₂).2 h
+  intro h
+  unfold InheritsRisk Δσ
+  omega
 
 /-- Any strict decrease implies inherited risk. -/
 theorem risk_if_decrease
   (i : Agent) (s₁ s₂ : State) :
-  σ i s₂ < σ i s₁ →
+  σv i s₂ < σv i s₁ →
   InheritsRisk i s₁ s₂ :=
 by
   intro h
   unfold InheritsRisk Δσ
-  exact sub_ne_zero.mpr (ne_of_lt h)
+  omega
 
 /- -------------------------------------------------------------------------- -/
 /- Capacity-indexed autonomy (CIA)                                             -/
@@ -125,13 +136,13 @@ CIA-compatible valuation:
 standing cannot exceed agent capacity.
 -/
 def CIA_Respected (s : State) : Prop :=
-  ∀ i : Agent, σ i s ≤ cap i
+  ∀ i : Agent, σv i s ≤ (cap i : Int)
 
 /--
 Delta bounded by capacity difference (CIA bound).
 -/
 def CIA_BoundedDelta (i : Agent) (s₁ s₂ : State) : Prop :=
-  Δσ i s₁ s₂ ≤ cap i - σ i s₁
+  Δσ i s₁ s₂ ≤ (cap i : Int) - σv i s₁
 
 /- -------------------------------------------------------------------------- -/
 /- Repair operators                                                           -/
@@ -141,18 +152,20 @@ def CIA_BoundedDelta (i : Agent) (s₁ s₂ : State) : Prop :=
 A repair transition strictly restores standing.
 (No standing decrease allowed; at least one agent improves.)
 -/
-def Repair (s₁ s₂ : State) : Prop :=
-  (∀ i : Agent, σ i s₁ ≤ σ i s₂) ∧
-  (∃ i : Agent, σ i s₁ < σ i s₂)
+def RepairTransition (s₁ s₂ : State) : Prop :=
+  (∀ i : Agent, σv i s₁ ≤ σv i s₂) ∧
+  (∃ i : Agent, σv i s₁ < σv i s₂)
 
 /-- Repairs strictly reduce valuation-level risk debt. -/
 theorem repair_has_positive_delta
   (i : Agent) (s₁ s₂ : State) :
-  Repair s₁ s₂ →
+  RepairTransition s₁ s₂ →
   Δσ i s₁ s₂ ≥ 0 :=
 by
   intro h
-  exact (delta_nonneg_iff i s₁ s₂).2 (h.left i)
+  have hmono : σv i s₁ ≤ σv i s₂ := h.left i
+  unfold Δσ
+  omega
 
 /- -------------------------------------------------------------------------- -/
 /- Admissible update hook                                                      -/

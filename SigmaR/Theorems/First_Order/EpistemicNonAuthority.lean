@@ -1,4 +1,5 @@
 import SigmaR.StandingAlgebra_RegimeStacked
+import SigmaR.Compositions.First_Order_Compositions.AdapterRisk
 
 namespace SigmaR
 
@@ -23,11 +24,12 @@ namespace SigmaR
    ----------------- -/
 
 theorem Epistemic_non_authority :
-  ∀ (F : Operation) (c : Claim),
-    usesClaim F c →
-    ¬ Authority c :=
+  ∀ (F : Operation),
+    (∃ c : Claim, usesClaim F c) →
+    ¬ Admissible F :=
 by
-  intro F c hUses
-  exact Claim_not_Admissible F c hUses
+  intro F hUses
+  obtain ⟨c, hUses⟩ := hUses
+  exact Claim_cannot_authorize_admissibility F c hUses
 
 end SigmaR

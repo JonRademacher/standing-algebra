@@ -21,6 +21,6 @@ namespace SigmaR.Valuation.DerivedValuations.AutonomyValuation
 AutonomyProgressOptionSet S means that S is a set
 of autonomy-progress options.
 -/
-axiom AutonomyProgressOptionSet : Type
+abbrev AutonomyProgressOptionSet : Type := Set AutonomyProgressOption
 
 end SigmaR.Valuation.DerivedValuations.AutonomyValuation

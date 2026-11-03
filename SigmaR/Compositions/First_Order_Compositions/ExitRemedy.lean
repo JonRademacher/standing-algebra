@@ -39,11 +39,11 @@ axiom Exit_preserved_under_remedy :
 
 -- Remedy must not remove the existence of viable exit.
 axiom Remedy_cannot_foreclose_exit :
-  ∀ (a : Agent),
+  ∀ (a : Agent) (G : Operation),
     (∃ F : Operation, Exit F ∧ MinStanding ≤ σ (apply F a)) →
     (∃ R : Operation, Remedy R) →
     (∃ F : Operation, Exit F ∧
-       MinStanding ≤ σ (apply F (apply R a)))
+       MinStanding ≤ σ (apply F (apply G a)))
 
 /-
 NOTE:

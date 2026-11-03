@@ -18,6 +18,10 @@ namespace SigmaR.Valuation.WellFormedness
 open SigmaR.Valuation.Core
 attribute [local instance] Classical.propDecidable
 
+-- The numeric encoding of a predicate below is non-computable, so the
+-- classical decision procedure supplies its `Decidable` instance.
+attribute [local instance] Classical.propDecidable
+
 /--
 Predicates may not be treated as valuation measures
 via numeric encoding.

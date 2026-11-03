@@ -43,6 +43,9 @@ channel.
 
 namespace SigmaR
 
+/-- Predicate: an Independently Emergent Wrong is present at state `s`. -/
+axiom IndependentlyEmergentWrong : State → Prop
+
 /-- Predicate: the operation is a Repair operation available at state `s`. -/
 axiom RepairAvailable : Operation → State → Prop
 

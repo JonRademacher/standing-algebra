@@ -1,5 +1,5 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegimeCore
+import SigmaR.Regimes.StandingAlgebra_SuccessorRegime
 
 /-!
 ###############################################################################
@@ -27,6 +27,10 @@ Therefore:
 -/
 
 namespace SigmaR
+
+-- The predicate `SuccessorConsistent : Operation → Prop` is declared once, at
+-- the base Successor Regime (`SigmaR.Regimes.StandingAlgebra_SuccessorRegime`)
+-- and is imported here rather than redeclared.
 
 /--
 Tier-2 legitimacy axiom (Successor Consistency):

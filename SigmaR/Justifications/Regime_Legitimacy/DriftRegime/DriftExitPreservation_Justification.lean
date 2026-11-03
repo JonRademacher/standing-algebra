@@ -1,5 +1,5 @@
 import SigmaR.Justifications.Regime_Legitimacy.ExitRegime.ExitRegime_Justification
-import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegimeCore
+import SigmaR.Regimes.StandingAlgebra_DriftRegime
 
 /-!
 ###############################################################################

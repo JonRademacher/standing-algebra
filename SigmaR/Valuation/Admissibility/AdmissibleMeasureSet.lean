@@ -24,7 +24,6 @@ namespace SigmaR.Valuation.Admissibility
 A set of valuation measures is admissible for joint use
 in reasoning.
 -/
-abbrev AdmissibleMeasureSet : Set SigmaR.Valuation.Core.Measure → Prop :=
-  SigmaR.Valuation.Core.AdmissibleMeasureSet
+axiom AdmissibleMeasureSet : Set Measure → Prop
 
 end SigmaR.Valuation.Admissibility

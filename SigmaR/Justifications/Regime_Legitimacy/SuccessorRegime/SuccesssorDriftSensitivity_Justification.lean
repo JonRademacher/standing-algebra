@@ -1,6 +1,6 @@
 import SigmaR.StandingAlgebra_FormalCore
-import SigmaR.Justifications.Regime_Legitimacy.SuccessorRegime.SuccessorRegimeCore
-import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegimeCore
+import SigmaR.Regimes.StandingAlgebra_SuccessorRegime
+import SigmaR.Justifications.Regime_Legitimacy.DriftRegime.DriftRegime_Justification
 
 /-!
 ###############################################################################

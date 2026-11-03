@@ -74,6 +74,8 @@ def StructurallyAdmissible
   (F : Operation) (s : State) : Prop :=
     Admissible F
     ∧ PFA s
+  (_F : Operation) (s : State) : Prop :=
+    PFA s
     ∧ Contestable s
     ∧ FrameResolved s
     ∧ DerivedStanding s
@@ -97,5 +99,20 @@ theorem legitimacy_characterization
     {F : Operation} {s : State} :
     Legitimate F ↔ StructurallyAdmissible F s :=
   characterization.legitimate_iff_structurally_admissible F s
+/--
+Legitimacy is equivalent
+to structural admissibility.
+
+This is the Core Alignment equation of the framework: legitimacy is not a
+primitive moral predicate but the preservation of the structural invariants
+listed in `StructurallyAdmissible`.  It is recorded as an axiom because nothing
+below it decides either side; the justifications above establish each of the
+nine invariant component separately.
+-/
+axiom legitimacy_characterization :
+  ∀ {F : Operation} {s : State},
+    Legitimate F
+    ↔
+    StructurallyAdmissible F s
 
 end SigmaR

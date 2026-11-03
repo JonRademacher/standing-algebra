@@ -24,6 +24,6 @@ namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 CapacityProgressOptionSet S means that S is a set
 of capacity-progress options.
 -/
-axiom CapacityProgressOptionSet : Type
+abbrev CapacityProgressOptionSet : Type := Set CapacityProgressOption
 
 end SigmaR.Valuation.DerivedValuations.CapacityValuation

@@ -22,9 +22,10 @@ namespace SigmaR.Valuation.DerivedValuations.CapacityValuation
 
 /--
 CapacityHysteresis C means that capacity valuation C
-exhibits path-dependent behavior.
+is path dependent: its value at a state depends on
+the history through which that state was reached.
 -/
 axiom CapacityHysteresis :
   CapacityValuation → Prop
 
-end SigmaR.Valuation.DerivedValuations.CapacityValuation
+end CapacityValuation
