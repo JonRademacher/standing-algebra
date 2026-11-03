@@ -28,6 +28,8 @@ arithmetic (`omega`) rather than a Mathlib order on the reals.
 
 namespace SigmaR
 
+open SigmaR.Valuation
+
 variable (σ₀ : Agent → Int)
 
 /--

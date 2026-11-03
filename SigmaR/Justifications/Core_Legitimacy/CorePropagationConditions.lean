@@ -44,9 +44,6 @@ with normative legitimacy.
 
 namespace SigmaR
 
-/-- Coupling degree of a standing carrier. -/
-axiom deg : Agent → Nat
-
 /-- Exit viability of a standing carrier. -/
 axiom ExitViable : State → Prop
 
