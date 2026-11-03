@@ -60,19 +60,16 @@ theorem composition_preserves_standing :
     StructurallyAdmissible F₂ (apply F₁ s) →
     σ (compose F₁ F₂ s) ≥ σ s :=
 by
-  -- proof outline:
-
-  -- 1. StandingMonotonicity:
-  --      σ(apply F₁ s) i ≥ σ s i
-  --
-  -- 2. StandingMonotonicity:
-  --      σ(apply F₂ (apply F₁ s)) i
-  --      ≥ σ(apply F₁ s) i
-  --
-  -- 3. transitivity of ≥ :
-  --      σ(F₂(F₁(s))) ≥ σ(s)
-
-  admit
+  intro F₁ F₂ s hStructuralF₁ hStructuralF₂
+  have hF₁ : Admissible F₁ := hStructuralF₁.1
+  have hF₂ : Admissible F₂ := hStructuralF₂.1
+  have h₁ : σ s ≤ σ (apply F₁ s) :=
+    ALRP F₁ s hF₁
+  have h₂ : σ (apply F₁ s) ≤ σ (apply F₂ (apply F₁ s)) :=
+    ALRP F₂ (apply F₁ s) hF₂
+  change σ (apply (composeOp F₂ F₁) s) ≥ σ s
+  rw [apply_composeOp]
+  exact Nat.le_trans h₁ h₂
 
 /--
 Exit viability is preserved
@@ -82,8 +79,16 @@ theorem composition_preserves_exit :
   ∀ {F₁ F₂ : Operation} {s : State} {θ : Agent → ℝ} {i : Agent},
     StructurallyAdmissible F₁ s →
     StructurallyAdmissible F₂ (apply F₁ s) →
+    ExitViable θ s i →
     ExitViable θ (compose F₁ F₂ s) i :=
 by
-  admit
+  intro F₁ F₂ s θ i hF₁ hF₂ hExit
+  have hAfterFirst : ExitViable θ (apply F₁ s) i :=
+    exit_viability_monotone θ hF₁ hExit
+  have hAfterSecond : ExitViable θ (apply F₂ (apply F₁ s)) i :=
+    exit_viability_monotone θ hF₂ hAfterFirst
+  change ExitViable θ (apply (composeOp F₂ F₁) s) i
+  rw [apply_composeOp]
+  exact hAfterSecond
 
 end SigmaR

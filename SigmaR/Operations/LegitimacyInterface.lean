@@ -58,9 +58,10 @@ DirectedRepair_required_for_legitimacy hLeg
 
 /-- Legitimate operations preserve exit viability monotonically. -/
 theorem legitimacy_preserves_exit_viability
+  (characterization : LegitimacyCharacterization)
   {F : Operation} (hLeg : Legitimate F) :
   ExitViabilityMonotone F :=
-ExitViabilityMonotonicity_required hLeg
+ExitViabilityMonotonicity_required characterization hLeg
 
 ------------------------------------------------------------------------
 -- Bounded Drift

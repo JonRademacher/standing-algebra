@@ -71,10 +71,11 @@ def ExitViabilityMonotone (F : Operation) : Prop :=
 
 /-- Legitimacy provides structural admissibility, hence exit monotonicity. -/
 theorem ExitViabilityMonotonicity_required
+  (characterization : LegitimacyCharacterization)
   {F : Operation} (hLeg : Legitimate F) :
   ExitViabilityMonotone F := by
   intro θ s i hExit
   exact exit_viability_monotone θ
-    ((legitimacy_characterization (F := F) (s := s)).mp hLeg) hExit
+    ((legitimacy_characterization characterization (F := F) (s := s)).mp hLeg) hExit
 
 end SigmaR
