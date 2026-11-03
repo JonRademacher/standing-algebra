@@ -22,6 +22,9 @@ namespace SigmaR
 Operations that introduce risk while denying exit
 cannot be legitimate under Σᴿ.
 -/
+theorem exit_viability_failure_implies_illegitimacy
+  (characterization : LegitimacyCharacterization)
+  {F : Operation}
 theorem risk_with_exit_denial_implies_illegitimacy
   {F : Operation} {s : State}
   (_hRisk : RiskRegimeOp F s)
@@ -34,7 +37,7 @@ by
   -- Legitimate operations preserve exit viability.
   have hExit :
     ExitViabilityMonotone F :=
-    legitimacy_preserves_exit_viability hLeg
+    legitimacy_preserves_exit_viability characterization hLeg
 
   exact hExitFail hExit
 

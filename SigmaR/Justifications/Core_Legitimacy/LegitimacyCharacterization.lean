@@ -71,6 +71,9 @@ autonomy‑relevant invariants
 at state s.
 -/
 def StructurallyAdmissible
+  (F : Operation) (s : State) : Prop :=
+    Admissible F
+    ∧ PFA s
   (_F : Operation) (s : State) : Prop :=
     PFA s
     ∧ Contestable s
@@ -82,6 +85,20 @@ def StructurallyAdmissible
     ∧ BoundaryRespected s
     ∧ Rerunnable s
 
+/-- The pointwise bridge required to characterize legitimacy by the
+state-dependent structural predicates. The current core does not derive this
+bridge, so callers must provide it rather than relying on an admitted proof. -/
+structure LegitimacyCharacterization where
+  legitimate_iff_structurally_admissible :
+    ∀ (F : Operation) (s : State),
+      Legitimate F ↔ StructurallyAdmissible F s
+
+/-- Use an explicitly supplied characterization bridge. -/
+theorem legitimacy_characterization
+    (characterization : LegitimacyCharacterization)
+    {F : Operation} {s : State} :
+    Legitimate F ↔ StructurallyAdmissible F s :=
+  characterization.legitimate_iff_structurally_admissible F s
 /--
 Legitimacy is equivalent
 to structural admissibility.
