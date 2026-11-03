@@ -67,6 +67,7 @@ by
     standing_monotone (F := F₁) (s := s) (i := i) hAdm₁
   have h₂ : σv i (apply F₂ (apply F₁ s)) ≥ σv i (apply F₁ s) :=
     standing_monotone (F := F₂) (s := apply F₁ s) (i := i) hAdm₂
+  unfold compose
   rw [apply_composeOp]
   exact Int.le_trans h₁ h₂
 
@@ -87,6 +88,7 @@ by
   intro F₁ F₂ s i hAdm₁ hAdm₂ hExit
   have h₁ : ExitViableWithin (apply F₁ s) i :=
     exit_viability_monotone (F := F₁) (s := s) (i := i) hAdm₁ hExit
+  unfold compose
   rw [apply_composeOp]
   exact exit_viability_monotone (F := F₂) (s := apply F₁ s) (i := i) hAdm₂ h₁
 
