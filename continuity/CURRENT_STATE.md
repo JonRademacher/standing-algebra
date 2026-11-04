@@ -1,21 +1,21 @@
-# Current Canonical State
+# Current Continuity State
 
-**Checkpoint ID:** `UCK-2026-11-04-001` (initialized integration checkpoint)
+**Checkpoint ID:** `UCK-2026-11-04-002` (source-corpus update candidate)
 **Checkpoint date:** 2026-11-04
-**Product status:** the continuity integration and cross-platform hash
-correction are committed and pushed. The corrected Continuity Integrity
-workflow passed; the checkpoint is being regenerated to include that receipt.
-The unrelated pre-existing Lean edit remains uncommitted.
+**Product status:** continuity integration PR #9 was merged into `main` on
+2026-11-04. The 24 user-supplied documents attached on 2026-11-04 are preserved
+as original DOCX files and readable text extractions in this candidate update.
+The unrelated pre-existing Lean edit remains uncommitted and out of scope.
 
 **Repository revisions:**
 
-- standing-algebra: `cbc4211baf0993d643e55398addabf9588120f3f` (observed
-  `origin/main`; main-branch Lean, Coq, and Z3 workflows passed).
-- ICG: `cbc4211baf0993d643e55398addabf9588120f3f` for the integrated
+- standing-algebra: `425a7bb1a62cdd970cf3a18dd256643ada134be9` (current
+  `main` merge commit for PR #9).
+- ICG: `425a7bb1a62cdd970cf3a18dd256643ada134be9` for the integrated
   `ICG/` subtree only; a distinct ICG repository was not located.
-- kernel integration host: `bd3f0703ad3f9a65de9e50a920d08e693c0fb956`
-  (`jonrademacher-complete-lean4-formalizations`; corrective commit is pushed
-  and its Continuity Integrity workflow passed).
+- kernel integration host: `425a7bb1a62cdd970cf3a18dd256643ada134be9`
+  (`main`; PR #9 is merged). The hosted Lean, Coq, Z3, and continuity checks
+  were observed passing on PR head `cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4`.
 
 ## Canonical versions
 
@@ -25,6 +25,9 @@ The unrelated pre-existing Lean edit remains uncommitted.
   `corpus/icg/`. The README explicitly documents partial source coverage.
 - Operational kernel integration: version `0.1.0`, defined in `kernel/` and
   `continuity/`; it is not represented as the full UCK v3.55.
+- User source batch: 24 original DOCX files plus readable text extractions are
+  registered in `manifests/CORPUS_MANIFEST.yaml`; originals remain authoritative
+  where extraction omits layout, images, or non-text content.
 
 ## Active objectives
 
@@ -37,29 +40,29 @@ The unrelated pre-existing Lean edit remains uncommitted.
 
 - Σᴿ and ICG are separate frameworks; the ICG README calls out partial
   formalization coverage.
-- At the observed commits, Standing Algebra Lean, Coq, and Z3 GitHub Actions
-  checks passed. This is compilation/solver verification, not mathematical
-  source fidelity or external validation.
+- On the PR #9 head commit `cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4`,
+  Lean, Coq, Z3, and Continuity Integrity GitHub Actions checks passed. This
+  is compilation/solver verification, not mathematical source fidelity or
+  external validation; the merge commit is separately identified above.
 - The prior Goodhart workflow-control prototype has 22 passing Python tests
   as reported by its executed test run; it is a separate prototype, not proof
   of self-improvement effectiveness.
 
 ## Active trajectories
 
-- `AT-001`: build and validate this continuity integration; initialize
-  checkpoint and bounded context bundle.
+- `AT-001`: maintain the merged continuity integration and validate the
+  source-corpus candidate.
 - `AT-002`: locate and ingest the standalone ICG source repository if the user
   supplies its canonical URL or makes it accessible.
-- `AT-003`: ingest complete UCK v3.55 and continuity source materials when
-  supplied; currently only attached text/package material is available.
+- `AT-003`: classify supplied source materials and build evidence crosswalks;
+  24 user-supplied documents are preserved, while canonical UCK membership and
+  corpus completeness remain unverified.
 
 ## Open residuals
 
 See `OPEN_RESIDUALS.md`. Key residuals: standalone ICG/UCK repositories absent;
-full UCK corpus documents listed in the specification are not available in
-this workspace; source-to-formalization theorem mapping is not comprehensive;
-integration CI is newly initialized and only local checks are observed until
-the new GitHub workflow runs.
+the completeness and canonical UCK status of supplied source materials remain
+unverified; source-to-formalization theorem mapping is not comprehensive.
 
 ## Known conflicts
 
@@ -76,12 +79,13 @@ the new GitHub workflow runs.
 
 ## Current nondominated checkpoints
 
-- `UCK-2026-11-04-001`: canonical partial checkpoint of the initialized
-  continuity integration working tree, with explicit missing-source
-  residuals and passing local integrity checks. Integration files are not yet
-  committed or pushed.
-- Standing Algebra GitHub Actions on main commit `cbc4211b`: Lean, Coq, and
-  Z3 all passed; receipts are listed in `manifests/CURRENT_CHECKPOINT.yaml`.
+- `UCK-2026-11-04-001`: canonical partial checkpoint for the initial
+  continuity integration.
+- `UCK-2026-11-04-002`: candidate checkpoint for the newly ingested source
+  corpus; local validation must pass and hosted continuity CI is still needed
+  before treating this update as a validated repository checkpoint.
+- The PR #9 head checks passed on `cc5ec3a1`; full receipts are listed in
+  `manifests/VALIDATION_RECEIPTS.json`.
 
 ## Superseded states retained for provenance
 
@@ -93,30 +97,32 @@ the new GitHub workflow runs.
 
 ## Current proof and CI status
 
-- Standing Algebra main: Lean / Coq / Z3 Actions succeeded at the source commit
-  stated above; local Lean independence guard was previously blocked by WSL,
-  so the CI receipt is the authoritative run evidence.
+- PR #9 head `cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4`: Lean, Coq, Z3,
+  Continuity Integrity, and CodeQL checks passed; the merge commit is
+  `425a7bb1a62cdd970cf3a18dd256643ada134be9`.
 - ICG: shares the Standing Algebra source repository's Lean build. Build
   success does not imply complete transcription; see ICG README coverage
   boundary.
-- Integration: 35 standard-library Python tests pass after adding regression
-  coverage for portable hashing. The initial hosted continuity workflow failed
-  at hash verification on commit `a464e447`; the failure and correction are
-  archived in `learning/`. Corrected hosted run 41891627641 passed on
+- Source-corpus candidate: 37 standard-library Python tests pass locally and
+  Markdown links, SHA-256 verification (1,124 managed files), and release-mode
+  validation pass with the expected warning that hosted CI is pending. The
+  bounded context bundle includes the supplied source corpus. Hosted CI has
+  not yet run on this candidate.
+- Earlier integration correction: the initial hosted continuity workflow
+  failed at hash verification on `a464e447`; the failure and correction are
+  archived in `learning/`, and corrected hosted run 41891627641 passed on
   `bd3f0703`.
 
 ## Reopening conditions
 
 Reopen source identity if the canonical ICG repository URL is supplied or
-found; reopen UCK scope when primary source documents or repository become
-available; reopen any validation claim when commit, workflow receipt, source
+found; reopen UCK scope if additional canonical materials or a repository are
+identified; reopen any validation claim when commit, workflow receipt, source
 mapping, or test evidence changes.
 
 ## Next admissible executable steps
 
-1. Review the generated integration paths and preserve the unrelated
-   `Collapse_Demonstrations/collapse.lean` edit.
-2. Commit only the requested integration paths after authorizing a commit;
-   then regenerate the checkpoint and record the commit receipt.
-3. Push this branch only after user instruction; request/perform no silent
-   merge or release.
+1. Push the corpus update only after user instruction; hosted CI is required
+   before it becomes a validated repository checkpoint.
+2. Keep the unrelated `Collapse_Demonstrations/collapse.lean` edit out of the
+   source-corpus change.

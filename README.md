@@ -135,6 +135,9 @@ only when every required validation receipt is explicitly passed; even then,
 the checkpoint is partial while its listed source and product residuals remain
 open. GitHub Actions for the new continuity workflow are not considered passed
 until the workflow runs on a pushed commit. The accessible source audit found
-no standalone ICG or UCK repository or full UCK transfer corpus; see
+no standalone ICG or UCK repository. The 24 user-supplied research documents
+are preserved as original DOCX files and readable text extractions under
+[`corpus/source-documents/`](corpus/README.md); whether they form the complete
+canonical UCK corpus remains unresolved. See
 [`continuity/OPEN_RESIDUALS.md`](continuity/OPEN_RESIDUALS.md) and
 [`manifests/CORPUS_MANIFEST.yaml`](manifests/CORPUS_MANIFEST.yaml).

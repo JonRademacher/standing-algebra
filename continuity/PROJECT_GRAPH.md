@@ -4,10 +4,11 @@
 
 | Node | Identity and authority | Currentness | Relation |
 |---|---|---|---|
-| Standing Algebra Σᴿ | `https://github.com/JonRademacher/standing-algebra`; `SigmaR/`, root README, citation and attribution notice | Main source commit observed: `cbc4211baf0993d643e55398addabf9588120f3f`; Lean/Coq/Z3 Actions pass | Logical/relational framework; canonical source for Σᴿ |
-| ICG | `ICG/` and `ICG.lean` in the same repository; manuscript snapshot `corpus/icg/Nullstellensatz_Via_SigmaR_and_ICG.txt` | Same repository commit as above; README explicitly documents partial coverage | Distinct geometric/algebraic peer framework; historically connected to Σᴿ |
-| Unified Compatibility Kernel materials | User-provided package and prior continuity notes preserved under `corpus/kernel/` | Attachment snapshots; no standalone UCK repo or complete corpus found | Operational methodology source; does not replace either mathematical source |
-| Continuity integration | This repository's `kernel/`, `continuity/`, `learning/`, `governance/`, scripts and workflows | Working-tree candidate at initialization | Tooling for reconstructable, evidence-bearing repository continuity |
+| Standing Algebra Σᴿ | `https://github.com/JonRademacher/standing-algebra`; `SigmaR/`, root README, citation and attribution notice | Current `main` merge commit: `425a7bb1a62cdd970cf3a18dd256643ada134be9`; PR-head Lean/Coq/Z3 checks passed on `cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4` | Logical/relational framework; canonical source for Σᴿ |
+| ICG | `ICG/` and `ICG.lean` in the same repository; manuscript snapshot `corpus/icg/Nullstellensatz_Via_SigmaR_and_ICG.txt` | Current `main` merge commit: `425a7bb1a62cdd970cf3a18dd256643ada134be9`; README explicitly documents partial coverage | Distinct geometric/algebraic peer framework; historically connected to Σᴿ |
+| User-supplied research corpus | 24 documents attached on 2026-11-04, preserved under `corpus/source-documents/`; originals and text derivatives are individually hashed in `manifests/CORPUS_MANIFEST.yaml` | Attachment snapshots as received; document claims and completeness are not independently validated | Supplied source corpus used by the user; supports continuity and future crosswalks, but is not presumed to be a complete or canonical UCK corpus |
+| Unified Compatibility Kernel materials | User-provided build package and prior continuity notes preserved under `corpus/kernel/` | Attachment snapshots; no standalone UCK repo found | Operational methodology source; does not replace either mathematical source |
+| Continuity integration | This repository's `kernel/`, `continuity/`, `learning/`, `governance/`, scripts and workflows | Initial integration merged by PR #9 at `425a7bb1a62cdd970cf3a18dd256643ada134be9`; source-corpus update is a local candidate | Tooling for reconstructable, evidence-bearing repository continuity |
 | Non-Domination-Governance-Kernel | `https://github.com/JonRademacher/Non-Domination-Governance-Kernel` | Separate configured project; audit found derivative NDGK, not UCK/ICG; exact HEAD unconfirmed | Related but distinct implementation-derived project; source for cautionary continuity examples only |
 | I2OS Structural Admissibility | `https://github.com/i2os-lab/I2OS-Structural-Admissibility` | Separate configured project; read-only audit found paper repo, not ICG | Not a source or dependency of ICG/UCK |
 | Standing Algebra manuscript snapshot | `corpus/standing-algebra/Standing_Algebra_SigmaR.txt` | User-supplied session artifact; provenance hash in corpus manifest | Source claim/context, not automatically identical to current repo |
@@ -19,6 +20,7 @@
 - `ICG --historically_connected_to--> Σᴿ` (ICG manuscript disclosure; does not imply equivalence).
 - `continuity integration --uses_specification--> build package` (user instruction and preserved attachment).
 - `continuity integration --uses_operational_notes--> prior Copilot continuity notes` (user-provided text artifact).
+- `continuity integration --indexes--> user-supplied research corpus` (24 preserved DOCX originals and derived text snapshots; provenance and integrity recorded in the corpus manifest).
 - `integration --records_sources_of--> Σᴿ, ICG, UCK materials` (this manifest and provenance files).
 - `Non-Domination-Governance-Kernel --derived_from--> Σᴿ` (audited repository README; not a conclusion that it equals UCK).
 
@@ -30,7 +32,9 @@ No assertion is made that the UCK is mathematically derived from either source.
   or `gh repo list JonRademacher`; current ICG files are an in-repository
   subtree.
 - No standalone UCK repo was found. The package references additional transfer
-  documents that are not physically present in the session file collection.
+  materials, and the 24 attached documents are now preserved. Their inclusion
+  does not establish that the UCK has a specific canonical corpus or that all
+  referenced transfer materials have been supplied.
 - The separate I2OS paper's README author and paper title page/bibliography do
   not agree; no I2OS content is promoted into the source graph.
 - The Σᴿ manuscript snapshot and live formal source have different claim

@@ -4,23 +4,23 @@
     "standing_algebra": {
       "url": "https://github.com/JonRademacher/standing-algebra",
       "branch": "main",
-      "commit": "cbc4211baf0993d643e55398addabf9588120f3f",
+      "commit": "425a7bb1a62cdd970cf3a18dd256643ada134be9",
       "status": "verified",
       "path": ".",
-      "identity_note": "Observed origin/main commit; Lean, Coq, and Z3 Actions succeeded at this revision."
+      "identity_note": "Current main merge commit for PR #9; Lean, Coq, Z3, and Continuity Integrity passed on PR head cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4."
     },
     "icg": {
       "url": "https://github.com/JonRademacher/standing-algebra",
       "branch": "main",
-      "commit": "cbc4211baf0993d643e55398addabf9588120f3f",
+      "commit": "425a7bb1a62cdd970cf3a18dd256643ada134be9",
       "status": "integrated_subtree",
       "path": "ICG/",
-      "identity_note": "ICG is a distinct framework represented as a subtree in this source repository; a separate ICG repository was not found."
+      "identity_note": "ICG is a distinct framework represented as a subtree in this source repository; a separate ICG repository was not found. PR #9 merge commit."
     },
     "kernel": {
       "url": "https://github.com/JonRademacher/standing-algebra",
-      "branch": "jonrademacher-complete-lean4-formalizations",
-      "commit": null,
+      "branch": "main",
+      "commit": "425a7bb1a62cdd970cf3a18dd256643ada134be9",
       "status": "integration_host",
       "path": [
         "kernel/",
@@ -28,7 +28,7 @@
         "learning/",
         "governance/"
       ],
-      "identity_note": "This repository hosts the additive integration because no standalone UCK repository is available; it is not asserted to be the original UCK repository."
+      "identity_note": "This repository hosts the additive integration merged by PR #9 because no standalone UCK repository is available; it is not asserted to be the original UCK repository."
     },
     "non_domination_governance_kernel": {
       "url": "https://github.com/JonRademacher/Non-Domination-Governance-Kernel",

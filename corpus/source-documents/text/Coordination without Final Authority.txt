@@ -1,0 +1,611 @@
+# Coordination without Final Authority
+
+- Original attachment: `bff5e37a-9ce0-4a69-a3f5-1e770cdb7bac-Coordination without Final Authority.docx`
+- Original SHA-256: `8f227f9bcccad1568bf395bdc1fd6b1663bccea263ace2d66123bc336ab6213e`
+- Extraction: paragraph text in document order from `word/document.xml`; visual layout, images, and non-text objects may not be represented. The retained DOCX is authoritative.
+
+Coordination without Final Authority: Structural Axioms of Pluralist Legitimacy
+
+Abstract
+
+How can political authority be legitimate in societies whose members disagree about religion, morality, and the ultimate grounds of political obligation? This paper develops a structural answer to that question. It argues that legitimacy in pluralist societies depends upon two conditions: Pluralistic Inclusion, under which every person persistently governed by a social order possesses effective standing or a realizable pathway to standing, and Symmetry of Standing, under which no participant possesses final and uncontrolled authority over the standing of another. These principles are presented as necessary conditions for legitimate coordination among persons who reject a common final authority.
+
+The paper further argues that inclusion and symmetry serve not only moral functions but also structural ones. They preserve information flow, feedback, contestation, and repair, thereby supporting institutional learning and adaptation over time. Conversely, exclusion and domination generate legitimacy deficits by weakening the mechanisms through which authority remains accountable to those subject to it. The resulting framework reframes legitimacy as a property of the relational architecture through which authority is exercised, challenged, revised, and reproduced under conditions of persistent pluralism.
+
+Keywords: legitimacy; pluralism; standing; political authority; non-domination; democratic theory
+
+Introduction
+
+Modern pluralist societies are characterized by persistent disagreement concerning religion, morality, politics, and the nature of the good life. Citizens may share legal institutions and common political problems while rejecting one another's deepest moral and philosophical commitments. Under such conditions, the justification of political authority becomes increasingly difficult. If no comprehensive doctrine commands universal acceptance, on what basis can collectively binding decisions claim legitimacy?
+
+The challenge is not merely to reach decisions, but to explain why those decisions should possess authority over those who reject the premises from which they were derived. This paper approaches the problem from a different direction. Rather than beginning with the substantive content of political doctrines, it asks what structural conditions must exist before any claim to authority can become legitimate under conditions of pluralism. The central proposal is that legitimacy depends upon two foundational requirements.
+
+The first is Pluralistic Inclusion. Every person persistently governed by a social order must possess recognized standing within that order, or an effective pathway through which such standing can be acquired and exercised. No person may be reduced to a permanent political nullity. The second is Symmetry of Standing. Participants recognized within a social order must relate to one another as bearers of equal basic standing. Differences in expertise, office, responsibility, or delegated authority may be legitimate, but no participant may possess final and uncontrolled authority over the standing of another.
+
+Together, these principles constitute what will be called the Axiom of Pluralistic Inclusion and the Axiom of Symmetry. The argument advanced here is that these axioms identify necessary structural conditions for pluralist legitimacy. A social order that excludes affected persons from participation, or that permits some participants to exercise unanswerable authority over others, cannot reproduce its authority through reciprocal recognition alone. Instead, it becomes increasingly dependent upon coercion, dependency, exclusion, or other mechanisms external to shared authorization.
+
+The paper further argues that inclusion and symmetry serve not only moral purposes but also important structural functions. They preserve the informational and corrective capacities through which institutions receive feedback, process contestation, identify errors, and adapt to changing conditions. Legitimacy should therefore be understood not merely as a static property of institutions, but as a dynamic feature of systems capable of reproducing authority through continuing participation, accountability, and repair.
+
+The resulting theory does not aspire to provide a complete account of justice, nor does it identify a single ideal institutional form. Its aim is more modest. It seeks to identify the minimum relational conditions under which persons who disagree about ultimate truth can nevertheless participate in a shared order of collectively binding action. In a pluralist society, legitimacy begins not with agreement about what is ultimately true, but with the preservation of standing among those who must act together despite that disagreement.
+
+The Problem of Pluralism and Legitimacy
+
+By a pluralist society, we mean a society in which individuals and groups hold irreducibly diverse religious, moral, philosophical, cultural, and political commitments, such that no single comprehensive doctrine can reasonably be expected to command the acceptance of every person subject to the society’s institutions. Pluralism in this sense is not merely the temporary presence of disagreement that might disappear if participants acquired better information or reasoned more carefully. Nor is it reducible to a superficial variety of preferences within an otherwise unified moral framework. It describes a condition in which persistent disagreement arises among persons who may nevertheless be sincere, informed, and capable of reasoning. Their disagreements reach questions concerning the nature of the good, the demands of justice, the sources of moral obligation, the proper limits of political power, and the forms of life worth pursuing. (Rawls 1993; Waldron 1999)
+
+Modern constitutional democracies are paradigmatic, though imperfect, instances of this condition. They encompass multiple religions, secular and nonsecular moral outlooks, competing conceptions of freedom and equality, and divergent understandings of personal and collective flourishing. No participant can simply assume that the deepest premises of their own worldview are shared by everyone else. This diversity is one of the central conditions under which that order must operate. Under these circumstances, the traditional aspiration to locate political authority in a universally acknowledged source becomes difficult to sustain. The difficulty is not necessarily that truth does not exist. It is that an assertion of truth does not, by itself, establish the standing of one person or institution to direct the conduct of another.
+
+This condition creates a problem that is simultaneously normative and structural. Laws must be enacted, institutions maintained, resources distributed, conflicts adjudicated, and threats addressed. Collective decisions cannot always be postponed until unanimity is achieved. Yet such decisions are ordinarily backed by coercive institutions. They determine what persons may do, what they must contribute, what risks they must bear, and what penalties they may suffer for noncompliance. The central question is therefore not merely how disagreement can be managed efficiently. It is how a decision can acquire a legitimate claim to bind persons who reject the moral, religious, or philosophical premises favored by those who made it.
+
+The problem can be stated more precisely:
+
+How can a community make and enforce collectively binding decisions when its members disagree about the ultimate grounds of political obligation, without treating the power of one participant or faction as a final authority over the others?
+
+This question contains two distinguishable problems. The first is the problem of decision: how can a community reach a determinate outcome when its participants disagree? The second is the problem of authorization: why should the outcome have the standing to bind participants who opposed it? A procedure may solve the first problem without solving the second. (Estlund 2008; Christiano 2008) Dictatorial command, inherited hierarchy, or simple majoritarianism can produce determinate decisions. Determinacy alone, however, does not establish legitimacy. A rule may settle what will happen while leaving unresolved why those subjected to it ought to recognize the decision as authoritative rather than merely coercive.
+
+Stability secured by fear, dependency, exclusion, or overwhelming force may be empirically durable while remaining normatively defective. Legitimacy concerns the structure of the relationship through which persons are governed, not simply the absence of visible conflict. The challenge of pluralism is therefore not to eliminate disagreement (Rawls 1993, Waldron 1999) but to identify conditions under which disagreement can persist without converting political coordination into relations of final subordination. A legitimate pluralist order must be capable of generating common action while leaving participants recognizable as distinct sources of claims, reasons, objections, and demands for revision.
+
+3.1 Consent and the Social-Contract Response
+
+The social-contract tradition offered one of the most influential responses to this problem. Although its principal authors differed profoundly, its central insight was that political authority cannot be justified merely by the superior force, inherited status, or natural dominion of rulers. Rousseau’s claim that force does not create right expresses the basic distinction between possessing the ability to compel and possessing the authority to command (Rousseau 1997). If no person has an inherent title to rule another, political authority must arise through some form of agreement, authorization, or convention among those who will be subject to it. The social contract accordingly shifts the source of authority from the ruler’s identity to the relationship among participants. Political power is legitimate not because the ruler is naturally superior, but because those governed can be represented as authors or authorizers of the political order. (Rousseau 1997; Raz 1986)
+
+Yet consent does not fully resolve the pluralist legitimacy problem. (Raz 1986; Estlund 2008) If the model already describes persons as free and equal, excludes certain forms of bargaining power, or specifies what information is unavailable to them, it may encode substantive commitments that have not yet been independently justified. This does not make consent irrelevant. It shows that consent cannot be the most fundamental concept in a theory of pluralist legitimacy. The structure within which consent is sought must therefore satisfy conditions that make authorization possible.
+
+3.2 Political Liberalism and Public Reason
+
+Rawls’s political liberalism addresses the persistence of reasonable disagreement more directly. Rather than seeking agreement on a comprehensive religious or philosophical doctrine, Rawls asks how citizens divided by reasonable pluralism can endorse a shared political conception of justice. Political principles must be capable of presentation through public reasons that do not require citizens to abandon their deeper commitments. Citizens may support the same constitutional essentials for different reasons, generating an overlapping consensus rather than a unified worldview (Rawls 1993).
+
+Legitimate political power cannot depend on the triumph of one comprehensive doctrine. It must be exercised within terms of cooperation that citizens regarded as free and equal can reasonably accept despite their broader disagreements. Political justification is consequently constrained by reciprocity. (Rawls 1993; Rawls 1999) Those who exercise coercive power must be prepared to offer reasons whose authority does not depend exclusively on premises that other citizens are structurally required to reject.
+
+Rawls’ framework, however, begins from a conception of citizens as free and equal participants in a fair system of cooperation. (Rawls 1993) That conception has considerable normative appeal, but it also raises a foundational question. Why must persons be related as free and equal participants before political justification can begin? Political liberalism supplies a normative account of this status, but the possibility remains that freedom and equality perform an even more basic structural role. They may describe not only how citizens ought morally to be regarded, but also the relational conditions under which political justification can count as justification among plural agents at all.
+
+A person whose objections can be ignored without recourse is not participating in public justification on equal terms. (Forst 2012) A person who lacks an effective route to contest the rules governing political argument is not situated as a co-author of those rules. Likewise, an institution that reserves the final power to determine which reasons count as public, while remaining unanswerable to those excluded by that determination, risks recreating final authority inside the practice of public reason. The question is therefore not only whether public reasons are offered, but whether the institutional structure gives affected persons standing to challenge, revise, and contest the terms under which reasons are evaluated.
+
+The present theory accepts Rawls’s recognition that legitimate coercion must be publicly justifiable under conditions of reasonable pluralism. It asks what must be structurally true of a political relationship before such justification can operate. The proposed axioms of inclusion and symmetry are intended to identify those antecedent conditions.
+
+3.3 Discourse, Participation, and Democratic Authorization
+
+Habermas relocates legitimacy from hypothetical agreement to the procedures through which citizens participate in the formation of law. (Habermas 1996) On a discourse-theoretic account, legitimate norms are connected to processes of public deliberation in which those affected can participate as free and equal interlocutors. (Habermas 1996; Cohen 1997) Political autonomy is not exhausted by private freedom from interference. It also requires public participation in the communicative processes through which collectively binding rules are made (Habermas 1996). Rawls and Habermas consequently offer distinct but related accounts of how coercive law might be justified among persons who cannot rely on a common comprehensive doctrine. Rawls emphasizes public reason and an overlapping political consensus, while Habermas emphasizes inclusive deliberation and democratic will-formation.
+
+The discourse-theoretic approach brings the relational character of legitimacy into clearer focus. Legitimacy cannot be reduced to the independently correct content of a decision. (Cohen 1997; Mansbridge et al. 2012) It is connected to whether those affected could participate in testing the reasons for the norm, presenting objections, introducing relevant information, and seeking revision. A procedurally closed but substantively benevolent authority remains defective because the governed appear only as recipients of decisions rather than as participants in their formation.
+
+Nevertheless, ideal discourse conditions also rely on assumptions about equal participation. The structural question therefore reappears. What distinguishes genuine participation from the symbolic presence of participants whose interventions cannot affect the coordination process? What prevents a deliberative institution from hearing objections while remaining structurally insulated from them? A theory of discourse may identify the norms governing legitimate deliberation, but an account of standing is needed to explain when a participant’s contribution constitutes a claim that the institution is obligated to receive, evaluate, and answer.
+
+3.4 Non-Domination and the Problem of Uncontrolled Power
+
+Republican theories of freedom, especially Pettit’s account of freedom as non-domination, identify another dimension of the problem. A person may be unfree even when power is not presently being exercised against them. If another possesses an uncontrolled capacity to interfere arbitrarily in the person’s choices, the relationship is one of domination even when the dominant party behaves benevolently or refrains from interference (Pettit 1997; Pettit 2012). What matters is not only the frequency of interference but also the structure through which one agent remains dependent on another’s unchecked will. This insight is essential to pluralist legitimacy. Benevolent rule does not cease to be domination merely because the ruler chooses favorable outcomes. (Pettit 1997; Shapiro 2012) Nor does an excluded population gain equal status merely because those who govern it occasionally consider its interests.
+
+Non-domination therefore moves beyond the narrow question of whether actual decisions are harmful. It asks whether power is controlled by those subject to it. (Pettit 2012) Domination disrupts pluralist legitimacy because it assigns final authority to one participant’s frame, judgment, or will while denying another participant a comparably effective capacity to contest the relationship. The defect lies not merely in unequal influence. The defect lies in an asymmetry of fundamental standing through which one party can determine the conditions governing another without remaining accountable within a shared structure of challenge and repair. The account must nevertheless distinguish domination from functionally differentiated authority. Expertise, office, and delegated jurisdiction may justify unequal decisional roles without establishing unequal basic standing. This distinction between functional and final authority will be developed in Section 6.
+
+3.5 From Existing Theories to Structural Conditions
+
+Consent, public reason, democratic discourse, and non-domination each express part of this underlying structure. Yet these theories often begin by describing persons as free and equal, specifying fair procedures, or presupposing a community within which participants already possess the status required for authorization. The prior structural problem receives less direct attention: what conditions must obtain for a plurality of agents to constitute a legitimate field of coordination in the first place?
+
+This paper argues that two such conditions can be identified. The first is pluralistic inclusion. The second is symmetry of standing. These conditions are described as structural because they concern relations among participants rather than the substantive content of any particular doctrine. The relevant question is not initially whether the institution’s objectives are morally correct, but whether it coordinates persons through relations in which every affected participant is included as a bearer of claims and no participant possesses final, unanswerable control over the others.
+
+The argument is conditional but not trivial. If an order claims legitimacy among plural agents, it must treat them as participants whose distinct reasons and objections remain relevant to collective authorization. An order that permanently excludes some affected persons cannot claim to coordinate with them. It acts upon them. An order that grants one participant final authority over the standing of others does not preserve plurality within coordination. It replaces plural coordination with subordination.
+
+The absence of final authority does not mean that no decision may ever be final for practical purposes. The relevant distinction is between decision closure and authority closure. Decision closure ends a particular deliberative process so that coordinated action can occur. Authority closure insulates the decision-maker or governing framework from further contestation by denying the standing of those subject to it. Legitimacy under pluralism should therefore be understood as an architecture of continuing contestability. For a decision to remain part of a legitimate order, the persons bound by it must retain recognized pathways through which they can challenge its application, contest its justification, seek allies, present new information, and pursue revision.
+
+This quality distinguishes legitimate coordination from final authority. Final authority claims not only the power to decide but also the power to determine unilaterally whether challenges to that decision are admissible. It controls both the outcome and the standing of those who might contest it. Pluralist legitimacy rejects this closure because it would allow one participant to extinguish the relational conditions through which authority could be justified.
+
+The central thesis can now be stated precisely: in a society characterized by persistent disagreement concerning ultimate moral, religious, and political authority, collectively binding decisions can claim pluralist legitimacy only when every person subject to the coordination order possesses non-null standing within it and when no participant possesses final, uncontrolled authority over the standing of another. These conditions do not eliminate disagreement. They establish the structural field within which disagreement can persist without becoming domination.
+
+4. Standing as the Basis of Legitimacy
+
+Before any directive can claim legitimate authority, a more basic question must be answered:
+
+Who possesses the standing to make, contest, authorize, or resist the claims through which collective coordination occurs?
+
+In ordinary usage, to have standing is to occupy a recognized position from which one may properly speak, object, demand an answer, or initiate a process of judgment. Legal standing provides the most familiar example. Political and moral standing refers to an agent’s recognized capacity to introduce claims into a shared normative order and to require that those claims receive institutionally appropriate consideration. To possess standing is not necessarily to control the resulting decision. It is to count as a participant whose agency, interests, objections, and exposure to consequences cannot permissibly be treated as irrelevant. Standing identifies the conditions under which the order must encounter that participant not merely as an object to be managed, protected, directed, or restrained, but as a source of claims bearing upon the legitimacy of collective action.
+
+This distinction is foundational. A person may be visible to an institution without possessing standing within it. An authority may survey a population, solicit public comments, or permit representatives to speak while reserving an uncontrolled discretion to disregard every resulting claim. Consultation becomes standing-bearing only when the contribution of the affected party enters the coordination process as something the institution is obligated to receive and address under publicly ascertainable conditions. Recognition without consequence may be ceremonial. Standing requires that a claim possess normative and institutional significance.(Forst 2012; Young 2000)
+
+4.1 Standing as an Institutionally Recognized Claim-Bearing Relation
+
+Standing is an institutionally recognized relation among an affected agent, a claim, a decision, and the coordination order responsible for that decision. The relation entitles the agent to have the claim received and processed under conditions that impose some corresponding obligation of answerability upon the institution. Let  denote the set of agents subject to a coordination order . Let  denote a decision, rule, or institutional practice produced or maintained by . Let  denote the set of agents whose agency, interests, rights, obligations, opportunities, or conditions of action are materially affected by . Standing begins from the principle that the effects of coordination generate claims to inclusion within its justificatory structure. At a minimum:
+
+This expression establishes the basic proposition that being materially subject to a decision creates a claim not to be treated as normatively absent from the process through which that decision is authorized, applied, reviewed, or revised. Standing is consequently domain-relative. A person may possess standing concerning a decision that directly governs their conduct while lacking equivalent standing concerning an unrelated private decision that does not affect them. The fact that standing is domain-relative, however, does not make it discretionary. If an institution benefits from an action while externalizing its risks, the persons bearing those risks remain affected participants even if they are formally located outside the institution’s membership. The standing relation can therefore be represented as:
+
+whenever agent is materially governed or affected by decision within the scope of coordination order . Here, does not quantify moral worth or political power. It indicates the existence of a recognized claim-bearing relation. A value of zero represents null standing and a positive value represents recognition that the agent counts within the domain of justification. Where more detailed analysis is required, standing may be treated as a multidimensional relation involving participation, voice, contestation, review, and protection from unilateral exclusion.
+
+If agent  possesses standing with respect to decision , then the relevant coordination order must, at minimum, be capable of receiving ’s claim, evaluating it according to rules that are not determined solely by the party challenged, and providing an appropriate response. Standing does not guarantee success. It guarantees entry into an accountable normative relation. This yields a basic correspondence:
+
+where  represents the obligation of coordination order to receive and appropriately process the claim of agent  concerning decision . Standing without any corresponding obligation would be empty because the institution could acknowledge the claimant while remaining entirely insulated from the claim. The obligation generated by standing must nevertheless be differentiated according to context. Not every claim requires the same institutional response. The form of response varies, but the underlying relation remains constant: the claim cannot be excluded merely because acknowledging it is inconvenient to the authority being challenged.
+
+Standing should therefore be distinguished from decisional supremacy. To possess standing is not to possess the unilateral power to determine the outcome. If every affected agent possessed an unconditional veto over every collective decision, coordinated action would often become impossible. The point of standing is not to transfer final authority from institutions to individual claimants. It is to prevent any participant from becoming structurally null within the process. Standing preserves the claimant as a participant in justification without predetermining the substantive result. Institutions may impose relevance, evidence, jurisdictional, and procedural conditions on claims, but those conditions must themselves remain contestable. An authority cannot establish legitimacy merely by defining every challenge to its own authority as inadmissible.
+
+This distinction allows pluralist legitimacy to accommodate disagreement. Equal standing does not require that both claims be granted or that the conflict disappear. It requires that neither claimant’s position be rejected by denying their status as a participant or by declaring the other participant’s worldview intrinsically authoritative. The coordination order must resolve the incompatibility through procedures and reasons that preserve the standing of both parties even when only one substantive outcome can be adopted. If standing depended entirely on actual interpersonal recognition, the refusal of a dominant faction to recognize a minority could itself extinguish the minority’s standing.
+
+4.2 Standing, Power, and Correctness
+
+Standing must be distinguished sharply from power. Power is the capacity to produce effects, alter another’s options, impose costs, control resources, or secure compliance. Standing is the recognized capacity to introduce claims that the shared normative order treats as relevant to authorization. The two can coincide, but neither entails the other. A dictator may possess extensive power while lacking legitimate standing to impose particular directives. The distinction may be represented as follows:
+
+and
+
+Much of the problem of political legitimacy arises from the divergence between these two relations. Institutions capable of exercising power may lack the standing required to justify its exercise, while persons possessing standing may lack effective means of making institutions answerable to them. A theory that equates standing with power would convert domination into its own justification. A theory that treats standing as entirely independent of institutional power, however, risks reducing it to an abstract moral status without practical consequences. Effective standing must therefore connect normative recognition to institutional capacity. An agent possesses more than nominal standing only when the coordination order provides a realizable pathway through which the agent’s claim can enter, challenge, and potentially alter institutional action.
+
+This gives rise to a distinction between formal standing and effective standing. Formal standing exists when the rules declare an agent eligible to participate or object. Effective standing exists when the surrounding institutional conditions make the exercise of that status practically available. A person may formally possess the right to appeal while lacking effective standing if the appeal is prohibitively expensive, inaccessible, controlled entirely by the challenged authority, or incapable of producing any remedy. Accordingly:
+
+does not necessarily imply
+
+where  denotes formal standing and  denotes effective standing. A legitimate order must be attentive to both. Formal equality without effective access can conceal domination, while effective influence without formal accountability can permit powerful actors to acquire authority that has never been publicly authorized. (Rawls 1993; Young 2000)
+
+Standing is also distinct from moral, factual, or epistemic correctness. A person may be correct without possessing the authority to impose their conclusion, and a person may possess standing while advancing a claim that ultimately proves mistaken. (Raz 1986; Estlund 2008) This distinction is especially important under conditions of pluralism because political actors often convert confidence in the truth of their beliefs into an asserted entitlement to command others.
+
+Suppose that agent  believes proposition  to be morally true. The logical distinction is:
+
+where denotes the legitimate authority of  to bind  through the interpretation or enforcement of . Truth may contribute to the substantive justification of a decision, but it does not by itself establish the relational authority of a particular agent to impose that decision. Nor does standing guarantee correctness:
+
+An agent must be permitted to introduce a claim without the institution presuming that the claim is correct. Otherwise every right to challenge would become a right to prevail. Pluralist legitimacy therefore requires the disaggregation of epistemic authority, political authority, and moral standing. Epistemic competence concerns the reliability of a person or institution in determining what is true. Political authority concerns an institutionally authorized capacity to make binding decisions. Moral standing concerns the status of persons whose claims must be considered because they are affected participants. These forms of authority can interact, but they should not be collapsed into one another.
+
+4.3 Standing, Consent, and Membership
+
+Standing is logically prior to consent because consent cannot authorize a political relationship until the parties entitled to consent have been identified. (Theuns 2021) Any account of authorization must answer at least four preliminary questions: whose consent is necessary, what information must be available, what alternatives must remain accessible, and under what conditions refusal counts as valid. These are standing questions before they are consent questions.
+
+If an institution determines unilaterally that only property owners, citizens of a preferred class, members of a particular religion, or persons endorsing an official doctrine may authorize its decisions, it has already distributed standing before requesting consent. The resulting consent may be unanimous among the selected participants while excluding many of those governed by the outcome. Let denote the group permitted to authorize decision , and let denote the group materially affected by it. If
+
+then some affected agents have been excluded from the authorizing structure. Unless an independent justification establishes why their claims are adequately represented or why their exclusion does not deny their standing, the decision suffers an inclusion deficit. If standing were confined entirely to formal membership, political institutions could avoid obligations by defining affected persons as outsiders. The boundary of membership would become a mechanism for externalizing coercion. (Arendt 1951; Fraser 2008; Beitz 2009) The structural approach instead begins from subjection and affectedness. Membership can influence the form and extent of standing, but it cannot erase the basic standing generated when an institution materially governs or burdens an agent. The scope may vary, but null standing cannot be inferred merely from non-membership. This principle may be stated as follows:
+
+where  denotes the formal membership of coordination order . Non-membership does not entail the absence of standing. If the order’s decision affects agent , a claim-bearing relation may arise even when does not possess every participatory right associated with full membership. A theory of pluralist legitimacy must therefore avoid treating political borders as automatic boundaries of moral and justificatory relevance. The scope of standing follows the structure of governance and consequence, not merely the formal map of membership.
+
+4.4 Representation, Contestability, and Repair
+
+Large and complex institutions would be unable to function if every affected individual participated directly in every decision. Representation, delegation, advocacy, guardianship, and institutional mediation can carry claims into the coordination process. The legitimacy of these mechanisms, however, depends on whether they preserve rather than replace the standing of the represented party. Representation is legitimate when it transmits, protects, or reconstructs the claims of an affected participant under conditions of accountability. (Brown 2009; Young 2000) It becomes defective when the representative acquires uncontrolled authority to define the represented person’s interests, exclude their objections, or prevent them from challenging the representation itself. Let  represent agent  within coordination order . Legitimate representation requires more than the institution’s recognition of . It requires an accountable relation between  and :
+
+where  denotes the mechanisms through which representative  remains accountable to agent .This requirement is especially important when the represented person cannot directly articulate a claim. The absence of conventional speech or full legal agency does not necessarily eliminate standing. It changes the mechanisms through which relevant claims must be identified and protected. A person does not become normatively irrelevant because they cannot participate in an idealized form of public reasoning. If a coordination order can affect an agent’s conditions of existence, it must possess some mechanism for registering and protecting the resulting claims.
+
+A standing-preserving order must therefore provide pathways through which affected agents can question decisions, introduce neglected information, allege violations, request reasons, seek review, and demand correction. These pathways need not all take the same form. (Pettit 2012; Lafont 2020) Their legitimacy depends not merely on their formal existence but on whether they provide a realizable route from claim to institutional response. Contestability means that challenges are not structurally precluded by the authority they contest. The architecture of contestability must therefore include the possibility of repair. If an institution determines that exclusion, injury, or unjustified asymmetry has occurred, it must possess mechanisms capable of changing the resulting condition. The relevant test is whether the order treats disclosed failure as a reason for correction or merely as information that the ruling authority remains free to ignore. The relation can be expressed as:
+
+where  means that coordination order  contains a realizable possibility of repair concerning a substantiated violation affecting agent . This does not guarantee that every alleged violation will be substantiated. It requires that substantiated violations not be structurally beyond remedy.
+
+4.5 Standing as a Threshold Condition of Legitimacy
+
+Standing functions as a threshold condition because substantive evaluation cannot compensate for the complete exclusion of affected participants from the structure of authorization. This qualification is essential. If standing were treated as sufficient, any decision produced through inclusive procedures would have to be accepted as legitimate regardless of its substance. Such a conclusion would leave no basis for condemning decisions that preserve procedural participation while violating basic rights or imposing substantively impermissible burdens. The absence of a standing failure means only that the decision has passed one necessary threshold. Additional requirements concerning rights, justification, proportionality, competence, legality, and substantive justice may still apply. This persistence is crucial because majority rule becomes domination if the majority may use an electoral victory to extinguish the future standing of its opponents.
+
+A legitimate decision therefore binds without annihilating the claim-bearing status of those who opposed it. It closes a particular decision while preserving the broader architecture within which the decision can later be contested, interpreted, amended, or replaced. Standing is what allows losers to remain participants rather than becoming subjects of the winners. Standing supplies the common foundation of the two axioms developed below. Pluralistic Inclusion prohibits the permanent nullification of persons subject to a coordination order. Symmetry prohibits the conversion of differentiated authority into final control over another participant’s standing. Inclusion therefore concerns entry into the field of legitimate coordination; symmetry concerns the relations maintained within it.
+
+Axiom 1: Pluralistic Inclusion (The Successor Axiom)
+
+The first axiom concerns the boundary of the political community. Before a social order can determine how authority should be distributed, how collective decisions should be made, or which substantive rights should be protected, it must determine who counts as a participant in the practices through which those questions are answered. Every political order therefore contains, whether explicitly or implicitly, a rule of inclusion. It identifies the persons whose claims must be heard, whose interests must be considered, whose injuries demand a response, and whose authorization is relevant to the exercise of collective power.
+
+This boundary-setting function is not administratively neutral. To exclude an individual from the community of standing is not merely to give that person less influence over a particular decision. It is to deny that the person occupies the kind of position from which an institution can be obligated to receive, evaluate, or answer their claims. The excluded person may remain physically present within the territory, economically useful to its institutions, legally controlled by its rules, and vulnerable to its sanctions while nevertheless being absent from the authorized structure of political justification.
+
+The Axiom of Pluralistic Inclusion prohibits this condition. It holds that no person who is persistently subject to the consequences, directives, or coercive capacities of a social order may be permanently constituted as a nullity within that order. Every such person must possess recognized standing or an effective institutional pathway through which standing can be acquired, exercised, and defended. This requirement can be stated initially as follows:
+
+Axiom of Pluralistic Inclusion
+
+For every agent i governed by or persistently subject to a social order Ω, the order must recognize i as a bearer of claims within Ω or preserve an effective pathway through which i can acquire and exercise such recognition.
+
+Let UΩ denote the set of agents persistently governed by or subject to the material consequences of Ω. Let σᵢ denote whether agent i possesses recognized standing within the justificatory and decision-making structure of Ω. The minimum inclusion condition is:
+
+or, where standing has not yet been realized:
+
+Here, ◇Ω does not denote mere logical imaginability. It denotes the existence of an institutionally realizable pathway within Ω through which the transition from null standing to recognized standing can occur. The axiom is therefore not satisfied merely because exclusion might someday end under ideal circumstances. The social order must preserve actual procedures, rights, institutions, or forms of collective action through which recognition can be initiated and sustained.
+
+The axiom establishes a threshold rather than a complete distributional theory. It does not yet determine whether every participant must possess identical influence, whether all decisions must be unanimous, or what institutional arrangements best realize political equality. Those questions belong partly to the subsequent Axiom of Symmetry. The present axiom addresses the logically prior problem of whether each affected person appears within the political order as someone whose claims can count at all.
+
+5.1 Null Standing and Political Exclusion
+
+Null standing is the condition in which an individual is governed by a social order but is not recognized within that order as an authorized source of claims concerning the terms of governance. Formally:
+
+The expression σᵢ = 0 designates a relational and institutional condition: within the relevant coordination structure, the person lacks an acknowledged position from which their interests, objections, testimony, or demands for justification impose an obligation of response upon the institution. This distinction is essential because a person may be visible to power without being recognized by power. A person can be intensely governed while remaining politically absent. (Arendt 1951; Young 2000)
+
+Null standing therefore arises when an order treats a person as an object of coordination rather than as a participant in coordination. The person is someone about whom decisions are made, to whom commands are directed, or from whom resources are extracted, but not someone whose claims participate in determining the terms of those decisions. The relation is structurally unilateral:
+
+while the legitimating return relation is absent:
+
+A person with null standing lacks this continuing position. The institution may disregard their objections not because those objections have been considered and rejected, but because the person is not recognized as possessing the authority to raise them. Their political absence is built into the structure through which decisions are formed. We can therefore distinguish adverse decision from nullification. An adverse decision has the following form:
+
+Agent i possesses standing, but the decision produced by Ω differs from the outcome preferred by i. Nullification has a different form:
+
+The order produces a decision affecting i even though i lacks recognized standing within the process that authorizes, reviews, or contests that decision. The first condition is compatible with pluralist legitimacy because legitimate coordination cannot guarantee that every participant will prevail. The second presents a foundational legitimacy failure because the person is subjected to collective power without being recognized as a participant in the structure that claims to authorize it.
+
+Formal null standing occurs when law or institutional doctrine explicitly excludes a class of persons from political membership, legal personality, voting, testimony, officeholding, representation, or access to remedies. Functional null standing occurs when formal recognition exists, but the available mechanisms cannot be effectively used. A person may possess rights on paper while facing procedures that are inaccessible, prohibitively costly, systematically unresponsive, or controlled entirely by those whose conduct is being challenged. The distinction can be represented as follows:
+
+where σᵢᶠ denotes formal standing and σᵢᴱ denotes effective standing. Legal recognition is important, but it does not by itself establish meaningful inclusion. (Rawls 1993; Young 2000) Effective standing requires at least four structural capacities:
+
+where:
+
+Rᵢ is the recognition of i as a bearer of claims;
+
+Vᵢ is an available means through which those claims can be voiced or represented;
+
+Cᵢ is an institutionally protected capacity to contest decisions affecting i;
+
+Qᵢ is a pathway through which the responsible institution can be required to answer, review, or otherwise encounter the claim.
+
+Political exclusion is thus not defined solely by physical expulsion from a territory or formal denial of citizenship. It also includes the internal construction of persons as governable but politically negligible. An order violates pluralistic inclusion whenever it draws the boundaries of participation more narrowly than the boundaries of sustained subjection. The governing principle is:
+
+where PΩ denotes the set of recognized participants in Ω. The set of persons whose lives are persistently governed by an order cannot legitimately exceed the set of persons who possess standing within it. Slavery, caste, disenfranchisement, statelessness, colonial administration, and functional administrative exclusion differ historically, but each may instantiate the same divergence between persons governed by an order and persons recognized as claim-bearing participants within it.
+
+5.2 Arendt and the Right to Have Rights
+
+Hannah Arendt’s analysis of statelessness provides one of the clearest philosophical foundations for this distinction. (Arendt 1951) Stateless persons exposed a structural weakness in abstract declarations of universal human rights. The persons most in need of supposedly inalienable rights could discover that those rights lacked practical protection once no political community recognized them as members. Arendt’s “right to have rights” is consequently interpreted as a prior right to membership in a political community, without which particular rights may lack an institutional site of recognition and enforcement. (Arendt 1951) We may express the relationship between membership and particular rights as follows:
+
+where Mᵢ denotes recognized membership and ℛᵢ denotes the institutionally realizable set of rights available to i. This means that the realization of particular rights ordinarily presupposes a recognized position from which the person can invoke them. When Mᵢ is absent, the existence of an abstract right may fail to generate any enforceable institutional relation:
+
+Here, ℛᵢᴬ denotes rights attributed to i in the abstract, while ℛᵢᴱ denotes rights that are institutionally effective. The rightless person may remain human in the moral sense invoked by a universal declaration while lacking an organized authority before which the right can be asserted. (Arendt 1951) Arendt’s analysis is closely connected to the present concept of null standing, but the two should not be treated as identical. The “right to have rights” emphasizes membership in an organized political community. The Axiom of Pluralistic Inclusion generalizes the structural insight across coordination orders. (Beitz 2009)
+
+The deeper structural requirement is that persons inhabit an organized relationship in which their actions and opinions possess authorized significance. The Axiom of Pluralistic Inclusion accordingly does not derive standing from nationality as such. The axiom instead applies from the direction of subjection and consequence. When an order persistently governs a person, that relation creates a structural demand for inclusion. Thus:
+
+where GΩ(i) denotes the persistent governing effect of Ω upon i. The stronger and more continuous the institution’s capacity to determine i’s available actions, obligations, risks, or conditions of life, the less defensible it becomes to deny i a recognized position within the institution’s justificatory structure.
+
+5.3 The Successor Principle
+
+The transition from null standing to recognized participation can be represented through a successor operation. Let SΩ denote an inclusion operator within social order Ω. If agent i presently possesses null standing, the successor operation produces the first recognized state above nullity:
+
+such that:
+
+In its simplest symbolic form:
+
+This expression should not be interpreted as claiming that political standing is reducible to ordinary arithmetic. The “+1” represents a categorical rather than merely quantitative transition. It signifies the first increment of recognition through which a person moves from being solely an object of institutional action to being recognized as a participant whose claims belong within the coordination structure. The successor operation therefore changes the type of relation between i and Ω:
+
+Before the successor transition, the order acts upon i without recognizing a corresponding claim-bearing relation from i to the order. After the transition, governance becomes at least minimally reciprocal. The institution may still produce decisions opposed by i, but it may no longer treat i as categorically irrelevant to the authorization, application, or review of those decisions.
+
+The transition is agent-indexed and non-fungible. Recognition of one participant cannot substitute for recognition of another, although a common institutional mechanism may realize standing for many participants. Extending standing may reduce the unilateral control of established actors, but that loss of dominative power is not a loss of their basic standing.
+
+Standing is not a fixed resource whose extension to one person requires the nullification of another. A legitimate order must contain a pathway that is public, nonarbitrary, and institutionally traversable. Let ρᵢ denote a pathway by which i can move from null standing to recognized standing. Then:
+
+The pathway must satisfy at least the following conditions:
+
+where:
+
+A(ρᵢ) means that the pathway is accessible to i;
+
+T(ρᵢ) means that its requirements are sufficiently transparent to be understood and invoked;
+
+N(ρᵢ) means that admission does not depend entirely on the unreviewable discretion of an already dominant party;
+
+D(ρᵢ) means that successful traversal produces durable rather than momentary standing.
+
+These conditions distinguish a genuine pathway from a merely ceremonial possibility. The pathway condition can therefore be strengthened:
+
+where d denotes the authority capable of maintaining i’s exclusion. A legitimate successor mechanism cannot be wholly contained within the uncontrolled discretion of the excluding party. This yields the Law of the First Increment:
+
+Law of the First Increment
+
+The legitimacy of a pluralist order depends first upon whether every person subject to that order can cross the boundary between political nullity and recognized claim-bearing status. No subsequent distribution of rights, benefits, or opportunities can compensate for the permanent foreclosure of that transition. It prevents them from acquiring recognized institutional force. Pluralistic inclusion begins with the first increment because no theory of fair participation can repair a system that has not yet recognized all the persons entitled to participate. The diagnostic question is not:
+
+Did this person receive the outcome they wanted?
+
+It is:
+
+Did this person occupy a recognized position from which the institution was obligated to encounter their claim as part of the process through which authority was exercised?
+
+5.4 Inclusion as a Structural Requirement
+
+The Axiom of Pluralistic Inclusion is not offered solely as an independent moral prohibition against exclusion. It identifies inclusion as a constitutive condition of pluralist legitimacy. A social order cannot claim to coordinate a plurality of agents if it removes some of those agents from the field in which coordination is authorized. It may successfully control them, manage them, or secure their compliance, but these achievements do not transform subjection into legitimate coordination. The distinction can be expressed as follows:
+
+whereas:
+
+Control can exist without inclusion. Legitimate pluralist coordination cannot. If agent i is persistently governed by Ω while σᵢ = 0, then Ω cannot justify its authority by reference to a shared political relationship with i. The institution has excluded i from the very structure through which its decisions are supposed to become collectively binding. It confronts i not as a co-participant who may disagree with an authorized outcome, but as an external object whose compliance must be produced through incentives, dependency, manipulation, or force. Thus:
+
+where LΩ(i) denotes the pluralist legitimacy of Ω’s authority relation with respect to i. This does not necessarily entail that every act performed by Ω is morally wrong or substantively harmful. It means that Ω cannot derive the authority of those acts from a pluralist relation of common authorization with i. The legitimacy defect is relation-specific before it becomes system-wide. An institution may maintain legitimate relations with some participants and illegitimate relations with others:
+
+Nevertheless, exclusion also affects the legitimacy of the order considered as a whole. If Ω presents itself as a common order of UΩ while systematically excluding part of UΩ, its claim to universality is false. It is not fully a shared order. It is an order authorized by one segment and imposed upon another. The system-wide condition is:
+
+Pluralistic inclusion is therefore necessary for system-wide legitimacy. It is not sufficient. An institution that recognizes everyone as a participant may still distribute standing asymmetrically, permit domination, enact unjust laws, or produce substantively indefensible decisions. The formal relationship is:
+
+but not:
+
+where I(Ω) denotes satisfaction of the inclusion condition. Inclusion is a necessary component of legitimacy, not a complete proof of it. Inclusion consequently performs three connected functions. First, it establishes the person as a member of the justificatory community. Second, it preserves feedback pathways through which institutional errors and injuries can be identified. Third, it creates a route for conflict to remain internal to the shared political order rather than becoming a confrontation between the order and persons whom it governs from outside the field of recognition. The Successor Principle captures the minimum transformation required to overcome this defect. It demands that no person remain permanently below the threshold at which claims become politically recognizable. The Axiom of Pluralistic Inclusion can therefore be restated in its complete form:
+
+Axiom of Pluralistic Inclusion
+
+The complete inclusion requirement is therefore that every person persistently governed by Ω possess effective standing or an accessible, transparent, nonarbitrary, and durable pathway through which such standing can be realized independently of the uncontrolled discretion of the excluding authority. The first structural demand of pluralism is accordingly simple in formulation but extensive in consequence:
+
+A social order may ask participants to accept decisions they opposed. It may assign specialized authority, create offices, establish jurisdictions, and impose enforceable obligations, however, an order that governs persons without recognizing their standing does not yet achieve legitimate coordination.
+
+Axiom 2: Symmetry of Standing (The Axiom of Symmetry)
+
+Inclusion alone, however, does not determine the relations among those who have entered the political field. A social order may recognize several persons as participants while assigning one of them an uncontrolled authority to determine the conditions under which the others may act, object, or seek repair. The second axiom therefore concerns the relational distribution of standing. The Axiom of Symmetry holds that pluralist legitimacy requires equality at the level of basic justificatory standing. No participant may possess an inherent or uncontrolled authority to determine the terms governing another while remaining exempt from reciprocal demands for justification, contestation, and review. This requirement may be stated initially as follows.
+
+Axiom of Symmetry
+
+Let Ω be a social order, and let PΩ denote the set of agents recognized as participants within Ω. For every pair of agents i, j ∈ PΩ who possess equal fundamental status, neither agent may exercise final and uncontrolled authority over the standing of the other. Any differentiated authority between them must remain functionally bounded, publicly justifiable, contestable, and subject to procedures of review and repair that preserve their equal basic status as bearers of claims. Let σᵢΩ denote the basic standing of agent i within Ω. The minimum symmetry condition is:
+
+This equality does not mean that i and j must possess identical offices, expertise, responsibilities, resources, or influence in every decision. It means that neither participant possesses a superior kind of political personhood or justificatory status. Each remains entitled to appear before the other and before the institutions governing them as a source of claims whose standing cannot be extinguished by unilateral decision. The corresponding prohibition is:
+
+where i ≻ᶠ j means that i possesses final authority over the standing, frame, or permissible claims of j. The axiom permits differentiated or functional authority. It prohibits the transformation of such authority into a relationship in which one participant controls both the substantive decision and the conditions under which the other may challenge that decision. Symmetry is therefore neither a demand for institutional sameness nor a rejection of collective decision-making. It is a constraint on the architecture of authority. It distinguishes a relationship in which participants occupy different roles within a shared and contestable order from one in which a dominant participant determines the order itself without remaining answerable to those governed by it.
+
+6.1 Equality and Coordination
+
+Pluralist coordination begins from the fact that multiple agents must act together without sharing a universally accepted final authority. The participants may disagree about moral truth, political justice, religious obligation, economic organization, or the common good. Nevertheless, they remain mutually affected by common institutions and must establish procedures through which collective action can occur.
+
+The need for collective action does not by itself determine how authority should be distributed. The central legitimacy question is whether the mechanism preserves the participants as persons of equal basic standing while generating that outcome. (Christiano 2008; Estlund 2008) Let A and B be two agents whose actions or interests intersect within a shared coordination domain d. A coordinated decision Dᵈ affects both agents:
+
+Because both agents are subject to the decision, both must be represented within the justificatory field from which the decision derives its authority:
+
+The inclusion of A and B is necessary but not sufficient. The relation must also preserve their equal standing:
+
+Equality in this expression does not require that A and B have identical control over the immediate outcome. If A possesses relevant expertise, holds a defined office, or has been validly delegated a decision-making function, A may exercise greater decisional authority within domain d. The equality concerns the underlying status through which A and B can demand justification, invoke the governing rules, challenge abuses, and seek review.
+
+We must therefore distinguish basic standing from decisional authority. Let σᵢ represent the basic standing of agent i, and let αᵢᵈ represent the decisional authority assigned to i within domain d. Symmetry requires:
+
+but does not necessarily require:
+
+A legitimate institution may assign:
+
+provided that the inequality is produced and constrained by a structure that preserves:
+
+This distinction is indispensable. Without it, the Axiom of Symmetry would imply that judges, elected representatives, emergency coordinators, administrators, teachers, physicians, and other specialized actors could never exercise differentiated authority.
+
+The relevant requirement is that differences in αᵈ must not convert into differences in fundamental σ.This distinction also clarifies the meaning of equal voice. Equal standing does not require equal speaking time, equal expertise, equal persuasiveness, or equal success. Nor does it imply that every participant must possess an individual veto over every collective decision. Majority rule is compatible with equal standing when political defeat does not extinguish the loser’s continuing rights of participation, opposition, contestation, and revision. Equal voice instead means that each participant possesses an institutionally recognized capacity to introduce claims, present relevant reasons, contest interpretations, demand accountability, and seek correction. The claims may ultimately be rejected, but they may not be dismissed solely because the claimant is regarded as possessing an inferior political status. (Young 2000; Lafont 2020) Symmetry therefore describes reciprocal justificatory status. A and B need not agree, and neither is guaranteed victory. Each must, however, remain within a shared structure in which the other cannot claim an intrinsic right to rule without answerability. The central relation is:
+
+The bidirectional relation means that both agents can act as sources and recipients of claims. It contrasts with a structurally unilateral relation:
+
+in which A can determine conditions affecting B while B lacks an effective return pathway through which A’s exercise of authority can be challenged. The Axiom of Symmetry accordingly treats equality as a property of the coordination relation, not merely as an attribute separately assigned to individuals. It is not enough to declare that A and B are equal in the abstract. Their institutional relationship must preserve that equality when decisions are made, authority is exercised, errors occur, and remedies are sought.
+
+6.2 Domination as Structural Asymmetry
+
+Domination occurs when one participant possesses an uncontrolled capacity to determine the conditions under which another participant may act, object, or preserve their standing. Its defining feature is not simply unequal power. Differences in power arise in virtually every social relationship. Domination arises when such differences are organized into an asymmetric structure of authority that the subordinated participant cannot effectively contest, constrain, or leave through a legitimate and viable pathway. Let Pₐᵦ denote the power of A to affect B and let Cᵦₐ denote the capacity of B to contest or constrain A’s exercise of that power. (Pettit 1997; Shapiro 2012) A power difference alone does not prove domination:
+
+Domination is present when A’s power over B is combined with the absence or insufficiency of effective control by B:
+
+This formulation may be strengthened by including the absence of legitimate and viable exit. Let Xᵦ denote a viable pathway through which B can leave or refuse the governing relationship without being deprived of the basic conditions necessary for agency. Then:
+
+Domination is therefore not reducible to actual interference. The possibility of arbitrary determination is built into the relationship even when the power is exercised with restraint. (Pettit 1997; Pettit 2012) The relevant distinction is between being protected by another’s goodwill and being protected by a structure in which one possesses standing. Benevolence may produce desirable outcomes, but it does not establish symmetry. (Pettit 1997) Symmetry exists when B’s capacity to challenge A does not depend entirely upon A’s permission. The Axiom of Symmetry develops this insight as a requirement of pluralist legitimacy. An order cannot treat its members as equal sources of claims while placing some of them permanently at the mercy of another participant’s unanswerable will.
+
+The precise realization mechanism of structural asymmetry can vary. The invariant feature is the localization of final control in one participant or institution combined with the weakening or removal of reciprocal constraint. Let Fₐᵦ denote A’s authority to determine the institutional frame governing B. Frame authority includes the capacity to determine which claims are admissible, which procedures are available, which evidence counts, and whether B possesses a valid status from which to object. Domination becomes especially severe when:
+
+A then controls not only particular decisions affecting B but also the conditions under which B may contest those decisions. A acts simultaneously as rule-maker, interpreter, decision-maker, and final judge of challenges to A’s own authority. This is the architecture of final authority. Its asymmetry cannot be cured simply by requiring A to consult B. Consultation leaves the basic relationship unchanged if A retains complete discretion over whether B’s claims will have any effect:
+
+where Kᵦ denotes consultation of B. A dominant authority may solicit B’s views for informational, strategic, or reputational reasons without recognizing B as a person whose objections impose any requirement of justification or review. Exit constrains domination only when it is viable. Domination must also be distinguished from a single adverse decision. If A’s proposal prevails over B’s in a fair and contestable process, the resulting inequality of outcome does not establish domination. B may lose while retaining equal standing:
+
+Domination instead concerns the architecture through which outcomes are produced and challenged:
+
+The symbol >Ω indicates structural superiority within the order, not merely greater success in a particular contest. A possesses superior standing when A’s claims can bind B while B’s claims cannot generate a comparable requirement of answerability from A. The Axiom of Symmetry prohibits this asymmetry because it contradicts the premise that A and B are participants of equal fundamental status. Any legitimate authority A exercises must therefore remain limited by a common structure in which B retains the status necessary to contest its use. This yields the Non-Conversion Principle:
+
+Non-Conversion Principle
+
+No difference in office, expertise, wealth, influence, historical position, or delegated authority may be converted into a superior form of basic standing that authorizes one participant to determine another’s status without reciprocal accountability. When differentiated authority crosses that boundary, functional organization becomes domination.
+
+6.3 Functional Authority versus Final Authority
+
+A plausible theory of symmetry must accommodate the fact that organized social life requires differentiated roles. Institutions cannot operate if every participant must perform every function or if no decision can be provisionally closed without unanimous agreement. Expertise, delegation, representation, jurisdiction, and emergency coordination can all justify differences in immediate decisional authority. The relevant distinction is therefore not between authority and the complete absence of authority. It is between functional authority and final authority.
+
+Functional authority is a bounded capacity assigned to an agent or institution for a specified purpose within a defined domain. It derives from competence, office, delegation, representation, or procedural authorization. Its scope is limited, its exercise is governed by publicly identifiable standards, and its misuse can be challenged through mechanisms not controlled entirely by the officeholder. Let αᵢᵈ denote the authority assigned to agent i in domain d. Functional authority has the form:
+
+where:
+
+Cᵢ denotes relevant competence;
+
+Dᵢ denotes valid delegation;
+
+Jᵢ denotes defined jurisdiction;
+
+Tᵢ denotes the temporal or procedural term of authority.
+
+Functional authority is restricted by its generating conditions:
+
+and remains bounded by:
+
+It is also reviewable:
+
+where Rᵢᵈ denotes an institutionally effective mechanism for reviewing the exercise or limits of i’s authority. Domains of authority may be functionally differentiated. (Raz 1986; Estlund 2008) No role automatically establishes superior basic standing. The authority is attached to a function and must remain constrained by the conditions that justify that function.
+
+Final authority has a different structure. It is the capacity to determine not only a decision but also the validity of the rules, jurisdiction, objections, and standing through which the decision might be challenged. A final authority claims the ability to close both the dispute and the field of contestation. Let αᵢᶠ denote final authority. Then:
+
+Agent i controls:
+
+D, the substantive decision;
+
+J, the scope of jurisdiction;
+
+R, the mechanisms of review;
+
+σ, the standing of those entitled to challenge the decision.
+
+The decisive defect is not that i makes a final decision in a particular proceeding. Practical coordination often requires finality at the level of a particular decision. The defect arises when i possesses final authority over whether the decision may ever be challenged, revised, reinterpreted, or placed within a broader structure of accountability. This yields a distinction between decision finality and authority finality. Decision finality means:
+
+A decision at time t is closed sufficiently for coordinated action to proceed. Authority finality means:
+
+The decision is closed, the pathways of review are closed, and the authority determines who possesses standing to reopen the matter. Pluralist legitimacy may require the first. It cannot permit the second.
+
+A legitimate institution can therefore issue binding decisions without claiming absolute or metaphysically final authority. A binding decision determines what participants are presently required to do. An uncontestable decision removes the standing through which those participants may continue to question the decision’s justification, scope, or future validity. Functional authority remains compatible with symmetry when five conditions hold.
+
+Its domain is defined
+
+Its purpose is publicly identifiable
+
+Its exercise remains subject to standards not created solely by the authority at the moment of application
+
+Affected participants retain standing to contest misuse
+
+Some effective mechanism of correction or authorized revision remains available
+
+Where these conditions are absent, differentiated authority approaches final authority. The officeholder’s functional role becomes a position from which the standing of others can be unilaterally determined. This distinction also resolves the apparent conflict between expertise and political equality. Thus:
+
+where εᵢᵈ denotes relevant expertise. Epistemic asymmetry does not entail political or justificatory superiority. The Axiom of Symmetry therefore does not flatten institutional life. It disciplines differentiated authority by preventing functional differences from hardening into final relations of domination. It permits offices but denies that officeholders are superior persons. It permits expertise but denies that experts alone may determine the legitimate uses of their knowledge. It permits binding decisions but preserves the standing of those bound by them.
+
+6.5 Repair and Equilibrium
+
+Repair is the organized process through which a social order identifies an asymmetry of standing, interrupts the mechanisms reproducing it, and restores the affected participants to a relationship of reciprocal claim-bearing status. The objective is to remove the structural superiority through which one participant can determine another’s governing conditions without reciprocal accountability. The target of repair is not necessarily equality of wealth, authority, expertise, or social influence in every respect. It is restoration of the conditions necessary for equal standing. Repair must therefore be directed at the specific mechanisms producing the asymmetry.
+
+Repair must target the mechanism producing the asymmetry, whether exclusion, inaccessible review, concentrated authority, or inherited barriers to effective standing. A pluralist order must preserve internal pathways through which formal or effective asymmetries can be identified and corrected. Repair may require differentiated measures, but it must restore equal standing rather than relocate final authority. A formally available but prohibitively costly exit does not convert domination into consent. The availability of internal repair is therefore crucial. Persons should not be forced to choose between submission and the destruction of their social position. A legitimate coordination order must permit them to challenge domination while preserving their standing as members. The complete Axiom of Symmetry can now be restated.
+
+Axiom of Symmetry
+
+The refined symmetry condition therefore permits differentiated authority where that authority remains bounded, contestable, reviewable, and incapable of determining unilaterally whether another participant counts. The central demand of the axiom can therefore be expressed concisely:
+
+The Axiom of Pluralistic Inclusion established that no governed person may be rendered a nullity. The Axiom of Symmetry adds that no included person may be subordinated to another participant’s final authority. Inclusion establishes entry into the field of legitimate coordination. Symmetry governs the relations within that field. Together, they specify the minimum architecture through which a pluralist order can make binding decisions without abandoning the equal standing of the persons whom those decisions bind. (Pettit 2012; Lafont 2020)
+
+Structural Dynamics of Legitimacy
+
+The preceding axioms identify the minimum conditions under which persons can participate in a pluralist order as recognized and equal bearers of claims. Yet the significance of those axioms extends beyond questions of moral status or political fairness. Inclusion and symmetry are not merely normative requirements imposed upon an otherwise neutral institutional landscape. They are also structural conditions that shape how information flows, how conflicts are processed, how errors are corrected, and how institutions adapt over time.
+
+The present theory therefore proposes a structural dynamics of legitimacy. The objective is not to reduce political life to physics, nor to claim that social systems obey deterministic natural laws in the manner of physical objects. The language of "social physics" should therefore be understood as heuristic rather than literal. It directs attention toward invariant relational properties that influence a system's capacity for coordination. These constraints do not determine unique outcomes, but they shape the range of outcomes that remain sustainably achievable.
+
+The central claim of this section is that legitimacy possesses a dynamic dimension. It is a property of the processes through which institutions receive information, correct mistakes, maintain accountability, and reproduce authority across time. Inclusion and symmetry are important because they create the conditions under which a pluralist order can continue learning from those it governs.
+
+7.1 Information, Feedback, and Institutional Learning
+
+No authority possesses perfect information concerning the needs, experiences, preferences, injuries, and aspirations of all participants. (Young 2000; Warren 2017) Institutions therefore depend upon mechanisms through which relevant information can be gathered, interpreted, and incorporated into collective decision-making. Information, however, does not appear spontaneously. It emerges through participants who occupy different roles, experience different consequences, and observe different aspects of social reality. A population dispersed across diverse experiences necessarily contains information unavailable to any single participant or authority. (Young 2000; Mansbridge et al. 2012)
+
+Domination distinguishes received information from corrective feedback. An authority may gather information from governed persons while retaining complete discretion over whether their claims can initiate reconsideration or review. Such arrangements narrow the institution’s epistemic field, weaken error correction, encourage strategic compliance, and displace contestation outside ordinary institutional channels.
+
+The Axiom of Pluralistic Inclusion affects this informational architecture directly. When persons are excluded from standing, their experiences may still generate consequences, but those consequences lose an authorized pathway into institutional awareness. The institution continues to act upon the affected population while simultaneously reducing its ability to learn from that population. The institution may continue receiving partial information concerning the excluded participant through administrative observation or third-party reporting. Yet such information differs fundamentally from information carried by standing. The difference is significant because a claim contains not only data but interpretation. It presents the participant as an independent source of meaning concerning the consequences of institutional action.
+
+Feedback exists when information concerning institutional consequences can return to decision-making structures in a form capable of influencing subsequent decisions. (Mansbridge et al. 2012; Warren 2017) The importance of symmetry becomes evident at this stage. As feedback deficiency increases, institutions become progressively less capable of learning from their own consequences. Errors may remain uncorrected not because no one notices them, but because those who notice them lack standing sufficient to force institutional attention. The practical result is organizational blindness.
+
+7.2 Contestation and Legitimacy Deficits
+
+One fundamental requirement for evaluating pluralist societies is contestability. (Pettit 2012; Lafont 2020) The relevant question is therefore not whether contestation exists. The relevant question is whether contestation possesses authorized pathways. A society with high contestation capacity permits participants to challenge decisions while preserving their standing within the political order. A society with low contestation capacity increasingly forces opposition outside institutional channels.
+
+When institutions reduce legitimate avenues for challenge, they simultaneously reduce their capacity for internal correction. Contestability therefore serves a stabilizing role. Conflict routed through recognized procedures remains part of a shared political order. (Habermas 1996; Cohen 1997) Conflict denied such pathways is more likely to appear as withdrawal, mistrust, non-compliance, institutional disengagement, or open confrontation. The interaction of exclusion, asymmetry, information loss, and feedback failure generates what may be termed a legitimacy deficit. A legitimacy deficit is a structural mismatch between the authority exercised and the authority that can be justified through the relationships constituting the order. (O’Neill 2002; Acemoglu and Robinson 2012) The deficit concerns an underlying structural condition rather than any single observable outcome.
+
+7.3 Adaptation Without Final Authority
+
+The ultimate importance of inclusion and symmetry lies in their relationship to institutional adaptation. Institutional adaptation depends directly upon the structural conditions established in the previous sections. This insight allows us to distinguish between mere persistence and legitimately reproduced stability. Persistence means only that an institution continues to exist. Legitimately reproduced stability occurs where institutional continuity is sustained through processes in which affected participants retain standing to inform, contest, and revise authority. Inclusion preserves entry into the political field. Symmetry preserves equal standing within that field. Together they generate the informational, corrective, and adaptive capacities through which a pluralist society can govern itself without appealing to a final authority standing above the participants themselves.
+
+Objections and Replies
+
+The theory should not be defended by denying institutional complexity, historical variation, or the need for authoritative decision-making. Nor should it be defended by treating every asymmetry as domination, every disagreement as exclusion, or every failure of consensus as illegitimacy. Its narrower claim is that legitimate authority cannot permanently extinguish the standing of affected persons or reserve to one participant the uncontrolled power to determine whether another participant counts. The objections considered below help clarify that claim and establish its proper scope.
+
+8.1 Objection One: Stable Hierarchies Exist
+
+Monarchies, empires, religious establishments, military organizations, corporations, bureaucracies, and patriarchal households have often exhibited durable asymmetries of authority. Some have survived across generations or centuries. If the theory predicts that asymmetry necessarily produces instability or collapse, the historical record appears to falsify it. The objection can be formulated as follows:
+
+where  means that coordination order contains persistent asymmetry and  means that exhibits substantial durability. If asymmetric systems can be durable, then symmetry cannot be a necessary condition of empirical stability. This objection succeeds against an excessively strong formulation of the theory. The structural theory does not identify legitimacy with mere persistence. It distinguishes at least three properties:
+
+Durability refers to the continued existence of an institutional arrangement across time. Structural stability refers to the order’s capacity to reproduce coordination, integrate relevant feedback, correct errors, and respond to changing conditions without progressively increasing its dependence on exclusion or uncontrolled coercion. Legitimacy refers to the standing-preserving authority of the order’s decisions over those subject to them. A system may possess one of these properties without possessing the others. (Buchanan and Keohane 2006)
+
+This deficit may produce different historical outcomes. The realization mechanism varies across domains, but the invariant relation remains: uncontrolled asymmetry weakens the order’s claim to coordinate through reciprocal standing. The theory does not require every hierarchy to generate the same observable consequence. What must remain invariant is the distinction between bounded functional differentiation and uncontrolled authority over another participant’s basic standing. The concrete manifestation of a legitimacy deficit may differ, but the underlying structural failure remains identifiable. Historical endurance is evidence of reproductive capacity, not proof of standing-preserving authorization.
+
+8.2 Objection Two: Expertise Requires Authority
+
+The second objection holds that complex societies cannot operate through symmetrical standing because many decisions require expertise. If symmetry requires treating every judgment as equally authoritative, then the theory would disable the very institutions on which collective welfare depends. The objection can be represented as follows:
+
+If relevant expertise is unequal, legitimate decisional authority may also need to be unequal. A theory requiring equal authority in every decision would therefore be institutionally unworkable. The Symmetry Axiom concerns equality of basic standing, not the equal distribution of every form of authority. The theory must distinguish at least four kinds of authority: Epistemic, Functional, Decisional, and Final. Only the fourth is categorically incompatible with symmetry of standing. (Estlund 2008; Brown 2009; Douglas 2009) Expertise informs collective judgment, but it does not independently determine the complete normative structure within which technical knowledge is applied. The relationship can be stated precisely:
+
+Unequal epistemic authority does not entail unequal basic standing. It may justify unequal influence over a particular evidentiary determination:
+
+where denotes evidentiary weight. But that inequality remains domain-bounded:
+
+Temporary concentrations of authority may be legitimate where delay would defeat the purpose of coordination. Yet emergency authority remains symmetry-compatible only when its scope, duration, purpose, and conditions of review are bounded. An emergency cannot legitimately become a self-renewing basis through which the institution exercising extraordinary power determines unilaterally whether the emergency continues and whether its actions may be challenged. The general condition is:
+
+only if the authority is limited by a structure containing at least domain specification, justificatory accountability, temporal or jurisdictional bounds where appropriate, and a realizable mechanism of review or repair. Here, denotes legitimate differentiated authority. The objection therefore identifies a necessary clarification. Symmetry requires that differentiation remain answerable to the standing of those affected. Expertise can justify bounded authority within a domain. It cannot justify unrestricted authority over the persons to whom that expertise is applied.
+
+8.3 Objection Three: Equality Is Not Universally Valued
+
+The third objection challenges the purported pluralist neutrality of the theory. By making symmetry a condition of legitimacy, the theory appears to privilege an egalitarian liberal doctrine over rival comprehensive views. It therefore seems to introduce the kind of final normative authority that it claims to avoid. The reply begins by distinguishing the claim that e from the claim that symmetry of standing is structurally necessary for pluralist legitimacy. The theory does not assert the first proposition. It asserts the second proposition as a condition of a specific kind of authority: authority that claims to bind plural agents without subordinating them to a final worldview.
+
+A participant may believe that members of group ought to govern others. The mere existence of that belief is compatible with sociological pluralism. What the participant cannot do is invoke pluralist legitimacy while reserving to their own doctrine the final authority to determine whether dissenters possess standing. The hierarchical doctrine may claim authority through revelation, tradition, natural order, conquest, or superior virtue. It cannot simultaneously claim to coordinate a plurality of agents as mutually recognized participants while denying that some of them count as participants. The argument is conditional:
+
+If an order claims pluralist legitimacy, symmetry of basic standing follows from the form of that claim. The order may reject the condition, but it must then abandon the assertion that its authority arises from coordination among participants who remain distinct sources of claims. It instead asserts a non-pluralist ground of authority.
+
+This establishes an incompatibility between two architectures of authority.. Suppose authority  claims the right to govern participant  while denying  any standing to challenge the doctrine on which that right rests. The conclusion is secured only by excluding the governed party from the process through which the conclusion is authorized. The theory calls this a standing closure. The authority may still compel compliance, but it cannot derive legitimacy from reciprocal coordination because reciprocity has been denied at the foundational level.
+
+The symmetry principle is therefore not neutral among all conceivable political orders. (Forst 2012) Symmetry requires only that no participant’s comprehensive doctrine acquire final control over whether other affected participants are eligible to contest its political application. The objection thus exposes an important limit of the theory’s neutrality. It allows a wide range of substantive doctrines to participate in collective coordination, but it does not permit any doctrine to extinguish the standing of those who reject it.
+
+8.4 Objection Four: The Theory Is Merely Procedural
+
+The fourth objection contends that inclusion, participation, contestability, and symmetrical standing concern only the procedure through which political decisions are made. A procedure can include everyone and still produce gravely unjust outcomes. If the theory evaluates legitimacy primarily through standing, it may be unable to condemn substantively unjust decisions that emerge from formally inclusive procedures.
+
+This objection draws attention to a familiar criticism of purely procedural accounts of justice. Rawls’s theory, for example, does not merely endorse whatever outcome emerges from an actual vote. It places basic liberties and principles of justice before ordinary calculations of social advantage, partly to prevent aggregate benefits from overriding the separateness and claims of individual persons. (Rawls 1971) Scholarship on Rawls has also emphasized that equal political liberty and its fair value require more than an empty formal entitlement to participate. (Krishnamurthy 2013) This structural theory accepts the core of this objection. Inclusion and symmetry are not sufficient conditions of substantive justice, and the theory should not claim otherwise. An inclusive and symmetrical process can make mistakes, act on false information, adopt disproportionate measures, or violate independent moral constraints. The two axioms establish necessary conditions for pluralist legitimacy, not a complete account of justice.
+
+The acceptance of this limitation does not reduce the axioms to insignificant procedural preferences. First, the conditions concern more than procedures in a narrow sense. Second, the axioms constrain outcomes as well as decision-making procedures. Third, substantive injustice frequently operates through standing failures. Nevertheless, some substantive wrongs may not be fully reducible to inclusion or symmetry. The present theory develops the first two terms without claiming that they exhaust them. The objection therefore establishes an important boundary. The structural axioms provide a threshold theory of legitimacy, not a complete moral theory. It permits the inquiry to continue.
+
+Conclusion
+
+Pluralism presents a distinctive challenge for political legitimacy. In societies characterized by persistent disagreement concerning religion, morality, philosophy, and the common good, no single doctrine can be assumed to possess uncontested authority over all participants. Yet collective action remains necessary. The central question explored in this paper has therefore been straightforward but fundamental: how can a society generate legitimately binding coordination among persons who do not agree on the ultimate foundations of authority?
+
+The argument developed here has proposed that any answer to this question must begin not with the substance of particular political doctrines but with the structure of the relationships through which authority is exercised. Legitimacy, on this view, is not merely a property of outcomes. It is a property of the relational architecture through which outcomes are produced, challenged, revised, and maintained. To clarify this architecture, the paper introduced two foundational axioms.
+
+Inclusion identifies who must appear within the field of coordination. Symmetry governs how those participants may relate to one another once they have entered that field. Inclusion without symmetry permits formally recognized but subordinate populations. Symmetry without inclusion merely equalizes the status of those already admitted while leaving others outside the political community altogether. Legitimate pluralist coordination emerges only when every affected participant is recognized and no participant occupies a position of unanswerable superiority.
+
+Rather than treating legitimacy as a static property possessed or lacking at a single moment, the paper argued that legitimacy is connected to the ongoing capacity of institutions to process information, receive feedback, accommodate contestation, and repair asymmetries of standing. Exclusion restricts informational access. Domination weakens corrective feedback. Both conditions generate legitimacy deficits by creating a divergence between the authority exercised by institutions and the authority that can be justified through reciprocal participation. Such deficits need not immediately produce institutional collapse, but they diminish a society's capacity for self-correction and increase its dependence upon coercion, dependency, or other nonreciprocal mechanisms of compliance. The axioms do not prohibit differentiated authority, and they do not predict the immediate collapse of every illegitimate institution. Their narrower claim is that exclusion and final domination prevent authority from being reproduced through the reciprocal standing of those subject to it.
+
+The theory is intended neither as a moral metaphysics nor as a deterministic science of history. Its purpose is more modest and more foundational. It seeks to identify the minimum relational conditions under which persons who lack a common final authority can nevertheless participate in a shared political order without being reduced either to subjects of domination or to objects of administration. Future work can extend where the axioms developed here invite application questions and raise further theoretical questions. Nevertheless, the core conclusion of this paper can be stated simply.
+
+A pluralist society cannot rely upon unanimity of belief, shared metaphysical commitments, inherited hierarchies, or uncontested truths to secure legitimacy. It must instead construct institutions capable of generating common action among persons who remain different from one another. The success of that project depends upon preserving two fundamental conditions. Every person subject to the order must remain present within it as a bearer of claims and every participant must remain protected against relations of final domination.
+
+A society may remain divided about religion, morality, economics, identity, and the meaning of the good life. It may never achieve consensus regarding ultimate truths. Yet if it preserves inclusion and symmetry, it preserves something more fundamental: a framework within which disagreement can continue without destroying the equal standing of the participants themselves. In a world without a universally accepted final authority, legitimacy begins when no person is rendered nobody and no person is permitted to become everybody.
+
+References:
+
+Acemoglu, Daron, and James A. Robinson. 2012. Why Nations Fail: The Origins of Power, Prosperity, and Poverty. New York: Crown.
+
+Arendt, Hannah. 1951. The Origins of Totalitarianism. New York: Harcourt, Brace.
+
+Beitz, Charles R. 2009. The Idea of Human Rights. Oxford: Oxford University Press.
+
+Brown, Mark B. 2009. Science in Democracy: Expertise, Institutions, and Representation. Cambridge, MA: MIT Press.
+
+Buchanan, Allen, and Robert O. Keohane. 2006. “The Legitimacy of Global Governance Institutions.” Ethics & International Affairs 20 (4): 405–437. https://doi.org/10.1111/j.1747-7093.2006.00043.x.
+
+Christiano, Thomas. 2008. The Constitution of Equality: Democratic Authority and Its Limits. Oxford: Oxford University Press.
+
+Cohen, Joshua. 1997. “Deliberation and Democratic Legitimacy.” In Deliberative Democracy: Essays on Reason and Politics, edited by James Bohman and William Rehg, 67–91. Cambridge, MA: MIT Press.
+
+Crawford, Kate. 2021. Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence. New Haven, CT: Yale University Press.
+
+Dahl, Robert A. 1989. Democracy and Its Critics. New Haven, CT: Yale University Press.
+
+Douglas, Heather. 2009. Science, Policy, and the Value-Free Ideal. Pittsburgh, PA: University of Pittsburgh Press.
+
+Estlund, David M. 2008. Democratic Authority: A Philosophical Framework. Princeton, NJ: Princeton University Press.
+
+Forst, Rainer. 2012. The Right to Justification: Elements of a Constructivist Theory of Justice. Translated by Jeffrey Flynn. New York: Columbia University Press.
+
+Fraser, Nancy. 2008. Scales of Justice: Reimagining Political Space in a Globalizing World. New York: Columbia University Press.
+
+Habermas, Jürgen. 1996. Between Facts and Norms: Contributions to a Discourse Theory of Law and Democracy. Translated by William Rehg. Cambridge, MA: MIT Press.
+
+Jasanoff, Sheila. 1990. The Fifth Branch: Science Advisers as Policymakers. Cambridge, MA: Harvard University Press.
+
+Krishnamurthy, Meena. 2013. “Completing Rawls’s Arguments for Equal Political Liberty and Its Fair Value: The Argument from Self-Respect.” Canadian Journal of Philosophy 43 (2): 179–205.
+
+Kymlicka, Will. 1995. Multicultural Citizenship: A Liberal Theory of Minority Rights. Oxford: Clarendon Press.
+
+Lafont, Cristina. 2020. Democracy without Shortcuts: A Participatory Conception of Deliberative Democracy. Oxford: Oxford University Press.
+
+Longino, Helen E. 1990. Science as Social Knowledge: Values and Objectivity in Scientific Inquiry. Princeton, NJ: Princeton University Press.
+
+Macdonald, Terry, and Kate Macdonald. 2020. “Towards a ‘Pluralist’ World Order: Creative Agency and Legitimacy in Global Institutions.” European Journal of International Relations 26 (2): 518–544. https://doi.org/10.1177/1354066119873134.
+
+Mansbridge, Jane, James Bohman, Simone Chambers, Thomas Christiano, Archon Fung, John Parkinson, Dennis F. Thompson, and Mark E. Warren. 2012. “A Systemic Approach to Deliberative Democracy.” In Deliberative Systems: Deliberative Democracy at the Large Scale, edited by John Parkinson and Jane Mansbridge, 1–26. Cambridge: Cambridge University Press.
+
+Nietzsche, Friedrich. 1974. The Gay Science: With a Prelude in Rhymes and an Appendix of Songs. Translated by Walter Kaufmann. New York: Vintage Books. Originally published 1882.
+
+O’Neill, Onora. 2002. A Question of Trust: The BBC Reith Lectures 2002. Cambridge: Cambridge University Press.
+
+Pasquale, Frank. 2015. The Black Box Society: The Secret Algorithms That Control Money and Information. Cambridge, MA: Harvard University Press.
+
+Pettit, Philip. 1997. Republicanism: A Theory of Freedom and Government. Oxford: Clarendon Press.
+
+Pettit, Philip. 2012. On the People’s Terms: A Republican Theory and Model of Democracy. Cambridge: Cambridge University Press.
+
+Rawls, John. 1971. A Theory of Justice. Cambridge, MA: Harvard University Press.
+
+Rawls, John. 1993. Political Liberalism. New York: Columbia University Press.
+
+Rawls, John. 1999. The Law of Peoples, with “The Idea of Public Reason Revisited.” Cambridge, MA: Harvard University Press.
+
+Raz, Joseph. 1986. The Morality of Freedom. Oxford: Clarendon Press.
+
+Rousseau, Jean-Jacques. 1997. The Social Contract and Other Later Political Writings. Edited and translated by Victor Gourevitch. Cambridge: Cambridge University Press. Originally published 1762.
+
+Selbst, Andrew D., danah boyd, Sorelle A. Friedler, Suresh Venkatasubramanian, and Janet Vertesi. 2019. “Fairness and Abstraction in Sociotechnical Systems.” In Proceedings of the Conference on Fairness, Accountability, and Transparency, 59–68. New York: Association for Computing Machinery. https://doi.org/10.1145/3287560.3287598.
+
+Sen, Amartya. 2009. The Idea of Justice. Cambridge, MA: Belknap Press of Harvard University Press.
+
+Shapiro, Ian. 2012. On Non-Domination. Toronto: University of Toronto Press.
+
+Theuns, Tom. 2021. “Pluralist Democracy and Non-Ideal Democratic Legitimacy: Against Functional and Global Solutions to the Boundary Problem in Democratic Theory.” Democratic Theory 8 (1): 23–49. https://doi.org/10.3167/dt.2021.080103.
+
+United Nations. 1945. Charter of the United Nations. San Francisco: United Nations.
+
+United Nations. 1948. Universal Declaration of Human Rights. General Assembly Resolution 217 A (III), December 10, 1948.
+
+United Nations. 1966a. International Covenant on Civil and Political Rights. General Assembly Resolution 2200A (XXI), December 16, 1966.
+
+United Nations. 1966b. International Covenant on Economic, Social and Cultural Rights. General Assembly Resolution 2200A (XXI), December 16, 1966.
+
+United States. 1776. Declaration of Independence. July 4, 1776.
+
+Waldron, Jeremy. 1999. Law and Disagreement. Oxford: Clarendon Press.
+
+Warren, Mark E. 2017. “A Problem-Based Approach to Democratic Theory.” American Political Science Review 111 (1): 39–53.
+
+Young, Iris Marion. 2000. Inclusion and Democracy. Oxford: Oxford University Press.

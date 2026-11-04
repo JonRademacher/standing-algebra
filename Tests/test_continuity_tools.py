@@ -20,6 +20,7 @@ from continuity_lib import (
 )
 from make_checkpoint import make_checkpoint
 from validate_continuity import (
+    validate_corpus,
     validate_dependency_references,
     validate_duplicate_checkpoint_ids,
 )
@@ -198,6 +199,34 @@ class ContinuityToolTests(unittest.TestCase):
         self.assertIn("Truncated at bundle limit", bundle)
         self.assertTrue(bundle.split("\n[Truncated at bundle limit", 1)[0].endswith("token"))
 
+    def test_context_bundle_indexes_supplied_source_documents(self) -> None:
+        continuity = self.root / "continuity"
+        manifests = self.root / "manifests"
+        continuity.mkdir()
+        manifests.mkdir()
+        (continuity / "CURRENT_STATE.md").write_text("Current state.\n", encoding="utf-8")
+        (manifests / "CORPUS_MANIFEST.yaml").write_text(
+            json.dumps(
+                {
+                    "sources": [
+                        {
+                            "id": "SRC-TEST",
+                            "title": "Supplied source",
+                            "kind": "user_supplied_research_document",
+                            "path": "corpus/source.docx",
+                            "text_path": "corpus/source.txt",
+                        }
+                    ]
+                }
+            ),
+            encoding="utf-8",
+        )
+
+        bundle = build_bundle(self.root, max_chars=6000)
+
+        self.assertIn("Supplied source", bundle)
+        self.assertIn("corpus/source.txt", bundle)
+
     def test_checkpoint_generation_records_corpus_hashes_and_writes_integrity_manifest(self) -> None:
         manifests = self.root / "manifests"
         manifests.mkdir()
@@ -238,6 +267,40 @@ class ContinuityToolTests(unittest.TestCase):
         self.assertEqual("UCK-2026-11-04-001", checkpoint["checkpoint_id"])
         self.assertEqual(sha256_file(source), corpus["sources"][0]["sha256"])
         self.assertEqual([], verify_hash_manifest(self.root))
+
+    def test_corpus_validation_checks_original_and_extracted_text_hashes(self) -> None:
+        original = self.root / "corpus/source.docx"
+        extracted = self.root / "corpus/source.txt"
+        original.parent.mkdir(parents=True)
+        original.write_bytes(b"docx bytes")
+        extracted.write_text("extracted source\n", encoding="utf-8")
+        manifest_path = self.root / "manifests/CORPUS_MANIFEST.yaml"
+        manifest_path.parent.mkdir()
+        manifest_path.write_text(
+            json.dumps(
+                {
+                    "sources": [
+                        {
+                            "id": "SRC-TEST",
+                            "path": "corpus/source.docx",
+                            "sha256": sha256_file(original),
+                            "text_path": "corpus/source.txt",
+                            "text_sha256": sha256_file(extracted),
+                            "provenance": "test fixture",
+                            "status": "preserved_source_snapshot",
+                        }
+                    ]
+                }
+            ),
+            encoding="utf-8",
+        )
+
+        self.assertEqual([], validate_corpus(self.root))
+        extracted.write_text("modified text\n", encoding="utf-8")
+        self.assertEqual(
+            ["SRC-TEST: text_sha256 mismatch"],
+            validate_corpus(self.root),
+        )
 
 
 if __name__ == "__main__":

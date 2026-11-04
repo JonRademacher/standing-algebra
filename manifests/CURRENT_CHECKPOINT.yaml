@@ -1,42 +1,101 @@
 {
   "schema_version": 1,
-  "checkpoint_id": "UCK-2026-11-04-001",
-  "created_at": "2026-11-04T18:55:02Z",
-  "checkpoint_status": "canonical_partial",
+  "checkpoint_id": "UCK-2026-11-04-002",
+  "created_at": "2026-11-04T19:25:23Z",
+  "checkpoint_status": "initialized_candidate",
   "product": {
     "name": "Repository-backed continuity integration",
     "version": "0.1.0",
     "host_branch": "jonrademacher-complete-lean4-formalizations",
-    "host_head_at_generation": "bd3f0703ad3f9a65de9e50a920d08e693c0fb956",
+    "host_head_at_generation": "cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4",
     "worktree_dirty_paths": [
       "Collapse_Demonstrations/collapse.lean",
+      "README.md",
+      "Scripts/build_context_bundle.py",
+      "Scripts/make_checkpoint.py",
+      "Scripts/validate_continuity.py",
+      "Tests/test_continuity_tools.py",
+      "continuity/ACTIVE_TRAJECTORIES.md",
+      "continuity/CONTEXT_BUNDLE.md",
       "continuity/CURRENT_STATE.md",
       "continuity/OPEN_RESIDUALS.md",
-      "learning/DISCOVERY_SHAPES.md",
-      "learning/FAILURE_SHAPES.md",
-      "manifests/VALIDATION_RECEIPTS.json"
+      "continuity/PROJECT_GRAPH.md",
+      "corpus/README.md",
+      "manifests/CORPUS_MANIFEST.yaml",
+      "manifests/CURRENT_CHECKPOINT.yaml",
+      "manifests/SHA256SUMS",
+      "manifests/SOURCE_REPOSITORIES.json",
+      "manifests/VALIDATION_RECEIPTS.json",
+      "\"corpus/source-documents/originals/A Practical Guide to On Relevance.docx\"",
+      "\"corpus/source-documents/originals/Boundary Operator, Domination Singularity, and Derived Operators (Preliminary).docx\"",
+      "\"corpus/source-documents/originals/Collatz via SigmaR and ICG.docx\"",
+      "\"corpus/source-documents/originals/Constraint, Standing, and Legitimacy - A Structural Approach.docx\"",
+      "\"corpus/source-documents/originals/Coordination without Final Authority - Structural Axioms of Pluralist Legitimacy.docx\"",
+      "\"corpus/source-documents/originals/Coordination without Final Authority.docx\"",
+      "\"corpus/source-documents/originals/Evaluating PvNP with Sigma R and ICG.docx\"",
+      "\"corpus/source-documents/originals/Flowchart For Establishing Coordination Without Domination.docx\"",
+      "\"corpus/source-documents/originals/Foundations of Standing Algebra.docx\"",
+      "\"corpus/source-documents/originals/Legitimacy Philosophy for On Relevance.docx\"",
+      "corpus/source-documents/originals/NSCaseStudy.docx",
+      "corpus/source-documents/originals/NSProof.docx",
+      "\"corpus/source-documents/originals/On Relevance.docx\"",
+      "corpus/source-documents/originals/PatentPacket.docx",
+      "\"corpus/source-documents/originals/Prospectus for On Relevance.docx\"",
+      "\"corpus/source-documents/originals/PvNP in Sigma R and ICG.docx\"",
+      "\"corpus/source-documents/originals/QMR Proposal.docx\"",
+      "\"corpus/source-documents/originals/StD for Patent.docx\"",
+      "\"corpus/source-documents/originals/Standing Algebra Technical Specs.docx\"",
+      "corpus/source-documents/originals/Standing_Algebra_SigmaR.docx",
+      "\"corpus/source-documents/originals/Symmetry, Standing, and Structural Stability.docx\"",
+      "\"corpus/source-documents/originals/Time Without Dynamics.docx\"",
+      "\"corpus/source-documents/originals/Using Sigma R and ICG to Evaluate RH.docx\"",
+      "\"corpus/source-documents/originals/Why Being Right Isn't Enough.docx\"",
+      "\"corpus/source-documents/text/A Practical Guide to On Relevance.txt\"",
+      "\"corpus/source-documents/text/Boundary Operator, Domination Singularity, and Derived Operators (Preliminary).txt\"",
+      "\"corpus/source-documents/text/Collatz via SigmaR and ICG.txt\"",
+      "\"corpus/source-documents/text/Constraint, Standing, and Legitimacy - A Structural Approach.txt\"",
+      "\"corpus/source-documents/text/Coordination without Final Authority - Structural Axioms of Pluralist Legitimacy.txt\"",
+      "\"corpus/source-documents/text/Coordination without Final Authority.txt\"",
+      "\"corpus/source-documents/text/Evaluating PvNP with Sigma R and ICG.txt\"",
+      "\"corpus/source-documents/text/Flowchart For Establishing Coordination Without Domination.txt\"",
+      "\"corpus/source-documents/text/Foundations of Standing Algebra.txt\"",
+      "\"corpus/source-documents/text/Legitimacy Philosophy for On Relevance.txt\"",
+      "corpus/source-documents/text/NSCaseStudy.txt",
+      "corpus/source-documents/text/NSProof.txt",
+      "\"corpus/source-documents/text/On Relevance.txt\"",
+      "corpus/source-documents/text/PatentPacket.txt",
+      "\"corpus/source-documents/text/Prospectus for On Relevance.txt\"",
+      "\"corpus/source-documents/text/PvNP in Sigma R and ICG.txt\"",
+      "\"corpus/source-documents/text/QMR Proposal.txt\"",
+      "\"corpus/source-documents/text/StD for Patent.txt\"",
+      "\"corpus/source-documents/text/Standing Algebra Technical Specs.txt\"",
+      "corpus/source-documents/text/Standing_Algebra_SigmaR.txt",
+      "\"corpus/source-documents/text/Symmetry, Standing, and Structural Stability.txt\"",
+      "\"corpus/source-documents/text/Time Without Dynamics.txt\"",
+      "\"corpus/source-documents/text/Using Sigma R and ICG to Evaluate RH.txt\"",
+      "\"corpus/source-documents/text/Why Being Right Isn't Enough.txt\""
     ]
   },
   "repositories": {
     "standing_algebra": {
       "url": "https://github.com/JonRademacher/standing-algebra",
-      "commit": "cbc4211baf0993d643e55398addabf9588120f3f",
+      "commit": "425a7bb1a62cdd970cf3a18dd256643ada134be9",
       "branch": "main",
       "status": "verified",
       "path": ".",
-      "identity_note": "Observed origin/main commit; Lean, Coq, and Z3 Actions succeeded at this revision."
+      "identity_note": "Current main merge commit for PR #9; Lean, Coq, Z3, and Continuity Integrity passed on PR head cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4."
     },
     "icg": {
       "url": "https://github.com/JonRademacher/standing-algebra",
-      "commit": "cbc4211baf0993d643e55398addabf9588120f3f",
+      "commit": "425a7bb1a62cdd970cf3a18dd256643ada134be9",
       "branch": "main",
       "status": "integrated_subtree",
       "path": "ICG/",
-      "identity_note": "ICG is a distinct framework represented as a subtree in this source repository; a separate ICG repository was not found."
+      "identity_note": "ICG is a distinct framework represented as a subtree in this source repository; a separate ICG repository was not found. PR #9 merge commit."
     },
     "kernel": {
       "url": "https://github.com/JonRademacher/standing-algebra",
-      "commit": "bd3f0703ad3f9a65de9e50a920d08e693c0fb956",
+      "commit": "cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4",
       "branch": "jonrademacher-complete-lean4-formalizations",
       "status": "integration_host",
       "path": [
@@ -45,7 +104,7 @@
         "learning/",
         "governance/"
       ],
-      "identity_note": "This repository hosts the additive integration because no standalone UCK repository is available; it is not asserted to be the original UCK repository."
+      "identity_note": "This repository hosts the additive integration merged by PR #9 because no standalone UCK repository is available; it is not asserted to be the original UCK repository."
     }
   },
   "corpus_sources": [
@@ -54,7 +113,31 @@
     "SRC-SIGMAR-MANUSCRIPT",
     "SRC-ICG-MANUSCRIPT",
     "SRC-ICG-REPOSITORY",
-    "SRC-UCK-REPOSITORY"
+    "SRC-UCK-REPOSITORY",
+    "SRC-ATTACHMENT-A-PRACTICAL-GUIDE-TO-ON-RELEVANCE",
+    "SRC-ATTACHMENT-BOUNDARY-OPERATOR-DOMINATION-SINGULARITY-AND-DERIVED-OPERATORS-PRELIMINARY",
+    "SRC-ATTACHMENT-COLLATZ-VIA-SIGMAR-AND-ICG",
+    "SRC-ATTACHMENT-CONSTRAINT-STANDING-AND-LEGITIMACY-A-STRUCTURAL-APPROACH",
+    "SRC-ATTACHMENT-COORDINATION-WITHOUT-FINAL-AUTHORITY-STRUCTURAL-AXIOMS-OF-PLURALIST-LEGITIMACY",
+    "SRC-ATTACHMENT-COORDINATION-WITHOUT-FINAL-AUTHORITY",
+    "SRC-ATTACHMENT-EVALUATING-PVNP-WITH-SIGMA-R-AND-ICG",
+    "SRC-ATTACHMENT-FLOWCHART-FOR-ESTABLISHING-COORDINATION-WITHOUT-DOMINATION",
+    "SRC-ATTACHMENT-FOUNDATIONS-OF-STANDING-ALGEBRA",
+    "SRC-ATTACHMENT-LEGITIMACY-PHILOSOPHY-FOR-ON-RELEVANCE",
+    "SRC-ATTACHMENT-NSCASESTUDY",
+    "SRC-ATTACHMENT-NSPROOF",
+    "SRC-ATTACHMENT-ON-RELEVANCE",
+    "SRC-ATTACHMENT-PATENTPACKET",
+    "SRC-ATTACHMENT-PROSPECTUS-FOR-ON-RELEVANCE",
+    "SRC-ATTACHMENT-PVNP-IN-SIGMA-R-AND-ICG",
+    "SRC-ATTACHMENT-QMR-PROPOSAL",
+    "SRC-ATTACHMENT-STANDING-ALGEBRA-TECHNICAL-SPECS",
+    "SRC-ATTACHMENT-STANDING-ALGEBRA-SIGMAR",
+    "SRC-ATTACHMENT-STD-FOR-PATENT",
+    "SRC-ATTACHMENT-SYMMETRY-STANDING-AND-STRUCTURAL-STABILITY",
+    "SRC-ATTACHMENT-TIME-WITHOUT-DYNAMICS",
+    "SRC-ATTACHMENT-USING-SIGMA-R-AND-ICG-TO-EVALUATE-RH",
+    "SRC-ATTACHMENT-WHY-BEING-RIGHT-ISN-T-ENOUGH"
   ],
   "validation": {
     "standing_algebra_lean": {
@@ -71,27 +154,27 @@
     },
     "python_tests": {
       "status": "passed",
-      "receipt_id": "python-tests-2026-11-04-001"
+      "receipt_id": "source-corpus-tests-2026-11-04"
     },
     "continuity_validation": {
       "status": "passed",
-      "receipt_id": "continuity-validation-2026-11-04-001"
+      "receipt_id": "source-corpus-validation-2026-11-04"
     },
     "markdown_links": {
       "status": "passed",
-      "receipt_id": "markdown-links-2026-11-04-001"
+      "receipt_id": "source-corpus-links-2026-11-04"
     },
     "sha256_manifest": {
       "status": "passed",
-      "receipt_id": "sha256-2026-11-04-001"
+      "receipt_id": "source-corpus-sha256-2026-11-04"
     },
     "context_bundle": {
       "status": "passed",
-      "receipt_id": "context-bundle-2026-11-04-001"
+      "receipt_id": "source-corpus-context-2026-11-04"
     },
     "continuity_integrity": {
-      "status": "passed",
-      "receipt_id": "continuity-workflow-bd3f0703"
+      "status": "pending",
+      "receipt_id": "continuity-integrity-source-corpus"
     }
   },
   "residuals": [
@@ -103,12 +186,12 @@
     {
       "id": "R-002",
       "status": "open",
-      "description": "No standalone Unified Compatibility Kernel repository or complete UCK corpus is available. The integration uses the attached build package and prior Copilot continuity notes only."
+      "description": "No standalone Unified Compatibility Kernel repository or independently identified complete UCK corpus is available. The 24-document user-supplied source batch is preserved, but its canonical UCK membership and completeness are not independently established."
     },
     {
       "id": "R-003",
-      "status": "open",
-      "description": "Additional transfer docs listed by the build package are not in the current session's available source files."
+      "status": "closed",
+      "description": "The 24 documents supplied in the 2026-11-04 attachment batch are preserved as original DOCX files and readable text extractions, each with provenance and hashes. This closes ingestion of that batch, not completeness of any broader corpus."
     },
     {
       "id": "R-004",
@@ -159,6 +242,11 @@
       "id": "R-013",
       "status": "closed",
       "description": "`.git` metadata is excluded and NUL-free valid UTF-8 files are normalized across line endings; binary files remain byte-exact."
+    },
+    {
+      "id": "R-014",
+      "status": "open",
+      "description": "The 24-document corpus update has passed local tests, link checks, hash verification, and release validation, but no hosted Continuity Integrity run has validated this candidate yet."
     }
   ],
   "supersedes": [],

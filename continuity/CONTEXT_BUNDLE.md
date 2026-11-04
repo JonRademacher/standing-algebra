@@ -2,31 +2,31 @@
 
 - Generated from worktree: `C:\Users\070054\.copilot\repos\copilot-worktrees\standing-algebra\jonrademacher-effective-winner`
 - Git branch: `jonrademacher-complete-lean4-formalizations`
-- Git HEAD: `bd3f0703ad3f9a65de9e50a920d08e693c0fb956`
+- Git HEAD: `cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4`
 - Git worktree: `contains uncommitted changes`
 - Epistemic status: reconstruction index; validate against live sources.
 - Framework boundary: Σᴿ and ICG are distinct peer frameworks.
 - No hidden model-state transfer, background autonomy, or behavioral identity is claimed.
 ## continuity/CURRENT_STATE.md
 
-# Current Canonical State
+# Current Continuity State
 
-**Checkpoint ID:** `UCK-2026-11-04-001` (initialized integration checkpoint)
+**Checkpoint ID:** `UCK-2026-11-04-002` (source-corpus update candidate)
 **Checkpoint date:** 2026-11-04
-**Product status:** the continuity integration and cross-platform hash
-correction are committed and pushed. The corrected Continuity Integrity
-workflow passed; the checkpoint is being regenerated to include that receipt.
-The unrelated pre-existing Lean edit remains uncommitted.
+**Product status:** continuity integration PR #9 was merged into `main` on
+2026-11-04. The 24 user-supplied documents attached on 2026-11-04 are preserved
+as original DOCX files and readable text extractions in this candidate update.
+The unrelated pre-existing Lean edit remains uncommitted and out of scope.
 
 **Repository revisions:**
 
-- standing-algebra: `cbc4211baf0993d643e55398addabf9588120f3f` (observed
-  `origin/main`; main-branch Lean, Coq, and Z3 workflows passed).
-- ICG: `cbc4211baf0993d643e55398addabf9588120f3f` for the integrated
+- standing-algebra: `425a7bb1a62cdd970cf3a18dd256643ada134be9` (current
+  `main` merge commit for PR #9).
+- ICG: `425a7bb1a62cdd970cf3a18dd256643ada134be9` for the integrated
   `ICG/` subtree only; a distinct ICG repository was not located.
-- kernel integration host: `bd3f0703ad3f9a65de9e50a920d08e693c0fb956`
-  (`jonrademacher-complete-lean4-formalizations`; corrective commit is pushed
-  and its Continuity Integrity workflow passed).
+- kernel integration host: `425a7bb1a62cdd970cf3a18dd256643ada134be9`
+  (`main`; PR #9 is merged). The hosted Lean, Coq, Z3, and continuity checks
+  were observed passing on PR head `cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4`.
 
 ## Canonical versions
 
@@ -36,6 +36,9 @@ The unrelated pre-existing Lean edit remains uncommitted.
   `corpus/icg/`. The README explicitly documents partial source coverage.
 - Operational kernel integration: version `0.1.0`, defined in `kernel/` and
   `continuity/`; it is not represented as the full UCK v3.55.
+- User source batch: 24 original DOCX files plus readable text extractions are
+  registered in `manifests/CORPUS_MANIFEST.yaml`; originals remain authoritative
+  where extraction omits layout, images, or non-text content.
 
 ## Active objectives
 
@@ -48,29 +51,29 @@ The unrelated pre-existing Lean edit remains uncommitted.
 
 - Σᴿ and ICG are separate frameworks; the ICG README calls out partial
   formalization coverage.
-- At the observed commits, Standing Algebra Lean, Coq, and Z3 GitHub Actions
-  checks passed. This is compilation/solver verification, not mathematical
-  source fidelity or external validation.
+- On the PR #9 head commit `cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4`,
+  Lean, Coq, Z3, and Continuity Integrity GitHub Actions checks passed. This
+  is compilation/solver verification, not mathematical source fidelity or
+  external validation; the merge commit is separately identified above.
 - The prior Goodhart workflow-control prototype has 22 passing Python tests
   as reported by its executed test run; it is a separate prototype, not proof
   of self-improvement effectiveness.
 
 ## Active trajectories
 
-- `AT-001`: build and validate this continuity integration; initialize
-  checkpoint and bounded context bundle.
+- `AT-001`: maintain the merged continuity integration and validate the
+  source-corpus candidate.
 - `AT-002`: locate and ingest the standalone ICG source repository if the user
   supplies its canonical URL or makes it accessible.
-- `AT-003`: ingest complete UCK v3.55 and continuity source materials when
-  supplied; currently only attached text/package material is available.
+- `AT-003`: classify supplied source materials and build evidence crosswalks;
+  24 user-supplied documents are preserved, while canonical UCK membership and
+  corpus completeness remain unverified.
 
 ## Open residuals
 
 See `OPEN_RESIDUALS.md`. Key residuals: standalone ICG/UCK repositories absent;
-full UCK corpus documents listed in the specification are not available in
-this workspace; source-to-formalization theorem mapping is not comprehensive;
-integration CI is newly initialized and only local checks are observed until
-the new GitHub workflow runs.
+the completeness and canonical UCK status of supplied source materials remain
+unverified; source-to-formalization theorem mapping is not comprehensive.
 
 ## Known conflicts
 
@@ -87,12 +90,13 @@ the new GitHub workflow runs.
 
 ## Current nondominated checkpoints
 
-- `UCK-2026-11-04-001`: canonical partial checkpoint of the initialized
-  continuity integration working tree, with explicit missing-source
-  residuals and passing local integrity checks. Integration files are not yet
-  committed or pushed.
-- Standing Algebra GitHub Actions on main commit `cbc4211b`: Lean, Coq, and
-  Z3 all passed; receipts are listed in `manifests/CURRENT_CHECKPOINT.yaml`.
+- `UCK-2026-11-04-001`: canonical partial checkpoint for the initial
+  continuity integration.
+- `UCK-2026-11-04-002`: candidate checkpoint for the newly ingested source
+  corpus; local validation must pass and hosted continuity CI is still needed
+  before treating this update as a validated repository checkpoint.
+- The PR #9 head checks passed on `cc5ec3a1`; full receipts are listed in
+  `manifests/VALIDATION_RECEIPTS.json`.
 
 ## Superseded states retained for provenance
 
@@ -104,54 +108,86 @@ the new GitHub workflow runs.
 
 ## Current proof and CI status
 
-- Standing Algebra main: Lean / Coq / Z3 Actions succeeded at the source commit
-  stated above; local Lean independence guard was previously blocked by WSL,
-  so the CI receipt is the authoritative run evidence.
+- PR #9 head `cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4`: Lean, Coq, Z3,
+  Continuity Integrity, and CodeQL checks passed; the merge commit is
+  `425a7bb1a62cdd970cf3a18dd256643ada134be9`.
 - ICG: shares the Standing Algebra source repository's Lean build. Build
   success does not imply complete transcription; see ICG README coverage
   boundary.
-- Integration: 35 standard-library Python tests pass after adding regression
-  coverage for portable hashing. The initial hosted continuity workflow failed
-  at hash verification on commit `a464e447`; the failure and correction are
-  archived in `learning/`. Corrected hosted run 41891627641 passed on
+- Source-corpus candidate: 37 standard-library Python tests pass locally and
+  Markdown links, SHA-256 verification (1,124 managed files), and release-mode
+  validation pass with the expected warning that hosted CI is pending. The
+  bounded context bundle includes the supplied source corpus. Hosted CI has
+  not yet run on this candidate.
+- Earlier integration correction: the initial hosted continuity workflow
+  failed at hash verification on `a464e447`; the failure and correction are
+  archived in `learning/`, and corrected hosted run 41891627641 passed on
   `bd3f0703`.
 
 ## Reopening conditions
 
 Reopen source identity if the canonical ICG repository URL is supplied or
-found; reopen UCK scope when primary source documents or repository become
-available; reopen any validation claim when commit, workflow receipt, source
+found; reopen UCK scope if additional canonical materials or a repository are
+identified; reopen any validation claim when commit, workflow receipt, source
 mapping, or test evidence changes.
 
 ## Next admissible executable steps
 
-1. Review the generated integration paths and preserve the unrelated
-   `Collapse_Demonstrations/collapse.lean` edit.
-2. Commit only the requested integration paths after authorizing a commit;
-   then regenerate the checkpoint and record the commit receipt.
-3. Push this branch only after user instruction; request/perform no silent
-   merge or release.
+1. Push the corpus update only after user instruction; hosted CI is required
+   before it becomes a validated repository checkpoint.
+2. Keep the unrelated `Collapse_Demonstrations/collapse.lean` edit out of the
+   source-corpus change.
+
+## manifests/CORPUS_MANIFEST.yaml
+
+- Registered sources: 30
+- User-supplied source documents:
+  - A Practical Guide to On Relevance: original `corpus/source-documents/originals/A Practical Guide to On Relevance.docx`, readable extraction `corpus/source-documents/text/A Practical Guide to On Relevance.txt`.
+  - Boundary Operator, Domination Singularity, and Derived Operators (Preliminary): original `corpus/source-documents/originals/Boundary Operator, Domination Singularity, and Derived Operators (Preliminary).docx`, readable extraction `corpus/source-documents/text/Boundary Operator, Domination Singularity, and Derived Operators (Preliminary).txt`.
+  - Collatz via SigmaR and ICG: original `corpus/source-documents/originals/Collatz via SigmaR and ICG.docx`, readable extraction `corpus/source-documents/text/Collatz via SigmaR and ICG.txt`.
+  - Constraint, Standing, and Legitimacy - A Structural Approach: original `corpus/source-documents/originals/Constraint, Standing, and Legitimacy - A Structural Approach.docx`, readable extraction `corpus/source-documents/text/Constraint, Standing, and Legitimacy - A Structural Approach.txt`.
+  - Coordination without Final Authority - Structural Axioms of Pluralist Legitimacy: original `corpus/source-documents/originals/Coordination without Final Authority - Structural Axioms of Pluralist Legitimacy.docx`, readable extraction `corpus/source-documents/text/Coordination without Final Authority - Structural Axioms of Pluralist Legitimacy.txt`.
+  - Coordination without Final Authority: original `corpus/source-documents/originals/Coordination without Final Authority.docx`, readable extraction `corpus/source-documents/text/Coordination without Final Authority.txt`.
+  - Evaluating PvNP with Sigma R and ICG: original `corpus/source-documents/originals/Evaluating PvNP with Sigma R and ICG.docx`, readable extraction `corpus/source-documents/text/Evaluating PvNP with Sigma R and ICG.txt`.
+  - Flowchart For Establishing Coordination Without Domination: original `corpus/source-documents/originals/Flowchart For Establishing Coordination Without Domination.docx`, readable extraction `corpus/source-documents/text/Flowchart For Establishing Coordination Without Domination.txt`.
+  - Foundations of Standing Algebra: original `corpus/source-documents/originals/Foundations of Standing Algebra.docx`, readable extraction `corpus/source-documents/text/Foundations of Standing Algebra.txt`.
+  - Legitimacy Philosophy for On Relevance: original `corpus/source-documents/originals/Legitimacy Philosophy for On Relevance.docx`, readable extraction `corpus/source-documents/text/Legitimacy Philosophy for On Relevance.txt`.
+  - NSCaseStudy: original `corpus/source-documents/originals/NSCaseStudy.docx`, readable extraction `corpus/source-documents/text/NSCaseStudy.txt`.
+  - NSProof: original `corpus/source-documents/originals/NSProof.docx`, readable extraction `corpus/source-documents/text/NSProof.txt`.
+  - On Relevance: original `corpus/source-documents/originals/On Relevance.docx`, readable extraction `corpus/source-documents/text/On Relevance.txt`.
+  - PatentPacket: original `corpus/source-documents/originals/PatentPacket.docx`, readable extraction `corpus/source-documents/text/PatentPacket.txt`.
+  - Prospectus for On Relevance: original `corpus/source-documents/originals/Prospectus for On Relevance.docx`, readable extraction `corpus/source-documents/text/Prospectus for On Relevance.txt`.
+  - PvNP in Sigma R and ICG: original `corpus/source-documents/originals/PvNP in Sigma R and ICG.docx`, readable extraction `corpus/source-documents/text/PvNP in Sigma R and ICG.txt`.
+  - QMR Proposal: original `corpus/source-documents/originals/QMR Proposal.docx`, readable extraction `corpus/source-documents/text/QMR Proposal.txt`.
+  - Standing Algebra Technical Specs: original `corpus/source-documents/originals/Standing Algebra Technical Specs.docx`, readable extraction `corpus/source-documents/text/Standing Algebra Technical Specs.txt`.
+  - Standing_Algebra_SigmaR: original `corpus/source-documents/originals/Standing_Algebra_SigmaR.docx`, readable extraction `corpus/source-documents/text/Standing_Algebra_SigmaR.txt`.
+  - StD for Patent: original `corpus/source-documents/originals/StD for Patent.docx`, readable extraction `corpus/source-documents/text/StD for Patent.txt`.
+  - Symmetry, Standing, and Structural Stability: original `corpus/source-documents/originals/Symmetry, Standing, and Structural Stability.docx`, readable extraction `corpus/source-documents/text/Symmetry, Standing, and Structural Stability.txt`.
+  - Time Without Dynamics: original `corpus/source-documents/originals/Time Without Dynamics.docx`, readable extraction `corpus/source-documents/text/Time Without Dynamics.txt`.
+  - Using Sigma R and ICG to Evaluate RH: original `corpus/source-documents/originals/Using Sigma R and ICG to Evaluate RH.docx`, readable extraction `corpus/source-documents/text/Using Sigma R and ICG to Evaluate RH.txt`.
+  - Why Being Right Isn't Enough: original `corpus/source-documents/originals/Why Being Right Isn't Enough.docx`, readable extraction `corpus/source-documents/text/Why Being Right Isn't Enough.txt`.
+- Hashes and full provenance are recorded in the source manifest.
 
 ## manifests/CURRENT_CHECKPOINT.yaml
 
-- ID: `UCK-2026-11-04-001`
-- Status: `canonical_partial`
-- Created: `2026-11-04T18:55:02Z`
-- Host branch / HEAD: `jonrademacher-complete-lean4-formalizations` / `bd3f0703ad3f9a65de9e50a920d08e693c0fb956`
+- ID: `UCK-2026-11-04-002`
+- Status: `initialized_candidate`
+- Created: `2026-11-04T19:25:23Z`
+- Host branch / HEAD: `jonrademacher-complete-lean4-formalizations` / `cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4`
 - Validation receipts:
   - standing_algebra_lean: passed (actions-lean-cbc4211)
   - standing_algebra_coq: passed (actions-coq-cbc4211)
   - standing_algebra_z3: passed (actions-z3-cbc4211)
-  - python_tests: passed (python-tests-2026-11-04-001)
-  - continuity_validation: passed (continuity-validation-2026-11-04-001)
-  - markdown_links: passed (markdown-links-2026-11-04-001)
-  - sha256_manifest: passed (sha256-2026-11-04-001)
-  - context_bundle: passed (context-bundle-2026-11-04-001)
-  - continuity_integrity: passed (continuity-workflow-bd3f0703)
+  - python_tests: passed (source-corpus-tests-2026-11-04)
+  - continuity_validation: passed (source-corpus-validation-2026-11-04)
+  - markdown_links: passed (source-corpus-links-2026-11-04)
+  - sha256_manifest: passed (source-corpus-sha256-2026-11-04)
+  - context_bundle: passed (source-corpus-context-2026-11-04)
+  - continuity_integrity: pending (continuity-integrity-source-corpus)
 - Open residuals:
   - R-001 (open): No standalone ICG repository is accessible. ICG source currently resides under `ICG/` in Standing Algebra; no separate repo identity can be asserted.
-  - R-002 (open): No standalone Unified Compatibility Kernel repository or complete UCK corpus is available. The integration uses the attached build package and prior Copilot continuity notes only.
-  - R-003 (open): Additional transfer docs listed by the build package are not in the current session's available source files.
+  - R-002 (open): No standalone Unified Compatibility Kernel repository or independently identified complete UCK corpus is available. The 24-document user-supplied source batch is preserved, but its canonical UCK membership and completeness are not independently established.
+  - R-003 (closed): The 24 documents supplied in the 2026-11-04 attachment batch are preserved as original DOCX files and readable text extractions, each with provenance and hashes. This closes ingestion of that batch, not completeness of any broader corpus.
   - R-004 (open): NDGK workspace audit exact HEAD and live CI status could not be directly confirmed; merge-base only was observed. It is not treated as authoritative UCK state.
   - R-005 (open): I2OS repository has internal author inconsistency (README citation vs paper title page/bib) and no validation/CI receipt in the audit. It is excluded from product authority.
   - R-006 (open): Comprehensive manuscript theorem-ID-to-formalization mapping for Σᴿ/ICG was not found.
@@ -162,6 +198,7 @@ mapping, or test evidence changes.
   - R-011 (open): Current scripts validate artifact integrity and references, not mathematical semantics, source transcription, product efficacy, or scholarly validity.
   - R-012 (open): Copilot customization files are repository artifacts; not all Copilot clients may support every agent/skill/prompt surface. No live Copilot configuration test was performed.
   - R-013 (closed): `.git` metadata is excluded and NUL-free valid UTF-8 files are normalized across line endings; binary files remain byte-exact.
+  - R-014 (open): The 24-document corpus update has passed local tests, link checks, hash verification, and release validation, but no hosted Continuity Integrity run has validated this candidate yet.
 
 ## kernel/KERNEL_CURRENT.md
 
@@ -259,10 +296,11 @@ repository listing; this limitation remains open.
 
 | Node | Identity and authority | Currentness | Relation |
 |---|---|---|---|
-| Standing Algebra Σᴿ | `https://github.com/JonRademacher/standing-algebra`; `SigmaR/`, root README, citation and attribution notice | Main source commit observed: `cbc4211baf0993d643e55398addabf9588120f3f`; Lean/Coq/Z3 Actions pass | Logical/relational framework; canonical source for Σᴿ |
-| ICG | `ICG/` and `ICG.lean` in the same repository; manuscript snapshot `corpus/icg/Nullstellensatz_Via_SigmaR_and_ICG.txt` | Same repository commit as above; README explicitly documents partial coverage | Distinct geometric/algebraic peer framework; historically connected to Σᴿ |
-| Unified Compatibility Kernel materials | User-provided package and prior continuity notes preserved under `corpus/kernel/` | Attachment snapshots; no standalone UCK repo or complete corpus found | Operational methodology source; does not replace either mathematical source |
-| Continuity integration | This repository's `kernel/`, `continuity/`, `learning/`, `governance/`, scripts and workflows | Working-tree candidate at initialization | Tooling for reconstructable, evidence-bearing repository continuity |
+| Standing Algebra Σᴿ | `https://github.com/JonRademacher/standing-algebra`; `SigmaR/`, root README, citation and attribution notice | Current `main` merge commit: `425a7bb1a62cdd970cf3a18dd256643ada134be9`; PR-head Lean/Coq/Z3 checks passed on `cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4` | Logical/relational framework; canonical source for Σᴿ |
+| ICG | `ICG/` and `ICG.lean` in the same repository; manuscript snapshot `corpus/icg/Nullstellensatz_Via_SigmaR_and_ICG.txt` | Current `main` merge commit: `425a7bb1a62cdd970cf3a18dd256643ada134be9`; README explicitly documents partial coverage | Distinct geometric/algebraic peer framework; historically connected to Σᴿ |
+| User-supplied research corpus | 24 documents attached on 2026-11-04, preserved under `corpus/source-documents/`; originals and text derivatives are individually hashed in `manifests/CORPUS_MANIFEST.yaml` | Attachment snapshots as received; document claims and completeness are not independently validated | Supplied source corpus used by the user; supports continuity and future crosswalks, but is not presumed to be a complete or canonical UCK corpus |
+| Unified Compatibility Kernel materials | User-provided build package and prior continuity notes preserved under `corpus/kernel/` | Attachment snapshots; no standalone UCK repo found | Operational methodology source; does not replace either mathematical source |
+| Continuity integration | This repository's `kernel/`, `continuity/`, `learning/`, `governance/`, scripts and workflows | Initial integration merged by PR #9 at `425a7bb1a62cdd970cf3a18dd256643ada134be9`; source-corpus update is a local candidate | Tooling for reconstructable, evidence-bearing repository continuity |
 | Non-Domination-Governance-Kernel | `https://github.com/JonRademacher/Non-Domination-Governance-Kernel` | Separate configured project; audit found derivative NDGK, not UCK/ICG; exact HEAD unconfirmed | Related but distinct implementation-derived project; source for cautionary continuity examples only |
 | I2OS Structural Admissibility | `https://github.com/i2os-lab/I2OS-Structural-Admissibility` | Separate configured project; read-only audit found paper repo, not ICG | Not a source or dependency of ICG/UCK |
 | Standing Algebra manuscript snapshot | `corpus/standing-algebra/Standing_Algebra_SigmaR.txt` | User-supplied session artifact; provenance hash in corpus manifest | Source claim/context, not automatically identical to current repo |
@@ -274,6 +312,7 @@ repository listing; this limitation remains open.
 - `ICG --historically_connected_to--> Σᴿ` (ICG manuscript disclosure; does not imply equivalence).
 - `continuity integration --uses_specification--> build package` (user instruction and preserved attachment).
 - `continuity integration --uses_operational_notes--> prior Copilot continuity notes` (user-provided text artifact).
+- `continuity integration --indexes--> user-supplied research corpus` (24 preserved DOCX originals and derived text snapshots; provenance and integrity recorded in the corpus manifest).
 - `integration --records_sources_of--> Σᴿ, ICG, UCK materials` (this manifest and provenance files).
 - `Non-Domination-Governance-Kernel --derived_from--> Σᴿ` (audited repository README; not a conclusion that it equals UCK).
 
@@ -285,7 +324,9 @@ No assertion is made that the UCK is mathematically derived from either source.
   or `gh repo list JonRademacher`; current ICG files are an in-repository
   subtree.
 - No standalone UCK repo was found. The package references additional transfer
-  documents that are not physically present in the session file collection.
+  materials, and the 24 attached documents are now preserved. Their inclusion
+  does not establish that the UCK has a specific canonical corpus or that all
+  referenced transfer materials have been supplied.
 - The separate I2OS paper's README author and paper title page/bibliography do
   not agree; no I2OS content is promoted into the source graph.
 - The Σᴿ manuscript snapshot and live formal source have different claim
@@ -296,109 +337,5 @@ No assertion is made that the UCK is mathematically derived from either source.
 
 No comprehensive theorem-ID-to-Lean/Coq/Z3 crosswalk was found during audit.
 ICG modules are described in the README and source code, but this is not a
-verified per-theorem mapping. See residual `R-006`.
-
-## continuity/DEPENDENCY_GRAPH.md
-
-# Dependency Graph
-
-Only consequence-bearing edges with an explicit source or witness are listed.
-
-| From | To | Relation | Evidence / rule |
-|---|---|---|---|
-| `SigmaR/` declarations | Σᴿ Lean targets | compiled by | `.github/workflows/lean.yml` build command |
-| `ICG/*.lean`, `ICG.lean` | ICG aggregate target | imported/built by | README build instructions and Lean workflow |
-| Coq source files | Coq target | compiled by | `.github/workflows/coq.yml` commands |
-| SMT-LIB files | Z3 checks | executed by | `.github/workflows/z3.yml` |
-| `README.md` | ICG coverage boundary | documents | explicit coverage and caveats in repository README |
-| source artifacts in `corpus/` | provenance records | preserved by | source inventory and SHA-256 manifest |
-| canonical state | context bundle | summarizes | `Scripts/build_context_bundle.py` allowlisted inputs |
-| checkpoint manifest | validators | input | continuity validation scripts and workflow |
-| failure/discovery archives | candidate improvement proposal | informs | CHANGE_PROTOCOL and archive schemas |
-| validation receipts | checkpoint promotion | required by | checkpoint schema and `release` validator |
-
-## Edge admission rule
-
-An edge requires a source path, workflow command, explicit rule, or labeled
-reconstruction witness. Inference-only edges are marked as inference and must
-not be used as source authority. Removing or changing an edge requires a
-decision-log entry, updated affected nodes, and regression validation.
-
-## Not inferred
-
-- A Lean build is not a source-to-theorem proof map.
-- A common constraint-first motivation is not a dependency between Σᴿ and ICG.
-- The NDGK project is not treated as an UCK implementation.
-- I2OS is not treated as ICG.
-- The monitor's sample output is not evidence of production performance.
-
-## continuity/ACTIVE_TRAJECTORIES.md
-
-# Active Trajectories
-
-## AT-001 — Reconstructable continuity integration
-
-- **Objective:** provide a versioned, bounded, provenance-bearing continuity
-  system and transparent improvement workflow.
-- **Current position:** implementation and local validation in progress.
-- **Validated ancestor:** Standing Algebra main commit
-  `cbc4211baf0993d643e55398addabf9588120f3f`; Lean/Coq/Z3 Actions green.
-- **Candidate paths:** repository-hosted in Standing Algebra (selected for this
-  initial implementation); standalone UCK repository (unavailable); NDGK
-  expansion (not selected because it is a distinct derivative repository).
-- **Survivor status:** alternative hosting remains open; no candidate is
-  mathematically eliminated.
-- **Next:** run tests/checks, generate context, refresh hashes, inspect residuals.
-- **Reopen:** ICG/UCK repository becomes accessible or user chooses another host.
-
-## AT-002 — ICG source lineage
-
-- **Objective:** bind continuity product to actual ICG source while preserving
-  its distinction from Σᴿ.
-- **Current position:** source identified as `ICG/` subtree and manuscript
-  attachment; separate repository not found.
-- **Next:** add canonical remote if supplied; build theorem crosswalk.
-- **Reopen:** source repository becomes available.
-
-## AT-003 — UCK corpus ingestion
-
-- **Objective:** integrate the full operational kernel and continuity archive.
-- **Current position:** attached 1121-line build package and earlier 684-line
-  continuity notes available; further documents named in the package are not
-  present.
-- **Next:** ingest missing primary materials with provenance.
-- **Reopen:** documents or canonical repository supplied.
-
-## continuity/CAPABILITY_TRAJECTORY_LEDGER.md
-
-# Capability Trajectory Ledger
-
-| ID | Capability/operator | State | Evidence | Residual / next transition |
-|---|---|---|---|---|
-| CAP-001 | Reconstruct source repo identity and commits | tested | Standing repository remotes and CI receipts; read-only I2OS/NDGK audits | Standalone ICG/UCK unavailable; reopen on source access. |
-| CAP-002 | Preserve attached source provenance | implemented | Corpus manifest and SHA-256 hashes | Revalidate after source files change. |
-| CAP-003 | Build bounded context bundle | tested | Generated `CONTEXT_BUNDLE.md` at 17,974 characters against an 18,000-character limit; unit fixture checks the hard bound | Rebuild after source or checkpoint changes. |
-| CAP-004 | Validate continuity graphs and checkpoint | validated | 35 Python tests, Markdown links, 1,076-file portable hash manifest, and release-mode validator passed locally | Hosted continuity workflow rerun remains pending. |
-| CAP-005 | Learn reusable failure/discovery shapes | candidate | Initial examples in learning archive and Future Forensics taxonomy | Validate with further independent cases. |
-| CAP-006 | Automatically improve agent model | not supported | No hidden state or background learning capability | Explicitly out of scope; only versioned repository deltas. |
-| CAP-007 | Construct explicit model-inadequacy records | testable | Required record and procedure in `MODEL_INADEQUACY_CONSTRUCTOR.md` | Exercise against an observed reconstruction failure. |
-| CAP-008 | Test candidate operators in isolation | testable | Synthetic fixture contract in `CAPABILITY_GYM/` | Add representative fixtures and verify canonical state remains untouched. |
-| CAP-009 | Diagnose lost continuation paths | testable | Cause taxonomy and incident template in `FUTURE_FORENSICS.md` | Use an actual incident before claiming operational efficacy. |
-
-Allowed lifecycle: `proposed -> testable -> tested -> corrected -> validated ->
-operational -> superseded -> reopened`. A transition requires a dated evidence
-record; skipping a state requires an explicit explanation. `reopened` retains
-the superseded decision and records the new evidence that invalidated closure.
-A proposed capability is never reported as demonstrated.
-
-## continuity/OPEN_RESIDUALS.md
-
-# Open Residuals
-
-| ID | Status | Description | Reopening / closure evidence |
-|---|---|---|---|
-| R-001 | open | No standalone ICG repository is accessible. ICG source currently resides under `ICG/` in Standing Algebra; no separate repo identity can be asserted. | User supplies canonical repository URL/access; audit repository and revisions. |
-| R-002 | open | No standalone Unified Compatibility Kernel repository or complete UCK corpus is available. The integration uses the attached build package and prior Copilot continuity notes only. | User supplies repository or named primary materials; audit provenance and version. |
-| R-003 | open | Additional transfer docs listed by the build package are not in the current session's available source files. | Ingest each supplied document with provenance and hash. |
-| R-004 | open | NDGK workspace audit exact HEAD and live CI status could not be directly confirmed; merge-base only was observed. It is not treated as authoritative UCK state. | Read-only access provides exact HEAD and workflow receipts. |
-[Truncated at bundle limit; full source: `continuity/OPEN_RESIDUALS.md`; remaining sources omitted.]
+verified per-theorem mapp
+[Bundle limit reached; remaining sources omitted. Full source: `continuity/DEPENDENCY_GRAPH.md`]

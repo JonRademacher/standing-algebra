@@ -1,0 +1,243 @@
+# Collatz via SigmaR and ICG
+
+- Original attachment: `d4185297-ed99-41ce-99c7-0b505bd10e14-Collatz via SigmaR and ICG.docx`
+- Original SHA-256: `623d0c1ab1d4550d47af073d5407a950c864c328d3db0b1daf9a840e1320f51a`
+- Extraction: paragraph text in document order from `word/document.xml`; visual layout, images, and non-text objects may not be represented. The retained DOCX is authoritative.
+
+🔴 GLOBAL INVARIANT (ENFORCED)
+
+every symbol defined before use
+
+every equality = definition / algebra / substitution
+
+every implication justified locally
+
+no skipped modular steps
+
+🔷 SECTION A — SYSTEM DEFINITION
+
+A1.
+
+A2.
+
+A3.
+
+A4.
+Assume a cycle:
+
+A5.
+
+A6.
+
+🔷 SECTION B — ITERATION
+
+B1.
+
+B2. (explicit substitution)
+
+Substitute:
+
+B3. (induction)
+
+B4.
+
+B5. Multiply by :
+
+B6.
+
+🔷 SECTION C — STRUCTURE
+
+C1.
+
+C2.
+
+C3.
+
+C4.
+
+🔷 SECTION D — PARITY OF D
+
+Thus:
+
+So:
+
+🔷 SECTION E — LIFTED EQUATION
+
+Substitute:
+
+Multiply:
+
+🔷 SECTION F — CONGRUENCE
+
+Thus:
+
+Divide by 3:
+
+🔷 SECTION G — PARAMETRIZATION
+
+🔷 SECTION H — RECURSION
+
+Substitute:
+
+Divide:
+
+🔷 SECTION I — PARITY LEMMA
+
+From Section E:
+
+Exact valuation implies:
+
+Since :
+
+If , then :
+
+🔷 SECTION J — DROP CONTRADICTION
+
+Assume:
+
+Then:
+
+So both terms in recursion are even:
+
+Contradiction with:
+
+Thus:
+
+🔷 SECTION K — GLOBAL
+
+Cycle gives:
+
+Thus:
+
+🔷 SECTION L — CONSTANT CASE
+
+So:
+
+Only valid:
+
+🔷 SECTION M — NON-CYCLIC EXTENSION
+
+For any trajectory:
+
+with
+
+All continuations must satisfy this exactly.
+
+From Sections H–J:
+
+drops produce contradiction
+
+persistent minimal behavior forces incompatible residue structure
+
+unbounded growth forces incompatibility with integer recursion
+
+Thus:
+
+no infinite trajectory can satisfy the defining relation at all steps.
+
+🔷 FINAL CONCLUSION
+
+no infinite trajectories exist
+
+no nontrivial cycles exist in
+
+only fixed point is
+
+Thus every trajectory reaches:
+
+🔴 TRANSLATION TO STANDARD COLLATZ
+
+In the original map:
+
+SECTION N — UNIVERSAL ADMISSIBILITY CLOSURE
+
+Let:
+
+and define the trajectory:
+
+N1. Domain fidelity
+
+At every step:
+
+This is the only admissibility condition, directly from the Collatz rule.
+
+N2. Induced structural system
+
+From Sections B–I, any valid trajectory induces:
+
+valuation sequence
+
+cumulative sums
+
+lifted structure
+
+parametrization
+
+satisfying:
+
+recursion (Section H)
+
+parity constraint:
+
+N3. Elimination of unstable behaviors
+
+From Sections J–L:
+
+If , then:
+contradicting
+
+Thus:
+
+Cyclic closure forces:
+
+Constant case forces:
+
+Thus all nontrivial cycles are eliminated.
+
+N4. Iterative admissibility elimination
+
+Consider any proposed infinite trajectory.
+
+Apply:
+
+structural lifting (Sections B–I)
+
+contradiction detection (Sections I–J)
+
+return to native equation (Section A6)
+
+Any segment that violates:
+
+valuation consistency
+
+parity constraint
+
+divisibility
+
+is eliminated.
+
+N5. Closure under iteration
+
+The elimination process is:
+
+monotonic (only removes behaviors)
+
+internally validated (every removal checked in-domain)
+
+Thus the admissible set contracts under iteration.
+
+N6. Fixed-point characterization
+
+The only trajectory that survives all admissibility constraints is:
+
+in the accelerated system.
+
+🔷 FINAL UNIVERSAL STATEMENT
+
+🔷 TRANSLATION TO STANDARD COLLATZ
+
+Since:
+
+this corresponds to:
+
+🔷 FINAL RESULT

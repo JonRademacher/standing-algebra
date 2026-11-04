@@ -4,12 +4,12 @@
     "standing_algebra_lean": "actions-lean-cbc4211",
     "standing_algebra_coq": "actions-coq-cbc4211",
     "standing_algebra_z3": "actions-z3-cbc4211",
-    "python_tests": "python-tests-2026-11-04-001",
-    "continuity_validation": "continuity-validation-2026-11-04-001",
-    "markdown_links": "markdown-links-2026-11-04-001",
-    "sha256_manifest": "sha256-2026-11-04-001",
-    "context_bundle": "context-bundle-2026-11-04-001",
-    "continuity_integrity": "continuity-workflow-bd3f0703"
+    "python_tests": "source-corpus-tests-2026-11-04",
+    "continuity_validation": "source-corpus-validation-2026-11-04",
+    "markdown_links": "source-corpus-links-2026-11-04",
+    "sha256_manifest": "source-corpus-sha256-2026-11-04",
+    "context_bundle": "source-corpus-context-2026-11-04",
+    "continuity_integrity": "continuity-integrity-source-corpus"
   },
   "receipts": {
     "continuity-workflow-initial-failure-a464e447": {
@@ -86,6 +86,95 @@
       "observed_at": "2026-11-04T18:52:36Z",
       "source": "local workspace",
       "result": "Generated continuity/CONTEXT_BUNDLE.md at 23,925 characters against a 24,000-character limit, ending at a complete line."
+    },
+    "pr9-merged-2026-11-04": {
+      "status": "passed",
+      "command": "GitHub pull request merge",
+      "observed_at": "2026-11-04T19:25:08Z",
+      "source": "https://github.com/JonRademacher/standing-algebra/pull/9",
+      "result": "Merged into main as 425a7bb1a62cdd970cf3a18dd256643ada134be9."
+    },
+    "actions-lean-cc5ec3a1": {
+      "status": "passed",
+      "command": "GitHub Actions Lean CI",
+      "observed_at": "2026-11-04T19:25:08Z",
+      "source": "https://github.com/JonRademacher/standing-algebra/actions/runs/41891938926",
+      "result": "completed: success",
+      "commit": "cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4"
+    },
+    "actions-coq-cc5ec3a1": {
+      "status": "passed",
+      "command": "GitHub Actions Coq CI",
+      "observed_at": "2026-11-04T19:25:08Z",
+      "source": "https://github.com/JonRademacher/standing-algebra/actions/runs/41891938814",
+      "result": "completed: success",
+      "commit": "cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4"
+    },
+    "actions-z3-cc5ec3a1": {
+      "status": "passed",
+      "command": "GitHub Actions Z3 verification",
+      "observed_at": "2026-11-04T19:25:08Z",
+      "source": "https://github.com/JonRademacher/standing-algebra/actions/runs/41891938592",
+      "result": "completed: success",
+      "commit": "cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4"
+    },
+    "continuity-workflow-cc5ec3a1": {
+      "status": "passed",
+      "command": "GitHub Actions Continuity Integrity",
+      "observed_at": "2026-11-04T19:25:08Z",
+      "source": "https://github.com/JonRademacher/standing-algebra/actions/runs/41891938750",
+      "result": "completed: success",
+      "commit": "cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4"
+    },
+    "codeql-cc5ec3a1": {
+      "status": "passed",
+      "command": "GitHub CodeQL and workflow analysis",
+      "observed_at": "2026-11-04T19:25:08Z",
+      "source": "https://github.com/JonRademacher/standing-algebra/runs/126791613207",
+      "result": "PR check passed",
+      "commit": "cc5ec3a1a5aaed9e4e3d6062cedab35ae80a0de4"
+    },
+    "source-corpus-tests-2026-11-04": {
+      "status": "passed",
+      "command": "py -3.14 -m unittest discover -s Tests -v",
+      "observed_at": "2026-11-04T19:25:08Z",
+      "source": "local workspace",
+      "result": "Ran 37 tests; all passed."
+    },
+    "source-corpus-validation-2026-11-04": {
+      "status": "passed",
+      "command": "py -3 Scripts/validate_continuity.py --release --json",
+      "observed_at": "2026-11-04T19:25:08Z",
+      "source": "local workspace",
+      "result": "Passed with no errors; warning is the pending hosted Continuity Integrity run for this unpushed candidate."
+    },
+    "source-corpus-links-2026-11-04": {
+      "status": "passed",
+      "command": "py -3 Scripts/check_links.py",
+      "observed_at": "2026-11-04T19:25:08Z",
+      "source": "local workspace",
+      "result": "Markdown links: passed."
+    },
+    "source-corpus-sha256-2026-11-04": {
+      "status": "passed",
+      "command": "py -3 Scripts/verify_hashes.py",
+      "observed_at": "2026-11-04T19:25:08Z",
+      "source": "local workspace",
+      "result": "SHA-256 manifest verified all 1,124 managed files."
+    },
+    "source-corpus-context-2026-11-04": {
+      "status": "passed",
+      "command": "py -3 Scripts/build_context_bundle.py --max-chars 24000",
+      "observed_at": "2026-11-04T19:25:08Z",
+      "source": "local workspace",
+      "result": "Generated continuity/CONTEXT_BUNDLE.md within its 24,000-character limit and included the supplied source corpus."
+    },
+    "continuity-integrity-source-corpus": {
+      "status": "pending",
+      "command": "GitHub Actions Continuity Integrity workflow",
+      "observed_at": "2026-11-04T19:25:08Z",
+      "source": "not run; requires a pushed candidate commit",
+      "result": "No hosted workflow receipt exists yet for the uncommitted source-corpus update."
     }
   }
 }

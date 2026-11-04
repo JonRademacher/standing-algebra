@@ -41,6 +41,8 @@ def make_checkpoint(
     for source in corpus["sources"]:
         if source.get("path"):
             source["sha256"] = sha256_file(root / source["path"])
+        if source.get("text_path"):
+            source["text_sha256"] = sha256_file(root / source["text_path"])
     with corpus_path.open("w", encoding="utf-8", newline="\n") as stream:
         stream.write(json.dumps(corpus, indent=2, ensure_ascii=False) + "\n")
     head = git_value(root, "rev-parse", "HEAD") or "unavailable"

@@ -1,0 +1,343 @@
+# Foundations of Standing Algebra
+
+- Original attachment: `94b4ef4e-4691-46f6-b5d3-74284ac04ccb-Foundations of Standing Algebra.docx`
+- Original SHA-256: `fca5484c25deab6a4e919fc4de50253d392745e5144487f9461b9c0fa7d4b112`
+- Extraction: paragraph text in document order from `word/document.xml`; visual layout, images, and non-text objects may not be represented. The retained DOCX is authoritative.
+
+Foundations of Standing Algebra: A Formal Companion to On Relevance
+
+Introduction and Summary of the Formal System
+
+Abstract
+
+This work introduces Standing Algebra (Σᴿ), a manysorted firstorder logical framework designed to formalize standing, autonomy, recognition, and structural legitimacy within multiagent systems. Developed as the mathematical counterpart to the structural theory advanced in On Relevance, Σᴿ provides a rigorous axiomatic foundation for analyzing how agents gain, lose, preserve, or distort standing within pluralistic environments.
+
+At the core of the system is the Successor Axiom, which establishes standing as an additive, nondilutive resource acquired through the transition from nullity to recognition. Using a successorbased standing function, Σᴿ formally distinguishes prime entities (autonomy singularities with irreducible standing) from composite entities (structural or relational aggregates) via explicit firstorder definitions. This partition yields an algebra that generalizes classical successor arithmetic, monoidal composition, and degreebased graph structure into a unified analytic space.
+
+A second tier of supplemental axioms incorporates structural principles from the broader framework—CapacityIndexed Autonomy (CIA), the AutonomyLimiting Reflex Principle (ALRP), the NonReciprocity Prevention Principle (NRPP), Standing Test Condition 5 (STC5), rerunnability, bounded drift, and directed repair. These axioms constrain the admissibility and legitimacy of transformations on agents, defining mathematically what it means for an operation to be noncoercive, autonomypreserving, and structurally symmetric.
+
+Taken together, these components form a complete algebraic and logical system capable of formally characterizing domination, recognition failure, coercive coupling, structural asymmetry, and autonomy preservation. The resulting framework has direct applications in the design and verification of AI alignment and safety architectures, governance models, distributed systems, organizational analysis, and any domain requiring a formally principled account of pluralistic coordination.
+
+Standing Algebra thus provides the first generalpurpose mathematical model of nondomination and structural legitimacy, offering an autonomypreserving alternative to utilitybased or rewardbased paradigms in multiagent reasoning and AI system design.
+
+Keywords
+
+Standing Algebra; Successor Axiom; FirstOrder Logic; ManySorted Logic; Autonomy Preservation; NonCoercive Transformations; Structural Legitimacy; Prime and Composite Entities; Recognition Theory; Coupling Degree; CapacityIndexed Autonomy (CIA); AutonomyLimiting Reflex Principle (ALRP); NonReciprocity Prevention Principle (NRPP); Standing Test Condition 5 (STC5); Rerunnability; Directed Repair; Bounded Drift; Pluralistic Inclusion; MultiAgent Systems; AI Alignment; AI Safety; NonDomination Frameworks; Formal Methods; Structural Justice; Coordination Theory.
+
+Introduction
+
+This volume presents the formal mathematical foundations underlying the analytic framework developed in On Relevance: The Social Physics of Pluralism. While the primary text focuses on standing, autonomy, legitimacy, pluralism, and structural coordination as conceptual and philosophical constructs, the present companion work provides a rigorous mathematical system capable of expressing those same structures in a precise, axiomatic form.
+
+The goal of this book is not to mathematize philosophy for its own sake, nor to convert sociopolitical structures into mechanical abstractions. Rather, it is to provide a formal substrate—a logically coherent algebra and manysorted firstorder framework—through which the architecture of standing, recognition, and autonomy can be modeled with clarity, consistency, and analytic depth.
+
+The development presented here is called Standing Algebra (Σᴿ). It is a system that generalizes successorbased arithmetic, graphtheoretic coupling structures, and algebraic monoids into a unified formal language. It captures three essential categories of agents:
+
+Null entities (those without standing),
+
+Prime entities (autonomy singularities with irreducible standing), and
+
+Composite entities (structural or relational composites made of standing increments or couplings).
+
+In addition, this system incorporates formal representations of:
+
+Autonomy as a monotonic function of capacity,
+
+Noncoercion as a constraint on admissible operations,
+
+Legitimacy as standingpreservation under symmetric conditions,
+
+Drift as bounded perturbation,
+
+Repair as directed symmetry restoration, and
+
+Rerunnability as a fixedpoint requirement.
+
+These elements, which appear conceptually in On Relevance, are given explicit firstorder logical formulations in this companion text.
+
+The result is a selfcontained mathematical framework that can be studied independently, extended by mathematicians and logicians, or used to analyze any system of pluralistic agents, standing relations, or structural couplings.
+
+Purpose of This Volume
+
+This companion book has three goals:
+
+To formalize the foundational concepts of standing and recognition in a way compatible with mathematical logic, algebra, graph theory, and theoretical computer science.
+
+To provide a coherent axiomatic basis for analyzing autonomy, domination, and structural legitimacy as formal properties rather than merely normative claims.
+
+To enable the analytic engine of On Relevance to be applied rigorously in computational modeling, network theory, institutional diagnostics, and formal reasoning systems.
+
+This text is written for:
+
+mathematicians
+
+logicians
+
+computer scientists
+
+theorists of social systems
+
+philosophers of logic
+
+researchers in pluralistic coordination
+
+and anyone seeking a precise algebra of standing, autonomy, and structural legitimacy.
+
+Summary of the Formal System (Standing Algebra, Σᴿ)
+
+Standing Algebra (Σᴿ) is developed in manysorted firstorder logic with the following essential features:
+
+1. Multiple Domains (Sorts)
+
+Standing Algebra uses several sorts to distinguish between:
+
+U — entities or agents
+
+N — standing values
+
+C — capacities
+
+D — degrees of coupling
+
+O — operations or transformations
+
+This allows the system to remain firstorder while expressing rich structural relations.
+
+2. Core Functions and Relations
+
+The system is built on a small set of primitive operators:
+
+A standing function
+
+A successor function
+
+An additive operation
+
+A degree function
+
+A capacity function
+
+Optional entitycomposition operator
+
+And relations such as:
+
+Null(i) — entity lacks standing
+
+Prime(i) — entity is an autonomy singularity
+
+Composite(i) — entity has composite standing
+
+Coupled(i,j) — relational coupling
+
+Admissible(F) — allowed transformations
+
+Legitimate(F) — noncoercive, standingpreserving operations
+
+Drift(F) and Repair(F) — structural dynamics
+
+3. Tier 1 Axioms: The Standing Algebra (Σᴿ₁)
+
+Tier 1 defines the foundational arithmetic of standing:
+
+Nullity (entities with zero standing)
+
+Successor (the first unit of standing)
+
+Additive primacy (standing grows through successor increments)
+
+Nondilution (standing cannot decrease under addition)
+
+Prime entities (σ=1 and degree=0)
+
+Composite entities (σ>1 or degree>0)
+
+Partition of all agents into null, prime, or composite
+
+Monotonic successor growth
+
+No return to nullity
+
+This forms a commutative, standingbased monoid enriched with couplingdegree information.
+
+4. Tier 2 Axioms: Structural Legitimacy Algebra (Σᴿ₂)
+
+Tier 2 encodes the structural constraints central to On Relevance:
+
+CIA (capacityindexed autonomy): standing must track capacity
+
+ALRP (autonomylimiting reflex): no operation can reduce another’s standing
+
+NRPP (nonreciprocity prevention): asymmetrical dependence is illegitimate
+
+STC5 (standing test condition): only standingpreserving maps are legitimate
+
+Rerunnability: operations must be idempotent under symmetric conditions
+
+Directed repair: repair must increase standing and reduce coercive coupling
+
+Drift: perturbations are bounded and nondestructive
+
+Legitimacy: an operation is legitimate iff it is successorconsistent and noncoercive
+
+These axioms elevate Σᴿ from a standing arithmetic to a structural theory of autonomy and legitimacy, suitable for analyzing political, social, computational, and epistemic systems.
+
+Scope and Use of This Companion Volume
+
+This book provides:
+
+the complete formal signature
+
+the full twotier axiom system in firstorder logic
+
+derived theorems
+
+structural lemmas
+
+algebraic and categorical interpretations
+
+examples and models
+
+connections to known mathematical structures
+
+potential applications in computation, coordination, and social systems theory
+
+It is not necessary to understand the main arguments of On Relevance,
+but it allows researchers to:
+
+prove structural theorems about autonomy, coupling, or legitimacy
+
+analyze systems with formal precision
+
+implement the engine in computational frameworks
+
+study the logical properties of pluralistic coordination
+
+This volume therefore stands on its own as a rigorous mathematical theory,
+while simultaneously serving as a foundation for the philosophical architecture developed in the original text.
+
+THE FULL AXIOM SYSTEM FOR STANDING ALGEBRA (Σᴿ)
+
+A ManySorted FirstOrder Logical Foundation
+
+PasteReady Formal System for the Mathematical Companion to On Relevance
+
+I. SIGNATURE OF THE THEORY (Σᴿ)
+
+(A many-sorted firstorder language)
+
+Sorts
+
+U — Entities (agents, actors, units)
+
+N — Standing values
+
+C — Capacity values
+
+D — Coupling degrees
+
+O — Operations (functions )
+
+Function Symbols
+
+(optional compositional combination)
+
+Every element of O is a function symbol of type
+
+Constant Symbols
+
+— null standing
+
+— first successor (defined via )
+
+Predicate Symbols
+
+(optionally)
+
+II. TIER 1 – CORE STANDING AXIOMS (Σᴿ₁)
+
+These axioms define the fundamental arithmetic and structural distinctions between null, prime, and composite entities.
+
+Axiom 1 — Nullity
+
+Null values cannot be altered by scaling:
+
+Axiom 2 — Successor Definition
+
+Axiom 3 — Successor as Primary Addition
+
+Axiom 4 — Individual Standing Units Are NonComposite
+
+Axiom 5 — NonDilution of Standing
+
+Entitylevel composition is additive:
+
+No composite can reduce any entity’s standing.
+
+Axiom 6 — Universal Successor Access (Pluralistic Inclusion)
+
+All entities must be able to reach standing 1.
+
+Axiom 7 — No Selective Successor Denial
+
+Any system allowing recognition for some but denying it to others is inconsistent.
+
+Axiom 8 — Coupling Degree Definition
+
+Axiom 9 — Prime Entities (Autonomy Singularities)
+
+Axiom 10 — Composite Entities
+
+Axiom 11 — Partition of Entity Types
+
+Mutual exclusivity:
+
+Axiom 12 — No Return to Nullity
+
+Axiom 13 — Monotonic Successor Growth
+
+(This enforces strictly increasing successor iteration.)
+
+III. TIER 2 – STRUCTURAL LEGITIMACY AXIOMS (Σᴿ₂)
+
+These axioms formalize autonomy, capacity, admissibility, drift, repair, and rerunnability — the structural logic central to On Relevance.
+
+Axiom 14 — CapacityIndexed Autonomy (CIA)
+
+Standing must track capacity:
+
+Axiom 15 — AutonomyLimiting Reflex Principle (ALRP)
+
+No admissible operation reduces standing:
+
+Any standingreducing operation is inadmissible:
+
+Axiom 16 — NonReciprocity Prevention Principle (NRPP)
+
+No agent may impose unreciprocated dependency relationships.
+
+Axiom 17 — Standing Test Condition 5 (STC5)
+
+Legitimacy requires standingpreservation under symmetric conditions:
+
+Axiom 18 — Rerunnability
+
+Legitimate operations must be idempotent:
+
+Axiom 19 — Directed Repair
+
+Repair increases standing and reduces coercive coupling.
+
+Axiom 20 — Drift
+
+Drift is bounded:
+
+Axiom 21 — Legitimacy Requirement
+
+Where:
+
+IV. COMPLETE THEORY
+
+Where:
+
+is the core standing algebra,
+
+is the structural legitimacy algebra.

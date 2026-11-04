@@ -1,0 +1,5280 @@
+# Time Without Dynamics
+
+- Original attachment: `11d2c172-1962-4f9d-8d3f-40cbf23e91f0-Time Without Dynamics.docx`
+- Original SHA-256: `facfd9598e069766387745ba09f910bd6c39bae85f46ad48498702973fdf4455`
+- Extraction: paragraph text in document order from `word/document.xml`; visual layout, images, and non-text objects may not be represented. The retained DOCX is authoritative.
+
+Time Without Dynamics: Entropy, Geometry, and Interoperability Constraints
+
+A Closure-Based Argument Against Past-Directed Global Trajectories
+
+Jonathan Rademacher
+
+Independent Researcher
+
+April 22, 2026
+
+Email: JonathanDRademacher@yahoo.com
+
+Abstract
+
+This paper presents the physics instantiation of a constraintbased admissibility substrate that has been independently developed across multiple formal domains. Related instantiations of the same underlying concept appear in On Relevance (philosophy), Standing Algebra (mathematics), and ΣR (a computational formalization implemented in Lean4). The present work applies the framework to physics, demonstrating how the same admissibility substrate accounts for temporal asymmetry and irreversibility without introducing new dynamical laws, privileged initial conditions, or hypothesislevel axioms.
+
+Rather than characterizing physical behavior in terms of trajectories or equations of motion, the framework operates at the level of admissible transformations. Admissibility is formulated measuretheoretically, as a property of measurable transformations preserving domainindependent monotonicity conditions. Interoperability is defined as the strict intersection of admissibility classes across domains. Within this formulation, irreversibility arises as a measuretheoretic obstruction to the existence of admissible inverses, while local reversibility and apparent time symmetry remain compatible with a globally directed arrow of time.
+
+Although the formal development is nongeometric, admissible state variations admit a derivative statespace interpretation, explaining why some local transformations extend globally while others fail. The physics instantiation presented here aligns with the philosophical, mathematical, and computational treatments, collectively demonstrating that the admissibility substrate is portable across domains while remaining internally rigorous within each. No claim is made that these instantiations exhaust the framework’s applicability.
+
+Keywords: admissibility; transformationlevel constraints; irreversibility; arrow of time; temporal asymmetry; measuretheoretic monotonicity; interoperability; noninvertible transformations; entropy production; local versus global admissibility; statespace variation; domainindependent constraints; foundational physics; information and thermodynamics; crossdomain formalism
+
+arXiv categories:
+Primary: physics.gen-ph
+Secondary: quant-ph, math-ph
+
+PACS: 05.70.Ln, 03.65.Ta, 04.20.Gz, 02.50.-r
+
+1. Introduction: The Incompleteness of EntropyBased Accounts
+
+1.1 The Arrow of Time Problem
+
+A persistent problem in the foundations of physics is the apparent incompatibility between the timereversal invariance of fundamental dynamical laws and the unidirectional character of macroscopic temporal phenomena. At the microscopic level, the equations governing classical mechanics, quantum mechanics, and relativistic field theory are, with limited and wellunderstood exceptions, invariant under time reversal. If a trajectory is a solution to the equations of motion, then a suitably defined reversed trajectory is also a solution. Formally, for a wide class of physical systems, there exists a timereversal operator such that
+
+where denotes the dynamical evolution operator on the system’s state space.
+
+Despite this microscopic symmetry, macroscopic phenomena exhibit a robust and universal temporal asymmetry. Physical systems prepared in lowentropy macrostates reliably evolve toward higherentropy macrostates; the reverse evolution is not observed in nature except in carefully engineered, locally isolated contexts. Broken objects do not spontaneously reassemble, thermal gradients relax rather than sharpen, and reliable records exist of the past but not of the future. These observations are codified in the Second Law of Thermodynamics, which states that the entropy of an isolated system does not decrease.
+
+However, the statement that entropy increases does not, by itself, constitute an explanation of time’s arrow. Entropy is a function defined on macrostates, not a generator of dynamics. The Second Law constrains the statistical behavior of ensembles, but it does not explain why physical evolution consistently realizes one temporal orientation rather than the other. The microscopic equations of motion permit entropydecreasing trajectories just as readily as entropyincreasing ones. Any account that identifies entropy increase as the cause of temporal asymmetry therefore risks circularity unless it explains why entropy itself exhibits directed behavior.
+
+This motivates a sharper formulation of the problem: why are entropydecreasing global trajectories not physically realized, despite being dynamically admissible? A satisfactory account of time’s arrow must answer this question without presupposing the very asymmetry it seeks to explain.
+
+1.2 Limitations of Existing Approaches
+
+Boltzmann Statistical Typicality
+
+The dominant contemporary explanation of macroscopic irreversibility appeals to statistical mechanics. On the Boltzmannian account, entropy is defined as
+
+where is the region of phase space corresponding to a macrostate and is the Liouville measure. Highentropy macrostates occupy vastly larger regions of phase space than lowentropy macrostates. Consequently, for almost all microstates compatible with a lowentropy macrostate, forward time evolution leads to macrostates of higher entropy. Entropy increase is therefore said to be typical.
+
+While this reasoning explains why entropy increase is overwhelmingly probable, it does not explain why the universe is ever found in a lowentropy macrostate, nor why typicality arguments apply preferentially in one temporal direction rather than symmetrically in both. The same statistical considerations imply that entropy should increase both toward the future and toward the past from any given lowentropy macrostate. Statistical typicality alone therefore fails to ground a genuine temporal asymmetry.
+
+The Past Hypothesis
+
+To address this deficiency, many authors introduce the Past Hypothesis, which postulates that the universe began in an exceptionally lowentropy macrostate. Given this boundary condition, entropy increase toward the future follows as a statistical consequence. Although this hypothesis is mathematically coherent and empirically consistent, it functions as an axiomatic stipulation rather than a derived result. It relocates the problem of time asymmetry from dynamics to initial conditions without explaining why such conditions obtain.
+
+Moreover, the Past Hypothesis does not render entropydecreasing trajectories physically illegitimate. It merely assigns them vanishing probability relative to a chosen initial macrostate. As a result, temporal asymmetry remains contingent rather than structurally necessary.
+
+Cosmological Boundary Conditions
+
+Related approaches appeal to special features of the early universe, such as constraints on spacetime geometry or gravitational degrees of freedom. While such proposals narrow the class of admissible initial states and may successfully account for low initial entropy, they continue to treat temporal asymmetry as a consequence of privileged boundary conditions imposed on an otherwise symmetric framework. The arrow of time is not derived from the structure of physical state space itself but from assumptions imposed at its boundaries.
+
+Summary of the Limitation
+
+Across these approaches, a common limitation emerges: time asymmetry is assumed rather than derived. Whether through probabilistic typicality, postulated initial conditions, or cosmological constraints, the direction of entropy increase is treated as a given feature of the universe rather than as a necessary consequence of the structure of physically admissible evolution. None of these frameworks establish that entropydecreasing global trajectories are physically illegitimate; they establish only that such trajectories are rare relative to a selected measure or boundary condition.
+
+1.3 Thesis Statement
+
+This paper advances a different claim, grounded in the Interoperability Constraint Geometry (ICG) framework I have developed elsewhere. I argue that the arrow of time and the monotonic behavior of entropy arise not from dynamical laws, probabilistic typicality, or special initial conditions, but from a global structural constraint on physically admissible state transitions.
+
+The central thesis is the following:
+
+The universe itself defines a geometric legitimacy envelope for state transitions.
+Only those transitions that remain globally interoperable—i.e., embeddable without contradiction into the total physical state of the universe—are physically realizable.
+
+Within this framework, entropy monotonicity is not a statistical tendency layered atop timesymmetric laws. Instead, it emerges as a structural property of the set of admissible evolutions. Entropydecreasing trajectories are not merely improbable; at global scales, they fail to compose with the rest of the universe in a manner consistent with causal structure, decoherence, and thermodynamic closure.
+
+Accordingly, the arrow of time is understood as an orientation induced by the geometry of physically legitimate transitions rather than as a primitive temporal direction or an artifact of special boundary conditions. The remainder of this paper formalizes this claim and demonstrates that it follows from, and unifies, established results in statistical mechanics, quantum theory, and cosmology.
+
+2. Background: Entropy, State Space, and Physical Admissibility
+
+2.1 State Space in Classical and Quantum Physics
+
+Any account of temporal asymmetry must begin with a precise characterization of the space of states to which physical evolution applies. In all major physical frameworks, there exists a welldefined distinction between the mathematical state space of a theory and the subset of that space corresponding to physically realizable states.
+
+Classical Phase Space
+
+In classical mechanics, the state of an -degreeoffreedom system is represented as a point in a phase space
+
+coordinatized by generalized positions and momenta. The natural measure on this space is the Liouville measure , which is preserved under Hamiltonian evolution:
+
+for any measurable set . This measure preservation underlies the timereversal invariance of classical statistical mechanics.
+
+However, not every point in corresponds to a physically realizable state. Constraints arising from boundary conditions, conservation laws, and global consistency requirements restrict the subset of phase space that can be instantiated by a physical system embedded in the universe. Classical mechanics itself distinguishes between kinematically allowed states and dynamically accessible trajectories; this distinction is structural and does not depend on probabilistic considerations.
+
+Quantum State Space
+
+In quantum mechanics, the mathematical state space is a complex Hilbert space , with physical states represented by normalized vectors up to phase or, more generally, by density operators satisfying:
+
+Unitary time evolution preserves the von Neumann entropy for isolated systems:
+
+As in the classical case, the mathematical space of density operators strictly exceeds the set of physically realizable states. States that violate superselection rules, fail to decohere relative to an environment, or cannot be consistently embedded in a larger composite system are mathematically definable but physically inaccessible. In algebraic quantum field theory, this distinction is sharpened further: physically admissible states must satisfy locality, positivity of energy, and consistency with the net of local observables.
+
+Distinction Between Mathematical and Physical States
+
+Across both classical and quantum frameworks, a common structural feature emerges:
+
+The space of mathematically definable states is strictly larger than the space of physically admissible states.
+
+Physical realizability is therefore not guaranteed by formal definability alone. It depends on whether a state or trajectory can be consistently embedded into the total physical system without violating global constraints. This distinction will be central to the argument developed in later sections.
+
+2.2 Entropy as a Measure on CoarseGrained State Space
+
+Entropy enters physics not as a fundamental dynamical variable but as a measuretheoretic quantity defined relative to a coarsegraining of state space.
+
+Standard Definition
+
+Given a partition of the microscopic state space into macrostates , entropy is defined as
+
+where is the appropriate invariant measure (Liouville measure in classical mechanics, or the induced measure over density operators in quantum settings). This definition is purely geometric: entropy measures the logarithmic volume of a region of state space corresponding to a macrostate.
+
+Crucially, entropy is not a generator of motion and does not appear in the fundamental equations of evolution. The time derivative of entropy is not fixed by the microscopic laws; it depends on how trajectories traverse the coarsegrained structure of state space.
+
+Geometry Rather Than Dynamics
+
+From this perspective, entropy increase reflects the fact that highentropy macrostates occupy vastly larger regions of state space than lowentropy ones. A lowentropy macrostate corresponds to a highly constrained, geometrically thin subset of , while highentropy macrostates correspond to geometrically robust regions.
+
+This geometric asymmetry alone, however, does not explain temporal directionality. For any trajectory that evolves from a lowentropy region to a highentropy one, the timereversed trajectory is equally valid under the microscopic dynamics. Entropy, therefore, does not by itself distinguish future from past. Any explanation of entropy monotonicity must appeal to constraints on which trajectories are physically admissible, not merely to the geometry of state space in isolation.
+
+2.3 Known Constraints on Physical Realizability
+
+The distinction between mathematical possibility and physical admissibility is enforced in practice by a collection of wellestablished constraints. These constraints are not speculative additions; they are integral to accepted physical theory.
+
+Causality (General Relativity)
+
+In relativistic physics, physically admissible states and trajectories must respect the causal structure of spacetime. While the field equations of general relativity admit solutions containing closed timelike curves or other exotic features, such solutions raise consistency problems when embedded in a universe containing quantum fields, thermodynamic processes, and observers. Causal structure therefore functions as a global constraint on physical realizability, not merely as a local dynamical rule.
+
+Unitarity and Decoherence (Quantum Mechanics)
+
+In quantum mechanics, unitarity governs microscopic evolution, but physically realized macrostates depend on decoherence and entanglement with an environment. States that require global phase coherence across macroscopic degrees of freedom are dynamically definable but physically unstable and unobservable. Decoherence imposes an effectively irreversible structure on admissible evolutions by enforcing consistency between subsystems and their environments.
+
+Thermodynamic Consistency
+
+Thermodynamic laws impose further global constraints. While local entropy reduction is permitted and routinely observed, such reductions are physically admissible only when accompanied by compensating entropy increase elsewhere. A global entropy decrease would require finetuned correlations across the entire universe, rendering such trajectories incompatible with the observed independence and decoherence of macroscopic subsystems.
+
+Summary
+
+Taken together, these considerations establish a foundational point that is often left implicit: physical evolution is constrained not only by equations of motion but by global conditions of consistency and embeddability. The space of physically admissible states is therefore a structured subset of the mathematical state space, shaped by causal, quantum, and thermodynamic constraints.
+
+This background provides the basis for the next section, in which I formalize these constraints using the Interoperability Constraint Geometry (ICG) framework and show how entropy monotonicity and temporal orientation emerge as structural properties of admissible evolution rather than as contingent statistical tendencies.
+
+3. Interoperability Constraint Geometry (ICG)
+
+3.1 Motivation: Composability as a Physical Requirement
+
+Physical evolution is typically characterized as the lawful progression of states under welldefined dynamical equations. However, across all major physical frameworks, lawful evolution is necessary but not sufficient for physical realizability. A state transition may satisfy the local equations of motion of a subsystem while nevertheless failing to be physically admissible when embedded into the universe as a whole.
+
+This distinction is already implicit in multiple areas of physics:
+
+In classical mechanics, Liouville’s theorem guarantees measure preservation under Hamiltonian flow, yet conservation laws and boundary conditions restrict which trajectories are dynamically accessible.
+
+In quantum mechanics, unitary evolution preserves von Neumann entropy for isolated systems, yet most mathematically definable states are physically unrealizable due to decoherence and environmental entanglement.
+
+In relativistic physics, locally valid solutions to Einstein’s field equations may fail to embed into a globally causal spacetime.
+
+What unifies these cases is a structural requirement that is often left implicit: physical evolution must be composable. That is, the evolution of any subsystem must remain globally consistent with the evolution of all other subsystems and with the constraints imposed by causal structure, quantum coherence, and thermodynamic consistency.
+
+The Interoperability Constraint Geometry (ICG) formalizes this requirement. It does not introduce a new physical interaction or modify existing dynamics. Rather, it makes explicit a constraint that is already enforced—often tacitly—across accepted physical theories.
+
+3.2 Formal Definition of Interoperability
+
+Global State Space
+
+Let denote the global physical state space of the universe. The specific mathematical realization of is left general, encompassing classical phase space, quantum Hilbert space representations, or algebraic quantum field theoretic state spaces. The arguments developed here depend only on the following minimal assumptions, all of which are standard:
+
+contains a welldefined set of mathematically describable states.
+
+Physical evolution corresponds to mappings generated by accepted dynamical laws.
+
+Not all mathematically definable states or trajectories correspond to physically realizable histories of the universe.
+
+The third point is not speculative; it is a direct consequence of causality, unitarity, and thermodynamic constraints, as discussed in Section 2.
+
+Interoperability Relation
+
+I define an interoperability relation
+
+where if and only if the transition from state to state can be embedded into a globally consistent physical evolution of the universe.
+
+More precisely, if there exists:
+
+a physically admissible global state containing as a subsystem,
+
+a physically admissible evolution ,
+
+and a resulting global state containing as the corresponding subsystem,
+
+such that the transition preserves:
+
+causal consistency (no violation of global causal structure),
+
+quantum consistency (unitarity at the global level and decoherence at the macroscopic level),
+
+thermodynamic consistency (no uncompensated global entropy decrease).
+
+If no such embedding exists, then .
+
+Relation to Existing Physics
+
+This definition mirrors, and unifies, several established results:
+
+Liouville’s theorem preserves phasespace volume but does not guarantee accessibility of all volumepreserving trajectories. ICG formalizes this distinction at the global level.
+
+Decoherence theory excludes large classes of formally unitary evolutions as physically unrealizable. ICG encodes this exclusion structurally.
+
+Chronology protection arguments in general relativity restrict solutions not by local equations but by global consistency. ICG generalizes this logic beyond spacetime geometry alone.
+
+Crucially:
+
+is not a force, field, or dynamical operator.
+
+It introduces no new equations of motion.
+
+It functions purely as a consistency predicate on transitions.
+
+Minimal Structural Properties
+
+The interoperability relation satisfies the following properties, each of which is physically unavoidable:
+
+Reflexivity
+
+since a state trivially embeds into itself.
+
+Nonsymmetry
+
+This asymmetry is already present in decoherence theory and thermodynamics, where reversal of a globally admissible process generally fails to remain admissible.
+
+No assumption of temporal direction is introduced here; asymmetry arises solely from embeddability constraints.
+
+3.3 The ICG Closure Operator
+
+Definition
+
+Using the interoperability relation, I define the ICG closure of the state space:
+
+This set consists of all states that can occur as part of at least one globally admissible physical history of the universe.
+
+Interpretation
+
+This construction mirrors existing physical restrictions:
+
+In statistical mechanics, only trajectories consistent with coarsegrained entropy increase are observed.
+
+In quantum mechanics, only decohered macrostates appear in practice.
+
+In cosmology, only spacetimes consistent with global causal structure are treated as physically viable.
+
+ICG unifies these exclusions by expressing them as a single closure condition:
+
+Physically reachable states are those that are closed under global interoperability.
+
+A state may be:
+
+mathematically definable,
+
+dynamically reachable under timesymmetric equations,
+
+and yet excluded from due to failure of global embeddability.
+
+Extension Beyond Existing Frameworks
+
+Existing theories enforce fragments of this closure condition within their own domains. What ICG adds is:
+
+Domain independence
+The same formalism applies to classical, quantum, and relativistic systems.
+
+Global scope
+Constraints are applied at the level of the universe as a whole, not merely at the subsystem level.
+
+Structural primacy
+Probability, typicality, and initial conditions enter only after admissibility is established.
+
+Thus, ICG does not compete with existing physical theories. It formalizes the structural principle they already rely on and extends it into a unified geometric constraint on state space.
+
+Positioning and Transition
+
+At this stage, no claim has yet been made regarding entropy monotonicity or the arrow of time. The framework introduced here merely establishes that physical evolution is a proper subset of mathematically definable evolution, determined by global interoperability constraints.
+
+In the next section, I will show that when entropy is defined as a geometric measure on coarsegrained state space, global entropydecreasing trajectories fail to be closed under . From this failure of closure, the observed arrow of time follows as a necessary structural consequence rather than as a probabilistic or axiomatic assumption.
+
+4. Entropy Monotonicity as a Structural Theorem
+
+4.1 EntropyDecreasing Trajectories
+
+4.1.1 Existence in Principle Under TimeReversal Invariant Dynamics
+
+Let denote the global physical state space equipped with a family of dynamical evolution maps
+
+generated by timereversal invariant microscopic laws. Timereversal invariance means that there exists an involutive operator such that
+
+Let be a coarsegraining map into macrostates, and let entropy be defined by
+
+where is the invariant measure on .
+
+If there exists a trajectory such that
+
+then the timereversed trajectory
+
+satisfies
+
+Lemma 4.1 (Dynamical Existence of Entropy Decrease).
+Entropydecreasing trajectories exist as formally valid solutions of timereversal invariant equations of motion.
+
+Proof.
+This follows directly from bijectivity of under time reversal and the definition of entropy on macrostates. ∎
+
+Thus, entropy decrease is not dynamically forbidden.
+
+4.1.2 MeasureTheoretic Fragility and Instability
+
+Let be a macrostate. The probability that a microstate in evolves into a macrostate with lower entropy over time is
+
+For macroscopic systems,
+
+implying
+
+in the thermodynamic limit.
+
+Lemma 4.2 (MeasureZero Character of Entropy Decrease).
+The set of microstates generating sustained entropydecreasing trajectories has vanishing measure as system size increases.
+
+Proof.
+Immediate from the exponential scaling of macrostate volumes with entropy. ∎
+
+At this point, standard physics concludes improbability. ICG proceeds further.
+
+4.2 Main Theorem: ICG NonClosure
+
+4.2.1 Statement of the Theorem
+
+Theorem 4.3 (ICG NonClosure Theorem).
+Let denote the interoperability closure defined in Section 3. Then:
+
+That is, global entropydecreasing trajectories are not closed under the interoperability relation.
+
+4.2.2 Proof (Thermodynamic and Quantum Constraints)
+
+Let the universe be decomposed into system and environment . The total entropy satisfies:
+
+where is the mutual information.
+
+A global entropy decrease requires:
+
+Thus, entropy decrease requires net reconstruction of correlations across the universe.
+
+Under decoherence,
+
+and the trace map is noninvertible except on measurezero subsets. Recohering macroscopic degrees of freedom therefore requires global control over , which is physically unavailable.
+
+Hence no globally consistent embedding exists, implying
+
+∎
+
+4.2.3 General Relativity: Causal Structure as a Precedent for ICG
+
+In General Relativity, spacetime is a Lorentzian manifold governed by Einstein’s field equations:
+
+The metric induces a causal structure via the light cone at each point. A causal ordering is defined by
+
+where is the causal future of .
+
+This ordering is geometric, not dynamical.
+
+Lemma 4.4 (Global Time Orientation in GR).
+In a globally timeorientable spacetime, no compact or finiteenergy perturbation of can reverse the global causal orientation.
+
+Proof.
+Time orientability requires a continuous timelike vector field . Local perturbations preserve this field unless a global topological obstruction is introduced, which finite perturbations cannot induce. ∎
+
+Thus, GR allows local curvature without global time reversal.
+
+4.2.4 Explicit Mathematical Correspondence Between GR and ICG
+
+This structure is mirrored exactly in ICG.
+
+Define an ICG causal preorder:
+
+This is directly analogous to GR causality:
+
+Define an entropy gradient along admissible transitions:
+
+Lemma 4.5 (ICG Global Orientation).
+For all ,
+
+Proof.
+Negative gradients correspond to entropydecreasing transitions, which are excluded by Theorem 4.3. ∎
+
+Thus:
+
+GR: curvature bends trajectories but preserves causal orientation
+
+ICG: local entropy reduction bends admissible trajectories but preserves global entropy orientation
+
+ICG is therefore a statespace generalization of relativistic causality.
+
+4.3 Derived Results with Explicit Proofs
+
+4.3.1 Structural Second Law
+
+Corollary 4.6 (Structural Second Law).
+
+Proof.
+Immediate from Lemma 4.5. ∎
+
+4.3.2 Absence of Global Time Reversal
+
+Corollary 4.7 (No Global PastDirected Histories).
+If , then
+
+except at equilibrium points where .
+
+Proof.
+Time reversal inverts entropy gradients, violating Lemma 4.5. ∎
+
+4.3.3 Classification of Entropy Decrease
+
+Lemma 4.8 (Local vs Global Entropy Reduction).
+
+Proof.
+This is the condition for preservation of . ∎
+
+4.4 How ICG Reshapes the Standard Understanding
+
+Conventional View
+
+ICG Reformulation
+
+Entropy increase is statistical
+
+Entropy decrease is noninteroperable
+
+Second Law is emergent
+
+Second Law is geometric
+
+Time arrow is assumed
+
+Time arrow is induced
+
+Local violations threaten law
+
+Local curvature preserves global orientation
+
+4.5 LeadIn to Section 5
+
+The inclusion of General Relativity makes explicit that local perturbations do not threaten global orientation. Just as spacetime curvature permits extreme local distortions without reversing causal order, the interoperability geometry permits local entropy reduction without allowing global entropy reversal.
+
+The next section formalizes this result. I analyze subsystems embedded within and derive exact quantitative conditions under which local entropy reduction is compatible with global interoperability. This establishes local entropy decrease not as an exception to irreversibility, but as a direct consequence of the same geometric constraints that enforce the arrow of time.
+
+5. Local Entropy Reduction and Subsystem Compatibility
+
+5.1 Subsystem Decomposition
+
+To analyze local entropy behavior, the global state space is decomposed into a subsystem of interest and its environment:
+
+A global state is written as
+
+where and .
+
+Let entropy be defined via coarsegraining as in Section 4. The total entropy satisfies:
+
+where denotes mutual information between subsystem and environment.
+
+This decomposition is entirely standard and applies equally to classical, quantum, and relativistic systems.
+
+5.2 Compatibility Condition for Local Entropy Reduction
+
+5.2.1 Global Interoperability Constraint
+
+From Section 4, physically admissible trajectories must lie within the interoperability closure . Therefore, any admissible transition
+
+must satisfy:
+
+Substituting the entropy decomposition yields:
+
+This inequality is the fundamental compatibility condition.
+
+Lemma 5.1 (Local Entropy Reduction Condition).
+
+A local entropy decrease is physically admissible if and only if
+
+Proof.
+Rearranging the global inequality:
+
+∎
+
+This condition is exact, not approximate.
+
+5.2.2 Entropy Flow Analogue of Einstein’s Equations
+
+In General Relativity, Einstein’s field equations relate spacetime curvature to stress–energy:
+
+The structural analogue in ICG is a relation between local entropy flow and global interoperability curvature.
+
+Define the entropy flow tensor for a subsystem:
+
+and define the interoperability curvature functional:
+
+Then the global admissibility condition becomes:
+
+This equation plays the same structural role as Einstein’s equation:
+
+General Relativity
+
+ICG
+
+local entropy flux
+
+interoperability curvature
+
+causal structure
+
+admissible state transitions
+
+Just as stress–energy curves spacetime without reversing global causality, local entropy reduction “curves” admissible trajectories without reversing the global entropy orientation.
+
+5.3 Blocking Standard Objections
+
+5.3.1 Life and Biological Organization
+
+Biological systems exhibit sustained local entropy reduction:
+
+However, metabolic processes export entropy to the environment:
+
+and increase correlations with environmental degrees of freedom.
+
+Thus:
+
+preserving global interoperability.
+
+Life is therefore not an exception to the Second Law; it is an explicit realization of the compatibility condition.
+
+5.3.2 Refrigerators and Heat Engines
+
+For a refrigerator extracting heat from a cold reservoir and dumping into a hot reservoir:
+
+with .
+
+Thus:
+
+which satisfies the ICG closure condition.
+
+Again, no exception occurs.
+
+5.3.3 Computation and Information Processing
+
+Logical erasure obeys Landauer’s principle:
+
+Thus any computational entropy reduction is necessarily accompanied by environmental entropy increase, preserving:
+
+Computation therefore requires ICG compatibility; it does not threaten it.
+
+5.4 Reframing the Second Law
+
+Theorem 5.2 (Second Law as a Corollary of Interoperability).
+
+The Second Law of Thermodynamics follows as a direct consequence of global interoperability closure:
+
+Proof.
+From Sections 4 and 5, any admissible trajectory must satisfy:
+
+Summing over all subsystems yields:
+
+∎
+
+The Second Law is therefore not primitive, not statistical, and not contingent on initial conditions. It is a structural consequence of admissible statespace geometry.
+
+5.5 Structural Summary
+
+Local entropy reduction is permitted and required by ICG.
+
+Global entropy reduction is structurally excluded.
+
+The entropy flow equation mirrors Einstein’s field equations in role and structure.
+
+The Second Law emerges as a geometric constraint, not an empirical axiom.
+
+5.6 Transition Forward
+
+With local compatibility fully formalized, the remaining task is to show how these constraints induce a partial order on admissible states, yielding time’s arrow as an emergent orientation rather than a background parameter.
+
+This is addressed in the next section, where time is defined explicitly as a quotient structure over interoperable histories.
+
+6. Time Orientation as an Emergent Partial Order
+
+6.1 Defining Time Without Assuming It
+
+Up to this point, no primitive notion of time has been introduced. In particular:
+
+No global temporal coordinate has been postulated.
+
+No preferred temporal direction has been assumed.
+
+No asymmetric dynamical law has been imposed.
+
+The formal structure consists solely of:
+
+a global physical state space ,
+
+an interoperability relation ,
+
+and a coarsegrained entropy function .
+
+I define a binary relation on by:
+
+This definition introduces no temporal primitives. It states only that:
+
+the transition from to is globally interoperable, and
+
+the entropy associated with is not less than that of .
+
+The claim of this section is that this relation induces what is ordinarily called time, and that this induction mirrors structures already present in accepted physics.
+
+6.2 Time as an Orientation of Geometry, Not an Independent Axis
+
+6.2.1 Relativistic Precedent: Causal Order Without Time Coordinates
+
+In General Relativity, spacetime is a Lorentzian manifold . The fundamental causal structure is defined independently of any global time coordinate by the relation:
+
+where is the causal future of .
+
+This relation:
+
+is defined purely geometrically,
+
+induces a partial order on events,
+
+and exists even when no global time coordinate is available.
+
+Time orientation in GR is therefore not a scalar field or external parameter, but the orientation of admissible curves (timelike or null geodesics) on the manifold.
+
+Key point:
+GR already treats time as an orientation induced by structure, not as an independent dimension.
+
+6.2.2 StateSpace Generalization via ICG
+
+The ICG framework generalizes this exact construction from spacetime to global physical state space.
+
+The relation plays the same formal role as relativistic causality:
+
+Here:
+
+the metric is replaced by interoperability constraints,
+
+light cones are replaced by entropynondecreasing admissible transitions,
+
+and causal order is replaced by admissible state order.
+
+No additional assumptions are introduced.
+
+6.3 Mathematical Properties of the Relation
+
+6.3.1 Transitivity (OrderTheoretic and Physical)
+
+Proposition 6.1 (Transitivity).
+If and , then .
+
+Proof.
+
+From :
+
+From :
+
+Closure of admissible transitions under composition (Section 3) implies:
+
+By transitivity of on ,
+
+Hence . ∎
+
+External validation:
+This mirrors:
+
+transitivity of causal order in GR,
+
+transitivity of entropy production in nonequilibrium thermodynamics,
+
+transitivity of CPTinvariant quantum channels under composition.
+
+6.3.2 Antisymmetry (No Bidirectional Physical Accessibility)
+
+Proposition 6.2 (Antisymmetry).
+There do not exist distinct states such that both and .
+
+Proof.
+
+Assume such exist. Then:
+
+and both transitions are interoperable.
+
+This implies a globally admissible, nontrivial entropypreserving cycle.
+
+However:
+
+In thermodynamics, such cycles violate detailed balance except at equilibrium.
+
+In quantum information, such bidirectional channels require perfect recoherence, which is excluded generically.
+
+In GR, bidirectional timelike accessibility implies closed timelike curves, which are excluded by global causality conditions.
+
+By Theorem 4.3, such cycles are excluded from except at measurezero equilibrium points.
+
+Contradiction. ∎
+
+6.3.3 Absence of Global Cycles
+
+Theorem 6.3 (Acyclicity).
+There exists no finite sequence
+
+with .
+
+Proof.
+
+By repeated application of transitivity:
+
+which violates antisymmetry except at equilibrium points that admit no nontrivial evolution.
+
+Thus global cycles are excluded. ∎
+
+External validation:
+This result is structurally identical to:
+
+the prohibition of causal loops in globally hyperbolic spacetimes,
+
+the absence of entropydecreasing cycles in Markov semigroups,
+
+the monotonicity of Lindblad evolution in open quantum systems.
+
+6.4 Time as an Affine Parameter of Admissible Curves
+
+Let be a smooth admissible curve such that:
+
+The parameter is not time by assumption. However:
+
+the absence of cycles,
+
+the global orientation of ,
+
+and the closure of admissible transitions
+
+permit a consistent monotonic reparameterization of across all admissible curves.
+
+Proposition 6.4 (Existence of a Global Orientation Parameter).
+
+There exists a class of monotonically related parameters such that for all admissible curves:
+
+Proof.
+
+From Lemma 4.5, everywhere on . Hence any parameter respecting the order admits monotonic reparameterization.
+
+This defines uniquely up to affine transformation. ∎
+
+Interpretation:
+is time—not as a coordinate of the manifold, but as the affine parameter along its oriented geometry.
+
+6.5 Emergence of the Arrow of Time
+
+From Sections 6.1–6.4, it follows that:
+
+The arrow of time is the orientation of admissible statespace geometry induced by interoperability closure.
+
+This arrow:
+
+is not assumed,
+
+is not imposed by initial conditions,
+
+is not tied to a fundamental coordinate,
+
+and cannot reverse without reshaping the admissible manifold itself.
+
+6.6 Consequences (Externally Anchored)
+
+Time reversal fails for the same reason causal reversal fails in GR: it violates global admissibility.
+
+Local temporal anomalies correspond to curvature, just as in spacetime geometry.
+
+Time travel to the past would require a topological inversion, not a dynamical maneuver.
+
+Initial conditions are not explanatory primitives; the order exists independently.
+
+6.7 Summary
+
+The relation defines a strict partial order.
+
+This order mirrors causal structure in GR, entropy order in thermodynamics, and channel order in quantum theory.
+
+Time is the affine parameter of traversal along this ordered geometry.
+
+The arrow of time is therefore structural, geometric, and unavoidable.
+
+Rejecting this conclusion would require rejecting not ICG, but the shared structural foundations of modern physics.
+
+7. Implications for Time Travel and Closed Timelike Curves
+
+7.1 Mathematical Versus Physical Possibility
+
+A central source of confusion in discussions of time travel is the failure to distinguish between mathematical possibility and physical admissibility. This distinction is standard in physics and has already been emphasized in earlier sections, but it is especially critical here.
+
+7.1.1 Closed Timelike Curves in General Relativity
+
+Einstein’s field equations,
+
+admit solutions containing closed timelike curves (CTCs), including Gödel spacetime, certain Kerr solutions, and other exotic geometries. In these spacetimes, there exist timelike curves such that:
+
+formally allowing return to one’s own past.
+
+However, it is wellestablished that:
+
+the existence of a solution to Einstein’s equations does not guarantee its physical realizability,
+
+many such solutions require unphysical matter distributions, pathological global structure, or violate reasonable energy conditions,
+
+and even when mathematically consistent, such spacetimes raise severe problems when quantum fields and thermodynamics are included.
+
+Thus, GR itself already enforces a distinction between solutions of the equations and physically admissible spacetimes.
+
+7.1.2 TimeReversed Solutions in Quantum Mechanics
+
+Similarly, in quantum mechanics, the Schrödinger equation is timereversal invariant. If
+
+admits a solution , then a timereversed solution also exists.
+
+Yet, as discussed in Sections 4 and 5, physically realized quantum evolutions are constrained by:
+
+decoherence,
+
+entanglement with uncontrollable environments,
+
+and thermodynamic irreversibility.
+
+Timereversed solutions exist mathematically, but they are not physically embeddable except under measurezero conditions.
+
+Summary of 7.1
+
+Across both GR and QM, timereversal and closed temporal structure are mathematically admissible but physically constrained. This distinction is not controversial; it is a foundational feature of modern physics.
+
+The question, therefore, is not whether time travel is mathematically conceivable, but whether it is globally interoperable.
+
+7.2 Interoperability Constraint Geometry Interpretation
+
+7.2.1 PastDirected Trajectories and Interoperability
+
+Within the ICG framework, a physically admissible history is a curve
+
+monotonically ordered by the relation defined in Section 6.
+
+A pastdirected trajectory would require a sequence of states
+
+such that
+
+for some nontrivial segment.
+
+However, by the NonClosure Theorem (Theorem 4.3), any global entropydecreasing transition satisfies:
+
+implying that such a transition lies outside the interoperability closure .
+
+Lemma 7.1 (NonInteroperability of PastDirected Transitions).
+Any trajectory that is pastdirected with respect to the entropyinduced partial order is noninteroperable and therefore not physically admissible.
+
+Proof.
+Pastdirected trajectories require entropy decrease along admissible transitions. By Theorem 4.3, such transitions are excluded from . ∎
+
+7.2.2 NonParadoxical Exclusion
+
+Importantly, ICG does not exclude time travel by appealing to logical paradoxes (e.g., grandfather paradoxes) or by imposing ad hoc consistency conditions.
+
+Instead:
+
+Pastdirected trajectories are excluded because they cannot be embedded into a globally consistent physical evolution.
+
+This is exactly analogous to how spacelike curves are excluded from causal influence in GR—not because they are paradoxical, but because they are noncausal.
+
+Thus, under ICG, time travel to the past is not “forbidden” in the sense of violating a rule; it is nonembeddable in the same sense that superluminal causal influence is nonembeddable.
+
+7.3 Strong Structural Claim
+
+Theorem 7.2 (Structural Exclusion of PastDirected Time Travel).
+
+Time travel to the past is excluded by global structural constraints on physically admissible state space, not by dynamical laws, probabilistic considerations, or paradoxavoidance principles.
+
+Proof.
+
+Fundamental dynamical laws are timereversal invariant (Sections 4.1, 7.1).
+
+Entropydecreasing trajectories are dynamically admissible but not interoperable (Theorem 4.3).
+
+Physical histories must lie within (Section 3).
+
+Pastdirected trajectories necessarily exit .
+
+Therefore, pastdirected time travel is structurally excluded. ∎
+
+7.3.1 Relation to Closed Timelike Curves
+
+Under this framework:
+
+CTCs correspond to loops in mathematical solution space.
+
+Physical histories correspond to acyclic chains in .
+
+Any spacetime admitting a CTC that could be physically realized would violate the interoperability closure conditions imposed by thermodynamics, decoherence, and global consistency.
+
+This aligns naturally with:
+
+Hawking’s chronology protection conjecture,
+
+the instability of CTCs under quantum effects,
+
+and the absence of empirical evidence for pastdirected causation.
+
+ICG does not assume chronology protection; it derives it structurally.
+
+7.4 Consequences
+
+Time travel to the past is mathematically definable but physically unrealizable.
+
+No paradox resolution is required, because paradoxical trajectories never enter admissible state space.
+
+Local temporal distortions (time dilation, gravitational effects) are fully compatible with ICG.
+
+Any proposal for pastdirected time travel must demonstrate global interoperability, not merely local dynamical consistency.
+
+7.5 Summary
+
+Timereversed solutions and CTCs exist mathematically.
+
+Physical realizability requires interoperability.
+
+Pastdirected trajectories fail global embeddability.
+
+Time travel to the past is therefore structurally excluded, not forbidden by law.
+
+This conclusion does not depend on speculative physics, special initial conditions, or philosophical arguments. It follows directly from the same consistency principles already required by General Relativity, quantum mechanics, and thermodynamics.
+
+8. Relation to Existing Theories
+
+8.0 MetaFramework and Rules of Subsumption (Foundational)
+
+This section establishes the formal framework within which the Interoperability Constraint Geometry (ICG) relates to existing physical theories. It does not invoke the equations or assumptions of any specific theory. Instead, it defines the logical and mathematical criteria under which one framework may be said to subsume another without contradiction, replacement, or forced unification.
+
+The purpose of this subsection is to make explicit—prior to any domainspecific discussion—what ICG does and does not claim. In particular, this section blocks the interpretation of ICG as a competing theory, a reductive unification, or an asserted unified field theory.
+
+8.0.1 Mathematical Solutions Versus Physical Histories
+
+Modern physical theories uniformly distinguish—either explicitly or implicitly—between the full set of mathematical solutions to their equations and the subset of those solutions regarded as physically realizable.
+
+Definition 8.1 (Mathematical Solution).
+
+Let be a physical theory specified by a set of equations . A mathematical solution of is any object satisfying in the relevant mathematical sense (e.g., differential, algebraic, or operatortheoretic).
+
+Definition 8.2 (Physical History).
+
+A physical history of is a mathematical solution that is regarded, within the theory’s accepted interpretive framework, as capable of representing a physically realizable evolution of a system in the universe.
+
+This distinction is not optional. It is already present in:
+
+General Relativity (e.g., exclusion of many exact solutions),
+
+Quantum theory (e.g., exclusion of recohering macroscopic evolutions),
+
+Statistical mechanics (e.g., exclusion of entropydecreasing histories),
+
+Classical mechanics (e.g., exclusion of finetuned nongeneric trajectories).
+
+ICG operates entirely at this distinction.
+
+8.0.2 Admissibility as a Structural Filter
+
+ICG introduces a formal criterion that selects physical histories from the space of mathematical solutions.
+
+Definition 8.3 (Admissibility Filter).
+
+Let denote the global physical state space and the interoperability relation defined in Section 3. A transition is admissible if and only if:
+
+A trajectory is a physically admissible history if and only if:
+
+where denotes the interoperability closure.
+
+This filter:
+
+does not modify equations of motion,
+
+does not introduce new dynamics,
+
+does not rank theories by correctness,
+
+and does not impose additional empirical postulates.
+
+It is a global consistency constraint on realizability.
+
+8.0.3 Three Distinct Levels of Equivalence
+
+To prevent category errors, it is essential to distinguish three logically independent levels at which theories may be compared.
+
+Definition 8.4 (EquationLevel Equivalence).
+
+Two frameworks are equationlevel equivalent if they posit identical dynamical equations governing the evolution of states.
+
+ICG makes no claim of equationlevel equivalence with any theory.
+
+Definition 8.5 (SolutionSpace Restriction).
+
+A framework restricts the solution space of a theory if it identifies a proper subset of ’s mathematical solutions as physically admissible.
+
+ICG operates at this level.
+
+Definition 8.6 (Admissibility Filtering).
+
+An admissibility filter is a criterion that:
+
+excludes some mathematical solutions,
+
+excludes none that are empirically realized,
+
+and excludes only those already regarded as physically pathological, unstable, or nongeneric.
+
+ICG is an admissibility filter in this precise sense.
+
+8.0.4 Universality of Admissibility Filtering
+
+The following lemma establishes that admissibility filtering is not an invention of ICG, but a structural feature of all successful physical theories.
+
+Lemma 8.1 (No Physical Theory Realizes All Mathematical Solutions).
+
+There exists no empirically successful physical theory for which all mathematical solutions of are regarded as physically realizable.
+
+Proof.
+
+In General Relativity, many exact solutions (e.g., with pathological causal structure) are excluded from physical consideration.
+
+In quantum mechanics, timereversed macroscopic solutions are excluded by decoherence.
+
+In statistical mechanics, entropydecreasing trajectories are excluded as physically unrealized.
+
+In classical mechanics, measurezero trajectories requiring infinite finetuning are excluded as physically irrelevant.
+
+Thus, admissibility filtering is already present in every case. ∎
+
+8.0.5 Structural Subsumption Defined
+
+ICG relates to existing theories via structural subsumption, defined as follows.
+
+Definition 8.7 (Structural Subsumption).
+
+A physical theory is structurally subsumed by ICG if:
+
+Every physical history of corresponds to a trajectory in ,
+
+Every solution of excluded by ICG is already excluded (explicitly or implicitly) by ’s own physical interpretive criteria,
+
+No equation, constant, or empirical prediction of is altered.
+
+Structural subsumption is therefore nonreductive and noncompetitive.
+
+8.0.6 ICG Is Not a Competing Theory
+
+The following theorem addresses directly the concern that ICG constitutes a unifying or replacement theory.
+
+Theorem 8.2 (NonCompetition Theorem).
+
+ICG is not a competing physical theory, does not replace any existing theory, and does not assert unification of forces, fields, or dynamics.
+
+Proof.
+
+ICG introduces no equations of motion.
+
+ICG introduces no new degrees of freedom.
+
+ICG introduces no coupling constants or fields.
+
+ICG alters no empirical predictions of any theory.
+
+ICG operates solely as a global admissibility constraint on physical histories.
+
+Therefore, ICG cannot be classified as a competing theory or as a unification in the dynamical sense. ∎
+
+8.0.7 Clarification Regarding Unification Claims
+
+ICG does not assert itself as a unified field theory or a theory of everything. If ICG is later interpreted as unifying disparate domains, this unification is structural and retrospective, not asserted.
+
+Formally:
+
+ICG asserts only that physically admissible histories across domains share a common global consistency structure.
+Any further unificatory interpretation is a property of that structure, not a claim imposed by the framework.
+
+8.0.8 Summary of the MetaFramework
+
+This subsection establishes that:
+
+ICG operates exclusively at the level of admissibility.
+
+All successful physical theories already rely on admissibility filtering.
+
+Structural subsumption does not imply reduction, replacement, or forced unification.
+
+Accusations of “UFT claims” misunderstand the logical scope of the framework.
+
+With this foundation in place, subsequent subsections may address individual theories without risk of category confusion.
+
+Transition
+
+The following subsections apply this metaframework to specific physical theories, beginning with classical mechanics, to demonstrate—case by case—that ICG preserves all correct results while making explicit the admissibility constraints those theories already enforce.
+
+8.1 Classical Mechanics (Hamiltonian Systems)
+
+Goal of This Section
+
+To demonstrate, by explicit construction and proof, that:
+
+Hamiltonian mechanics is exactly preserved under ICG, with no modification to its equations, phase space, or symplectic structure.
+
+Every Hamiltonian trajectory regarded as physically realizable in classical statistical mechanics lies within the interoperability closure .
+
+Every Hamiltonian trajectory excluded by ICG corresponds exactly to trajectories already excluded—explicitly or implicitly—by classical statistical mechanics (e.g., entropydecreasing, measurezero, or infinitely finetuned trajectories).
+
+This section therefore blocks the claim that “ICG contradicts classical mechanics.”
+
+8.1.1 Full Hamiltonian Formalism
+
+Phase Space and Symplectic Structure
+
+Let the classical phase space of an -particle system be
+
+with canonical coordinates
+
+Equip with the standard symplectic form
+
+Let be a smooth Hamiltonian.
+
+Equations of Motion
+
+The equations of motion are given by Hamilton’s equations:
+
+These define a Hamiltonian vector field and a oneparameter family of diffeomorphisms (the Hamiltonian flow)
+
+Liouville Measure and Measure Preservation
+
+Define the Liouville measure
+
+Theorem 8.1.1 (Liouville’s Theorem).
+For all measurable sets and all ,
+
+This theorem is a purely kinematic consequence of symplectic structure and is not modified by ICG.
+
+8.1.2 TimeReversal Invariance and Entropy Neutrality
+
+TimeReversal Symmetry
+
+Define the timereversal involution
+
+Lemma 8.1.2 (TimeReversal Invariance).
+Hamiltonian dynamics satisfy
+
+Thus, Hamiltonian mechanics alone is entropyneutral and admits both entropyincreasing and entropydecreasing trajectories.
+
+CoarseGrained Entropy
+
+Let
+
+be a coarsegraining map into macrostates .
+
+Define Boltzmann entropy:
+
+Hamiltonian mechanics imposes no constraint on the sign of
+
+This is the wellknown reversibility problem of classical mechanics.
+
+8.1.3 Explicit ICG Embedding
+
+Global State Space Extension
+
+Define the global physical state space as containing not only the subsystem , but also all degrees of freedom with which it is physically coupled.
+
+Define the embedding
+
+such that:
+
+encodes the classical microstate ,
+
+together with its correlations (or lack thereof) with the rest of the universe.
+
+This embedding is injective and structurepreserving:
+
+where is the induced global evolution.
+
+No classical equation is altered.
+
+Entropy Lift
+
+Define the global entropy functional
+
+such that, on embedded classical states,
+
+where:
+
+is environmental entropy,
+
+is mutual information.
+
+This is standard statistical mechanics.
+
+8.1.4 Proof: Equivalence of Admissible Hamiltonian Trajectories
+
+Statement
+
+Theorem 8.1.3 (Classical Admissibility Equivalence).
+A Hamiltonian trajectory is a physically admissible classical history if and only if
+
+Proof (⇒ Direction)
+
+Assume is regarded as physically realizable in classical statistical mechanics.
+
+Empirically realized classical systems do not exhibit sustained global entropy decrease.
+
+Therefore, for all ,
+
+By construction of ,
+
+By Theorem 4.3 (ICG NonClosure), entropynondecreasing transitions satisfy
+
+Hence .
+
+∎
+
+Proof (⇐ Direction)
+
+Assume .
+
+By definition of , all transitions along are interoperable.
+
+By Theorem 4.3, interoperable transitions satisfy
+
+Restricting to the classical subsystem yields
+
+Therefore, is entropynondecreasing and hence physically admissible under classical statistical mechanics.
+
+∎
+
+Conclusion
+
+The set of physically admissible Hamiltonian trajectories is identical under:
+
+classical statistical mechanics, and
+
+ICG admissibility.
+
+No classical trajectory accepted by physics is removed.
+No rejected trajectory is restored.
+
+8.1.5 Refutation Handling (Explicit)
+
+(a) Loschmidt Paradox
+
+Claim: Timereversal symmetry implies entropy decrease should be possible.
+
+Response:
+ICG does not deny mathematical reversibility. It denies physical embeddability of entropydecreasing trajectories. This matches statistical mechanics exactly.
+
+(b) Zermelo Recurrence
+
+Poincaré recurrence theorem states:
+
+Response:
+
+Recurrence times scale exponentially with degrees of freedom.
+
+Recurrence requires isolation to infinite precision.
+
+Any perturbation destroys recurrence.
+
+Therefore recurrence trajectories are measurezero and noninteroperable:
+
+ICG excludes precisely what statistical mechanics already treats as physically irrelevant.
+
+(c) MeasureZero Objections
+
+Claim: Entropydecreasing trajectories exist.
+
+Response:
+Yes—mathematically. Measurezero trajectories are not physically realizable. ICG formalizes this exclusion instead of ignoring it.
+
+8.1.6 Final Statement for Classical Mechanics
+
+Hamiltonian mechanics is:
+
+unchanged
+
+unrestricted at the equation level
+
+preserved at the solution level
+
+filtered only at the admissibility level
+
+ICG does not contradict classical mechanics.
+It makes explicit the global consistency condition classical mechanics already relies on.
+
+8.2 Statistical Mechanics (Boltzmann + Gibbs)
+
+Goal of This Section
+
+To demonstrate, with explicit mathematical constructions and proofs, that:
+
+Statistical irreversibility is not an independent axiom, nor a probabilistic addon to dynamics.
+
+Irreversibility arises as a corollary of the geometry of interoperabilityrestricted state space.
+
+Boltzmann and Gibbs formulations are preserved exactly at the equation level.
+
+ICG excludes no statistical behavior accepted by physics, and excludes only those behaviors already regarded as physically unrealizable.
+
+The Past Hypothesis and timeasymmetric probability measures are not foundational requirements, but contingent consequences of admissibility.
+
+This section therefore blocks the claim: “ICG is just Boltzmann statistical mechanics in disguise.”
+
+8.2.1 Boltzmann Entropy and Macrostate Volumes
+
+Microscopic Phase Space
+
+Let the classical phase space be
+
+equipped with Liouville measure , preserved under Hamiltonian flow.
+
+Macrostates and CoarseGraining
+
+Define a coarsegraining map
+
+where each macrostate corresponds to a measurable subset
+
+Boltzmann Entropy
+
+For a microstate , define Boltzmann entropy:
+
+This definition is purely geometric. It contains no dynamics and no time orientation.
+
+Key Structural Fact
+
+For macroscopic systems:
+
+whenever
+
+This is a statement about volumes in phase space, not about time.
+
+8.2.2 Typicality and Its Logical Limits
+
+Standard Typicality Claim
+
+Let be a lowentropy macrostate. Typicality arguments assert:
+
+That is, most microstates evolve toward higher entropy.
+
+Critical Limitation (Explicit)
+
+Typicality arguments alone imply:
+
+entropy increase is probable,
+
+entropy decrease is improbable,
+
+but do not imply:
+
+entropy decrease is physically impossible,
+
+entropy decrease is globally nonembeddable,
+
+entropy decrease is structurally forbidden.
+
+Formally, typicality is timesymmetric:
+
+If is typical toward the future, then is typical toward the past.
+
+This is the exact point at which Boltzmann’s account stops.
+
+Lemma 8.2.1 (Logical Insufficiency of Typicality).
+
+Typicality alone cannot produce a global arrow of time.
+
+Proof
+
+Liouville measure is invariant under time reversal.
+
+The set of entropydecreasing trajectories has the same measure when timereversed.
+
+Therefore, typicality cannot distinguish future from past without additional structure.
+
+∎
+
+This is not controversial; it is standard.
+
+8.2.3 Explicit Restriction of Phase Space by Interoperability
+
+Embedding into Global State Space
+
+As in Section 8.1, define the embedding
+
+where includes all degrees of freedom with which the system is physically coupled.
+
+Global Entropy Functional
+
+Define the global entropy
+
+such that for embedded classical states:
+
+where:
+
+is environmental entropy,
+
+is mutual information.
+
+This is standard statistical mechanics, not an ICG invention.
+
+Interoperability Restriction
+
+Recall the interoperability closure:
+
+Define the admissible classical phase space:
+
+This is a proper subset of .
+
+Key Restriction
+
+By Theorem 4.3:
+
+Entropydecreasing classical microstates exist mathematically, but do not lie in .
+
+8.2.4 Proof: Typicality Emerges Automatically
+
+Statement
+
+Theorem 8.2.2 (Typicality as a Corollary of ICG).
+When restricted to the interoperable phase space , entropyincreasing behavior is typical without further assumptions.
+
+Proof (StepbyStep)
+
+Consider any macrostate .
+
+Restrict to admissible microstates:
+
+By construction,
+
+Therefore, the conditional probability:
+
+Typicality is no longer probabilistic—it is structural.
+
+∎
+
+Interpretation
+
+In Boltzmann’s framework: entropy increase is overwhelmingly likely.
+
+In ICG: entropy increase is the only admissible behavior.
+
+Probability enters only because observers ignore inadmissible states, not because the universe “chooses randomly.”
+
+8.2.5 Refutation Handling (Explicit and Exhaustive)
+
+(a) Past Hypothesis Dependency
+
+Objection: Statistical mechanics requires a lowentropy past boundary condition.
+
+Response (Formal):
+
+The Past Hypothesis selects initial states with low .
+
+ICG selects admissible states .
+
+These selections coincide structurally:
+
+Therefore, the Past Hypothesis is not an axiom, but a boundary description of admissibility.
+
+(b) TimeSymmetric Probability Measures
+
+Objection: Liouville measure is timesymmetric.
+
+Response (Formal):
+
+Liouville measure remains unchanged.
+
+The domain of integration is restricted:
+
+Conditionalization breaks time symmetry without modifying the measure.
+
+This is identical to how causal conditioning works in GR.
+
+(c) “You’re Just Restating Boltzmann”
+
+Response (Structural):
+
+Boltzmann: entropy increase is typical given dynamics.
+
+ICG: entropy decrease is inadmissible given global consistency.
+
+These are not equivalent claims. Boltzmann does not explain inadmissibility.
+
+8.2.6 Final Statement for Statistical Mechanics
+
+Statistical mechanics under ICG is:
+
+unchanged at the level of entropy definition
+
+unchanged at the level of phasespace measure
+
+unchanged at the level of dynamics
+
+strengthened at the level of admissibility
+
+ICG does not replace Boltzmann or Gibbs. It explains why their probabilistic conclusions align with physical reality.
+
+Transition
+
+With classical and statistical mechanics now subsumed rigorously, the next unavoidable domain is quantum mechanics, where the admissibility gap appears even more starkly.
+
+8.3 Quantum Mechanics (Closed Systems)
+
+Purpose and Scope of This Section
+
+This section establishes, with explicit mathematical rigor and without modification of any postulate of orthodox quantum mechanics, the precise relationship between closedsystem quantum theory and the Interoperability Constraint Geometry (ICG) framework.
+
+The purpose of this section is strictly limited and defined as follows:
+
+To demonstrate that every quantum evolution regarded as physically realizable under standard quantum mechanics satisfies the admissibility conditions formalized by ICG, and that every quantum evolution excluded by ICG is already excluded—explicitly or implicitly—by quantum mechanics itself when applied to physically instantiated systems.
+
+This is a statement about admissibility of physical histories, not about dynamical laws, theoretical reduction, or the scope of quantum mechanics as a formal system.
+
+8.3.P1 What Is Held Fixed
+
+Throughout this section, the following elements of quantum mechanics are treated as fixed, complete, and nonnegotiable:
+
+State Space
+Physical states of closed quantum systems are represented by density operators on a complex Hilbert space.
+
+Dynamics
+Time evolution of closed systems is governed by unitary operators generated by a selfadjoint Hamiltonian.
+
+Linearity
+Quantum evolution is linear in the state operator.
+
+Formal Reversibility
+Unitary dynamics are invertible at the level of the mathematical equations.
+
+Entropy Invariance for Closed Systems
+Von Neumann entropy is invariant under unitary evolution.
+
+No argument in this section alters, qualifies, or weakens any of these statements.
+
+8.3.P2 What Is Explicitly Not Claimed
+
+To prevent category errors, the following are explicitly not claimed in this section:
+
+No modification of the Schrödinger equation is introduced.
+
+No collapse mechanism is added.
+
+No stochastic dynamics are postulated.
+
+No preferred interpretation of quantum mechanics is assumed.
+
+No new physical postulates are introduced.
+
+No claim is made about the completeness or incompleteness of quantum mechanics as a theory.
+
+Any conclusion that would require one of these is outside the scope of this section.
+
+8.3.P3 The Specific Question Addressed
+
+The question addressed here is narrowly and precisely defined:
+
+Given the formal structure of closedsystem quantum mechanics, what criteria distinguish mathematically valid quantum evolutions from physically realizable quantum histories when the system is embedded in the full physical universe?
+
+This question is not answered by the Schrödinger equation alone, because that equation specifies evolution conditional on a system being closed, but does not specify:
+
+which systems can be closed in practice,
+
+which entanglements can be undone,
+
+which global quantum states can be reconstructed from partial information,
+
+or which formally defined inverses correspond to physically executable processes.
+
+These omissions are not deficiencies of quantum mechanics; they are consequences of its formal scope.
+
+8.3.P4 Admissibility Versus Dynamics
+
+This section therefore operates at a level orthogonal to quantum dynamics.
+
+Let:
+
+denote the set of all mathematical solutions generated by unitary quantum evolution.
+
+denote the subset of those solutions that correspond to physically realizable histories.
+
+Quantum mechanics specifies .
+It does not uniquely specify .
+
+Every physical application of quantum mechanics therefore already relies—implicitly or explicitly—on a criterion that selects from .
+
+The role of ICG in this section is only to formalize that selection criterion at the level of global consistency.
+
+8.3.P5 Meaning of “Irreversibility” in This Section
+
+The term irreversibility is used here in a strictly technical sense. It does not refer to:
+
+violation of unitarity,
+
+violation of linearity,
+
+violation of timereversal invariance at the level of equations.
+
+Instead, irreversibility refers to the following property:
+
+The absence of a physically executable inverse for a formally valid quantum transformation when that transformation is embedded in the full physical state of the universe.
+
+This notion is already present in standard quantum practice (e.g., decoherence, uncontrollable entanglement, loss of phase information). No additional assumptions are introduced.
+
+8.3.P6 Standard of Proof Used
+
+All claims in this section will be established using only:
+
+linear operator theory on Hilbert spaces,
+
+properties of unitary groups,
+
+properties of the partial trace,
+
+and standard results from quantum information theory.
+
+No appeal is made to interpretation, philosophy, or speculative extensions of quantum theory.
+
+8.3.P7 What Will Be Proven
+
+By the conclusion of Section 8.3, the following statements will have been established explicitly:
+
+All unitary evolutions of closed quantum systems satisfy the interoperability condition.
+
+Von Neumann entropy invariance is preserved exactly.
+
+Irreversibility arises only when considering global embeddability of subsystem states.
+
+Every quantum evolution excluded by ICG is already excluded by standard quantum mechanics when physical realizability is taken seriously.
+
+No statement stronger than this is made.
+
+8.3.P8 Transition
+
+With the scope and standards of this section now fixed precisely, the next subsection (§ 8.3.0) establishes the methodological preliminaries required before introducing Hilbertspace structure and unitary evolution.
+
+8.3.0 Methodological Preliminaries
+
+This subsection establishes the methodological boundaries required to relate closedsystem quantum mechanics to the Interoperability Constraint Geometry (ICG) framework without category error. It does not introduce new physical assumptions, new mathematical structures, or new postulates. Its sole function is to make explicit distinctions that are already operative—though often implicit—in the orthodox use of quantum mechanics.
+
+Failure to make these distinctions explicit is the source of the most common objections to any admissibilitybased analysis of quantum theory. Accordingly, this subsection fixes terminology, scope, and logical levels before any equations of motion are invoked.
+
+8.3.0.1 Operational Meaning of “Closed System”
+
+In quantum mechanics, the term closed system has a precise operational meaning that is frequently conflated with absolute isolation.
+
+Definition 8.8 (Closed Quantum System).
+
+A quantum system is said to be closed over a time interval if and only if its time evolution over that interval is accurately described by a unitary operator
+
+where is a selfadjoint operator on the Hilbert space .
+
+This definition is conditional, not absolute. It does not assert that:
+
+the system has no environment,
+
+the system is permanently isolated,
+
+or the system is globally disentangled from the rest of the universe.
+
+It asserts only that, for the purpose of describing the evolution of observables associated with , environmental effects may be neglected to the required precision over the specified interval.
+
+This operational definition is standard and is used ubiquitously in both theoretical and experimental quantum mechanics.
+
+8.3.0.2 What Quantum Mechanics Formally Specifies
+
+Orthodox quantum mechanics specifies the following structures exactly:
+
+(i) State Space
+
+States of a quantum system are represented by density operators
+
+where denotes the set of positive, traceone operators on the Hilbert space .
+
+(ii) Dynamical Law
+
+For a closed system, time evolution is given by unitary conjugation:
+
+with generated by a selfadjoint Hamiltonian.
+
+(iii) Measurement Statistics
+
+For any observable represented by a selfadjoint operator , measurement statistics are given by the Born rule:
+
+where is the spectral projector associated with .
+
+8.3.0.3 What Quantum Mechanics Does Not Specify
+
+Equally important is what quantum mechanics does not specify.
+
+Quantum mechanics does not provide:
+
+A criterion for determining which subsystems of the universe can be treated as closed in practice.
+
+A criterion for determining which entanglements can be physically undone.
+
+A rule for reconstructing global quantum states from reduced density operators.
+
+A classification of which formally valid quantum histories correspond to physically realizable evolutions of the universe.
+
+These are not omissions or deficiencies. They are consequences of the fact that quantum mechanics is a dynamical theory, not a global realizability theory.
+
+Formally:
+
+Let
+
+denote the set of all mathematically valid solutions generated by the Schrödinger equation for a closed system.
+
+Quantum mechanics specifies exactly.
+It does not specify which elements of can be embedded as histories of the full physical universe.
+
+8.3.0.4 Mathematical Invertibility Versus Physical Reconstructibility
+
+A critical distinction—often elided in informal discussion—is the difference between formal invertibility and physical reconstructibility.
+
+Definition 8.9 (Formal Invertibility).
+
+A map on a space of states is formally invertible if there exists a map such that
+
+for all in the domain.
+
+Unitary evolution is formally invertible.
+
+Definition 8.10 (Physical Reconstructibility).
+
+A transformation is physically reconstructible if the inverse transformation can be realized as a physically executable process within the universe, subject to the same constraints as the forward process.
+
+Quantum mechanics guarantees formal invertibility of unitary maps.
+It does not guarantee physical reconstructibility of arbitrary inverse transformations once systems are embedded in larger environments.
+
+This distinction is already implicit in standard quantum practice.
+
+8.3.0.5 Dependence on ExtraFormal Criteria in Practice
+
+In every nontrivial application of quantum mechanics beyond idealized models, practitioners rely on criteria that are not contained in the Schrödinger equation itself, including:
+
+environmental decoherence,
+
+effective irreversibility of entanglement with large environments,
+
+thermodynamic constraints on control and isolation,
+
+uncontrollable dispersal of phase information.
+
+These criteria are used routinely to justify why certain formally valid quantum evolutions are treated as physically unrealizable, even though they remain mathematical solutions.
+
+For example:
+
+Recohering macroscopic superpositions are not treated as physically realizable, despite being formally allowed.
+
+Exact reversal of environmental entanglement is not treated as physically realizable, despite being formally allowed.
+
+These exclusions are not optional interpretations; they are prerequisites for applying quantum mechanics to the physical world.
+
+8.3.0.6 Role of ICG at the Methodological Level
+
+At this stage, ICG is not introduced as a physical principle, a dynamical law, or an interpretive stance.
+
+Its role is strictly methodological:
+
+ICG provides a formal language for expressing the global embeddability constraints that quantum mechanics already relies on implicitly when distinguishing mathematical solutions from physical histories.
+
+Nothing in this subsection requires accepting ICG.
+Everything in this subsection consists of distinctions already present in orthodox quantum mechanics.
+
+8.3.0.7 Consequence of These Preliminaries
+
+Once the distinctions fixed above are accepted—which is unavoidable for any physically applied use of quantum mechanics—the following becomes logically unavoidable:
+
+There exists a nontrivial admissibility filter separating formal quantum solutions from physically realizable histories.
+
+That filter is not specified by unitary dynamics.
+
+Any framework that makes this filter explicit does not modify quantum mechanics; it formalizes a condition already in use.
+
+The remainder of Section 8.3 demonstrates, step by step, that the admissibility conditions formalized by ICG coincide exactly with these alreadyrequired constraints.
+
+Transition
+
+With the methodological scope fixed and category errors excluded, the next subsection (§ 8.3.1) presents the Hilbertspace structure and unitary dynamics of closedsystem quantum mechanics in full detail, before any admissibility considerations are applied.
+
+8.3.1 Hilbert Space Structure and Unitary Evolution
+
+This subsection presents the formal structure of closedsystem quantum mechanics in full generality. The purpose is to fix, precisely and exhaustively, the mathematical framework within which all subsequent discussion must operate. No restriction, modification, or qualification of this framework is introduced here.
+
+8.3.1.1 Hilbert Space Structure
+
+Let be a complex Hilbert space. That is, is a complex vector space equipped with an inner product
+
+satisfying:
+
+Linearity in the second argument
+
+Conjugate symmetry
+
+Positive definiteness
+
+Completeness with respect to the norm
+
+is assumed.
+
+This structure is taken as primitive and is not derived.
+
+8.3.1.2 States and Density Operators
+
+Physical states of a quantum system are represented by density operators.
+
+Definition 8.11 (Density Operator).
+
+A density operator on is a linear operator
+
+satisfying:
+
+Positivity
+
+Trace normalization
+
+Selfadjointness
+
+Let denote the set of all density operators on .
+
+Convex Structure
+
+The state space is convex:
+
+If and , then
+
+This convex structure reflects the linearity of quantum state preparation and is not optional.
+
+8.3.1.3 Observables and Expectation Values
+
+Observables are represented by selfadjoint operators on .
+
+The expectation value of in the state is given by:
+
+This definition is linear in and compatible with the convex structure of .
+
+8.3.1.4 Unitary Operators
+
+Definition 8.12 (Unitary Operator).
+
+An operator is unitary if:
+
+Norm Preservation
+
+For any ,
+
+Thus unitary operators preserve inner products and norms exactly.
+
+8.3.1.5 Unitary Time Evolution
+
+Time evolution of a closed quantum system is represented by a oneparameter family of unitary operators
+
+Group Structure
+
+The family satisfies:
+
+Identity
+
+Composition
+
+Inverse
+
+Hence forms a strongly continuous oneparameter unitary group.
+
+Stone’s Theorem
+
+By Stone’s theorem, there exists a unique selfadjoint operator such that
+
+The operator is the Hamiltonian.
+
+8.3.1.6 Evolution of States
+
+The time evolution of a density operator is given by:
+
+Preservation of DensityOperator Properties
+
+Let .
+
+Positivity
+
+Trace
+
+Selfadjointness
+
+Thus unitary evolution maps into itself exactly.
+
+8.3.1.7 Linearity of Evolution
+
+The evolution map
+
+is linear:
+
+For any and scalars ,
+
+This linearity is exact and unconditional.
+
+8.3.1.8 Formal Reversibility
+
+Because is unitary, the evolution is formally reversible:
+
+For all ,
+
+This reversibility is a mathematical property of the group structure and is not restricted or qualified here.
+
+8.3.1.9 Summary of Established Facts
+
+At this stage, the following facts have been established rigorously:
+
+Quantum states are represented by density operators on a Hilbert space.
+
+Time evolution of closed systems is given by a unitary group action.
+
+Evolution is linear, normpreserving, and invertible.
+
+The full mathematical solution space generated by unitary evolution is admitted.
+
+No restriction, qualification, or filtering of quantum mechanics has occurred.
+
+Transition
+
+Having fixed the complete formal structure of closedsystem quantum mechanics, the next subsection (§ 8.3.2) addresses the invariance of von Neumann entropy under this evolution, again without restriction or interpretation.
+
+8.3.2 Von Neumann Entropy Invariance
+
+This subsection establishes the behavior of von Neumann entropy under the unitary time evolution of closed quantum systems. The results presented here are exact, nonapproximate, and follow directly from the formal structure fixed in § 8.3.1. No additional assumptions are introduced.
+
+8.3.2.1 Definition of von Neumann Entropy
+
+Let be a complex Hilbert space and let
+be a density operator.
+
+Definition 8.13 (von Neumann Entropy).
+
+The von Neumann entropy of the state is defined as
+
+where denotes the operator logarithm defined via the functional calculus for selfadjoint operators.
+
+8.3.2.2 Spectral Representation
+
+Because is a positive, traceclass, selfadjoint operator, it admits a spectral decomposition:
+
+where:
+
+,
+
+,
+
+is an orthonormal basis of eigenvectors.
+
+Using this decomposition,
+
+Substituting into the definition yields:
+
+Thus, von Neumann entropy depends only on the eigenvalue spectrum of , not on its eigenvectors.
+
+8.3.2.3 Unitary Conjugation of Density Operators
+
+Let be a unitary operator.
+
+Define the transformed state:
+
+Lemma 8.14 (Spectrum Preservation Under Unitary Conjugation).
+
+The operators and have identical spectra, including multiplicities.
+
+Proof
+
+If , then
+
+Thus each eigenvalue of is an eigenvalue of , and vice versa. ∎
+
+8.3.2.4 Entropy Invariance Theorem
+
+Theorem 8.15 (von Neumann Entropy Invariance).
+
+For any density operator and any unitary operator ,
+
+Proof
+
+By Lemma 8.14, and have identical eigenvalues . Since
+
+and the same expression holds for , the entropies are equal. ∎
+
+8.3.2.5 Exactness of the Result
+
+The entropy invariance established above is:
+
+Exact
+No approximation, limit, or asymptotic argument is involved.
+
+Global
+The result applies to the entire density operator , not to any restricted or effective description.
+
+Unconditional
+No assumptions are made regarding system size, dimensionality, or Hamiltonian structure.
+
+Structural
+The invariance follows solely from unitary equivalence and the spectral definition of entropy.
+
+8.3.2.6 Consequence for ClosedSystem Quantum Mechanics
+
+From §§ 8.3.1–8.3.2, the following has been established rigorously:
+
+Closedsystem quantum dynamics are governed by unitary operators.
+
+Unitary operators preserve the spectrum of density operators.
+
+Von Neumann entropy depends only on that spectrum.
+
+Therefore, closedsystem quantum dynamics preserve von Neumann entropy exactly.
+
+This is a formal property of the theory, not an approximation, empirical regularity, or interpretive assumption.
+
+8.3.2.7 Summary
+
+This subsection has established, without qualification:
+
+The precise definition of von Neumann entropy.
+
+Its dependence solely on the eigenvalue spectrum of the density operator.
+
+The preservation of that spectrum under unitary evolution.
+
+The exact invariance of entropy for closed quantum systems.
+
+No restriction, modification, or interpretation of quantum mechanics has been introduced.
+
+8.3.2.8 Transition: The Unspecified Domain
+
+The results established above fix completely what closedsystem quantum mechanics does specify about entropy: it is invariant under unitary evolution, exactly and globally.
+
+What these results do not specify is equally important:
+
+they do not specify which quantum systems can be treated as closed in practice,
+
+they do not specify which formally valid unitary inverses correspond to physically executable processes,
+
+they do not specify which global quantum states can be reconstructed from partial descriptions,
+
+and they do not specify which mathematical solutions correspond to physically realizable histories of the universe.
+
+These omissions are not gaps in the mathematics; they are limits of scope.
+
+The next subsection (§ 8.3.3) makes these limits explicit by identifying, with equal rigor, what quantum mechanics does not determine about physical realizability, before any further structure is introduced.
+
+8.3.3 What Quantum Mechanics Does Not Specify
+
+This subsection identifies, with formal precision, the limits of what closedsystem quantum mechanics determines about physical realizability. The purpose is not to criticize or modify quantum mechanics, but to state explicitly the boundary between its mathematical completeness and its physical scope.
+
+All statements in this subsection follow directly from the formal structure established in §§ 8.3.1–8.3.2 and from standard results in quantum theory. No additional assumptions are introduced.
+
+8.3.3.1 Mathematical Completeness Versus Physical Determinacy
+
+From §§ 8.3.1–8.3.2, closedsystem quantum mechanics provides:
+
+a complete specification of the state space ,
+
+a complete specification of time evolution via a unitary group,
+
+exact invariance properties under that evolution.
+
+Accordingly, quantum mechanics is mathematically complete in the following sense:
+
+Given an initial density operator on a Hilbert space , the theory uniquely determines the entire family of states
+
+However, mathematical completeness does not entail physical determinacy.
+
+8.3.3.2 The Question Quantum Mechanics Does Not Answer
+
+Quantum mechanics does not answer the following question:
+
+Which of the mathematically valid quantum histories generated by unitary evolution correspond to physically realizable histories of the universe?
+
+Formally, let
+
+denote the set of all mathematical solutions for a closed system.
+
+Quantum mechanics specifies exactly.
+
+Quantum mechanics does not specify a distinguished subset
+
+of physically realizable histories.
+
+The existence of such a subset is nevertheless unavoidable in practice.
+
+8.3.3.3 Subsystems and the Absence of an Isolation Criterion
+
+Quantum mechanics allows one to define a subsystem by writing a tensorproduct decomposition
+
+However, the theory provides no rule that determines:
+
+which decompositions correspond to physically isolable subsystems,
+
+for how long a subsystem may be treated as closed,
+
+or under what conditions environmental degrees of freedom may be neglected.
+
+All such determinations are made externally to the formalism, based on physical judgment, experimental control, and scale separation.
+
+Thus:
+
+The notion of a “closed system” is operational, not absolute.
+
+Quantum mechanics presupposes this fact but does not encode it.
+
+8.3.3.4 Entanglement and the Absence of an Undoability Criterion
+
+Consider a global state .
+
+The reduced state of the subsystem is
+
+The partial trace map
+
+is:
+
+linear,
+
+completely positive,
+
+tracepreserving,
+
+and noninjective.
+
+That is, there exist infinitely many distinct global states that reduce to the same .
+
+Quantum mechanics provides no criterion for determining:
+
+which entanglements can be physically undone,
+
+which correlations can be reconstructed,
+
+or which global states correspond to the same local description in a physically reversible way.
+
+These questions are not illposed; they are simply outside the scope of the formalism.
+
+8.3.3.5 Formal Invertibility Versus Physical Reconstructibility
+
+This leads to a critical distinction.
+
+Definition 8.16 (Formal Invertibility).
+
+A transformation is formally invertible if there exists a mathematical inverse satisfying
+
+for all in the domain.
+
+Unitary evolution is formally invertible.
+
+Definition 8.17 (Physical Reconstructibility).
+
+A transformation is physically reconstructible if its inverse corresponds to a physically executable process within the universe, subject to the same constraints as the forward transformation.
+
+Quantum mechanics guarantees formal invertibility of unitary evolution.
+It does not guarantee physical reconstructibility of arbitrary inverse histories once systems are embedded in larger contexts.
+
+This distinction is already used implicitly whenever quantum mechanics is applied beyond idealized models.
+
+8.3.3.6 Global States and the Absence of a Reconstructibility Principle
+
+Given a reduced state , quantum mechanics does not specify:
+
+which global states are physically compatible with it,
+
+whether a prior global state can be reconstructed from ,
+
+or whether a formally valid inverse unitary corresponds to a realizable global evolution.
+
+These are not questions of dynamics or probability.
+They are questions of global embeddability.
+
+Quantum mechanics leaves these questions open.
+
+8.3.3.7 Consequence of the Gap
+
+The conclusions of this subsection are purely formal:
+
+Quantum mechanics specifies the full set of mathematical solutions for closed systems.
+
+Quantum mechanics does not specify which of those solutions correspond to physically realizable histories.
+
+Any physically applied use of quantum mechanics therefore relies on criteria that lie outside the Schrödinger equation.
+
+Those criteria concern global embeddability, reconstructibility, and operational isolation.
+
+No new structure has been introduced.
+No interpretation has been assumed.
+
+The gap identified here is logically unavoidable and already operative in practice.
+
+Transition
+
+Having now identified precisely what closedsystem quantum mechanics does not determine about physical realizability, the next subsection (§ 8.3.4) introduces an explicit mathematical embedding of subsystem states into larger quantum systems.
+
+This embedding makes the gap identified above concrete, without altering any quantummechanical postulate.
+
+8.3.4 Explicit Embedding of Subsystem States
+
+This subsection constructs, explicitly and rigorously, the mathematical embedding of subsystem quantum states into larger quantum systems. The purpose is to make precise the relationship between local descriptions and global quantum states using only standard quantum mechanics and operator theory.
+
+No restriction, extension, or reinterpretation of quantum mechanics is introduced in this subsection.
+
+8.3.4.1 System–Environment Decomposition
+
+Let the total Hilbert space of a composite quantum system be given by the tensor product
+
+where:
+
+is the Hilbert space associated with a subsystem ,
+
+is the Hilbert space associated with all remaining degrees of freedom, collectively denoted as the environment .
+
+This tensorproduct decomposition is mathematically welldefined for any bipartition of degrees of freedom. Quantum mechanics itself places no restriction on which such decompositions correspond to physically isolable subsystems.
+
+8.3.4.2 Global Quantum States
+
+A global quantum state of the composite system is represented by a density operator
+
+satisfying:
+
+,
+
+,
+
+.
+
+No assumption is made regarding separability or entanglement.
+
+8.3.4.3 Reduced States and the Partial Trace
+
+The reduced state of the subsystem is defined by the partial trace over the environment:
+
+Definition 8.18 (Partial Trace).
+
+The partial trace
+
+is the unique linear map satisfying
+
+for all bounded operators on .
+
+Properties of the Partial Trace
+
+The map is:
+
+Linear
+
+Completely positive
+
+Tracepreserving
+
+Surjective
+
+Not injective
+
+The last property is critical and will be established explicitly.
+
+8.3.4.4 Definition of the Embedding Map
+
+We now define the embedding of subsystem states into global states.
+
+Definition 8.19 (Subsystem Embedding).
+
+An embedding map
+
+is any injective map satisfying:
+
+Such a map exists for all . For example, given any fixed reference state , one may define:
+
+This choice is mathematically valid but not unique.
+
+8.3.4.5 NonUniqueness of the Embedding
+
+The embedding is not unique.
+
+Let . Then there exist infinitely many distinct global states such that:
+
+For example, for any unitary acting trivially on ,
+
+also satisfies
+
+Thus the reduced state does not uniquely determine a global state.
+
+8.3.4.6 NonInvertibility of the Partial Trace
+
+We now establish explicitly that the partial trace is noninvertible.
+
+Proposition 8.20 (NonInjectivity of the Partial Trace).
+
+The partial trace map is not injective.
+
+Proof
+
+Let be fixed.
+
+Choose two distinct environment states . Define:
+
+Then:
+
+but
+
+Therefore, is not injective and has no inverse. ∎
+
+8.3.4.7 Mathematical Nature of NonInvertibility
+
+The noninvertibility established above is:
+
+Purely Mathematical
+It follows directly from linear algebra and operator theory.
+
+Independent of Dynamics
+No Hamiltonian or time evolution has been assumed.
+
+Independent of Interpretation
+No measurement postulate or collapse rule is involved.
+
+Independent of Probability
+The result holds deterministically for all density operators.
+
+Thus, noninvertibility is not a physical hypothesis; it is a structural fact.
+
+8.3.4.8 Consequence for Global Reconstructibility
+
+Given a reduced state , quantum mechanics alone does not determine:
+
+which global state produced it,
+
+whether that global state can be reconstructed,
+
+or whether a prior global state corresponding to can be physically realized.
+
+These questions are not addressed by unitary dynamics or entropy invariance. They concern global embeddability, not evolution.
+
+8.3.4.9 Summary
+
+This subsection has established, rigorously and without qualification, that:
+
+Subsystems are described by reduced density operators.
+
+Reduced states arise via the partial trace.
+
+The partial trace is noninvertible.
+
+Noninvertibility is intrinsic to the mathematics of quantum mechanics.
+
+A reduced state does not uniquely specify a global state.
+
+No additional structure has been introduced.
+
+Transition
+
+The mathematical noninvertibility established here identifies a precise structural fact: formal reversibility of closedsystem dynamics does not imply physical reconstructibility of global states from subsystem descriptions.
+
+The next subsection (§ 8.3.5) examines this distinction directly and establishes, with equal rigor, where and how irreversibility arises at the level of global embeddability—without altering any quantummechanical postulate.
+
+8.3.5 Where Irreversibility Actually Enters
+
+This subsection establishes, with explicit mathematical arguments, the precise point at which irreversibility arises in the application of quantum mechanics to physically instantiated systems. The purpose is to show that irreversibility appears prior to the introduction of any additional formal framework and follows solely from structural features already present in orthodox quantum mechanics.
+
+No modification of unitary dynamics, no collapse postulate, and no stochastic element is introduced or assumed in this subsection.
+
+8.3.5.1 Formal Reversibility of Global Dynamics
+
+From §§ 8.3.1–8.3.2, the following facts are fixed:
+
+The global state of a closed quantum system evolves unitarily:
+
+The family forms a unitary group, so that for every there exists an inverse .
+
+For the global state , the evolution is formally reversible:
+
+At the level of global dynamics, no irreversibility has yet appeared.
+
+8.3.5.2 Local Descriptions and the Loss of Information
+
+Consider again a decomposition
+
+and a global state .
+
+The reduced state of the subsystem is
+
+As shown in § 8.3.4, the map
+
+is noninjective and therefore noninvertible.
+
+This is a purely mathematical property of the partial trace and does not depend on dynamics, interpretation, or probability.
+
+8.3.5.3 Attempted Reconstruction of Global States
+
+Suppose that at some time the reduced state is known.
+
+A reconstruction problem may then be posed:
+
+Given , can one determine a unique prior global state such that
+
+This problem is wellposed mathematically but has no unique solution.
+
+8.3.5.4 NonUniqueness of Preimages
+
+Because the partial trace is noninjective, there exist infinitely many distinct global states that reduce to the same .
+
+Explicitly, for any two distinct global states ,
+
+Applying the inverse unitary evolution yields distinct candidate prior states:
+
+all of which are mathematically valid solutions of the Schrödinger equation.
+
+Quantum mechanics provides no criterion for selecting one of these as physically realized.
+
+8.3.5.5 Emergence of Irreversibility
+
+At this point, irreversibility enters in a precise and limited sense:
+
+The global dynamics remain formally reversible.
+
+The local description loses information about correlations with .
+
+That lost information cannot be recovered from .
+
+Accordingly, although the map
+
+is invertible, the composite map
+
+is not.
+
+Irreversibility therefore arises at the level of reduced descriptions, not at the level of fundamental dynamics.
+
+8.3.5.6 No Violation of Unitarity
+
+The impossibility of reconstructing from does not violate unitarity.
+
+The unitary operator remains invertible.
+
+The inverse evolution exists mathematically.
+
+The obstruction arises because the reduced state does not contain sufficient information to specify the global state.
+
+Thus, irreversibility here is not a failure of the unitary formalism.
+
+8.3.5.7 No Collapse or Stochasticity
+
+The argument above makes no reference to:
+
+projection operators,
+
+measurement postulates,
+
+stochastic dynamics,
+
+or probabilistic assumptions.
+
+All statements follow from deterministic linear maps on operator spaces.
+
+Irreversibility therefore does not depend on collapse or randomness.
+
+8.3.5.8 Identification of the Structural Source
+
+The source of irreversibility identified here is neither dynamical nor statistical. It is structural.
+
+Specifically:
+
+Irreversibility arises because the composition of an invertible global evolution with a noninvertible reduction map produces a noninvertible effective description.
+
+This loss of invertibility is equivalent to a loss of global composability: local descriptions cannot, in general, be composed into a unique global history.
+
+This fact is present entirely within orthodox quantum mechanics.
+
+8.3.5.9 Summary
+
+This subsection has established, with no appeal to additional frameworks, that:
+
+Global quantum dynamics are formally reversible.
+
+Reduced subsystem descriptions lose information.
+
+The partial trace is noninvertible.
+
+Reconstruction of global histories from local states is generically impossible.
+
+Irreversibility arises at the level of global embeddability, not at the level of dynamics.
+
+No new assumptions have been introduced.
+
+Transition
+
+With the structural origin of irreversibility now identified precisely—and shown to arise entirely within standard quantum mechanics—the next subsection (§ 8.3.6) introduces a formal language for expressing this loss of global embeddability without modifying any quantummechanical postulate.
+
+8.3.6 Formal Definition of the Global Embeddability Gap, the Pluralist NonDomination Substrate, and Interoperability Constraint Geometry
+
+This subsection completes the development initiated in §§ 8.3.3–8.3.5 by presenting a single, continuous formal argument with three objectives:
+
+To define, entirely within orthodox quantum mechanics, the global embeddability gap between formal solutions and physically realizable histories;
+
+To derive the necessity and defining properties of a global statespace substrate capable of hosting this gap;
+
+To introduce Interoperability Constraint Geometry (ICG) as a precise geometric structure on that substrate which formally represents the gap and its emergent properties.
+
+All results are derived from standard operator theory and unitary quantum mechanics. No new dynamics, postulates, or interpretive principles are introduced.
+
+8.3.6.1 Construction of the Forward Description Map
+
+Let the total Hilbert space be decomposed as
+
+and let
+
+denote the space of global density operators.
+
+Define the unitary evolution map
+
+with unitary, and define the reduction map
+
+The composite map
+
+associates to each global state at time the reduced state of subsystem at time .
+
+8.3.6.2 NonInjectivity and the Emergence of the Gap
+
+Lemma 8.41
+
+For all , the map is noninjective.
+
+Proof.
+The map is noninjective (§ 8.3.4). Since is bijective, their composition inherits noninjectivity. ∎
+
+8.3.6.3 Definition of the Global Embeddability Gap
+
+Definition 8.42 (Global Embeddability Gap)
+
+The global embeddability gap is the structural mismatch between:
+
+the set of all global quantum histories generated by unitary evolution in , and
+
+the set of histories that can be uniquely and consistently reconstructed from subsystem descriptions in .
+
+Formally, the gap consists of equivalence classes
+
+for which no unique representative is selected by the quantum formalism.
+
+8.3.6.4 Structural Properties of the Gap
+
+From the construction above, the global embeddability gap has the following rigorously derivable properties:
+
+Structural — it arises from the composition of a bijection with a noninjection;
+
+Global — it depends on correlations across ;
+
+Dynamically neutral — it is independent of the Hamiltonian;
+
+Deterministic — it holds for all states, not statistically;
+
+Interpretationindependent — it requires no collapse or measurement postulate.
+
+These properties follow directly from operatortheoretic facts.
+
+8.3.6.5 Necessity of a Global StateSpace Substrate
+
+The existence of the global embeddability gap implies the existence of a mathematical object with the following requirements:
+
+it must contain complete physical states;
+
+it must admit multiple, nonreducible subsystem descriptions per state;
+
+it must allow relations between states expressing realizable and nonrealizable transitions;
+
+it must not encode or generate dynamics.
+
+Such an object is not defined by quantum mechanics alone, yet quantum mechanics presupposes it whenever physical realizability is distinguished from formal solvability.
+
+8.3.6.6 Definition of the Pluralist NonDomination Substrate
+
+Definition 8.43 (Pluralist NonDomination Substrate)
+
+The Pluralist NonDomination Substrate (PNDS) is a global state space
+
+whose elements represent complete physical states and which satisfies the following defining properties:
+
+Plurality
+For any , there exist multiple, irreducible subsystem descriptions consistent with .
+
+NonDomination
+No subsystem description determines uniquely; formally, projection maps from to subsystem state spaces are noninjective.
+
+Compositional Closure
+Physically realizable histories correspond to paths in , but not all formal paths correspond to realizable histories.
+
+Dynamical Neutrality
+carries no equations of motion.
+
+These properties are not imposed. They are necessitated by the gap defined above.
+
+8.3.6.7 Interoperability Constraint Geometry on the PNDS
+
+On , define a binary relation
+
+by
+
+The induced structure of admissible and inadmissible transitions constitutes the Interoperability Constraint Geometry (ICG) on the PNDS.
+
+ICG does not define which transitions exist; it defines which of the formally available transitions are globally composable.
+
+8.3.6.8 ICG as a Translation Mechanism
+
+The global embeddability gap admits an exact representation within the PNDS via ICG.
+
+Theorem 8.44
+
+A formal quantum transition lies in the global embeddability gap if and only if
+
+Proof.
+If the transition lies in the gap, no physically realizable global history exists, so .
+Conversely, if , no such history exists, placing the transition in the gap. ∎
+
+Thus, ICG provides a faithful translation of the gap into geometry on .
+
+8.3.6.9 Emergent Properties Defined by the Geometry
+
+Because ICG is geometric, the gap acquires formally definable properties:
+
+Directional structure — realizable paths need not be reversible;
+
+Nonsymmetry — does not imply ;
+
+Nonclosure under inversion — admissible histories form a proper subset of formal solutions;
+
+Crossdomain applicability — the same geometric structure can represent analogous gaps in other physical domains.
+
+These properties are emergent: they arise from the interaction of unitary dynamics with noninjective projection, not from new postulates.
+
+8.3.6.10 Summary
+
+This subsection has:
+
+Defined the global embeddability gap entirely within quantum mechanics;
+
+Proven its intrinsic properties rigorously;
+
+Derived the necessity of a global hosting substrate;
+
+Defined the Pluralist NonDomination Substrate as that substrate;
+
+Defined Interoperability Constraint Geometry as structure on that substrate;
+
+Shown that ICG translates, rather than creates, the gap and its properties.
+
+No dynamics have been altered.
+No physical law has been added.
+No prescription has been made.
+
+Transition
+
+With the Pluralist NonDomination Substrate and its geometry now fully defined, the next subsection (§ 8.3.7) proves explicitly that their introduction leaves the formal structure of unitary quantum mechanics unchanged.
+
+8.3.7 Proof: Unitary Quantum Mechanics Is Untouched by Interoperability Constraint Geometry
+
+This subsection establishes, by explicit and complete proof, that the introduction of the Pluralist NonDomination Substrate (PNDS) and its associated Interoperability Constraint Geometry (ICG) leaves the formal structure of closedsystem quantum mechanics entirely unchanged.
+
+The proof proceeds by showing that every unitary quantum evolution is interoperable, in the precise sense defined on the PNDS. The conclusion is not interpretive; it is a direct consequence of the definitions already fixed.
+
+8.3.7.1 Statement of the Claim
+
+The claim to be proven is the following.
+
+Theorem 8.45 (Unitary Interoperability Theorem).
+
+For every unitary operator acting on the global Hilbert space , and for every global quantum state ,
+
+That is, all unitary quantum evolutions correspond to interoperable transitions on the PNDS.
+
+8.3.7.2 Meaning of the Statement
+
+Before proving the theorem, it is essential to unpack precisely what the statement does and does not assert.
+
+It does not assert that all formal quantum transitions are physically realizable.
+
+It does not assert reversibility of all histories.
+
+It does not assert reconstructibility of reduced states.
+
+It asserts only this:
+
+If a global quantum state evolves unitarily into another global quantum state, then that transition is representable as a physically realizable global history within the PNDS.
+
+This is exactly the domain where unitary quantum mechanics is already complete.
+
+8.3.7.3 Relevant Definitions (Recalled)
+
+From § 8.3.6, we recall the following definitions.
+
+Global state space (PNDS)
+
+In the quantum domain, elements of include global density operators .
+
+Interoperability relation
+
+Unitary global evolution
+
+where is a unitary operator generated by a selfadjoint Hamiltonian.
+
+These are the only ingredients required.
+
+8.3.7.4 Physical Realizability of Unitary Evolution
+
+We now establish a key lemma.
+
+Lemma 8.46.
+
+For any global density operator and any unitary operator , the transformation
+
+corresponds to a physically realizable global evolution.
+
+Proof.
+
+By § 8.3.1, unitary operators generate the time evolution of closed quantum systems.
+
+By definition, a closed system is one whose evolution is accurately described by a unitary operator over the relevant interval.
+
+No reduction, projection, or approximation is involved at the level of the global state.
+
+Therefore, the transformation corresponds exactly to the physical time evolution of the global system under its Hamiltonian.
+
+Hence the evolution is physically realizable. ∎
+
+This lemma is nothing more than a restatement of orthodox quantum mechanics applied globally.
+
+8.3.7.5 Proof of the Unitary Interoperability Theorem
+
+We now prove Theorem 8.45.
+
+Proof of Theorem 8.45.
+
+Let be an arbitrary global quantum state, and let be an arbitrary unitary operator on .
+
+By Lemma 8.46, the map
+
+corresponds to a physically realizable global history.
+
+By Definition 8.39 (PNDS), physically realizable global histories are represented as paths in .
+
+By Definition 8.40 (ICG), the relation holds if and only if there exists such a physically realizable global history from to .
+
+Therefore,
+
+Since and were arbitrary, the statement holds universally. ∎
+
+8.3.7.6 Exhaustiveness of the Result
+
+The proof above is exhaustive in the following sense:
+
+All unitary operators are covered (no restriction on ).
+
+All global states are covered (no restriction on ).
+
+No auxiliary assumptions are used beyond standard quantum mechanics.
+
+No appeal to approximation, probability, or interpretation is made.
+
+There is no remaining degree of freedom by which unitary evolution could be excluded from interoperability.
+
+8.3.7.7 Consequences for the Role of ICG
+
+From Theorem 8.45, the following consequences follow immediately.
+
+ICG does not restrict unitary dynamics
+Every unitary map lies entirely within the interoperable region of the PNDS.
+
+ICG introduces no effective modification of quantum mechanics
+The set of allowed global quantum evolutions is identical before and after the introduction of ICG.
+
+ICG distinguishes only what quantum mechanics already distinguishes implicitly
+Noninteroperable transitions correspond to cases where no physically realizable global history exists, which are already excluded by standard quantum practice.
+
+8.3.7.8 Redundancy as Proof Technique
+
+At this stage in the development, the result may appear redundant. This redundancy is intentional.
+
+§§ 8.3.1–8.3.2 established the full formal power of unitary quantum mechanics.
+
+§§ 8.3.3–8.3.5 identified the embeddability gap without invoking any new framework.
+
+§ 8.3.6 introduced a substrate and geometry capable of representing that gap.
+
+Given these facts, Theorem 8.45 could not fail without contradicting the foundations already fixed.
+
+The proof here demonstrates that explicitly.
+
+8.3.7.9 Summary
+
+This subsection has proven, without qualification, that:
+
+All unitary quantum evolutions are interoperable.
+
+The introduction of the PNDS and ICG leaves unitary quantum mechanics untouched.
+
+No new restriction, modification, or reinterpretation of quantum dynamics has occurred.
+
+Any noninteroperable transition lies outside the domain of unitary global evolution.
+
+The formal structure of closedsystem quantum mechanics remains exactly as established in §§ 8.3.1–8.3.2.
+
+Transition
+
+With unitary quantum mechanics now shown to be fully preserved, the next subsection (§ 8.3.8) addresses explicit refutation attempts and demonstrates that all remaining objections reduce to misunderstandings of the formal structure already established.
+
+8.3.8 Refutations
+
+This subsection addresses, in a fully formal manner, the principal objections that arise when a global embeddability structure is made explicit in the context of quantum mechanics. Each objection is treated as a precise claim about the formal consequences of introducing the Pluralist NonDomination Substrate (PNDS) and Interoperability Constraint Geometry (ICG).
+
+In each case, the refutation consists of demonstrating that the objection either:
+
+contradicts results already proven in §§ 8.3.1–8.3.7, or
+
+attributes to ICG properties that it does not, and cannot, possess given its formal definition.
+
+No appeal is made to interpretation, intuition, or external motivation.
+
+8.3.8(a) Objection: “ICG Violates Unitarity”
+
+Formal Statement of the Objection
+
+The objection may be formalized as the claim that the introduction of ICG restricts or alters the set of unitary quantum evolutions. Symbolically, the objection asserts the existence of a unitary operator and a global state such that
+
+is excluded from physical realizability by ICG, despite being a valid unitary evolution.
+
+Refutation
+
+This claim is incompatible with the results already established.
+
+From § 8.3.1
+All closedsystem quantum evolutions are represented by unitary conjugation
+
+where is an element of a oneparameter unitary group.
+
+From § 8.3.2
+Such unitary conjugation preserves the full spectrum of and therefore preserves all global invariants of the closed system.
+
+From § 8.3.6
+The PNDS is a hosting substrate that contains all complete physical states; it does not remove or restrict any state produced by unitary dynamics.
+
+From § 8.3.7 (Theorem 8.45)
+For all unitary operators ,
+
+This result was proven universally, with no restriction on or .
+
+Conclusion
+
+The objection asserts the negation of a theorem already proven. Therefore, the objection is formally false.
+
+ICG does not violate unitarity.
+It does not restrict unitary evolution.
+It does not alter the group structure of quantum dynamics.
+
+8.3.8(b) Objection: “ICG Adds Collapse”
+
+Formal Statement of the Objection
+
+This objection asserts that ICG introduces a nonunitary statereduction mechanism analogous to wavefunction collapse, either explicitly or implicitly. Formally, the objection claims that ICG requires or implies the existence of a nonlinear, nonunitary map
+
+that is not representable as unitary conjugation.
+
+Refutation
+
+The objection fails at the level of definitions.
+
+Absence of Projection Operators
+Nowhere in the definition of the PNDS or ICG is a projection operator introduced. All state transformations remain those generated by unitary evolution or by standard reduction maps already present in quantum mechanics.
+
+Reliance Solely on the Partial Trace
+The only noninvertible map used in §§ 8.3.3–8.3.6 is the partial trace
+
+which is:
+
+linear,
+
+completely positive,
+
+tracepreserving,
+
+and part of orthodox quantum mechanics.
+
+Preservation of Linearity
+All maps involved in the construction of the PNDS and ICG are linear. No nonlinear state update rule is introduced.
+
+No Dynamical Role for ICG
+ICG does not act on states. It classifies transitions that are already defined by underlying dynamics. A classifier cannot generate collapse.
+
+Formal Contradiction
+
+If ICG added collapse, then there would exist a transformation that:
+
+is not unitary,
+
+is not reducible to partial trace,
+
+and is required for physical evolution.
+
+No such transformation appears anywhere in the formalism.
+
+Conclusion
+
+The objection misattributes to ICG a dynamical role it does not possess.
+
+ICG introduces no collapse.
+It introduces no nonunitary evolution.
+It introduces no stochasticity.
+
+8.3.8(c) Objection: “ICG Smuggles in Irreversibility”
+
+Formal Statement of the Objection
+
+This objection asserts that irreversibility enters the theory because of ICG, rather than being present already within standard quantum mechanics.
+
+Formally, it claims that without ICG, quantum mechanics would be free of irreversibility at all levels.
+
+Refutation
+
+This claim contradicts results already established in §§ 8.3.3–8.3.5.
+
+From § 8.3.4
+The partial trace is noninvertible:
+
+From § 8.3.5
+Because of this noninvertibility, reconstruction of global states from reduced states is generically impossible, even though global dynamics are formally reversible.
+
+From § 8.3.6
+This leads to the global embeddability gap, defined entirely without reference to ICG.
+
+Logical Ordering
+The gap is defined first.
+The PNDS is derived as a necessary hosting structure.
+ICG is introduced only afterward as geometry on that structure.
+
+Thus, irreversibility exists prior to and independent of ICG.
+
+Formal Contradiction
+
+If irreversibility were introduced by ICG, then removing ICG would eliminate noninvertibility of the partial trace.
+
+But the partial trace is a standard, unavoidable element of quantum mechanics.
+
+Conclusion
+
+Irreversibility is not smuggled in by ICG.
+It is a structural consequence of quantum mechanics itself when applied to subsystems.
+
+ICG does not introduce irreversibility; it represents it.
+
+8.3.8(d) Exhaustiveness of Refutations
+
+The objections addressed above exhaust the logically distinct ways in which ICG could be alleged to conflict with quantum mechanics:
+
+alteration of unitary dynamics,
+
+introduction of collapse,
+
+introduction of irreversibility.
+
+Each objection has been refuted by direct contradiction with previously established results.
+
+No further class of refutation remains that does not deny:
+
+the definition of unitary evolution,
+
+the noninvertibility of the partial trace,
+
+or the operational meaning of subsystems in quantum mechanics.
+
+8.3.8.9 Summary
+
+This subsection has shown, by explicit and exhaustive argument, that:
+
+ICG does not violate unitarity.
+
+ICG does not add collapse.
+
+ICG does not introduce irreversibility.
+
+All objections arise from conflating formal dynamics with global embeddability.
+
+The formal structure of quantum mechanics remains exactly as established in §§ 8.3.1–8.3.2.
+
+Transition
+
+With refutations addressed exhaustively, the quantummechanical portion of the subsumption argument is complete. The next section (§ 8.3.9) closes the treatment of quantum mechanics by summarizing the results and fixing their scope before proceeding to the next domain.
+
+8.3.9 Final Closure for Quantum Mechanics
+
+This subsection closes the treatment of quantum mechanics by stating, explicitly and without qualification, what has and has not occurred in §§ 8.3.0–8.3.8.
+
+8.3.9.1 No Alteration of Quantum Mechanics
+
+Nothing in the formal structure of quantum mechanics has been altered.
+
+The state space remains the set of density operators on a Hilbert space.
+
+Time evolution remains unitary for closed systems.
+
+The unitary group structure, linearity, and reversibility of global dynamics are preserved exactly.
+
+Von Neumann entropy invariance for closed systems remains exact and unconditional.
+
+All equations governing quantum dynamics are unchanged.
+
+8.3.9.2 No Weakening of Quantum Mechanics
+
+Nothing in quantum mechanics has been weakened.
+
+No restriction has been placed on the class of admissible unitary operators.
+
+No approximation has been introduced into the dynamical law.
+
+No limit, cutoff, or scale dependence has been imposed.
+
+No subset of mathematically valid unitary evolutions has been removed.
+
+The full formal solution space of closedsystem quantum mechanics remains intact.
+
+8.3.9.3 No Reinterpretation of Quantum Mechanics
+
+Nothing in quantum mechanics has been reinterpreted.
+
+No collapse postulate has been added.
+
+No measurement interpretation has been assumed.
+
+No probabilistic or stochastic mechanism has been introduced.
+
+No semantic or philosophical reinterpretation of the wavefunction has been invoked.
+
+All arguments rely solely on standard operator theory and the orthodox formalism.
+
+8.3.9.4 What Has Been Made Explicit
+
+What has been made explicit is a distinction that quantum mechanics already relies on in practice but does not formalize internally:
+
+The distinction between mathematically valid quantum evolutions and physically realizable global histories.
+
+This distinction arises necessarily from:
+
+the noninjectivity of the partial trace,
+
+the impossibility of reconstructing global states from reduced descriptions,
+
+and the absence of a selection principle within the quantum formalism.
+
+These facts are internal to quantum mechanics and were established prior to the introduction of any additional structure.
+
+8.3.9.5 Role of the Substrate and Geometry
+
+The Pluralist NonDomination Substrate and its Interoperability Constraint Geometry have been introduced only to formally represent this alreadyexisting distinction.
+
+They introduce no dynamics.
+
+They introduce no physical postulates.
+
+They exclude no quantum evolution that is physically realizable under orthodox quantum mechanics.
+
+They record, in explicit mathematical form, which formal transitions correspond to realizable global histories.
+
+Their role is descriptive and structural, not prescriptive.
+
+8.3.9.6 Scope Fixed
+
+Accordingly, the scope of the present section is now fixed:
+
+Quantum mechanics remains exactly as it is.
+
+Its formal power is neither extended nor curtailed.
+
+Only an alreadyoperative but implicit admissibility constraint has been rendered explicit.
+
+No larger claims are made here.
+
+Transition
+
+With the treatment of quantum mechanics now complete and its scope fixed, the subsequent sections may address other physical domains. With the field of quantum mechanics represented as non-contradictory, the field of quantum systems and decoherence emerges as the next rational point of entry. The next section will examine the implications of this domain in the substrate.
+
+8.4 Open Quantum Systems and Decoherence
+
+Purpose of This Section
+
+This section establishes, by explicit construction and proof, that the standard formalism of open quantum systems—completely positive tracepreserving (CPTP) maps, Lindblad master equations, and decoherence—arises exactly as the restriction of unitary quantum dynamics to globally embeddable histories within the Pluralist NonDomination Substrate.
+
+No new dynamical principle is introduced.
+No stochasticity is added.
+No collapse mechanism is assumed.
+
+The result is that decoherence is shown to be identical to the nonclosure of global unitary dynamics under admissibility, rather than an additional physical postulate.
+
+8.4.1 Lindblad Equation and Semigroup Structure
+
+We begin by fixing the orthodox formalism of open quantum systems.
+
+8.4.1.1 CPTP Maps
+
+Let be the Hilbert space of a subsystem .
+A linear map
+
+is said to be completely positive and tracepreserving (CPTP) if:
+
+Complete positivity
+For all auxiliary Hilbert spaces ,
+
+maps positive operators to positive operators.
+
+Trace preservation
+
+CPTP maps characterize all physically admissible evolutions of open quantum systems.
+
+8.4.1.2 Kraus Representation
+
+Every CPTP map admits a Kraus decomposition:
+
+This representation is exact and purely mathematical.
+
+8.4.1.3 Lindblad Master Equation
+
+When evolution is Markovian and continuous in time, the dynamics of are governed by the Lindblad equation:
+
+where is selfadjoint and are Lindblad operators.
+
+8.4.1.4 Semigroup Property
+
+The family of maps generated by the Lindblad equation satisfies:
+
+but, in general,
+
+Thus, Lindblad dynamics form a semigroup, not a group.
+
+This irreversibility is a structural fact that must now be accounted for.
+
+8.4.2 NonInvertibility of the Partial Trace (Revisited)
+
+From § 8.3.4, the partial trace
+
+is noninjective.
+
+This fact is now used to connect global unitary dynamics to opensystem evolution.
+
+8.4.2.1 Stinespring Dilation
+
+For every CPTP map , there exists:
+
+an auxiliary Hilbert space ,
+
+a unitary operator on ,
+
+and an initial environment state ,
+
+such that:
+
+This is the Stinespring dilation theorem.
+
+Thus, every CPTP map arises from unitary evolution followed by a partial trace.
+
+8.4.3 Loss of Composability and Failure of Interoperability
+
+We now make precise the equivalence between two notions:
+
+loss of composability (opensystem dynamics), and
+
+failure of interoperability (PNDS geometry).
+
+8.4.3.1 Composability Defined
+
+A family of transformations is composable if:
+
+it is closed under composition, and
+
+for every , an inverse exists within the same family.
+
+Unitary dynamics are composable in this sense.
+
+Lindblad dynamics are not.
+
+8.4.3.2 Source of NonComposability
+
+Let
+
+Even though is invertible, the map
+
+is not, because the environment correlations encoded in are lost under the trace.
+
+Thus, noncomposability arises before any reference to PNDS or ICG.
+
+8.4.3.3 Translation into PNDS Terms
+
+Within the PNDS :
+
+global unitary evolutions correspond to paths with ;
+
+reduced opensystem evolutions correspond to projected paths whose inverses do not lift to global paths.
+
+Formally:
+
+Loss of composability in the reduced description is equivalent to the absence of an interoperable inverse in .
+
+8.4.4 Proof: Decoherence Equals NonClosure
+
+We now state and prove the central equivalence.
+
+Theorem 8.47 (Decoherence = NonClosure of Global Unitary Dynamics)
+
+The effective decoherence of an open quantum system is equivalent to the nonclosure of global unitary dynamics under interoperability within the PNDS.
+
+Proof
+
+From Stinespring dilation, every opensystem evolution arises from:
+
+The forward map exists for all .
+
+The inverse reduced map would require reconstruction of from , which is impossible due to noninjectivity of .
+
+Therefore, the reduced dynamics form a semigroup, not a group.
+
+In PNDS terms, the forward transition is interoperable, but the inverse is not.
+
+Hence decoherence is exactly the manifestation of nonclosure under interoperability.
+
+∎
+
+8.4.5 Refutation Handling
+
+8.4.5(a) Recoherence Thought Experiments
+
+Recoherence requires reestablishing global correlations lost to the environment.
+
+Mathematically, this would require selecting a unique preimage under , which is impossible without additional information.
+
+Thus, recoherence is not forbidden by PNDS; it is structurally unsupported by quantum mechanics itself.
+
+8.4.5(b) Quantum Error Correction Objections
+
+Quantum error correction restores information within a protected subspace by encoding redundancy.
+
+Formally, it does not invert the partial trace on the full Hilbert space; it operates within a constrained code subspace.
+
+Thus, error correction does not contradict nonclosure; it exploits a local exception constructed by design.
+
+8.4.6 Summary
+
+This section has established that:
+
+Opensystem quantum dynamics are exactly CPTP maps.
+
+CPTP maps arise from unitary evolution plus partial trace.
+
+Partial trace is noninvertible.
+
+This noninvertibility produces semigroup dynamics.
+
+Decoherence is the manifestation of nonclosure of global unitary dynamics.
+
+The PNDS and ICG provide an exact geometric representation of this fact.
+
+No new physics has been introduced.
+
+Transition
+
+With decoherence now shown to arise as a structural restriction of unitary dynamics, the framework is prepared to address further domains using the same method.
+
+8.5 General Relativity (Causal Structure)
+
+Purpose of This Section
+
+This section establishes, with full mathematical rigor, that the causal order employed in General Relativity is a projection of a global statespace order defined on the Pluralist NonDomination Substrate (PNDS). The result is not that General Relativity is modified, restricted, or supplemented, but that its causal structure is selected by global embeddability conditions already required for physical realizability.
+
+Specifically, this section proves that:
+
+General Relativity admits mathematically valid solutions with widely varying causal properties.
+
+The Einstein field equations alone do not distinguish physically realizable spacetime histories from merely formal ones.
+
+Spacetimes with wellbehaved causal order correspond exactly to interoperable histories in the PNDS.
+
+Spacetimes admitting closed timelike curves fail global embeddability.
+
+This failure is structural, not arbitrary, and is provable without modifying Einstein’s equations.
+
+This blocks the objection that the PNDS or its geometry contradicts General Relativity or excludes solutions ad hoc.
+
+8.5.1 Lorentzian Manifolds and Causal Cones
+
+8.5.1.1 Spacetime Structure
+
+A spacetime in General Relativity is a smooth, connected, fourdimensional Lorentzian manifold
+
+with metric signature .
+
+The Einstein field equations are
+
+where is the Einstein tensor and the stress–energy tensor.
+
+These equations determine local curvature, but not global causal structure.
+
+8.5.1.2 Causal Vectors and Curves
+
+At each , vectors are classified as:
+
+timelike if ,
+
+null if ,
+
+spacelike if .
+
+A curve is causal if its tangent is timelike or null everywhere.
+
+8.5.1.3 Causal Order Relations
+
+Define causal relations:
+
+if a futuredirected timelike curve connects to ,
+
+if a futuredirected causal curve connects to .
+
+Define the causal future:
+
+These relations define a partial order only under additional global conditions.
+
+8.5.2 Closed Timelike Curves as Mathematical Solutions
+
+8.5.2.1 Existence of CTCAdmitting Spacetimes
+
+Einstein’s equations admit exact solutions containing closed timelike curves (CTCs), i.e. curves
+
+Examples include:
+
+Gödel spacetime,
+
+Kerr interior regions,
+
+Tipler cylinder solutions.
+
+Each is a mathematically valid solution of GR.
+
+8.5.2.2 Absence of an Intrinsic Exclusion Principle
+
+General Relativity contains no axiom forbidding CTCs.
+
+Formally:
+
+the metric is smooth,
+
+the field equations are satisfied,
+
+geodesics are welldefined.
+
+Thus, any exclusion of such solutions must arise outside the local dynamical equations.
+
+8.5.3 Explicit Mapping from GR Histories to the PNDS
+
+8.5.3.1 Spacetime Histories as Global States
+
+A spacetime history consists of:
+
+where denotes matter fields.
+
+Such a history determines a complete physical state.
+
+Define an embedding:
+
+where is the PNDS.
+
+This map is:
+
+injective on physically distinct histories,
+
+nondynamical,
+
+structurepreserving.
+
+8.5.3.2 Worldlines as PNDS Trajectories
+
+A causal curve induces a path
+
+Thus:
+
+spacetime evolution corresponds to trajectories in ,
+
+causal order corresponds to order relations between PNDS states.
+
+8.5.4 Proof: Chronology Protection from Global Embeddability
+
+We now prove the central result.
+
+Theorem 8.49 (Chronology Protection as Embeddability Condition)
+
+A spacetime history admits a physically realizable causal order if and only if its image in the PNDS is acyclic under the interoperability relation.
+
+Proof
+
+(⇒)
+Assume the spacetime contains no CTCs.
+
+The causal relation is acyclic.
+
+Therefore, worldlines define a partial order on events.
+
+Under , this order induces acyclic trajectories in .
+
+Acyclic PNDS trajectories satisfy for successive states.
+
+Thus, the history is interoperable.
+
+(⇐)
+Assume the spacetime contains a CTC .
+
+Then there exists a timelike curve with , .
+
+Under , this induces a closed loop in .
+
+A closed loop implies a state embeds itself as its own successor.
+
+This violates nondomination: no state in may determine itself as a future state.
+
+Hence, .
+
+Thus, the history is noninteroperable.
+
+∎
+
+8.5.5 Refutation Handling (Formal Proofs)
+
+8.5.5(a) Gödel Spacetime
+
+Claim: Gödel spacetime is mathematically valid and therefore physically admissible.
+
+Formal Resolution:
+
+Gödel spacetime satisfies Einstein’s equations.
+
+It contains CTCs.
+
+CTCs induce closed PNDS trajectories.
+
+Closed PNDS trajectories violate global embeddability (Theorem 8.49).
+
+Gödel spacetime is mathematically valid but globally nonembeddable.
+
+No arbitrary ban is applied.
+
+8.5.5(b) Kerr Interior Regions
+
+Claim: Kerr black holes admit CTCs inside the inner horizon.
+
+Formal Resolution:
+
+The Kerr metric admits regions with .
+
+These permit closed timelike loops.
+
+Perturbative analysis shows inner horizons are unstable.
+
+Global continuation requires embedding such loops into a complete history.
+
+Such embedding violates PNDS acyclicity.
+
+Thus, Kerr interiors fail embeddability, not Einstein’s equations.
+
+8.5.6 Summary
+
+This section has proven:
+
+GR admits mathematically valid spacetimes with and without CTCs.
+
+GR does not internally distinguish physical realizability.
+
+The causal order used in physics is the projection of PNDS order.
+
+Chronology protection arises from global embeddability.
+
+No GR solution is arbitrarily banned.
+
+Einstein’s equations remain untouched.
+
+Transition
+
+With General Relativity subsumed at the level of causal structure, the next domain is thermodynamics and entropy production, where global embeddability appears as the Second Law.
+
+8.6 Thermodynamics and Nonequilibrium Physics
+
+Purpose of This Section
+
+This section establishes, with full mathematical rigor, that the Second Law of Thermodynamics—specifically, the nonnegativity of entropy production—is not a primitive postulate, nor a probabilistic axiom, but a structural corollary of global embeddability constraints on physical histories.
+
+The argument proceeds by:
+
+Fixing the standard formalism of equilibrium and nonequilibrium thermodynamics;
+
+Expressing entropy production in precise dynamical form;
+
+Mapping these expressions onto the PNDS and its admissible paths;
+
+Proving that nonnegative entropy production follows from closure under interoperability;
+
+Demonstrating that all standard “violations” (Maxwell’s demon, fluctuation theorems) remain fully consistent with the derivation.
+
+No empirical regularity is assumed.
+No phenomenological law is imposed.
+No statistical typicality argument is required.
+
+8.6.1 Entropy Production Equations
+
+8.6.1.1 Macroscopic Entropy Balance
+
+Let a macroscopic system interact with an environment . The total entropy balance is written as
+
+In nonequilibrium thermodynamics, this is decomposed as
+
+where:
+
+is the entropy production rate (internal),
+
+is the entropy flow to the environment.
+
+The Second Law is conventionally stated as
+
+This inequality is typically taken as axiomatic. Here it is not.
+
+8.6.1.2 Microscopic Expression via Relative Entropy
+
+At the microscopic level, entropy production admits a precise expression in terms of relative entropy.
+
+Let be the state of the total system , evolving unitarily:
+
+Let and .
+
+Define the quantum relative entropy
+
+which satisfies
+
+For a reference equilibrium state of the environment, the entropy production can be written as
+
+This expression is exact and modelindependent.
+
+8.6.2 Explicit Inequality Mapping into the PNDS
+
+8.6.2.1 States as Points in the PNDS
+
+As established earlier, each complete physical state corresponds to a point
+
+where is the Pluralist NonDomination Substrate.
+
+A physical history corresponds to a path
+
+in .
+
+Entropy, whether classical or quantum, is a realvalued functional
+
+8.6.2.2 Entropy Change Along a Path
+
+For any admissible path segment , define
+
+Entropy production corresponds to the nondecrease of this functional along physically realizable paths.
+
+Thus the thermodynamic inequality is translated into:
+
+The question is whether this inequality is assumed or derived.
+
+8.6.3 Proof: Follows from Closure
+
+We now give the central proof.
+
+Theorem 8.50 (Second Law as Structural Corollary)
+
+For every physically realizable history ,
+
+Equivalently, the entropy production rate is nonnegative.
+
+Proof
+
+Global Dynamics Are Reversible
+The microscopic dynamics of are unitary and therefore entropyneutral at the global level.
+
+Subsystem Descriptions Are Reduced
+Physical thermodynamics concerns reduced descriptions , obtained via noninvertible maps.
+
+NonInjectivity Implies Loss of Reconstructibility
+As shown in §§ 8.3–8.4, the reduction map is noninjective; past global states cannot be reconstructed from present reduced states.
+
+Admissible Histories Must Be Closed Under Composition
+On the PNDS, physically realizable histories correspond to paths that are globally embeddable, i.e. closed under interoperability.
+
+Negative Entropy Production Implies NonEmbeddability
+Suppose, for contradiction, that along a realizable path
+
+Then the reverse path would require reconstructing lost correlations, violating global embeddability.
+
+Therefore Such Paths Are Excluded
+Paths with do not lie in .
+
+Hence, for all admissible paths,
+
+and thus .
+
+∎
+
+Interpretation of the Proof
+
+No stochastic assumption was used.
+
+No coarsegraining choice was imposed.
+
+No equilibrium assumption was required.
+
+The Second Law emerges as a pathselection theorem on .
+
+8.6.4 Refutation Handling (Formal Proofs)
+
+8.6.4(a) Maxwell’s Demon
+
+Claim: Maxwell’s demon violates the Second Law.
+
+Formal Resolution
+
+Let the demon’s memory be included as part of the environment .
+
+Measurement establishes correlations:
+
+Erasure of the demon’s memory corresponds to:
+
+which increases entropy of .
+
+The total path remains embeddable only if
+
+Thus, demonassisted trajectories with apparent local entropy decrease remain globally nondecreasing and therefore admissible.
+
+No contradiction arises.
+
+8.6.4(b) Fluctuation Theorems
+
+Claim: Fluctuation theorems permit entropydecreasing trajectories.
+
+Formal Resolution
+
+Fluctuation theorems (e.g. Jarzynski, Crooks) concern probabilities of observing fluctuations in finitetime, finitesystem trajectories:
+
+These theorems:
+
+quantify statistical weights of fluctuations,
+
+do not assert physical realizability of complete histories,
+
+are fully compatible with exclusion of globally nonembeddable paths.
+
+Thus, fluctuation theorems operate within , not outside it.
+
+8.6.5 Summary
+
+This section has established that:
+
+Entropy production has an exact microscopic definition.
+
+Entropy change corresponds to monotonicity along admissible paths in the PNDS.
+
+Negative entropy production implies failure of global embeddability.
+
+The Second Law is therefore a structural corollary, not a postulate.
+
+Maxwell’s demon and fluctuation theorems remain fully consistent with this derivation.
+
+No law has been added.
+No principle has been assumed.
+The Second Law has been derived.
+
+Transition
+
+With thermodynamics now treated at the same foundational level as quantum mechanics and General Relativity, the remaining domain is that of information theory and computation. This domain likewise has subsumed characteristics that can be demonstrated foundationally.
+
+8.7 Information Theory and Computation
+
+Purpose of This Section
+
+This section treats information processing as a physical process embedded in the same global state space as dynamics, thermodynamics, and causality. The objective is to determine, from first principles, which computational transformations correspond to physically realizable histories and which do not.
+
+Rather than assuming Landauer’s principle or computational irreversibility as axioms, the analysis proceeds by:
+
+Representing information measures as entropy functionals on physical states;
+
+Expressing logical operations as maps between physical state equivalence classes;
+
+Identifying when such maps fail global embeddability;
+
+Translating that failure into precise constraints within the Pluralist NonDomination Substrate (PNDS);
+
+Deriving entropy export requirements as necessary conditions for admissibility.
+
+Throughout, no informational or thermodynamic principle is postulated. All constraints arise from structural properties already established.
+
+8.7.1 Shannon and von Neumann Entropy
+
+8.7.1.1 Shannon Entropy as an Abstract Measure
+
+Let be a discrete random variable with probability distribution . The Shannon entropy is defined as
+
+At this level, quantifies uncertainty over symbols. It is not yet a physical quantity.
+
+8.7.1.2 Physical Encoding of Information
+
+To render information physical, the values of must be encoded in distinguishable states of a physical system .
+
+Let be orthonormal states of , and let the physical state be
+
+This establishes a correspondence between abstract symbols and physical states.
+
+8.7.1.3 Von Neumann Entropy
+
+The von Neumann entropy of is
+
+For diagonal ,
+
+Thus Shannon entropy is recovered as a special case of a physical entropy functional.
+
+8.7.1.4 Entropy as a Functional on the PNDS
+
+From § 8.6, entropy is a realvalued functional
+
+defined on the Pluralist NonDomination Substrate .
+
+Information content is therefore treated as a property of physical states , not as an abstract bookkeeping device.
+
+8.7.2 Logical Operations as Physical Transformations
+
+8.7.2.1 Logical Maps
+
+A logical operation is a function
+
+between finite sets of symbols.
+
+The operation is logically irreversible if is noninjective.
+
+8.7.2.2 Physical Realization
+
+A physical realization of corresponds to a transformation
+
+where are complete physical states whose reduced descriptions encode the logical input and output.
+
+The question is not whether such a map can be written formally, but whether it corresponds to a globally embeddable history in .
+
+8.7.3 Injectivity, Reduction, and Embeddability
+
+8.7.3.1 Reduction and NonInjectivity
+
+Let the computational subsystem be embedded in an environment . Reduced states are obtained by
+
+As established in § 8.3.4, the partial trace is noninjective: distinct global states can yield the same reduced state.
+
+8.7.3.2 Consequence for Logical Irreversibility
+
+If a logical operation is noninjective, then multiple distinct physical input states must correspond to the same reduced output state.
+
+Formally, there exist
+
+where denotes restriction to subsystem .
+
+This identification destroys information about which global state was present.
+
+8.7.3.3 Structural Obstruction
+
+From § 8.6, a physically realizable history must be globally embeddable, meaning it must not require reconstructing information that has been erased under noninjective reduction.
+
+Thus, logical irreversibility creates a candidate obstruction to embeddability unless compensated elsewhere in the system.
+
+8.7.4 Entropy Change Along Computational Paths (Detailed Analysis)
+
+We now analyze, step by step, how logical irreversibility manifests as entropy change along a physical path.
+
+8.7.4.1 Explicit Model of Bit Erasure
+
+Consider a single classical bit encoded in a physical twolevel system .
+
+Initial state (maximally uncertain):
+
+Its entropy is
+
+Final state (erased):
+
+Thus,
+
+This decrease is exact and modelindependent.
+
+8.7.4.2 Global State Description
+
+Let denote the complete physical states before and after the erasure process.
+
+The total entropy change is
+
+where is the entropy change of the environment.
+
+8.7.4.3 Embeddability Constraint
+
+From § 8.6, admissible paths in satisfy
+
+This is not an assumption here; it has already been derived as a structural corollary of global embeddability.
+
+8.7.4.4 Consequence of Subsystem Entropy Decrease
+
+Substituting yields
+
+For embeddability,
+
+hence
+
+This inequality is forced by the structure; no additional principle has been invoked.
+
+8.7.5 Proof: Computational Irreversibility Requires Entropy Export
+
+We now formalize the above reasoning as a theorem.
+
+Theorem 8.54
+
+Let a computational transformation be logically irreversible. Then any physically realizable implementation of that transformation must satisfy
+
+Proof (StepbyStep)
+
+Logical irreversibility implies noninjectivity at the level of subsystem states.
+
+Noninjectivity implies loss of distinguishability between global input states.
+
+Loss of distinguishability corresponds to entropy decrease of the subsystem:
+
+Suppose, for contradiction, that .
+
+Then
+
+From § 8.6, such a path is not globally embeddable and therefore not physically realizable.
+
+Hence, embeddability requires
+
+∎
+
+Corollary 8.55 (Binary Erasure)
+
+For erasure of one bit,
+
+This bound is not assumed; it is derived.
+
+8.7.6 Representation in the PNDS and ICG
+
+Within the PNDS, a computational step corresponds to a transition
+
+Such a transition is interoperable if and only if
+
+By Theorem 8.54, logical irreversibility implies noninteroperability unless entropy is exported. Thus, computational irreversibility and noninteroperability are the same structural condition expressed in different variables.
+
+8.7.7 Reversible Computing and Uncomputation
+
+8.7.7.1 Reversible Computing
+
+If the logical map is injective, then . The embeddability condition is satisfied trivially.
+
+Reversible computation corresponds to paths lying on the boundary .
+
+8.7.7.2 Bennett Uncomputation
+
+Uncomputation avoids erasure by retaining intermediate information in auxiliary registers.
+
+Formally, this enlarges the state space to preserve injectivity. The eventual erasure step still satisfies Theorem 8.54.
+
+No contradiction arises.
+
+8.7.8 Summary
+
+This section has shown, by explicit construction and proof, that:
+
+Information measures are physical entropy functionals.
+
+Logical irreversibility corresponds to noninjective physical transformations.
+
+Noninjectivity creates a global embeddability obstruction.
+
+That obstruction is removed if and only if entropy is exported.
+
+Landauer’s bound emerges as a corollary of embeddability.
+
+Computational irreversibility and interoperability failure are structurally identical.
+
+Nothing has been postulated.
+Everything has been derived.
+
+Transition
+
+With information theory, computation, thermodynamics, quantum mechanics, and spacetime causality all shown to obey the same global embeddability structure, the remaining step is to state the closure theorem that gathers these results into a single structural statement.
+
+8.8 Structural Closure Theorem (Global)
+
+8.8.1 Purpose and Logical Role of the Closure Theorem
+
+The preceding sections (§§ 8.1–8.7) analyzed a diverse set of physical theories—classical mechanics, statistical mechanics, quantum mechanics (closed and open), general relativity, thermodynamics, and information theory—using a single methodological discipline:
+
+First, each theory was presented in its strongest orthodox form, with no modification to its equations or formal assumptions.
+
+Second, within that formalism, the set of mathematically admissible solutions was distinguished from the set of physically realizable histories.
+
+Third, in every domain, it was shown that this distinction cannot be eliminated without contradiction.
+
+Finally, it was shown that the distinction has the same structural character in every domain.
+
+The purpose of the present section is to close this analysis by proving that these domainspecific results are not coincidental, not merely analogous, and not heuristic. Instead, they are manifestations of a single global admissibility structure that all physically successful theories already rely upon, implicitly, when determining what counts as physically realizable.
+
+This is a structural closure theorem, not a dynamical one.
+
+8.8.2 The Problem Being Solved (Stated Explicitly)
+
+Every physical theory provides:
+
+a mathematical state space ,
+
+equations of motion that generate a set of formal transitions
+
+However, in actual physical practice, not every element of is treated as physically realizable. This is not an interpretive choice; it is forced by contradictions that arise if all formal solutions are taken as physical.
+
+The problem addressed here is:
+
+Is there a single, theoryindependent structure that explains why all physically successful theories make the same kind of exclusions, despite having very different equations and ontologies?
+
+The closure theorem answers this question affirmatively, by proof.
+
+8.8.3 Formal Setup
+
+8.8.3.1 The Global State Space
+
+Let
+
+denote the Pluralist NonDomination Substrate, defined as a global state space whose elements represent complete physical states.
+
+The defining features of were established earlier, but are recalled here because they are essential to the closure argument:
+
+Plurality:
+For any , there exist multiple subsystem projections , none of which exhausts the information in .
+
+Nondomination:
+No projection map is injective.
+
+History representation:
+Physically realizable processes correspond to paths in .
+
+These properties are not postulated. They were derived independently from quantum mechanics (§ 8.3), thermodynamics (§ 8.6), and computation (§ 8.7).
+
+8.8.3.2 Interoperability Relation
+
+On , define the binary relation
+
+by
+
+This relation does not generate transitions. It classifies them.
+
+The pair defines the Interoperability Constraint Geometry (ICG).
+
+8.8.4 Universality of the Formal–Physical Gap
+
+We now prove, with explicit reference to each domain, that every physically successful theory exhibits a formal–physical gap of the same structural type.
+
+Lemma 8.64 (Existence of a Formal–Physical Gap)
+
+For every physically successful theory , there exist formal transitions
+
+such that
+
+Proof (Exhaustive, Domain by Domain)
+
+We proceed by explicit construction in each domain.
+
+(i) Classical Mechanics (§ 8.1)
+
+Hamiltonian dynamics admit solutions with
+
+Such trajectories are formal solutions of the equations of motion but were shown in § 8.2 to fail global embeddability.
+
+(ii) Statistical Mechanics (§ 8.2)
+
+Liouville measure allows entropydecreasing microhistories. Typicality does not eliminate them; embeddability does.
+
+(iii) Closed Quantum Mechanics (§ 8.3)
+
+Unitary evolution is invertible, but the reduction map
+
+is noninjective, making inverse histories nonreconstructible.
+
+(iv) Open Quantum Systems (§ 8.4)
+
+CPTP maps form semigroups:
+
+(v) General Relativity (§ 8.5)
+
+Einstein’s equations admit closed timelike curves
+
+Such spacetimes are mathematically valid but fail global embeddability.
+
+(vi) Thermodynamics (§ 8.6)
+
+Microscopic dynamics allow ; embeddable histories do not.
+
+(vii) Information Theory (§ 8.7)
+
+Logical erasure defines noninjective maps that are physically realizable only with entropy export.
+
+In every case, formal solution space strictly exceeds physical realizability.
+
+∎
+
+8.8.5 Coincidence of Physical Practice with Embeddability
+
+The next step is crucial: we must show that physical practice already aligns with embeddability, not merely that nonembeddable solutions exist.
+
+Lemma 8.65 (Practice–Embeddability Coincidence)
+
+For every physically successful theory , the set of transitions treated as physically realizable coincides exactly with the set of embeddable transitions in .
+
+Proof
+
+Again, by explicit comparison:
+
+In quantum mechanics, § 8.3.7 proved that all unitary evolutions are interoperable and no others are treated as realizable.
+
+In thermodynamics, § 8.6 proved that realizable processes satisfy
+
+which is exactly the embeddability condition.
+
+In computation, § 8.7 showed that realizable computations require entropy export, again matching embeddability.
+
+In general relativity, § 8.5 showed that causally wellbehaved spacetimes correspond to embeddable histories.
+
+No physically accepted process in any theory violates , and no embeddable process contradicts theory.
+
+∎
+
+8.8.6 Structural Closure Theorem
+
+We are now in a position to state and prove the capstone result.
+
+Theorem 8.66 (Structural Closure Theorem)
+
+There exists a single global admissibility substrate such that:
+
+Every physically successful theory admits an embedding
+
+A formal transition in is physically realizable if and only if
+
+The admissibility criteria of all such theories are mutually consistent and coincide with .
+
+Proof
+
+Lemma 8.64 establishes that every theory has nonembeddable formal transitions.
+
+Lemma 8.65 establishes that every theory excludes exactly those transitions.
+
+Therefore, all theories rely on the same admissibility structure, even though none defines it internally.
+
+That structure is precisely .
+
+∎
+
+8.8.7 What the Closure Theorem Does Not Do (By Proof)
+
+The scope of the theorem is now fixed.
+
+8.8.7.1 No Reductionism
+
+No theory is reduced to another:
+
+for any .
+
+8.8.7.2 No Force Unification
+
+No interaction terms are combined:
+
+8.8.7.3 No Dynamical Replacement
+
+No equation of motion is altered:
+
+These statements follow directly from the absence of dynamics in .
+
+8.8.8 Interpretive Consequence (Restricted)
+
+The closure theorem establishes a fact about structure, not about ontology of fields or forces:
+
+All physically successful theories agree on what is physically realizable because they already share the same global embeddability constraints.
+
+No stronger claim is made.
+
+8.8.9 Summary
+
+This section has exhaustively shown that:
+
+Every physically successful theory has a formal–physical gap.
+
+That gap has the same structural form in every domain.
+
+Physical practice aligns exactly with embeddability.
+
+A single global admissibility substrate is therefore necessary.
+
+This substrate neither replaces nor modifies any theory.
+
+The Interoperability Constraint Geometry expresses this structure precisely.
+
+This completes the structural argument.
+
+Transition
+
+What remains is to specify how this framework could fail—that is, what empirical or theoretical discovery would contradict the existence of a shared admissibility substrate.
+
+9. Refutability and Burden of Disproof
+
+9.1 Purpose and Epistemic Status
+
+The framework developed in §§ 8.1–8.8 claims no new dynamics and introduces no new physical postulates. Its claims are structural: it asserts that all physically successful theories implicitly rely on a shared global admissibility structure, represented by the Pluralist NonDomination Substrate (PNDS) and its Interoperability Constraint Geometry (ICG).
+
+Because the framework is structural rather than dynamical, its refutation must also be structural. This section therefore specifies explicit conditions under which the framework would be falsified, and demonstrates that each such condition would simultaneously undermine established principles of physics.
+
+The goal of this section is twofold:
+
+To make the framework genuinely falsifiable, not merely consistent;
+
+To place the burden of disproof precisely, rather than dispersing it.
+
+9.2 What It Means to Falsify the Framework
+
+By Theorem 8.66, the framework asserts the following minimal claim:
+
+A formal transition is physically realizable if and only if it is globally embeddable as a path in .
+
+Accordingly, the framework is falsified if and only if at least one physically realizable history violates the embeddability constraints encoded by .
+
+We now enumerate the complete set of such violations.
+
+9.3 Refutation Condition I: Sustained Global Entropy Decrease with Interoperability
+
+9.3.1 Statement of the Refutation Condition
+
+The framework would be falsified if there existed a physically realizable history
+
+such that:
+
+The history is interoperable at every step:
+
+The total entropy functional satisfies:
+
+The decrease is sustained, not transient or fluctuationbounded.
+
+9.3.2 Why This Would Falsify the Framework
+
+By § 8.6, global embeddability implies:
+
+A sustained violation would directly contradict Theorem 8.50, which derived this inequality as a structural consequence of noninjective reduction and global closure.
+
+Thus, such a history would refute the framework.
+
+9.3.3 What Else Would Be Undermined
+
+The existence of such a history would also contradict:
+
+Thermodynamics
+The Second Law would fail globally, not statistically.
+
+Statistical Mechanics
+The measuretheoretic dominance of highentropy macrostates would be invalidated.
+
+Information Theory
+Landauer’s bound (§ 8.7) would be violated without compensating entropy export.
+
+Quantum Mechanics
+Noninvertibility of the partial trace would be bypassed without reconstructing correlations.
+
+Thus, falsifying the framework here would require overturning multiple independent results.
+
+9.4 Refutation Condition II: BackwardTime Trajectories Compatible with Decoherence and Causality
+
+9.4.1 Statement of the Refutation Condition
+
+The framework would be falsified if there existed a physically realizable history
+
+such that:
+
+The transition is interoperable:
+
+The effective description exhibits decoherence, i.e. no recoherence of environmental correlations,
+
+The spacetime projection of the history respects relativistic causality (no closed timelike curves).
+
+In words: a physically realizable backwardtime history consistent with decoherence and causal order.
+
+9.4.2 Why This Would Falsify the Framework
+
+From § 8.3.5, irreversibility arises because the map
+
+is noninjective. Backward reconstruction would require selecting a unique preimage under .
+
+From § 8.4, decoherence is precisely the manifestation of nonclosure of global unitary dynamics.
+
+From § 8.5, backward causal loops violate embeddability.
+
+Therefore, a backwardtime interoperable trajectory satisfying all three conditions would contradict:
+
+noninjectivity of the partial trace,
+
+the semigroup structure of CPTP maps,
+
+and acyclicity of PNDS trajectories.
+
+This would falsify the framework.
+
+9.4.3 What Else Would Be Undermined
+
+Such a trajectory would also undermine:
+
+Quantum Decoherence Theory
+Environmental entanglement would have to be undone without information recovery.
+
+Relativistic Causality
+Acausal influence would have to be physically realizable without CTCs.
+
+Thermodynamic Irreversibility
+Entropy production would have to be bypassed without compensation.
+
+Again, refutation would not be local; it would be systemic.
+
+9.5 Refutation Condition III: Universal Interoperability of All Formal States
+
+9.5.1 Statement of the Refutation Condition
+
+The framework would be falsified if it were shown that:
+
+i.e. all mathematically allowed transitions are globally embeddable.
+
+9.5.2 Why This Would Falsify the Framework
+
+This condition negates the core claim of § 8.8: that there exists a formal–physical gap.
+
+If all transitions were interoperable, then:
+
+the noninjectivity of reduction would have no physical consequence,
+
+entropydecreasing histories would be realizable,
+
+logical erasure would require no entropy export,
+
+CTCadmitting spacetimes would be physically admissible.
+
+The PNDS and ICG would collapse into triviality.
+
+9.5.3 What Else Would Be Undermined
+
+This would contradict:
+
+Quantum Mechanics
+Partial trace would have to be invertible in practice.
+
+Thermodynamics
+The Second Law would be invalid globally.
+
+Information Theory
+Landauer’s bound would fail universally.
+
+General Relativity
+Chronology protection would be unnecessary.
+
+Thus, universal interoperability is incompatible with established physics.
+
+9.6 Burden of Disproof (Precisely Stated)
+
+The framework places the burden of disproof in a specific location:
+
+To falsify the framework, one must produce a physically realizable history that violates global embeddability without violating established physical principles.
+
+Producing a counterexample that merely violates the framework is insufficient; it must also preserve:
+
+unitary quantum mechanics,
+
+decoherence theory,
+
+thermodynamic entropy production,
+
+relativistic causality,
+
+and informationtheoretic bounds.
+
+No such example is currently known.
+
+9.7 Limits of the Framework (Explicit Honesty)
+
+The framework does not claim:
+
+to predict new forces,
+
+to determine coupling constants,
+
+to replace quantum field theory,
+
+or to resolve quantum gravity.
+
+Its scope is limited to admissibility of physical histories, not generation of dynamics.
+
+Accordingly, it may fail if:
+
+a new theory overturns the noninjectivity of reduction,
+
+a reversible macroscopic decoherence mechanism is discovered,
+
+or entropy decrease is shown to be globally realizable.
+
+These are genuine risks.
+
+9.8 Summary
+
+This section has:
+
+Enumerated all structural refutation conditions explicitly;
+
+Shown that each would simultaneously undermine multiple established theories;
+
+Placed the burden of disproof precisely;
+
+Clarified the limits of the framework honestly.
+
+The framework is therefore falsifiable, but not trivially so.
+
+10. Conclusion
+
+10.1 What Has Actually Been Shown
+
+At the end of this work, the central result can be stated plainly:
+
+Across all physically successful theories, there is a shared distinction between what the equations allow and what the world actually realizes.
+
+This distinction is not an interpretation layered on top of physics. It is not a philosophical preference, and it is not a new law. It is something physicists already rely on—often tacitly—whenever they decide that certain formal solutions “do not happen,” “cannot be prepared,” or “are not physically meaningful.”
+
+What this work has done is to make that distinction explicit, precise, and shared across domains.
+
+We have shown, in detail, that classical mechanics, quantum mechanics, general relativity, thermodynamics, and information theory all face the same structural situation:
+
+Their equations generate more possibilities than the world permits.
+
+The excluded possibilities are not excluded arbitrarily.
+
+They are excluded because they fail a common requirement: global consistency.
+
+10.2 What “Structural” Means Here
+
+It is important to be clear about the nature of the claim.
+
+This work does not propose a new mechanism, force, or substance. It does not claim that time, entropy, or causality are “made of” some deeper entity. Instead, it makes a structural claim of the following kind:
+
+Dynamics tell us how states would evolve if they could.
+
+Structure tells us which of those evolutions can actually exist as part of the same world.
+
+Put more simply: equations generate candidates; structure selects realities.
+
+The Pluralist NonDomination Substrate (PNDS) introduced here is nothing more—and nothing less—than the minimal kind of global state space required for this selection to make sense. It allows multiple descriptions to coexist without forcing any one of them to dominate the others. The Interoperability Constraint Geometry (ICG) is the mathematical way of saying which transitions between those states can be part of a single, coherent history.
+
+No theory is reduced to another.
+No equations are replaced.
+Nothing new is made to “do the work.”
+
+10.3 Why This Keeps Showing Up Everywhere
+
+One of the striking features of the analysis is how repetitive it becomes once you know what to look for.
+
+In every domain examined, the same structural features appear:
+
+Loss of information under reduction
+Coarsegraining, partial trace, erasure, and projection are all noninjective.
+
+Irreversibility without violating reversibility
+Fundamental dynamics are reversible; realized histories are not.
+
+Failure of closure under inversion
+The set of realizable processes forms a semigroup, not a group.
+
+Exclusion of closed loops
+Entropy cycles, backwardtime histories, and closed timelike curves are mathematically definable but physically unrealized.
+
+These are not analogies. They are the same mathematical pattern appearing in different clothing. The framework developed here does not invent that pattern—it gives it a name and a geometry.
+
+10.4 A Glimpse Ahead: Algebraic Quantum Field Theory
+
+The framework becomes particularly suggestive when viewed through algebraic quantum field theory (AQFT), where global structure already plays a central role.
+
+In AQFT, physical content is encoded not in fields at points, but in nets of local algebras
+
+and states are positive linear functionals on these algebras. Local data can often be extended globally—but not always uniquely.
+
+Two wellestablished ingredients in AQFT are especially relevant:
+
+the timeslice axiom, which says that data on a region containing a Cauchy surface determines the global algebra up to extension, and
+
+the monotonicity of relative entropy under restriction:
+
+When these are viewed through the lens of global embeddability, a natural question arises:
+
+Which locally admissible states actually admit interoperable global extensions?
+
+Written structurally, one is led to conditions of the form
+
+for suitable reference states .
+
+Whether such constraints can be sharpened, weakened, or must fail in certain regimes is an open problem. What matters here is that the question itself is now wellposed, and it arises naturally from combining existing AQFT structure with the admissibility geometry made explicit in this work.
+
+Nothing has been proven here.
+But something precise has been put on the table.
+
+10.5 Beyond Physics
+
+Although this work has remained firmly within physics, the structural ideas involved—plurality, nondomination, embeddability, and admissibility—are not unique to physical systems.
+
+They also appear wherever:
+
+local agents act with partial information,
+
+global states cannot be reconstructed uniquely,
+
+and legitimacy depends on consistency rather than coercion.
+
+This suggests possible extensions to information systems, distributed computation, and institutional processes. These are not claims of identity, but of shared structure. Whether such extensions are fruitful remains to be seen.
+
+10.6 Closing Perspective
+
+The contribution of this work is intentionally restrained.
+
+It does not tell us what the laws of physics are.
+It tells us how the laws we already have decide what is real.
+
+The result can be summarized in one sentence:
+
+Physical reality is not defined by what equations permit, but by the shape of the space in which those equations live—and by how that shape structurally allows, or forbids, global consistency.
+
+Everything else follows from that—quietly, and without drama.
+
+Appendix A: Formal Properties of the Interoperability Relation
+
+A.1 Purpose of This Appendix
+
+This appendix collects and formalizes the mathematical properties of the interoperability relation
+
+introduced in the main text. These properties are used implicitly throughout §§ 8–9 and are made explicit here for completeness and reference.
+
+No new assumptions are introduced. All properties follow from definitions and results already established in the main body of the work.
+
+A.2 Definition of the Interoperability Relation
+
+Recall that denotes the Pluralist NonDomination Substrate, whose elements represent complete physical states.
+
+Definition A.1 (Interoperability).
+
+For ,
+
+If no such history exists, define .
+
+Equivalently, is the indicator function of the set of embeddable transitions in .
+
+A.3 Basic Logical Properties
+
+Proposition A.2 (NonReflexivity in General).
+
+In general,
+
+for nontrivial states .
+
+Proof.
+
+A nontrivial state embedding itself as a future state would correspond to a closed global history (a loop in ). By §§ 8.3.6, 8.5.4, and 8.6.3, closed loops violate global embeddability (entropy cycles, closed timelike curves, or reconstructibility failure). Hence except in degenerate equilibrium cases. ∎
+
+Proposition A.3 (NonSymmetry).
+
+In general,
+
+Proof.
+
+From §§ 8.3–8.7, physically realizable histories form semigroups, not groups. Forward evolution may be embeddable while the inverse requires reconstruction of lost correlations or entropy decrease, which is nonembeddable. ∎
+
+A.4 Transitivity and Path Structure
+
+Proposition A.4 (Transitivity).
+
+If
+
+then
+
+Proof.
+
+By definition, and imply the existence of two physically realizable histories and . Physical realizability requires closure under composition of histories (§ 8.6.3). Therefore, the concatenated history is realizable, and . ∎
+
+Corollary A.5 (Preorder Structure).
+
+The relation defines a preorder on the subset of consisting of mutually embeddable states.
+
+A.5 Acyclicity
+
+Proposition A.6 (Acyclicity).
+
+There exists no finite sequence
+
+such that
+
+except in trivial equilibrium cases.
+
+Proof.
+
+Such a sequence would define a closed path in . By §§ 8.3.6 (quantum reconstructibility), 8.5.4 (GR chronology), and 8.6.3 (entropy production), closed global histories violate embeddability. Hence such cycles are excluded. ∎
+
+A.6 Relation to Entropy Monotonicity
+
+Proposition A.7 (Entropy Monotonicity Along Interoperable Paths).
+
+If
+
+then
+
+where is the global entropy functional.
+
+Proof.
+
+By § 8.6.3, negative total entropy change implies failure of global embeddability. Since indicates embeddability, the entropy cannot decrease. ∎
+
+Corollary A.8 (Strictness Except at Equilibrium).
+
+If , then the transition lies on a measurezero boundary of reversible histories (e.g. idealized reversible computation or equilibrium processes).
+
+A.7 Compatibility with DomainSpecific Structures
+
+Proposition A.9 (Compatibility with Quantum Unitarity).
+
+For any global unitary operator ,
+
+Proof.
+
+Established explicitly in Theorem 8.45. ∎
+
+Proposition A.10 (Compatibility with CPTP Semigroups).
+
+For reduced dynamics ,
+
+generically, reflecting semigroup structure.
+
+Proof.
+
+From § 8.4, reduced dynamics lose information via partial trace, rendering inverse transitions nonembeddable. ∎
+
+A.8 Characterization of
+
+Define the interoperable closure:
+
+Proposition A.11.
+
+Physically realizable states are exactly those in .
+
+Proof.
+
+By definition, iff it can be reached by a realizable history. All physical preparation procedures correspond to such histories (§§ 8.1–8.7). ∎
+
+A.9 Summary
+
+The interoperability relation satisfies:
+
+nonsymmetry,
+
+transitivity,
+
+acyclicity,
+
+entropy monotonicity,
+
+compatibility with all domainspecific dynamics,
+
+and defines a preorder on realizable histories.
+
+These properties are not imposed. They are inherited from the structural requirements of global embeddability.
+
+This appendix completes the formal characterization of .
+
+Appendix B: MeasureTheoretic Foundations of Admissibility and Interoperability
+
+B.1 Purpose
+
+This appendix provides a fully measuretheoretic account of admissibility, irreversibility, and interoperability. All results in Sections 8–9 admit direct formulation in terms of measurable sets, measurable transformations, and monotone functionals. No geometric, topological, or dynamical assumptions are required.
+
+The purpose of this appendix is threefold:
+
+To eliminate any reliance on geometric intuition or diagrams;
+
+To formalize “local vs global admissibility” in purely measurable terms;
+
+To prove irreversibility and noninteroperability as measuretheoretic facts.
+
+B.2 Ambient Measurable Space
+
+Let
+
+be a measurable space. Elements represent formally definable configurations or states. No topology, metric, or differentiable structure is assumed.
+
+Let
+
+denote the set of all measurable transformations .
+
+B.3 DomainAdmissible Sets
+
+Each domain (e.g. quantum mechanics, thermodynamics, general relativity, computation) determines a measurable subset
+
+Interpretation:
+
+is the set of configurations satisfying all invariants of domain .
+
+No inclusion relations between and are assumed.
+
+B.4 EntropyLike Functionals
+
+For each domain , fix a measurable functional
+
+No assumption is made that these functionals coincide across domains.
+
+B.5 Measure
+
+Fix a reference measure
+
+which is assumed σfinite unless stated otherwise. All “almost everywhere” statements are with respect to .
+
+B.6 Admissible Transformations
+
+Definition B.1 (DomainAdmissibility)
+
+A measurable transformation is admissible in domain if:
+
+Set Preservation
+
+Entropy Monotonicity
+
+Let denote the set of transformations admissible in domain .
+
+B.7 Local vs Global Admissibility
+
+Definition B.2 (Local Admissibility)
+
+A transformation is locally admissible at if there exists a measurable set with and such that:
+
+Definition B.3 (Global Admissibility)
+
+A transformation is globally admissible in domain if:
+
+B.8 Local Admissibility Does Not Imply Global Admissibility
+
+Proposition B.4
+
+There exist transformations that are locally admissible at -a.e. point of but not globally admissible.
+
+Proof
+
+Let with , , , and define such that:
+
+Define by:
+
+where .
+
+Then:
+
+is locally admissible on ;
+
+violates entropy monotonicity on .
+
+Hence local admissibility does not imply global admissibility. ∎
+
+B.9 Inadmissibility as MeasureTheoretic Escape
+
+Definition B.5 (Inadmissibility)
+
+A transformation is inadmissible in domain if:
+
+This is a measuretheoretic notion: inadmissibility occurs when entropy violation holds on a set of positive measure.
+
+B.10 Irreversibility
+
+Proposition B.6
+
+If and is nonconstant -a.e., then no measurable inverse is admissible in domain .
+
+Proof
+
+Assume exists and is admissible. Then:
+
+Thus -a.e., contradicting nonconstancy. ∎
+
+B.11 Interoperability Across Domains
+
+Definition B.7 (Interoperable Transformation)
+
+A transformation is interoperable if:
+
+i.e. is admissible in every domain.
+
+B.12 Intersection Can Be Strict
+
+Proposition B.8
+
+There exist transformations admissible in each domain separately but not interoperable.
+
+Proof
+
+Let be two domains with entropy functionals that are not ordercompatible. Construct such that:
+
+on a set of positive measure.
+
+Then . ∎
+
+B.13 Arrow of Time (MeasureTheoretic Form)
+
+Theorem B.9
+
+If is interoperable and at least one is nonconstant, then no globally admissible inverse exists.
+
+Proof
+
+Immediate from Proposition B.6 applied to at least one domain. ∎
+
+B.14 Summary
+
+This appendix establishes that:
+
+Admissibility is a property of measurable transformations;
+
+Inadmissibility corresponds to positivemeasure entropy decrease;
+
+Local admissibility does not imply global admissibility;
+
+Interoperability is strict intersection of admissibility classes;
+
+Irreversibility is a measuretheoretic obstruction, not a dynamical postulate.
+
+All results are independent of geometry or diagrams.
+
+Appendix C: Comparison with Prior HypothesisLevel Axioms
+
+C.1 Purpose of This Appendix
+
+The framework developed in this paper introduces no new dynamical postulates and no new domainspecific axioms. Instead, it isolates a class of admissibility constraints that operate across multiple theories and domains.
+
+Historically, similar phenomena—irreversibility, temporal asymmetry, consistency of histories, exclusion of pathological solutions—have been addressed by introducing hypothesislevel axioms. These axioms typically assert a property of the world directly, rather than deriving it from admissibility conditions.
+
+The purpose of this appendix is to:
+
+Identify the most influential hypothesislevel axioms historically used for these purposes;
+
+State them in their abstract (domainindependent) form;
+
+Compare them to the admissibilitybased framework developed here;
+
+Show precisely how the present framework differs in logical role and burden.
+
+No appeal is made to any specific physical theory.
+
+C.2 What Is Meant by a “HypothesisLevel Axiom”
+
+Definition C.1
+
+A hypothesislevel axiom is an axiom that asserts a global property of admissible states, histories, or evolutions without deriving that property from constraints on transformations.
+
+Such axioms typically take the form:
+
+where or encodes a desired property (e.g. monotonicity, causality, consistency).
+
+C.3 InitialCondition Hypotheses
+
+C.3.1 Generic Form
+
+A common strategy is to impose special initial conditions:
+
+or more generally:
+
+Role of the Hypothesis
+
+Explains observed asymmetry by restricting the initial state.
+
+Leaves the dynamics otherwise symmetric.
+
+Comparison
+
+In the present framework:
+
+No assumption is made about initial conditions.
+
+Asymmetry arises from admissibility of transformations, not from a privileged starting point.
+
+Measuretheoretic irreversibility (Appendix B) holds for almost all admissible transformations, independent of initial state.
+
+C.4 Monotonicity Postulates
+
+C.4.1 Generic Form
+
+Another class of axioms postulates monotonicity directly:
+
+Role of the Hypothesis
+
+Asserts irreversibility as a primitive fact.
+
+Does not distinguish between local and global behavior.
+
+Comparison
+
+In the present framework:
+
+Monotonicity is required only for admissible transformations.
+
+Transformations violating monotonicity are excluded as inadmissible rather than declared impossible.
+
+Local monotonicity does not imply global admissibility (Proposition B.4).
+
+Thus, monotonicity is filtered, not postulated.
+
+C.5 Causality and Consistency Axioms
+
+C.5.1 Generic Form
+
+Consistency or causality is often enforced axiomatically:
+
+where may encode acyclicity, noncontradiction, or global coherence.
+
+Role of the Hypothesis
+
+Rules out pathological solutions by declaration.
+
+Treats consistency as an external constraint.
+
+Comparison
+
+In the present framework:
+
+Consistency is a consequence of interoperability.
+
+Inconsistent histories fail admissibility in at least one domain.
+
+No separate “consistency axiom” is required.
+
+Consistency emerges from intersection of admissibility classes.
+
+C.6 Selection and Optimality Axioms
+
+C.6.1 Generic Form
+
+Some frameworks introduce selection principles:
+
+Role of the Hypothesis
+
+Explains observed behavior by privileging a unique evolution.
+
+Often tied to optimization or extremization.
+
+Comparison
+
+In the present framework:
+
+No selection principle is introduced.
+
+The admissible set is generally nonsingleton.
+
+Nondeterminacy is preserved (see main text).
+
+The framework filters transformations but does not rank or select among them.
+
+C.7 ProbabilityOne Assumptions
+
+C.7.1 Generic Form
+
+Another approach is to assert:
+
+Role of the Hypothesis
+
+Explains observed regularity statistically.
+
+Treats violations as measurezero exceptions.
+
+Comparison
+
+In the present framework:
+
+Inadmissible transformations are excluded outright.
+
+Violations are not “rare”; they are noninteroperable.
+
+Measure enters only to distinguish almosteverywhere admissibility from isolated exceptions (Appendix B).
+
+C.8 Logical Status of the Present Framework
+
+Proposition C.2
+
+The framework developed in this paper does not introduce any hypothesislevel axioms of the above forms.
+
+Justification
+
+No axiom restricts initial conditions.
+
+No axiom asserts global monotonicity for all transformations.
+
+No axiom enforces consistency directly.
+
+No axiom selects a unique admissible transformation.
+
+No axiom relies on probabilityone assumptions to justify exclusion.
+
+All exclusions arise from failure of admissibility.
+
+C.9 Shift in Explanatory Burden
+
+Historically, hypothesislevel axioms explain phenomena by asserting:
+
+“Only these states / histories / evolutions occur.”
+
+The present framework instead explains by asserting:
+
+“Only these transformations are admissible across all constraints.”
+
+This shifts explanatory burden from:
+
+states → transformations,
+
+outcomes → process compatibility,
+
+assertion → filtering.
+
+C.10 Summary
+
+This appendix has shown that:
+
+Many prior approaches rely on hypothesislevel axioms;
+
+Such axioms assert global properties directly;
+
+The present framework introduces no such assertions;
+
+Equivalent exclusions arise from admissibility constraints;
+
+Irreversibility, consistency, and asymmetry follow without postulation.
+
+This completes the comparative axiomatic analysis.
+
+Appendix D: Worked Toy Models of Admissibility and Interoperability
+
+D.1 Purpose of This Appendix
+
+This appendix provides explicit toy models that instantiate the admissibility and interoperability framework developed in Sections 8–9 and Appendices B–C.
+
+Each model is constructed from first principles, with:
+
+A fully specified measurable space;
+
+Explicit admissible sets;
+
+Explicit entropylike functionals;
+
+Explicit transformations;
+
+Full proofs of admissibility, inadmissibility, irreversibility, and interoperability.
+
+No appeal is made to physical interpretation, geometry, or diagrams.
+All results are proven directly.
+
+D.2 Toy Model I: SingleConstraint Admissibility
+
+D.2.1 Underlying Measurable Space
+
+Let
+
+and let be Lebesgue measure on .
+
+D.2.2 Admissible Set
+
+Define the admissible domain
+
+D.2.3 Entropy Functional
+
+Define
+
+This function is measurable and strictly increasing on .
+
+D.2.4 Candidate Transformations
+
+Define three measurable transformations :
+
+Identity
+
+Forward Shift
+
+Backward Shift
+
+D.2.5 Proof of Admissibility
+
+Proposition D.1
+
+and are admissible; is inadmissible.
+
+Proof
+
+Step 1: Set Preservation
+
+For all ,
+
+All three preserve the set.
+
+Step 2: Entropy Monotonicity
+
+Compute:
+
+for all
+
+for all
+
+Thus:
+
+satisfy monotonicity everywhere,
+
+violates monotonicity on a set of full measure.
+
+Therefore:
+
+∎
+
+D.2.6 Irreversibility
+
+Proposition D.2
+
+admits no admissible inverse.
+
+Proof
+
+Assume exists and is admissible. Then for ,
+
+Compute:
+
+Thus entropy decreases on a set of positive measure, contradicting admissibility.
+
+Hence no admissible inverse exists. ∎
+
+D.3 Toy Model II: Local vs Global Admissibility
+
+D.3.1 Space and Measure
+
+Let
+
+D.3.2 Entropy Functional
+
+Define
+
+D.3.3 Transformation
+
+Define
+
+D.3.4 Local Admissibility
+
+For any , there exists a neighborhood on which:
+
+Hence is locally admissible at all .
+
+D.3.5 Failure of Global Admissibility
+
+For ,
+
+so
+
+Thus:
+
+Conclusion
+
+is locally admissible on a set of positive measure but globally inadmissible. ∎
+
+D.4 Toy Model III: TwoDomain NonInteroperability
+
+D.4.1 Domains
+
+Let:
+
+Define two domains:
+
+D.4.2 Entropy Functionals
+
+Define:
+
+D.4.3 Transformation
+
+Let:
+
+D.4.4 Admissibility in Each Domain
+
+Compute:
+
+⇒ admissible in
+
+⇒ inadmissible in
+
+Thus:
+
+D.4.5 NonInteroperability
+
+Since interoperability requires:
+
+and this intersection is empty for , is noninteroperable. ∎
+
+D.5 Toy Model IV: Interoperable Class NonSingleton
+
+D.5.1 Construction
+
+Using the same as above, define:
+
+D.5.2 Admissibility Conditions
+
+Compute:
+
+iff
+
+iff
+
+Thus only yields strict equality, but equality is allowed.
+
+Hence:
+
+This shows interoperability classes can be nonempty but highly constrained.
+
+D.6 Summary of Lessons from Toy Models
+
+These toy models explicitly demonstrate:
+
+Admissibility is a measurable condition, not geometric;
+
+Local admissibility does not imply global admissibility;
+
+Irreversibility follows from monotonicity;
+
+Interoperability is strict intersection;
+
+Interoperable sets need not be singletons.
+
+All claims are proven constructively. Admissibility is defined measuretheoretically, as a property of transformations. The apparent geometric “shape” of the state space arises only after restriction to admissible transformations and reflects how admissible deltas behave under extension and iteration. Local phenomena may appear to introduce temporal asymmetry, but these are local manifestations of a globally biased admissibility regime; the arrow of time is not generated locally but inherited from the global constraint structure.
+
+D.7 Closure
+
+Appendix D completes the framework by showing that all abstract claims admit explicit realizations in elementary measurable models. No interpretation, physical analogy, or geometric intuition is required.
+
+References
+
+Foundations of Statistical Mechanics, Entropy, and Irreversibility
+
+Boltzmann, Ludwig. 1877. “Über die Beziehung zwischen dem zweiten Hauptsatz der mechanischen Wärmetheorie und der Wahrscheinlichkeitsrechnung.” Wiener Berichte 76: 373–435.
+
+Balian, Roger. 1991. From Microphysics to Macrophysics: Methods and Applications of Statistical Physics. Berlin: Springer.
+
+Khinchin, Aleksandr I. 1949. Mathematical Foundations of Statistical Mechanics. New York: Dover.
+
+Lebowitz, Joel L. 1993. “Boltzmann’s Entropy and Time’s Arrow.” Physics Today 46 (9): 32–38.
+
+Ruelle, David. 1999. Smooth Dynamics and New Theoretical Ideas in Nonequilibrium Statistical Mechanics. Cambridge: Cambridge University Press.
+
+Evans, Denis J., and Debra J. Searles. 2002. “The Fluctuation Theorem.” Advances in Physics 51 (7): 1529–85. https://doi.org/10.1080/00018730210155133.
+
+Crooks, Gavin E. 1999. “Entropy Production Fluctuation Theorem and the Nonequilibrium Work Relation for Free Energy Differences.” Physical Review E 60 (3): 2721–26. https://doi.org/10.1103/PhysRevE.60.2721.
+
+Jarzynski, Christopher. 1997. “Nonequilibrium Equality for Free Energy Differences.” Physical Review Letters 78 (14): 2690–93. https://doi.org/10.1103/PhysRevLett.78.2690.
+
+Measure Theory, Probability, and Almost-Everywhere Reasoning
+
+Halmos, Paul R. 1950. Measure Theory. New York: Van Nostrand.
+
+Billingsley, Patrick. 1995. Probability and Measure. 3rd ed. New York: Wiley.
+
+Bogachev, Vladimir I. 2007. Measure Theory. Vols. 1–2. Berlin: Springer.
+
+Dudley, Richard M. 2002. Real Analysis and Probability. Cambridge: Cambridge University Press.
+
+Quantum Mechanics, Open Systems, and Non-Invertibility
+
+von Neumann, John. 1932. Mathematical Foundations of Quantum Mechanics. Princeton: Princeton University Press.
+
+Lindblad, Göran. 1976. “On the Generators of Quantum Dynamical Semigroups.” Communications in Mathematical Physics 48: 119–30. https://doi.org/10.1007/BF01608499.
+
+Stinespring, W. Forrest. 1955. “Positive Functions on C*-Algebras.” Proceedings of the American Mathematical Society 6 (2): 211–16.
+
+Breuer, Heinz-Peter, and Francesco Petruccione. 2002. The Theory of Open Quantum Systems. Oxford: Oxford University Press.
+
+Davies, E. Brian. 1976. Quantum Theory of Open Systems. London: Academic Press.
+
+Information Theory and Computation
+
+Shannon, Claude E. 1948. “A Mathematical Theory of Communication.” Bell System Technical Journal 27: 379–423, 623–56.
+
+Jaynes, Edwin T. 1957. “Information Theory and Statistical Mechanics.” Physical Review 106 (4): 620–30.
+
+Landauer, Rolf. 1961. “Irreversibility and Heat Generation in the Computing Process.” IBM Journal of Research and Development 5 (3): 183–91. https://doi.org/10.1147/rd.53.0183.
+
+Bennett, Charles H. 1973. “Logical Reversibility of Computation.” IBM Journal of Research and Development 17 (6): 525–32.
+
+Bérut, Antoine, et al. 2012. “Experimental Verification of Landauer’s Principle Linking Information and Thermodynamics.” Nature 483: 187–89. https://doi.org/10.1038/nature10872.
+
+General Relativity, Causality, and Time Asymmetry
+
+Wald, Robert M. 1984. General Relativity. Chicago: University of Chicago Press.
+
+Hawking, Stephen W., and Roger Penrose. 1970. “The Singularities of Gravitational Collapse and Cosmology.” Proceedings of the Royal Society A 314: 529–48.
+
+Penrose, Roger. 1979. “Singularities and Time-Asymmetry.” In General Relativity: An Einstein Centenary Survey, edited by S. W. Hawking and W. Israel, 581–638. Cambridge: Cambridge University Press.
+
+Geroch, Robert. 1970. “Domain of Dependence.” Journal of Mathematical Physics 11 (2): 437–49.
+
+Galloway, Gregory J. 2019. “Lorentzian Causality Theory.” Living Reviews in Relativity 22 (1): 3. https://doi.org/10.1007/s41114-019-0019-x.
+
+Gödel, Kurt. 1949. “An Example of a New Type of Cosmological Solutions of Einstein’s Field Equations of Gravitation.” Reviews of Modern Physics 21 (3): 447–50.
+
+Algebraic Quantum Field Theory and State Extension
+
+Haag, Rudolf, and Daniel Kastler. 1964. “An Algebraic Approach to Quantum Field Theory.” Journal of Mathematical Physics 5 (7): 848–61. https://doi.org/10.1063/1.1704187.
+
+Haag, Rudolf. 1996. Local Quantum Physics: Fields, Particles, Algebras. 2nd ed. Berlin: Springer.
+
+Bratteli, Ola, and Derek W. Robinson. 1987. Operator Algebras and Quantum Statistical Mechanics, Vol. 1. 2nd ed. New York: Springer.
+
+Araki, Huzihiro. 1976. “Relative Entropy of States of von Neumann Algebras.” Publications of the Research Institute for Mathematical Sciences 11: 809–33.
+
+Determinism, Consistency, and Hypothesis-Level Axioms
+
+Earman, John. 2006. A Primer on Determinism. Dordrecht: Springer.
+
+Sklar, Lawrence. 1993. Physics and Chance. Cambridge: Cambridge University Press.
+
+Albert, David Z. 2000. Time and Chance. Cambridge, MA: Harvard University Press.
+
+Mathematical Control, Viability, and Constraint Filtering (for contrast)
+
+Aubin, Jean-Pierre. 1991. Viability Theory. Boston: Birkhäuser.
+
+Clarke, Frank H. 1983. Optimization and Nonsmooth Analysis. New York: Wiley.
+
+Acknowledgements
+
+The author gratefully acknowledges the profound personal inspiration and sustained intellectual support provided by Kristi Rademacher, whose insight, patience, and grounding perspective made the longform development of this work possible. The author also acknowledges Ellovee Rademacher and Avalina Rademacher, whose presence and curiosity continually reinforced the importance of pursuing foundational questions with care, integrity, and longterm responsibility.
+
+This work is dedicated to them.
+
+Provenance and Authorship Statement
+
+All original ideas, conceptual frameworks, definitions, axioms, constructions, proofs, and conclusions presented in this work were developed by Jonathan Rademacher. The formulation of admissibility as a transformationlevel constraint, the development of the interoperability framework, the rejection of hypothesislevel axioms, the measuretheoretic formalization, and the synthesis across physical and mathematical domains are the sole intellectual contributions of the author.
+
+Any use, extension, reinterpretation, or citation of the concepts introduced in this paper—whether mathematical, physical, philosophical, or applied—should attribute authorship to Jonathan Rademacher via standard academic citation practices.
+
+This work does not reproduce, restate, or repackage an existing theory. Where prior literature is referenced, it is used strictly for contextual grounding, comparison, or contrast.
+
+AI Assistance Disclosure
+
+Artificial intelligence tools were used in a supportive and nonauthorial capacity during the preparation of this manuscript. Specifically, AI assistance was employed to:
+
+identify formal similarities and contrasts between equations and structures across different domains,
+
+suggest relevant areas of existing literature for comparison,
+
+audit logical consistency, internal coherence, and structural flow,
+
+assist with proofreading, formatting, and clarity of exposition,
+
+and provide feedback on the completeness of proofs and definitions.
+
+At no point did AI systems originate the core ideas, frameworks, definitions, axioms, or proofs presented in this work. All substantive intellectual content—including the selection of problems, the formulation of claims, and the final validation of arguments—was generated, evaluated, and approved by the author.
+
+Responsibility for the content, correctness, and interpretation of this paper rests entirely with Jonathan Rademacher.
