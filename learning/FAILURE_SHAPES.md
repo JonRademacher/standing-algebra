@@ -109,7 +109,8 @@ checked out with different line-ending behavior.
 ### Epistemic status
 
 Observed GitHub Actions failure on commit `a464e447a780692755ce5cf8c9f8548200892490`;
-the correction is a candidate until the rerun passes.
+the correction passed hosted validation on commit
+`bd3f0703ad3f9a65de9e50a920d08e693c0fb956`.
 
 ### Minimal generating shape
 
@@ -144,8 +145,9 @@ including extensionless files, and hash other files byte-for-byte.
 
 ### Validation performed
 
-Local regression tests cover extensionless text, binary bytes, and `.git`
-exclusion; awaiting the CI rerun on the corrective commit.
+35 local Python tests passed. GitHub Actions run 41891627641 passed continuity
+tests, Markdown links, cross-platform SHA-256 verification, and release-mode
+checkpoint validation on the corrective commit.
 
 ### State delta
 
@@ -153,4 +155,4 @@ Portable hash normalization and exclusion fixtures added.
 
 ### Reopening or retirement conditions
 
-Retire only after the new GitHub Actions run verifies the complete manifest.
+Retire if another cross-platform hash mismatch demonstrates a remaining case.

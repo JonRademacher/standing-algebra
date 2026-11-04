@@ -58,8 +58,8 @@ tests and links but found a non-portable hash manifest.
 
 ### Epistemic status
 
-Observed remote failure; local corrective regression tests passed, with hosted
-verification pending.
+Observed remote failure followed by a successful hosted verification of the
+correction.
 
 ### Minimal generating shape
 
@@ -82,8 +82,8 @@ identity.
 
 ### Counterexamples and residuals
 
-Hosted CI must pass on the corrected commit; SHA-256 integrity does not prove
-authorship or source correctness.
+The passing check establishes manifest integrity, not authorship or source
+correctness.
 
 ### Correction or reuse operator
 
@@ -92,7 +92,8 @@ bytes for binary files.
 
 ### Validation performed
 
-Local tests pass; remote receipt pending.
+35 local tests passed; GitHub Actions run 41891627641 passed on commit
+`bd3f0703ad3f9a65de9e50a920d08e693c0fb956`.
 
 ### State delta
 

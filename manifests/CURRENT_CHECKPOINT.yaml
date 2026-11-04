@@ -1,24 +1,19 @@
 {
   "schema_version": 1,
   "checkpoint_id": "UCK-2026-11-04-001",
-  "created_at": "2026-11-04T18:53:15Z",
+  "created_at": "2026-11-04T18:55:02Z",
   "checkpoint_status": "canonical_partial",
   "product": {
     "name": "Repository-backed continuity integration",
     "version": "0.1.0",
     "host_branch": "jonrademacher-complete-lean4-formalizations",
-    "host_head_at_generation": "a464e447a780692755ce5cf8c9f8548200892490",
+    "host_head_at_generation": "bd3f0703ad3f9a65de9e50a920d08e693c0fb956",
     "worktree_dirty_paths": [
       "Collapse_Demonstrations/collapse.lean",
-      "Scripts/continuity_lib.py",
-      "Tests/test_continuity_tools.py",
-      "continuity/CAPABILITY_TRAJECTORY_LEDGER.md",
-      "continuity/CONTEXT_BUNDLE.md",
       "continuity/CURRENT_STATE.md",
       "continuity/OPEN_RESIDUALS.md",
       "learning/DISCOVERY_SHAPES.md",
       "learning/FAILURE_SHAPES.md",
-      "manifests/SHA256SUMS",
       "manifests/VALIDATION_RECEIPTS.json"
     ]
   },
@@ -41,7 +36,7 @@
     },
     "kernel": {
       "url": "https://github.com/JonRademacher/standing-algebra",
-      "commit": "a464e447a780692755ce5cf8c9f8548200892490",
+      "commit": "bd3f0703ad3f9a65de9e50a920d08e693c0fb956",
       "branch": "jonrademacher-complete-lean4-formalizations",
       "status": "integration_host",
       "path": [
@@ -93,6 +88,10 @@
     "context_bundle": {
       "status": "passed",
       "receipt_id": "context-bundle-2026-11-04-001"
+    },
+    "continuity_integrity": {
+      "status": "passed",
+      "receipt_id": "continuity-workflow-bd3f0703"
     }
   },
   "residuals": [
@@ -138,13 +137,13 @@
     },
     {
       "id": "R-009",
-      "status": "open",
-      "description": "The continuity product is pushed, but the latest hosted workflow must pass after the hash portability correction."
+      "status": "closed",
+      "description": "Corrective Continuity Integrity run passed on commit `bd3f0703ad3f9a65de9e50a920d08e693c0fb956`; see receipt `continuity-workflow-bd3f0703`."
     },
     {
       "id": "R-010",
-      "status": "open",
-      "description": "Checkpoint `UCK-2026-11-04-001` predates the integration commit and must be regenerated to identify the committed product revision and current residuals."
+      "status": "closed",
+      "description": "Checkpoint `UCK-2026-11-04-001` regenerated with corrective commit `bd3f0703ad3f9a65de9e50a920d08e693c0fb956` and hosted receipt `continuity-workflow-bd3f0703`."
     },
     {
       "id": "R-011",
@@ -158,8 +157,8 @@
     },
     {
       "id": "R-013",
-      "status": "open",
-      "description": "Initial hosted hash verification failed because `.git` worktree metadata was included and extensionless UTF-8 files were not normalized across operating-system checkouts."
+      "status": "closed",
+      "description": "`.git` metadata is excluded and NUL-free valid UTF-8 files are normalized across line endings; binary files remain byte-exact."
     }
   ],
   "supersedes": [],

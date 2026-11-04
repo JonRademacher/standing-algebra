@@ -8,7 +8,8 @@
     "continuity_validation": "continuity-validation-2026-11-04-001",
     "markdown_links": "markdown-links-2026-11-04-001",
     "sha256_manifest": "sha256-2026-11-04-001",
-    "context_bundle": "context-bundle-2026-11-04-001"
+    "context_bundle": "context-bundle-2026-11-04-001",
+    "continuity_integrity": "continuity-workflow-bd3f0703"
   },
   "receipts": {
     "continuity-workflow-initial-failure-a464e447": {
@@ -18,6 +19,14 @@
       "source": "https://github.com/JonRademacher/standing-algebra/actions/runs/41890985104",
       "commit": "a464e447a780692755ce5cf8c9f8548200892490",
       "result": "Tests and Markdown links passed; hash verification failed because .git metadata was included and extensionless UTF-8 files were not normalized across checkout line endings."
+    },
+    "continuity-workflow-bd3f0703": {
+      "status": "passed",
+      "command": "GitHub Actions Continuity Integrity workflow",
+      "observed_at": "2026-11-04T18:54:04Z",
+      "source": "https://github.com/JonRademacher/standing-algebra/actions/runs/41891627641",
+      "commit": "bd3f0703ad3f9a65de9e50a920d08e693c0fb956",
+      "result": "All steps passed: continuity tests, Markdown links, cross-platform SHA-256 manifest, and release-mode checkpoint validation."
     },
     "actions-lean-cbc4211": {
       "status": "passed",

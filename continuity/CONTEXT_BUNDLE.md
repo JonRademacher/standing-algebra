@@ -2,7 +2,7 @@
 
 - Generated from worktree: `C:\Users\070054\.copilot\repos\copilot-worktrees\standing-algebra\jonrademacher-effective-winner`
 - Git branch: `jonrademacher-complete-lean4-formalizations`
-- Git HEAD: `a464e447a780692755ce5cf8c9f8548200892490`
+- Git HEAD: `bd3f0703ad3f9a65de9e50a920d08e693c0fb956`
 - Git worktree: `contains uncommitted changes`
 - Epistemic status: reconstruction index; validate against live sources.
 - Framework boundary: Σᴿ and ICG are distinct peer frameworks.
@@ -13,10 +13,10 @@
 
 **Checkpoint ID:** `UCK-2026-11-04-001` (initialized integration checkpoint)
 **Checkpoint date:** 2026-11-04
-**Product status:** continuity integration is committed and pushed on the
-current branch; its first hosted integrity workflow exposed a cross-platform
-hashing defect. The portable hashing correction and regression archive are in
-progress. The unrelated pre-existing Lean edit remains uncommitted.
+**Product status:** the continuity integration and cross-platform hash
+correction are committed and pushed. The corrected Continuity Integrity
+workflow passed; the checkpoint is being regenerated to include that receipt.
+The unrelated pre-existing Lean edit remains uncommitted.
 
 **Repository revisions:**
 
@@ -24,9 +24,9 @@ progress. The unrelated pre-existing Lean edit remains uncommitted.
   `origin/main`; main-branch Lean, Coq, and Z3 workflows passed).
 - ICG: `cbc4211baf0993d643e55398addabf9588120f3f` for the integrated
   `ICG/` subtree only; a distinct ICG repository was not located.
-- kernel integration host: `a464e447a780692755ce5cf8c9f8548200892490`
-  (`jonrademacher-complete-lean4-formalizations`; local commit and push
-  succeeded, separate PR review is open).
+- kernel integration host: `bd3f0703ad3f9a65de9e50a920d08e693c0fb956`
+  (`jonrademacher-complete-lean4-formalizations`; corrective commit is pushed
+  and its Continuity Integrity workflow passed).
 
 ## Canonical versions
 
@@ -110,11 +110,11 @@ the new GitHub workflow runs.
 - ICG: shares the Standing Algebra source repository's Lean build. Build
   success does not imply complete transcription; see ICG README coverage
   boundary.
-- Integration: 35 standard-library Python tests currently pass after adding
-  regression coverage for portable hashing. The initial hosted continuity
-  workflow failed at hash verification on commit `a464e447`; the failure and
-  correction are archived in `learning/`. A hosted rerun is required before
-  declaring remote validation complete.
+- Integration: 35 standard-library Python tests pass after adding regression
+  coverage for portable hashing. The initial hosted continuity workflow failed
+  at hash verification on commit `a464e447`; the failure and correction are
+  archived in `learning/`. Corrected hosted run 41891627641 passed on
+  `bd3f0703`.
 
 ## Reopening conditions
 
@@ -136,8 +136,8 @@ mapping, or test evidence changes.
 
 - ID: `UCK-2026-11-04-001`
 - Status: `canonical_partial`
-- Created: `2026-11-04T18:53:15Z`
-- Host branch / HEAD: `jonrademacher-complete-lean4-formalizations` / `a464e447a780692755ce5cf8c9f8548200892490`
+- Created: `2026-11-04T18:55:02Z`
+- Host branch / HEAD: `jonrademacher-complete-lean4-formalizations` / `bd3f0703ad3f9a65de9e50a920d08e693c0fb956`
 - Validation receipts:
   - standing_algebra_lean: passed (actions-lean-cbc4211)
   - standing_algebra_coq: passed (actions-coq-cbc4211)
@@ -147,6 +147,7 @@ mapping, or test evidence changes.
   - markdown_links: passed (markdown-links-2026-11-04-001)
   - sha256_manifest: passed (sha256-2026-11-04-001)
   - context_bundle: passed (context-bundle-2026-11-04-001)
+  - continuity_integrity: passed (continuity-workflow-bd3f0703)
 - Open residuals:
   - R-001 (open): No standalone ICG repository is accessible. ICG source currently resides under `ICG/` in Standing Algebra; no separate repo identity can be asserted.
   - R-002 (open): No standalone Unified Compatibility Kernel repository or complete UCK corpus is available. The integration uses the attached build package and prior Copilot continuity notes only.
@@ -156,11 +157,11 @@ mapping, or test evidence changes.
   - R-006 (open): Comprehensive manuscript theorem-ID-to-formalization mapping for Σᴿ/ICG was not found.
   - R-007 (open): ICG README reports selected formalization and source gaps; successful aggregate build does not close these.
   - R-008 (open): Root branch contains pre-existing uncommitted `Collapse_Demonstrations/collapse.lean` change.
-  - R-009 (open): The continuity product is pushed, but the latest hosted workflow must pass after the hash portability correction.
-  - R-010 (open): Checkpoint `UCK-2026-11-04-001` predates the integration commit and must be regenerated to identify the committed product revision and current residuals.
+  - R-009 (closed): Corrective Continuity Integrity run passed on commit `bd3f0703ad3f9a65de9e50a920d08e693c0fb956`; see receipt `continuity-workflow-bd3f0703`.
+  - R-010 (closed): Checkpoint `UCK-2026-11-04-001` regenerated with corrective commit `bd3f0703ad3f9a65de9e50a920d08e693c0fb956` and hosted receipt `continuity-workflow-bd3f0703`.
   - R-011 (open): Current scripts validate artifact integrity and references, not mathematical semantics, source transcription, product efficacy, or scholarly validity.
   - R-012 (open): Copilot customization files are repository artifacts; not all Copilot clients may support every agent/skill/prompt surface. No live Copilot configuration test was performed.
-  - R-013 (open): Initial hosted hash verification failed because `.git` worktree metadata was included and extensionless UTF-8 files were not normalized across operating-system checkouts.
+  - R-013 (closed): `.git` metadata is excluded and NUL-free valid UTF-8 files are normalized across line endings; binary files remain byte-exact.
 
 ## kernel/KERNEL_CURRENT.md
 

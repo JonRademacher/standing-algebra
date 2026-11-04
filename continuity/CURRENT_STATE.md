@@ -2,10 +2,10 @@
 
 **Checkpoint ID:** `UCK-2026-11-04-001` (initialized integration checkpoint)
 **Checkpoint date:** 2026-11-04
-**Product status:** continuity integration is committed and pushed on the
-current branch; its first hosted integrity workflow exposed a cross-platform
-hashing defect. The portable hashing correction and regression archive are in
-progress. The unrelated pre-existing Lean edit remains uncommitted.
+**Product status:** the continuity integration and cross-platform hash
+correction are committed and pushed. The corrected Continuity Integrity
+workflow passed; the checkpoint is being regenerated to include that receipt.
+The unrelated pre-existing Lean edit remains uncommitted.
 
 **Repository revisions:**
 
@@ -13,9 +13,9 @@ progress. The unrelated pre-existing Lean edit remains uncommitted.
   `origin/main`; main-branch Lean, Coq, and Z3 workflows passed).
 - ICG: `cbc4211baf0993d643e55398addabf9588120f3f` for the integrated
   `ICG/` subtree only; a distinct ICG repository was not located.
-- kernel integration host: `a464e447a780692755ce5cf8c9f8548200892490`
-  (`jonrademacher-complete-lean4-formalizations`; local commit and push
-  succeeded, separate PR review is open).
+- kernel integration host: `bd3f0703ad3f9a65de9e50a920d08e693c0fb956`
+  (`jonrademacher-complete-lean4-formalizations`; corrective commit is pushed
+  and its Continuity Integrity workflow passed).
 
 ## Canonical versions
 
@@ -99,11 +99,11 @@ the new GitHub workflow runs.
 - ICG: shares the Standing Algebra source repository's Lean build. Build
   success does not imply complete transcription; see ICG README coverage
   boundary.
-- Integration: 35 standard-library Python tests currently pass after adding
-  regression coverage for portable hashing. The initial hosted continuity
-  workflow failed at hash verification on commit `a464e447`; the failure and
-  correction are archived in `learning/`. A hosted rerun is required before
-  declaring remote validation complete.
+- Integration: 35 standard-library Python tests pass after adding regression
+  coverage for portable hashing. The initial hosted continuity workflow failed
+  at hash verification on commit `a464e447`; the failure and correction are
+  archived in `learning/`. Corrected hosted run 41891627641 passed on
+  `bd3f0703`.
 
 ## Reopening conditions
 
