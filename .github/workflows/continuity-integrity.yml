@@ -1,0 +1,26 @@
+name: Continuity Integrity
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  continuity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run continuity tests
+        run: python -m unittest discover -s Tests -v
+      - name: Verify repository links
+        run: python Scripts/check_links.py
+      - name: Verify corpus and repository hashes
+        run: python Scripts/verify_hashes.py
+      - name: Validate continuity checkpoint
+        run: python Scripts/validate_continuity.py --release --json

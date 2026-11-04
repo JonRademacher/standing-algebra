@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "required_receipts": {
+    "standing_algebra_lean": "actions-lean-cbc4211",
+    "standing_algebra_coq": "actions-coq-cbc4211",
+    "standing_algebra_z3": "actions-z3-cbc4211",
+    "python_tests": "python-tests-2026-11-04-001",
+    "continuity_validation": "continuity-validation-2026-11-04-001",
+    "markdown_links": "markdown-links-2026-11-04-001",
+    "sha256_manifest": "sha256-2026-11-04-001",
+    "context_bundle": "context-bundle-2026-11-04-001"
+  },
+  "receipts": {
+    "actions-lean-cbc4211": {
+      "status": "passed",
+      "command": "GitHub Actions Lean CI workflow",
+      "observed_at": "2026-11-04T17:54:28Z",
+      "source": "https://github.com/JonRademacher/standing-algebra/actions/runs/41881623956",
+      "commit": "cbc4211baf0993d643e55398addabf9588120f3f",
+      "result": "completed: success"
+    },
+    "actions-coq-cbc4211": {
+      "status": "passed",
+      "command": "GitHub Actions Coq CI workflow",
+      "observed_at": "2026-11-04T17:54:28Z",
+      "source": "https://github.com/JonRademacher/standing-algebra/actions/runs/41881623972",
+      "commit": "cbc4211baf0993d643e55398addabf9588120f3f",
+      "result": "completed: success"
+    },
+    "actions-z3-cbc4211": {
+      "status": "passed",
+      "command": "GitHub Actions Standing Algebra Z3 Verification workflow",
+      "observed_at": "2026-11-04T17:54:28Z",
+      "source": "https://github.com/JonRademacher/standing-algebra/actions/runs/41881624138",
+      "commit": "cbc4211baf0993d643e55398addabf9588120f3f",
+      "result": "completed: success"
+    },
+    "python-tests-2026-11-04-001": {
+      "status": "passed",
+      "command": "py -3.14 -m unittest discover -s Tests -v",
+      "observed_at": "2026-11-04T18:44:43Z",
+      "source": "local workspace",
+      "result": "Ran 34 tests; all passed."
+    },
+    "continuity-validation-2026-11-04-001": {
+      "status": "passed",
+      "command": "py -3.14 Scripts/validate_continuity.py --release --json",
+      "observed_at": "2026-11-04T18:39:59Z",
+      "source": "local workspace",
+      "result": "Passed with no errors or warnings after canonical checkpoint initialization."
+    },
+    "markdown-links-2026-11-04-001": {
+      "status": "passed",
+      "command": "py -3.14 Scripts/check_links.py",
+      "observed_at": "2026-11-04T18:39:07Z",
+      "source": "local workspace",
+      "result": "Markdown links: passed."
+    },
+    "sha256-2026-11-04-001": {
+      "status": "passed",
+      "command": "py -3.14 Scripts/verify_hashes.py",
+      "observed_at": "2026-11-04T18:39:07Z",
+      "source": "local workspace",
+      "result": "SHA-256 manifest verified all 1,077 managed files."
+    },
+    "context-bundle-2026-11-04-001": {
+      "status": "passed",
+      "command": "py -3.14 Scripts/build_context_bundle.py",
+      "observed_at": "2026-11-04T18:44:43Z",
+      "source": "local workspace",
+      "result": "Generated continuity/CONTEXT_BUNDLE.md at 23,878 characters against a 24,000-character limit, ending at a complete line."
+    }
+  }
+}

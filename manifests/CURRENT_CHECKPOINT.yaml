@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "checkpoint_id": "UCK-2026-11-04-001",
+  "created_at": "2026-11-04T18:45:02Z",
+  "checkpoint_status": "canonical_partial",
+  "product": {
+    "name": "Repository-backed continuity integration",
+    "version": "0.1.0",
+    "host_branch": "jonrademacher-complete-lean4-formalizations",
+    "host_head_at_generation": "1fb47f313b1ddb147ed1ac3506a06f4f12fa43cf",
+    "worktree_dirty_paths": [
+      "Collapse_Demonstrations/collapse.lean",
+      "README.md",
+      ".github/agents/adversarial-review.agent.md",
+      ".github/agents/continuity-auditor.agent.md",
+      ".github/agents/formalization.agent.md",
+      ".github/agents/kernel.agent.md",
+      ".github/agents/scholarly-review.agent.md",
+      ".github/copilot-instructions.md",
+      ".github/instructions/continuity.instructions.md",
+      ".github/instructions/coq.instructions.md",
+      ".github/instructions/documentation.instructions.md",
+      ".github/instructions/lean.instructions.md",
+      ".github/instructions/mathematics.instructions.md",
+      ".github/instructions/z3.instructions.md",
+      ".github/prompts/diagnose-ci.prompt.md",
+      ".github/prompts/reconstruct-current-state.prompt.md",
+      ".github/prompts/release-checkpoint.prompt.md",
+      ".github/prompts/resume-continuity.prompt.md",
+      ".github/prompts/review-proof.prompt.md",
+      ".github/prompts/validate-and-integrate.prompt.md",
+      ".github/skills/continuity-reconstruction/SKILL.md",
+      ".github/skills/failure-shape-learning/SKILL.md",
+      ".github/skills/formal-proof-validation/SKILL.md",
+      ".github/skills/kernel-review/SKILL.md",
+      ".github/workflows/continuity-integrity.yml",
+      "AGENTS.md",
+      "Scripts/build_context_bundle.py",
+      "Scripts/check_links.py",
+      "Scripts/continuity_lib.py",
+      "Scripts/make_checkpoint.py",
+      "Scripts/validate_continuity.py",
+      "Scripts/verify_hashes.py",
+      "Tests/test_continuity_tools.py",
+      "continuity/ACTIVE_TRAJECTORIES.md",
+      "continuity/CAPABILITY_GYM/Fixtures/template.json",
+      "continuity/CAPABILITY_GYM/README.md",
+      "continuity/CAPABILITY_TRAJECTORY_LEDGER.md",
+      "continuity/CHECKPOINTS/UCK-2026-11-04-001.md",
+      "continuity/CONTEXT_BUNDLE.md",
+      "continuity/CURRENT_STATE.md",
+      "continuity/DECISION_LOG.md",
+      "continuity/DEPENDENCY_GRAPH.md",
+      "continuity/FUTURE_FORENSICS.md",
+      "continuity/MODEL_INADEQUACY_CONSTRUCTOR.md",
+      "continuity/OPEN_RESIDUALS.md",
+      "continuity/PROJECT_GRAPH.md",
+      "continuity/REENTRY_INDEX.md",
+      "continuity/WORKED_EXAMPLES.md",
+      "corpus/README.md",
+      "corpus/icg/Nullstellensatz_Via_SigmaR_and_ICG.txt",
+      "corpus/kernel/GitHub_Copilot_Continuity_Architecture_Notes.txt",
+      "corpus/kernel/GitHub_Copilot_Continuity_and_Self_Improvement_Build_Package.md",
+      "corpus/standing-algebra/Standing_Algebra_SigmaR.txt",
+      "governance/CHANGE_PROTOCOL.md",
+      "governance/COMPLETION_VERIFICATION.md",
+      "governance/CONTRIBUTION_PROVENANCE.md",
+      "governance/NO_REGRESSION.md",
+      "governance/VALIDATION_LADDER.md",
+      "kernel/AUTHORITY_AND_PROVENANCE.md",
+      "kernel/EPISTEMIC_TYPES.md",
+      "kernel/INVARIANTS.md",
+      "kernel/KERNEL_CURRENT.md",
+      "kernel/OPERATING_PROTOCOL.md",
+      "kernel/TERMINOLOGY.md",
+      "learning/DISCOVERY_SHAPES.md",
+      "learning/EXPERIMENT_LOG.md",
+      "learning/FAILURE_SHAPES.md",
+      "learning/NEGATIVE_RESULTS.md",
+      "learning/SHAPE_MODIFICATIONS.md",
+      "manifests/CORPUS_MANIFEST.yaml",
+      "manifests/CURRENT_CHECKPOINT.yaml",
+      "manifests/SHA256SUMS",
+      "manifests/SOURCE_REPOSITORIES.json",
+      "manifests/VALIDATION_RECEIPTS.json"
+    ]
+  },
+  "repositories": {
+    "standing_algebra": {
+      "url": "https://github.com/JonRademacher/standing-algebra",
+      "commit": "cbc4211baf0993d643e55398addabf9588120f3f",
+      "branch": "main",
+      "status": "verified",
+      "path": ".",
+      "identity_note": "Observed origin/main commit; Lean, Coq, and Z3 Actions succeeded at this revision."
+    },
+    "icg": {
+      "url": "https://github.com/JonRademacher/standing-algebra",
+      "commit": "cbc4211baf0993d643e55398addabf9588120f3f",
+      "branch": "main",
+      "status": "integrated_subtree",
+      "path": "ICG/",
+      "identity_note": "ICG is a distinct framework represented as a subtree in this source repository; a separate ICG repository was not found."
+    },
+    "kernel": {
+      "url": "https://github.com/JonRademacher/standing-algebra",
+      "commit": "1fb47f313b1ddb147ed1ac3506a06f4f12fa43cf",
+      "branch": "jonrademacher-complete-lean4-formalizations",
+      "status": "integration_host",
+      "path": [
+        "kernel/",
+        "continuity/",
+        "learning/",
+        "governance/"
+      ],
+      "identity_note": "This repository hosts the additive integration because no standalone UCK repository is available; it is not asserted to be the original UCK repository."
+    }
+  },
+  "corpus_sources": [
+    "SRC-UCK-BUILD-PACKAGE",
+    "SRC-UCK-CONTINUITY-NOTES",
+    "SRC-SIGMAR-MANUSCRIPT",
+    "SRC-ICG-MANUSCRIPT",
+    "SRC-ICG-REPOSITORY",
+    "SRC-UCK-REPOSITORY"
+  ],
+  "validation": {
+    "standing_algebra_lean": {
+      "status": "passed",
+      "receipt_id": "actions-lean-cbc4211"
+    },
+    "standing_algebra_coq": {
+      "status": "passed",
+      "receipt_id": "actions-coq-cbc4211"
+    },
+    "standing_algebra_z3": {
+      "status": "passed",
+      "receipt_id": "actions-z3-cbc4211"
+    },
+    "python_tests": {
+      "status": "passed",
+      "receipt_id": "python-tests-2026-11-04-001"
+    },
+    "continuity_validation": {
+      "status": "passed",
+      "receipt_id": "continuity-validation-2026-11-04-001"
+    },
+    "markdown_links": {
+      "status": "passed",
+      "receipt_id": "markdown-links-2026-11-04-001"
+    },
+    "sha256_manifest": {
+      "status": "passed",
+      "receipt_id": "sha256-2026-11-04-001"
+    },
+    "context_bundle": {
+      "status": "passed",
+      "receipt_id": "context-bundle-2026-11-04-001"
+    }
+  },
+  "residuals": [
+    {
+      "id": "R-001",
+      "status": "open",
+      "description": "No standalone ICG repository is accessible. ICG source currently resides under `ICG/` in Standing Algebra; no separate repo identity can be asserted."
+    },
+    {
+      "id": "R-002",
+      "status": "open",
+      "description": "No standalone Unified Compatibility Kernel repository or complete UCK corpus is available. The integration uses the attached build package and prior Copilot continuity notes only."
+    },
+    {
+      "id": "R-003",
+      "status": "open",
+      "description": "Additional transfer docs listed by the build package are not in the current session's available source files."
+    },
+    {
+      "id": "R-004",
+      "status": "open",
+      "description": "NDGK workspace audit exact HEAD and live CI status could not be directly confirmed; merge-base only was observed. It is not treated as authoritative UCK state."
+    },
+    {
+      "id": "R-005",
+      "status": "open",
+      "description": "I2OS repository has internal author inconsistency (README citation vs paper title page/bib) and no validation/CI receipt in the audit. It is excluded from product authority."
+    },
+    {
+      "id": "R-006",
+      "status": "open",
+      "description": "Comprehensive manuscript theorem-ID-to-formalization mapping for Σᴿ/ICG was not found."
+    },
+    {
+      "id": "R-007",
+      "status": "open",
+      "description": "ICG README reports selected formalization and source gaps; successful aggregate build does not close these."
+    },
+    {
+      "id": "R-008",
+      "status": "open",
+      "description": "Root branch contains pre-existing uncommitted `Collapse_Demonstrations/collapse.lean` change."
+    },
+    {
+      "id": "R-009",
+      "status": "open",
+      "description": "Continuity product GitHub workflow cannot have a passing remote receipt until this branch is pushed and Actions run."
+    },
+    {
+      "id": "R-010",
+      "status": "open",
+      "description": "The current checkpoint will describe the validated initialized worktree; the integration changes are not yet committed or present in a remote branch."
+    },
+    {
+      "id": "R-011",
+      "status": "open",
+      "description": "Current scripts validate artifact integrity and references, not mathematical semantics, source transcription, product efficacy, or scholarly validity."
+    },
+    {
+      "id": "R-012",
+      "status": "open",
+      "description": "Copilot customization files are repository artifacts; not all Copilot clients may support every agent/skill/prompt surface. No live Copilot configuration test was performed."
+    }
+  ],
+  "supersedes": [],
+  "rollback": {
+    "instructions": "Revert only continuity integration paths in the completion report; preserve unrelated pre-existing user edits.",
+    "prior_checkpoint": "Standing Algebra source baseline at cbc4211baf0993d643e55398addabf9588120f3f"
+  },
+  "hash_scope": "manifests/SHA256SUMS covers managed files except itself, this checkpoint manifest, and the known pre-existing user edit Collapse_Demonstrations/collapse.lean."
+}

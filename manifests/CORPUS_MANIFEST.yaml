@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "hash_algorithm": "sha256",
+  "sources": [
+    {
+      "id": "SRC-UCK-BUILD-PACKAGE",
+      "path": "corpus/kernel/GitHub_Copilot_Continuity_and_Self_Improvement_Build_Package.md",
+      "title": "GitHub Copilot Continuity and Self-Improvement Build Package",
+      "kind": "user_product_specification",
+      "author": "user-supplied",
+      "provenance": "Conversation attachment received 2026-11-04; treated as authoritative acceptance contract by explicit user instruction.",
+      "status": "authoritative_product_specification",
+      "sha256": "a2d380fdd95bfbaf50445aa9c8ee29c9f35dfb282e911aed758faa411cd9be7b"
+    },
+    {
+      "id": "SRC-UCK-CONTINUITY-NOTES",
+      "path": "corpus/kernel/GitHub_Copilot_Continuity_Architecture_Notes.txt",
+      "title": "Copilot continuity and kernel architecture notes",
+      "kind": "user_supplied_continuity_material",
+      "author": "user-supplied",
+      "provenance": "Earlier 684-line conversation attachment; captured as an exact text snapshot.",
+      "status": "candidate_methodology_source",
+      "sha256": "d249cd1c2d4ffde6f8cd78f7beb35d1ca6080f526ff4a491fb79cefbecc04fa5"
+    },
+    {
+      "id": "SRC-SIGMAR-MANUSCRIPT",
+      "path": "corpus/standing-algebra/Standing_Algebra_SigmaR.txt",
+      "title": "Standing Algebra (Σᴿ): A First-Order Formal System for Autonomy and Non-Domination in Multi-Agent Systems v6.6",
+      "kind": "user_supplied_manuscript_snapshot",
+      "author": "Jonathan Rademacher",
+      "provenance": "Session file snapshot supplied in the conversation workspace; repository attribution and citation are preserved separately.",
+      "status": "source_claim_snapshot",
+      "sha256": "f823b4785efe4255971c39d7c341020ccc99ea2166d782d37f4976073fb145cf"
+    },
+    {
+      "id": "SRC-ICG-MANUSCRIPT",
+      "path": "corpus/icg/Nullstellensatz_Via_SigmaR_and_ICG.txt",
+      "title": "Interoperability Constraint Geometry: A Mathematical Treatise on the Nullstellensatz and the Geometry of Constraint Structure",
+      "kind": "user_supplied_manuscript_snapshot",
+      "author": "Jonathan Rademacher (as identified by source context; text itself includes author-supplied attribution claims)",
+      "provenance": "Session file snapshot supplied in the conversation workspace; source is preserved as received, not independently validated.",
+      "status": "source_claim_snapshot",
+      "sha256": "09d623194c2fb1d3db4d606c86e3bab17ab797dc6ada7a0c168b3725e0d1bf73"
+    },
+    {
+      "id": "SRC-ICG-REPOSITORY",
+      "path": null,
+      "title": "Standalone Interoperability Constraint Geometry repository",
+      "kind": "repository_source",
+      "author": "unknown",
+      "provenance": "Not found in configured repositories or accessible GitHub user repository list; current ICG/ subtree is in standing-algebra.",
+      "status": "unavailable",
+      "sha256": null
+    },
+    {
+      "id": "SRC-UCK-REPOSITORY",
+      "path": null,
+      "title": "Unified Compatibility Kernel repository and complete primary corpus",
+      "kind": "repository_source",
+      "author": "unknown",
+      "provenance": "No standalone UCK repository or full transfer corpus was found in the accessible configured projects/session files.",
+      "status": "unavailable",
+      "sha256": null
+    }
+  ]
+}

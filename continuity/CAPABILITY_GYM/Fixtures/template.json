@@ -1,0 +1,22 @@
+{
+  "fixture_id": "GYM-000",
+  "capability": "Replace with a bounded operator under test",
+  "provenance": "Synthetic fixture; no production data",
+  "input": {
+    "description": "Small, deterministic input"
+  },
+  "expected": {
+    "observable_result": "Exact expected result or preserved alternatives"
+  },
+  "obligations": [
+    "State the proof, build, or validation obligation"
+  ],
+  "regression_cases": [
+    "State an existing behavior that must remain unchanged"
+  ],
+  "adversarial_cases": [
+    "State a counterexample or malformed input"
+  ],
+  "write_boundary": "Fixture directory only; canonical state is read-only",
+  "disposition": "candidate"
+}
