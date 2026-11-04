@@ -1,0 +1,297 @@
+# PvNP in Sigma R and ICG
+
+- Original attachment: `61f30354-954f-4f4c-b9ff-5c6c6bfb97c1-PvNP in Sigma R and ICG.docx`
+- Original SHA-256: `32d3d3cf3bafa2a1828a066667ffaaa1a00ab1f62d15b8785880c0c8fd9cf6e3`
+- Extraction: paragraph text in document order from `word/document.xml`; visual layout, images, and non-text objects may not be represented. The retained DOCX is authoritative.
+
+23. Irreducible Global Structure and the Elimination of Local Decision Shortcuts
+
+23.1 Objective
+
+We construct a class of relational systems in which:
+
+Independent elements induce a globally unique interaction structure,
+
+No symmetry or relabeling preserves that structure, and
+
+Determining any global property of the system requires engagement with the full relational structure.
+
+This section establishes that, under these conditions, no local decision shortcut—either existential (witness-based) or counterexample-based—can determine correctness. Consequently, any valid decision procedure must incur computational cost proportional to the full structure.
+
+23.2 Base Set and Independence
+
+Let
+
+be a set of independent elements.
+
+Definition 23.2.1 (Independence)
+
+Elements of are independent if no element can be derived from or inferred using any subset .
+
+23.3 Arbitrary Relational Structure
+
+Define a mapping:
+
+where:
+
+is assigned arbitrarily,
+
+No algebraic, symmetric, or compressible rule governs ,
+
+All pairwise relationships are independent.
+
+Definition 23.3.1 (Arbitrary Interaction Mapping)
+
+A mapping is arbitrary if no polynomial-size function exists such that:
+
+for all pairs, unless explicitly encodes all pairwise mappings.
+
+23.4 Structural Fingerprinting
+
+To eliminate symmetry, define for each element:
+
+Constraint 23.4.1 (Uniqueness of Signatures)
+
+Lemma 23.4.2 (No Relabeling Symmetry)
+
+If all element signatures are unique, then no non-trivial permutation of satisfies:
+
+Proof
+
+Any permutation would induce:
+
+contradicting uniqueness. ∎
+
+23.5 Global Identifiability
+
+Definition 23.5.1 (Global Identifiability)
+
+A relational system is globally identifiable if:
+
+Lemma 23.5.2 (Injectivity of Structure)
+
+Under Constraints 23.3.1 and 23.4.1, the mapping from elements to relational structure is injective.
+
+Consequence
+
+No alternative assignment or relabeling produces the same relational structure.
+
+23.6 Elimination of Local Decision Shortcuts
+
+We now analyze decision problems over this structure.
+
+Definition 23.6.1 (Local Shortcut)
+
+A decision shortcut is local if correctness can be determined by examining a strict subset of the relational structure.
+
+Two classes of shortcuts are typically available:
+
+Existential shortcut: existence of a single satisfying instance
+
+Counterexample shortcut: existence of a single contradiction
+
+Lemma 23.6.2 (No Existential Shortcut)
+
+Any satisfying representation must encode all constraints, since constraints are independent and arbitrary.
+
+Lemma 23.6.3 (No Counterexample Shortcut)
+
+No single relational inconsistency suffices to determine incorrectness, since correctness depends on consistency of the entire structure and no local inconsistency uniquely determines global invalidity.
+
+Result 23.6.4 (No Local Decision)
+
+For decision problems defined over , neither YES nor NO can be determined from any strict subset of the structure.
+
+23.7 Full Structural Dependence
+
+Theorem 23.7.1 (Global Dependence of Decision)
+
+Let be a decision problem defined over a globally identifiable arbitrary relational structure . Then:
+
+Proof
+
+Assume a decision can be made without full structure. Then:
+
+Either a subset suffices → contradicts Lemma 23.6.4
+
+Or a compressed representation suffices → contradicts Definition 23.3.1
+
+Thus full structure is required. ∎
+
+23.8 Computational Consequence
+
+Let:
+
+or more generally:
+
+for higher-order interactions.
+
+Corollary 23.8.1 (Step Set Lower Bound)
+
+Any correct algorithm must incur:
+
+steps, since each interaction contributes to correctness and no subset suffices.
+
+23.9 Final Statement
+
+We have constructed a class of relational systems where:
+
+All distinctions are independent,
+
+All interactions are arbitrary and non-compressible,
+
+The structure is globally identifiable, and
+
+No local shortcut exists for decision.
+
+Therefore:
+
+Any decision over such a system requires full engagement with its relational structure, and the computational cost is bounded below by the size of that structure.
+
+24. Encoding Irreducible Global Structure into SAT
+
+24.1 Objective
+
+We encode the globally identifiable, non-compressible relational system constructed in Section 23 into a Boolean satisfiability (SAT) instance. The goal is to determine whether the absence of local decision shortcuts and the necessity of full structural engagement are preserved under this encoding.
+
+Specifically, we test whether the existential shortcut characteristic of SAT persists when the underlying structure requires global realization.
+
+24.2 Relational System Recap
+
+Let:
+
+with:
+
+Independent elements (Definition 23.2.1),
+
+Arbitrary pairwise mapping:
+
+Unique structural fingerprints (Constraint 23.4.1),
+
+Global identifiability (Definition 23.5.1).
+
+No symmetry, compression, or local ambiguity exists.
+
+24.3 Boolean Encoding
+
+We introduce Boolean variables to represent the relational structure.
+
+Definition 24.3.1 (Variable Encoding)
+
+For each pair , define a Boolean vector:
+
+encoding the value:
+
+where .
+
+24.4 Constraint Encoding
+
+Each relational assignment is encoded as a constraint:
+
+Global Constraint Set
+
+24.5 Signature Constraints
+
+To preserve node uniqueness:
+
+This is encoded as:
+
+for all .
+
+24.6 Global Identifiability Constraint
+
+To enforce injectivity:
+
+we prohibit any non-trivial permutation such that:
+
+This is encoded by adding, for every non-identity permutation :
+
+24.7 Resulting SAT Instance
+
+The full SAT formula is:
+
+24.8 Interpretation
+
+A satisfying assignment to corresponds to:
+
+A complete realization of all pairwise relationships,
+
+A globally identifiable structure,
+
+No ambiguity under relabeling.
+
+24.9 Analysis of SAT Behavior
+
+Lemma 24.9.1 (Witness Structure)
+
+Any satisfying assignment to encodes the full relational structure .
+
+Proof
+
+Each clause enforces a specific value of . Thus any satisfying assignment must assign all pairwise relationships correctly. ∎
+
+Lemma 24.9.2 (No Partial Witness)
+
+No assignment that omits or compresses any subset of variables can satisfy .
+
+Consequence
+
+The existential witness for SAT is not local:
+
+It must include all pairwise assignments.
+
+24.10 Elimination of Existential Shortcut
+
+Standard SAT allows:
+
+Here:
+
+A “witness” is not a single assignment over variables,
+
+It is the full assignment of all variables.
+
+Thus:
+
+Existence of a satisfying assignment requires full structural realization.
+
+24.11 Elimination of Counterexample Shortcut
+
+To show is unsatisfiable:
+
+One must violate at least one global constraint,
+
+However, due to global identifiability constraints, violations are not locally isolatable without evaluating interactions across the structure.
+
+Thus:
+
+Unsatisfiability also requires global reasoning.
+
+24.12 Computational Consequence
+
+Number of variables:
+
+Number of constraints:
+
+(anti-symmetry constraints dominate)
+
+Corollary 24.12.1
+
+Any satisfying assignment requires:
+
+information to represent, and potentially super-polynomial effort to verify under anti-symmetry constraints.
+
+24.13 Final Statement
+
+We have encoded a relational system into SAT such that:
+
+Every satisfying assignment corresponds to full structural realization,
+
+No local witness suffices,
+
+No counterexample shortcut exists, and
+
+Both satisfiability and unsatisfiability require global engagement.
+
+Therefore:
+
+There exist SAT instances in which the existential shortcut is eliminated, and solving the instance requires engagement with the full relational structure defined by independent constraints.

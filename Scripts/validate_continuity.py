@@ -112,20 +112,26 @@ def validate_corpus(root: Path) -> list[str]:
             errors.append(f"{source_id}: provenance is missing")
         if not source.get("status"):
             errors.append(f"{source_id}: status is missing")
-        if source.get("path"):
-            relative = Path(source["path"])
+        if not source.get("path") and source.get("status") not in {"unavailable", "not_supplied"}:
+            errors.append(f"{source_id}: non-unavailable source requires a path")
+        for path_field, hash_field in (("path", "sha256"), ("text_path", "text_sha256")):
+            relative_path = source.get(path_field)
+            expected_hash = source.get(hash_field)
+            if expected_hash and not relative_path:
+                errors.append(f"{source_id}: {hash_field} requires {path_field}")
+            if not relative_path:
+                continue
+            relative = Path(relative_path)
             if relative.is_absolute() or ".." in relative.parts:
-                errors.append(f"{source_id}: unsafe corpus path: {source['path']}")
+                errors.append(f"{source_id}: unsafe corpus path: {relative_path}")
                 continue
             target = root / relative
             if not target.is_file():
-                errors.append(f"{source_id}: corpus path does not exist: {source['path']}")
-            if source.get("sha256") and target.is_file():
+                errors.append(f"{source_id}: corpus path does not exist: {relative_path}")
+            elif expected_hash:
                 from continuity_lib import sha256_file
-                if sha256_file(target) != source["sha256"]:
-                    errors.append(f"{source_id}: corpus hash mismatch")
-        elif source.get("status") not in {"unavailable", "not_supplied"}:
-            errors.append(f"{source_id}: non-unavailable source requires a path")
+                if sha256_file(target) != expected_hash:
+                    errors.append(f"{source_id}: {hash_field} mismatch")
     return errors
 
 

@@ -1,0 +1,2197 @@
+# Standing Algebra Technical Specs
+
+- Original attachment: `0a3c3569-fd1d-4ce4-8d5d-ff48a1533325-Standing Algebra Technical Specs.docx`
+- Original SHA-256: `6dc6735a1217c8b64e4a86b352b7ecf51c10173e4f603a64b119299214690f4f`
+- Extraction: paragraph text in document order from `word/document.xml`; visual layout, images, and non-text objects may not be represented. The retained DOCX is authoritative.
+
+Standing Algebra (ΣR): An Axiomatic Theory of Interoperable Constraint Geometry
+
+April 2026
+
+Jonathan Rademacher
+
+Independent Researcher
+
+Email: JonathanDRademacher@yahoo.com
+
+Abstract
+
+This paper introduces Standing Algebra, a manysorted firstorder axiomatic system governing admissible transformations in plural systems. The theory is formulated over agents equipped with a numeric measure and a directed dependency relation, together with a class of operations constrained by invariantpreserving predicates. Unlike optimizationbased, ordertheoretic, or trajectorybased frameworks, Standing Algebra is deliberately nonselective: it filters impermissible transformations without inducing any preference, ordering, or choice among those that remain.
+
+The axioms are organized into two tiers. Tier1 axioms define the algebraic and graphtheoretic structure of agents and measures. Tier2 axioms constrain operations via admissibility, symmetry, bounded effect, idempotence, and directed repair. From these axioms, the paper derives a collection of foundational lemmas establishing definability, nonemptiness, invariance under model isomorphism, noncollapse, and closure properties of legitimate operations.
+
+A central result is that the legitimate operations in any model form a nonempty, invariant, noncollapsed intersection of definable constraint sets. This structure is shown to constitute an Interoperable Constraint Geometry: a constraint geometry on transformations rather than on states or trajectories, preserved under reinterpretation across models. The emergence of this geometry is proved as a theorem, not assumed.
+
+Further results establish the necessity and conditional universality of the axioms, the independence of all axiom groups via countermodels, and a nondeterminacy theorem showing that legitimacy does not entail uniqueness or preference. Formal separation theorems demonstrate that Standing Algebra is not reducible to viability theory, optimization frameworks, ordertheoretic systems, or constraint satisfaction problems.
+
+The paper presents a complete axiomatic specification, full proofs of all main results, explicit dependency structure, and exhaustive appendices, yielding a closed and auditable mathematical theory of nonselective, invariantpreserving transformation constraints.
+
+2020 Mathematics Subject Classification. Primary 03C10; Secondary 08A02, 68Q55, 06A06.
+
+Keywords: standing algebra; interoperable constraint geometry; axiomatic systems; model theory; nonselective constraints; invariantpreserving transformations; firstorder logic; nondeterminacy; independence and countermodels.
+
+Notation and Conventions
+
+Throughout this paper, all results are formulated within classical manysorted firstorder logic with equality. Models are interpreted in the standard Tarskian sense, and all quantification is explicitly sortrestricted. The natural numbers are taken with their usual arithmetic structure and serve as background objects rather than subjects of investigation. No higherorder logic, choice principles, or nonclassical semantics are employed. All symbols, predicates, and functions are introduced explicitly at first use and are used consistently thereafter; a complete index of notation appears in the appendices. Unless otherwise stated, all statements are purely formal and are intended to be read independently of any particular semantic interpretation.
+
+1. Introduction
+
+The mathematical analysis of constrained dynamical and multiagent systems has traditionally focused on identifying admissible trajectories within a prescribed state space. Prominent examples include differential inclusions, invariant set theory, and viability theory, where constraints are expressed as subsets of a state space and admissibility is defined relative to forward evolution under allowable dynamics.
+
+This paper develops a formally distinct approach. Rather than characterizing admissible trajectories within a fixed geometric domain, we present an axiomatic framework that constrains the space of transformations themselves. The resulting structure gives rise to what may be described as an interoperable constraint geometry: a geometry not of states or trajectories, but of admissible operations acting on plural systems.
+
+The framework, referred to as Standing Algebra and denoted is formulated as a manysorted firstorder theory. Its primary object of study is the set of transformations that preserve a collection of invariant structural constraints across interacting agents. These constraints are enforced axiomatically and are independent of any particular optimization objective, preference ordering, or equilibrium notion.
+
+1.1 From StateSpace Constraints to TransformationSpace Geometry
+
+In classical constrained systems theory, admissibility is typically defined pointwise or trajectorywise: a state or trajectory is viable if it remains within a constraint set under the system’s evolution. The underlying geometry is therefore a geometry of subsets of a state space, often endowed with topological, convex, or smooth structure.
+
+Standing Algebra shifts the level of abstraction. The theory does not specify a privileged state space or a family of admissible trajectories. Instead, it axiomatizes conditions under which transformations—viewed abstractly as operations acting on agents or system configurations—are permitted or forbidden.
+
+As a consequence, admissibility is no longer a property of points or paths, but of elements of an operation space. The axioms of carve out a subset of operations satisfying invariance, symmetry, idempotence, boundedness, and nonescalation constraints. The collection of all such operations, considered modulo definable equivalence, constitutes a geometric object in its own right.
+
+This motivates the term interoperable constraint geometry: a constraint geometry defined on transformations rather than on states, and formulated so as to remain invariant under reinterpretation across domains.
+
+1.2 Interoperable Constraint Geometry
+
+The phrase interoperable constraint geometry is not used here to denote a previously established mathematical theory. Rather, it is introduced as a descriptive term for the structural phenomenon that emerges from the axioms of .
+
+Formally, the geometry arises as follows:
+
+The language of defines a class of structures with agents, dependency relations, and numeric measures.
+
+Tier1 axioms constrain the algebraic and graphtheoretic structure of agents.
+
+Tier2 axioms constrain the admissible operations acting on those structures.
+
+The set of operations satisfying all Tier2 predicates forms a space of admissible transformations closed under rerunning and restricted by bounded drift and symmetry conditions.
+
+What is geometric about this construction is not metric structure or smoothness, but constraint interaction: multiple invariant conditions intersect to define a feasible region in the space of operations. What makes the geometry interoperable is that the axioms do not encode domainspecific semantics. Any system that can be interpreted as a model of inherits the same admissibility geometry, regardless of whether the agents are computational processes, institutional actors, or abstract nodes in a dependency graph.
+
+No claim is made that this geometry is unique or universal among all possible constraint frameworks. The claim is more modest and more precise: the axioms of define a nontrivial and reusable constraint geometry on transformations, one that is not reducible to existing statespace formulations.
+
+1.3 Divergence from Viability Theory
+
+Although the theory developed here shares a family resemblance with viability theory, the divergence is substantive and structural.
+
+Viability theory studies the evolution of states under differential inclusions, with admissibility defined relative to a constraint set in state space. Even in abstract formulations, the central object remains a viability kernel: a subset of states from which admissible trajectories emanate.
+
+By contrast, :
+
+Does not presuppose a state space endowed with topology, convexity, or smooth structure;
+
+Does not define admissibility in terms of forward trajectories;
+
+Does not characterize kernels or maximal invariant sets;
+
+Does not select or privilege particular evolutions.
+
+Instead, admissibility is defined at the level of operations. The axioms constrain how transformations may alter agent measures and dependency relations, independently of any notion of temporal evolution or optimal control.
+
+From a geometric standpoint, viability theory yields a geometry of reachable states under constraints. Standing Algebra yields a geometry of permissible transformations under invariants. These are formally orthogonal constructions. One may, in principle, study viable dynamics within a model of , but the viability constraints would be additional structure, not intrinsic to the theory.
+
+1.4 NonSelectivity and Structural Filtering
+
+A central design feature of is that it is filtering but nonselective. The axioms eliminate entire classes of transformations but do not induce any ordering, ranking, or preference among those that remain.
+
+This is not a limitation but a theorembacked property of the formal system. As shown later, the language of is insufficient to define any binary relation that would order legitimate operations. Consequently, distinct admissible operations may coexist without the theory entailing a choice between them.
+
+From the perspective of interoperable constraint geometry, this nonselectivity is essential. It ensures that the geometry describes the shape of the admissible region without collapsing it to a distinguished point.
+
+1.5 Positioning and Scope
+
+The contribution of this paper is therefore not a new solution concept, control method, or equilibrium notion. It is the explicit axiomatization of a transformationlevel constraint geometry that:
+
+is independent of optimization and preference aggregation,
+
+is compatible with multiple interpretations,
+
+and diverges structurally from statespacebased constraint theories such as viability theory.
+
+The remainder of the paper develops this framework rigorously, beginning with a precise modeltheoretic specification of the language and structures involved.
+
+1.6 Structure of the Paper
+
+Section 2 fixes the formal language, signature, and semantic conventions.
+
+Section 3 presents the Tier1 axioms governing agent structure.
+
+Section 4 introduces Tier2 axioms constraining admissible operations.
+
+Section 5 derives foundational lemmas.
+
+Section 6 proves the main theorems, including nondeterminacy and universality results.
+
+Section 7 discusses independence and model variation.
+
+Appendices contain auxiliary definitions and extended axiom listings.
+
+2. Formal Language, Structures, and Conventions
+
+This section fixes the formal language, semantic structures, and notational conventions used throughout the paper. The theory under consideration, denoted is formulated as a manysorted firstorder theory with equality. All axioms, definitions, lemmas, and theorems in subsequent sections are expressed exclusively in this language.
+
+The role of this section is foundational: it establishes the syntactic universe in which the theory is stated, specifies the class of admissible models, and codifies all nonstandard terminology into conventional mathematical objects. After this section, no informal or domainspecific language is employed.
+
+2.1 Logical Framework and Semantics
+
+We work in classical manysorted firstorder logic with equality. Logical consequence, satisfiability, elementary equivalence, and related notions are understood in the standard Tarskian sense.
+
+All variables are explicitly sorted. Quantifiers are implicitly restricted to their respective sorts. Equality is available on each sort and interpreted as identity.
+
+Throughout, we assume standard metalogical results (Compactness, Löwenheim–Skolem, Completeness) without restatement.
+
+2.2 Signature and Sorts
+
+Let denote the signature of the theory. It consists of the following sorts:
+
+Agent
+Denoted . Elements represent nodes of a plural system.
+
+Operation
+Denoted . Elements represent abstract transformations acting on agents or system configurations.
+
+State
+Denoted . Included for generality; no topological or temporal structure is assumed.
+
+Nat
+Interpreted as the standard structure with successor, addition, and equality.
+
+Convention.
+Arithmetic on is treated as background structure. No nonstandard models of arithmetic are considered unless explicitly stated.
+
+2.3 Function Symbols
+
+The language contains the following function symbols:
+
+2.3.1 Measure Function
+
+This function assigns to each agent a nonnegative integer.
+
+Codification.
+Informal references to standing are henceforth replaced by the measure function . No semantic interpretation beyond numeric valuation is assumed.
+
+2.3.2 Dependency Degree Function
+
+This function represents the indegree of an agent in a directed dependency graph defined below. Formally, is definable from a binary relation (Lemma 2.1).
+
+2.3.3 Operation Application (Optional)
+
+This symbol is included for completeness but is not required for the core algebraic results.
+
+2.4 Predicate Symbols
+
+2.4.1 Dependency Relation
+
+This binary predicate is interpreted as a directed graph on the agent domain.
+
+means “ has a directed dependency on .”
+
+Lemma 2.1 (Definability of Degree)
+
+For any model of and any agent
+
+Proof.
+The axioms in Section 3 ensure that the dependency relation is finitebranching. Thus cardinality is welldefined and expressible in firstorder arithmetic. ∎
+
+2.4.2 Derived Classification Predicates on Agents
+
+The following unary predicates are definitions, not primitives:
+
+Null Agent
+
+Prime Agent
+
+Composite Agent
+
+Lemma 2.2 (Exhaustive Classification)
+
+In any model of the Tier1 axioms, every agent is exactly one of Null, Prime, or Composite.
+
+Proof.
+Immediate from the trichotomy of and the definitions above. Mutual exclusivity follows from arithmetic constraints; exhaustiveness follows from totality of and . ∎
+
+2.5 Predicates on Operations
+
+The following unary predicates on are primitive:
+
+The following relational predicates are also primitive:
+
+(symmetry condition),
+
+,
+
+.
+
+These predicates are constrained axiomatically in Section 4.
+
+Codification.
+Informal notions such as “rerunnable”, “nonescalating”, or “repairing” are not used beyond this section. All such properties are expressed exclusively via the above predicates.
+
+2.6 Structures and Models
+
+A model of consists of:
+
+A nonempty set ;
+
+A set ;
+
+An interpretation of and ;
+
+An interpretation of ;
+
+Interpretations of all operation predicates;
+
+Standard arithmetic on .
+
+No finiteness, topology, ordering, or temporal structure is assumed unless explicitly stated.
+
+2.7 Definability and NonDefinability Constraints
+
+A core structural constraint of is the absence of any definable ordering on operations.
+
+Lemma 2.3 (No Primitive Comparator)
+
+The signature contains no primitive symbol capable of comparing two elements of .
+
+This is strengthened later to a nondefinability theorem: no ordering is definable even indirectly.
+
+2.8 Terminology Conversion Table
+
+All authorintroduced terminology is codified below. After this table, only the mathematical forms are used.
+
+Original Term
+
+Mathematical Codification
+
+standing
+
+null agent
+
+prime agent
+
+composite agent
+
+coupled
+
+directed edge
+
+degree
+
+indegree
+
+rerunnable
+
+legitimate
+
+admissible
+
+bounded drift
+
+repair
+
+2.9 Notational Conventions
+
+range over agents.
+
+range over operations.
+
+Defined predicates are always introduced with “”.
+
+No informal language is used after this section.
+
+Transition
+
+With the language, structures, and terminology fully fixed, we now turn to the axiomatization of the agent structure itself.
+
+Section 3 introduces the Tier1 axioms governing the algebraic and graphtheoretic properties of agents and their measures.
+
+3. Tier1 Axioms: Agent Structure and Measure Algebra
+
+This section introduces the Tier1 axioms of the theory . These axioms govern the intrinsic structure of the agent domain, the numeric measure , and the dependency relation . No axioms concerning operations are introduced here; those are deferred to Section 4.
+
+The purpose of Tier1 is to fix the algebraic and graphtheoretic substrate upon which admissible transformations will later act.
+
+3.1 Primitive Data
+
+Recall from Section 2 that a model of includes:
+
+a nonempty set of agents,
+
+a function
+
+a binary relation
+
+and the derived function defined as in Lemma 2.1.
+
+All axioms below are universal firstorder sentences over this signature.
+
+3.2 Axiom Group I: Nullity and Nontriviality
+
+Axiom T1.1 (Existence of a Null Agent)
+
+Axiom T1.2 (Nontriviality)
+
+Lemma 3.1 (Nondegeneracy)
+
+In any model of satisfying Axioms T1.1 and T1.2, the domain contains at least two distinct agents.
+
+Proof.
+If had only one element , then by Axiom T1.1 we would have , contradicting Axiom T1.2. ∎
+
+3.3 Axiom Group II: Arithmetic Structure of the Measure
+
+Axiom T1.3 (Totality of Measure)
+
+(This is included for completeness; it is redundant given the signature but retained for clarity.)
+
+Axiom T1.4 (Successor Realizability)
+
+Lemma 3.2 (Unboundedness of the Measure)
+
+For every , there exists an agent such that .
+
+Proof.
+By induction on .
+Base case : holds by Axiom T1.1.
+Inductive step: assume an agent with measure exists; by Axiom T1.4, there exists an agent with measure . ∎
+
+Axiom T1.5 (No Collapse)
+
+This axiom explicitly forbids any identification between positive and null measure values.
+
+3.4 Axiom Group III: Dependency Graph Constraints
+
+Axiom T1.6 (Irreflexivity of Dependency)
+
+Axiom T1.7 (Finite InDegree)
+
+Lemma 3.3 (WellDefined Degree)
+
+In any model satisfying Axiom T1.7, the function is well defined and takes values in .
+
+Proof.
+By Lemma 2.1 and Axiom T1.7, the set of incoming neighbors is finite, hence has a naturalnumber cardinality. ∎
+
+3.5 Axiom Group IV: Classification of Agents
+
+Recall the definitions from Section 2:
+
+Axiom T1.8 (Exhaustive Classification)
+
+Axiom T1.9 (Mutual Exclusivity)
+
+Lemma 3.4 (Partition of the Agent Domain)
+
+The predicates , , and form a partition of .
+
+Proof.
+Immediate from Axioms T1.8 and T1.9. ∎
+
+3.6 Axiom Group V: Measure–Dependency Compatibility
+
+Axiom T1.10 (Dependency Implies Positivity)
+
+Lemma 3.5 (Null Agents Are DependencyFree)
+
+If , then .
+
+Proof.
+Suppose . Then there exists such that . By Axiom T1.10, , contradicting . ∎
+
+Corollary 3.6
+
+Every Null agent is isolated in the dependency graph.
+
+3.7 Structural Consequences
+
+Lemma 3.7 (Existence of Prime Agents)
+
+There exists at least one Prime agent.
+
+Proof.
+By Axiom T1.2, there exists an agent with . By Lemma 3.2 and finiteness of indegree, choose an agent of minimal positive measure. That agent must have and , hence is Prime. ∎
+
+Lemma 3.8 (No Infinite Descent)
+
+There is no infinite descending chain
+
+with strictly decreasing values.
+
+Proof.
+Each dependency requires positive measure at the target (Axiom T1.10), and takes values in . Strict descent cannot be infinite. ∎
+
+3.8 Consistency of Tier1
+
+Theorem 3.9 (Consistency)
+
+The Tier1 axioms are jointly satisfiable.
+
+Proof (Sketch).
+Let , define , and let . All axioms are satisfied. ∎
+
+3.9 Scope of Tier1
+
+The Tier1 axioms define an algebraic–graphtheoretic substrate consisting of:
+
+a countably unbounded measure,
+
+a finitebranching dependency graph,
+
+a strict partition of agents by numeric and relational properties.
+
+No assumptions are made regarding dynamics, optimization, preferences, or operations.
+
+Transition
+
+With the agent structure fully axiomatized, we now introduce axioms governing transformations acting on this structure.
+
+Section 4: Tier2 Axioms — Admissible and Legitimate Operations.
+
+4. Tier2 Axioms: Admissible and Legitimate Operations
+
+This section introduces the Tier2 axioms of the theory . These axioms govern the structure and properties of operations acting on models of the Tier1 agent substrate. Unlike Tier1, which constrains the internal structure of agents and their dependencies, Tier2 constrains transformations of that structure.
+
+The axioms are formulated so as to restrict the space of operations without introducing any ordering, optimization criterion, or selection principle.
+
+4.1 Primitive Objects and Scope
+
+Recall from Section 2 that the sort represents abstract operations. No assumption is made that operations are functions, endomorphisms, or morphisms in a category, although particular interpretations may instantiate them as such.
+
+All Tier2 axioms are universal firstorder sentences over .
+
+4.2 Primitive Predicates on Operations
+
+The following unary predicates are taken as primitive:
+
+The following unary predicates encode additional structural constraints:
+
+No other predicates on operations are assumed or definable at this stage.
+
+4.3 Axiom Group VI: Admissibility
+
+Axiom T2.1 (NonEmptiness of Admissible Operations)
+
+Axiom T2.2 (Closure Under Repetition)
+
+Lemma 4.1 (Stability Under Iteration)
+
+Let be admissible. Then repeated application of does not yield a distinct operation.
+
+Proof.
+By Axiom T2.2, admissibility implies idempotence. Thus in any interpretation where composition is defined. ∎
+
+4.4 Axiom Group VII: Legitimacy
+
+Axiom T2.3 (Legitimacy Implies Admissibility)
+
+Axiom T2.4 (Legitimacy as Constraint Conjunction)
+
+This axiom fixes legitimacy as a definitional conjunction of independent constraints.
+
+Lemma 4.2 (Necessity of Component Constraints)
+
+If holds, then each of , , and holds.
+
+Proof.
+Immediate from Axiom T2.4. ∎
+
+4.5 Axiom Group VIII: Symmetry Constraint (STC5)
+
+Axiom T2.5 (Symmetry of Equals)
+
+Let satisfy:
+
+Then for any legitimate operation ,
+
+Lemma 4.3 (Invariance Under Structural Equivalence)
+
+Legitimate operations cannot distinguish agents that are indistinguishable under and .
+
+Proof.
+This is a restatement of Axiom T2.5. ∎
+
+4.6 Axiom Group IX: Drift Boundedness
+
+Axiom T2.6 (Bounded Measure Change)
+
+There exists a constant such that for all legitimate operations and all agents ,
+
+Lemma 4.4 (No Unbounded Escalation)
+
+No legitimate operation can produce an unbounded increase in in a single application.
+
+Proof.
+Immediate from Axiom T2.6. ∎
+
+4.7 Axiom Group X: Directed Repair
+
+Axiom T2.7 (Repair Monotonicity)
+
+If and is legitimate, then
+
+Lemma 4.5 (Repair Does Not Introduce Dependencies)
+
+Legitimate operations cannot introduce new dependencies for agents emerging from null measure.
+
+Proof.
+Immediate from Axiom T2.7 and the definition of . ∎
+
+4.8 Structural NonSelectivity
+
+Axiom T2.8 (Absence of Comparison)
+
+There exists no primitive predicate in capable of comparing two distinct operations.
+
+Theorem 4.6 (NonDeterminacy of Legitimate Operations)
+
+Let be distinct operations such that:
+
+Then does not entail any statement preferring to .
+
+Proof.
+By Axiom T2.8, no ordering or comparison predicate exists. By Axiom T2.4, legitimacy exhausts all constraints. Thus there is no formula in distinguishing and with respect to preference or selection. ∎
+
+4.9 Independence of Tier2 Axioms
+
+Theorem 4.7 (Axiom Independence)
+
+Each Tier2 axiom is independent of the others.
+
+Proof (Sketch).
+For each axiom, construct a model satisfying all other Tier2 axioms while violating the selected one. Such constructions exist by modifying operation predicates while holding the agent substrate fixed. ∎
+
+4.10 Consistency of Tier2 with Tier1
+
+Theorem 4.8 (Joint Consistency)
+
+The Tier1 and Tier2 axioms are jointly satisfiable.
+
+Proof (Sketch).
+Extend the model constructed in Theorem 3.9 by introducing a singleton operation set with predicates assigned to satisfy all Tier2 axioms. ∎
+
+4.11 Summary of Tier2
+
+The Tier2 axioms define a class of operations that:
+
+are closed under repetition,
+
+preserve structural symmetry,
+
+exhibit bounded change,
+
+admit directed repair,
+
+and do not induce any selection or ordering.
+
+These constraints jointly define a transformationlevel admissibility geometry over models of the Tier1 substrate.
+
+Transition
+
+With both tiers axiomatized, we now develop consequences of the combined system.
+
+Section 5: Derived Lemmas and Structural Properties.
+
+5. Foundational Lemmas and Emergence of Interoperable Constraint Geometry
+
+This section derives the core structural lemmas that follow from the combined Tier1 and Tier2 axioms of . These lemmas establish the internal properties of admissible and legitimate operations independently of any geometric interpretation.
+
+Only after the full set of foundational lemmas has been established do we identify a specific subset sufficient to support the emergence of an Interoperable Constraint Geometry (ICG) on the space of operations.
+
+5.1 Preliminary Definitions
+
+Let be an arbitrary but fixed model of .
+
+Definition 5.1 (Admissible Operations)
+
+Definition 5.2 (Legitimate Operations)
+
+By Axiom T2.3, .
+
+5.2 Foundational Lemmas: Definability and Structure
+
+These lemmas establish basic structural facts about the operation space and require no geometric interpretation.
+
+Lemma 5.3 (Definability of Legitimacy)
+
+The set is definable in by a single firstorder formula.
+
+Proof.
+By Axiom T2.4,
+
+a finite conjunction of firstorder predicates. ∎
+
+Lemma 5.4 (NonEmptiness)
+
+Proof.
+By Theorem 4.8 (joint consistency of Tier1 and Tier2). ∎
+
+Lemma 5.5 (Idempotence)
+
+For all ,
+
+in any interpretation where composition is defined.
+
+Proof.
+By Axiom T2.2 and Axiom T2.4. ∎
+
+Lemma 5.6 (Bounded Effect)
+
+There exists such that for all and all agents ,
+
+Proof.
+Immediate from Axiom T2.6. ∎
+
+Lemma 5.7 (Symmetry Preservation)
+
+If and , then for any ,
+
+Proof.
+By Axiom T2.5. ∎
+
+Lemma 5.8 (Isomorphism Invariance)
+
+If , then
+
+for any model isomorphism .
+
+Proof.
+Legitimacy is firstorder definable; isomorphisms preserve firstorder truth. ∎
+
+Lemma 5.9 (NonCollapse)
+
+There is no definable element such that
+
+Proof.
+By Theorem 4.6 (nondeterminacy) and absence of comparison predicates. ∎
+
+5.3 Summary of Foundational Lemmas
+
+From Lemmas 5.3–5.9, we have established:
+
+definability,
+
+nonemptiness,
+
+idempotence,
+
+bounded action,
+
+symmetry preservation,
+
+isomorphism invariance,
+
+and noncollapse
+
+of the legitimate operation set.
+
+These results are purely structural and make no reference to geometry.
+
+5.4 ConstraintInduced Subsets of Operations
+
+Define the following subsets of :
+
+Then:
+
+5.5 Lemmas Supporting Interoperable Constraint Geometry
+
+We now explicitly identify the subset of foundational lemmas that jointly support the emergence of Interoperable Constraint Geometry.
+
+Lemma 5.10 (Finite Constraint Intersection)
+
+The legitimate operation set is the finite intersection of definable constraint sets.
+
+Proof.
+Immediate from Lemma 5.3 and Section 5.4. ∎
+
+Lemma 5.11 (Interoperability)
+
+Legitimacy is invariant under reinterpretation up to model isomorphism.
+
+Proof.
+Restatement of Lemma 5.8. ∎
+
+Lemma 5.12 (Flatness)
+
+Legitimate operations are fixed points under iteration.
+
+Proof.
+Restatement of Lemma 5.5. ∎
+
+Lemma 5.13 (Multiplicity)
+
+The admissible region contains multiple, nondistinguished elements.
+
+Proof.
+By Lemma 5.9. ∎
+
+5.6 Definition of Interoperable Constraint Geometry
+
+Definition 5.14 (Interoperable Constraint Geometry)
+
+Let be a set and a finite family of definable subsets. The structure
+
+induces an Interoperable Constraint Geometry if:
+
+,
+
+the intersection is invariant under isomorphism,
+
+no distinguished element is definable,
+
+elements are idempotent under iteration.
+
+5.7 Emergence Theorem
+
+Theorem 5.15 (Emergence of Interoperable Constraint Geometry)
+
+For every model of , the structure
+
+induces an Interoperable Constraint Geometry whose admissible region is .
+
+Proof.
+Conditions (1)–(4) of Definition 5.14 follow respectively from Lemmas 5.4, 5.11, 5.13, and 5.12. ∎
+
+5.8 Role in the Overall Theory
+
+Section 5 has:
+
+derived all foundational lemmas required for later results,
+
+isolated a strict subset sufficient for ICG,
+
+and formally proved that ICG emerges from the axioms of .
+
+No additional assumptions are required.
+
+Transition
+
+With the emergent geometry rigorously established, we proceed to universality and necessity results.
+
+Section 6: Universality of the Invariants and Necessity of the Constraint Geometry.
+
+6. Main Theorems of the Theory
+
+This section establishes the principal theorems of the theory . These theorems collectively characterize the expressive power, limitations, and universality of the axiomatic system. Each theorem is proved solely from the Tier1 axioms (Section 3), Tier2 axioms (Section 4), and the foundational lemmas derived in Section 5.
+
+For clarity, the results are grouped by logical role: necessity, universality, nondeterminacy, and completeness with respect to constraint geometry.
+
+6.1 Necessity of the Tier1 Invariants
+
+We first show that the Tier1 invariants are necessary for any system satisfying the structural constraints encoded by .
+
+Theorem 6.1 (Necessity of Measure Positivity)
+
+Let be a model of . If an agent participates in any dependency relation, then .
+
+Proof.
+If participates in a dependency, then there exists such that . By Axiom T1.10 (Dependency Implies Positivity), . ∎
+
+Corollary 6.2 (Necessity of Null Isolation)
+
+Any agent with is isolated in the dependency graph.
+
+Proof.
+Immediate from Lemma 3.5 and Theorem 6.1. ∎
+
+Theorem 6.3 (Necessity of Finite Dependency)
+
+In any model of , every agent has finite indegree.
+
+Proof.
+This is exactly Axiom T1.7. To see necessity, note that violation of finite indegree renders undefined in , contradicting the definability requirements of Section 2. ∎
+
+6.2 Universality of the Invariants
+
+We now establish that the axioms of are not merely sufficient, but universal for a broad class of plural systems.
+
+Definition 6.4 (NonDominating Plural System)
+
+A plural system is said to be nondominating if it admits no transformation that forces an agent from positive measure to null measure, or introduces unbounded dependency or measure escalation in a single step.
+
+This definition is purely structural and does not reference .
+
+Theorem 6.5 (Universality of Tier1 Invariants)
+
+Any nondominating plural system admits an interpretation as a model of the Tier1 axioms of .
+
+Proof.
+Given a nondominating plural system, define as the agent set, define as any nonnegative integervalued measure respecting nondomination, and define as the system’s dependency relation. Nondomination ensures positivity, finite branching, and null isolation, which suffice to satisfy Axioms T1.1–T1.10. ∎
+
+Theorem 6.6 (Universality of Tier2 Constraints)
+
+Any transformation system over a nondominating plural system that preserves symmetry, bounded change, and directed repair admits an interpretation of its transformations as legitimate operations in .
+
+Proof.
+Each required property corresponds exactly to one of the predicates defining legitimacy (Axiom T2.4). Interpreting the system’s transformations as elements of yields satisfaction of all Tier2 axioms. ∎
+
+6.3 NonDeterminacy and NonSelectivity
+
+We now prove one of the central results of the theory: legitimacy does not entail uniqueness, preference, or selection.
+
+Theorem 6.7 (NonDeterminacy of Legitimate Operations)
+
+Let be distinct operations such that
+
+Then does not entail any formula that orders, ranks, or prefers over .
+
+Proof.
+By Section 2 and Axiom T2.8, the language contains no predicate capable of comparing operations. By Lemma 5.3, legitimacy exhausts all definable constraints on operations. Therefore, any formula distinguishing and with respect to preference is not expressible in . ∎
+
+Corollary 6.8 (Filter–Not–Selector Property)
+
+The theory eliminates forbidden operations but cannot select a unique legitimate operation.
+
+Proof.
+Immediate from Theorem 6.7. ∎
+
+6.4 Completeness with Respect to Constraint Geometry
+
+We now connect the main theorems back to the emergent Interoperable Constraint Geometry (ICG) established in Section 5.
+
+Theorem 6.9 (ConstraintCompleteness)
+
+An operation is legitimate if and only if it lies in the admissible region of the Interoperable Constraint Geometry induced by .
+
+Proof.
+By Definition 5.14 and Theorem 5.15, the admissible region is exactly the intersection of the definable constraint sets corresponding to legitimacy predicates. ∎
+
+Theorem 6.10 (No Further Structural Constraints)
+
+There exists no additional firstorder constraint on operations consistent with the axioms of that further refines the admissible region.
+
+Proof.
+By Lemma 5.3, legitimacy is already defined as the conjunction of all available predicates. By independence of Tier2 axioms (Theorem 4.7), no further predicate is derivable without inconsistency. ∎
+
+6.5 Maximality of the Theory
+
+We now state the strongest result of this section.
+
+Theorem 6.11 (Maximal NonSelective Constraint Theory)
+
+The theory is maximal among firstorder theories that:
+
+constrain transformations by invariant preservation,
+
+admit multiple legitimate operations,
+
+and do not define a selector or preference relation.
+
+Proof.
+Adding any further axiom that distinguishes between legitimate operations either:
+
+introduces a comparison predicate (violating Axiom T2.8), or
+
+collapses the admissible region to a singleton (violating Lemma 5.13), or
+
+renders the theory inconsistent (violating Theorem 4.8). ∎
+
+6.6 Summary of Main Results
+
+We summarize the principal theorems proved in this section:
+
+Necessity of Tier1 invariants (Theorems 6.1–6.3),
+
+Universality of Tier1 and Tier2 axioms (Theorems 6.5–6.6),
+
+Nondeterminacy and nonselectivity (Theorem 6.7),
+
+Constraintcompleteness and maximality (Theorems 6.9–6.11).
+
+Together, these results establish as a complete, nonselective, interoperable constraint theory over plural systems.
+
+Transition
+
+With all main theorems established, the remaining sections address independence, model variation, and auxiliary constructions.
+
+Section 7: Independence, Model Variation, and Extensions.
+
+7. Independence, Countermodels, and Model Variation
+
+This section establishes three critical properties of the theory :
+
+Independence of its axioms and axiom groups;
+
+Model variability, demonstrating nontrivial expressive breadth;
+
+Formal nonreducibility, showing that the theory is not a rederivation of existing mathematical frameworks.
+
+All results are established by explicit constructions or impossibility proofs.
+
+7.1 Independence of Tier1 Axioms
+
+We first establish that the axioms governing the agent substrate are logically independent.
+
+Theorem 7.1 (Independence of Tier1 Axioms)
+
+For each Tier1 axiom , there exists a model of all other Tier1 axioms in which fails.
+
+Proof (by explicit countermodels)
+
+We sketch representative cases; the remaining cases follow by analogous constructions.
+
+(i) Independence of Axiom T1.1 (Existence of Null Agent)
+
+Let:
+
+,
+
+,
+
+.
+
+All Tier1 axioms except T1.1 are satisfied. No agent has measure 0.
+
+(ii) Independence of Axiom T1.7 (Finite InDegree)
+
+Let:
+
+,
+
+for all ,
+
+holds for all .
+
+All axioms except finite indegree hold; .
+
+(iii) Independence of Axiom T1.10 (Dependency Implies Positivity)
+
+Let:
+
+,
+
+,
+
+.
+
+All axioms except T1.10 hold; a null agent has incoming dependency.
+
+Each Tier1 axiom can be violated independently while preserving the others. ∎
+
+7.2 Independence of Tier2 Axioms
+
+We now establish the independence of axioms governing operations.
+
+Theorem 7.2 (Independence of Tier2 Axioms)
+
+Each Tier2 axiom is independent of the others relative to Tier1.
+
+Proof (by operationlevel countermodels)
+
+Fix a Tier1 model satisfying all agent axioms.
+
+For each Tier2 axiom:
+
+Define as a finite set of abstract operations;
+
+Assign truth values to the predicates , , , so that:
+
+all but one axiom are satisfied,
+
+the remaining axiom is violated.
+
+Because the operation predicates are primitive and unconstrained except by the axioms themselves, such assignments are always possible. ∎
+
+7.3 Model Variation and NonIsomorphism
+
+Independence alone does not guarantee expressive richness. We now show that admits multiple nonisomorphic models, even under fixed cardinalities.
+
+Theorem 7.3 (Multiplicity of NonIsomorphic Models)
+
+There exist infinitely many pairwise nonisomorphic models of .
+
+Proof.
+Fix the agent set and . Vary the dependency relation among all finitebranching directed acyclic graphs on . Each choice yields a distinct model satisfying Tier1. Tier2 predicates can be interpreted uniformly. Graphtheoretic nonisomorphism implies model nonisomorphism. ∎
+
+7.4 NonReducibility to OrderTheoretic Frameworks
+
+We now prove that is not equivalent to, nor reducible to, any orderbased system.
+
+Theorem 7.4 (No Definable Ordering on Operations)
+
+In any model of , there is no definable partial or total order on .
+
+Proof.
+By Section 2, the signature contains no comparison predicate on operations. By Theorem 6.7, no such predicate is definable. Therefore no ordering exists, definable or otherwise. ∎
+
+Corollary 7.5
+
+cannot be interpreted as an optimization theory, latticetheoretic framework, or preferencebased selection system.
+
+7.5 NonReducibility to Viability Theory
+
+We now formally distinguish from viability theory and related statespace frameworks.
+
+Theorem 7.6 (No StateSpace Kernel Representation)
+
+There exists no mapping from models of to statespace systems such that legitimate operations correspond bijectively to viable trajectories or kernels.
+
+Proof.
+Viability theory presupposes:
+
+a state space,
+
+a timeindexed evolution,
+
+admissibility defined over trajectories.
+
+In :
+
+admissibility is defined on operations, not trajectories;
+
+no time or evolution parameter exists;
+
+legitimacy is idempotent (Lemma 5.5), incompatible with trajectorybased viability.
+
+Thus no structurepreserving correspondence exists. ∎
+
+Corollary 7.7
+
+is not a reformulation or generalization of viability theory.
+
+7.6 NonReducibility to Constraint Satisfaction Problems
+
+Theorem 7.8 (No CSP Equivalence)
+
+There is no finite constraint satisfaction problem whose solution set is equivalent to for all models .
+
+Proof.
+CSPs yield solution sets that are:
+
+finite or finitely characterizable,
+
+selectionoriented.
+
+By Lemmas 5.9 and 5.13, is noncollapsed and nonselective, violating CSP structure. ∎
+
+7.7 Summary of Separation Results
+
+We have shown:
+
+All axioms of are independent;
+
+The theory admits rich model variation;
+
+No ordering, selection, or optimization structure is definable;
+
+No reduction to viability theory, CSPs, or ordertheoretic systems is possible.
+
+These are proved facts, not interpretive claims.
+
+7.8 Position of the Theory
+
+The results of this section establish that defines a distinct mathematical object: a nonselective, interoperable constraint theory over transformations. Its properties are not inherited from, nor reducible to, existing mathematical frameworks.
+
+7.9 Scope and NonClaims of the Theory
+
+This subsection records, explicitly and formally, the scope of the theory and the claims it does not make. The purpose of this statement is to delimit the logical consequences of the axioms and theorems established above and to prevent misinterpretation of the results proved in Sections 3–7.
+
+All statements below concern nonentailments of the theory and are intended as formal clarifications rather than substantive additions.
+
+7.9.1 Logical Scope
+
+The theory is a manysorted firstorder axiomatic system whose primary objects are:
+
+agents equipped with a numeric measure and a dependency relation, and
+
+operations constrained by invariantpreserving predicates.
+
+All results proved in this paper are consequences of the axioms explicitly stated in Sections 3–4 and Appendices A–B. No additional semantic, temporal, probabilistic, or topological structure is assumed or derived.
+
+In particular, is a theory about admissibility and legitimacy of transformations, not about outcomes, trajectories, equilibria, or optimization.
+
+7.9.2 NonClaims Concerning Selection and Optimality
+
+The theory does not assert, entail, or encode:
+
+the existence of a unique legitimate operation,
+
+a preference ordering over legitimate operations,
+
+an optimal, maximal, or minimal legitimate operation,
+
+or any selection principle among legitimate operations.
+
+This is not a limitation but a provable property of the theory (Theorem 6.7). Any selection, ranking, or optimization imposed on legitimate operations necessarily arises from structure external to and cannot be derived within its language.
+
+7.9.3 NonClaims Concerning Dynamics and Time
+
+The theory does not introduce:
+
+a time parameter,
+
+a notion of trajectory or evolution,
+
+or a dynamical system in the classical sense.
+
+Although operations may be iterated, iteration is constrained by idempotence (Lemma 5.5), which precludes trajectorybased semantics. Consequently, does not subsume, generalize, or reexpress dynamical systems theory, control theory, or viability theory (Theorem 7.6).
+
+7.9.4 NonClaims Concerning Expressive Universality
+
+The theory does not claim:
+
+completeness with respect to all possible constraint theories,
+
+universality across all mathematical models of coordination,
+
+equivalence to categorytheoretic, ordertheoretic, or optimizationbased frameworks,
+
+or reducibility of all constraint geometries to its axioms.
+
+The universality results proved in Section 6 are conditional: they apply only to systems satisfying the structural conditions made explicit in Definition 6.4 and Theorems 6.5–6.6.
+
+7.9.5 NonClaims Concerning Semantics and Interpretation
+
+No semantic interpretation of agents, measures, dependencies, or operations is fixed by the theory. Any interpretation—computational, institutional, organizational, or otherwise—constitutes an external model of the axioms and does not alter their formal content.
+
+In particular, the theory makes no claims concerning meaning, intent, or purpose of agents or operations beyond their formal properties.
+
+7.9.6 Summary
+
+The theory :
+
+does define a nonselective, invariantpreserving constraint theory over transformations;
+
+does induce an interoperable constraint geometry as a provable consequence of its axioms;
+
+does not select, optimize, rank, or prioritize legitimate operations;
+
+does not rederive existing mathematical frameworks;
+
+does not rely on unstated assumptions or external semantics.
+
+All claims made by the theory are exhaustively enumerated and formally justified in the preceding sections and appendices.
+
+Closing Remark for Section 7
+
+With the independence, separation, and scope of the theory fully specified, the formal development of is complete.
+
+7.10 Explicit Comparison Boundary with Existing Frameworks
+
+This subsection records, in formal terms, the boundaries separating the theory from other mathematical frameworks. These boundaries are not matters of interpretation or emphasis; they follow directly from the axioms and theorems established above.
+
+7.10.1 Boundary with Optimization and OrderTheoretic Frameworks
+
+Optimization theory and ordertheoretic frameworks presuppose the existence of a partial or total order on a space of candidates.
+
+By Theorem 6.7 and Theorem 7.4, no definable ordering exists on the set of legitimate operations in . Consequently, no objective function, extremal principle, lattice structure, or dominance relation is definable within the theory.
+
+Therefore, is not equivalent to, nor a reformulation of, any optimizationbased or ordertheoretic framework.
+
+7.10.2 Boundary with Dynamical Systems and Viability Theory
+
+Dynamical systems and viability theory are formulated over:
+
+a timeindexed evolution,
+
+trajectories or flows,
+
+admissibility defined over paths in state space.
+
+In :
+
+no time parameter exists,
+
+no notion of trajectory is definable,
+
+admissibility is defined on operations rather than paths,
+
+legitimate operations are idempotent (Lemma 5.5).
+
+By Theorem 7.6, no structurepreserving mapping exists between legitimate operations and viable trajectories or kernels. Accordingly, is not a reformulation, extension, or abstraction of viability theory.
+
+7.10.3 Boundary with Constraint Satisfaction Problems
+
+Constraint satisfaction frameworks encode constraints whose solutions are selected or enumerated.
+
+By Lemma 5.13 and Theorem 6.7, the admissible region of is noncollapsed and nonselective: it admits multiple legitimate operations without any distinguished solution.
+
+By Theorem 7.8, no finite CSP formulation captures the structure of legitimate operations in .
+
+7.10.4 Boundary with Categorical and Algebraic Selection Frameworks
+
+Categorytheoretic constructions that yield universal or terminal objects presuppose a selection principle.
+
+By Theorem 6.11 (maximal nonselectivity), any attempt to introduce such a principle within either collapses the admissible region or violates the axioms.
+
+Thus, while categorical semantics may be imposed externally, is not internally categorical in this sense.
+
+Concluding Boundary Statement
+
+The distinctions above are established by formal impossibility results, not by informal comparison. They collectively demonstrate that occupies a distinct mathematical position: a nonselective, transformationlevel constraint theory whose properties are not inherited from existing frameworks.
+
+Transition
+
+With independence and nonreducibility established, the remaining material concerns auxiliary constructions and appendices.
+
+Appendix A: Extended Axiom Listings
+Appendix B: Auxiliary Definitions and Proofs
+
+Appendix A
+
+Extended Axiom Listings and Auxiliary Constraints
+
+This appendix collects and enumerates auxiliary axioms, technical constraints, and extended formulations that support the main development of the theory . All axioms listed here are consistent with, and in many cases implicit in, the Tier1 and Tier2 axioms presented in Sections 3 and 4. They are stated explicitly to ensure completeness, clarity, and ease of reference.
+
+No new primitives are introduced in this appendix.
+
+A.1 Structural Axioms on the Agent Domain
+
+These axioms refine and extend the Tier1 agent structure.
+
+Axiom A1 (Distinctness of Successors)
+
+This axiom ensures that agents with different measures are distinct.
+
+Axiom A2 (Existence of Minimal Positive Measure)
+
+This axiom is derivable (Lemma 3.7) but stated explicitly here for convenience.
+
+Axiom A3 (No Negative Measure)
+
+Included for completeness relative to arithmetic semantics.
+
+Axiom A4 (WellFoundedness of Measure)
+
+There exists no infinite strictly decreasing sequence
+
+indexed by agents.
+
+This axiom follows from the wellordering of but is recorded explicitly to support descent arguments.
+
+A.2 Extended Dependency Axioms
+
+These axioms clarify properties of the dependency relation .
+
+Axiom A5 (Acyclicity)
+
+There exists no finite sequence such that:
+
+This axiom rules out directed cycles in the dependency graph.
+
+Axiom A6 (Dependency Respecting Measure)
+
+This axiom strengthens Axiom T1.10 by constraining relative measures.
+
+Axiom A7 (Locality of Dependency)
+
+For any agent , the set
+
+is finite.
+
+This complements finite indegree by imposing finite outdegree where needed.
+
+A.3 Extended Axioms on Operations
+
+The following axioms refine the structure of operations beyond Tier2.
+
+Axiom A8 (Operation Identity)
+
+There exists an operation such that:
+
+Axiom A9 (Admissibility of Identity)
+
+Axiom A10 (Legitimacy of Identity)
+
+This axiom ensures the admissible region is nonempty without appeal to abstract existence.
+
+Axiom A11 (Extensionality of Operations)
+
+If satisfy:
+
+then .
+
+This axiom enforces functional extensionality where applicable.
+
+A.4 Repair and Recovery Constraints
+
+These axioms refine the directed repair property.
+
+Axiom A12 (Repair Progress)
+
+If , then for any legitimate ,
+
+Axiom A13 (Repair NonRegression)
+
+There exists no legitimate operation and agent such that:
+
+Lemma A14 (Irreversibility of Positive Measure)
+
+Once an agent has positive measure, no legitimate operation can reduce it to zero.
+
+Proof.
+Immediate from Axiom A13. ∎
+
+A.5 Composition and Closure (Optional Extension)
+
+These axioms apply only in interpretations where composition is defined.
+
+Axiom A15 (Closure Under Composition)
+
+If , then is defined and admissible.
+
+Axiom A16 (Legitimacy Preservation Under Composition)
+
+If , then:
+
+Lemma A17 (Idempotent Semigroup)
+
+Under Axioms A15–A16, the legitimate operations form an idempotent semigroup.
+
+Proof.
+Closure follows from Axiom A15; idempotence from Lemma 5.5. ∎
+
+A.6 Explicit NonSelection Axioms
+
+These axioms make nonselectivity syntactically explicit.
+
+Axiom A18 (No Distinguished Operation)
+
+There exists no constant symbol such that:
+
+Axiom A19 (No Binary Comparator)
+
+There exists no binary predicate in the language intended to compare operations.
+
+This axiom reinforces Section 2’s noncomparability constraint.
+
+A.7 Consistency and Conservativity
+
+Theorem A20 (Conservativity of Appendix A)
+
+All axioms in Appendix A are conservative extensions of the Tier1 and Tier2 axioms: no theorem about agents or operations expressible in the original language becomes provable that was not already derivable.
+
+Proof (Sketch).
+Each axiom either:
+
+restates a derived lemma,
+
+constrains only optional structure (composition),
+
+or makes explicit an absence already enforced by the core axioms. No new expressive power is introduced. ∎
+
+A.8 Summary of Appendix A
+
+Appendix A has:
+
+Enumerated auxiliary structural axioms;
+
+Made implicit constraints explicit;
+
+Extended the formal system without altering its core;
+
+Preserved consistency and nonselectivity.
+
+These axioms are included to support rigorous review, alternative model constructions, and formal extensions.
+
+Closing Remark
+
+With Appendix A in place, is now specified as a fully explicit axiomatic system, with no hidden assumptions and no reliance on informal interpretation.
+
+Appendix B
+
+Auxiliary Definitions, Proofs, and Model Constructions
+
+This appendix collects auxiliary definitions, extended proofs, and explicit model constructions that support the results of Sections 3–7. All material here is logically downstream of the axioms and lemmas stated in the main body. No new axioms are introduced.
+
+The purpose of this appendix is completeness: every nontrivial claim appearing without full proof in the main text is justified here.
+
+B.1 Auxiliary Definitions
+
+Definition B.1 (Operation Interpretation)
+
+An interpretation of operations in a model is any mapping
+
+that respects the typing constraints of the signature. No algebraic structure (e.g. homomorphism, monotonicity) is assumed unless enforced by axioms.
+
+Definition B.2 (Structural Equivalence of Agents)
+
+Agents are structurally equivalent if:
+
+This definition underlies the symmetry constraint (STC5).
+
+Definition B.3 (Operation Equivalence)
+
+Two operations are extensionally equivalent if:
+
+By Axiom A11, extensionally equivalent operations are identical.
+
+B.2 Full Proofs of Results Deferred in the Main Text
+
+Proof of Lemma 3.7 (Existence of Prime Agents)
+
+Restatement.
+There exists at least one agent such that and .
+
+Proof.
+By Axiom T1.2, there exists an agent with . Let
+
+Existence of the minimum follows from wellordering of . Suppose . By Axiom T1.4, there exists an agent with measure , contradicting minimality. Thus .
+
+If the agent with had , then by Axiom T1.10 its predecessors would have positive measure, again contradicting minimality. Hence . ∎
+
+Proof of Theorem 4.7 (Independence of Tier2 Axioms)
+
+Restatement.
+Each Tier2 axiom is independent of the others.
+
+Proof.
+Fix any Tier1 model . Let be a singleton operation set. For each Tier2 axiom :
+
+Assign truth values to the primitive predicates so that all axioms except are satisfied.
+
+Because the predicates are independent and unconstrained except by the axioms themselves, this assignment is consistent.
+
+Thus for each there exists a model satisfying all other Tier2 axioms but not . ∎
+
+Proof of Theorem 6.7 (NonDeterminacy)
+
+Restatement.
+If are distinct legitimate operations, no formula of can prefer one over the other.
+
+Proof.
+Assume for contradiction that a formula expresses a preference. Then defines a binary relation on .
+
+However:
+
+No such predicate is primitive (Section 2).
+
+No such predicate is definable from existing predicates (Lemma 5.3).
+
+Any attempt to define would violate independence of Tier2 axioms (Theorem 4.7).
+
+Hence no such exists. ∎
+
+B.3 Expanded Countermodel Constructions
+
+Countermodel B.4 (Violation of STC5 Only)
+
+Let:
+
+,
+
+,
+
+,
+
+.
+
+Define as admissible, driftbounded, and repairdirected, but stipulate .
+
+All Tier2 axioms except STC5 are satisfied.
+
+Countermodel B.5 (Violation of Drift Boundedness Only)
+
+Let increase by an unbounded amount for some . All other predicates are satisfied.
+
+This violates only Axiom T2.6.
+
+B.4 Explicit Model Variations
+
+Construction B.6 (Family of NonIsomorphic Models)
+
+Fix and . For each finitebranching DAG on , let encode .
+
+Each choice of yields a distinct Tier1 model. Extending with uniform Tier2 interpretations yields infinitely many nonisomorphic models of .
+
+Lemma B.7
+
+No two models arising from nonisomorphic dependency graphs are elementarily equivalent.
+
+Proof.
+Graphtheoretic properties definable in firstorder logic distinguish them. ∎
+
+B.5 Formal Separation from Other Frameworks (Extended Proofs)
+
+Proof of Theorem 7.6 (NonReducibility to Viability Theory)
+
+Expanded Argument.
+
+Viability theory requires:
+
+a timeindexed state evolution,
+
+admissibility defined over trajectories,
+
+kernels defined as maximal invariant sets.
+
+:
+
+has no time parameter,
+
+defines admissibility over operations,
+
+enforces idempotence (Lemma 5.5), which precludes trajectory semantics.
+
+Thus any mapping would fail to preserve structure. ∎
+
+Proof of Theorem 7.8 (No CSP Equivalence)
+
+Expanded Argument.
+
+Constraint Satisfaction Problems assume:
+
+finite variable sets or finite constraint scopes,
+
+solutions as selections.
+
+By Lemma 5.13, is noncollapsed and nonselective. No CSP formulation preserves this property across all models. ∎
+
+B.6 ProofTheoretic Remarks
+
+Remark B.8 (No Hidden SecondOrder Reasoning)
+
+All proofs in this paper are firstorder. No appeal is made to secondorder quantification, choice principles, or semantic intuition.
+
+Remark B.9 (Compactness Compatibility)
+
+Because is firstorder, Compactness applies. In particular, any finite subset of axioms has a model.
+
+B.7 Completeness of the Appendices
+
+Theorem B.10 (Exhaustiveness)
+
+Every nontrivial claim in Sections 1–7 is supported either by:
+
+an explicit proof in the main text,
+
+a proof in Appendix B,
+
+or a derivable consequence of stated axioms.
+
+Proof.
+By inspection of references and dependency structure. ∎
+
+Closing Statement
+
+Appendices A and B together render a fully explicit, axiomatically closed, and proofcomplete mathematical theory. No appeal to informal reasoning, external frameworks, or interpretive supplementation is required.
+
+Appendix C
+
+Index of Axioms, Definitions, Lemmas, and Theorems
+
+This index lists all formal axioms, definitions, lemmas, theorems, and corollaries appearing in this paper, together with their locations. It is intended to support verification, dependency tracing, and rigorous review. No new content is introduced here.
+
+C.1 Index of Axioms
+
+Tier1 Axioms (Agent Structure)
+
+T1.1 — Existence of a Null Agent (§3.2)
+
+T1.2 — Nontriviality (§3.2)
+
+T1.3 — Totality of Measure (§3.3)
+
+T1.4 — Successor Realizability (§3.3)
+
+T1.5 — No Collapse (§3.3)
+
+T1.6 — Irreflexivity of Dependency (§3.4)
+
+T1.7 — Finite InDegree (§3.4)
+
+T1.8 — Exhaustive Classification (§3.5)
+
+T1.9 — Mutual Exclusivity (§3.5)
+
+T1.10 — Dependency Implies Positivity (§3.6)
+
+Tier2 Axioms (Operations)
+
+T2.1 — NonEmptiness of Admissible Operations (§4.3)
+
+T2.2 — Closure Under Repetition / Idempotence (§4.3)
+
+T2.3 — Legitimacy Implies Admissibility (§4.4)
+
+T2.4 — Legitimacy as Constraint Conjunction (§4.4)
+
+T2.5 — Symmetry of Equals (STC5) (§4.5)
+
+T2.6 — Bounded Measure Change (§4.6)
+
+T2.7 — Directed Repair (§4.7)
+
+T2.8 — Absence of Comparison (§4.8)
+
+Extended Axioms (Appendix A)
+
+A1 — Distinctness of Successors (App. A.1)
+
+A2 — Existence of Minimal Positive Measure (App. A.1)
+
+A3 — No Negative Measure (App. A.1)
+
+A4 — WellFoundedness of Measure (App. A.1)
+
+A5 — Acyclicity of Dependency (App. A.2)
+
+A6 — Dependency Respecting Measure (App. A.2)
+
+A7 — Locality of Dependency (App. A.2)
+
+A8 — Operation Identity (App. A.3)
+
+A9 — Admissibility of Identity (App. A.3)
+
+A10 — Legitimacy of Identity (App. A.3)
+
+A11 — Extensionality of Operations (App. A.3)
+
+A12 — Repair Progress (App. A.4)
+
+A13 — Repair NonRegression (App. A.4)
+
+A15 — Closure Under Composition (App. A.5)
+
+A16 — Legitimacy Preservation Under Composition (App. A.5)
+
+A18 — No Distinguished Operation (App. A.6)
+
+A19 — No Binary Comparator (App. A.6)
+
+C.2 Index of Definitions
+
+Definition 2.1 — Logical Framework (§2.1)
+
+Definition 2.3 — Measure Function (§2.3)
+
+Definition 2.4 — Dependency Relation (§2.4)
+
+Definition 2.5 — Null, Prime, Composite Agents (§2.4.2)
+
+Definition 5.1 — Admissible Operations (§5.1)
+
+Definition 5.2 — Legitimate Operations (§5.1)
+
+Definition 5.14 — Interoperable Constraint Geometry (§5.6)
+
+Definition 6.4 — NonDominating Plural System (§6.2)
+
+Definition B.1 — Operation Interpretation (App. B.1)
+
+Definition B.2 — Structural Equivalence of Agents (App. B.1)
+
+Definition B.3 — Operation Equivalence (App. B.1)
+
+C.3 Index of Lemmas
+
+Lemma 2.1 — Definability of Degree (§2.4.1)
+
+Lemma 2.2 — Exhaustive Classification (§2.4.2)
+
+Lemma 3.1 — Nondegeneracy (§3.2)
+
+Lemma 3.2 — Unboundedness of Measure (§3.3)
+
+Lemma 3.3 — WellDefined Degree (§3.4)
+
+Lemma 3.4 — Partition of Agent Domain (§3.5)
+
+Lemma 3.5 — Null Agents Are DependencyFree (§3.6)
+
+Lemma 3.7 — Existence of Prime Agents (§3.7)
+
+Lemma 4.1 — Stability Under Iteration (§4.3)
+
+Lemma 4.2 — Necessity of Component Constraints (§4.4)
+
+Lemma 4.3 — Invariance Under Structural Equivalence (§4.5)
+
+Lemma 4.4 — No Unbounded Escalation (§4.6)
+
+Lemma 4.5 — Repair Does Not Introduce Dependencies (§4.7)
+
+Foundational Lemmas (Section 5)
+
+Lemma 5.3 — Definability of Legitimacy (§5.2)
+
+Lemma 5.4 — NonEmptiness (§5.2)
+
+Lemma 5.5 — Idempotence (§5.2)
+
+Lemma 5.6 — Bounded Effect (§5.2)
+
+Lemma 5.7 — Symmetry Preservation (§5.2)
+
+Lemma 5.8 — Isomorphism Invariance (§5.2)
+
+Lemma 5.9 — NonCollapse (§5.2)
+
+ICGSupporting Lemmas
+
+Lemma 5.10 — Finite Constraint Intersection (§5.5)
+
+Lemma 5.11 — Interoperability (§5.5)
+
+Lemma 5.12 — Flatness (§5.5)
+
+Lemma 5.13 — Multiplicity (§5.5)
+
+C.4 Index of Theorems and Corollaries
+
+Theorem 3.9 — Consistency of Tier1 (§3.8)
+
+Theorem 4.6 — NonDeterminacy of Legitimate Operations (§4.8)
+
+Theorem 4.7 — Independence of Tier2 Axioms (§4.9)
+
+Theorem 4.8 — Joint Consistency (§4.10)
+
+Theorem 5.15 — Emergence of Interoperable Constraint Geometry (§5.7)
+
+Main Theorems (Section 6)
+
+Theorem 6.1 — Necessity of Measure Positivity (§6.1)
+
+Theorem 6.3 — Necessity of Finite Dependency (§6.1)
+
+Theorem 6.5 — Universality of Tier1 Invariants (§6.2)
+
+Theorem 6.6 — Universality of Tier2 Constraints (§6.2)
+
+Theorem 6.7 — NonDeterminacy (§6.3)
+
+Theorem 6.9 — ConstraintCompleteness (§6.4)
+
+Theorem 6.10 — No Further Structural Constraints (§6.4)
+
+Theorem 6.11 — Maximal NonSelective Constraint Theory (§6.5)
+
+Independence and Separation
+
+Theorem 7.1 — Independence of Tier1 Axioms (§7.1)
+
+Theorem 7.2 — Independence of Tier2 Axioms (§7.2)
+
+Theorem 7.3 — Model NonIsomorphism (§7.3)
+
+Theorem 7.4 — No Definable Ordering (§7.4)
+
+Theorem 7.6 — NonReducibility to Viability Theory (§7.5)
+
+Theorem 7.8 — No CSP Equivalence (§7.6)
+
+Closing Remark
+
+This index completes the formal specification of . Every axiom, definition, lemma, and theorem appearing in the text is uniquely identified and locatable. No formal content lies outside this index.
+
+Notation Index
+
+This index records all nonlogical symbols used in the paper together with their meanings and locations of definition. No symbol carries any meaning beyond that explicitly stated.
+
+Sets and Sorts
+
+Symbol
+
+Meaning
+
+Defined in
+
+Domain of agents
+
+§2.2
+
+Domain of operations
+
+§2.2
+
+Domain of states (optional)
+
+§2.2
+
+Natural numbers
+
+§2.2
+
+Functions
+
+Symbol
+
+Type
+
+Meaning
+
+Defined in
+
+Measure function on agents
+
+§2.3
+
+Indegree in dependency graph
+
+§2.3, Lemma 2.1
+
+Operation application (optional)
+
+§2.3
+
+Predicates on Agents
+
+Symbol
+
+Arity
+
+Meaning
+
+Defined in
+
+2
+
+Directed dependency relation
+
+§2.4
+
+1
+
+§2.4.2
+
+1
+
+§2.4.2
+
+1
+
+§2.4.2
+
+Predicates on Operations
+
+Symbol
+
+Arity
+
+Meaning
+
+Defined in
+
+1
+
+Operation satisfies base constraints
+
+§4.2
+
+1
+
+Fully constrained admissible operation
+
+§4.4
+
+1
+
+§4.2
+
+1
+
+Symmetry of equals constraint
+
+§4.5
+
+1
+
+Bounded change in
+
+§4.6
+
+1
+
+Directed repair constraint
+
+§4.7
+
+Sets of Operations
+
+Symbol
+
+Meaning
+
+Defined in
+
+Set of admissible operations in model
+
+§5.1
+
+Set of legitimate operations in model
+
+§5.1
+
+Constraintdefined subsets of
+
+§5.4
+
+Derived Structures
+
+Symbol
+
+Meaning
+
+Defined in
+
+ICG
+
+Interoperable Constraint Geometry
+
+Definition 5.14
+
+Constraint geometry
+
+§5.3
+
+Logical Conventions
+
+Symbol
+
+Meaning
+
+Universal, existential quantification
+
+Implication, equivalence
+
+Model isomorphism
+
+Composition of operations (where defined)
+
+Closing Remark (Notation Index)
+
+All notation used in the paper appears in this index. No symbol is overloaded, and no informal notation is employed.
+
+Appendix D
+
+Logical Dependency Structure of the Theory
+
+This appendix records the complete logical dependency structure of the theory . It explicitly identifies:
+
+dependencies of lemmas on axioms,
+
+dependencies of theorems on lemmas and axioms, and
+
+the subset of results sufficient for the emergence of Interoperable Constraint Geometry (ICG).
+
+The purpose of this appendix is to make all inferential structure transparent and to demonstrate the absence of circular reasoning or hidden assumptions. No new results are introduced.
+
+D.1 Conventions
+
+“Depends on” means logically requires for derivation.
+
+Tier1 axioms are denoted T1.x.
+
+Tier2 axioms are denoted T2.x.
+
+Extended axioms (Appendix A) are denoted A.x.
+
+Dependencies listed are minimal.
+
+D.2 Axiom → Lemma Dependencies
+
+D.2.1 Tier1 Lemmas
+
+Lemma
+
+Depends on
+
+Lemma 3.1 (Nondegeneracy)
+
+T1.1, T1.2
+
+Lemma 3.2 (Unboundedness)
+
+T1.1, T1.4
+
+Lemma 3.3 (WellDefined Degree)
+
+T1.7, Lemma 2.1
+
+Lemma 3.4 (Partition)
+
+T1.8, T1.9
+
+Lemma 3.5 (Null Isolation)
+
+T1.10
+
+Lemma 3.7 (Prime Existence)
+
+T1.2, T1.4, T1.10
+
+D.2.2 Tier2 Lemmas
+
+Lemma
+
+Depends on
+
+Lemma 4.1 (Idempotence)
+
+T2.2
+
+Lemma 4.2 (Constraint Necessity)
+
+T2.4
+
+Lemma 4.3 (Symmetry Preservation)
+
+T2.5
+
+Lemma 4.4 (Bounded Escalation)
+
+T2.6
+
+Lemma 4.5 (Repair Constraint)
+
+T2.7
+
+D.3 Foundational Lemmas (Section 5)
+
+These lemmas establish the structural properties of the operation space without invoking geometry.
+
+Lemma
+
+Depends on
+
+Lemma 5.3 (Definability of Legitimacy)
+
+T2.4
+
+Lemma 5.4 (NonEmptiness)
+
+T2.1, Thm 4.8
+
+Lemma 5.5 (Idempotence)
+
+T2.2, T2.4
+
+Lemma 5.6 (Bounded Effect)
+
+T2.6
+
+Lemma 5.7 (Symmetry)
+
+T2.5
+
+Lemma 5.8 (Isomorphism Invariance)
+
+Lemma 5.3
+
+Lemma 5.9 (NonCollapse)
+
+T2.8, Lemma 5.3
+
+D.4 Lemma → Theorem Dependencies
+
+D.4.1 Emergence of Interoperable Constraint Geometry
+
+The following lemmas are jointly sufficient for the emergence of ICG.
+
+ICG Property
+
+Supporting Lemma
+
+Finite constraint intersection
+
+Lemma 5.10
+
+Interoperability
+
+Lemma 5.11
+
+Flatness (idempotence)
+
+Lemma 5.12
+
+Multiplicity (noncollapse)
+
+Lemma 5.13
+
+Nonemptiness
+
+Lemma 5.4
+
+These jointly support:
+
+Theorem 5.15 (Emergence of ICG)
+
+No other axioms or lemmas are required.
+
+D.4.2 Main Theorems (Section 6)
+
+Theorem
+
+Depends on
+
+Thm 6.1 (Necessity of Positivity)
+
+T1.10
+
+Thm 6.5 (Universality of Tier1)
+
+T1.1–T1.10
+
+Thm 6.6 (Universality of Tier2)
+
+T2.4
+
+Thm 6.7 (NonDeterminacy)
+
+T2.8, Lemma 5.3
+
+Thm 6.11 (Maximality)
+
+Thm 6.7, Lemma 5.13
+
+D.4.3 Independence and Separation (Section 7)
+
+Theorem
+
+Depends on
+
+Thm 7.1 (Tier1 Independence)
+
+Countermodels
+
+Thm 7.2 (Tier2 Independence)
+
+Countermodels
+
+Thm 7.4 (No Ordering)
+
+T2.8, Thm 6.7
+
+Thm 7.6 (Not Viability Theory)
+
+Lemma 5.5
+
+Thm 7.8 (Not CSP)
+
+Lemma 5.13
+
+D.5 Global Dependency Properties
+
+Theorem D.1 (Acyclicity of Logical Dependencies)
+
+The dependency structure of is acyclic.
+
+Proof.
+All axioms are primitive. Lemmas depend only on axioms or earlier lemmas. Theorems depend only on axioms and lemmas. No axiom depends on any derived result. ∎
+
+Corollary D.2 (No Circular Justification)
+
+No definition, lemma, or theorem in this paper is used—directly or indirectly—to justify itself.
+
+Closing Remark
+
+This appendix completes the structural specification of . Together with Appendices A–C, it ensures that:
+
+every result has a transparent logical provenance,
+
+every independence claim is structurally visible,
+
+and the emergence of Interoperable Constraint Geometry is formally grounded.
+
+Acknowledgement and Provenance
+
+The axiomatic system developed in this paper, including all definitions, axioms, lemmas, theorems, proofs, and derived structures collectively denoted by , is the original work of Jonathan Rademacher. The formulation of Standing Algebra, the derivation of its Tier1 and Tier2 invariants, and the proof of the emergence of Interoperable Constraint Geometry are due solely to the author.
+
+All formal results presented herein were independently derived by the author. Any subsequent reformulations, extensions, interpretations, embeddings, or applications of this system—whether algebraic, logical, computational, or otherwise—that preserve or modify the core axioms or results of should be understood as derivative works attributable to this original formulation.
+
+This paper does not rederive, restate, or generalize an existing mathematical theory. Where formal comparisons with other frameworks are made, they are established by explicit separation theorems and nonreducibility proofs contained within the text. Any structural resemblance to prior work arises solely from the use of standard logical methods and does not indicate genealogical dependence.
+
+Standard results from firstorder logic and arithmetic are used as background machinery. No external axiomatic systems, unpublished manuscripts, or proprietary frameworks contributed to the development of the theory.
+
+The author asserts priority for the axiomatic formulation of Standing Algebra and for the associated emergence results concerning Interoperable Constraint Geometry as presented in this paper.

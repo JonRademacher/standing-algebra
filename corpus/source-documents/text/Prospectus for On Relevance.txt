@@ -1,0 +1,274 @@
+# Prospectus for On Relevance
+
+- Original attachment: `2b2f0aa4-dbfa-431e-92df-5cb9c43c8869-Prospectus for On Relevance.docx`
+- Original SHA-256: `6c26fabcd62e1f3e0ab56716105143fdf191b66c47253a576c3fbb48fc596295`
+- Extraction: paragraph text in document order from `word/document.xml`; visual layout, images, and non-text objects may not be represented. The retained DOCX is authoritative.
+
+Prospectus for On Relevance: The Social Physics of Pluralism
+
+Brief Description
+
+On Relevance develops a unified structural framework for evaluating standing, legitimacy, coordination, and autonomy across all domains of pluralist society. It is not a normative doctrine but a metaparadigmatic analytic engine that identifies the structural constraints any claim, action, institution, or system must satisfy in order to bind diverse agents without domination. The framework is built from foundational axioms of interaction, derivative standing, and symmetry, from which it derives a series of structural laws analogous to principles of thermodynamics or systems theory. These tools allow readers to diagnose when authority becomes domination, when coordination fails, and when repair or redesign is required.
+
+The book’s approach is rigorously crossdomain. It applies the same portable analytic mechanics to perception, morality, language, politics, economics, ecology, technology, identity, culture, science, conflict, and global concerns. Its pedagogy emphasizes rerunnability, symmetry, reparability, and standingevaluation, giving readers a method they can use across disciplines. The result is a coherent structural grammar for pluralist coordination that is intellectually ambitious while remaining clear, accessible, and practically applicable for multiple fields.
+
+Outstanding Features
+
+A unified analytic engine (Coupling → Relevance → Autonomy Impact → Standing Evaluation → Legitimate Constraint → Repair) usable across all domains without metaphysical assumptions.
+
+Foundational axioms and structural laws giving philosophy a rigor analogous to frameworks in systems theory, engineering, and physics.
+
+A crossdomain architecture spanning perception, morality, politics, ecology, economics, technology, identity, science, conflict, and global history.
+
+A valueneutral, nonmoralized method grounded in structural constraints rather than doctrine, ideology, or tradition.
+
+A hierarchy of autonomyimpact that resolves conflicts between claims by structural necessity instead of subjective values.
+
+Reconstruction-focused design: emphasizes repair, restoration, corrigibility, and longterm system stability.
+
+Full glossary, appendices, and quick-reference sections making the framework teachable and operational.
+
+Original contributions to standing theory, legitimacy, non-domination, autonomy, and pluralist coordination.
+
+Competition
+
+Closest domain relatives (but not true competitors):
+
+Philip Pettit — Republicanism / Just Freedom
+Strength: strong theory of non-domination.
+Weakness: domain-bound (political), lacks cross-domain portability; relies on moral-political commitments.
+
+Gerald Gaus — The Order of Public Reason
+Strength: pluralist structure for public justification.
+Weakness: tied to moral justificatory liberalism; does not generalize to perception, technology, science, identity, or ecology.
+
+John Rawls — A Theory of Justice / Political Liberalism
+Strength: foundational for political liberal theory.
+Weakness: normative platform-dependent; cannot function as a structural engine.
+
+Amartya Sen — The Idea of Justice
+Strength: capability-based analysis of injustice.
+Weakness: not a structural theory of legitimacy; lacks cross-domain analytic formalism.
+
+Luciano Floridi — The Philosophy of Information
+Strength: information-centric ontology and ethics.
+Weakness: metaphysical commitments; does not provide standing/legitimacy mechanics.
+
+Daniel Dennett — Intentional systems, cognitive scaffolding
+Strength: structural-functional insights.
+Weakness: not a social-coordination framework or legitimacy engine.
+
+Elinor Ostrom — Governing the Commons
+Strength: empirical grounding, multi-level governance.
+Weakness: domain-limited (commons governance), lacks axiomatic generality.
+
+How On Relevance differs
+
+It is not a political theory, moral theory, or institutional theory.
+
+It is a structural meta-framework capable of analyzing all domains symmetrically.
+
+It provides a single rerunnable engine for legitimacy across systems of any type.
+
+It avoids metaphysical, ethical, or ideological commitments.
+
+It unifies perception, agency, autonomy, language, and social systems under one analytic grammar.
+
+Why another book is needed
+
+No existing work provides:
+
+an axiomatic structural basis for legitimacy
+
+cross-domain standing analysis
+
+a repair-based model of nondomination
+
+a unified formalism connecting perception, coordination, and institutional design
+
+Thus, this book fills a structural gap across multiple disciplines simultaneously.
+
+Apparatus
+
+The book includes:
+
+Case analyses across domains (politics, economics, ecology, technology, conflict, ritual).
+
+A glossary of key structural terms.
+
+Appendices formalizing axioms, structural laws, analytic equations, and hierarchy-of-impact.
+
+Quick-reference sheets for applying the analytic engine.
+
+Footnotes and cross-domain examples.
+
+No supplemental lab manuals, though online supplementary diagrams could be added upon request.
+
+5Audience
+
+Primary scholarly audiences:
+
+Philosophy (political philosophy, moral philosophy, epistemology, meta philosophy)
+
+Cognitive science and perception studies
+
+Social and political theory
+
+Complexity science and systems theory
+
+Science and technology studies (STS)
+
+Institutional design, law, governance
+
+Information theory, AI ethics, computational social science
+
+Environmental studies and ecological governance
+
+Secondary audiences:
+
+Interdisciplinary researchers
+
+Graduate students
+
+Policy analysts
+
+Designers of institutions, legal frameworks, or social systems
+
+Pedagogical character:
+Rigorous but accessible; primarily descriptive/structural rather than mathematical.
+No prerequisites beyond familiarity with conceptual analysis.
+
+Authors
+
+Jonathan Rademacher is an independent philosopher developing structural frameworks for legitimacy, autonomy, and pluralist coordination. His work draws on systems analysis, cognitive science, political theory, and epistemology to generate cross-domain structural tools for evaluating standing and non-domination. He has produced extensive foundational axioms, structural laws, and analytic formalism in On Relevance, integrating insights across perception, morality, technology, identity, conflict, and global history.
+
+He is particularly suited to write this work due to its reliance on conceptual synthesis, cross-disciplinary integration, and structural rigor — areas aligned with his longstanding personal research trajectory.
+
+Market Considerations
+
+Who will buy this book?
+
+Scholars of political philosophy, social theory, and meta philosophy
+
+Cognitive scientists and systems theorists
+
+Interdisciplinary researchers in STS, AI ethics, governance
+
+University libraries
+
+Graduate seminars in political theory, complexity, social systems, or meta philosophy
+
+What new information does it offer?
+
+A unified structural method for legitimacy and nondomination
+
+Frameworks applicable across multiple disciplines
+
+Axiomatic constraints on coordination across pluralist societies
+
+Tools for diagnosing system fragility, coercion, asymmetry, and failure
+
+Estimated market size
+
+High academic market: 2,000–5,000 copies over several years
+
+Course adoption: moderate, especially in interdisciplinary programs
+
+Long tail potential due to foundational character
+
+Promotable channels
+
+APA divisions
+
+Cognitive Science Society
+
+International Association for Philosophy of Law and Social Philosophy (IVR)
+
+Society for Philosophy and Technology
+
+Complex Systems Society
+
+Status of the Book
+
+Portion completed: ~85% draft
+
+Expected completion: Revision-ready upon request
+
+Estimated length: 200,000 words
+
+Figures: Conceptual diagrams and figures 3-4 (more available upon editorial discretion)
+
+Supporting materials: A Practical Guide to On Relevance (Quick Start Guide), Why Being Right Isn’t Enough (Companion mini-book), Establishing Coordination without Domination (Printable Flow Chart), Symmetry, Standing, and Structural Stability (Journal Length Article)
+
+9. Reviewers
+
+Suggested reviewers, with no conflicts of interest:
+
+Philip Pettit (Princeton/ANU) — non-domination theory
+
+Elizabeth Anderson (Michigan) — democratic equality & structural justice
+
+Christian List (LSE) — agency, group agency, social choice
+
+Joseph Heath (Toronto) — rational choice, social philosophy
+
+Michael Strevens (NYU) — explanation, epistemic structure
+
+Brian Skyrms (UC Irvine) — evolutionary game theory
+
+Nir Eyal (Harvard) — structural ethics and public health
+
+Wendy Salkin (Stanford) — standing, representation, legitimacy
+
+Table of Contents (Complete and Detailed)
+
+Foundational Axioms and Structural Laws
+
+Preface
+
+Introduction
+
+Part I — Standing and Constraint: Clearing the Ground for Evaluation
+
+I — Foundations
+II — About Perception
+III — About Deity
+IV — About Morality
+A Measure Under Its Own Constraints
+
+Part II — Domain Enrichment: Scale, Time, and Coordination
+
+V — About Language and Communication
+VI — About Politics
+VII — About Resources, Ecology, & Environment
+VIII — About Economics
+IX — About Technology
+Structural Warning
+
+Part III — Internalization & Inheritance: Across Minds and Societies
+
+X — About Identity and Psychology
+XI — About Culture, Ritual, and Tradition
+XII — About Institutions of Science and Knowledge
+XIII — About Conflict, Violence, Collective Harm, and War
+A Structural Horizon
+
+Part IV — Reconstruction: Global Pluralism and the Long Arc of Time
+
+XIV — Global Concerns
+XV — About Time, Memory, History, and Legacy
+XVI — Comparison, Open Problems, and Future Work
+
+Appendix A
+
+Appendix B
+
+Glossary
+
+Quick Reference
+
+Author Contributions
+
+Footnotes
+
+Critical & Skeptical Readings

@@ -12,6 +12,7 @@ from continuity_lib import ROOT, git_value, load_json_yaml
 DEFAULT_MAX_CHARS = 24000
 DEFAULT_INPUTS = (
     "continuity/CURRENT_STATE.md",
+    "manifests/CORPUS_MANIFEST.yaml",
     "manifests/CURRENT_CHECKPOINT.yaml",
     "kernel/KERNEL_CURRENT.md",
     "kernel/INVARIANTS.md",
@@ -76,6 +77,21 @@ def build_bundle(root: Path, max_chars: int = DEFAULT_MAX_CHARS) -> str:
 
 
 def _render_input(root: Path, relative: str, path: Path) -> str:
+    if relative == "manifests/CORPUS_MANIFEST.yaml":
+        corpus = load_json_yaml(path)
+        lines = [
+            f"- Registered sources: {len(corpus.get('sources', []))}",
+            "- User-supplied source documents:",
+        ]
+        for source in corpus.get("sources", []):
+            if source.get("kind") != "user_supplied_research_document":
+                continue
+            lines.append(
+                f"  - {source['title']}: original `{source['path']}`, "
+                f"readable extraction `{source.get('text_path', 'not available')}`."
+            )
+        lines.append("- Hashes and full provenance are recorded in the source manifest.")
+        return "\n".join(lines)
     if relative != "manifests/CURRENT_CHECKPOINT.yaml":
         return path.read_text(encoding="utf-8").strip()
     checkpoint = load_json_yaml(path)

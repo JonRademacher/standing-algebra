@@ -1,0 +1,664 @@
+# Legitimacy Philosophy for On Relevance
+
+- Original attachment: `b15dc6c9-669d-4f24-b378-ee33a061a552-Legitimacy Philosophy for On Relevance.docx`
+- Original SHA-256: `03d54e8713e61c664407e7bd2fb3c022f1259359aaba904373ee937e51d3cb51`
+- Extraction: paragraph text in document order from `word/document.xml`; visual layout, images, and non-text objects may not be represented. The retained DOCX is authoritative.
+
+On Relevance: Why Legitimate Coordination Cannot Be Reduced to Optimization
+
+April 2026
+
+Abstract
+
+This paper addresses a persistent problem in political and social philosophy: how coordination can be legitimate in plural systems where no final authority is available, accepted, or justifiable. Existing approaches—whether grounded in optimization, aggregation, consensus, procedure, or authority—repeatedly fail under conditions of deep and durable disagreement. This failure, the paper argues, is not contingent or merely practical, but structural.
+
+The central claim is that relevance, rather than preference, value aggregation, or outcome selection, is the correct organizing concept for legitimate coordination under pluralism. Relevance is not treated as a matter of salience, moral priority, or epistemic correctness. Instead, it is developed as a structural property of constraint systems: a constraint is relevant if and only if it can bind plural agents without presupposing authority, privileging a standpoint, or collapsing coordination into outcome selection.
+
+The paper advances a nonselective account of legitimacy, showing that legitimate coordination operates through constraint filtering rather than decision closure. It argues that constraints are legitimate only insofar as they preserve standing, respect symmetry, avoid escalation, and remain compatible with nonselection. Any constraint that selects a unique outcome thereby reintroduces final authority and forfeits legitimacy under plural conditions.
+
+This work is strictly philosophical in method and scope. It does not present a formal system or computational model. However, it is written as part of an intentional chain of validation. The arguments developed here provide the conceptual and normative foundation for a separate formal axiomatization—Standing Algebra—which demonstrates that the structural commitments defended philosophically in this paper entail nondeterminacy and rule out outcome selection as a matter of formal consequence. Together with the broader monograph On Relevance: The Social Physics of Pluralism, this paper occupies an intermediate position: it neither asserts philosophical claims without structural discipline nor presents formal results without interpretive grounding.
+
+The contribution of this paper is therefore twofold. Substantively, it offers a rigorous account of relevance as the structural basis of legitimacy without resolution. Methodologically, it shows why formalization is necessary to secure such claims against equivocation, while also demonstrating why formalization alone is insufficient without philosophical interpretation. The result is a framework that explains not how plural systems should be resolved, but why legitimate coordination is possible only without resolution at all.
+
+Keywords: relevance; legitimacy; pluralism; coordination without authority; non-domination; constraint-based coordination; non-selection; political philosophy
+
+Categories & Areas of Contribution: Political Philosophy; Social Philosophy; Philosophy of Law; Normative Ethics (foundational); Philosophy of Social Science; theories of legitimacy and authority; pluralism and coordination; structural accounts of normativity
+
+1. Introduction: The Problem of Relevance in Plural Systems
+
+A persistent problem confronts any attempt to theorize coordination in plural systems: how can collective action be constrained without collapsing into domination? The problem arises wherever multiple agents, institutions, or normative perspectives coexist without a final authority capable of unilaterally resolving disagreement. It is familiar in political philosophy, social theory, institutional design, and ethics, but it also appears—often implicitly—in discussions of governance, distributed decisionmaking, and coordination under conditions of persistent plurality.
+
+Philosophical responses to this problem have traditionally taken one of several familiar forms. Some appeal to aggregation or optimization, treating coordination as a matter of maximizing a common metric such as welfare, preference satisfaction, or utility (e.g., Bentham 1789; Arrow 1951; Sen 1970). Others appeal to consensus or deliberation, aiming to ground legitimacy in agreement reached through procedural means (e.g., Habermas 1996; Rawls 1993). Still others rely on authority—formal or informal—to terminate disagreement and enforce compliance (Weber 1922; Raz 1986). Despite their differences, these approaches share a common structural assumption: that legitimate coordination ultimately requires a mechanism capable of selecting a determinate outcome.
+
+Yet this assumption repeatedly fails in genuinely plural contexts. Optimization frameworks presuppose a commensurable value scale that many agents reject. Consensus models struggle under conditions of deep disagreement or asymmetric power. Authoritybased solutions reintroduce precisely the domination they are meant to resolve. The result is a familiar pattern: coordination mechanisms that function well under idealized conditions become unstable, coercive, or exclusionary when applied to real plural systems.
+
+This paper argues that these failures are not merely ethical or political in nature, but structural. The underlying problem is not that we have chosen the wrong values, procedures, or authorities, but that we have misunderstood the role that relevance plays in legitimate coordination. Philosophical discussions routinely invoke relevance—speaking of relevant reasons, relevant interests, relevant constraints, or relevant considerations—but rarely treat it as an object of analysis in its own right. As a result, relevance is often smuggled in implicitly through background assumptions about preference, priority, or authority.
+
+The central claim advanced here is that relevance is neither a subjective matter of salience nor a moral ranking of considerations. Rather, relevance is a structural property of constraint systems: it concerns which constraints can legitimately bind plural agents without presupposing a final decision authority. When relevance is treated as a matter of selection—of choosing which outcome, policy, or norm should prevail—it collapses back into the very forms of domination it seeks to avoid. Legitimate coordination, by contrast, operates by filtering impermissible actions rather than selecting a uniquely correct one.
+
+This distinction between filtering and selection is subtle but decisive. Philosophical accounts of legitimacy often oscillate between procedural justification and substantive outcomes, but both approaches typically assume that legitimacy culminates in a determinate resolution. The alternative developed here is nonteleological: legitimacy constrains what may not be done, without mandating what must be done. This structure explains why plural coordination can be stable without consensus, optimization, or authoritative command—and why attempts to impose such mechanisms repeatedly generate conflict and resistance.
+
+The concept of relevance plays a crucial role in articulating this structure. Relevant constraints are those that can be applied symmetrically, without escalation, and without privileging any agent as a final arbiter. Irrelevant constraints, by contrast, are those that derive their force only by presupposing authority, aggregation, or preference dominance. The task of a theory of legitimate coordination is therefore not to rank outcomes, but to distinguish structurally relevant constraints from irrelevant ones.
+
+This paper develops that task philosophically. It does not present a mathematical formalism, nor does it attempt to resolve concrete political disputes. Instead, it offers a conceptual framework that clarifies why certain coordination strategies fail in plural systems and why others—often dismissed as indecisive or incomplete—exhibit a distinctive form of legitimacy. A separate formal treatment demonstrates that these claims can be made precise and nontrivial; the present paper explains why such formalization is necessary, and what philosophical problem it is meant to address.
+
+The argument proceeds by isolating relevance as the central organizing concept for legitimate coordination, examining why traditional tools systematically misfire in plural contexts, and articulating a nonselective account of constraint that preserves plural standing without invoking final authority. In doing so, it aims to bridge the gap between philosophical analysis and formal structure, showing how each illuminates the other without collapsing into reductionism.
+
+2. What Relevance Is Not
+
+Any attempt to develop a philosophical account of relevance must begin by disentangling the concept from a set of familiar but misleading associations. In ordinary philosophical usage, relevance is often treated as a loose qualifier—what considerations matter, which reasons count, or which factors should be taken seriously in deliberation. As a result, relevance is frequently absorbed into broader frameworks of value, preference, or justification without being examined as a structural concept in its own right. This section argues that such assimilations obscure the distinctive role relevance plays in problems of plural coordination.
+
+2.1 Relevance Is Not Subjective Salience
+
+A common tendency is to equate relevance with what agents happen to find salient or motivating. On this view, considerations are relevant insofar as they attract attention, shape deliberation, or influence choice. While this understanding plays a role in moral psychology and theories of practical reasoning (e.g., Williams 1981; Scanlon 1998), it is inadequate for the problem at hand.
+
+Subjective salience varies across agents and contexts. What one agent finds compelling another may dismiss entirely. If relevance were reducible to salience, then plural coordination would collapse into a descriptive account of competing attentional economies. No constraint could claim legitimacy beyond the contingent distribution of interests or concerns. Yet coordination problems persist precisely where salience diverges: where agents disagree not only about outcomes, but about what considerations should matter at all.
+
+Moreover, saliencebased accounts cannot explain why certain constraints retain their force even when they are inconvenient, unpopular, or ignored. The persistence of claims about fairness, symmetry, or nondomination in plural contexts suggests that relevance cannot be exhausted by psychological or phenomenological prominence.
+
+2.2 Relevance Is Not Preference Weighting or Aggregation
+
+A second temptation is to treat relevance as a matter of preference weighting: considerations are relevant insofar as they contribute to the maximization of some aggregate measure, whether utility, welfare, or preference satisfaction. This approach is most familiar from utilitarian and social choice traditions (Bentham 1789; Arrow 1951; Sen 1970).
+
+While aggregation frameworks offer powerful tools for decisionmaking under idealized conditions, they presuppose a level of commensurability that plural systems often lack. More importantly for present purposes, they implicitly resolve the question of relevance by fiat: considerations are relevant if and only if they can be assigned a weight within the aggregative scheme. Constraints that resist quantification—or that challenge the legitimacy of the scheme itself—are rendered irrelevant by definition.
+
+This move obscures a deeper issue. The legitimacy of a coordination mechanism cannot be established by the same aggregation procedure it employs, on pain of circularity. When agents contest not only outcomes but the grounds on which outcomes are chosen, aggregation ceases to be a neutral arbiter. Relevance, in this context, cannot be reduced to contribution toward a maximand without presupposing the very authority that is in question.
+
+2.3 Relevance Is Not Moral Priority or Value Ranking
+
+Philosophical ethics often treats relevance as a function of moral priority: some reasons are relevant because they track more fundamental values, rights, or duties. Deontological and contractualist traditions, for example, emphasize the moral weight of certain constraints independently of aggregate outcomes (Kant 1797; Rawls 1971; Scanlon 1998).
+
+Although such accounts correctly resist reductive aggregation, they typically reintroduce selection at a different level. To say that one value has priority over another is to assert a ranking that determines which considerations ultimately govern action. In plural contexts, however, disagreement frequently concerns precisely these priority relations. Appeals to moral ranking risk reinstating a substantive authority—moral rather than political—that plural agents may not share.
+
+This does not render moral reasoning irrelevant, but it does indicate that moral priority cannot by itself ground a general theory of legitimate coordination. Relevance, as employed here, concerns the legitimacy of constraints prior to their moral evaluation: which constraints may be imposed without presupposing agreement on contested value hierarchies.
+
+2.4 Relevance Is Not Procedural Consensus
+
+Deliberative and procedural accounts of legitimacy often attempt to sidestep substantive disagreement by grounding relevance in fair process. On this view, considerations are relevant if they survive idealized deliberation or could be accepted by all under suitable conditions (Habermas 1996; Rawls 1993).
+
+Such accounts make an important contribution by emphasizing symmetry and reciprocity, but they face a familiar difficulty: consensus is itself a demanding outcome. In conditions of deep, persistent pluralism, agreement on procedures is no easier to secure than agreement on outcomes. When deliberation fails to converge, proceduralism must either tolerate indeterminacy or introduce mechanisms to force resolution—thereby reintroducing authority.
+
+The problem is not that consensus is undesirable, but that it cannot serve as the general criterion of relevance without excluding precisely those cases where legitimacy is most contested. Relevance must therefore be defined independently of convergence.
+
+2.5 Relevance Is Not Epistemic Correctness
+
+Finally, relevance is sometimes treated as a function of epistemic status: considerations are relevant insofar as they track truth, evidence, or rational belief (e.g., Goldman 1986). While epistemic norms are indispensable for inquiry, they do not resolve the problem of coordination under normative disagreement. Agents may agree on the facts and still disagree fundamentally about what constraints are legitimate.
+
+Epistemic correctness can inform coordination, but it cannot determine relevance where the dispute concerns authority, standing, or the permissibility of imposing constraints on others.
+
+2.6 Interim Conclusion
+
+The foregoing distinctions are not merely terminological. They indicate that relevance, as it figures in problems of plural coordination, cannot be reduced to salience, aggregation, moral ranking, procedural consensus, or epistemic correctness. Each of these approaches implicitly resolves the problem of coordination by selecting a determinate standard—whether psychological, quantitative, moral, procedural, or epistemic—that adjudicates disputes.
+
+The central claim of this paper is that such selection is precisely what fails in plural systems without final authority. Relevance must therefore be understood structurally: in terms of which constraints can bind agents without presupposing agreement on values, preferences, procedures, or truths. The next section turns to this structural problem directly, examining how coordination is possible at all when selection is unavailable.
+
+3. Coordination Without Final Authority
+
+The problem of coordination in plural systems becomes intractable precisely at the point where final authority is unavailable, contested, or illegitimate. By final authority I mean any mechanism—procedural, substantive, or institutional—that is taken to have the standing to terminate disagreement by selecting a determinate outcome that binds all parties. Such authority may take the form of a sovereign decision, an optimization criterion, a moral ranking, or a procedural endpoint. What unifies these forms is not their content but their function: each purports to resolve coordination by rendering further contestation irrelevant.
+
+This section argues that when final authority is absent, illegitimate, or structurally unavailable, coordination does not merely become more difficult—it changes kind. Under such conditions, any theory that presupposes outcome selection as the endpoint of legitimacy is structurally misapplied. The task is therefore not to identify a better selector, but to reconceive coordination in nonselective terms.
+
+3.1 The Structural Role of Final Authority
+
+In canonical coordination models, disagreement is treated as a temporary obstacle rather than a constitutive feature. Whether the framework is utilitarian, contractualist, deliberative, or institutional, disagreement is expected to be resolved—if not in practice, then in principle—by appeal to some authoritative standard. This assumption is often left implicit, but its role is decisive.
+
+Consider a simple coordination problem: multiple agents must act under shared constraints, but disagree about priorities, risks, or values. A final authority functions by imposing closure on this disagreement. It declares that one outcome, policy, or rule is to be enacted, thereby rendering alternative possibilities practically irrelevant. The authority may justify itself by reference to welfare, fairness, consent, expertise, or legality, but its legitimacy ultimately depends on its capacity to end deliberation.
+
+The difficulty is that in plural systems, the legitimacy of the authority itself is frequently what is at issue. When agents contest not merely the outcome but the right of any mechanism to decide for them, appeals to final authority become questionbegging. This is not a contingent political problem; it is a structural one. Any appeal to authority presupposes the very legitimacy it seeks to establish.
+
+3.2 Why Selection Fails Without Authority
+
+If coordination is understood as the selection of a determinate outcome, then legitimacy requires a justification for that selection. In the absence of final authority, no such justification can be noncircular. This can be shown by a simple argumentative structure.
+
+Suppose a coordination mechanism selects an outcome . The selection is legitimate only if there is a reason that justifies treating as binding. If itself depends on acceptance by the affected agents, then disagreement about reopens the problem. If does not depend on such acceptance, then it functions as an external authority imposed on dissenting agents. In either case, selection fails to provide legitimacy without either infinite regress or domination.
+
+This dilemma is not resolved by refining the selection criterion. More sophisticated aggregation, more inclusive deliberation, or more nuanced moral reasoning merely relocates the point at which authority is asserted. The problem is not epistemic inadequacy or procedural imperfection; it is that selection itself presupposes a standpoint from which contestation can be legitimately closed.
+
+To deny this is to claim that outcomes can be legitimately imposed on agents even when they reject both the outcome and the authority of the mechanism that produced it. Such a claim is difficult to sustain without embracing a strong form of domination.
+
+3.3 Constraint Without Selection
+
+The foregoing argument does not imply that coordination without authority is impossible. It implies that coordination must be understood differently. In particular, it requires abandoning the assumption that legitimacy culminates in the selection of a unique outcome.
+
+An alternative conception begins with a modest observation: coordination often proceeds not by mandating what must be done, but by ruling out what may not be done. Traffic rules, constitutional limits, professional norms, and many informal social constraints function in this way. They restrict permissible action without specifying a single correct choice among the remaining options.
+
+What is crucial is that such constraints can be legitimate even when agents disagree about which permissible option is best. Their legitimacy derives not from outcome selection but from their structural properties: they apply symmetrically, they do not escalate domination, and they do not presuppose a privileged standpoint from which disagreement is resolved.
+
+This distinction between filtering and selecting is central. Filtering removes impermissible actions from consideration; selection elevates one permissible action above all others. Filtering can occur without final authority; selection cannot.
+
+3.4 The Minimal Conditions of NonDominating Coordination
+
+If coordination without final authority is to be possible, constraints must satisfy certain minimal conditions. These conditions are not moral ideals but structural requirements. Violating them reintroduces authority by stealth.
+
+First, constraints must preserve the standing of agents as participants in coordination rather than as objects of control. A constraint that binds some agents while exempting others without justification functions as an assertion of hierarchy.
+
+Second, constraints must be symmetric with respect to relevant features. Where agents are similarly situated, differential constraint application requires independent justification; otherwise, it amounts to covert selection.
+
+Third, constraints must be nonescalatory. A constraint that systematically amplifies power asymmetries or forecloses future contestation reinstates domination over time, even if it appears neutral in isolation.
+
+Finally, constraints must be compatible with nonselection. If the application of a constraint implicitly determines a unique outcome, then it functions as a selector regardless of how it is framed.
+
+These conditions are weak. They do not require consensus, shared values, or agreement on outcomes. Yet denying any of them commits one to positions that undermine plural coordination altogether.
+
+3.5 Interim Conclusion: Coordination Reconceived
+
+The argument of this section establishes a negative and a positive claim. Negatively, it shows that outcomeselecting coordination mechanisms cannot be legitimate in plural systems without final authority. Positively, it identifies a nonselective form of coordination grounded in constraint filtering rather than decision closure.
+
+The relevance of constraints, on this view, is not determined by their contribution to optimal outcomes or their acceptance by all parties. It is determined by whether they can operate without presupposing authority—whether they bind without ruling. The next section develops this notion of relevance more fully, arguing that it is best understood as a structural property of constraint systems rather than as a derivative of value, procedure, or preference.
+
+4. Standing, Symmetry, and the Minimal Conditions of Legitimacy
+
+If coordination without final authority is to be possible, then the legitimacy of constraints cannot depend on outcome selection. The previous section established that selection presupposes authority and therefore cannot ground legitimacy in plural systems. What remains to be explained is how constraints can nonetheless bind agents without collapsing into domination. This section argues that legitimacy requires a minimal structural framework grounded in standing and symmetry. These concepts do not specify outcomes, values, or procedures; rather, they determine the conditions under which constraints may be imposed at all.
+
+4.1 Standing as a Structural Concept
+
+The notion of standing is frequently invoked in moral and political philosophy, often in connection with rights, recognition, or moral worth (e.g., Honneth 1995; Darwall 2006). In such contexts, standing is typically treated as a normative status conferred by moral agency, citizenship, or membership. While these accounts capture important ethical dimensions, they risk obscuring a more basic structural role that standing plays in coordination.
+
+In the present context, standing is not a moral accolade or a metaphysical property. It is a minimal condition for participation in constraint. To say that an agent has standing is simply to say that constraints purporting to bind that agent must be justifiable to that agent, rather than merely about them. An agent without standing is not coordinated with; they are managed, controlled, or overridden.
+
+This distinction is structural rather than evaluative. One need not assume that all agents are equal in capacity, virtue, or contribution. What matters is that constraints which treat some agents as outside the justificatory scope of coordination cease to be constraints among peers and instead become instruments of domination.
+
+Any theory that denies this minimal notion of standing must accept that some agents may be bound by constraints whose justification does not concern them at all. Such a view effectively abandons coordination in favor of control.
+
+4.2 Symmetry and the Rejection of Privileged Position
+
+Standing alone is insufficient to secure legitimacy. A constraint may purport to address all agents while still applying to them asymmetrically in ways that cannot be justified without appeal to authority. This is where symmetry becomes indispensable.
+
+Symmetry, as used here, does not require identical treatment in all respects. Rather, it requires that agents who are relevantly similar be subject to the same justificatory standards. Where differential treatment occurs, the burden of justification lies with those who would introduce asymmetry.
+
+This idea has deep roots in political philosophy. Rawls’s insistence on the moral arbitrariness of natural and social contingencies (Rawls 1971) and Pettit’s account of nondomination as the absence of arbitrary power (Pettit 1997) both point toward symmetry as a condition of legitimacy. What distinguishes the present account is its refusal to ground symmetry in any particular moral doctrine. Symmetry is not justified because it is fair, but because asymmetry without justification functions as covert selection.
+
+When a constraint treats one agent as an exception, an enforcer, or a final arbiter without independent justification, it implicitly assigns that agent a privileged position. This privilege performs the same structural role as final authority: it terminates contestation by fiat. Symmetry, by contrast, keeps contestation open without rendering coordination impossible.
+
+4.3 Why Asymmetry Reintroduces Authority
+
+It might be objected that asymmetry is unavoidable in practice. Some agents have more power, expertise, or responsibility than others. While this is undoubtedly true, it does not undermine the structural claim being made. The question is not whether asymmetries exist, but whether they can be treated as legitimating without reintroducing authority.
+
+Asymmetry becomes problematic when it is used to justify constraints that bind others without reciprocal exposure to constraint. An agent who can impose constraints while remaining exempt from them occupies a position functionally equivalent to final authority. Even if this position is justified by appeal to expertise or efficiency, it still closes the space of contestation.
+
+To deny this is to accept that legitimacy can arise from unilateral imposition. That position is difficult to reconcile with any account of plural coordination that takes disagreement seriously.
+
+4.4 Minimal Conditions of Legitimate Constraint
+
+From the foregoing considerations, several minimal conditions for legitimacy can be articulated. These conditions are intentionally weak. They do not determine which constraints should be adopted, only which kinds of constraints can plausibly claim legitimacy in plural systems.
+
+First, constraints must preserve standing. They must treat affected agents as participants in coordination rather than as mere objects of regulation.
+
+Second, constraints must respect symmetry. Where agents are relevantly similar, constraints must apply under the same justificatory standards. Any asymmetry must be independently defensible without appeal to authority.
+
+Third, constraints must be nonescalatory. A constraint that systematically amplifies power differentials or forecloses future contestation undermines its own legitimacy over time.
+
+Fourth, constraints must be compatible with nonselection. If the application of a constraint uniquely determines an outcome, then the constraint functions as a selector regardless of how it is framed.
+
+These conditions do not guarantee agreement or harmony. They guarantee something more modest and more fundamental: that coordination does not collapse into domination.
+
+4.5 Why These Conditions Are Difficult to Reject
+
+The force of these conditions lies in their minimality. To reject the preservation of standing is to accept coordination without justification. To reject symmetry is to accept arbitrary privilege. To reject nonescalation is to accept domination over time. To reject nonselection is to reintroduce final authority.
+
+Each rejection carries a philosophical cost that most theories of legitimacy are unwilling to pay explicitly. This explains why many coordination frameworks implicitly rely on standing and symmetry while failing to theorize them directly. By making these conditions explicit, the present account exposes the structural commitments that legitimacy already presupposes.
+
+4.6 Interim Conclusion: Legitimacy Without Resolution
+
+Legitimacy in plural systems does not consist in identifying the right outcome or the correct authority. It consists in maintaining a structure of constraint that preserves standing, respects symmetry, avoids escalation, and refrains from selection. These conditions do not resolve disagreement; they make disagreement compatible with coordination.
+
+The concept of relevance can now be clarified. Relevant constraints are those that satisfy these minimal conditions. Irrelevant constraints are those that derive their force only by smuggling in authority, privilege, or selection. The next section develops this account of relevance explicitly, arguing that relevance is best understood as a structural property of constraint systems rather than as a derivative of value, procedure, or preference.
+
+5. Why Legitimate Constraint Cannot Select
+
+The preceding sections have established two claims. First, in plural systems lacking final authority, legitimacy cannot be grounded in outcome selection without presupposing the very authority under dispute. Second, legitimate constraints must preserve standing, respect symmetry, avoid escalation, and remain compatible with nonselection. This section draws out the full implications of those claims. It argues that any constraint that selects a unique outcome thereby ceases to be legitimate under the conditions of plural coordination considered here.
+
+The conclusion is not that selection is always undesirable, but that selection is structurally incompatible with legitimacy when no agent, procedure, or value system has uncontested authority.
+
+5.1 The Distinction Between Constraint and Choice
+
+A pervasive source of confusion in discussions of coordination lies in the conflation of constraint with choice. Constraints restrict what may be done; choices determine what will be done. While these functions often coexist in practice, they are conceptually distinct. The legitimacy of a constraint concerns its permissibility as a binding limitation on action. The legitimacy of a choice concerns its authority as a resolution among alternatives.
+
+This distinction matters because constraints can be legitimate even when the choices made within their bounds are contested. A speed limit constrains behavior without dictating destinations; a constitutional prohibition constrains policy without specifying legislation. In such cases, disagreement persists, but coordination remains possible.
+
+Selection, by contrast, aims at closure. It determines which permissible option prevails and renders alternatives practically irrelevant. Selection therefore performs the decisive function traditionally associated with authority.
+
+5.2 Why Selection Reintroduces Authority
+
+To see why legitimate constraint cannot select, consider what selection entails. To select an outcome is to assert that, among the set of permissible options, one option ought to be enacted and others set aside. This assertion requires justification. In plural systems, any such justification must take one of three forms.
+
+First, it may appeal to preferences or welfare. But as argued earlier, aggregation presupposes commensurability and acceptance of the aggregative rule. Where agents contest either, selection lacks legitimacy.
+
+Second, it may appeal to moral priority. But this requires agreement on contested value hierarchies or normative foundations. Absent such agreement, moral selection functions as imposed authority rather than shared justification.
+
+Third, it may appeal to procedure: the outcome is legitimate because it resulted from a fair process. Yet procedural legitimacy itself depends on acceptance of the procedure as authoritative. Where such acceptance is lacking, the procedure cannot close disagreement without coercion.
+
+In all three cases, selection relies on a standard whose authority is not itself secured by the selection it produces. Selection therefore presupposes authority; it cannot generate it.
+
+5.3 The Illusion of “Soft” Selection
+
+It might be objected that not all selection is coercive. Some selection mechanisms are probabilistic, advisory, or defeasible. Others allow optout or revision. Yet these variations do not alter the underlying structure. Even “soft” selection mechanisms determine which option is treated as operative, thereby marginalizing alternatives.
+
+What matters is not the severity of enforcement but the asymmetry introduced by selection. Once an outcome is selected, agents who dissent are no longer participants in coordination but subjects of implementation. Their standing shifts from coauthors of constraint to objects of decision.
+
+If such a shift is legitimate, then legitimacy must already be established independently of plural contestation. If it is not, then selection remains an imposition regardless of its softness.
+
+5.4 NonSelection as a Structural Requirement
+
+The claim that legitimate constraint cannot select should not be misunderstood as an endorsement of paralysis or indecision. Nonselection does not require that no choices be made; it requires that the legitimacy of constraints not depend on their capacity to determine a unique outcome.
+
+Agents may still choose, negotiate, experiment, or act under uncertainty. What they may not do—without reintroducing authority—is treat the outcome of such processes as binding on others solely by virtue of having been selected.
+
+Nonselection preserves the distinction between permissibility and mandate. Constraints determine the former; authority claims determine the latter. Where authority is unavailable, only permissibility can be legitimized.
+
+5.5 The Structural Consequences of Denying NonSelection
+
+To deny that legitimate constraint must be nonselective is to accept at least one of the following positions.
+
+One may hold that outcomes can be legitimately imposed on dissenting agents without shared justification. This entails endorsing domination.
+
+One may hold that plural coordination requires convergence on a single authority or value system. This entails denying the persistence of pluralism.
+
+One may hold that legitimacy is unnecessary for coordination. This abandons the normative project altogether.
+
+Each position is philosophically costly. The first undermines the distinction between coordination and control. The second contradicts the empirical and normative reality of plural disagreement. The third dissolves the concept of legitimacy into mere effectiveness.
+
+5.6 Interim Conclusion: Filtering Without Closure
+
+The upshot of this analysis is that legitimacy in plural systems cannot be outcomedirective. Legitimate constraints operate by filtering impermissible actions rather than by selecting permissible ones. This filtering preserves standing and symmetry, avoids escalation, and keeps contestation open without collapsing coordination.
+
+The relevance of a constraint, therefore, is not a matter of whether it leads to the best outcome, but whether it can be imposed without selecting an outcome at all. Relevance marks the boundary between constraints that coordinate and constraints that dominate.
+
+The next section develops this idea explicitly, arguing that relevance is best understood as a structural property of constraint systems rather than as a derivative of value, preference, or procedure.
+
+6. Relevance as a Structural Property of Constraint Systems
+
+The preceding sections have established a series of negative results. Relevance is not reducible to salience, aggregation, moral priority, procedural consensus, or epistemic correctness. Legitimate coordination in plural systems cannot culminate in outcome selection without presupposing final authority. Legitimate constraints must preserve standing, respect symmetry, avoid escalation, and remain compatible with nonselection.
+
+What remains is to articulate a positive account of relevance that satisfies these conditions. This section argues that relevance is best understood not as a property of reasons, values, or outcomes, but as a structural property of constraint systems. A constraint is relevant insofar as it can bind plural agents without presupposing authority, privileging a standpoint, or collapsing coordination into selection.
+
+6.1 Why Relevance Cannot Be OutcomeRelative
+
+A natural way to think about relevance is in relation to outcomes: a constraint is relevant if it contributes to better results, prevents harm, or promotes desirable states of affairs. Such outcomerelative accounts are intuitive, but they reintroduce precisely the structure that earlier sections have shown to be illegitimate in plural contexts.
+
+If relevance depends on outcomes, then disagreement about outcomes entails disagreement about relevance. Any attempt to adjudicate such disagreement must appeal to a standard that ranks outcomes—utility, justice, efficiency, or some other criterion. But such ranking functions as a selector, and selection presupposes authority.
+
+Outcomerelative relevance therefore collapses into one of two positions. Either relevance is determined by an authoritative standard, in which case plural agents are bound by a metric they may reject, or relevance is indeterminate, in which case coordination fails. Neither option yields a general account of legitimacy.
+
+Relevance must therefore be independent of outcome ranking.
+
+6.2 Relevance as Constraint Survivability
+
+A more promising approach is to shift attention away from outcomes and toward constraints themselves. Rather than asking which outcomes are relevant, we ask which constraints can be applied without violating the minimal conditions of legitimacy identified earlier.
+
+On this view, relevance is a property of constraints that survive the interaction of plural agents under conditions of standing, symmetry, nonescalation, and nonselection. A relevant constraint is one that can be imposed without requiring agents to accept a final authority, endorse a comprehensive value ranking, or concede privileged status to any participant.
+
+This notion of survivability is structural, not empirical. It does not depend on whether agents actually comply, agree, or endorse the constraint. It depends on whether the constraint can be justified without contradiction under conditions of persistent disagreement.
+
+A constraint that fails this test—because it presupposes authority, introduces asymmetry, or determines a unique outcome—is irrelevant in the present sense, regardless of its moral appeal or practical effectiveness.
+
+6.3 Relevance and the Filtering Function of Constraint
+
+Understanding relevance structurally clarifies the role constraints play in coordination. Relevant constraints function as filters: they remove impermissible actions from the space of possibility without collapsing that space to a single point.
+
+This filtering role explains why relevance is compatible with ongoing disagreement. Agents may disagree deeply about which permissible option should be chosen, yet still recognize the relevance of constraints that exclude domination, coercion, or unilateral imposition.
+
+Filtering differs fundamentally from selection. Selection closes deliberation; filtering bounds it. Selection determines outcomes; filtering determines permissibility. In plural systems without final authority, only the latter can be legitimate.
+
+This distinction also explains why relevance is often experienced as negative rather than positive: relevant constraints tell us what cannot be done, not what must be done. Philosophical discomfort with this negative character has led many theories to overreach, attempting to extract positive directives where only structural limits are available.
+
+6.4 Why Structural Relevance Is NonOptional
+
+It might be objected that treating relevance as a structural property is overly austere—that it abandons the richness of moral and political reasoning. This objection misunderstands the claim. Structural relevance does not replace moral reasoning; it constrains its legitimate use.
+
+Moral arguments, value judgments, and pragmatic considerations all operate within the space of permissible action defined by relevant constraints. What they cannot do, without reintroducing authority, is determine relevance itself. To allow moral reasoning to define relevance is to allow contested value hierarchies to dictate which constraints bind others.
+
+Structural relevance is therefore nonoptional for any theory that takes plural disagreement seriously. Without it, coordination collapses either into domination (when authority is asserted) or into incoherence (when no binding constraints remain).
+
+6.5 Relevance Without Resolution
+
+A striking consequence of this account is that relevance does not resolve coordination problems; it structures them. Relevant constraints do not tell agents what to choose, only what they may not choose if coordination is to remain legitimate.
+
+This feature is often perceived as a weakness. In fact, it is the source of the account’s explanatory power. By refusing to collapse coordination into resolution, structural relevance explains why plural systems can remain stable without consensus, why legitimacy persists despite disagreement, and why attempts to force resolution generate resistance.
+
+The demand that relevance deliver resolution is itself a residue of selectionoriented thinking. Once that demand is abandoned, relevance can be seen for what it is: a boundary condition on legitimate coordination, not a decision procedure.
+
+6.6 Interim Conclusion: Relevance Reconceived
+
+Relevance, as developed here, is neither a psychological phenomenon nor a moral ranking. It is a structural property of constraint systems that determines which constraints can bind plural agents without presupposing authority or collapsing into domination.
+
+Relevant constraints are those that survive under conditions of standing, symmetry, nonescalation, and nonselection. Irrelevant constraints are those that require authority, privilege, or outcome selection to function. This distinction explains why many coordination frameworks fail not because they are poorly designed, but because they misidentify what relevance can legitimately do.
+
+The final section draws together the argument of the paper, clarifying the relationship between this philosophical account of relevance and its formal articulation elsewhere, and explaining why formalization is necessary without being sufficient.
+
+7. Relation to Existing Philosophical Frameworks
+
+The account of relevance developed in this paper does not emerge in isolation. It stands in close proximity to several wellestablished philosophical frameworks concerned with legitimacy, coordination, and collective action. This section clarifies that relationship. The aim is neither to subsume these frameworks nor to refute them wholesale, but to identify a shared structural commitment that limits their applicability in plural systems: reliance on final selection mechanisms.
+
+The present account diverges not at the level of values or aspirations, but at the level of structure. Where many frameworks seek legitimacy through convergence, optimization, or authoritative resolution, the account of relevance developed here explains why such strategies are unstable when plural disagreement is persistent and no final authority is available.
+
+7.1 Liberal Consensus Models
+
+Liberal political philosophy has long sought to reconcile pluralism with legitimacy through the idea of consensus. In its contemporary forms, this strategy often appeals to overlapping consensus, public reason, or shared political values as a basis for binding collective decisions (Rawls 1993; Larmore 1996).
+
+These approaches correctly recognize that legitimacy cannot rest on comprehensive moral agreement. However, they retain a crucial assumption: that consensus, once achieved, can serve as a selector of outcomes. Even when consensus is partial or idealized, it functions to identify a determinate set of norms or policies that are to be treated as authoritative.
+
+The difficulty is that consensus is itself an outcome. In conditions of deep and durable pluralism, consensus is neither guaranteed nor neutral. When consensus fails to materialize, liberal theories must either tolerate indeterminacy or introduce fallback mechanisms—majoritarianism, judicial review, constitutional priority—that reintroduce final authority.
+
+The present account explains this difficulty structurally. Consensus models presuppose that legitimacy culminates in selection, even if selection is delayed or idealized. Relevance, as developed here, does not require convergence. It explains how constraints can bind even when consensus is absent, precisely by refusing to treat consensus as a necessary condition of legitimacy.
+
+7.2 Deliberative Democracy
+
+Deliberative democratic theory shifts the focus from outcomes to procedures, emphasizing the legitimacy of decisions reached through inclusive, reasongiving discourse (Habermas 1996; Cohen 1989). Like consensus models, deliberative approaches aim to avoid domination by grounding authority in mutual justification rather than coercion.
+
+Yet deliberative frameworks face a similar structural limit. Deliberation is oriented toward resolution: the production of a decision, policy, or norm that settles the matter at hand. When deliberation fails to converge, deliberative theory must explain either why continued disagreement is acceptable or how a decision may nonetheless be made.
+
+In practice, this often leads to procedural selection: voting, agenda control, or institutional closure. These mechanisms are justified as secondbest solutions, but they function as selectors all the same. Their legitimacy depends on acceptance of the deliberative procedure as authoritative—a condition that cannot be assumed in plural systems where the procedure itself is contested.
+
+The present account diverges by decoupling legitimacy from deliberative resolution. Deliberation may inform coordination, but it does not determine relevance. Relevant constraints remain binding even when deliberation does not converge, because their legitimacy does not depend on closure.
+
+7.3 Utilitarian and Aggregative Ethics
+
+Utilitarian and socialchoicetheoretic approaches treat coordination as a problem of aggregation: combining individual preferences or welfare measures into a collective outcome (Bentham 1789; Arrow 1951; Harsanyi 1955). These frameworks offer clear decision rules and powerful formal tools.
+
+Their limitation is not moral insensitivity but structural overreach. Aggregation presupposes a common metric and a rule for resolving tradeoffs. When agents reject either, aggregation becomes an imposition rather than a justification. Moreover, aggregation necessarily selects a unique outcome, thereby closing the space of permissible alternatives.
+
+The account of relevance developed here explains why aggregation fails in plural contexts without appealing to moral pluralism alone. The failure is structural: aggregation cannot avoid selection, and selection cannot be legitimate without authority. Relevance therefore cannot be derived from contribution to aggregate value.
+
+7.4 Contractarianism and Hypothetical Agreement
+
+Contractarian theories seek to ground legitimacy in agreement—actual or hypothetical—among rational agents (Hobbes 1651; Gauthier 1986; Scanlon 1998). When agreement is hypothetical, it is often idealized to filter out bias, coercion, or ignorance.
+
+While such idealization clarifies moral intuitions, it does not solve the coordination problem under real plural disagreement. Hypothetical agreement functions as a selector: it identifies which principles or constraints would be chosen under specified conditions and treats those as authoritative.
+
+The difficulty is that agents may reject both the hypothetical conditions and the authority of the resulting selection. The appeal to hypothetical agreement thus shifts the locus of authority rather than eliminating it.
+
+The present account avoids this move. It does not ask which constraints agents would choose under ideal conditions, but which constraints can bind without requiring agents to accept any choice—actual or hypothetical—as authoritative.
+
+7.5 Proceduralism
+
+Proceduralist approaches ground legitimacy in adherence to fair or impartial procedures rather than in substantive outcomes (Nozick 1974; Rawls 1971). This strategy has the advantage of separating legitimacy from correctness.
+
+However, procedures themselves must be selected, maintained, and enforced. When disagreement arises over which procedure is fair, proceduralism faces the same dilemma as other selectionoriented frameworks. Either the procedure is treated as authoritative by fiat, or further procedures are introduced to resolve procedural disagreement, leading to regress.
+
+Structural relevance offers a different perspective. It explains why some procedures are relevant—because they preserve standing, symmetry, and nonselection—without treating procedural outcomes as authoritative resolutions.
+
+7.6 Pragmatism
+
+Pragmatist approaches emphasize practical consequences, experimentalism, and problemsolving over principled justification (Dewey 1927; Rorty 1989). Pragmatism is especially important to address here, because it often resists the demand for final authority explicitly.
+
+Yet pragmatism typically evaluates coordination mechanisms by their effectiveness in resolving problems. Effectiveness, however, is an outcomeoriented criterion. When pragmatist solutions “work,” they do so by settling disputes and enabling coordinated action—that is, by selecting operative outcomes.
+
+The account of relevance developed here explains why pragmatist solutions can be locally successful yet globally unstable. Without structural constraints on selection, pragmatic coordination risks privileging whichever practices happen to dominate, thereby reintroducing authority through success rather than justification.
+
+7.7 Structural Diagnosis
+
+What unifies these diverse frameworks is not a shared moral commitment, but a shared structural assumption: that legitimacy ultimately requires selection. Whether through consensus, deliberation, aggregation, agreement, procedure, or practical success, each framework seeks a mechanism that determines what is to be done.
+
+The present account does not deny the value of these approaches. It explains their limits. In plural systems without final authority, selection cannot ground legitimacy. What can ground legitimacy are constraints that structure coordination without resolving it.
+
+Relevance, understood structurally, marks the boundary between these two modes of coordination.
+
+8. Why Formalization Was Necessary (But Not Sufficient)
+
+The account of relevance developed in this paper has been intentionally philosophical. It proceeds by conceptual clarification, structural diagnosis, and argumentative elimination rather than by technical construction. Nevertheless, the claims advanced here impose a distinctive methodological demand: they require a form of precision that ordinary philosophical discourse struggles to sustain. This section explains why formalization was necessary to complete the argument—while also explaining why formalization alone could not suffice.
+
+The central claim is that the problem of relevance in plural coordination is not merely conceptual, but structural. As such, it generates questions that cannot be resolved solely by appeal to intuition, moral judgment, or discursive refinement. Formalization was required not to replace philosophical reasoning, but to secure its conclusions against precisely the kinds of slippage that plague debates about legitimacy and authority.
+
+8.1 The Limits of Informal Argument
+
+Philosophical arguments about legitimacy often turn on distinctions that are clear in principle but unstable in application. Concepts such as authority, domination, symmetry, and justification are invoked with broad agreement, yet disagreement reemerges when these concepts are applied to concrete cases. One persistent difficulty is that informal reasoning permits unnoticed reintroduction of contested assumptions.
+
+In the present context, the most significant such assumption is selection. Even arguments that explicitly reject authority frequently smuggle selection back in through idealization, procedural closure, or appeals to reasonableness. Because informal discourse allows these moves to pass unnoticed, disagreements about legitimacy often persist without resolution—not because the parties disagree about values, but because they disagree about what the argument has actually committed them to.
+
+Formalization was necessary to prevent this kind of equivocation. By making structural commitments explicit, it becomes possible to show that certain positions are not merely implausible, but internally inconsistent with the rejection of final authority.
+
+8.2 What Formalization Secures
+
+Formalization plays three crucial roles in relation to the philosophical argument advanced here.
+
+First, it forces explicit articulation of assumptions. Claims about symmetry, standing, nonescalation, and nonselection can be stated informally, but only a formal framework can show whether these claims are mutually compatible and whether they jointly entail further consequences.
+
+Second, formalization allows for nonderivability results. One of the central philosophical claims of this paper is that legitimacy does not entail outcome selection. Informally, this claim can always be resisted by proposing ever more refined selection mechanisms. Formalization makes it possible to demonstrate that no selection mechanism of the relevant kind can be derived without introducing additional structure equivalent to authority.
+
+Third, formalization enables independence arguments. By showing that particular constraints are independent—rather than mutually reinforcing by rhetorical association—it becomes possible to identify which commitments are doing the real work in an argument and which are merely habitual.
+
+These functions are not mathematical in spirit; they are philosophical safeguards against overreach.
+
+8.3 Why Formalization Does Not Replace Philosophy
+
+At the same time, formalization is not selfinterpreting. A formal system can demonstrate consistency, independence, or nonderivability, but it cannot determine which structures are philosophically significant. That task belongs to philosophical interpretation.
+
+The formal framework associated with this work does not tell us why standing matters, why symmetry is normatively compelling, or why domination is objectionable. Those claims must be argued philosophically, as they have been in the preceding sections. Formalization can show that certain structures behave in particular ways; it cannot tell us why those behaviors should matter to us.
+
+This asymmetry is essential. Formalization secures philosophical claims against structural error, but philosophy determines which structures are worth securing. To reverse this order would be to mistake technique for justification.
+
+8.4 The Mutual Dependence of Structure and Interpretation
+
+The relationship between this paper and its formal counterpart is therefore one of mutual dependence rather than hierarchy. The philosophical argument identifies a structural problem—relevance under plural disagreement without final authority. Formalization shows that the proposed solution is coherent, nontrivial, and resistant to collapse into selection or domination. The philosophical argument then interprets what that coherence means.
+
+Neither component is dispensable. Without philosophical interpretation, the formal structure would be inert. Without formal constraint, the philosophical argument would remain vulnerable to precisely the evasions it criticizes.
+
+This mutual dependence reflects a more general methodological point. Where philosophical problems concern structure rather than substance—conditions of possibility rather than rankings of value—formalization often becomes unavoidable. The question is not whether to formalize, but whether one does so transparently and with interpretive discipline.
+
+8.5 Formalization as a Test of Sincerity
+
+One final role of formalization deserves emphasis. It functions as a test of philosophical sincerity. Many theories claim to reject authority, domination, or arbitrariness while continuing to rely on mechanisms that reintroduce these features implicitly. Formalization makes such reintroduction visible.
+
+If a theory cannot be formalized without collapsing into selection, then its rejection of authority is rhetorical rather than structural. The necessity of formalization in the present work is therefore diagnostic: it reveals which commitments can be sustained under scrutiny and which cannot.
+
+8.6 Conclusion: Structure Without Reduction
+
+Formalization was necessary because the problem of relevance is structural and because informal reasoning repeatedly conceals structural commitments. Formalization was not sufficient because structure alone does not explain why legitimacy matters, why domination is objectionable, or why plural coordination is worth preserving.
+
+The contribution of this paper is to show how these two modes of inquiry—philosophical and formal—can be brought into alignment without reduction. Relevance is neither a moral intuition nor a technical artifact. It is a structural feature of legitimate constraint in plural systems, one that demands both conceptual clarity and formal discipline.
+
+9. Conclusion: Relevance Without Resolution
+
+This paper began with a familiar but unresolved problem: how coordination can be legitimate in plural systems where no final authority exists, is accepted, or can be justified. The persistence of this problem across political philosophy, ethics, institutional theory, and social coordination is not accidental. It reflects a structural tension that has repeatedly been obscured by attempts to force resolution where resolution is not available.
+
+The argument advanced here has been deliberately narrow and exacting. It has not proposed a new moral theory, decision procedure, or political program. Instead, it has isolated a single concept—relevance—and shown that its mischaracterization lies at the heart of many failures in theories of legitimate coordination. When relevance is treated as a matter of preference, aggregation, moral priority, consensus, procedure, or practical success, coordination collapses either into domination or into incoherence. These failures are not contingent. They follow from the structural role that selection plays in those frameworks.
+
+The central contribution of this paper is to show that relevance must be understood structurally rather than substantively. Relevant constraints are not those that lead to the best outcomes, command agreement, or resolve disagreement. They are those that can bind plural agents without presupposing authority. This requires that constraints preserve standing, respect symmetry, avoid escalation, and remain compatible with nonselection. Constraints that fail these conditions are not merely controversial or unpopular; they are structurally illegitimate in plural systems without final authority.
+
+This conclusion is austere, and intentionally so. It denies that legitimacy can culminate in resolution. It denies that disagreement must be overcome for coordination to occur. It denies that the task of political or moral philosophy is to tell plural agents what they must choose. These denials may initially appear deflationary. In fact, they are explanatory. They account for why so many sophisticated theories of legitimacy continue to fail in practice despite their internal coherence and moral appeal.
+
+The strength of the account offered here lies precisely in its restraint. By refusing to select outcomes, it explains why selection repeatedly reintroduces domination under the guise of justification. By refusing to ground relevance in convergence, it explains why consensus is neither necessary nor sufficient for legitimacy. By refusing to collapse coordination into authority, it preserves the possibility of binding constraint without command.
+
+At the same time, this restraint is not quietism. The framework developed here does real work. It distinguishes relevant from irrelevant constraints. It explains why certain forms of coordination are impermissible even when they are efficient, popular, or wellintentioned. It clarifies why plural systems can remain coordinated without being resolved, and why attempts to force resolution generate instability rather than legitimacy.
+
+The result is a conception of coordination that is neither utopian nor cynical. It does not promise harmony, convergence, or final answers. What it provides instead is a principled account of the limits of legitimacy—an account that explains why those limits are not a failure of political or moral reasoning, but a condition of its integrity under pluralism.
+
+Finally, the necessity of formalization underscores the seriousness of the claim. Where legitimacy depends on structure rather than outcome, informal argument alone is insufficient to prevent equivocation. Formal articulation was required to show that nonselection is not an evasion but a consequence, not a choice but a constraint. Yet formalization alone could not establish why this structure matters. That task belongs to philosophy.
+
+Taken together, the philosophical argument and its formal articulation establish a single conclusion: in plural systems without final authority, legitimacy is possible only without resolution. Relevance marks the boundary at which constraint ceases to coordinate and begins to dominate. To insist otherwise is not to be optimistic or decisive; it is to misunderstand the problem.
+
+The authority to make this claim does not come from moral certainty or technical sophistication. It comes from the recognition that plural coordination has structural limits, and that respecting those limits is not a concession to indecision, but the only way legitimacy survives at all.
+
+References
+
+Arrow, Kenneth J. 1951. Social Choice and Individual Values. New York: John Wiley & Sons.
+
+Bentham, Jeremy. 1789. An Introduction to the Principles of Morals and Legislation. London: T. Payne and Son.
+(Reprinted 1907, Oxford: Clarendon Press; numerous later editions.)
+
+Carnap, Rudolf. 1950. Logical Foundations of Probability. Chicago: University of Chicago Press.
+
+Cohen, Joshua. 1989. “Deliberation and Democratic Legitimacy.” In The Good Polity: Normative Analysis of the State, edited by Alan Hamlin and Philip Pettit, 17–34. Oxford: Blackwell.
+
+Darwall, Stephen. 2006. The Second-Person Standpoint: Morality, Respect, and Accountability. Cambridge, MA: Harvard University Press.
+
+Dewey, John. 1927. The Public and Its Problems. New York: Henry Holt and Company.
+(Reprinted 1954, Athens, OH: Swallow Press.)
+
+Goldman, Alvin I. 1986. Epistemology and Cognition. Cambridge, MA: Harvard University Press.
+
+Habermas, Jürgen. 1996. Between Facts and Norms: Contributions to a Discourse Theory of Law and Democracy. Translated by William Rehg. Cambridge, MA: MIT Press.
+(Original German edition 1992.)
+
+Hobbes, Thomas. 1651. Leviathan. London.
+(Standard reference edition: edited by Richard Tuck, 1991, Cambridge: Cambridge University Press.)
+
+Honneth, Axel. 1995. The Struggle for Recognition: The Moral Grammar of Social Conflicts. Translated by Joel Anderson. Cambridge, MA: MIT Press.
+(Original German edition 1992.)
+
+Kant, Immanuel. 1797. The Metaphysics of Morals. Translated and edited by Mary Gregor. Cambridge: Cambridge University Press, 1996.
+
+Larmore, Charles. 1996. The Morals of Modernity. Cambridge: Cambridge University Press.
+
+Nozick, Robert. 1974. Anarchy, State, and Utopia. New York: Basic Books.
+
+Pettit, Philip. 1997. Republicanism: A Theory of Freedom and Government. Oxford: Oxford University Press.
+
+Rawls, John. 1971. A Theory of Justice. Cambridge, MA: Harvard University Press.
+(Revised edition 1999.)
+
+Rawls, John. 1993. Political Liberalism. New York: Columbia University Press.
+(Expanded edition 2005.)
+
+Raz, Joseph. 1986. The Morality of Freedom. Oxford: Oxford University Press.
+
+Rorty, Richard. 1989. Contingency, Irony, and Solidarity. Cambridge: Cambridge University Press.
+
+Scanlon, T. M. 1998. What We Owe to Each Other. Cambridge, MA: Harvard University Press.
+
+Sen, Amartya. 1970. Collective Choice and Social Welfare. San Francisco: Holden-Day.
+(Expanded edition 2017, Cambridge, MA: Harvard University Press.)
+
+Suppes, Patrick. 1968. Studies in the Methodology and Foundations of Science. Dordrecht: D. Reidel Publishing Company.
+
+Waldron, Jeremy. 1999. Law and Disagreement. Oxford: Oxford University Press.
+
+Weber, Max. 1922. Economy and Society. Edited by Guenther Roth and Claus Wittich. Berkeley: University of California Press, 1978.
+(Original German edition published posthumously.)
+
+Williams, Bernard. 1981. Moral Luck. Cambridge: Cambridge University Press.
+
+Williams, Bernard. 1985. Ethics and the Limits of Philosophy. Cambridge, MA: Harvard University Press.
+
+Appendix A: Informal Glossary of Key Terms
+
+This glossary provides informal clarifications of key terms as they are used in this paper. The entries are intended to aid orientation and readability for philosophical audiences. They do not replace the arguments developed in the main text and should be read as interpretive guides rather than independent definitions.
+
+Authority (Final Authority)
+
+A mechanism, agent, procedure, or standard that purports to have the standing to terminate disagreement by selecting a determinate outcome that binds all affected parties. Final authority is characterized not by coercive power alone, but by its claimed legitimacy to close contestation. The central claim of this paper is that in plural systems, legitimacy cannot be grounded in final authority without reintroducing domination.
+
+Constraint
+
+A limitation on permissible action that restricts what may be done without necessarily determining what must be done. Constraints differ structurally from commands or decisions: they bound action spaces rather than select outcomes. Legitimate coordination, as argued in this paper, operates through constraint rather than outcome selection.
+
+Coordination
+
+The organization of action among multiple agents under shared constraints. Coordination does not presuppose agreement, consensus, or convergence on outcomes. In plural systems, coordination is possible even under persistent disagreement, provided that constraints remain legitimate.
+
+Domination
+
+A structural condition in which one agent or group can impose constraints on others without reciprocal justification or exposure to constraint. Domination is not defined by intent, cruelty, or inefficiency, but by asymmetry of standing and the presence of unilateral control. Many coordination failures arise when domination is reintroduced through ostensibly neutral mechanisms such as optimization or procedure.
+
+Filtering (Constraint Filtering)
+
+The function of constraints that remove impermissible actions from consideration without selecting a unique permissible action. Filtering preserves plural agency by bounding coordination without resolving it. This paper contrasts filtering with selection as the structurally legitimate mode of coordination in the absence of final authority.
+
+Legitimacy
+
+The property of a constraint that allows it to bind agents without presupposing authority, privileging a standpoint, or collapsing coordination into domination. Legitimacy, as used here, is structural rather than moral or procedural: it concerns how constraints operate, not which outcomes they produce.
+
+NonEscalation
+
+A condition on legitimate constraints requiring that they do not systematically amplify power asymmetries or foreclose future contestation. Constraints that appear neutral in isolation may become illegitimate if their repeated application entrenches domination over time.
+
+NonSelection
+
+The structural condition that legitimate constraints must not determine a unique outcome among permissible alternatives. Nonselection does not prohibit choice or action; it prohibits treating the outcome of a choice as binding on others by virtue of having been selected. This condition is central to the argument that legitimacy without authority is possible.
+
+Plural System
+
+A system involving multiple agents, institutions, or normative perspectives where disagreement is persistent and no comprehensive authority is accepted by all participants. Plurality, in this sense, is not merely diversity of preference but the absence of shared grounds for final resolution.
+
+Relevance
+
+A structural property of constraints indicating whether they can bind plural agents without presupposing authority, privileging a standpoint, or collapsing coordination into selection. Relevant constraints are those that survive under conditions of standing, symmetry, nonescalation, and nonselection. Relevance is not a measure of importance, salience, or moral priority.
+
+Resolution
+
+The termination of disagreement through the selection of a determinate outcome, rule, or decision. Resolution is often treated as the goal of coordination. This paper argues that in plural systems without final authority, legitimacy is possible only without resolution.
+
+Selection
+
+The act or function of identifying one permissible option as authoritative and rendering alternatives practically irrelevant. Selection performs the decisive role traditionally associated with authority. The central negative result of this paper is that legitimate constraint cannot select without presupposing authority.
+
+Standing
+
+The minimal structural condition under which an agent is treated as a participant in coordination rather than as an object of regulation. To have standing is to be within the scope of justification for constraints that bind one’s actions. Standing does not imply equality of power, virtue, or capacity; it implies reciprocal justificatory exposure.
+
+Symmetry
+
+The requirement that agents who are relevantly similar be subject to the same justificatory standards under constraint. Symmetry does not require identical treatment in all respects, but it prohibits unacknowledged privilege. Asymmetry without independent justification functions as covert authority.
+
+Structural (as opposed to Substantive)
+
+A characterization referring to how constraints operate rather than what values they promote or outcomes they produce. Structural analysis focuses on conditions of possibility, interaction, and legitimacy rather than on moral ranking or preference satisfaction. The concept of relevance developed in this paper is structural in this sense.
+
+Why This Glossary Matters
+
+The terms defined here recur across moral, political, and social philosophy with subtly different meanings. The glossary is intended to prevent equivocation and to make explicit the specific sense in which they are used in this paper. Disagreements about conclusions should therefore be traceable to disagreements about structure, not to shifts in terminology.
+
+Appendix B: Relation to the Formal Standing Algebra Paper
+
+This paper is philosophically autonomous. Its arguments concerning relevance, legitimacy, and coordination do not depend on any formal apparatus for their intelligibility or force. Nevertheless, the conceptual framework developed here stands in a deliberate and necessary relationship to a separate formal work introducing Standing Algebra, an axiomatic system that articulates the structural claims advanced in this paper in mathematical terms. This appendix clarifies that relationship.
+
+B.1 Distinct Aims and Distinct Audiences
+
+The present paper is addressed to a philosophical audience. Its aim is to diagnose a structural problem—legitimate coordination under plural disagreement without final authority—and to develop a conceptual account of relevance that explains why many existing frameworks fail to resolve that problem. Its method is philosophical: conceptual analysis, structural argument, and elimination of incoherent alternatives.
+
+The Standing Algebra paper is addressed to a different audience and pursues a different aim. Its purpose is not to justify the philosophical significance of relevance, but to demonstrate that the structural constraints identified here can be made precise, nontrivial, and internally consistent within a formal system. Its method is axiomatic and modeltheoretic rather than interpretive.
+
+Neither paper subsumes the other. The philosophical paper does not presuppose familiarity with the formal one, and the formal paper does not derive its significance from philosophical rhetoric. They are related, but not redundant.
+
+B.2 Why Formalization Was Required
+
+The central negative result of this paper—that legitimate constraint cannot select outcomes without presupposing authority—is easy to assert informally and difficult to secure philosophically. As the literature surveyed in Section 7 demonstrates, many frameworks explicitly reject domination while implicitly relying on selection mechanisms that perform the same structural function as authority.
+
+Formalization was required to show that this reliance is not accidental. The Standing Algebra paper demonstrates that, given a small set of structural constraints corresponding to standing, symmetry, nonescalation, and nonselection, no ordering, ranking, or selection rule can be derived without adding further structure equivalent to authority. This is not a matter of interpretation or emphasis; it is a consequence of the formal system.
+
+The philosophical argument establishes why selection is illegitimate in plural systems without final authority. The formal argument establishes that nonselection is unavoidable once those philosophical commitments are made explicit.
+
+B.3 Why Formalization Was Not Sufficient
+
+At the same time, formalization cannot do the philosophical work on its own. A formal system can show that certain operations are impossible or underdetermined, but it cannot explain why that underdetermination matters. It cannot articulate the normative significance of standing, symmetry, or nondomination. It cannot diagnose why selection reintroduces authority or why authority is objectionable in plural systems.
+
+Those tasks require philosophical interpretation. Without the conceptual framework developed in this paper, the formal results of Standing Algebra would be opaque or easily misread—as technical artifacts, decision procedures, or ethical algorithms. This paper supplies the interpretive context that prevents such misclassification.
+
+B.4 No Reduction in Either Direction
+
+It is therefore important to be explicit about what this relationship is not.
+
+This paper is not a philosophical gloss on a mathematical theory. Its arguments stand independently and would remain compelling even if no formalization had been attempted.
+
+Conversely, the Standing Algebra paper is not a translation of philosophical claims into mathematics. It does not encode values, preferences, or moral judgments. It encodes structural constraints whose philosophical significance is explained here.
+
+There is no reduction in either direction. The relationship is one of mutual constraint: philosophical commitments restrict the form of admissible formal systems, and formal results discipline philosophical claims by exposing hidden assumptions.
+
+B.5 Why the Separation Matters
+
+Maintaining this separation is not merely a matter of presentation. It reflects a substantive methodological claim. Problems of legitimacy in plural systems are neither purely normative nor purely technical. Treating them as one or the other leads either to moral overreach or to technocratic substitution.
+
+By separating the philosophical analysis of relevance from its formal articulation, this work resists both temptations. It allows philosophy to do what it does best—clarify concepts, diagnose structure, and expose incoherence—while allowing formal methods to do what they do best—make commitments explicit and test their consequences.
+
+The two papers should therefore be read as complementary responses to a single problem, not as alternative approaches competing for priority.
+
+B.6 Guidance for the Reader
+
+Readers interested primarily in philosophical questions of legitimacy, pluralism, and coordination may read the present paper without reference to the formal work. Readers interested in formal systems, axiomatic structure, or modeltheoretic results may consult the Standing Algebra paper directly, bearing in mind that its significance depends on the philosophical framework developed here.
+
+Readers interested in the full scope of the project—both the diagnosis of the problem and the demonstration of its structural consequences—will find that the two papers illuminate each other without collapsing into a single genre.
+
+Closing Remark
+
+The relationship between this paper and the Standing Algebra work is intentional, disciplined, and asymmetric in method but not in importance. Together, they establish that relevance without resolution is not merely a philosophical posture, but a structural necessity once plural coordination is taken seriously.
+
+Acknowledgements, Provenance, and AI Attribution
+
+The arguments, conceptual framework, and philosophical positions developed in this paper are the original work of the author. The core ideas concerning relevance, legitimacy, coordination without final authority, and nonselective constraint were developed independently and are presented here as part of a broader philosophical project articulated most fully in the monograph On Relevance: The Social Physics of Pluralism. This paper, together with related formal and computational work, is intended as a structured chain of validation for that monograph rather than as an independent or derivative contribution.
+
+No part of the philosophical content, argumentative structure, or substantive claims of this paper was generated by artificial intelligence. All core ideas, distinctions, arguments, and conclusions originate with the author. The use of computational tools, including large language models, was strictly limited to editorial and auditing functions, such as consistency checking, citation verification, structural coherence review, and stylistic refinement. These tools did not supply concepts, premises, argumentative moves, or conclusions, nor did they determine the organization or direction of the work.
+
+The associated formal system (Standing Algebra), computational artifacts, and supporting code were likewise conceived and developed by the author. Their role is not to replace philosophical argument, but to discipline it: to test the internal coherence, nonderivability, and structural consequences of commitments defended philosophically. The present paper neither depends on those formal results for its intelligibility nor reduces its claims to technical findings. Rather, it provides the philosophical justification that renders such formalization meaningful.
+
+The author is grateful to the broader philosophical literature cited herein, which provides the intellectual context against which this work is situated. Where positions resemble or engage existing traditions, they do so by structural diagnosis and critical comparison rather than by derivation or adoption. Any errors of interpretation or argument remain the sole responsibility of the author.

@@ -1,0 +1,533 @@
+# QMR Proposal
+
+- Original attachment: `02716b54-4db6-4fb0-a2ab-f86f0edc919a-QMR Proposal.docx`
+- Original SHA-256: `77cb56dc5c88c3c21a75b89d37923e5ee7a74afe349d390f60c575cc0e345d3a`
+- Extraction: paragraph text in document order from `word/document.xml`; visual layout, images, and non-text objects may not be represented. The retained DOCX is authoritative.
+
+8D TECHNICAL ANALYSIS
+
+Elimination of “UNKNOWN FAILURE” via Invariant Signal Diagnostics (SigmaR)
+
+Pilot Device: J2Class Joystick
+
+D1 — PROBLEM DESCRIPTION (8D CONTEXT)
+
+D1.1 Problem Statement
+
+A significant proportion of J2class joystick returns are currently classified as UNKNOWN FAILURE.
+
+These returns exhibit the following characteristics:
+
+No mechanical damage observed
+
+Electrical parameters within specification on bench test
+
+Customer reports of drift, instability, or offset over time
+
+Failure not reproducible under teardown or static inspection
+
+This failure category provides no actionable diagnostic information, results in repeated “no fault found” loops, and complicates OEM discussions.
+
+D2 — CURRENT CONTAINMENT AND LIMITATIONS
+
+D2.1 Current 8D Diagnostic Practice
+
+Current analysis relies on:
+
+Singlechannel analog interpretation (typically channel A)
+
+Static comparison against specification limits
+
+Posthoc classification following customer complaint
+
+There is no invariantbased witness, no persistence logic, and no distinction between recoverable drift and inevitable failure.
+
+As a result, all such cases are grouped into UNKNOWN FAILURE, regardless of underlying behavior.
+
+D3 — ROOT CAUSE ANALYSIS (ENGINEERING INTERPRETATION)
+
+D3.1 Structural Root Cause
+
+The dominant UNKNOWN FAILURE pattern is not random defect but loss of functional invariance under system composition.
+
+Small, acceptable variations in gain, offset, temperature, or alignment become externally visible only because the current method does not separate functional position from structural drift.
+
+The issue is therefore observability, not component correctness.
+
+D4 — CORRECTIVE ACTION PROPOSAL (SIGMAR METHOD)
+
+D4.1 Logged Input Data (Unchanged)
+
+For each time sample t, the following signals are logged (already available today):
+
+A(t): Analog channel A
+
+B(t): Analog channel B
+
+Sᵢ: Reed switch events
+
+(Optional) V(t), T(t)
+
+No hardware changes and no OEM system access are required.
+
+D4.2 Current 8D Signal Interpretation
+
+Under current practice, position is inferred as:
+
+x_8D(t) ≈ A(t)
+
+This assumes stable gain and offset, which are not verified.
+
+There is no secondary witness to indicate structural change.
+
+D4.3 SigmaR Signal Interpretation (Proposed)
+
+D4.3.1 Invariant Position Reconstruction
+
+Signals are modeled as:
+
+A(t) = k(t)·x(t) + a₀(t) + n_A(t)
+
+B(t) = −k(t)·x(t) + b₀(t) + n_B(t)
+
+Define the invariant difference:
+
+D(t) = A(t) − B(t)
+
+x_ΣR(t) = D(t) / D_max
+
+Where D_max is fixed at calibration.
+
+Result:
+Commonmode gain and offset variations cancel to first order:
+
+∂x_ΣR / ∂k ≈ 0
+
+This prevents benign drift from affecting functional position.
+
+D4.3.2 Structural Witness: Sum Invariant
+
+Define:
+
+S(t) = A(t) + B(t)
+
+At calibration:
+
+S₀ = mean(S(t))
+
+Boundary condition:
+
+|S(t) − S₀| > ε_S  for N consecutive samples
+
+This detects structural geometry or coupling drift independent of position.
+
+D4.3.3 Discrete–Analog Consistency
+
+At each reed switch event Sᵢ:
+
+|x_ΣR(tᵢ) − x_exp,i| > ε_R
+
+Detects alignment or magnetic shift without requiring part failure.
+
+D5 — VERIFICATION VIA SIDEBYSIDE ANALYSIS (FIGUREREFERENCED)
+
+The following figures illustrate representative behavior under the stated signal model and calibration assumptions. Threshold values and persistence criteria are productspecific and must be validated against measured noise and tolerance budgets.
+
+D5.1 Diagram: “Current 8D Method (Single Channel) / SigmaR Method (Invariant)”
+
+This diagram shows two panels derived from the same input data:
+
+Upper panel: Current 8D method using A(t)
+
+Lower panel: SigmaR invariant position x_ΣR(t)
+
+Interpretation:
+
+Under the current 8D method, the position trace visibly drifts over time.
+
+Under SigmaR, the invariant position remains stable and bounded.
+
+Conclusion:
+
+The joystick did not lose positional fidelity.
+The observed drift is an artifact of interpretation.
+
+D5.2 Diagram: “Raw vs Invariant Position”
+
+This diagram overlays:
+
+Raw singlechannel position
+
+SigmaR invariant position
+
+Interpretation:
+
+Raw signal exhibits drift due to gain/offset changes.
+
+Invariant signal tracks the intended motion.
+
+Conclusion:
+
+SigmaR suppresses irrelevant variation without loss of precision.
+
+D5.3 Diagram: “Sum Invariant Threshold”
+
+This diagram plots:
+
+S(t) − S₀
+
+with ±ε_S bounds.
+
+Interpretation:
+
+Early samples remain within bounds (recoverable drift).
+
+Later samples exceed bounds persistently.
+
+Conclusion:
+
+A deterministic boundary crossing is detected at a specific time.
+
+D6 — FAILURE CLASSIFICATION OUTCOME
+
+D6.1 Current 8D Result
+
+Sql
+
+Failure Class: UNKNOWN
+
+Evidence: None
+
+Onset Time: Unknown
+
+D6.2 SigmaR Result
+
+Yaml
+
+Failure Class: UFS2 (Boundary Crossing)
+
+First Violation Time: t₀
+
+Witness: Sum Invariant
+
+Prior State: UFS1 (Recoverable Structural Drift)
+
+This record is auditready and defensible.
+
+D7 — PREVENTION AND SYSTEMIC IMPROVEMENT
+
+D7.1 Material Benefits
+
+SigmaR provides:
+
+Reduction in unnecessary returns caused by benign drift
+
+Clear separation between recoverable and inevitable behavior
+
+Timestamped, evidencebacked failure records
+
+Elimination of “no fault found” loops
+
+Preserved positional precision
+
+D7.2 Implementation Scope
+
+Firmware / signal interpretation only
+
+No hardware changes
+
+No OEM system knowledge required
+
+Pilot limited to J2class joystick
+
+FINAL 8D CONCLUSION
+
+The “UNKNOWN FAILURE” category exists because the current 8D method observes raw signal change without structural context.
+
+The SigmaR method introduces invariant reconstruction and structural witnesses already latent in the signal, converting ambiguity into deterministic engineering classifications.
+
+The diagrams titled:
+
+“Current 8D Method (Single Channel) / SigmaR Method (Invariant)”
+
+“Raw vs Invariant Position”
+
+“Sum Invariant Threshold”
+
+demonstrate this outcome unequivocally.
+
+This constitutes a corrective and preventive action at the diagnostic level, not a redesign.
+
+Mapping SigmaR Data Requirements to an EOL Tester
+
+1. What an EOL tester already has (baseline reality)
+
+A typical joystick EOL tester already does the following:
+
+Powers the joystick
+
+Commands or stimulates motion (manual or fixturebased)
+
+Reads analog outputs (at least one, often more)
+
+Reads discrete outputs (reed switches, buttons)
+
+Compares readings against high/low functional limits
+
+Produces a PASS / FAIL result
+
+SigmaR does not change any of that.
+
+SigmaR only changes what is logged and how it is interpreted.
+
+2. Required EOL signal hookups (no hardware change)
+
+2.1 Analog Channel A → A(t)
+
+Already present
+
+Source: Hall sensor / analog output channel A
+
+Typical connection:
+
+EOL analog input AIA
+
+Units:
+
+Voltage or ADC counts
+
+✅ Action required:
+Ensure this channel is logged as a time series, not just min/max.
+
+2.2 Analog Channel B → B(t)
+
+Already present on redundant joysticks, often unused
+
+Source: Second Hall sensor / redundant output
+
+Typical connection:
+
+EOL analog input AIB
+
+Units:
+
+Voltage or ADC counts
+
+⚠️ Common gap today:
+Channel B is often wired but not logged or only used for plausibility.
+
+✅ Action required:
+Log AIB synchronously with AIA.
+
+2.3 Time Index → t
+
+Source:
+
+EOL tester internal clock or sample counter
+
+Resolution:
+
+Whatever the EOL tester already uses (e.g., 10–100 Hz)
+
+✅ Action required:
+Ensure samples are stored in order with a sample index.
+
+Absolute timestamps are not required.
+
+3. Calibration window in the EOL test
+
+SigmaR requires a knowngood reference window.
+
+3.1 Where this fits in the EOL flow
+
+Typical EOL flow already has:
+
+Powerup
+
+Stabilization
+
+Initial read
+
+Functional sweep / interaction
+
+Pass / fail evaluation
+
+✅ SigmaR calibration window = step 2–3
+(early samples before full actuation)
+
+3.2 What is computed during calibration
+
+From the calibration window:
+
+Scss
+
+S0 = mean(A(t) + B(t))
+
+Dmax = expected max |A(t) − B(t)|
+
+✅ Action required:
+Store S0 and Dmax as test metadata.
+
+No new measurements needed.
+
+4. SigmaR computations (done offline or inline)
+
+These do not require realtime execution during EOL unless desired.
+
+4.1 Functional invariant (position)
+
+Computed from logged data:
+
+Scss
+
+D(t) = A(t) − B(t)
+
+xΣR(t) = D(t) / Dmax
+
+✅ Mapping:
+Uses AIA and AIB only.
+
+4.2 Structural witness (sum invariant)
+
+Computed from the same data:
+
+Scss
+
+S(t) = A(t) + B(t)
+
+ΔS(t) = S(t) − S0
+
+✅ Mapping:
+No additional inputs.
+
+5. Thresholds and logic (configuration parameters)
+
+These are tester configuration values, not signals.
+
+5.1 Structural threshold εS
+
+Defined in:
+
+Voltage or ADC counts
+
+Derived from:
+
+ADC noise
+
+Thermal variation
+
+Expected elastic tolerance
+
+✅ Mapping:
+Stored as a tester parameter (like existing limits).
+
+5.2 Persistence count N
+
+Defined in:
+
+Number of consecutive samples
+
+Meaning:
+
+How long ΔS(t) must remain outside ±εS to declare S2
+
+✅ Mapping:
+Implemented as a simple counter in test software or offline analysis.
+
+6. Discrete signals (optional but recommended)
+
+6.1 Reed switches → Sᵢ
+
+Source:
+
+Digital inputs already used by EOL tester
+
+Purpose:
+
+Discrete–analog consistency check
+
+✅ Action required:
+Log the timestamp or sample index when each reed closes.
+
+7. What SigmaR adds to EOL output (no change to PASS/FAIL)
+
+7.1 Current EOL output (today)
+
+Makefile
+
+Result: PASS
+
+7.2 SigmaR augmented output (added metadata)
+
+Sql
+
+Result: PASS
+
+SigmaR Functional State: OK
+
+SigmaR Structural State: None / UFS1 / UFS2
+
+First Structural Violation: sample k (if any)
+
+✅ Important:
+SigmaR does not override EOL PASS/FAIL unless you explicitly choose to.
+
+It adds observability.
+
+8. Minimal EOL changes required (summary)
+
+Area
+
+Change required
+
+Wiring
+
+None
+
+Sensors
+
+None
+
+Actuation
+
+None
+
+Test sequence
+
+None
+
+Analog logging
+
+Log A and B as time series
+
+Calibration
+
+Capture early samples
+
+Software
+
+Compute A±B and persistence
+
+Output
+
+Add SigmaR metadata
+
+9. Why this is safe for manufacturing
+
+Does not slow the line
+
+Does not change acceptance criteria
+
+Does not add false fails
+
+Can be:
+
+logged silently at first
+
+analyzed offline
+
+introduced gradually
+
+10. Oneparagraph explanation for Manufacturing / QMR
+
+“SigmaR uses the same analog signals already measured during EOL testing. Instead of only checking whether one channel stays within its functional limits, it also computes a structural witness from the sum of the redundant channels and evaluates whether that witness remains invariant over time. This adds no hardware, does not change PASS/FAIL decisions, and provides a record of whether recoverable or persistent structural drift was present during the test.”

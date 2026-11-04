@@ -1,0 +1,330 @@
+# A Practical Guide to On Relevance
+
+- Original attachment: `26cd854f-8c96-427b-83cb-85c456dfefe6-A Practical Guide to On Relevance.docx`
+- Original SHA-256: `ad5a68d7ff452ee173fdb1ec66ac78dc712c0a63f824dff09cd9284584cf569f`
+- Extraction: paragraph text in document order from `word/document.xml`; visual layout, images, and non-text objects may not be represented. The retained DOCX is authoritative.
+
+A Practical Guide to NonDominating Coordination
+
+Using the Relevance Framework in Pluralist Communities
+
+What This Guide Is (and Is Not)
+
+This guide is:
+
+A diagnostic tool for collective decisionmaking under disagreement
+
+A way to identify when coordination becomes domination
+
+A shared language for discussing harm, standing, and legitimacy
+
+A framework for repair when coordination fails
+
+This guide is not:
+
+A moral code
+
+A political ideology
+
+A consensusbuilding method
+
+A way to determine who is “right”
+
+A requirement anyone must accept
+
+Participation is voluntary. Exit is always permitted.
+
+When to Use This Framework
+
+Use this guide only when a group or institution claims the right to:
+
+bind others,
+
+restrict behavior,
+
+allocate risk,
+
+impose costs,
+
+or enforce rules
+
+If no one is being bound or harmed, this framework has nothing to say.
+
+The Core Principle (Plain Language)
+
+Disagreement does not justify harm.
+Authority does not excuse harm.
+Coordination is legitimate only under specific structural conditions.
+
+Everything below operationalizes that principle.
+
+The Diagnostic Flow (OnePage Overview)
+
+When a collective claim is made (“we must do X”), ask the following in order:
+
+What is being coordinated?
+
+Who is being constrained or harmed?
+
+Who has standing to make this claim?
+
+Who bears the risk and cost?
+
+Is exit preserved?
+
+Is the constraint proportional and repairable?
+
+If the claim fails at any step, it cannot be justified as nondominating coordination.
+
+Step 1: Identify the Coordination Claim
+
+Ask:
+
+What action is being required, restricted, or enforced?
+
+What happens to people who refuse or dissent?
+
+Is this a request, a norm, or a mandate?
+
+Key distinction:
+Persuasion is not coordination.
+Coordination begins where refusal carries consequences.
+
+Step 2: Identify the Impact on Autonomy
+
+Ask:
+
+Who loses options if this claim is enforced?
+
+What freedoms are reduced?
+
+What choices become unavailable?
+
+If no one’s autonomy is reduced, domination is not at issue.
+
+If autonomy is reduced, continue.
+
+Step 3: Determine Standing
+
+Standing is not about truth, expertise, sincerity, or power.
+
+Standing depends on risk inheritance.
+
+Ask:
+
+Who bears the cost if this coordination fails?
+
+Who is exposed to harm?
+
+Who cannot opt out safely?
+
+Rule of thumb:
+Those who bear the risk must have standing in the decision.
+
+Claims imposed by those insulated from risk lack standing.
+
+Step 4: Examine Risk Allocation
+
+Ask:
+
+Are harms evenly distributed?
+
+Are costs imposed on dissenters?
+
+Are vulnerable parties disproportionately exposed?
+
+If risks are asymmetric and imposed without consent, domination risk is high.
+
+Step 5: Check for Exit
+
+Exit is the strongest nondomination safeguard.
+
+Ask:
+
+Can individuals or groups opt out?
+
+Is exit meaningful, or merely formal?
+
+Does exit carry punishment, stigma, or deprivation?
+
+If exit collapses, coordination becomes coercive.
+
+Step 6: Test Proportionality and Repair
+
+Ask:
+
+Is the constraint the leastharmful option?
+
+Is it reversible?
+
+Is there a clear repair path if harm occurs?
+
+Can the policy be revised based on feedback?
+
+Irreversible, totalizing, or unrepairable constraints are dominationprone.
+
+Interpreting Outcomes
+
+Legitimate Coordination
+
+All conditions satisfied:
+
+Standing is grounded in risk
+
+Exit is preserved
+
+Harm is minimized and repairable
+
+Disagreement may remain, but domination is avoided.
+
+Contested Coordination
+
+Some conditions partially met:
+
+Standing unclear
+
+Exit fragile
+
+Risk uneven
+
+Proceed only with safeguards and review mechanisms.
+
+Domination
+
+Any of the following apply:
+
+Standing is asserted by authority alone
+
+Risk is imposed on others without consent
+
+Exit is blocked or punished
+
+Harm is justified by belief, truth, or necessity
+
+The claim fails structurally, regardless of intention or correctness.
+
+Repair Pathways (When Coordination Fails)
+
+When domination is diagnosed, the response is repair, not blame.
+
+Possible repairs include:
+
+Redistributing risk
+
+Adding exit options
+
+Narrowing scope of enforcement
+
+Introducing sunset clauses
+
+Shifting from mandate to voluntary participation
+
+Creating parallel coordination pathways
+
+If repair is impossible, the coordination claim must be withdrawn.
+
+What This Framework Cannot Do
+
+Be explicit about limits:
+
+It cannot guarantee harmony
+
+It cannot resolve all conflicts
+
+It cannot prevent tragedy
+
+It cannot replace moral judgment
+
+It cannot force good faith
+
+It only constrains justifications for harm.
+
+A Minimal Facilitation Script (Optional)
+
+When conflict arises, a facilitator can ask:
+
+“What harm are we trying to prevent?”
+
+“Who bears the cost of this decision?”
+
+“Can people exit without punishment?”
+
+“How would we repair harm if we’re wrong?”
+
+“What would make this less coercive?”
+
+If the group cannot answer these, coordination should pause.
+
+How This Helps Pluralist Communities
+
+This framework:
+
+Prevents authority escalation
+
+Stops moral shortcuts
+
+Keeps disagreement survivable
+
+Preserves diversity without paralysis
+
+Enables collective action without moral permission to harm
+
+It does not require shared values—only shared constraints.
+
+Final Reminder
+
+This framework does not tell communities what to do.
+It tells them what they cannot justify doing to each other.
+
+Use it when harm is at stake.
+Ignore it when it is not.
+
+That restraint is the point.
+
+Concept Inquiry: On Relevance
+
+Structural Constraints on Standing and Authority Across Domains
+
+Dear Professor Endicott,
+
+I am writing to inquire whether Oxford University Press might be interested in a manuscript that addresses a persistent problem in legal and political philosophy: under what structural conditions do authority claims acquire standing to bind others under pluralism without collapsing into domination?
+
+The manuscript, On Relevance: Structural Constraints on Standing and Authority Across Domains, is not a moral theory, a political program, or an account of truth. Instead, it offers a structural framework for evaluating authority claims prior to questions of correctness, justice, or value, with particular relevance to jurisprudence, public authority, and institutional legitimacy.
+
+The Problem
+
+Pluralist societies cannot rely on final authority—moral, epistemic, religious, or democratic—without coercion. Yet the absence of final authority does not eliminate the need for coordination, nor does it prevent claims from continuing to bind others through law, institutions, and social practices. Contemporary approaches tend either to reintroduce final authority implicitly (through moral realism, public reason, or procedural consensus), or to treat authority as reducible to power.
+
+The result is a recurring legitimacy failure: correctness is mistaken for standing, and disagreement is converted into domination rather than coordinated accommodation.
+
+The Contribution
+
+The manuscript proposes a structural framework for evaluating standing based on interactional conditions—accountability, exit, corrigibility, and nondomination—that must be satisfied for authority claims to bind others under pluralism. The framework does not adjudicate outcomes, determine values, or prescribe legal or political arrangements. It specifies when authority claims remain compatible with pluralist coordination and when they collapse into domination.
+
+Importantly, the framework is explicitly nonfinal. If adopted, it does not function as a new authority, moral or legal. It does not determine what ought to be done. Questions of right and wrong, justice and injustice, remain open to other theories. The framework instead clarifies the structural conditions under which such theories may legitimately bind others at all.
+
+Position in the Literature
+
+Methodologically, the project is closest to work that addresses conditions of validity and legitimacy rather than substantive justification. It is informed by, and in conversation with:
+
+H.L.A. Hart’s account of legal validity and secondary rules,
+
+jurisprudential work on coercion and authority,
+
+Hannah Arendt’s distinction between authority and force, and
+
+empirical work on nondominating coordination and institutional robustness.
+
+The manuscript differs from existing approaches by generalizing the legitimacy problem across domains, rather than confining it to law or democratic institutions, while maintaining a jurisprudential focus on standing, coercion, and constraint.
+
+Scope
+
+The manuscript is a singleauthor monograph of approximately [136,000] words. It moves from foundational clarification to crossdomain analysis (law, politics, morality, institutions, technology), without offering prescriptive conclusions. Its intended audience includes scholars in legal philosophy, jurisprudence, and political theory concerned with authority, legitimacy, and pluralism.
+
+Given its focus on the nature of authority and standing rather than normative adjudication, I believe it may be a suitable fit for Oxford Legal Philosophy. If the project seems potentially appropriate, I would be glad to share a formal proposal, table of contents, or sample chapters.
+
+Thank you for your time and consideration.
+
+Sincerely,
+Jonathan Rademacher
+[contact information]

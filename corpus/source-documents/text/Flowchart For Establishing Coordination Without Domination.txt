@@ -1,0 +1,7 @@
+# Flowchart For Establishing Coordination Without Domination
+
+- Original attachment: `aeffed47-b5b7-480d-ba05-892202de0028-Flowchart For Establishing Coordination Without Domination.docx`
+- Original SHA-256: `62972d716b933450b31f2be8f4e8336b7b6e316cfc7d8a93df6db90e5e4851d9`
+- Extraction: paragraph text in document order from `word/document.xml`; visual layout, images, and non-text objects may not be represented. The retained DOCX is authoritative.
+
+Flowchart For Establishing Coordination Without Domination
