@@ -32,6 +32,22 @@ Status
 ✔ Valuation measures and independence guarantees enforced at the type and axiom level
 ✔ Deliberately scoped to avoid optimization, selection, or reward semantics
 
+Goodhart Drift Monitor Prototype
+--------------------------------
+The repository includes a dependency-free Python monitor in
+[`goodhart_monitor.py`](goodhart_monitor.py). It compares a configured proxy
+trend with an independently supplied goal signal, emits evidence-bearing
+`allow` / `hold` / `review` decisions, and exposes a `run_guarded` API that
+does not execute an action unless the latest decision is `allow`.
+[`workflow_control.py`](workflow_control.py) adds a fail-closed workflow
+controller that blocks a step, pauses the workflow, and requests evidence-backed
+human review; resumption requires a review reference. The included adapter is
+dry-run only. A production integration must connect these controls to the
+workflow platform and handle in-flight work. This prototype is not a drift-proof
+system or safety certification; it cannot determine whether the supplied goal
+signal represents the true objective. Usage and limitations are documented in
+[`Collapse_Demonstrations/Goodhart_Drift/README.md`](Collapse_Demonstrations/Goodhart_Drift/README.md).
+
 Interoperability Constraint Geometry (ICG)
 ------------------------------------------
 `ICG.lean` is the aggregate import for the additive `ICG` Lean library. It builds on the original interaction-closure and polynomial/Nullstellensatz layer with generic formalizations of derivation structure, obstruction, envelope geometry, and dynamics.
