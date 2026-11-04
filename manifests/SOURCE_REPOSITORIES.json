@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "repositories": {
+    "standing_algebra": {
+      "url": "https://github.com/JonRademacher/standing-algebra",
+      "branch": "main",
+      "commit": "cbc4211baf0993d643e55398addabf9588120f3f",
+      "status": "verified",
+      "path": ".",
+      "identity_note": "Observed origin/main commit; Lean, Coq, and Z3 Actions succeeded at this revision."
+    },
+    "icg": {
+      "url": "https://github.com/JonRademacher/standing-algebra",
+      "branch": "main",
+      "commit": "cbc4211baf0993d643e55398addabf9588120f3f",
+      "status": "integrated_subtree",
+      "path": "ICG/",
+      "identity_note": "ICG is a distinct framework represented as a subtree in this source repository; a separate ICG repository was not found."
+    },
+    "kernel": {
+      "url": "https://github.com/JonRademacher/standing-algebra",
+      "branch": "jonrademacher-complete-lean4-formalizations",
+      "commit": null,
+      "status": "integration_host",
+      "path": [
+        "kernel/",
+        "continuity/",
+        "learning/",
+        "governance/"
+      ],
+      "identity_note": "This repository hosts the additive integration because no standalone UCK repository is available; it is not asserted to be the original UCK repository."
+    },
+    "non_domination_governance_kernel": {
+      "url": "https://github.com/JonRademacher/Non-Domination-Governance-Kernel",
+      "branch": "jonrademacher-improved-memory",
+      "commit": null,
+      "status": "related_distinct_project",
+      "path": null,
+      "identity_note": "Read-only audit found a Σᴿ-derived governance project, not the UCK or ICG source; exact HEAD not directly confirmed."
+    },
+    "i2os_structural_admissibility": {
+      "url": "https://github.com/i2os-lab/I2OS-Structural-Admissibility",
+      "branch": "jonrademacher-fluffy-parakeet",
+      "commit": null,
+      "status": "unrelated_source_candidate",
+      "path": null,
+      "identity_note": "Read-only audit found a conceptual paper repository with no ICG sources or formalizations; exact HEAD not directly confirmed."
+    }
+  }
+}

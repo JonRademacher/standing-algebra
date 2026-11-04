@@ -96,3 +96,45 @@ lake build ICG
 ```
 
 **Coverage boundary:** The library is not yet a complete formal transcription of every ICG definition, hypothesis, example, or theorem in the source. It covers selected core constructions across §§3.1–3.13, survivor monotonicity and witness-accountable finite stabilization in §§3.15.5–3.15.6, foundational surface definitions and boundary results from §§3.14.1–3.14.2, selected path-accessibility and boundary-corridor results from §3.14.3, selected constraint/boundary representation, finite reachability, and local boundary-reduction results from §3.14.4, selected projection/unification results from §3.14.5, conditional comparative and trajectory/Pareto results from §3.14.6, measurement-fiber identifiability and uncertainty propagation from §3.14.7, and operator, witness-certificate, and closure-preference results in §§3.15.3–3.15.8. The source's remaining §3.14 architectures and demonstrations and several results across §§3.15.1–3.15.8 still require source-by-source formalization. The §3.14.6 results formalize conditional structural filtering and Pareto survival; they do not establish comparative empirical superiority or operational gain for the organizational example. The §3.14.7 results formalize identifiability, information-loss, and audit-trace interfaces, not empirical measurement scales, estimator calibration, validation studies, missing-data mechanisms, governance, or implementation complexity. In §3.14.3, accessibility and boundary connectivity are represented by explicit continuous-path certificates; path-connectedness is required for corridors, since ordinary connectedness alone does not generally imply path-connectedness. The source's curvature and thickness quantities still need precise definitions and hypotheses before their sensitivity and robustness claims can be formalized. The boundary crossing theorem assumes a continuous path whose endpoints have opposite classifications; the boundary-fiber ambiguity result likewise requires an explicitly non-injective latent realization at a boundary point. `ConstraintArchitectureBridge` proves boundary transport for classification-preserving homeomorphisms and boundary agreement for the singleton-constraint model; it does not establish the source's additional invariant-preservation claims such as curvature, thickness, or dimensionality. `ClosurePreference` compares witness-based closure and selector behavior at the mechanism/landscape level; it does not establish every preservation-coordinate or dominance claim in the source. `BoundaryParticipation` formalizes boundary reduction only under an explicit local dominance implication; its pressure and legitimacy observables require declared scales/calibration assumptions because the source supplies no operational units. `UnifiedProjection` models the source's multiple lenses as coordinates of a common state and proves full-coordinate information refinement, but does not claim strict information gain without a separating example or a non-injectivity hypothesis. In particular, `InteroperabilitySurface` makes the unification theorem's five induction certificates explicit inputs; it does not claim to derive those certificates from the earlier modules. `ClosureCertificate` separates filtration lineage, witness-accountable exclusion, survivor admissibility, stability, residual preservation, and external selection; `EliminationWitnessArchitecture` formalizes witness sufficiency, scope, current validity, and reopening, but does not establish that every source example satisfies those requirements. `AdmissibleReachability` formalizes reachability as finite chains of reversible admissible transitions; it does not identify arbitrary connected regions with path-connected components. The phase normalization and general linear-isometry model are explicit mathematical choices; they should not be mistaken for proofs that every source-specific normalization or orientation-preserving rotation construction has been formalized. The boundary-density development is a finite derivation-tree realization of the interaction-participation ratio, not a claim that all source definitions of obstruction geometry have been matched. A green build establishes compilation, not proof completeness; repository axioms remain explicit model assumptions rather than derived theorems.
+
+Repository-backed Continuity and Improvement
+--------------------------------------------
+This repository also contains an evidence-bearing continuity integration in
+[`kernel/`](kernel/KERNEL_CURRENT.md), [`continuity/`](continuity/CURRENT_STATE.md),
+[`learning/`](learning/FAILURE_SHAPES.md), and [`governance/`](governance/CHANGE_PROTOCOL.md).
+Standing Algebra and ICG remain distinct peer frameworks. The integration does
+not claim hidden model-state transfer, background autonomous improvement, or
+behavioral identity; it records versioned repository changes and validation.
+
+To resume work, read [`continuity/CONTEXT_BUNDLE.md`](continuity/CONTEXT_BUNDLE.md)
+and verify it against [`continuity/CURRENT_STATE.md`](continuity/CURRENT_STATE.md),
+the checkpoint and receipt manifests, and the live source files. Rebuild the
+bounded bundle and run all local integrity checks with:
+
+```text
+python Scripts/build_context_bundle.py
+python -m unittest discover -s Tests -v
+python Scripts/check_links.py
+python Scripts/verify_hashes.py
+python Scripts/validate_continuity.py --release
+```
+
+Candidate process changes must follow
+[`governance/CHANGE_PROTOCOL.md`](governance/CHANGE_PROTOCOL.md); failure
+recovery uses [`continuity/FUTURE_FORENSICS.md`](continuity/FUTURE_FORENSICS.md).
+The isolated [`continuity/CAPABILITY_GYM/`](continuity/CAPABILITY_GYM/README.md)
+fixtures do not alter canonical framework state. Generate an initialized
+checkpoint and integrity manifest only after recording observed receipts:
+
+```text
+python Scripts/make_checkpoint.py
+```
+
+The generator defaults to `initialized_candidate`. `--canonical` is available
+only when every required validation receipt is explicitly passed; even then,
+the checkpoint is partial while its listed source and product residuals remain
+open. GitHub Actions for the new continuity workflow are not considered passed
+until the workflow runs on a pushed commit. The accessible source audit found
+no standalone ICG or UCK repository or full UCK transfer corpus; see
+[`continuity/OPEN_RESIDUALS.md`](continuity/OPEN_RESIDUALS.md) and
+[`manifests/CORPUS_MANIFEST.yaml`](manifests/CORPUS_MANIFEST.yaml).
