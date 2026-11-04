@@ -25,10 +25,6 @@ cannot be legitimate under Σᴿ.
 theorem exit_viability_failure_implies_illegitimacy
   (characterization : LegitimacyCharacterization)
   {F : Operation}
-theorem risk_with_exit_denial_implies_illegitimacy
-  {F : Operation} {s : State}
-  (_hRisk : RiskRegimeOp F s)
-  (_hIntro : IntroducesRisk F s)
   (hExitFail : ¬ ExitViabilityMonotone F) :
   ¬ Legitimate F :=
 by
