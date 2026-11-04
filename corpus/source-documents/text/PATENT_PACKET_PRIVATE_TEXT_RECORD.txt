@@ -1,0 +1,11 @@
+Patent Packet - Private Text-Derivative Record
+
+Artifact ID: PATENT-PACKET-PRIVATE-001-TEXT
+Artifact class: private_external_text_derivative
+Derived from: PATENT-PACKET-PRIVATE-001-ORIGINAL
+Private source content committed here: false
+Required for public CI: false
+Hash algorithm: SHA-256
+Private text artifact SHA-256: REPLACE_WITH_SHA256_OF_PRIVATE_TEXT_FILE
+
+The text representation of the patent packet is intentionally held outside this public repository. This record preserves the derived text artifact identity, provenance relationship, and integrity commitment without disclosing the private content.
