@@ -96,3 +96,61 @@ Standalone ICG/UCK availability recorded as open residuals.
 ### Reopening or retirement conditions
 
 User supplies canonical source URL/access or repository becomes available.
+
+## FS-003 — Hashing checkout representation instead of stable text content
+
+### Triggering observation
+
+The continuity workflow passed its unit and link steps, then failed the hash
+step on GitHub Actions. Its manifest included the worktree `.git` pointer and
+reported mismatches for extensionless UTF-8 files and empty `.keep` files
+checked out with different line-ending behavior.
+
+### Epistemic status
+
+Observed GitHub Actions failure on commit `a464e447a780692755ce5cf8c9f8548200892490`;
+the correction is a candidate until the rerun passes.
+
+### Minimal generating shape
+
+Hash local worktree bytes and classify text by a narrow extension allowlist ->
+include host-specific Git metadata and miss extensionless text normalization ->
+cross-platform CI hash mismatch.
+
+### Scope and applicability
+
+Cross-platform integrity manifests over a Git worktree, especially files with
+CRLF checkout conversion, extensionless text, and `.git` pointer files.
+
+### Evidence and provenance
+
+GitHub Actions run 41890985104 failed at “Verify corpus and repository hashes”;
+the failed log named `.git`, `_CoqProject`, `lean-toolchain`, and `.keep` paths.
+
+### Dependencies
+
+Depends on `managed_files`, `sha256_file`, and a consistent definition of
+tracked content independent of host checkout metadata.
+
+### Counterexamples and residuals
+
+Binary content must retain byte-exact hashing; arbitrary binary bytes cannot
+be newline-normalized.
+
+### Correction or reuse operator
+
+Exclude the `.git` pointer; normalize CRLF only for NUL-free valid UTF-8 text,
+including extensionless files, and hash other files byte-for-byte.
+
+### Validation performed
+
+Local regression tests cover extensionless text, binary bytes, and `.git`
+exclusion; awaiting the CI rerun on the corrective commit.
+
+### State delta
+
+Portable hash normalization and exclusion fixtures added.
+
+### Reopening or retirement conditions
+
+Retire only after the new GitHub Actions run verifies the complete manifest.

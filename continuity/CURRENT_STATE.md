@@ -2,20 +2,20 @@
 
 **Checkpoint ID:** `UCK-2026-11-04-001` (initialized integration checkpoint)
 **Checkpoint date:** 2026-11-04
-**Product status:** initialized canonical partial checkpoint of the current
-validated working tree. Source-repository limitations, uncommitted integration
-files, and the pre-existing unrelated user edit are explicit.
+**Product status:** continuity integration is committed and pushed on the
+current branch; its first hosted integrity workflow exposed a cross-platform
+hashing defect. The portable hashing correction and regression archive are in
+progress. The unrelated pre-existing Lean edit remains uncommitted.
 
-**Repository commits:**
+**Repository revisions:**
 
 - standing-algebra: `cbc4211baf0993d643e55398addabf9588120f3f` (observed
   `origin/main`; main-branch Lean, Coq, and Z3 workflows passed).
 - ICG: `cbc4211baf0993d643e55398addabf9588120f3f` for the integrated
   `ICG/` subtree only; a distinct ICG repository was not located.
-- kernel: no standalone UCK repository available. Integration artifacts are
-  hosted additively in this Standing Algebra repository. The configured
-  Non-Domination-Governance-Kernel is distinct and its exact HEAD was not
-  directly confirmed in the read-only audit.
+- kernel integration host: `a464e447a780692755ce5cf8c9f8548200892490`
+  (`jonrademacher-complete-lean4-formalizations`; local commit and push
+  succeeded, separate PR review is open).
 
 ## Canonical versions
 
@@ -99,10 +99,11 @@ the new GitHub workflow runs.
 - ICG: shares the Standing Algebra source repository's Lean build. Build
   success does not imply complete transcription; see ICG README coverage
   boundary.
-- Integration: 33 standard-library Python tests passed, including continuity
-  tooling and the existing Goodhart monitor; link, SHA-256, context-bundle,
-  and release-mode continuity checks passed locally. GitHub workflow status
-  remains pending until the workflow executes on a pushed commit.
+- Integration: 35 standard-library Python tests currently pass after adding
+  regression coverage for portable hashing. The initial hosted continuity
+  workflow failed at hash verification on commit `a464e447`; the failure and
+  correction are archived in `learning/`. A hosted rerun is required before
+  declaring remote validation complete.
 
 ## Reopening conditions
 

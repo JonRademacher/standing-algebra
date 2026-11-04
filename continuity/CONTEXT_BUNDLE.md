@@ -2,7 +2,7 @@
 
 - Generated from worktree: `C:\Users\070054\.copilot\repos\copilot-worktrees\standing-algebra\jonrademacher-effective-winner`
 - Git branch: `jonrademacher-complete-lean4-formalizations`
-- Git HEAD: `1fb47f313b1ddb147ed1ac3506a06f4f12fa43cf`
+- Git HEAD: `a464e447a780692755ce5cf8c9f8548200892490`
 - Git worktree: `contains uncommitted changes`
 - Epistemic status: reconstruction index; validate against live sources.
 - Framework boundary: Σᴿ and ICG are distinct peer frameworks.
@@ -13,20 +13,20 @@
 
 **Checkpoint ID:** `UCK-2026-11-04-001` (initialized integration checkpoint)
 **Checkpoint date:** 2026-11-04
-**Product status:** initialized canonical partial checkpoint of the current
-validated working tree. Source-repository limitations, uncommitted integration
-files, and the pre-existing unrelated user edit are explicit.
+**Product status:** continuity integration is committed and pushed on the
+current branch; its first hosted integrity workflow exposed a cross-platform
+hashing defect. The portable hashing correction and regression archive are in
+progress. The unrelated pre-existing Lean edit remains uncommitted.
 
-**Repository commits:**
+**Repository revisions:**
 
 - standing-algebra: `cbc4211baf0993d643e55398addabf9588120f3f` (observed
   `origin/main`; main-branch Lean, Coq, and Z3 workflows passed).
 - ICG: `cbc4211baf0993d643e55398addabf9588120f3f` for the integrated
   `ICG/` subtree only; a distinct ICG repository was not located.
-- kernel: no standalone UCK repository available. Integration artifacts are
-  hosted additively in this Standing Algebra repository. The configured
-  Non-Domination-Governance-Kernel is distinct and its exact HEAD was not
-  directly confirmed in the read-only audit.
+- kernel integration host: `a464e447a780692755ce5cf8c9f8548200892490`
+  (`jonrademacher-complete-lean4-formalizations`; local commit and push
+  succeeded, separate PR review is open).
 
 ## Canonical versions
 
@@ -110,10 +110,11 @@ the new GitHub workflow runs.
 - ICG: shares the Standing Algebra source repository's Lean build. Build
   success does not imply complete transcription; see ICG README coverage
   boundary.
-- Integration: 33 standard-library Python tests passed, including continuity
-  tooling and the existing Goodhart monitor; link, SHA-256, context-bundle,
-  and release-mode continuity checks passed locally. GitHub workflow status
-  remains pending until the workflow executes on a pushed commit.
+- Integration: 35 standard-library Python tests currently pass after adding
+  regression coverage for portable hashing. The initial hosted continuity
+  workflow failed at hash verification on commit `a464e447`; the failure and
+  correction are archived in `learning/`. A hosted rerun is required before
+  declaring remote validation complete.
 
 ## Reopening conditions
 
@@ -135,8 +136,8 @@ mapping, or test evidence changes.
 
 - ID: `UCK-2026-11-04-001`
 - Status: `canonical_partial`
-- Created: `2026-11-04T18:45:02Z`
-- Host branch / HEAD: `jonrademacher-complete-lean4-formalizations` / `1fb47f313b1ddb147ed1ac3506a06f4f12fa43cf`
+- Created: `2026-11-04T18:53:15Z`
+- Host branch / HEAD: `jonrademacher-complete-lean4-formalizations` / `a464e447a780692755ce5cf8c9f8548200892490`
 - Validation receipts:
   - standing_algebra_lean: passed (actions-lean-cbc4211)
   - standing_algebra_coq: passed (actions-coq-cbc4211)
@@ -155,10 +156,11 @@ mapping, or test evidence changes.
   - R-006 (open): Comprehensive manuscript theorem-ID-to-formalization mapping for Σᴿ/ICG was not found.
   - R-007 (open): ICG README reports selected formalization and source gaps; successful aggregate build does not close these.
   - R-008 (open): Root branch contains pre-existing uncommitted `Collapse_Demonstrations/collapse.lean` change.
-  - R-009 (open): Continuity product GitHub workflow cannot have a passing remote receipt until this branch is pushed and Actions run.
-  - R-010 (open): The current checkpoint will describe the validated initialized worktree; the integration changes are not yet committed or present in a remote branch.
+  - R-009 (open): The continuity product is pushed, but the latest hosted workflow must pass after the hash portability correction.
+  - R-010 (open): Checkpoint `UCK-2026-11-04-001` predates the integration commit and must be regenerated to identify the committed product revision and current residuals.
   - R-011 (open): Current scripts validate artifact integrity and references, not mathematical semantics, source transcription, product efficacy, or scholarly validity.
   - R-012 (open): Copilot customization files are repository artifacts; not all Copilot clients may support every agent/skill/prompt surface. No live Copilot configuration test was performed.
+  - R-013 (open): Initial hosted hash verification failed because `.git` worktree metadata was included and extensionless UTF-8 files were not normalized across operating-system checkouts.
 
 ## kernel/KERNEL_CURRENT.md
 
@@ -375,7 +377,7 @@ decision-log entry, updated affected nodes, and regression validation.
 | CAP-001 | Reconstruct source repo identity and commits | tested | Standing repository remotes and CI receipts; read-only I2OS/NDGK audits | Standalone ICG/UCK unavailable; reopen on source access. |
 | CAP-002 | Preserve attached source provenance | implemented | Corpus manifest and SHA-256 hashes | Revalidate after source files change. |
 | CAP-003 | Build bounded context bundle | tested | Generated `CONTEXT_BUNDLE.md` at 17,974 characters against an 18,000-character limit; unit fixture checks the hard bound | Rebuild after source or checkpoint changes. |
-| CAP-004 | Validate continuity graphs and checkpoint | validated | 34 Python tests, Markdown links, 1,077-file hash manifest, and release-mode validator passed locally | Remote continuity CI remains unrun until push. |
+| CAP-004 | Validate continuity graphs and checkpoint | validated | 35 Python tests, Markdown links, 1,076-file portable hash manifest, and release-mode validator passed locally | Hosted continuity workflow rerun remains pending. |
 | CAP-005 | Learn reusable failure/discovery shapes | candidate | Initial examples in learning archive and Future Forensics taxonomy | Validate with further independent cases. |
 | CAP-006 | Automatically improve agent model | not supported | No hidden state or background learning capability | Explicitly out of scope; only versioned repository deltas. |
 | CAP-007 | Construct explicit model-inadequacy records | testable | Required record and procedure in `MODEL_INADEQUACY_CONSTRUCTOR.md` | Exercise against an observed reconstruction failure. |
@@ -398,5 +400,4 @@ A proposed capability is never reported as demonstrated.
 | R-002 | open | No standalone Unified Compatibility Kernel repository or complete UCK corpus is available. The integration uses the attached build package and prior Copilot continuity notes only. | User supplies repository or named primary materials; audit provenance and version. |
 | R-003 | open | Additional transfer docs listed by the build package are not in the current session's available source files. | Ingest each supplied document with provenance and hash. |
 | R-004 | open | NDGK workspace audit exact HEAD and live CI status could not be directly confirmed; merge-base only was observed. It is not treated as authoritative UCK state. | Read-only access provides exact HEAD and workflow receipts. |
-| R-005 | open | I2OS repository has internal author inconsistency (README citation vs paper title page/bib) and no validation/CI receipt in the audit. It is excluded from product authority. | Repository maintainers reconcile attribution and publish validated evidence. |
 [Truncated at bundle limit; full source: `continuity/OPEN_RESIDUALS.md`; remaining sources omitted.]

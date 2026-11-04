@@ -11,6 +11,14 @@
     "context_bundle": "context-bundle-2026-11-04-001"
   },
   "receipts": {
+    "continuity-workflow-initial-failure-a464e447": {
+      "status": "failed",
+      "command": "GitHub Actions Continuity Integrity workflow",
+      "observed_at": "2026-11-04T18:50:03Z",
+      "source": "https://github.com/JonRademacher/standing-algebra/actions/runs/41890985104",
+      "commit": "a464e447a780692755ce5cf8c9f8548200892490",
+      "result": "Tests and Markdown links passed; hash verification failed because .git metadata was included and extensionless UTF-8 files were not normalized across checkout line endings."
+    },
     "actions-lean-cbc4211": {
       "status": "passed",
       "command": "GitHub Actions Lean CI workflow",
@@ -38,37 +46,37 @@
     "python-tests-2026-11-04-001": {
       "status": "passed",
       "command": "py -3.14 -m unittest discover -s Tests -v",
-      "observed_at": "2026-11-04T18:44:43Z",
+      "observed_at": "2026-11-04T18:52:36Z",
       "source": "local workspace",
-      "result": "Ran 34 tests; all passed."
+      "result": "Ran 35 tests; all passed."
     },
     "continuity-validation-2026-11-04-001": {
       "status": "passed",
       "command": "py -3.14 Scripts/validate_continuity.py --release --json",
-      "observed_at": "2026-11-04T18:39:59Z",
+      "observed_at": "2026-11-04T18:52:36Z",
       "source": "local workspace",
-      "result": "Passed with no errors or warnings after canonical checkpoint initialization."
+      "result": "Passed with no errors or warnings after portable hash correction."
     },
     "markdown-links-2026-11-04-001": {
       "status": "passed",
       "command": "py -3.14 Scripts/check_links.py",
-      "observed_at": "2026-11-04T18:39:07Z",
+      "observed_at": "2026-11-04T18:52:36Z",
       "source": "local workspace",
       "result": "Markdown links: passed."
     },
     "sha256-2026-11-04-001": {
       "status": "passed",
       "command": "py -3.14 Scripts/verify_hashes.py",
-      "observed_at": "2026-11-04T18:39:07Z",
+      "observed_at": "2026-11-04T18:52:36Z",
       "source": "local workspace",
-      "result": "SHA-256 manifest verified all 1,077 managed files."
+      "result": "SHA-256 manifest verified all 1,076 managed files; `.git` metadata is excluded and text hashes are line-ending neutral."
     },
     "context-bundle-2026-11-04-001": {
       "status": "passed",
       "command": "py -3.14 Scripts/build_context_bundle.py",
-      "observed_at": "2026-11-04T18:44:43Z",
+      "observed_at": "2026-11-04T18:52:36Z",
       "source": "local workspace",
-      "result": "Generated continuity/CONTEXT_BUNDLE.md at 23,878 characters against a 24,000-character limit, ending at a complete line."
+      "result": "Generated continuity/CONTEXT_BUNDLE.md at 23,925 characters against a 24,000-character limit, ending at a complete line."
     }
   }
 }

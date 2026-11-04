@@ -36,6 +36,8 @@ class ContinuityToolTests(unittest.TestCase):
     def test_hash_manifest_round_trip_and_known_exclusion(self) -> None:
         source = self.root / "source.txt"
         source.write_text("source\n", encoding="utf-8")
+        git_metadata = self.root / ".git"
+        git_metadata.write_text("gitdir: ../metadata\n", encoding="utf-8")
         excluded = self.root / "Collapse_Demonstrations/collapse.lean"
         excluded.parent.mkdir()
         excluded.write_text("preserved user change\n", encoding="utf-8")
@@ -45,6 +47,7 @@ class ContinuityToolTests(unittest.TestCase):
         self.assertEqual([], verify_hash_manifest(self.root))
         manifest = (self.root / "manifests/SHA256SUMS").read_text(encoding="utf-8")
         self.assertIn("source.txt", manifest)
+        self.assertNotIn(".git", manifest)
         self.assertNotIn("Collapse_Demonstrations/collapse.lean", manifest)
 
     def test_hashes_are_stable_across_text_line_endings(self) -> None:
@@ -54,6 +57,19 @@ class ContinuityToolTests(unittest.TestCase):
         crlf.write_bytes(b"first\r\nsecond\r\n")
 
         self.assertEqual(sha256_file(lf), sha256_file(crlf))
+
+    def test_hashes_are_stable_for_extensionless_utf8_text_but_preserve_binary(self) -> None:
+        extensionless_lf = self.root / "extensionless-lf"
+        extensionless_crlf = self.root / "extensionless-crlf"
+        binary_lf = self.root / "binary-lf.bin"
+        binary_crlf = self.root / "binary-crlf.bin"
+        extensionless_lf.write_bytes(b"first\nsecond\n")
+        extensionless_crlf.write_bytes(b"first\r\nsecond\r\n")
+        binary_lf.write_bytes(b"\x00first\nsecond\n")
+        binary_crlf.write_bytes(b"\x00first\r\nsecond\r\n")
+
+        self.assertEqual(sha256_file(extensionless_lf), sha256_file(extensionless_crlf))
+        self.assertNotEqual(sha256_file(binary_lf), sha256_file(binary_crlf))
 
     def test_git_status_preserves_first_path_character(self) -> None:
         completed = subprocess.CompletedProcess(

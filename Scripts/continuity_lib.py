@@ -16,44 +16,12 @@ HASH_FILE = Path("manifests/SHA256SUMS")
 HASH_EXCLUDES = {
     HASH_FILE.as_posix(),
     "manifests/CURRENT_CHECKPOINT.yaml",
+    ".git",
     "Collapse_Demonstrations/collapse.lean",
 }
 SCAN_DIRS = (".github", "continuity", "governance", "kernel", "learning", "Scripts")
 SCAN_FILES = ("README.md", "AGENTS.md")
 LINK_RE = re.compile(r"!?\[[^\]]*\]\((?:<([^>]+)>|([^\s)]+))(?:\s+[^)]*)?\)")
-TEXT_SUFFIXES = {
-    ".bib",
-    ".bat",
-    ".cff",
-    ".cfg",
-    ".csv",
-    ".html",
-    ".ini",
-    ".json",
-    ".lean",
-    ".md",
-    ".py",
-    ".sh",
-    ".smt2",
-    ".tex",
-    ".toml",
-    ".txt",
-    ".v",
-    ".xml",
-    ".yaml",
-    ".yml",
-}
-TEXT_FILENAMES = {
-    ".editorconfig",
-    ".gitignore",
-    "AGENTS",
-    "LICENSE",
-    "Makefile",
-    "README",
-    "lakefile",
-}
-
-
 def load_json_yaml(path: Path) -> Any:
     """Load JSON, a strict YAML subset, so CI has no third-party dependency."""
     try:
@@ -64,12 +32,15 @@ def load_json_yaml(path: Path) -> Any:
 
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
-    if path.suffix.lower() in TEXT_SUFFIXES or path.name in TEXT_FILENAMES:
-        digest.update(path.read_bytes().replace(b"\r\n", b"\n"))
-        return digest.hexdigest()
-    with path.open("rb") as stream:
-        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
-            digest.update(chunk)
+    content = path.read_bytes()
+    if b"\x00" not in content:
+        try:
+            content.decode("utf-8")
+        except UnicodeDecodeError:
+            pass
+        else:
+            content = content.replace(b"\r\n", b"\n")
+    digest.update(content)
     return digest.hexdigest()
 
 

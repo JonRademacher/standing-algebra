@@ -48,3 +48,56 @@ Decision DEC-001; project graph and current state identify the hosting choice.
 ### Reopening or retirement conditions
 
 Dedicated UCK repo becomes available or user authorizes creation of one.
+
+## DS-002 — Make integrity receipts portable across Git checkouts
+
+### Triggering observation
+
+The first hosted Continuity Integrity run on the committed integration passed
+tests and links but found a non-portable hash manifest.
+
+### Epistemic status
+
+Observed remote failure; local corrective regression tests passed, with hosted
+verification pending.
+
+### Minimal generating shape
+
+Exclude host-specific `.git` metadata, identify UTF-8 text by content rather
+than extension, normalize CRLF only for that text, and preserve byte-exact
+hashing for binary data.
+
+### Scope and applicability
+
+Integrity manifests generated on one operating system and checked on another.
+
+### Evidence and provenance
+
+Action run 41890985104; `Tests/test_continuity_tools.py` portable-hash fixtures.
+
+### Dependencies
+
+Depends on distinction between Git checkout representation and binary payload
+identity.
+
+### Counterexamples and residuals
+
+Hosted CI must pass on the corrected commit; SHA-256 integrity does not prove
+authorship or source correctness.
+
+### Correction or reuse operator
+
+Use NUL-free valid UTF-8 detection for newline canonicalization and retain raw
+bytes for binary files.
+
+### Validation performed
+
+Local tests pass; remote receipt pending.
+
+### State delta
+
+Update the hash helper, regression tests, and failure-shape archive.
+
+### Reopening or retirement conditions
+
+Reopen if any cross-platform hash mismatch recurs.
