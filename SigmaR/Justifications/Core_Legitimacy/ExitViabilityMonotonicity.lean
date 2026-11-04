@@ -88,14 +88,8 @@ theorem ExitViabilityMonotonicity_required
   (characterization : LegitimacyCharacterization)
   {F : Operation} (hLeg : Legitimate F) :
   ExitViabilityMonotone F := by
-  intro θ s i hExit
-  exact exit_viability_monotone θ
-    ((legitimacy_characterization characterization (F := F) (s := s)).mp hLeg) hExit
-  {F : Operation}
-  (hLeg : Legitimate F) :
-  ExitViabilityMonotone F :=
-by
   intro s i hExit
-  exact exit_viability_monotone (legitimacy_characterization.1 hLeg) hExit
+  exact exit_viability_monotone
+    ((legitimacy_characterization characterization (F := F) (s := s)).mp hLeg) hExit
 
 end SigmaR
