@@ -233,16 +233,12 @@
     },
     {
       "id": "SRC-ATTACHMENT-PATENTPACKET",
-      "path": "corpus/source-documents/originals/PatentPacket.docx",
       "title": "PatentPacket",
       "kind": "user_supplied_research_document",
       "author": "user-supplied; any attribution within the document is not independently verified",
-      "provenance": "User-supplied conversation attachment received 2026-11-04; original attachment filename: f65d7c51-4ccd-4dae-91c2-f6930c6e306d-PatentPacket.docx.",
-      "status": "preserved_source_snapshot",
-      "sha256": "8189775e4fd4a9668b0de0e7b6b553837384c723b279cbf65e00b1c2f3bddec2",
-      "text_path": "corpus/source-documents/text/PatentPacket.txt",
-      "text_sha256": "e05ae219adbf48e5cfe0f97c3b341f051b0968b5d24ddceddb9e10a10e997b51",
-      "extraction_note": "Readable paragraph-text derivative; embedded visual or non-text content may be omitted. Refer to the original DOCX for the source artifact."
+      "provenance": "User-supplied conversation attachment received 2026-11-04; original attachment filename: f65d7c51-4ccd-4dae-91c2-f6930c6e306d-PatentPacket.docx. Recorded snapshot: docx sha256 8189775e4fd4a9668b0de0e7b6b553837384c723b279cbf65e00b1c2f3bddec2, text derivative sha256 e05ae219adbf48e5cfe0f97c3b341f051b0968b5d24ddceddb9e10a10e997b51.",
+      "status": "unavailable",
+      "supersession_note": "Both recorded paths were deleted from the repository on 2026-11-06 (originals in commit 2c688f37, text derivative in commit 1ffdffa8), so this identifier is retained as the provenance record of the 2026-11-04 attachment and not as a live corpus object. The same corpus directories subsequently received 'StD for Patent.docx' / 'StD for Patent.txt' together with PATENT_PACKET_PRIVATE_ORIGINAL_RECORD.md and PATENT_PACKET_PRIVATE_TEXT_RECORD.txt; those replacement files are preserved in the tree but are not catalogued under this identifier."
     },
     {
       "id": "SRC-ATTACHMENT-PROSPECTUS-FOR-ON-RELEVANCE",
