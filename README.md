@@ -48,6 +48,22 @@ system or safety certification; it cannot determine whether the supplied goal
 signal represents the true objective. Usage and limitations are documented in
 [`Collapse_Demonstrations/Goodhart_Drift/README.md`](Collapse_Demonstrations/Goodhart_Drift/README.md).
 
+Standing Guard
+--------------
+[`standing_guard/`](standing_guard/README.md) turns that monitor into a drop-in
+governor for a running system. `StandingGuard.wrap(system)` discovers the proxy
+and the standing signal from the object's own numeric attributes or step
+outputs, latches drift on the windowed proxy-up / standing-down pattern, and
+then admits only standing-preserving scalings of the requested action, blocking
+the step and asking for review when none is admissible. `guard.report()`
+returns what drifted, what was attempted, and what the guard did about it.
+
+It is standard library only and needs no configuration. Run
+`python Standing_Guard_Demo.py` to see the guarded and unguarded runs side by
+side. As with the monitor, the guard enforces the hypothesis of
+`noGoodhartDrift_under_StandingAlgebra` empirically; it is not a proof that the
+signal it measures is the true objective.
+
 Interoperability Constraint Geometry (ICG)
 ------------------------------------------
 `ICG.lean` is the aggregate import for the additive `ICG` Lean library. It builds on the original interaction-closure and polynomial/Nullstellensatz layer with generic formalizations of derivation structure, obstruction, envelope geometry, and dynamics.
