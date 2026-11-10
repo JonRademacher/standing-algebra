@@ -1,0 +1,7 @@
+{
+  "file": "RH-Contract-02-Count-Geometry.zip",
+  "bytes": 8484,
+  "sha256": "dbdcc05ec48d651f69362aca6211fb4e667ffd4d7c3a57ad85c989390b349ba5",
+  "contract_type": "ADDITIONAL_CHILD_CONTRACT",
+  "terminal_state": "PARTIAL_LEMMAS_VERIFIED_AT_PAPER_LEVEL"
+}

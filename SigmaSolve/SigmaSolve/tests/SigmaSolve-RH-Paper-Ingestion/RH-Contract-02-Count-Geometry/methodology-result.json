@@ -1,0 +1,66 @@
+{
+  "target_id": "G6",
+  "execution_state": "EXECUTED",
+  "survivors": [
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6"
+  ],
+  "eliminated": {},
+  "blocked": {
+    "G2": [
+      "G1"
+    ],
+    "G3": [
+      "G1",
+      "G2"
+    ],
+    "G4": [
+      "G1"
+    ],
+    "G5": [
+      "G1",
+      "G3"
+    ],
+    "G6": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5"
+    ]
+  },
+  "residuals": [],
+  "reopening_conditions": [],
+  "missing_structures": [
+    "formal finite zero carrier",
+    "formal multiplicity carrier",
+    "Mathlib binding",
+    "Lean verifier runtime"
+  ],
+  "methodological_findings": [
+    "GEGA localized missing structures instead of treating the objective as globally failed.",
+    "Plural survivor landscape preserved; no hidden winner selected.",
+    "Dependency obstructions localized; blocked descendants were not promoted."
+  ],
+  "certificate": {
+    "objective": "Construct the exact counting geometry needed to bind the corrected bounded RH framework to the global Riemann Hypothesis without weakening the target.",
+    "target_verified": false,
+    "completion_criteria_declared": [
+      "G1-G5 proved at mathematical level",
+      "G6 cleanly verified in Lean",
+      "C007 <-> RiemannHypothesis transfer verified",
+      "No eliminated parent claim reintroduced"
+    ],
+    "verification_contract": [
+      "Lean kernel acceptance",
+      "clean replay"
+    ],
+    "authority_scope": "local mathematical analysis only",
+    "generated_at": 1794342938.4018471,
+    "claim_digest": "fed588e8ca9f6130b3e0bef500d8d3e3d9fbcfd53119220267a8bf62419bd59f"
+  }
+}

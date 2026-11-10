@@ -1,0 +1,26 @@
+{
+  "preferred_realization": "finite multiset or finite divisor of bounded nontrivial zeros",
+  "lean_targets": [
+    "NontrivialZero : ℂ -> Prop (or bind existing predicate)",
+    "zeroMultiplicity : ℂ -> ℕ (or existing order-of-zero API)",
+    "zerosUpTo : ℝ -> Finset/Multiset ℂ",
+    "criticalZerosUpTo : ℝ -> Finset/Multiset ℂ",
+    "N : ℝ -> ℕ",
+    "N0 : ℝ -> ℕ",
+    "criticalZerosUpTo_le_zerosUpTo",
+    "N0_le_N",
+    "count_eq_implies_bounded_RH",
+    "riemannHypothesis_iff_count_eq"
+  ],
+  "formal_risks": [
+    "Zero sets of holomorphic functions are not represented naively as finite sets without a finiteness theorem.",
+    "Multiplicity requires order-of-vanishing data, not duplicate complex values in a Finset.",
+    "The formal RiemannHypothesis predicate may quantify zeros in a representation different from this contract.",
+    "Boundary zeros at Im(rho)=T must not cause count discontinuity ambiguity in equivalence proofs."
+  ],
+  "fallback_realizations": [
+    "zero counting measure/divisor restricted to compact rectangle",
+    "argument-principle count attached to a contour with boundary-zero guard",
+    "abstract finite multiset theorem first, analytic binding second"
+  ]
+}

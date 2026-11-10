@@ -1,0 +1,24 @@
+{
+  "contract": "RH-C02-COUNT-GEOMETRY",
+  "contract_type": "ADDITIONAL_CHILD_CONTRACT",
+  "terminal_state": "PARTIAL_LEMMAS_VERIFIED_AT_PAPER_LEVEL",
+  "paper_level": {
+    "G2": "PROVED given a finite submultiset realization",
+    "G3": "PROVED given G1 finite multiset realization and G2",
+    "G4": "PROVED given exact binding of RH and zero-count domains",
+    "G5": "PROVED given G3 and coverage of arbitrary nontrivial zeros by some finite T",
+    "G1": "OPEN analytic/formal construction",
+    "G6": "BLOCKED verifier/library binding"
+  },
+  "formal_level": {
+    "lean_ready": false,
+    "G1": "UNVERIFIED",
+    "G2": "UNVERIFIED",
+    "G3": "UNVERIFIED",
+    "G4": "UNVERIFIED",
+    "G5": "UNVERIFIED",
+    "G6": "BLOCKED"
+  },
+  "important_consequence": "The logical equivalence skeleton is not the hard part. The next genuine obstruction is constructing/binding the bounded zero-count carrier with multiplicity in the formal zeta environment.",
+  "next_contract_trigger": "Open RH Contract 03 only after G1 is realized or a different analytic counting carrier is selected."
+}

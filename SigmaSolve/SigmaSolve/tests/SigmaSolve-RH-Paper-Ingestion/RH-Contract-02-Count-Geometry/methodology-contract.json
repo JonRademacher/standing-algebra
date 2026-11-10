@@ -1,0 +1,203 @@
+{
+  "objective": "Construct the exact counting geometry needed to bind the corrected bounded RH framework to the global Riemann Hypothesis without weakening the target.",
+  "target_id": "G6",
+  "claims": [
+    {
+      "id": "G1",
+      "statement": "Definitions are finite/well-defined for every finite T",
+      "provenance": {
+        "source_id": "RH-C02-COUNT-GEOMETRY",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate mathematical claim",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "count-geometry",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "G2",
+      "statement": "N0(T) <= N(T) for every T",
+      "provenance": {
+        "source_id": "RH-C02-COUNT-GEOMETRY",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate mathematical claim",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "G1"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "count-geometry",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "G3",
+      "statement": "N0(T)=N(T) implies every nontrivial zero through T lies on Re(s)=1/2",
+      "provenance": {
+        "source_id": "RH-C02-COUNT-GEOMETRY",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate mathematical claim",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "G1",
+        "G2"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "count-geometry",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "G4",
+      "statement": "RH implies forall T>0, N0(T)=N(T)",
+      "provenance": {
+        "source_id": "RH-C02-COUNT-GEOMETRY",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate mathematical claim",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "G1"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "count-geometry",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "G5",
+      "statement": "forall T>0, N0(T)=N(T) implies RH",
+      "provenance": {
+        "source_id": "RH-C02-COUNT-GEOMETRY",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate mathematical claim",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "G1",
+        "G3"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "count-geometry",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "G6",
+      "statement": "Bind G1-G5 to exact Mathlib objects and clean replay in Lean",
+      "provenance": {
+        "source_id": "RH-C02-COUNT-GEOMETRY",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate mathematical claim",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "count-geometry",
+      "equivalence_obligations": []
+    }
+  ],
+  "gega": {
+    "existence": [
+      "zeta zeros",
+      "critical-line zeros",
+      "multiplicity",
+      "height",
+      "counting functions"
+    ],
+    "identity": [
+      "exact RH target",
+      "C007 all-height equality"
+    ],
+    "relations": [
+      "critical-line zero multiset is intended as a submultiset of all nontrivial zeros",
+      "count equality plus submultiset relation gives bounded completeness"
+    ],
+    "environment": [
+      "analytic continuation / completed zeta context",
+      "Mathlib formalization target",
+      "corrected RH paper"
+    ],
+    "boundaries": [
+      "finite T versus unbounded height",
+      "open lower boundary 0",
+      "closed upper boundary T",
+      "multiplicity"
+    ],
+    "realizations": [
+      "multiset/cardinality",
+      "zero-counting measure",
+      "finite filtered divisor/multiset representation"
+    ],
+    "consequences": [
+      "G2",
+      "G3",
+      "RH equivalence"
+    ],
+    "updated_geometry": [
+      "bounded theorem becomes an exact counting theorem",
+      "global residual isolated to G4-G5 and ultimately C007"
+    ],
+    "missing_structures": [
+      "formal finite zero carrier",
+      "formal multiplicity carrier",
+      "Mathlib binding",
+      "Lean verifier runtime"
+    ]
+  },
+  "endpoint_geometry": [
+    "Exact RH equivalence"
+  ],
+  "admissibility_constraints": [
+    "No ordinary Dirichlet-series convergence claim inside the critical strip",
+    "No finite-height result may discharge an all-height quantifier",
+    "No symmetry argument may replace off-axis exclusion",
+    "Multiplicity and T-boundary behavior must be explicit",
+    "Equivalent representations require proved transfer obligations",
+    "No sorry, admit, unsafe, or new axioms"
+  ],
+  "completion_criteria": [
+    "G1-G5 proved at mathematical level",
+    "G6 cleanly verified in Lean",
+    "C007 <-> RiemannHypothesis transfer verified",
+    "No eliminated parent claim reintroduced"
+  ],
+  "verification_contract": [
+    "Lean kernel acceptance",
+    "clean replay"
+  ],
+  "return_state_requirements": [
+    "proved obligations",
+    "blocked obligations",
+    "counterexamples",
+    "residuals",
+    "reopening conditions",
+    "artifacts",
+    "hashes"
+  ],
+  "authority_scope": "local mathematical analysis only"
+}
