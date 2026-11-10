@@ -1,0 +1,9 @@
+{
+  "id": "mock-success",
+  "theorem_name": "mock_success",
+  "declaration": "theorem mock_success : True",
+  "imports": [],
+  "metadata": {"mock_proofs": ["by
+  trivial"]},
+  "budget": {"max_rounds": 2, "branches_per_round": 2, "max_candidates": 4}
+}

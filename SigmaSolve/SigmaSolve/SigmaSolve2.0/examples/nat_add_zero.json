@@ -1,0 +1,14 @@
+{
+  "id": "nat-add-zero",
+  "theorem_name": "nat_add_zero",
+  "declaration": "theorem nat_add_zero (n : Nat) : n + 0 = n",
+  "imports": [],
+  "metadata": {
+    "mock_proofs": ["by
+  rfl", "by
+  induction n with
+  | zero => rfl
+  | succ n ih => simp [ih]"]
+  },
+  "budget": {"max_rounds": 2, "branches_per_round": 2, "verifier_timeout_seconds": 30, "max_candidates": 6}
+}

@@ -1,0 +1,9 @@
+{
+  "id": "riemann-hypothesis-global",
+  "theorem_name": "sigmaSolve_riemann_hypothesis",
+  "declaration": "theorem sigmaSolve_riemann_hypothesis : RiemannHypothesis",
+  "imports": ["Mathlib"],
+  "context": "Preserve the universal global claim. Bounded computation or positive-proportion results are partial evidence only.",
+  "budget": {"max_rounds": 8, "branches_per_round": 8, "verifier_timeout_seconds": 600, "max_candidates": 64},
+  "evidence": {"require_clean_replay": true, "forbid_tokens": ["sorry", "admit", "axiom", "unsafe"]}
+}

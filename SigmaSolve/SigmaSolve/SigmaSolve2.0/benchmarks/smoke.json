@@ -1,0 +1,5 @@
+{
+  "name": "SigmaSolve smoke benchmark",
+  "condition": "C3",
+  "problems": ["../examples/mock_success.json"]
+}
