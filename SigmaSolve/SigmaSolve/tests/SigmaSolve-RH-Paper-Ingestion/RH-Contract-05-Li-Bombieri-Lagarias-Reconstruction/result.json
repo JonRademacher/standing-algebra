@@ -1,0 +1,11 @@
+{
+  "contract": "RH-C05-LI-BOMBIERI-LAGARIAS-RECONSTRUCTION",
+  "contract_type": "ADDITIONAL_CHILD_CONTRACT",
+  "terminal_state": "UNRESOLVED",
+  "detector_lane": "CLOSED_AT_SCHOLARLY_THEOREM_LEVEL; FORMALIZATION OPEN",
+  "finite_negative_witness": "GUARANTEED UNDER NOT-RH, INDEED INFINITELY OFTEN",
+  "barrier_lane": "OPEN CORE",
+  "full_solve": "BLOCKED ON INDEPENDENT UNIVERSAL POSITIVITY",
+  "next_selected_trajectory": "Contract 06: independent Li-positivity representation audit",
+  "surviving_alternatives": ["Weil test-function positivity", "positive operator/Gram representation", "arithmetic quadratic form", "completed-zeta residual geometry"]
+}

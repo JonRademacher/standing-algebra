@@ -1,0 +1,19 @@
+{
+  "detector": [
+    {"id":"D1","status":"ESTABLISHED_EXTERNAL","statement":"Derivative definition of Li coefficients"},
+    {"id":"D2","status":"ESTABLISHED_EXTERNAL","statement":"Symmetric zero-sum representation"},
+    {"id":"D3","status":"PROVED","statement":"Off-line symmetry supplies a transformed element outside the unit disk in the appropriate orientation"},
+    {"id":"D4","status":"ESTABLISHED_EXTERNAL_RECONSTRUCTED","statement":"Bombieri-Lagarias maximal-modulus argument gives infinitely many finite negative witness indices"},
+    {"id":"D5","status":"SCHEMA_COMPLETE","statement":"Finite certificate consists of n plus certified lambda_n<0"},
+    {"id":"D6","status":"OPEN_FORMALIZATION","statement":"Lean transcription and clean replay"}
+  ],
+  "barrier": [
+    {"id":"P1","status":"OPEN","statement":"Independent exact positive representation of the same lambda_n"},
+    {"id":"P2","status":"OPEN_CORE","statement":"Universal nonnegativity without RH-equivalent assumptions"},
+    {"id":"I1","status":"OPEN","statement":"Independence audit"}
+  ],
+  "closure": [
+    {"id":"C1","status":"BLOCKED_ON_P2_I1","statement":"Negative detector contradicts universal positivity"},
+    {"id":"C2","status":"UNRESOLVED","statement":"RiemannHypothesis"}
+  ]
+}

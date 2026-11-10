@@ -1,0 +1,32 @@
+{
+  "target": "RiemannHypothesis",
+  "assumption": "not RH",
+  "steps": [
+    {
+      "id": "S1",
+      "claim": "off-critical-line zero exists",
+      "status": "follows from not RH under exact RH predicate"
+    },
+    {
+      "id": "S2",
+      "claim": "Bombieri-Lagarias hypotheses hold for nontrivial zeta zero multiset",
+      "status": "established analytic input; formal binding open"
+    },
+    {
+      "id": "S3",
+      "claim": "infinitely many finite n satisfy lambda_n<0",
+      "status": "established theorem consequence"
+    },
+    {
+      "id": "S4",
+      "claim": "every lambda_n>=0 by an independent proof",
+      "status": "missing"
+    },
+    {
+      "id": "S5",
+      "claim": "contradiction and RH",
+      "status": "blocked on S4"
+    }
+  ],
+  "minimal_missing_generator": "independent universal positivity theorem for the same Li coefficients"
+}

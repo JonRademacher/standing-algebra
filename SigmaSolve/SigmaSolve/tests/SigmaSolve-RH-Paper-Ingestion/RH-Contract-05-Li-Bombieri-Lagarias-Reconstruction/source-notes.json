@@ -1,0 +1,15 @@
+{
+  "primary": {
+    "title": "Complements to Li's Criterion for the Riemann Hypothesis",
+    "authors": ["Enrico Bombieri", "Jeffrey C. Lagarias"],
+    "journal": "Journal of Number Theory 77 (1999), 274-287",
+    "role": "general multiset theorem, maximal-modulus proof, arithmetic formula"
+  },
+  "secondary": {
+    "title": "The Positivity of a Sequence of Numbers and the Riemann Hypothesis",
+    "author": "Xian-Jin Li",
+    "journal": "Journal of Number Theory 65 (1997), 325-333",
+    "role": "original criterion"
+  },
+  "status": "The detector theorem is established literature. This package is a reconstruction, not a novelty claim."
+}
