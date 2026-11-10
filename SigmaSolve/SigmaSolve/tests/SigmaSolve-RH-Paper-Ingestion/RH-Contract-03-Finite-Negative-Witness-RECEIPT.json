@@ -1,0 +1,8 @@
+{
+  "file": "RH-Contract-03-Finite-Negative-Witness.zip",
+  "bytes": 8676,
+  "sha256": "8ddb862194742ff728c2cd41aa21e7a59a3c933a0f69f1fda046283f86c8f75c",
+  "terminal_state": "UNRESOLVED",
+  "contract_type": "ADDITIONAL_CHILD_CONTRACT",
+  "methodology_review": "direct review complete; automated CLI blocked and recorded"
+}

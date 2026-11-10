@@ -1,0 +1,19 @@
+{
+  "detector_lane": {
+    "primary": "Formalize Li's criterion and extract the finite negative-index consequence of an off-line zero.",
+    "critical_residual": "Show how an off-line zero's exponentially growing transformed contribution dominates the complete zero sum for some finite n, with all convergence/grouping conventions explicit."
+  },
+  "barrier_lane": {
+    "primary": "Search for a positive operator, Gram form, norm-square, or arithmetic quadratic form equal to lambda_n.",
+    "critical_residual": "Prove exact equality to lambda_n and positivity without importing RH-equivalent assumptions."
+  },
+  "secondary_lane": {
+    "primary": "Use Weil's explicit formula to generate a finite test-function negative witness from an off-line zero.",
+    "critical_residual": "Construct the test function with controlled contributions from every other zero and prove the arithmetic side is nonnegative independently."
+  },
+  "falsification_lane": [
+    "Check every proposed trace/operator proof for trace-class and limit-exchange gaps.",
+    "Search finite-dimensional analogues for counterexamples to the claimed positivity identity.",
+    "Attempt to derive the barrier from assumptions strictly weaker than RH; reject equivalent restatements disguised as operators."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "forbidden_dependencies_for_barrier": [
+    "RiemannHypothesis",
+    "C007: forall T>0, N0(T)=N(T)",
+    "all zeros lie on the critical line",
+    "Li criterion equivalence used in the positivity direction",
+    "Weil criterion equivalence used as the positivity premise",
+    "numerical verification for only finitely many indices",
+    "an unproved operator trace identity",
+    "an interchange of infinite sums, limits, traces, or derivatives without hypotheses"
+  ],
+  "required_barrier_evidence": [
+    "exact witness definition",
+    "exact arithmetic/operator identity",
+    "domain and convergence proof",
+    "positivity of the representing object",
+    "limit/interchange justification",
+    "dependency graph showing no forbidden edge",
+    "formal verifier acceptance and clean replay"
+  ],
+  "failure_rule": "If the barrier theorem depends on any forbidden dependency, the contract is circular and cannot close RH."
+}

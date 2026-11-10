@@ -1,0 +1,54 @@
+{
+  "contract_id": "RH-C03-FINITE-NEGATIVE-WITNESS",
+  "version": "0.1.0",
+  "contract_type": "ADDITIONAL_CHILD_CONTRACT",
+  "parent_contracts": ["RH-C02-COUNT-GEOMETRY", "SigmaSolve-RH-Paper-Ingestion"],
+  "objective": "Convert any off-critical-line zero/count jump into a finite negative certificate and derive a contradiction from an independently proved universal nonnegativity theorem.",
+  "exact_target": "RiemannHypothesis",
+  "witness_interface": {
+    "index_type": "positive natural number or finite encoded test object",
+    "value_type": "exact real number",
+    "negative_predicate": "W(i) < 0",
+    "finite_certificate": "a concrete finite index/object i together with an exact proof that W(i) < 0"
+  },
+  "preferred_realization": {
+    "name": "Keiper-Li coefficients",
+    "definition": "lambda_n = 1/(n-1)! * d^n/ds^n [s^(n-1) log xi(s)] at s=1",
+    "detector_goal": "not RH -> exists n >= 1, lambda_n < 0",
+    "barrier_goal": "forall n >= 1, lambda_n >= 0",
+    "closure": "detector_goal + barrier_goal -> RH"
+  },
+  "secondary_realization": {
+    "name": "Weil explicit-formula positivity",
+    "detector_goal": "off-line zero -> exists finitely specified admissible test function f with Q(f) < 0",
+    "barrier_goal": "forall admissible f, Q(f) >= 0",
+    "closure": "detector_goal + barrier_goal -> RH"
+  },
+  "obligations": [
+    {"id":"W1","statement":"Define completed xi and witness W exactly in a valid analytic/formal carrier","status":"OPEN"},
+    {"id":"W2","statement":"Prove every off-line count jump yields an off-line zero quartet in the witness domain","status":"OPEN"},
+    {"id":"W3","statement":"Prove off-line quartet -> exists finite witness i with W(i)<0","status":"OPEN"},
+    {"id":"W4","statement":"Produce an extractable finite certificate format for i and W(i)<0","status":"OPEN"},
+    {"id":"P1","statement":"Construct an independent arithmetic/operator representation of W(i)","status":"OPEN"},
+    {"id":"P2","statement":"Prove W(i)>=0 for every admissible finite witness i without assuming RH or an equivalent statement","status":"OPEN_CORE"},
+    {"id":"I1","statement":"Pass independence audit: P1/P2 do not depend on RH, C007, absence of off-line zeros, Li/Weil converse, or a hidden equivalent positivity premise","status":"OPEN"},
+    {"id":"C1","statement":"Combine W3 and P2 to eliminate off-line jumps","status":"BLOCKED"},
+    {"id":"C2","statement":"Transfer no off-line jumps to exact RiemannHypothesis","status":"BLOCKED"},
+    {"id":"V1","statement":"Lean verification and clean replay of W1-C2","status":"BLOCKED_VERIFIER_REQUIRED"}
+  ],
+  "anti_circularity": [
+    "Li's criterion may provide W3 and closure, but it cannot itself count as the independent proof of P2.",
+    "Numerical positivity for finitely many coefficients cannot establish P2.",
+    "A trace/operator formula counts for P1 only after domains, trace class, limits, and equality to W are proved.",
+    "The barrier may not assume every zero lies on the critical line, N0(T)=N(T), or any equivalent criterion.",
+    "A negative contribution from one off-line zero is not yet a negative total witness; domination of all remaining terms must be proved."
+  ],
+  "completion_criteria": [
+    "W1-W4 proved",
+    "P1-P2 proved independently",
+    "I1 passed with dependency certificate",
+    "C1-C2 proved",
+    "V1 cleanly replayed",
+    "No finite numerical evidence promoted to universal positivity"
+  ]
+}

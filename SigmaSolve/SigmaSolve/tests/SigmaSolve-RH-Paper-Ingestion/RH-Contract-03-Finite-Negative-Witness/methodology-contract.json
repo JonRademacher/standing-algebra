@@ -1,0 +1,284 @@
+{
+  "objective": "Convert any off-critical-line zero/count jump into a finite negative certificate and derive a contradiction from an independently proved universal nonnegativity theorem.",
+  "target_id": "V1",
+  "claims": [
+    {
+      "id": "W1",
+      "statement": "Define completed xi and witness W exactly in a valid analytic/formal carrier",
+      "provenance": {
+        "source_id": "RH-C03-FINITE-NEGATIVE-WITNESS",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate proof obligation",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "finite-negative-witness",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "W2",
+      "statement": "Prove every off-line count jump yields an off-line zero quartet in the witness domain",
+      "provenance": {
+        "source_id": "RH-C03-FINITE-NEGATIVE-WITNESS",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate proof obligation",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "W1"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "finite-negative-witness",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "W3",
+      "statement": "Prove off-line quartet -> exists finite witness i with W(i)<0",
+      "provenance": {
+        "source_id": "RH-C03-FINITE-NEGATIVE-WITNESS",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate proof obligation",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "W1",
+        "W2"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "finite-negative-witness",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "W4",
+      "statement": "Produce an extractable finite certificate format for i and W(i)<0",
+      "provenance": {
+        "source_id": "RH-C03-FINITE-NEGATIVE-WITNESS",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate proof obligation",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "W3"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "finite-negative-witness",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "P1",
+      "statement": "Construct an independent arithmetic/operator representation of W(i)",
+      "provenance": {
+        "source_id": "RH-C03-FINITE-NEGATIVE-WITNESS",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate proof obligation",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "W1"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "finite-negative-witness",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "P2",
+      "statement": "Prove W(i)>=0 for every admissible finite witness i without assuming RH or an equivalent statement",
+      "provenance": {
+        "source_id": "RH-C03-FINITE-NEGATIVE-WITNESS",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate proof obligation",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "P1"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "finite-negative-witness",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "I1",
+      "statement": "Pass independence audit: P1/P2 do not depend on RH, C007, absence of off-line zeros, Li/Weil converse, or a hidden equivalent positivity premise",
+      "provenance": {
+        "source_id": "RH-C03-FINITE-NEGATIVE-WITNESS",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate proof obligation",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "P1",
+        "P2"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "finite-negative-witness",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "C1",
+      "statement": "Combine W3 and P2 to eliminate off-line jumps",
+      "provenance": {
+        "source_id": "RH-C03-FINITE-NEGATIVE-WITNESS",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate proof obligation",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "W3",
+        "P2",
+        "I1"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "finite-negative-witness",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "C2",
+      "statement": "Transfer no off-line jumps to exact RiemannHypothesis",
+      "provenance": {
+        "source_id": "RH-C03-FINITE-NEGATIVE-WITNESS",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate proof obligation",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "C1"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "finite-negative-witness",
+      "equivalence_obligations": []
+    },
+    {
+      "id": "V1",
+      "statement": "Lean verification and clean replay of W1-C2",
+      "provenance": {
+        "source_id": "RH-C03-FINITE-NEGATIVE-WITNESS",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "candidate proof obligation",
+        "currentness": "2026-11-10",
+        "evidence": []
+      },
+      "dependencies": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "P1",
+        "P2",
+        "I1",
+        "C1",
+        "C2"
+      ],
+      "status": "OPEN",
+      "residuals": [],
+      "reopening_conditions": [],
+      "representation": "finite-negative-witness",
+      "equivalence_obligations": []
+    }
+  ],
+  "gega": {
+    "existence": [
+      "off-line zero quartet",
+      "count jump",
+      "Li coefficients",
+      "Weil test functions",
+      "positivity barrier"
+    ],
+    "identity": [
+      "exact RH",
+      "same witness definition on detector and barrier lanes"
+    ],
+    "relations": [
+      "off-line jump -> negative witness",
+      "barrier -> no negative witness",
+      "contradiction -> RH"
+    ],
+    "environment": [
+      "completed xi",
+      "explicit formula",
+      "operator/arithmetic representation",
+      "Lean"
+    ],
+    "boundaries": [
+      "finite witness versus universal barrier",
+      "one-zero contribution versus total witness",
+      "equivalence criterion versus independent proof"
+    ],
+    "realizations": [
+      "Li sequence",
+      "Weil quadratic form",
+      "positive operator/Gram form"
+    ],
+    "consequences": [
+      "finite contradiction certificate",
+      "RH if both lanes close"
+    ],
+    "updated_geometry": [
+      "global RH burden split into detector, barrier, independence audit"
+    ],
+    "missing_structures": [
+      "formal Li criterion",
+      "finite witness extraction",
+      "independent positivity representation",
+      "noncircular dependency certificate"
+    ]
+  },
+  "endpoint_geometry": [
+    "Exact RH via contradiction"
+  ],
+  "admissibility_constraints": [
+    "Li's criterion may provide W3 and closure, but it cannot itself count as the independent proof of P2.",
+    "Numerical positivity for finitely many coefficients cannot establish P2.",
+    "A trace/operator formula counts for P1 only after domains, trace class, limits, and equality to W are proved.",
+    "The barrier may not assume every zero lies on the critical line, N0(T)=N(T), or any equivalent criterion.",
+    "A negative contribution from one off-line zero is not yet a negative total witness; domination of all remaining terms must be proved."
+  ],
+  "completion_criteria": [
+    "W1-W4 proved",
+    "P1-P2 proved independently",
+    "I1 passed with dependency certificate",
+    "C1-C2 proved",
+    "V1 cleanly replayed",
+    "No finite numerical evidence promoted to universal positivity"
+  ],
+  "verification_contract": [
+    "Lean kernel acceptance",
+    "clean replay",
+    "dependency audit"
+  ],
+  "return_state_requirements": [
+    "detector status",
+    "barrier status",
+    "independence status",
+    "residuals",
+    "receipts"
+  ],
+  "authority_scope": "local research artifacts only"
+}
