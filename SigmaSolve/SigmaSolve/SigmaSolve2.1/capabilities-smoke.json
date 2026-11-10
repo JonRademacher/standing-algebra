@@ -1,0 +1,45 @@
+{
+  "capabilities": {
+    "lake": {
+      "name": "lake",
+      "available": false,
+      "executable": null,
+      "version": null,
+      "detail": "lake not found on PATH"
+    },
+    "lean": {
+      "name": "lean",
+      "available": false,
+      "executable": null,
+      "version": null,
+      "detail": "lean not found on PATH"
+    },
+    "docker": {
+      "name": "docker",
+      "available": false,
+      "executable": null,
+      "version": null,
+      "detail": "docker not found on PATH"
+    },
+    "z3": {
+      "name": "z3",
+      "available": false,
+      "version": null,
+      "detail": "No module named 'z3'"
+    },
+    "sympy": {
+      "name": "sympy",
+      "available": true,
+      "version": "1.14.0",
+      "detail": "python module"
+    },
+    "mpmath": {
+      "name": "mpmath",
+      "available": true,
+      "version": "1.3.0",
+      "detail": "python module"
+    }
+  },
+  "lean_ready": false,
+  "research_ready": true
+}

@@ -1,0 +1,40 @@
+{
+  "target": "RiemannHypothesis",
+  "terminal_state": "UNRESOLVED",
+  "claim_count": 33,
+  "status_counts": {
+    "ESTABLISHED": 1,
+    "ESTABLISHED_NEEDS_LIBRARY_BINDING": 1,
+    "VALID_CONDITIONAL": 3,
+    "VALID": 6,
+    "OPEN": 2,
+    "REFUTED": 4,
+    "REFUTED_AS_STATED": 1,
+    "BLOCKED_DEPENDENCY": 2,
+    "REFUTED_AS_PROVED": 1,
+    "UNPROVED": 5,
+    "SALVAGEABLE_REFORMULATION": 1,
+    "REFUTED_AS_GENERAL_PRINCIPLE": 1,
+    "NEEDS_EXACT_STATEMENT": 1,
+    "PLAUSIBLE_NEEDS_PROOF": 1,
+    "REFUTED_AS_INFERENCE": 1,
+    "NON_SEQUITUR_FOR_RH": 1,
+    "REFUTED_AS_DERIVED": 1
+  },
+  "critical_failed_claims": [
+    "C010",
+    "C011",
+    "C013",
+    "C019",
+    "C024",
+    "C025",
+    "C027",
+    "C029",
+    "C030",
+    "C034"
+  ],
+  "strongest_verified_result": "Certified bounded critical-line completeness theorem C005, conditional on complete independent certificates.",
+  "global_residual": "Prove C007: forall T>0, N0(T)=N(T), or a verified equivalent global criterion.",
+  "full_solve_attempt": "FAILED_WITH_LOCALIZED_DEPENDENCIES",
+  "verifier_state": "Lean/Lake unavailable in active host; logical counterexamples and dependency review executed."
+}

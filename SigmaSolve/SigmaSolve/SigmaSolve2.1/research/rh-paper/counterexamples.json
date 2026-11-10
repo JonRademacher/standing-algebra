@@ -1,0 +1,48 @@
+{
+  "C024": {
+    "example_terms": [
+      "-1",
+      "2^-1",
+      "2^-2",
+      "2^-3",
+      "2^-4",
+      "2^-5",
+      "2^-6",
+      "2^-7",
+      "2^-8",
+      "2^-9",
+      "2^-10",
+      "2^-11",
+      "2^-12",
+      "2^-13",
+      "2^-14",
+      "2^-15",
+      "2^-16",
+      "2^-17",
+      "2^-18",
+      "2^-19",
+      "2^-20"
+    ],
+    "partial_sum_20": -9.5367431640625e-07,
+    "limit": 0,
+    "point": "total convergence to zero without consecutive pair cancellation"
+  },
+  "C025": {
+    "vectors": [
+      0.5,
+      -0.3,
+      -0.2
+    ],
+    "sum": 0.0,
+    "strictly_decreasing_magnitudes": true
+  },
+  "C029": {
+    "symmetric_set": [
+      0.25,
+      0.75
+    ],
+    "center": 0.5,
+    "fixed_points": [],
+    "point": "reflection symmetry does not force elements onto center"
+  }
+}
