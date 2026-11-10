@@ -1,0 +1,11 @@
+{
+  "contract": "RH-C07-TRACE-DECOMPOSITION-CLOSURE-GAP",
+  "contract_type": "ADDITIONAL_CHILD_CONTRACT",
+  "solve_attempt": "EXECUTED",
+  "terminal_state": "UNRESOLVED",
+  "RH_proved": false,
+  "RH_disproved": false,
+  "failure_shape": "negative-witness detector closes, independent trace barrier does not",
+  "minimum_missing_structure": ["A2/T5", "A3/T3", "A5/T4"],
+  "next_contract": "Do not create Contract 08 until Contract 07 resolves or eliminates at least one of T3, T4, or T5."
+}

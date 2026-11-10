@@ -1,0 +1,69 @@
+{
+  "edges": [
+    {
+      "from": "Contracts04-05",
+      "to": "NegativeWitness"
+    },
+    {
+      "from": "T1",
+      "to": "T2"
+    },
+    {
+      "from": "T1",
+      "to": "T3"
+    },
+    {
+      "from": "T1",
+      "to": "T4"
+    },
+    {
+      "from": "T1",
+      "to": "T5"
+    },
+    {
+      "from": "T2",
+      "to": "T3"
+    },
+    {
+      "from": "T2",
+      "to": "T4"
+    },
+    {
+      "from": "T3",
+      "to": "T6"
+    },
+    {
+      "from": "T4",
+      "to": "T6"
+    },
+    {
+      "from": "T5",
+      "to": "T6"
+    },
+    {
+      "from": "T6",
+      "to": "UniversalLiPositivity"
+    },
+    {
+      "from": "UniversalLiPositivity",
+      "to": "Contradiction"
+    },
+    {
+      "from": "NegativeWitness",
+      "to": "Contradiction"
+    },
+    {
+      "from": "Contradiction",
+      "to": "RH"
+    }
+  ],
+  "blocked_nodes": [
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "UniversalLiPositivity",
+    "Contradiction",
+    "RH"
+  ]
+}

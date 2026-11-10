@@ -1,0 +1,37 @@
+{
+  "id": "RH-FS-TRACE-BARRIER-01",
+  "shape": "Established Negative-Witness Detector -> Proposed Positive Operator -> One-Sided Projection and Trace Decomposition -> Unverified Cross-Term Vanishing / Limit Identification -> Universal Positivity Not Established -> Contradiction Closure Blocked",
+  "localized_failures": [
+    {
+      "id": "F1",
+      "claim": "A2: Delta(h_n,epsilon) tends to 2 lambda_n",
+      "failure_type": "LIMIT_AND_NORMALIZATION_GAP",
+      "risk": "support and analytic data vary with epsilon; zero grouping and limit interchange require explicit control"
+    },
+    {
+      "id": "F2",
+      "claim": "A3: trace on ES(Q_Lambda_perp) is zero",
+      "failure_type": "INFINITE_REPEAT_AND_QUOTIENT_INDEXING_GAP",
+      "risk": "the repeated summand must be identical, legally reindexed, absolutely summable, and genuinely repeated over an infinite non-overcounted index set"
+    },
+    {
+      "id": "F3",
+      "claim": "A5: trace on ES(Q_Lambda) is nonnegative",
+      "failure_type": "POSITIVE_OPERATOR_TO_PROJECTED_TRACE_GAP",
+      "risk": "positivity of V_S(h) establishes positivity of the compressed term, not automatically the one-sided projected operator; cross-term vanishing is essential"
+    }
+  ],
+  "preserved_survivors": [
+    "Li/Bombieri-Lagarias finite negative-witness detector",
+    "A4 Gram-form positivity as a conditional local lemma",
+    "A7 nonnegative-limit implication",
+    "count-geometry and bounded-completeness contracts"
+  ],
+  "inadmissible_shortcuts": [
+    "Treat arXiv publication as validation",
+    "Infer positivity of A P from positivity of A",
+    "Drop the cross term without proving its trace vanishes",
+    "Use the claimed RH conclusion to justify convergence",
+    "Treat finite numerical Li positivity as universal"
+  ]
+}

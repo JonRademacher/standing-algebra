@@ -1,0 +1,75 @@
+{
+  "contract_id": "RH-C07-TRACE-DECOMPOSITION-CLOSURE-GAP",
+  "version": "0.1.0",
+  "contract_type": "ADDITIONAL_CHILD_CONTRACT",
+  "parent_contracts": [
+    "RH-C03-FINITE-NEGATIVE-WITNESS",
+    "RH-C05-LI-BOMBIERI-LAGARIAS-RECONSTRUCTION",
+    "RH-C06-INDEPENDENT-LI-POSITIVITY-AUDIT"
+  ],
+  "objective": "Reconstruct or refute the minimum trace-decomposition obligations preventing the independent Li-positivity barrier from closing RH.",
+  "target": "forall n>=1, lambda_n>=0 derived independently from the trace architecture",
+  "authoritative_state": [
+    "The negative-witness detector is established at the scholarly theorem level.",
+    "The trace-operator candidate is not validated or refuted.",
+    "A4 positivity alone is insufficient.",
+    "A2, A3, and A5 are the minimum unresolved closure frontier."
+  ],
+  "obligations": [
+    {
+      "id": "T1",
+      "statement": "Reconstruct all spaces, measures, quotient maps, Fourier transforms, projections, and domains used by the candidate.",
+      "status": "OPEN"
+    },
+    {
+      "id": "T2",
+      "statement": "Prove T_h and every compressed/cross operator used in traces is trace class under the exact hypotheses.",
+      "status": "OPEN"
+    },
+    {
+      "id": "T3",
+      "statement": "Reconstruct A3 and verify the infinite-repeat argument term-by-term, including indexing and absolute convergence.",
+      "status": "OPEN_CORE"
+    },
+    {
+      "id": "T4",
+      "statement": "Reconstruct A5, prove the positive compressed contribution, and establish or refute cross-term trace vanishing.",
+      "status": "OPEN_CORE"
+    },
+    {
+      "id": "T5",
+      "statement": "Reconstruct A2 and prove Delta(h_n,epsilon)->2 lambda_n with exact normalization and convergence control.",
+      "status": "OPEN_CORE"
+    },
+    {
+      "id": "T6",
+      "statement": "Pass the independence audit: T1-T5 use no RH-equivalent premise.",
+      "status": "BLOCKED_ON_T1_T5"
+    },
+    {
+      "id": "T7",
+      "statement": "Derive universal Li positivity and combine with the negative-witness detector.",
+      "status": "BLOCKED_ON_T3_T6"
+    },
+    {
+      "id": "T8",
+      "statement": "Formal verification, clean replay, and independent reproduction.",
+      "status": "BLOCKED"
+    }
+  ],
+  "completion_criteria": [
+    "T1-T5 reconstructed without unresolved convergence or domain conditions",
+    "T6 dependency certificate passes",
+    "T7 establishes universal positivity",
+    "T8 verifies the complete chain",
+    "RH closure uses no new unproved premise"
+  ],
+  "elimination_conditions": [
+    "A required change of variables is invalid",
+    "The index set is quotient-overcounted or the repeated terms are not identical",
+    "Absolute convergence required for reindexing fails",
+    "The cross-term trace has a nonzero counterexample under the declared hypotheses",
+    "The limit to Li coefficients uses an unjustified interchange",
+    "A hidden RH-equivalent dependency is found"
+  ]
+}
