@@ -72,6 +72,61 @@ side. As with the monitor, the guard enforces the hypothesis of
 `noGoodhartDrift_under_StandingAlgebra` empirically; it is not a proof that the
 signal it measures is the true objective.
 
+AI Policy Layer
+---------------
+[`standing_policy.py`](standing_policy.py) is a single-file, standard-library
+policy layer for AI systems: copy the one file into a project and route the
+model's proposed actions through it before they run. Unlike the monitor and the
+guard, nothing is inferred here. The policy is declared: the proxy the AI is
+rewarded for, the standing signals it must not spend, and the floors those
+signals may not fall below.
+
+```python
+from standing_policy import Policy, StandingPolicy
+
+policy = StandingPolicy(Policy.from_dict({
+    "name": "assistant-tools",
+    "proxy": {"name": "engagement", "direction": "maximize"},
+    "standing": [{"name": "user_value", "floor": 0.35}],
+}))
+
+decision = policy.check(
+    {"engagement": 0.71, "user_value": 0.52},
+    {"action": "push_notifications", "scale": 1.0,
+     "expected": {"engagement": 0.20, "user_value": 0.00},
+     "evidence": "abtest-117"},
+)
+if decision.admitted:
+    run(decision.action, scale=decision.scale)   # dampened when drift is latched
+```
+
+Every proposal must state its expected effect on each standing signal, so the
+policy always has an explicit claim to test rather than a model's assurance. It
+answers `allow`, `dampen` (admissible only at a reduced scale), `hold` (cannot be
+evaluated, or evidence missing: fail closed) or `block` (a declared or measured
+standing loss), with a reason code and the statistics behind it. The rules are
+ordered and named: a declared standing decrease is blocked, a breached floor
+admits only a declared repair, an undeclared standing effect is held, and latched
+drift requires cited evidence and caps the scale.
+
+For an agent loop, `@policy.tool()` wraps a function so it raises
+`PolicyViolation` unless the call is admitted, `policy.system_prompt()` renders
+the same policy as text for the model's system prompt, `policy.judge` accepts the
+model's JSON directly, and a `ReceiptLog` writes every decision to a hash-chained
+JSONL file that `python standing_policy.py verify` re-checks. The command line
+screens one proposal (`screen`, exit 0 admissible, 2 held or blocked) so the same
+policy can gate a CI step or a workflow runner:
+
+```text
+python Standing_Policy_Demo.py
+python standing_policy.py prompt --policy policy.json
+python standing_policy.py screen --policy policy.json --observation obs.json --proposal p.json
+```
+
+The layer enforces the hypothesis of `noGoodhartDrift_under_StandingAlgebra`
+against signals you declare; it does not establish that those signals are the
+true objective.
+
 Interoperability Constraint Geometry (ICG)
 ------------------------------------------
 `ICG.lean` is the aggregate import for the additive `ICG` Lean library. It builds on the original interaction-closure and polynomial/Nullstellensatz layer with generic formalizations of derivation structure, obstruction, envelope geometry, and dynamics.
