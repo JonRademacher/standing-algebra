@@ -1,0 +1,36 @@
+{
+  "contract_id": "RH-C06-INDEPENDENT-LI-POSITIVITY-AUDIT",
+  "version": "0.1.0",
+  "contract_type": "ADDITIONAL_CHILD_CONTRACT",
+  "parent_contracts": [
+    "RH-C03-FINITE-NEGATIVE-WITNESS",
+    "RH-C05-LI-BOMBIERI-LAGARIAS-RECONSTRUCTION"
+  ],
+  "objective": "Prove independently that every Li coefficient is nonnegative, or localize the exact obstruction in the strongest candidate representation.",
+  "target": "forall n >= 1, lambda_n >= 0",
+  "primary_candidate": "Xian-Jin Li, A proof of the Riemann hypothesis, arXiv:0807.0090v10, 2025-10-14",
+  "candidate_chain": [
+    "A1: Th is trace class and trace(Th)=Delta(h)-hhat(0)-hhat(1)",
+    "A2: construct gn,epsilon and hn,epsilon with hhat(0)=hhat(1)=0 and Delta(hn,epsilon)->2 lambda_n",
+    "A3: trace on ES(Q_Lambda_perp) equals zero",
+    "A4: VS(h) is a positive bounded operator",
+    "A5: trace on ES(Q_Lambda) is nonnegative",
+    "A6: Delta(hn,epsilon)>=0",
+    "A7: pass epsilon->0 to conclude lambda_n>=0"
+  ],
+  "independence_constraints": [
+    "No step may assume RH, Li positivity, Weil positivity, or absence of off-line zeros.",
+    "Trace positivity must follow from a genuine positive operator or quadratic form on the declared Hilbert space.",
+    "Every restriction/compression and trace decomposition must be legally defined and trace class.",
+    "Every infinite group sum, basis sum, integral exchange, and limit must have an explicit convergence theorem.",
+    "The approximation Delta(hn,epsilon)->2 lambda_n must use exactly the same normalization as Contracts 04-05.",
+    "No preprint title, author identity, or arXiv posting counts as validation."
+  ],
+  "completion_criteria": [
+    "A1-A7 independently reconstructed",
+    "all operator domains, adjoints, projections, trace-class properties, and convergence interchanges verified",
+    "independence dependency graph passes",
+    "formal or independently reproducible proof artifact produced",
+    "Contracts 03 and 05 close without adding assumptions"
+  ]
+}

@@ -1,0 +1,1 @@
+{'A_positive': True, 'A_times_P_self_adjoint': False, 'PAP_positive': True, 'trace_AP': 1.0, 'trace_PAP': 1.0, 'cross_trace': 0.0, 'scope': 'operator-logic probe only'}

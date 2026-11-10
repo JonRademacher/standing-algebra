@@ -1,0 +1,44 @@
+[
+  {
+    "id":"A1",
+    "claim":"Th is a trace-class Hilbert-Schmidt integral operator with the stated trace formula.",
+    "status":"EXTERNAL_DEPENDENCY_NEEDS_RECONSTRUCTION",
+    "required_checks":["kernel measurability","traceability on generalized measure space","normalization of ES and FS","exact hypotheses of cited trace formula"]
+  },
+  {
+    "id":"A2",
+    "claim":"For each n, the constructed hn,epsilon satisfies both Mellin boundary cancellations and Delta(hn,epsilon)->2 lambda_n.",
+    "status":"CENTRAL_LIMIT_NEEDS_RECONSTRUCTION",
+    "required_checks":["definition of gn,epsilon","support growth as epsilon->0","dominated or justified limiting process","pairing/grouping of zeros","Li normalization"]
+  },
+  {
+    "id":"A3",
+    "claim":"The trace on ES(Q_Lambda_perp) vanishes.",
+    "status":"HIGH_RISK_INFINITE_SYMMETRY_ARGUMENT",
+    "required_checks":["O_S^* is infinite in the precise setting","summands are genuinely identical after change of variables","sum is indexed without quotient overcounting","absolute convergence justifies reindexing","finite-equals-infinite-multiple implication applies"]
+  },
+  {
+    "id":"A4",
+    "claim":"VS(h) is a positive bounded operator.",
+    "status":"PLAUSIBLE_GRAM_FORM_NEEDS_DOMAIN_CHECK",
+    "required_checks":["quadratic form equals modulus square with correct conjugation","compact-support density","bounded extension","real-valued g","Haar measure normalization"]
+  },
+  {
+    "id":"A5",
+    "claim":"The trace on ES(Q_Lambda) is nonnegative.",
+    "status":"CORE_CANDIDATE_NEEDS_RECONSTRUCTION",
+    "required_checks":["compression identity","P_Lambda annihilation","trace of restricted operator","Lemma 5.3 formula","Lambda=1 conventions","zero cross term","all changes of variables and infinite sums"]
+  },
+  {
+    "id":"A6",
+    "claim":"The two trace components sum to Delta(h)>=0.",
+    "status":"BLOCKED_ON_A1_A3_A5",
+    "required_checks":["orthogonal decomposition","trace additivity","hhat(0)=hhat(1)=0"]
+  },
+  {
+    "id":"A7",
+    "claim":"Nonnegative Delta(hn,epsilon) converging to 2 lambda_n implies lambda_n>=0.",
+    "status":"VALID_CONDITIONAL_ON_A2_A6",
+    "required_checks":["real-valued limit","finite limit","normalization"]
+  }
+]

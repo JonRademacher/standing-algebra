@@ -1,0 +1,13 @@
+{
+  "contract": "RH-C06-INDEPENDENT-LI-POSITIVITY-AUDIT",
+  "contract_type": "ADDITIONAL_CHILD_CONTRACT",
+  "terminal_state": "UNRESOLVED",
+  "barrier_candidate": "Xian-Jin Li 2025 trace-operator preprint",
+  "candidate_strength": "DIRECTLY TARGETS UNIVERSAL LI POSITIVITY",
+  "validated": false,
+  "refuted": false,
+  "minimum_critical_frontier": ["A2", "A3", "A5"],
+  "conditional_survivors": ["A4 Gram-form positivity", "A7 limit implication"],
+  "full_RH_closure": "BLOCKED",
+  "next_action": "Contract 07 should reconstruct A3 and A5 from definitions and audit the infinite-repeat/cross-term argument before investing in full formal transcription."
+}

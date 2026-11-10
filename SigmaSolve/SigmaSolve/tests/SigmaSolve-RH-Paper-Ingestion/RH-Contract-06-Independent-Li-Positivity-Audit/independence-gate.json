@@ -1,0 +1,18 @@
+{
+  "candidate": "Li 2025 trace-operator representation",
+  "forbidden_edges": [
+    "RH -> Theorem 1.4",
+    "Li positivity -> trace nonnegativity",
+    "Weil positivity -> Delta(h)>=0",
+    "all zeros on line -> convergence or trace formula",
+    "numerical evidence -> universal trace positivity"
+  ],
+  "required_graph": [
+    "functional analysis axioms and cited trace theorems -> A1",
+    "explicit gn,epsilon construction -> A2",
+    "adelic harmonic analysis -> A3-A5",
+    "A1+A2+A3+A5 -> A6+A7",
+    "A7 + Li criterion -> RH"
+  ],
+  "status": "UNRESOLVED; no forbidden edge observed in the stated top-level architecture, but hidden dependence may occur inside cited results or unproved convergence steps"
+}
