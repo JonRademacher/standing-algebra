@@ -58,6 +58,14 @@ then admits only standing-preserving scalings of the requested action, blocking
 the step and asking for review when none is admissible. `guard.report()`
 returns what drifted, what was attempted, and what the guard did about it.
 
+The same statistic also guards streams of trials, where a step cannot be
+rescaled because the trial already ran: `MetricStream("tests_passing",
+"user_value")` flags each trial whose score rose while the independent signal
+fell, and `AuditLog` writes the verdicts to a hash-chained JSONL log that
+`standing-guard audit` can verify afterwards (exit 2 on flagged drift, 1 if the
+log was altered). `python Standing_Guard_Audit_Demo.py` shows a run that reports
+0.99 while the independent signal falls to 0.15.
+
 It is standard library only and needs no configuration. Run
 `python Standing_Guard_Demo.py` to see the guarded and unguarded runs side by
 side. As with the monitor, the guard enforces the hypothesis of
