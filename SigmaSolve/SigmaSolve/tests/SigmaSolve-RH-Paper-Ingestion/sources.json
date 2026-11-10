@@ -1,0 +1,25 @@
+[
+  {
+    "id": "SRC-ORIGINAL-DOCX",
+    "title": "Using Sigma R and ICG to Evaluate RH.docx",
+    "reference": "turn19search150",
+    "role": "historical global-proof candidate",
+    "authority": "authoritative DOCX",
+    "status": "superseded analytic carrier; claims retained for atomic review"
+  },
+  {
+    "id": "SRC-ORIGINAL-TXT",
+    "title": "Using Sigma R and ICG to Evaluate RH.txt",
+    "reference": "turn19search170",
+    "role": "machine-readable extraction",
+    "sha256_claimed": "978ce954846eae1718c00e7b4eb99c1c27faad60829ddeffa9f14c72b8e98853",
+    "status": "text extraction; formulas partially lost"
+  },
+  {
+    "id": "SRC-CORRECTED",
+    "title": "Sigma_R_ICG_Certified_Critical_Line_Zero_Framework.docx",
+    "reference": "turn19search148",
+    "role": "corrected canonical RH carrier",
+    "status": "bounded architecture; no global RH proof claim"
+  }
+]

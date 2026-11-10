@@ -1,0 +1,78 @@
+[
+  {
+    "id": "b75faa49b4e930ea0c9d",
+    "kind": "research-trajectory",
+    "statement": "A corrected full solve could proceed by proving a legitimate global off-line exclusion for completed zeta/xi or by proving forall T, N0(T)=N(T).",
+    "payload": {
+      "claim_id": "C035",
+      "status": "OPEN",
+      "carrier": "SRC-CORRECTED",
+      "failure": null,
+      "next_test": "Formalize the bounded theorem and test salvageable geometric lemmas against completed-zeta or Hardy-Z identities."
+    },
+    "evidence": {
+      "source_lines": "turn19search148:153-212"
+    },
+    "dependencies": [
+      "C007"
+    ],
+    "verified": false
+  },
+  {
+    "id": "7a770b0738b2eda84731",
+    "kind": "central-reduction",
+    "statement": "A zero forces an exponentially spaced dominant subsequence with exponentially decaying rounding corrections.",
+    "payload": {
+      "claim_id": "C033",
+      "status": "UNPROVED",
+      "carrier": "SRC-ORIGINAL-DOCX",
+      "failure": "No valid implication from global cancellation to a single dominant exponential subsequence has survived; integer rounding error decay alone does not establish dominance or exhaust other mass.",
+      "next_test": "Construct exact decomposition with a bounded residual, not only a selected subsequence."
+    },
+    "evidence": {
+      "source_lines": "turn19search170:8342-8388"
+    },
+    "dependencies": [
+      "C014",
+      "C017",
+      "C018"
+    ],
+    "verified": false
+  },
+  {
+    "id": "caa39b871774d1c8022b",
+    "kind": "necessity-claim",
+    "statement": "A scale-consistent residual return requires invariance of a curvature-rotation ratio under every fixed scaling.",
+    "payload": {
+      "claim_id": "C028",
+      "status": "UNPROVED",
+      "carrier": "SRC-ORIGINAL-TXT",
+      "failure": "Scale invariance is asserted as necessary for a global zero but no theorem connects residual closure to invariance of the chosen local ratio.",
+      "next_test": "Search counterexamples among analytic paths with exact returns but non-scale-invariant local curvature."
+    },
+    "evidence": {
+      "source_lines": "turn19search170:4660-4715"
+    },
+    "dependencies": [],
+    "verified": false
+  },
+  {
+    "id": "aed2b1735b839722972f",
+    "kind": "global-target",
+    "statement": "Global RH is equivalent to the universal obligation forall T>0, N0(T)=N(T).",
+    "payload": {
+      "claim_id": "C007",
+      "status": "OPEN",
+      "carrier": "SRC-CORRECTED",
+      "failure": null,
+      "next_test": "Bind exact definitions and equivalence in Lean/Mathlib."
+    },
+    "evidence": {
+      "source_lines": "turn19search148:153-156"
+    },
+    "dependencies": [
+      "C005"
+    ],
+    "verified": false
+  }
+]
