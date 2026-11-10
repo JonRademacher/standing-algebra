@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "SigmaSolve: A Model-Neutral Verifier-Governed Mathematical Search Layer"
+message: "If you use this software, please cite this repository and the archived release."
+type: software
+authors:
+  - family-names: Rademacher
+    given-names: Jonathan
+version: 0.1.0
+date-released: 2026-11-10
+license: MIT
+repository-code: "https://github.com/JonRademacher/standing-algebra"
+keywords:
+  - theorem proving
+  - Lean 4
+  - proof search
+  - AI agents
+  - formal verification

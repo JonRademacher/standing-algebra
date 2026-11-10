@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sigmasolve"
+version = "0.1.0"
+description = "Model-neutral, verifier-governed mathematical search"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Jonathan Rademacher"}]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+sigmasolve = "sigmasolve.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sigmasolve*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
