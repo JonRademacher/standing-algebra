@@ -1,0 +1,20 @@
+{
+  "id": "RH-FULL-RERUN-AB-001",
+  "objective": "Apply Contracts A and B to the exact critical-strip RH target and attempt closure.",
+  "target": "forall rho, riemannZeta rho=0 and 0<re rho<1 implies re rho=1/2",
+  "contract_a": "Global target iff bounded target for every T>0.",
+  "contract_b": "Complete bounded certificates plus equal counts imply each bounded target.",
+  "closure_requirements": [
+    "Exact Lean predicate binding",
+    "Lean verification of A and B",
+    "Existence of complete bounded certificates",
+    "Equal counts for every positive height"
+  ],
+  "forbidden_substitutions": [
+    "finite zero checks",
+    "numerical precision without interval certification",
+    "ordinary Dirichlet-series convergence in critical strip",
+    "symmetry alone",
+    "bounded result promoted to universal result"
+  ]
+}

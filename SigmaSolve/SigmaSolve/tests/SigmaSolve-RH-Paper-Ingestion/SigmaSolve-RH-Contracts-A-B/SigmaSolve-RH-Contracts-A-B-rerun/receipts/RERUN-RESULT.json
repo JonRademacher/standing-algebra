@@ -1,0 +1,50 @@
+{
+  "terminal_state": "UNRESOLVED",
+  "target": "forall rho, riemannZeta rho=0 and 0<re rho<1 implies re rho=1/2",
+  "predicate_correction": "Applied: critical-strip zero replaces re!=0 and re!=1.",
+  "python_count_configurations": 55987,
+  "python_bounded_global_landscapes": 111111,
+  "numerical_zeros_checked": 29,
+  "contract_a": "EXECUTED_IN_ABSTRACT_MODEL; LEAN_NOT_RUN",
+  "contract_b": "EXECUTED_IN_FINITE_MODEL; ANALYTIC_CERTIFICATE_OPEN; LEAN_NOT_RUN",
+  "branches": [
+    {
+      "id": "A+B-count",
+      "status": "BLOCKED_AT_GLOBAL_EQUALITY",
+      "survives": true,
+      "missing": "Prove equal counts for every T"
+    },
+    {
+      "id": "Hardy-Z",
+      "status": "BOUNDED_CERTIFICATION_ONLY",
+      "survives": true,
+      "missing": "Completeness and off-line exclusion"
+    },
+    {
+      "id": "Li",
+      "status": "OPEN_ALTERNATIVE",
+      "survives": true,
+      "missing": "Formal equivalence and universal positivity"
+    },
+    {
+      "id": "Weil",
+      "status": "OPEN_ALTERNATIVE",
+      "survives": true,
+      "missing": "Formal equivalence and universal positivity"
+    },
+    {
+      "id": "Nyman-Beurling",
+      "status": "OPEN_ALTERNATIVE",
+      "survives": true,
+      "missing": "Formal equivalence and density theorem"
+    },
+    {
+      "id": "original-ordinary-series",
+      "status": "ELIMINATED",
+      "survives": false,
+      "missing": "Invalid carrier in critical strip"
+    }
+  ],
+  "full_solve": "NO PROOF OR DISPROOF",
+  "minimal_open_core": "Establish the bounded critical-line statement for every T, equivalently exclude every off-line critical-strip zero."
+}

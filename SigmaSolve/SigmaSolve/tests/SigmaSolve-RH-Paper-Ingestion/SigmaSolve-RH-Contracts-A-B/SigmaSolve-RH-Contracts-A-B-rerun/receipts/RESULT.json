@@ -1,0 +1,19 @@
+{
+  "package": "SigmaSolve RH Contracts A+B",
+  "terminal_state": "PARTIAL_LEMMAS_VERIFIED",
+  "contract_a": {
+    "abstract_bridge": "EXECUTED_IN_PYTHON_MODEL",
+    "lean_source": "DRAFTED_NOT_EXECUTED",
+    "zeta_predicate": "DRAFTED_NEEDS_EQUIVALENCE_REVIEW"
+  },
+  "contract_b": {
+    "finite_count_model": "EXECUTED",
+    "lean_count_source": "DRAFTED_NOT_EXECUTED",
+    "certificate_interface": "DRAFTED_NOT_EXECUTED",
+    "analytic_construction": "OPEN"
+  },
+  "count_configurations_checked": 55987,
+  "bridge_landscapes_checked": 111111,
+  "global_RH": "UNRESOLVED",
+  "host_limit": "Lean/Lake unavailable during package generation"
+}
