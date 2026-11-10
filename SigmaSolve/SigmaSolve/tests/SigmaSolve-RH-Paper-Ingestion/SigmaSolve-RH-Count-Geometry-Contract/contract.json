@@ -1,0 +1,20 @@
+{
+  "id": "RH-COUNT-GEOMETRY-001",
+  "objective": "Prove the fixed-height counting layer while preserving the all-height RH residual.",
+  "target": "RiemannHypothesis",
+  "states": {
+    "G1_abstract_certificate": "EXECUTED",
+    "G1_mathlib_binding": "UNRESOLVED",
+    "G2_N0_le_N": "EXECUTED_IN_FINITE_MODEL",
+    "G3_equality_iff_completeness": "EXECUTED_IN_FINITE_MODEL",
+    "G4_bounded_completeness": "EXECUTED_IN_FINITE_MODEL",
+    "G5_RH_equivalence": "DRAFTED_OBLIGATION",
+    "G6_all_height_equality": "OPEN_CORE_RH"
+  },
+  "verification_contract": [
+    "Lean kernel acceptance",
+    "no sorry/admit/new axioms",
+    "clean replay",
+    "pinned Mathlib receipt"
+  ]
+}

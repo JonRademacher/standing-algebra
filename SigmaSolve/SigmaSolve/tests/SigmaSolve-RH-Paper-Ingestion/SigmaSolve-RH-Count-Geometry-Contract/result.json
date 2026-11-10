@@ -1,0 +1,13 @@
+{
+  "terminal_state": "PARTIAL_LEMMAS_VERIFIED",
+  "configurations_checked": 2015539,
+  "verified_in_executable_finite_model": [
+    "N0<=N",
+    "N0=N iff every occurrence is on the line",
+    "bounded completeness inside an independently complete certificate"
+  ],
+  "lean_state": "SOURCE_DRAFTED_NOT_EXECUTED",
+  "analytic_binding": "UNRESOLVED",
+  "global_RH": "UNRESOLVED",
+  "next_step": "Execute CountGeometry.lean in pinned Mathlib, then formalize analytic zero/multiplicity binding."
+}

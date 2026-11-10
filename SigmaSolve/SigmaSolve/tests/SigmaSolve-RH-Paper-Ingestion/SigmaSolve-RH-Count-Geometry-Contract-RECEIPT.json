@@ -1,0 +1,16 @@
+{
+  "file": "SigmaSolve-RH-Count-Geometry-Contract.zip",
+  "bytes": 3835,
+  "sha256": "056d042f9a7f304634c0541284e070fa22d5be1ba46313d1123d627a4a03da8c",
+  "terminal_state": "PARTIAL_LEMMAS_VERIFIED",
+  "configurations_checked": 2015539,
+  "verified_in_executable_finite_model": [
+    "N0<=N",
+    "N0=N iff every occurrence is on the line",
+    "bounded completeness inside an independently complete certificate"
+  ],
+  "lean_state": "SOURCE_DRAFTED_NOT_EXECUTED",
+  "analytic_binding": "UNRESOLVED",
+  "global_RH": "UNRESOLVED",
+  "next_step": "Execute CountGeometry.lean in pinned Mathlib, then formalize analytic zero/multiplicity binding."
+}
