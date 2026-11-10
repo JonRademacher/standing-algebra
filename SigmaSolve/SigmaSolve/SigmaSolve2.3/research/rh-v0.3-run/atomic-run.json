@@ -1,0 +1,282 @@
+{
+  "target": "C007",
+  "terminal_state": "UNRESOLVED",
+  "proved": [
+    "C001",
+    "C004",
+    "C005",
+    "C006",
+    "C022",
+    "C031",
+    "C032"
+  ],
+  "conditional": [
+    "C002",
+    "C007",
+    "C015",
+    "C026",
+    "C028"
+  ],
+  "blocked": {
+    "C003": [
+      "C002"
+    ],
+    "C005": [
+      "C002",
+      "C003"
+    ],
+    "C012": [
+      "C011"
+    ],
+    "C014": [
+      "C012",
+      "C013"
+    ],
+    "C016": [
+      "C015"
+    ],
+    "C017": [
+      "C015",
+      "C016"
+    ],
+    "C018": [
+      "C017"
+    ],
+    "C020": [
+      "C019"
+    ],
+    "C021": [
+      "C020"
+    ],
+    "C022": [
+      "C021"
+    ],
+    "C023": [
+      "C018"
+    ],
+    "C033": [
+      "C014",
+      "C017",
+      "C018"
+    ],
+    "C035": [
+      "C007"
+    ]
+  },
+  "eliminated": [
+    "C010",
+    "C011",
+    "C013",
+    "C019",
+    "C024",
+    "C025",
+    "C027",
+    "C029",
+    "C030",
+    "C034"
+  ],
+  "frontier": [
+    {
+      "claim": "C002",
+      "statement": "For real t, Hardy Z(t) is real and Z(t)=0 iff zeta(1/2+it)=0.",
+      "status": "ESTABLISHED_NEEDS_LIBRARY_BINDING",
+      "missing": [],
+      "next_test": null
+    },
+    {
+      "claim": "C003",
+      "statement": "A strictly signed interval enclosure for Z(t) certifies its sign; opposite strict endpoint signs imply at least one zero by continuity.",
+      "status": "VALID_CONDITIONAL",
+      "missing": [
+        "C002"
+      ],
+      "next_test": null
+    },
+    {
+      "claim": "C007",
+      "statement": "Global RH is equivalent to the universal obligation forall T>0, N0(T)=N(T).",
+      "status": "OPEN",
+      "missing": [],
+      "next_test": "Bind exact definitions and equivalence in Lean/Mathlib."
+    },
+    {
+      "claim": "C012",
+      "statement": "Semicircle exclusion yields two persistent angular regions with fixed positive mass proportions.",
+      "status": "BLOCKED_DEPENDENCY",
+      "missing": [
+        "C011"
+      ],
+      "next_test": null
+    },
+    {
+      "claim": "C014",
+      "statement": "Cancellation forces two dominant regional vectors to approach opposition.",
+      "status": "UNPROVED",
+      "missing": [
+        "C012",
+        "C013"
+      ],
+      "next_test": "Derive explicit constants c1,c2 and a strict remainder bound; search finite counterexamples."
+    },
+    {
+      "claim": "C015",
+      "statement": "Any weighted phase configuration contains a directionally coherent subset with a fixed mass/projection fraction.",
+      "status": "SALVAGEABLE_REFORMULATION",
+      "missing": [],
+      "next_test": "Use averaging over semicircles: some semicircle contains at least half total mass; separately prove projection bound 1/pi or 2/pi with exact normalization."
+    },
+    {
+      "claim": "C016",
+      "statement": "A lower bound on weighted projection implies fixed positive mass in a narrower angular sector.",
+      "status": "VALID_CONDITIONAL",
+      "missing": [
+        "C015"
+      ],
+      "next_test": "Recover exact constants eta and threshold and formalize Markov-style estimate."
+    },
+    {
+      "claim": "C017",
+      "statement": "A substantial cluster forces a comparably substantial near-opposite cluster.",
+      "status": "UNPROVED",
+      "missing": [
+        "C015",
+        "C016"
+      ],
+      "next_test": "Formulate vector-measure decomposition theorem or produce finite counterexample."
+    },
+    {
+      "claim": "C018",
+      "statement": "Near-opposing clusters allow extraction of an increasing subsequence whose successive phase gaps are pi plus uniformly bounded errors with bound <pi.",
+      "status": "UNPROVED",
+      "missing": [
+        "C017"
+      ],
+      "next_test": "Specify selection map and prove subseries relevance without rearrangement."
+    },
+    {
+      "claim": "C020",
+      "statement": "Convergence of an alternating perturbed subseries forces consecutive magnitudes to become equal.",
+      "status": "NEEDS_EXACT_STATEMENT",
+      "missing": [
+        "C019"
+      ],
+      "next_test": "Recover formula from DOCX and test against convergent non-pairwise examples."
+    },
+    {
+      "claim": "C021",
+      "statement": "For a_n=n_k^(-sigma), asymptotic equality of consecutive magnitudes implies n_{k+1}/n_k -> 1.",
+      "status": "VALID_CONDITIONAL",
+      "missing": [
+        "C020"
+      ],
+      "next_test": null
+    },
+    {
+      "claim": "C023",
+      "statement": "The extracted alternating envelope forces those same real phase increments to remain bounded away from zero.",
+      "status": "BLOCKED_DEPENDENCY",
+      "missing": [
+        "C018"
+      ],
+      "next_test": null
+    },
+    {
+      "claim": "C026",
+      "statement": "Monotone unbounded phases with increments tending to zero imply phase values are dense modulo 2pi.",
+      "status": "PLAUSIBLE_NEEDS_PROOF",
+      "missing": [],
+      "next_test": "Formal epsilon-crossing proof; monotonicity and exact unboundedness must be retained."
+    },
+    {
+      "claim": "C028",
+      "statement": "A scale-consistent residual return requires invariance of a curvature-rotation ratio under every fixed scaling.",
+      "status": "UNPROVED",
+      "missing": [],
+      "next_test": "Search counterexamples among analytic paths with exact returns but non-scale-invariant local curvature."
+    },
+    {
+      "claim": "C033",
+      "statement": "A zero forces an exponentially spaced dominant subsequence with exponentially decaying rounding corrections.",
+      "status": "UNPROVED",
+      "missing": [
+        "C014",
+        "C017",
+        "C018"
+      ],
+      "next_test": "Construct exact decomposition with a bounded residual, not only a selected subsequence."
+    },
+    {
+      "claim": "C035",
+      "statement": "A corrected full solve could proceed by proving a legitimate global off-line exclusion for completed zeta/xi or by proving forall T, N0(T)=N(T).",
+      "status": "OPEN",
+      "missing": [
+        "C007"
+      ],
+      "next_test": "Formalize the bounded theorem and test salvageable geometric lemmas against completed-zeta or Hardy-Z identities."
+    }
+  ],
+  "repairs": [
+    {
+      "claim": "C011",
+      "test": "Reformulate using an open semicircle with a uniform angular margin, or normalized resultant bounds.",
+      "preserves_target": true
+    },
+    {
+      "claim": "C013",
+      "test": "State a quantitative resultant lemma using total outside mass and vector projection.",
+      "preserves_target": true
+    },
+    {
+      "claim": "C014",
+      "test": "Derive explicit constants c1,c2 and a strict remainder bound; search finite counterexamples.",
+      "preserves_target": true
+    },
+    {
+      "claim": "C016",
+      "test": "Recover exact constants eta and threshold and formalize Markov-style estimate.",
+      "preserves_target": true
+    },
+    {
+      "claim": "C017",
+      "test": "Formulate vector-measure decomposition theorem or produce finite counterexample.",
+      "preserves_target": true
+    },
+    {
+      "claim": "C018",
+      "test": "Specify selection map and prove subseries relevance without rearrangement.",
+      "preserves_target": true
+    },
+    {
+      "claim": "C019",
+      "test": "Provide a decomposition identity with controlled complementary residual.",
+      "preserves_target": true
+    },
+    {
+      "claim": "C020",
+      "test": "Recover formula from DOCX and test against convergent non-pairwise examples.",
+      "preserves_target": true
+    },
+    {
+      "claim": "C027",
+      "test": "State a quantitative lower-bound hypothesis on coherent-window weights.",
+      "preserves_target": true
+    },
+    {
+      "claim": "C033",
+      "test": "Construct exact decomposition with a bounded residual, not only a selected subsequence.",
+      "preserves_target": true
+    },
+    {
+      "claim": "C035",
+      "test": "Formalize the bounded theorem and test salvageable geometric lemmas against completed-zeta or Hardy-Z identities.",
+      "preserves_target": true
+    }
+  ],
+  "invariants": [
+    "No proof may depend on an eliminated claim.",
+    "No subseries inherits the value of a full series without a residual theorem.",
+    "Symmetry of a zero set does not force pointwise fixedness.",
+    "Bounded certificates do not discharge a universal height quantifier.",
+    "The full target remains unchanged under repair."
+  ]
+}

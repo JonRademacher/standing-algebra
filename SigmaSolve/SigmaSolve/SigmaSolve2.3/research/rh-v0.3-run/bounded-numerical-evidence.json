@@ -1,0 +1,193 @@
+{
+  "backend": "mpmath",
+  "status": "FINITE_SCAN_COMPLETE",
+  "claim_scope": "finite listed zeros only",
+  "evidence": {
+    "interval": [
+      0.0,
+      100.0
+    ],
+    "dps": 50,
+    "zeros": [
+      {
+        "n": 1,
+        "real": 0.5,
+        "imag": 14.134725141734695,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 2,
+        "real": 0.5,
+        "imag": 21.022039638771556,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 3,
+        "real": 0.5,
+        "imag": 25.01085758014569,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 4,
+        "real": 0.5,
+        "imag": 30.424876125859512,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 5,
+        "real": 0.5,
+        "imag": 32.93506158773919,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 6,
+        "real": 0.5,
+        "imag": 37.586178158825675,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 7,
+        "real": 0.5,
+        "imag": 40.9187190121475,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 8,
+        "real": 0.5,
+        "imag": 43.327073280915,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 9,
+        "real": 0.5,
+        "imag": 48.00515088116716,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 10,
+        "real": 0.5,
+        "imag": 49.7738324776723,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 11,
+        "real": 0.5,
+        "imag": 52.970321477714464,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 12,
+        "real": 0.5,
+        "imag": 56.44624769706339,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 13,
+        "real": 0.5,
+        "imag": 59.34704400260235,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 14,
+        "real": 0.5,
+        "imag": 60.83177852460981,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 15,
+        "real": 0.5,
+        "imag": 65.1125440480816,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 16,
+        "real": 0.5,
+        "imag": 67.07981052949417,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 17,
+        "real": 0.5,
+        "imag": 69.54640171117398,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 18,
+        "real": 0.5,
+        "imag": 72.0671576744819,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 19,
+        "real": 0.5,
+        "imag": 75.70469069908393,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 20,
+        "real": 0.5,
+        "imag": 77.1448400688748,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 21,
+        "real": 0.5,
+        "imag": 79.33737502024937,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 22,
+        "real": 0.5,
+        "imag": 82.91038085408603,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 23,
+        "real": 0.5,
+        "imag": 84.73549298051705,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 24,
+        "real": 0.5,
+        "imag": 87.42527461312523,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 25,
+        "real": 0.5,
+        "imag": 88.80911120763446,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 26,
+        "real": 0.5,
+        "imag": 92.49189927055849,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 27,
+        "real": 0.5,
+        "imag": 94.65134404051989,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 28,
+        "real": 0.5,
+        "imag": 95.87063422824531,
+        "critical_line_error": 0.0
+      },
+      {
+        "n": 29,
+        "real": 0.5,
+        "imag": 98.83119421819369,
+        "critical_line_error": 0.0
+      }
+    ],
+    "count": 29
+  },
+  "limitations": [
+    "Finite verification cannot prove RH",
+    "mpmath numerical output is not a certified interval proof"
+  ]
+}

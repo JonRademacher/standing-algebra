@@ -1,0 +1,521 @@
+[
+  {
+    "id": "C001",
+    "statement": "The ordinary Dirichlet series sum n^(-s) converges only for Re(s)>1; analytic continuation does not make its ordinary partial sums converge in the critical strip.",
+    "kind": "analytic-foundation",
+    "status": "ESTABLISHED",
+    "carrier": "SRC-CORRECTED",
+    "dependencies": [],
+    "failure": null,
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search148:19-21"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C002",
+    "statement": "For real t, Hardy Z(t) is real and Z(t)=0 iff zeta(1/2+it)=0.",
+    "kind": "analytic-object",
+    "status": "ESTABLISHED_NEEDS_LIBRARY_BINDING",
+    "carrier": "SRC-CORRECTED",
+    "dependencies": [],
+    "failure": null,
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search148:23-29"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C003",
+    "statement": "A strictly signed interval enclosure for Z(t) certifies its sign; opposite strict endpoint signs imply at least one zero by continuity.",
+    "kind": "proposition",
+    "status": "VALID_CONDITIONAL",
+    "carrier": "SRC-CORRECTED",
+    "dependencies": [
+      "C002"
+    ],
+    "failure": null,
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search148:31-38"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C004",
+    "statement": "A sign change alone cannot establish exact isolation or completeness because even-multiplicity zeros may be missed.",
+    "kind": "methodological-invariant",
+    "status": "VALID",
+    "carrier": "SRC-CORRECTED",
+    "dependencies": [],
+    "failure": null,
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search148:127-129"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C005",
+    "statement": "If a complete critical-line certificate yields N0(T)=m and an independent rigorous count yields N(T)=m, then every nontrivial zero through T lies on the critical line.",
+    "kind": "bounded-theorem",
+    "status": "VALID",
+    "carrier": "SRC-CORRECTED",
+    "dependencies": [
+      "C002",
+      "C003",
+      "C004"
+    ],
+    "failure": null,
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search148:131-147"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C006",
+    "statement": "A bounded certificate through T proves no statement above T.",
+    "kind": "scope-corollary",
+    "status": "VALID",
+    "carrier": "SRC-CORRECTED",
+    "dependencies": [
+      "C005"
+    ],
+    "failure": null,
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search148:149-156"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C007",
+    "statement": "Global RH is equivalent to the universal obligation forall T>0, N0(T)=N(T).",
+    "kind": "global-target",
+    "status": "OPEN",
+    "carrier": "SRC-CORRECTED",
+    "dependencies": [
+      "C005"
+    ],
+    "failure": null,
+    "next_test": "Bind exact definitions and equivalence in Lean/Mathlib.",
+    "evidence": {
+      "source_lines": "turn19search148:153-156"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C010",
+    "statement": "A zeta zero in 0<sigma<=1 can be represented by ordinary partial sums sum_{n<=N} n^(-s) tending to zero.",
+    "kind": "carrier-equivalence",
+    "status": "REFUTED",
+    "carrier": "SRC-ORIGINAL-DOCX",
+    "dependencies": [
+      "C001"
+    ],
+    "failure": "Ordinary Dirichlet partial sums do not converge to analytic continuation in the critical strip.",
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search150:19-24,52-60; turn19search148:19-21"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C011",
+    "statement": "If positive weighted vectors have partial sums tending to zero, a nonvanishing proportion of weight lies outside every closed semicircle.",
+    "kind": "lemma",
+    "status": "REFUTED_AS_STATED",
+    "carrier": "SRC-ORIGINAL-DOCX",
+    "dependencies": [],
+    "failure": "The proof moves from negligible mass outside a closed semicircle to positive mass in a shrunken inner arc; boundary mass is uncontrolled. Signed boundary constructions with weights tending to zero can converge while all phases remain on the semicircle boundary.",
+    "next_test": "Reformulate using an open semicircle with a uniform angular margin, or normalized resultant bounds.",
+    "evidence": {
+      "source_lines": "turn19search150:403-447"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C012",
+    "statement": "Semicircle exclusion yields two persistent angular regions with fixed positive mass proportions.",
+    "kind": "lemma",
+    "status": "BLOCKED_DEPENDENCY",
+    "carrier": "SRC-ORIGINAL-DOCX",
+    "dependencies": [
+      "C011"
+    ],
+    "failure": "Depends on C011; partition constants and quantifier order require repair.",
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search150:515-585,588-672"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C013",
+    "statement": "Two persistent regions must have angular separation bounded below because otherwise their union lies in a semicircle.",
+    "kind": "lemma",
+    "status": "REFUTED_AS_PROVED",
+    "carrier": "SRC-ORIGINAL-DOCX",
+    "dependencies": [
+      "C011",
+      "C012"
+    ],
+    "failure": "The intervals are fixed after extraction, so their distance does not tend with k. A fixed positive mass inside a semicircle does not contradict a claim that only some positive mass must lie outside it.",
+    "next_test": "State a quantitative resultant lemma using total outside mass and vector projection.",
+    "evidence": {
+      "source_lines": "turn19search150:674-728"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C014",
+    "statement": "Cancellation forces two dominant regional vectors to approach opposition.",
+    "kind": "lemma",
+    "status": "UNPROVED",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [
+      "C012",
+      "C013"
+    ],
+    "failure": "The remainder is only known to have less than total mass by a fixed proportion; no inequality shows it is smaller than the lower bound for the sum of the two selected vectors.",
+    "next_test": "Derive explicit constants c1,c2 and a strict remainder bound; search finite counterexamples.",
+    "evidence": {
+      "source_lines": "turn19search170:475-528"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C015",
+    "statement": "Any weighted phase configuration contains a directionally coherent subset with a fixed mass/projection fraction.",
+    "kind": "lemma",
+    "status": "SALVAGEABLE_REFORMULATION",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [],
+    "failure": "The paper alternates between a projection lower bound and a mass lower bound; the stated 1/pi consequence is not reconstructed from the extracted equations.",
+    "next_test": "Use averaging over semicircles: some semicircle contains at least half total mass; separately prove projection bound 1/pi or 2/pi with exact normalization.",
+    "evidence": {
+      "source_lines": "turn19search170:798-836"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C016",
+    "statement": "A lower bound on weighted projection implies fixed positive mass in a narrower angular sector.",
+    "kind": "lemma",
+    "status": "VALID_CONDITIONAL",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [
+      "C015"
+    ],
+    "failure": null,
+    "next_test": "Recover exact constants eta and threshold and formalize Markov-style estimate.",
+    "evidence": {
+      "source_lines": "turn19search170:867-934"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C017",
+    "statement": "A substantial cluster forces a comparably substantial near-opposite cluster.",
+    "kind": "lemma",
+    "status": "UNPROVED",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [
+      "C015",
+      "C016"
+    ],
+    "failure": "Applying a generic coherence lemma to the complement does not force the selected coherent subset to align with the complement resultant; the projection argument lacks a budget over all remaining mass.",
+    "next_test": "Formulate vector-measure decomposition theorem or produce finite counterexample.",
+    "evidence": {
+      "source_lines": "turn19search170:935-1025"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C018",
+    "statement": "Near-opposing clusters allow extraction of an increasing subsequence whose successive phase gaps are pi plus uniformly bounded errors with bound <pi.",
+    "kind": "lemma",
+    "status": "UNPROVED",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [
+      "C017"
+    ],
+    "failure": "Cluster recurrence does not imply alternation of individual terms with the required mass or preserve cancellation in the extracted subseries.",
+    "next_test": "Specify selection map and prove subseries relevance without rearrangement.",
+    "evidence": {
+      "source_lines": "turn19search170:1032-1067"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C019",
+    "statement": "Cancellation of a full convergent series forces cancellation/convergence of the extracted alternating subseries.",
+    "kind": "transfer-claim",
+    "status": "REFUTED_AS_GENERAL_PRINCIPLE",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [
+      "C018"
+    ],
+    "failure": "A subseries of a conditionally convergent series need not converge to the same value and may diverge; extraction requires an independent remainder theorem.",
+    "next_test": "Provide a decomposition identity with controlled complementary residual.",
+    "evidence": {
+      "source_lines": "turn19search170:1068-1074"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C020",
+    "statement": "Convergence of an alternating perturbed subseries forces consecutive magnitudes to become equal.",
+    "kind": "lemma",
+    "status": "NEEDS_EXACT_STATEMENT",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [
+      "C019"
+    ],
+    "failure": "Convergence forces individual terms to zero, not generally pairwise cancellation. Exact hypotheses and inequality are missing from text extraction.",
+    "next_test": "Recover formula from DOCX and test against convergent non-pairwise examples.",
+    "evidence": {
+      "source_lines": "turn19search170:1074-1088"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C021",
+    "statement": "For a_n=n_k^(-sigma), asymptotic equality of consecutive magnitudes implies n_{k+1}/n_k -> 1.",
+    "kind": "elementary-lemma",
+    "status": "VALID_CONDITIONAL",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [
+      "C020"
+    ],
+    "failure": null,
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search170:1088-1097"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C022",
+    "statement": "If n_{k+1}/n_k ->1 then t log(n_{k+1}/n_k)->0 for fixed t.",
+    "kind": "elementary-lemma",
+    "status": "VALID",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [
+      "C021"
+    ],
+    "failure": null,
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search170:1400-1406"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C023",
+    "statement": "The extracted alternating envelope forces those same real phase increments to remain bounded away from zero.",
+    "kind": "lemma",
+    "status": "BLOCKED_DEPENDENCY",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [
+      "C018"
+    ],
+    "failure": "Depends on unproved alternating subsequence extraction and branch-unwrapping.",
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search170:1407-1426"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C024",
+    "statement": "Every convergent complex series with sum zero must exhibit local consecutive pair cancellation.",
+    "kind": "reduction",
+    "status": "REFUTED",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [],
+    "failure": "Counterexample: -1 + sum_{n>=1} 2^(-n)=0 converges, but positive tail terms do not cancel consecutively.",
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search170:1494-1520,1565-1628,2524-2549"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C025",
+    "statement": "Strictly decreasing block magnitudes cannot sum to zero because no later block can cancel an earlier block.",
+    "kind": "block-lemma",
+    "status": "REFUTED",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [],
+    "failure": "Strict decrease is insufficient; a first vector can equal the vector sum of a decreasing tail, e.g. 0.5-0.3-0.2=0.",
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search170:4282-4296"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C026",
+    "statement": "Monotone unbounded phases with increments tending to zero imply phase values are dense modulo 2pi.",
+    "kind": "dynamical-lemma",
+    "status": "PLAUSIBLE_NEEDS_PROOF",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [],
+    "failure": null,
+    "next_test": "Formal epsilon-crossing proof; monotonicity and exact unboundedness must be retained.",
+    "evidence": {
+      "source_lines": "turn19search170:4444-4494"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C027",
+    "statement": "Density/sign changes prevent directional convergence of the weighted sum.",
+    "kind": "lemma",
+    "status": "REFUTED_AS_INFERENCE",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [
+      "C026"
+    ],
+    "failure": "Infinite sign changes and dense phases do not by themselves preclude convergence; coefficient decay and cancellation rates are decisive.",
+    "next_test": "State a quantitative lower-bound hypothesis on coherent-window weights.",
+    "evidence": {
+      "source_lines": "turn19search170:4609-4645"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C028",
+    "statement": "A scale-consistent residual return requires invariance of a curvature-rotation ratio under every fixed scaling.",
+    "kind": "necessity-claim",
+    "status": "UNPROVED",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [],
+    "failure": "Scale invariance is asserted as necessary for a global zero but no theorem connects residual closure to invariance of the chosen local ratio.",
+    "next_test": "Search counterexamples among analytic paths with exact returns but non-scale-invariant local curvature.",
+    "evidence": {
+      "source_lines": "turn19search170:4660-4715"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C029",
+    "statement": "Functional-equation symmetry about 1/2 forces each zero individually onto the symmetry axis.",
+    "kind": "symmetry-inference",
+    "status": "REFUTED",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [],
+    "failure": "Reflection symmetry permits off-axis pairs; symmetry of a zero set does not imply every point is fixed by the symmetry.",
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search170:5026-5029,5073-5078"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C030",
+    "statement": "An off-line realization requires extra variance information and therefore is not native to the RH branch.",
+    "kind": "branch-ontology",
+    "status": "NON_SEQUITUR_FOR_RH",
+    "carrier": "SRC-ORIGINAL-TXT",
+    "dependencies": [],
+    "failure": "Information classification does not eliminate analytic zeros; branch membership is not a zero-free theorem.",
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search170:5255-5286"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C031",
+    "statement": "The finite-measure identity for truncated sums and positivity/ordered-support properties are exact.",
+    "kind": "finite-identity",
+    "status": "VALID",
+    "carrier": "SRC-ORIGINAL-DOCX",
+    "dependencies": [],
+    "failure": null,
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search150:119-178,253-316"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C032",
+    "statement": "The ideal geometric alternating exponential series sums to 1/(1+e^-alpha)>0.",
+    "kind": "elementary-lemma",
+    "status": "VALID",
+    "carrier": "SRC-ORIGINAL-DOCX",
+    "dependencies": [],
+    "failure": null,
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search170:8364-8370"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C033",
+    "statement": "A zero forces an exponentially spaced dominant subsequence with exponentially decaying rounding corrections.",
+    "kind": "central-reduction",
+    "status": "UNPROVED",
+    "carrier": "SRC-ORIGINAL-DOCX",
+    "dependencies": [
+      "C014",
+      "C017",
+      "C018"
+    ],
+    "failure": "No valid implication from global cancellation to a single dominant exponential subsequence has survived; integer rounding error decay alone does not establish dominance or exhaust other mass.",
+    "next_test": "Construct exact decomposition with a bounded residual, not only a selected subsequence.",
+    "evidence": {
+      "source_lines": "turn19search170:8342-8388"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C034",
+    "statement": "The original paper proves off-line nonvanishing and hence RH.",
+    "kind": "global-conclusion",
+    "status": "REFUTED_AS_DERIVED",
+    "carrier": "SRC-ORIGINAL-DOCX",
+    "dependencies": [
+      "C010",
+      "C011",
+      "C013",
+      "C017",
+      "C019",
+      "C024",
+      "C025",
+      "C027",
+      "C028",
+      "C029",
+      "C033"
+    ],
+    "failure": "Multiple essential dependencies are refuted or unproved, and the primary analytic carrier is invalid.",
+    "next_test": null,
+    "evidence": {
+      "source_lines": "turn19search150:31-42; turn19search170:7091-7141"
+    },
+    "scope": "RH"
+  },
+  {
+    "id": "C035",
+    "statement": "A corrected full solve could proceed by proving a legitimate global off-line exclusion for completed zeta/xi or by proving forall T, N0(T)=N(T).",
+    "kind": "research-trajectory",
+    "status": "OPEN",
+    "carrier": "SRC-CORRECTED",
+    "dependencies": [
+      "C007"
+    ],
+    "failure": null,
+    "next_test": "Formalize the bounded theorem and test salvageable geometric lemmas against completed-zeta or Hardy-Z identities.",
+    "evidence": {
+      "source_lines": "turn19search148:153-212"
+    },
+    "scope": "RH"
+  }
+]

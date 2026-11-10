@@ -1,0 +1,157 @@
+{
+  "target": "C007: forall T>0, N0(T)=N(T)",
+  "terminal_state": "UNRESOLVED",
+  "strategy_change": [
+    "Refuted dependencies are now hard-blocked from proof closure.",
+    "Repair uses replacement claims with explicit rebinding, not prose patches.",
+    "Counterexample probes run before a failed route can be retried.",
+    "Bounded numerical evidence is separated from the universal target.",
+    "Search frontier is the minimum missing global bridge, not the original monolithic proof."
+  ],
+  "proved_or_accepted_atoms": [
+    "C001",
+    "C004",
+    "C005",
+    "C006",
+    "C022",
+    "C031",
+    "C032"
+  ],
+  "eliminated_atoms": [
+    "C010",
+    "C011",
+    "C013",
+    "C019",
+    "C024",
+    "C025",
+    "C027",
+    "C029",
+    "C030",
+    "C034"
+  ],
+  "frontier_claims": [
+    {
+      "claim": "C002",
+      "statement": "For real t, Hardy Z(t) is real and Z(t)=0 iff zeta(1/2+it)=0.",
+      "status": "ESTABLISHED_NEEDS_LIBRARY_BINDING",
+      "missing": [],
+      "next_test": null
+    },
+    {
+      "claim": "C007",
+      "statement": "Global RH is equivalent to the universal obligation forall T>0, N0(T)=N(T).",
+      "status": "OPEN",
+      "missing": [],
+      "next_test": "Bind exact definitions and equivalence in Lean/Mathlib."
+    },
+    {
+      "claim": "C015",
+      "statement": "Any weighted phase configuration contains a directionally coherent subset with a fixed mass/projection fraction.",
+      "status": "SALVAGEABLE_REFORMULATION",
+      "missing": [],
+      "next_test": "Use averaging over semicircles: some semicircle contains at least half total mass; separately prove projection bound 1/pi or 2/pi with exact normalization."
+    },
+    {
+      "claim": "C016",
+      "statement": "A lower bound on weighted projection implies fixed positive mass in a narrower angular sector.",
+      "status": "VALID_CONDITIONAL",
+      "missing": [
+        "C015"
+      ],
+      "next_test": "Recover exact constants eta and threshold and formalize Markov-style estimate."
+    },
+    {
+      "claim": "C026",
+      "statement": "Monotone unbounded phases with increments tending to zero imply phase values are dense modulo 2pi.",
+      "status": "PLAUSIBLE_NEEDS_PROOF",
+      "missing": [],
+      "next_test": "Formal epsilon-crossing proof; monotonicity and exact unboundedness must be retained."
+    },
+    {
+      "claim": "C035",
+      "statement": "A corrected full solve could proceed by proving a legitimate global off-line exclusion for completed zeta/xi or by proving forall T, N0(T)=N(T).",
+      "status": "OPEN",
+      "missing": [
+        "C007"
+      ],
+      "next_test": "Formalize the bounded theorem and test salvageable geometric lemmas against completed-zeta or Hardy-Z identities."
+    }
+  ],
+  "repair_probe_results": [
+    {
+      "claim": "C011",
+      "status": "COUNTEREXAMPLE_SHAPE_CONFIRMED",
+      "witness": {
+        "partial_sum_pairs": 0.30684031990879107,
+        "boundary_phases": [
+          1.5707963267948966,
+          -1.5707963267948966
+        ],
+        "outside_mass": 0
+      },
+      "consequence": "Require open semicircle or boundary control; do not reuse C011."
+    },
+    {
+      "claim": "C024",
+      "status": "COUNTEREXAMPLE_CONFIRMED",
+      "witness": {
+        "residual": 0.0,
+        "series": "-1 + sum 2^-n"
+      },
+      "consequence": "Replace pair cancellation with exact decomposition plus residual bound."
+    },
+    {
+      "claim": "C025",
+      "status": "COUNTEREXAMPLE_CONFIRMED",
+      "witness": {
+        "blocks": [
+          0.5,
+          -0.3,
+          -0.2
+        ],
+        "sum": 0.0
+      },
+      "consequence": "Require tail dominance, not strict decrease."
+    },
+    {
+      "claim": "C029",
+      "status": "COUNTEREXAMPLE_CONFIRMED",
+      "witness": {
+        "set": [
+          0.25,
+          0.75
+        ],
+        "reflection": "x -> 1-x"
+      },
+      "consequence": "Need an off-axis exclusion theorem independent of symmetry."
+    }
+  ],
+  "bounded_scan": {
+    "height": 100,
+    "count": 29,
+    "claim_scope": "finite listed zeros only"
+  },
+  "global_residuals": [
+    {
+      "id": "G1",
+      "statement": "Define N0(T) and N(T) exactly in a formal library, including multiplicity and boundary conventions.",
+      "status": "OPEN"
+    },
+    {
+      "id": "G2",
+      "statement": "Prove the fixed-height completeness theorem C005 against those exact definitions.",
+      "status": "OPEN_VERIFIER_REQUIRED"
+    },
+    {
+      "id": "G3",
+      "statement": "Establish a uniform theorem for every T, or a verified equivalent global positivity/exclusion criterion.",
+      "status": "OPEN_CORE_RH"
+    },
+    {
+      "id": "G4",
+      "statement": "If geometric cancellation is retained, attach it to a valid completed-zeta or Hardy-Z decomposition with a proved residual bound.",
+      "status": "OPEN_REPAIR"
+    }
+  ],
+  "solve_conclusion": "No full proof. The upgraded solver prevents the known invalid chain from being retried and returns the exact unresolved global bridge."
+}

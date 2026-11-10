@@ -1,0 +1,102 @@
+{
+  "objective": "Evaluate an RH proof candidate without weakening RH",
+  "target_id": "RH",
+  "claims": [
+    {
+      "id": "RH",
+      "statement": "Every nontrivial zeta zero has real part 1/2",
+      "provenance": {
+        "source_id": "CMI-RH",
+        "epistemic_type": "formal_claim",
+        "authority_scope": "mathematical target",
+        "currentness": "current"
+      },
+      "dependencies": [
+        "BRIDGE"
+      ],
+      "status": "OPEN",
+      "residuals": [
+        "Universal bridge unproved"
+      ],
+      "reopening_conditions": [
+        "Verified bridge or equivalent criterion"
+      ]
+    },
+    {
+      "id": "BOUNDED",
+      "statement": "N0(T)=N(T) implies bounded critical-line completeness",
+      "provenance": {
+        "source_id": "corrected-paper",
+        "epistemic_type": "formal_claim"
+      },
+      "status": "VERIFIED"
+    },
+    {
+      "id": "BRIDGE",
+      "statement": "For every T, N0(T)=N(T)",
+      "provenance": {
+        "source_id": "research-frontier",
+        "epistemic_type": "hypothesis"
+      },
+      "dependencies": [
+        "BOUNDED"
+      ],
+      "status": "OPEN",
+      "residuals": [
+        "All-height equality missing"
+      ],
+      "reopening_conditions": [
+        "Uniform theorem"
+      ]
+    }
+  ],
+  "gega": {
+    "existence": [
+      "zeta zeros",
+      "counting functions"
+    ],
+    "identity": [
+      "RH target"
+    ],
+    "relations": [
+      "N0(T)<=N(T)"
+    ],
+    "environment": [
+      "completed zeta/Hardy Z"
+    ],
+    "boundaries": [
+      "finite T versus all T"
+    ],
+    "realizations": [
+      "bounded certificate",
+      "global count equality"
+    ],
+    "consequences": [
+      "bounded completeness"
+    ],
+    "updated_geometry": [
+      "global bridge isolated"
+    ],
+    "missing_structures": [
+      "uniform all-height theorem"
+    ]
+  },
+  "endpoint_geometry": [
+    "exact RH, not bounded substitute"
+  ],
+  "admissibility_constraints": [
+    "no invalid Dirichlet carrier",
+    "no hidden winner"
+  ],
+  "completion_criteria": [
+    "RH target verified"
+  ],
+  "verification_contract": [
+    "Lean clean replay"
+  ],
+  "return_state_requirements": [
+    "survivors",
+    "residuals",
+    "receipts"
+  ]
+}

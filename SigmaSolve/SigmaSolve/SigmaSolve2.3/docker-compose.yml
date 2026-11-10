@@ -1,0 +1,13 @@
+services:
+  sigmasolve:
+    build: .
+    image: sigmasolve:0.2.0
+    network_mode: none
+    read_only: true
+    mem_limit: 6g
+    cpus: 4
+    tmpfs: [/tmp:rw,size=2g]
+    volumes:
+      - ./examples:/work:ro
+      - ./sigmasolve-results:/out
+    command: ["doctor"]

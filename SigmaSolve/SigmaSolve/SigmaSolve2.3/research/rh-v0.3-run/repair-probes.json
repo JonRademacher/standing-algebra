@@ -1,0 +1,49 @@
+[
+  {
+    "claim": "C011",
+    "status": "COUNTEREXAMPLE_SHAPE_CONFIRMED",
+    "witness": {
+      "partial_sum_pairs": 0.30684031990879107,
+      "boundary_phases": [
+        1.5707963267948966,
+        -1.5707963267948966
+      ],
+      "outside_mass": 0
+    },
+    "consequence": "Require open semicircle or boundary control; do not reuse C011."
+  },
+  {
+    "claim": "C024",
+    "status": "COUNTEREXAMPLE_CONFIRMED",
+    "witness": {
+      "residual": 0.0,
+      "series": "-1 + sum 2^-n"
+    },
+    "consequence": "Replace pair cancellation with exact decomposition plus residual bound."
+  },
+  {
+    "claim": "C025",
+    "status": "COUNTEREXAMPLE_CONFIRMED",
+    "witness": {
+      "blocks": [
+        0.5,
+        -0.3,
+        -0.2
+      ],
+      "sum": 0.0
+    },
+    "consequence": "Require tail dominance, not strict decrease."
+  },
+  {
+    "claim": "C029",
+    "status": "COUNTEREXAMPLE_CONFIRMED",
+    "witness": {
+      "set": [
+        0.25,
+        0.75
+      ],
+      "reflection": "x -> 1-x"
+    },
+    "consequence": "Need an off-axis exclusion theorem independent of symmetry."
+  }
+]
