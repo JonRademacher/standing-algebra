@@ -1,0 +1,17 @@
+{
+  "id": "RH-CONTRACT-A-EXACT-PREDICATE-BINDING",
+  "objective": "Bind the bounded-to-global logical bridge to an explicit riemannZeta nontrivial-zero predicate without counts.",
+  "target": "RiemannHypothesis-shaped pointwise critical-line statement",
+  "status": "SOURCE_DRAFTED_NOT_LEAN_VERIFIED",
+  "obligations": [
+    "Confirm exact nontrivial-zero definition against repository/Mathlib target",
+    "Compile bridge and specialization",
+    "Clean replay with pinned toolchain"
+  ],
+  "completion": [
+    "Lean acceptance",
+    "No sorry/admit/new axioms",
+    "Clean replay",
+    "Definition-equivalence receipt"
+  ]
+}

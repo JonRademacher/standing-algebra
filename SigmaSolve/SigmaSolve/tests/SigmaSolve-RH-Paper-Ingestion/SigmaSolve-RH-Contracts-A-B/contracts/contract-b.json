@@ -1,0 +1,19 @@
+{
+  "id": "RH-CONTRACT-B-BOUNDED-CERTIFICATE",
+  "objective": "Represent a bounded multiplicity-aware zero certificate and connect count equality to bounded critical-line completeness.",
+  "status": "ABSTRACT_COUNT_LAYER_EXECUTED; ANALYTIC_BINDING_OPEN",
+  "obligations": [
+    "Finiteness of bounded nontrivial zero set",
+    "Analytic multiplicity",
+    "Certificate soundness",
+    "Certificate completeness",
+    "Count correspondence",
+    "Boundary convention"
+  ],
+  "completion": [
+    "Lean acceptance of finite count theorem",
+    "Exact Mathlib analytic certificate construction",
+    "Independent coverage proof",
+    "Clean replay"
+  ]
+}

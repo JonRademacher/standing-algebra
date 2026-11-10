@@ -1,0 +1,5 @@
+Python count configurations checked: 55987
+Python bounded/global landscapes checked: 111111
+Python status: PASS
+Lean status: NOT EXECUTED
+Global RH status: UNRESOLVED
