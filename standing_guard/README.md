@@ -21,6 +21,48 @@ print(guard.report().to_markdown())
 substitute call, not a wrapper type. `guard.last_step` describes what the guard
 did with it, and `guard.episodes` holds the drift episodes it found.
 
+## Guarding an evaluation or agent run
+
+`StandingGuard` corrects a system that can rescale its steps. A benchmark or
+agent harness gives you no such handle: by the time a trial's numbers exist, the
+trial has already happened. What can still be withheld is the interpretation — a
+trial whose score rises while the independent signal falls is not evidence of
+progress, however good the headline number looks.
+
+```python
+from standing_guard import AuditLog, MetricStream
+
+stream = MetricStream("tests_passing", "user_value", audit=AuditLog("run.jsonl"))
+for trial in trials:
+    verdict = stream.record({"tests_passing": p, "user_value": q})
+    if not verdict.accepted:
+        print(verdict.reason)       # verdict.evidence holds the window
+```
+
+The verdict is decided by the same windowed statistic as the governor, and the
+stream holds afterwards until consecutive trials stop separating the two
+signals. `stream.summary()` and `stream.to_markdown()` report what was flagged.
+`guard_trials(rows, "score", "quality")` does the same for an iterable and
+returns only the trials it accepted. Either signal can be declared
+`standing_direction="minimize"` for costs and debts.
+
+## Tamper-evident audit trail
+
+A guard's word is only worth the record behind it. Every verdict, and every
+trial's raw signals, can be appended to a hash-chained JSONL log:
+`AuditLog.append` links each entry to the one before it, and `verify_log(path)`
+recomputes the chain, naming the first entry that was edited, reordered,
+inserted or removed.
+
+```bash
+pip install .                       # installs the standing-guard command
+standing-guard audit run.jsonl      # 0 clean, 2 drift flagged, 1 chain altered
+standing-guard demo                 # the worked agent-evaluation example
+```
+
+The exit codes make the guard usable as a CI gate: a run whose wins were bought
+by degrading the independent signal fails the build instead of shipping.
+
 ## What it reads
 
 Nothing is configured. The guard looks for numeric signals in three places:

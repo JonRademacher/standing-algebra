@@ -14,6 +14,7 @@ standing-preserving steps, and reports what happened.
 Nothing here needs configuration, credentials, or third-party packages.
 """
 
+from .audit import AuditLog, read_log, verify_log
 from .discovery import (
     DiscoveryError,
     RoleAssignment,
@@ -32,9 +33,18 @@ from .governor import (
     StepRecord,
 )
 from .report import GuardReport
+from .trials import MetricStream, SignalError, Verdict, guard_trials, stream_from_log
 
 __all__ = [
+    "AuditLog",
     "DiscoveryError",
+    "MetricStream",
+    "SignalError",
+    "Verdict",
+    "guard_trials",
+    "read_log",
+    "stream_from_log",
+    "verify_log",
     "DriftEvidence",
     "Episode",
     "GuardConfig",
