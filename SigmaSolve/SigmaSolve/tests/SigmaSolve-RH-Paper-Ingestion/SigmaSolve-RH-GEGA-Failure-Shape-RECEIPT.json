@@ -1,0 +1,12 @@
+{
+  "artifact": "SigmaSolve-RH-GEGA-Failure-Shape.zip",
+  "bytes": 5360,
+  "sha256": "75accd85f22c20f809b77d73858326f120b844981060e64256176a5207c179ee",
+  "terminal_state": "UNRESOLVED",
+  "failure_shape": "Universal Objective -> Bounded Family Reparameterization -> No Inter-Height Generator -> Burden-Preserving Restatement",
+  "abstract_landscapes_checked": 1118481,
+  "new_state_variable": "O(T) off-line defect",
+  "selected_target": "constructive first-witness -> negative positivity certificate",
+  "rh_proved": false,
+  "rh_disproved": false
+}

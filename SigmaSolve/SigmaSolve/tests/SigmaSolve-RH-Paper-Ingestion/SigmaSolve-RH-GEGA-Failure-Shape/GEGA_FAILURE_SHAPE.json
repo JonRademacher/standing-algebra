@@ -1,0 +1,75 @@
+{
+  "target": "forall T>0, [zeta(rho)=0 and 0<Re(rho)<1 and |Im(rho)|<=T] implies Re(rho)=1/2",
+  "notation_correction": "The intended right side is Re(rho)=1/2, not 21.",
+  "failure_shape": {
+    "name": "Universal Objective -> Bounded Family Reparameterization -> No Inter-Height Generator -> Burden-Preserving Restatement",
+    "classification": "NEGATIVE_DISCOVERY_SHAPE",
+    "why_it_fails": "For any candidate zero rho, choosing T=|Im(rho)|+1 makes the bounded family logically equivalent to RH. The parameter T localizes a counterexample but supplies no relation that propagates truth from one height to the next.",
+    "not_a_failure_of": "The equivalence itself is correct. The failure is treating equivalence/localization as progress toward the missing analytic exclusion."
+  },
+  "gega": {
+    "existence": [
+      "critical-strip zeros",
+      "critical-line zeros",
+      "bounded windows",
+      "off-line defect count"
+    ],
+    "identity": [
+      "exact RH target",
+      "an off-line zero remains an off-line zero under window enlargement"
+    ],
+    "relations": [
+      "window inclusion",
+      "zero multiplicity",
+      "functional-equation symmetry",
+      "defect accumulation"
+    ],
+    "environment": [
+      "completed zeta/xi",
+      "argument principle",
+      "Hardy Z for on-line zeros",
+      "explicit formula/Weil quadratic form"
+    ],
+    "boundaries": [
+      "finite versus universal height",
+      "line zeros versus off-line zeros",
+      "numerical certificate versus proof",
+      "equivalent criterion versus solved criterion"
+    ],
+    "realizations": [
+      "B(T) bounded property",
+      "O(T) off-line defect count",
+      "first off-line witness",
+      "negative direction in an equivalent positivity criterion"
+    ],
+    "consequences": [
+      "RH iff O(T)=0 for all T",
+      "RH false implies a first positive jump of O under local finiteness",
+      "an equivalent positivity criterion should turn an off-line witness into finite negative evidence"
+    ],
+    "updated_geometry": [
+      "replace repeated bounded certification with defect-flow analysis",
+      "search for jump exclusion or a positivity barrier"
+    ],
+    "missing_structures": [
+      "formal off-line defect O(T)",
+      "local finiteness and first-witness theorem",
+      "jump quantization under zeta symmetries",
+      "constructive map from an off-line witness to a negative positivity witness",
+      "independent proof that the relevant quadratic form is nonnegative"
+    ]
+  },
+  "selected_trajectory": {
+    "name": "Defect-flow plus constructive positivity witness",
+    "reason": "It adds a consequence-bearing state variable and a transition geometry; it does not merely restate RH at each T.",
+    "steps": [
+      "Define O(T) as the multiplicity count of off-critical-line zeros in the bounded critical strip.",
+      "Prove O(T) is nonnegative, integer-valued, monotone, and locally finite.",
+      "Prove RH iff O(T)=0 for every T.",
+      "Assume O is nonzero and extract the first jump height T* and corresponding off-line orbit.",
+      "Map that orbit to a finite negative witness for an equivalent positivity functional, preferably Weil's quadratic form or Li coefficients.",
+      "Prove the same functional nonnegative from the prime/explicit-formula side, yielding contradiction."
+    ]
+  },
+  "claim_status": "Research architecture only. The crucial positivity contradiction is not proved."
+}
