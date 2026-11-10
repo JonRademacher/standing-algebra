@@ -97,15 +97,6 @@ Only C3 is implemented in this release; the benchmark schema reserves all four c
 - **Exact objective preservation.** The theorem name, declaration, imports, and completion contract remain attached to every candidate.
 - **Reproducibility.** Every run emits inputs, candidate history, diagnostics, environment data, and SHA-256 hashes.
 
-## Repository integration
-
-Place this directory at `standing-algebra/SigmaSolve/`. ΣSolve is additive and does not modify the existing Lean, Coq, Z3, or Python baseline.
-
-## Honest status
-
-This is an experimental solver substrate. Version 0.1 establishes an executable and testable architecture. It does not establish cross-model uplift, model-scale substitution, mathematical novelty, or superiority to LeanDojo, AlphaProof, or other theorem-proving systems. Those are benchmark questions.
-
-See `docs/ARCHITECTURE.md`, `docs/EXPERIMENTS.md`, `docs/SECURITY.md`, and `docs/LIMITATIONS.md`.
 
 ## Version 0.2 research runtime
 
