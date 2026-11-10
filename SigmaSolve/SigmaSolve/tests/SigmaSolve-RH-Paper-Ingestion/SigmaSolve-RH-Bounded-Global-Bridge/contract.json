@@ -1,0 +1,18 @@
+{
+  "id": "RH-BOUNDED-GLOBAL-BRIDGE-002",
+  "objective": "Remove the height parameter logically without assuming finite zero counts, then isolate countability/multiplicity as an independent implementation layer.",
+  "target": "For every nontrivial zero rho, Re(rho)=1/2.",
+  "bounded_predicate": "For every nontrivial zero rho with abs(Im(rho)) <= T, Re(rho)=1/2.",
+  "bridge": "RH iff for every T>0 the bounded predicate holds.",
+  "advantages": [
+    "No conjugation or positive-height convention required",
+    "No finiteness required",
+    "No multiplicity required",
+    "Separates logical global bridge from zero-count implementation"
+  ],
+  "verification_contract": [
+    "Lean kernel acceptance",
+    "no sorry/admit/new axioms",
+    "clean replay"
+  ]
+}

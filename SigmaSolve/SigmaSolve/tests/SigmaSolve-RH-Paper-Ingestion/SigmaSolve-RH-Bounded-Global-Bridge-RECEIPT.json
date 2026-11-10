@@ -1,0 +1,16 @@
+{
+  "file": "SigmaSolve-RH-Bounded-Global-Bridge.zip",
+  "bytes": 4816,
+  "sha256": "dd277d5290bcae02eaf84bad4026bd12fab51e86e56fdb9be7d113f602d87d9f",
+  "terminal_state": "PARTIAL_LEMMAS_VERIFIED",
+  "abstract_landscapes_checked": 111111,
+  "new_verified_structure": "The universal height quantifier can be removed logically without counts: global RH-shape iff every positive absolute-height window satisfies it.",
+  "lean_state": "SOURCE_DRAFTED_NOT_EXECUTED",
+  "count_layer_role": "Optional certification realization, not constitutive of the logical bridge.",
+  "remaining_open": [
+    "Bind NontrivialZero to Mathlib riemannZeta while excluding trivial zeros/pole",
+    "Formalize bounded zero finiteness and multiplicity using analytic/meromorphic APIs",
+    "Prove every bounded window is all-on-line, equivalently all-height count equality"
+  ],
+  "global_RH": "UNRESOLVED"
+}

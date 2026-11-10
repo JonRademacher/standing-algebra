@@ -1,0 +1,37 @@
+{
+  "L1": {
+    "statement": "Global property iff all bounded absolute-height properties",
+    "state": "EXECUTED_IN_ABSTRACT_MODEL; LEAN_SOURCE_DRAFTED",
+    "dependencies": []
+  },
+  "L2": {
+    "statement": "For a complete finite bounded certificate, N0=N iff all certified zeros are on line",
+    "state": "EXECUTED_PREVIOUS_CONTRACT",
+    "dependencies": []
+  },
+  "L3": {
+    "statement": "If every T has a sound and complete finite certificate and N0(T)=N(T), then RH",
+    "state": "DERIVED_CONDITIONALLY",
+    "dependencies": [
+      "L1",
+      "L2",
+      "certificate soundness/completeness for every T"
+    ]
+  },
+  "L4": {
+    "statement": "Every bounded zeta zero region admits the exact finite multiplicity certificate",
+    "state": "LIBRARY_BINDING_OPEN",
+    "dependencies": [
+      "isolated zeros",
+      "compactness/finiteness",
+      "analytic multiplicity"
+    ]
+  },
+  "L5": {
+    "statement": "For every T, N0(T)=N(T)",
+    "state": "OPEN_CORE_RH",
+    "dependencies": [
+      "global analytic argument"
+    ]
+  }
+}

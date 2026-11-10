@@ -1,0 +1,27 @@
+{
+  "riemannZeta": {
+    "module": "Mathlib.NumberTheory.LSeries.RiemannZeta",
+    "available": true,
+    "notes": "differentiable away from 1; completedRiemannZeta0 entire"
+  },
+  "analyticOrderNatAt": {
+    "module": "Mathlib.Analysis.Analytic.Order",
+    "available": true,
+    "notes": "natural vanishing order; returns junk 0 if not analytic"
+  },
+  "isolated_zeros": {
+    "module": "Mathlib.Analysis.Analytic.IsolatedZeros",
+    "available": true,
+    "notes": "local isolated-zero and identity principles"
+  },
+  "meromorphic_divisor": {
+    "module": "Mathlib.Analysis.Meromorphic.Divisor",
+    "available": true,
+    "notes": "locally finite divisor and finite support on balls/compact settings"
+  },
+  "canonical_decomposition": {
+    "module": "Mathlib.Analysis.Complex.CanonicalDecomposition",
+    "available": true,
+    "notes": "finite zeros and poles on compact sets for meromorphic functions"
+  }
+}
