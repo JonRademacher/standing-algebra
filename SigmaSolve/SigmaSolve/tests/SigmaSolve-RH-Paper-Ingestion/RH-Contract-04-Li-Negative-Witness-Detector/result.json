@@ -1,0 +1,14 @@
+{
+  "contract": "RH-C04-LI-NEGATIVE-WITNESS-DETECTOR",
+  "contract_type": "ADDITIONAL_CHILD_CONTRACT",
+  "terminal_state": "PARTIAL_LEMMAS_VERIFIED_AT_PAPER_LEVEL",
+  "progress": {
+    "D3": "proved algebraically with corrected orientation: left-half member maps outside unit disk; right-half member maps inside",
+    "finite_model_amplification": "proved conditionally in finite-model-theorem.md",
+    "D1_D2_D4": "established external theorem family identified; exact reconstruction/formal binding open",
+    "D5": "certificate schema produced, no actual negative zeta coefficient certificate",
+    "D6": "blocked on Lean runtime and formalization"
+  },
+  "main_residual": "Transfer from the finite maximal-modulus model to the infinite symmetrically grouped zeta-zero multiset with exact Li normalization and hypotheses.",
+  "next_contract_trigger": "Open Contract 05 only after exact Li/Bombieri-Lagarias hypotheses are reconstructed, or if the barrier lane is pursued independently as a parallel child."
+}

@@ -1,0 +1,11 @@
+{
+  "file": "RH-Contract-04-Li-Negative-Witness-Detector.zip",
+  "bytes": 14261,
+  "sha256": "0d5fa16f517a75c8c164c630d84e4692ce0b2d56879bd4a3b5a37a269dc7a49d",
+  "terminal_state": "PARTIAL_LEMMAS_VERIFIED_AT_PAPER_LEVEL",
+  "correction": "D3 orientation corrected before delivery",
+  "first_finite_model_negative": {
+    "n": 14,
+    "L_n_real": -3.396638242695941
+  }
+}

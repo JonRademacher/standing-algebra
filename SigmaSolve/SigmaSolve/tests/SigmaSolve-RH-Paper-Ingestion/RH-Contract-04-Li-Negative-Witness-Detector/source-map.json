@@ -1,0 +1,15 @@
+{
+  "Li1997": {
+    "title": "The Positivity of a Sequence of Numbers and the Riemann Hypothesis",
+    "journal": "Journal of Number Theory 65 (1997), 325-333",
+    "doi": "10.1006/jnth.1997.2137",
+    "use": "primary detector/equivalence theorem"
+  },
+  "BombieriLagarias1999": {
+    "title": "Complements to Li's Criterion for the Riemann Hypothesis",
+    "journal": "Journal of Number Theory 77 (1999), 274-287",
+    "doi": "10.1006/jnth.1999.2392",
+    "use": "general multiset theorem and arithmetic/Weil connection"
+  },
+  "status": "source map only; exact theorem hypotheses must be checked against full texts before formal transcription"
+}

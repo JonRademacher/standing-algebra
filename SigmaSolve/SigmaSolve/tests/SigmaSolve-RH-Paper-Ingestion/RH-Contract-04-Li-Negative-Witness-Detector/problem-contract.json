@@ -1,0 +1,52 @@
+{
+  "contract_id": "RH-C04-LI-NEGATIVE-WITNESS-DETECTOR",
+  "version": "0.1.0",
+  "contract_type": "ADDITIONAL_CHILD_CONTRACT",
+  "parent_contract": "RH-C03-FINITE-NEGATIVE-WITNESS",
+  "scope": "W1-W4 detector lane only",
+  "target": "not RiemannHypothesis -> exists n >= 1, lambda_n < 0",
+  "obligations": [
+    {
+      "id": "D1",
+      "statement": "Define xi and Li coefficients lambda_n in derivative form",
+      "status": "ESTABLISHED_EXTERNAL_NEEDS_FORMAL_BINDING"
+    },
+    {
+      "id": "D2",
+      "statement": "Prove the zero-sum representation with the exact symmetric limiting convention",
+      "status": "ESTABLISHED_EXTERNAL_NEEDS_FORMAL_BINDING"
+    },
+    {
+      "id": "D3",
+      "statement": "Map an off-line zero quartet to a transformed member z_rho=1-1/rho with |z_rho|>1; specifically Re(rho)<1/2 iff |z_rho|>1, while Re(rho)>1/2 iff |z_rho|<1",
+      "status": "PAPER_LEVEL_PROVED"
+    },
+    {
+      "id": "D4",
+      "statement": "Prove an off-line zero family forces a finite n with lambda_n<0 after controlling the complete zero sum",
+      "status": "ESTABLISHED_BY_LI_BOMBIERI_LAGARIAS_NEEDS_RECONSTRUCTION"
+    },
+    {
+      "id": "D5",
+      "statement": "Emit a finite witness certificate containing n, exact lambda_n definition, and proof lambda_n<0",
+      "status": "BLOCKED_ON_D1_D4"
+    },
+    {
+      "id": "D6",
+      "statement": "Lean verification and clean replay",
+      "status": "BLOCKED_VERIFIER_REQUIRED"
+    }
+  ],
+  "non_substitution_rules": [
+    "A single off-line term with large modulus is not enough; the complete symmetrically grouped zero sum must be controlled.",
+    "A floating-point negative approximation is not an exact negative certificate.",
+    "The detector criterion cannot be reused as the independent positivity barrier.",
+    "Finite-model dominance does not automatically transfer to the infinite zeta-zero multiset."
+  ],
+  "completion_criteria": [
+    "D1-D4 reconstructed with exact assumptions",
+    "D5 certificate schema instantiated",
+    "D6 formally verified",
+    "All convergence, grouping, and multiplicity conventions explicit"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "certificate_type": "LI_NEGATIVE_WITNESS",
+  "fields": {
+    "n": "positive integer",
+    "normalization": "Li or Keiper normalization, explicitly identified",
+    "lambda_definition": "exact derivative definition or formally proved equal representation",
+    "value_enclosure": "exact rational/algebraic proof or certified interval [a,b] with b<0",
+    "dependencies": "formal theorem IDs",
+    "grouping_convention": "zero-sum convention if used",
+    "verifier_receipt": "Lean clean replay receipt"
+  },
+  "acceptance": "upper endpoint is strictly negative and every dependency is verified",
+  "rejection": [
+    "ordinary floating-point approximation",
+    "finite truncation without a signed tail bound",
+    "unknown normalization",
+    "unverified interchange or grouping",
+    "dependency on the independent positivity barrier"
+  ]
+}
