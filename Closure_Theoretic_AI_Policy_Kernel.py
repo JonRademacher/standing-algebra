@@ -69,7 +69,7 @@ class ClosurePolicyKernel:
     It ONLY applies closure.
     """
 
-    def init(self, universe: Set, closed_sets: Set[FrozenSet]):
+    def __init__(self, universe: Set, closed_sets: Set[FrozenSet]):
         """
         Parameters
         ----------
@@ -123,7 +123,8 @@ class ClosurePolicyKernel:
     # Specialization Preorder
     # -------------------------
 
-    def neighborhood_filter(self, x) -> Set"""
+    def neighborhood_filter(self, x) -> Set:
+        """
         Fx = { C ∈ C | x ∈ C }
 
         Principal closure filter for x.
