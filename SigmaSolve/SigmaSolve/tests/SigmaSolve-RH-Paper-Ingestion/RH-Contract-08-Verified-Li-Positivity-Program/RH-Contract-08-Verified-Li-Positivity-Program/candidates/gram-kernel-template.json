@@ -1,0 +1,27 @@
+{
+  "id": "GRAM-KERNEL-TEMPLATE",
+  "name": "Prime-power or xi-transform Gram kernel",
+  "family": "gram",
+  "identity": {
+    "statement": "lambda_n = c_n^* G c_n",
+    "dependencies": [
+      "kernel construction",
+      "exact identity",
+      "convergence"
+    ]
+  },
+  "positivity": {
+    "statement": "G is positive semidefinite",
+    "dependencies": [
+      "Gram realization or positive measure"
+    ]
+  },
+  "independence": {
+    "forbidden_dependencies": [
+      "RiemannHypothesis",
+      "UniversalLiPositivity",
+      "AllZerosOnCriticalLine"
+    ]
+  },
+  "status": "REGISTERED"
+}

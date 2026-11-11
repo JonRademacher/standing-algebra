@@ -1,0 +1,7 @@
+{
+  "A_positive": true,
+  "AP_self_adjoint": false,
+  "PAP_positive": true,
+  "cross_trace": 0.0,
+  "lesson": "one-sided product needs separate cross-term analysis"
+}

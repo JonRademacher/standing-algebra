@@ -1,0 +1,10 @@
+{
+  "file": "RH-Contract-08-Verified-Li-Positivity-Program.zip",
+  "bytes": 18422,
+  "sha256": "cbf0d1c75a36bb781dfea5e5d569e848d4e96f394d36cdf7bae3bb286ad05446",
+  "files": 29,
+  "tests": "2 passed",
+  "candidate_validation": "3 passed",
+  "formal_baseline": "not yet reproduced",
+  "RH": "open"
+}

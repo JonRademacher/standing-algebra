@@ -1,0 +1,23 @@
+{
+  "operator": [
+    "positive A does not imply AP positive",
+    "cross trace may be nonzero",
+    "trace cyclicity fails without ideal hypotheses"
+  ],
+  "analytic": [
+    "finite truncation needs signed tail",
+    "pointwise convergence does not imply trace convergence",
+    "limit order may matter"
+  ],
+  "formal": [
+    "normalization mismatch",
+    "forbidden axiom",
+    "hidden sorry/admit",
+    "dependency cycle"
+  ],
+  "claim": [
+    "bounded positivity promoted to universal",
+    "verification promoted to novelty",
+    "equivalence promoted to proof"
+  ]
+}

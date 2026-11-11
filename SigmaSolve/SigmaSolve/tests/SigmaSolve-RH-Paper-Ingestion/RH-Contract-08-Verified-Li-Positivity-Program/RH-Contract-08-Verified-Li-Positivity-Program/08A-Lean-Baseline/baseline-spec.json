@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/nicholasbulka/li-criterion-rh-equivalence-lean",
+  "commit": "REQUIRED_PIN",
+  "reported_theorems": [
+    "li_criterion",
+    "normalization/comparison theorem to symmetrically summed zero expression"
+  ],
+  "required_checks": [
+    "clean clone",
+    "pinned checkout",
+    "lake build",
+    "forbidden-token scan",
+    "axiom audit",
+    "clean replay",
+    "hash manifest"
+  ],
+  "accepted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "status": "NOT_REPRODUCED_IN_THIS_PACKAGE"
+}

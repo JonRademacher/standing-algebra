@@ -1,0 +1,32 @@
+[
+  {
+    "file": "gram-kernel-template.json",
+    "returncode": 0,
+    "output": {
+      "candidate": "GRAM-KERNEL-TEMPLATE",
+      "valid_schema": true,
+      "errors": [],
+      "sha256": "d0cf12bd6e4914e1a5e93b2768e1a592beec448374c3e5c54abe1ce6aab0fc94"
+    }
+  },
+  {
+    "file": "li-trace-v10.json",
+    "returncode": 0,
+    "output": {
+      "candidate": "LI-TRACE-V10",
+      "valid_schema": true,
+      "errors": [],
+      "sha256": "e3e95cfb87c737c3f02c64c12c4c21d8cbca84eb9b6c28544c2eea3d15656d10"
+    }
+  },
+  {
+    "file": "weil-test-function.json",
+    "returncode": 0,
+    "output": {
+      "candidate": "WEIL-TEST-FUNCTION",
+      "valid_schema": true,
+      "errors": [],
+      "sha256": "67485fd40c6f457ac58d306cc40123d1b73fe9f352443f1e8d4264c7e231ed99"
+    }
+  }
+]

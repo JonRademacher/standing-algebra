@@ -1,0 +1,16 @@
+{
+  "name": "Contract 08 candidate-lab benchmark",
+  "conditions": [
+    "candidate identity only",
+    "identity plus positivity",
+    "identity plus positivity plus independence"
+  ],
+  "metrics": [
+    "formal obligations closed",
+    "counterexamples found",
+    "forbidden dependency paths",
+    "clean replay",
+    "cost/time when agents added"
+  ],
+  "status": "scaffold"
+}

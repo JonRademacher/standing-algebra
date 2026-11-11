@@ -1,0 +1,20 @@
+{
+  "target": "verified zeros through T imply lambda_n>=0 for n<=f(T)",
+  "status": "OPEN",
+  "candidate_scales": [
+    "T^2/(2 log(T)^2) with source-dependent constants",
+    "stronger T^2-scale claims requiring complete published proof"
+  ],
+  "warnings": [
+    "one historical partial criterion was retracted",
+    "private communications are not sufficient proof sources",
+    "explicit constants must be independently derived and verified"
+  ],
+  "completion": [
+    "published theorem or complete derivation",
+    "explicit constants",
+    "certified zero input",
+    "interval/exact computation",
+    "formalizable statement"
+  ]
+}

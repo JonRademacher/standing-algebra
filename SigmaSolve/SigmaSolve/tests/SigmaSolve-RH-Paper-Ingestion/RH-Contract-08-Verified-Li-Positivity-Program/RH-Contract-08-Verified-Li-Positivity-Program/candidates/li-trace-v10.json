@@ -1,0 +1,34 @@
+{
+  "id": "LI-TRACE-V10",
+  "name": "Xian-Jin Li v10 trace-operator candidate",
+  "family": "trace",
+  "identity": {
+    "statement": "trace approximants converge to 2 lambda_n",
+    "dependencies": [
+      "T5 reconstruction",
+      "exact normalization"
+    ]
+  },
+  "positivity": {
+    "statement": "candidate trace is nonnegative",
+    "dependencies": [
+      "T3",
+      "T4",
+      "trace-class foundation",
+      "cross-term vanishing"
+    ]
+  },
+  "independence": {
+    "forbidden_dependencies": [
+      "RiemannHypothesis",
+      "UniversalLiPositivity",
+      "WeilPositivityAssumed",
+      "AllZerosOnCriticalLine"
+    ]
+  },
+  "status": "REGISTERED",
+  "provenance": [
+    "RH Contract 06",
+    "RH Contract 07 recursive bundle"
+  ]
+}

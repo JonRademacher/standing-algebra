@@ -1,0 +1,29 @@
+{
+  "contract_id": "RH-C08-VERIFIED-LI-POSITIVITY-PROGRAM",
+  "version": "0.1.0",
+  "contract_type": "NEW_EXECUTION_CONTRACT",
+  "parents": [
+    "RH-C03-FINITE-NEGATIVE-WITNESS",
+    "RH-C05-LI-BOMBIERI-LAGARIAS-RECONSTRUCTION",
+    "RH-C07-RECURSIVE-CONTINUATION-BUNDLE"
+  ],
+  "objective": "Reproduce the formal Li-equivalence baseline, discover an independent universal positivity witness, adversarially test every candidate, and close RH only after formal verification and independence certification.",
+  "exact_target": "RiemannHypothesis",
+  "barrier": "forall n>=1, 0 <= lambda_n",
+  "non_substitution": [
+    "finite Li positivity != universal positivity",
+    "formal equivalence != proof of either side",
+    "candidate positive shape != verified identity",
+    "verification != validation",
+    "repository description != local reproduction"
+  ],
+  "completion": [
+    "08A clean reproduction",
+    "candidate identity verified",
+    "candidate positivity verified",
+    "independence graph passed",
+    "clean replay",
+    "negative-witness detector combined with barrier",
+    "independent reproduction"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Li positivity candidate",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "family",
+    "identity",
+    "positivity",
+    "independence",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "family": {
+      "enum": [
+        "trace",
+        "gram",
+        "norm_square",
+        "positive_measure",
+        "arithmetic_quadratic",
+        "weil",
+        "de_branges",
+        "other"
+      ]
+    },
+    "identity": {
+      "type": "object",
+      "required": [
+        "statement",
+        "dependencies"
+      ],
+      "properties": {
+        "statement": {
+          "type": "string"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "positivity": {
+      "type": "object",
+      "required": [
+        "statement",
+        "dependencies"
+      ],
+      "properties": {
+        "statement": {
+          "type": "string"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "independence": {
+      "type": "object",
+      "required": [
+        "forbidden_dependencies"
+      ],
+      "properties": {
+        "forbidden_dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "REGISTERED",
+        "FORMALIZED",
+        "IDENTITY_VERIFIED",
+        "POSITIVITY_VERIFIED",
+        "INDEPENDENCE_PASSED",
+        "CLEAN_REPLAYED",
+        "ELIMINATED"
+      ]
+    }
+  }
+}

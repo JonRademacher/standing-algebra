@@ -1,0 +1,26 @@
+{
+  "id": "WEIL-TEST-FUNCTION",
+  "name": "Weil explicit-formula positivity candidate",
+  "family": "weil",
+  "identity": {
+    "statement": "Q(f_n)=lambda_n under exact test-function normalization",
+    "dependencies": [
+      "explicit formula",
+      "admissible test-function class"
+    ]
+  },
+  "positivity": {
+    "statement": "Q(f)>=0 for all candidate f_n",
+    "dependencies": [
+      "independent arithmetic or operator positivity"
+    ]
+  },
+  "independence": {
+    "forbidden_dependencies": [
+      "RiemannHypothesis",
+      "WeilCriterionPositivityDirection",
+      "UniversalLiPositivity"
+    ]
+  },
+  "status": "REGISTERED"
+}
