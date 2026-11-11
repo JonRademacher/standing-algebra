@@ -1,0 +1,9 @@
+{
+  "file": "RH-Contract-07-T3-T5-Audit.zip",
+  "bytes": 7081,
+  "sha256": "58a31a57cdca61c8634f6eaf47d92c8e4eecaec941eb59ecb167a31d4a23e0ad",
+  "terminal_state": "UNRESOLVED",
+  "T3": "conditional survivor",
+  "T4": "conditional survivor",
+  "T5": "explicit proof present; reconstruction pending"
+}

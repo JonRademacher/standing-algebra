@@ -1,0 +1,15 @@
+{
+  "previous_shape": "unverified T3/T4/T5 claims block positivity",
+  "updated_shape": "Plausible complete analytic proof chain -> critical steps explicitly supplied -> external convergence, quotient, trace-class, and limit prerequisites not independently reconstructed -> no localized contradiction found -> validation and formal replay still absent",
+  "change": [
+    "T3 final infinite-repeat inference survives conditionally",
+    "T4 correctly retains and evaluates the cross term rather than assuming one-sided positivity",
+    "T5 contains an explicit construction and proof program rather than an unsupported limit assertion"
+  ],
+  "still_missing": [
+    "independent reconstruction of all borrowed analytic theorems",
+    "line-by-line verification of changes of variables and convergence",
+    "formal proof assistant implementation",
+    "independent expert reproduction"
+  ]
+}

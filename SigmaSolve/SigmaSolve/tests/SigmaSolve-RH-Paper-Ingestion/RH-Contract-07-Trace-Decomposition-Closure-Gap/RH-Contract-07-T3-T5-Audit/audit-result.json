@@ -1,0 +1,40 @@
+{
+  "contract": "RH-C07-T3-T5-AUDIT",
+  "parent": "RH-C07-TRACE-DECOMPOSITION-CLOSURE-GAP",
+  "terminal_state": "UNRESOLVED",
+  "T3": {
+    "status": "CONDITIONALLY_VALID_PENDING_PREREQUISITES",
+    "finding": "If equation (4.13) is an absolutely convergent ordinary sum indexed by an infinite O_S^*, and the variable substitutions truly make every summand identical, then the common summand is zero and Theorem 1.3 follows.",
+    "unresolved": [
+      "independent proof of absolute convergence for (4.12)-(4.13)",
+      "formal proof that the fundamental-domain decomposition is disjoint and complete",
+      "measure preservation and domain invariance under both substitutions",
+      "formal proof O_S^* is infinite in the selected finite-S setting",
+      "trace-class applicability to the compressed operator"
+    ]
+  },
+  "T4": {
+    "status": "CONDITIONALLY_VALID_PENDING_PREREQUISITES",
+    "finding": "Lemma 5.2 correctly avoids treating the one-sided product as positive: it splits the trace into a positive compressed contribution and a cross term. Theorem 1.4 then depends essentially on proving the cross term zero via (5.8)-(5.10).",
+    "unresolved": [
+      "independent proof of absolute and uniform convergence used before (5.8)",
+      "legal trace cyclicity for every displayed product",
+      "trace-class status of the restricted/cross operators",
+      "fundamental-domain and variable-change verification in (5.8)-(5.9)",
+      "same-summand and infinite-index proof for (5.9)"
+    ]
+  },
+  "T5": {
+    "status": "EXPLICIT_PROOF_PRESENT_NOT_INDEPENDENTLY_REPRODUCED",
+    "finding": "Theorem 1.2 explicitly states smooth compactly supported g_n,epsilon, both Mellin cancellations, and Delta(h_n,epsilon)->2 lambda_n. The proof cites and elaborates Bombieri's construction rather than merely asserting a limit.",
+    "unresolved": [
+      "line-by-line reconstruction of Lemmas 3.1 onward",
+      "uniform/symmetric convergence of the zero sum under epsilon->0",
+      "normalization agreement with Contracts 04-05",
+      "validation of every sum-integral-limit interchange",
+      "formal transcription"
+    ]
+  },
+  "closure": "BLOCKED_ON_EXTERNAL_ANALYTIC_RECONSTRUCTION_AND_FORMAL_REPLAY",
+  "next_minimum_contract": "T1-T2 analytic foundation and convergence ledger, followed by line-by-line T5 reconstruction"
+}

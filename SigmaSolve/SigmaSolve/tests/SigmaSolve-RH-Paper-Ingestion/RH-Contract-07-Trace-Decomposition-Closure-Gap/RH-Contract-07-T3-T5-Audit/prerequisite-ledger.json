@@ -1,0 +1,92 @@
+[
+  {
+    "claim": "T3",
+    "prerequisite": "absolute convergence 4.12/4.13",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T3",
+    "prerequisite": "fundamental domain decomposition",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T3",
+    "prerequisite": "measure preservation",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T3",
+    "prerequisite": "cutoff invariance",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T3",
+    "prerequisite": "O_S^* infinite",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T3",
+    "prerequisite": "compressed operator trace class",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T4",
+    "prerequisite": "VS(h) bounded positive",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T4",
+    "prerequisite": "trace decomposition",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T4",
+    "prerequisite": "cross operator trace class",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T4",
+    "prerequisite": "absolute/uniform convergence 5.8",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T4",
+    "prerequisite": "variable changes 5.8->5.9",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T4",
+    "prerequisite": "identical summand and infinite index",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T5",
+    "prerequisite": "construction ell_n_eps",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T5",
+    "prerequisite": "construction g_n_eps",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T5",
+    "prerequisite": "Mellin cancellations",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T5",
+    "prerequisite": "symmetric zero pairing",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T5",
+    "prerequisite": "epsilon limit",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  },
+  {
+    "claim": "T5",
+    "prerequisite": "Li normalization",
+    "status": "OPEN_INDEPENDENT_RECONSTRUCTION"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "contract_id": "RH-C07A-ANALYTIC-FOUNDATION-LEDGER",
+  "contract_type": "SCOPED_SUBCONTRACT_OF_C07",
+  "objective": "Discharge T1-T2 and the convergence prerequisites needed by T3-T5 without reopening the whole RH proof.",
+  "obligations": [
+    "Create a typed definition ledger for every space, quotient, measure, projection, transform, and operator.",
+    "Map each cited theorem to its exact hypotheses and instantiated object.",
+    "Prove or reject trace-class status for every compressed and cross operator.",
+    "Create a Fubini/Tonelli/reindexing ledger for equations (4.12)-(4.14) and (5.8)-(5.10).",
+    "Prove O_S^* infinitude and the disjoint fundamental-domain decomposition.",
+    "Reconstruct Theorem 1.2 line-by-line after the operator prerequisites are stable."
+  ],
+  "completion": "Every prerequisite receives PROVED, REFUTED, or EXTERNAL_UNVERIFIED with a precise source and no unresolved implicit edge."
+}
