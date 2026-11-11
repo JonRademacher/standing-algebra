@@ -1,0 +1,18 @@
+{
+  "T3": {
+    "status":"BLOCKED_ON_TYPED_E_S_INVERSE_AND_EXTERNAL_TRACE_FOUNDATION",
+    "survives":["S-unit infinitude","norm/measure scaling","identical-summand lemma","candidate convergence estimates"],
+    "missing":["single-valued inverse/isometry theorem","measurable disjoint fundamental domain","independent trace-class and diagonal-kernel verification"]
+  },
+  "T4": {
+    "status":"BLOCKED_ON_SAME_FOUNDATION_PLUS_CROSS_TERM_RECONSTRUCTION",
+    "survives":["Gram-form positivity","trace split architecture","trace-ideal rule if T_h is trace class"],
+    "missing":["well-typed projections and inverse","line-by-line 5.8-5.10 reconstruction","cross-term trace-class proof"]
+  },
+  "T5": {
+    "status":"STRONGEST_SURVIVOR_INDEPENDENT_REPRODUCTION_INCOMPLETE",
+    "survives":["explicit approximant construction","zero-free-region majorants","summable |rho|^-3/2 and |rho|^-3 controls","normalization identity"],
+    "missing":["independent verification of all constants/ranges","formal symmetric-zero-sum definition","formal transcription"]
+  },
+  "RH_closure":"UNRESOLVED"
+}

@@ -1,0 +1,10 @@
+[
+  {"id":"CV01","location":"3.2-3.8","operation":"epsilon limit through zero sum","evidence":"candidate derives |rho|^-3/2 majorant and states uniform convergence","status":"SUBSTANTIAL_PROOF_PRESENT_NEEDS_REPRODUCTION"},
+  {"id":"CV02","location":"3.10-3.12","operation":"replace ell-product by hhat","evidence":"candidate derives epsilon |log epsilon|^(2n-2) sum |rho|^-3","status":"SUBSTANTIAL_PROOF_PRESENT_NEEDS_REPRODUCTION"},
+  {"id":"CV03","location":"4.1","operation":"Fubini between u and z","evidence":"compact support of f and g cited","status":"PLAUSIBLE_LOCAL"},
+  {"id":"CV04","location":"4.2-4.4","operation":"differentiate/integrate and reorder k,l,v,z,y","evidence":"candidate supplies Phi decay, sine bound, and sum l^-nu","status":"SUBSTANTIAL_PROOF_PRESENT_NEEDS_REPRODUCTION"},
+  {"id":"CV05","location":"4.5-4.10","operation":"swap x and v and integrate by parts","evidence":"candidate derives |x|^-2nu bound with nu<1/8","status":"SUBSTANTIAL_PROOF_PRESENT_NEEDS_REPRODUCTION"},
+  {"id":"CV06","location":"4.11-4.13","operation":"decompose J_S into S-unit translates and reindex","evidence":"absolute convergence asserted downstream from 4.5","status":"CONDITIONAL_ON_FUNDAMENTAL_DOMAIN_AND_TYPED_ACTION"},
+  {"id":"CV07","location":"5.2","operation":"split basis trace into compressed and cross parts","evidence":"absolute convergence invoked from trace class","status":"VALID_IF_OPERATOR_PRODUCTS_WELL_TYPED"},
+  {"id":"CV08","location":"5.8-5.10","operation":"cross-term integral reindexing and identical summands","evidence":"candidate claims absolute and uniform convergence","status":"OPEN_LINE_BY_LINE_RECONSTRUCTION"}
+]

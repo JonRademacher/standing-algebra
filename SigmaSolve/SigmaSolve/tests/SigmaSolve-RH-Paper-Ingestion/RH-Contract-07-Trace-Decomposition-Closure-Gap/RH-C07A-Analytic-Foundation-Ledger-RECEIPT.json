@@ -1,0 +1,7 @@
+{
+  "file": "RH-C07A-Analytic-Foundation-Ledger.zip",
+  "bytes": 7282,
+  "sha256": "b805ddbe96590f60043d043da0eca60b14478abbb733717516fb4eb44e160990",
+  "terminal_state": "UNRESOLVED",
+  "material_finding": "typed inverse gap localized"
+}

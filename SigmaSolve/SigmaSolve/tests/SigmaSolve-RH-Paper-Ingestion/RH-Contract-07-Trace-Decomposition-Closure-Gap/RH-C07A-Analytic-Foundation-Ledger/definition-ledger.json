@@ -1,0 +1,14 @@
+[
+  {"id":"DEF01","object":"A_S","type":"finite product of R and Q_p","status":"DEFINED_IN_CANDIDATE","residual":"measure normalization must match Fourier self-duality"},
+  {"id":"DEF02","object":"J_S","type":"multiplicative group A_S^*","status":"DEFINED_IN_CANDIDATE","residual":"null-set relation A_S vs J_S used later"},
+  {"id":"DEF03","object":"O_S^*","type":"rational S-unit group","status":"DEFINED_IN_CANDIDATE","residual":"infinitude and action properties to prove"},
+  {"id":"DEF04","object":"C_S=J_S/O_S^*","type":"quotient group","status":"DEFINED_IN_CANDIDATE","residual":"measurable fundamental domain and quotient Haar measure"},
+  {"id":"DEF05","object":"X_S=A_S/O_S^*","type":"quotient space","status":"EXTERNAL_CONSTRUCTION","residual":"precise equivalence classes and Hilbert completion inherited from cited source"},
+  {"id":"DEF06","object":"E_S","type":"dense-range map S(A_S)->L2(C_S)","status":"EXTERNALLY_SUPPORTED","residual":"kernel, quotienting, and extension to completed L2(X_S)"},
+  {"id":"DEF07","object":"E_S^{-1}","type":"claimed inverse used in operator compositions","status":"TYPE_GAP","residual":"candidate defines E_S^{-1}(F) as a set {f(xi x)}; later treats E_S^{-1} as a single-valued linear operator"},
+  {"id":"DEF08","object":"F_S","type":"unitary Fourier transform on L2(X_S)","status":"EXTERNAL_DEPENDENCY","residual":"exact theorem and transpose convention"},
+  {"id":"DEF09","object":"Q_Lambda","type":"Fourier-support subspace","status":"DEFINED_IN_CANDIDATE","residual":"inequality direction and boundary convention must be normalized"},
+  {"id":"DEF10","object":"S_Lambda,P_Lambda","type":"cutoff projections","status":"DEFINED_IN_CANDIDATE","residual":"both are denoted by pointwise cutoffs in different spaces; typing required"},
+  {"id":"DEF11","object":"V_S(h)","type":"multiplicative convolution operator","status":"LOCAL_POSITIVITY_SURVIVES","residual":"bounded extension and self-adjointness"},
+  {"id":"DEF12","object":"T_h","type":"trace-class integral operator candidate","status":"EXTERNAL_DEPENDENCY","residual":"Theorem 1.1 hypotheses and exact operator typing"}
+]

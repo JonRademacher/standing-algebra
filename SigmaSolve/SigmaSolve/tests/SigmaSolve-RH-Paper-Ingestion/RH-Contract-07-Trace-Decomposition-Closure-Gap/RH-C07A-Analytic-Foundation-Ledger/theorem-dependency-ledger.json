@@ -1,0 +1,8 @@
+[
+  {"id":"EXT01","claim":"T_h is trace class Hilbert-Schmidt and tr(T_h)=Delta(h)-hhat(0)-hhat(1)","source":"candidate Theorem 1.1 citing [16] and [13]","status":"EXTERNAL_UNVERIFIED","blocks":["T3","T4","RH closure"]},
+  {"id":"EXT02","claim":"Fourier transform is unitary on L2(X_S) and Q decomposition is valid","source":"candidate citation to Connes Lemma 1(b)","status":"EXTERNAL_UNVERIFIED","blocks":["operator projections","T3","T4"]},
+  {"id":"EXT03","claim":"E_S has dense range and identifies L2(X_S) with L2(C_S)","source":"candidate Lemma 2.6 citing external proposition","status":"PARTIAL_EXTERNAL_UNVERIFIED","blocks":["well-typed E_S inverse","T3","T4"]},
+  {"id":"EXT04","claim":"diagonal kernel trace formula applies to compressed/cross operators","source":"candidate Lemma 2.4","status":"HYPOTHESES_NOT_RECHECKED","blocks":["T3","T4"]},
+  {"id":"EXT05","claim":"trace cyclicity applies to all displayed products","source":"candidate Lemma 2.5","status":"VALID_IF_ONE_FACTOR_TRACE_CLASS_AND_OTHERS_BOUNDED","blocks":["T3","T4"]},
+  {"id":"EXT06","claim":"de la Vallee-Poussin zero-free estimate supports uniform epsilon bounds","source":"candidate Section 3","status":"PLAUSIBLE_NEEDS_CONSTANT_AND_RANGE_CHECK","blocks":["T5"]}
+]

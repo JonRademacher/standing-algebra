@@ -1,0 +1,12 @@
+{
+  "contract": "RH-C07A-ANALYTIC-FOUNDATION-LEDGER",
+  "contract_type": "SCOPED_SUBCONTRACT_OF_C07",
+  "terminal_state": "UNRESOLVED",
+  "material_new_finding": "E_S^{-1} is presented set-valuedly but used as a single-valued linear operator; exact quotient/isometry binding is missing from the visible proof.",
+  "T3": "blocked on typed inverse, fundamental domain, and external trace theorem",
+  "T4": "blocked on same foundation plus cross-term reconstruction",
+  "T5": "strong conditional survivor with substantial estimates",
+  "RH_proved": false,
+  "RH_disproved": false,
+  "next_step": "repair/bind E_S inverse and instantiate Theorem 1.1 before continuing trace closure"
+}
