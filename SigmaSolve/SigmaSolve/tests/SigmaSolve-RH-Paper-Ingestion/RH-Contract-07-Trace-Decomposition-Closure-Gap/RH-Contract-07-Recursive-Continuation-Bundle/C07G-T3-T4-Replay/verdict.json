@@ -1,0 +1,18 @@
+{
+  "T3": {
+    "local_final_inference": "VALID_CONDITIONAL",
+    "fundamental_domain": "SOURCE_SUPPORTED",
+    "S_unit_invariance": "SUPPORTED",
+    "absolute_convergence": "SUBSTANTIAL_CANDIDATE_ESTIMATES",
+    "trace_foundation": "UNBOUND",
+    "verdict": "BLOCKED"
+  },
+  "T4": {
+    "Gram_positivity": "VALID_CONDITIONAL",
+    "trace_split": "ALGEBRAICALLY_PLAUSIBLE_IF_TRACE_CLASS",
+    "cross_term_zero": "CONDITIONAL_ON_T3_STYLE_REPLAY_AND_TRACE_FOUNDATION",
+    "verdict": "BLOCKED"
+  },
+  "elimination_witness": null,
+  "validation_certificate": null
+}

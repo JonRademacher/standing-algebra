@@ -1,0 +1,11 @@
+{
+  "contract": "C07D",
+  "status": "COMPLETED_SOURCE_IDENTIFICATION",
+  "references": {
+    "[13]": "Xian-Jin Li, On the explicit formula related to Riemann\u2019s zeta-function, Int. J. Number Theory 11 (2015), 2451\u20132486",
+    "[16]": "Ralf Meyer, On a representation of the idele class group related to primes and zeros of L-functions, Duke Math. J. 127 (2005), 519\u2013595",
+    "[8]": "Alain Connes and Matilde Marcolli, Noncommutative Geometry, Quantum Fields, and Motives, AMS 2008, Proposition 2.30 p.359"
+  },
+  "finding": "The bibliography is resolved. Meyer constructs a virtual representation whose character is a variant of the Weil distribution. That is not, from the available theorem statement alone, an exact identity with Li\u2019s concrete Hilbert-space operator T_h. Li 2015 is the likely direct source for the explicit trace identity, but its exact theorem text was not available in a fully inspectable primary-source form in this environment.",
+  "next": "operator-transfer comparison"
+}

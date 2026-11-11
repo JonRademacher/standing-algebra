@@ -1,0 +1,16 @@
+{
+  "package": "RH-Contract-07-Recursive-Continuation-Bundle",
+  "contents": [
+    "prior continuations when available",
+    "C07D",
+    "C07E",
+    "C07F",
+    "C07G",
+    "C07H",
+    "C07I",
+    "C07Z"
+  ],
+  "terminal_state": "UNRESOLVED",
+  "recursive_generation_stopped": true,
+  "stop_rule": "No new continuation without a new evidentiary carrier or changed dependency geometry."
+}

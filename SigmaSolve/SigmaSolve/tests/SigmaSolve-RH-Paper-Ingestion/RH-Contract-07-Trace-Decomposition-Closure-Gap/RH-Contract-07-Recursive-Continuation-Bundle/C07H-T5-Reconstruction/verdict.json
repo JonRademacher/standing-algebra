@@ -1,0 +1,17 @@
+{
+  "T5": "STRONG_CONDITIONAL_SURVIVOR",
+  "available": [
+    "explicit approximant construction",
+    "Mellin cancellations",
+    "zero-free-region estimates",
+    "summable zero majorants",
+    "normalization identity"
+  ],
+  "unresolved": [
+    "independent constant/range checking",
+    "formal symmetric zero sum",
+    "line-by-line limit verification",
+    "formal proof assistant transcription"
+  ],
+  "relation_to_closure": "Cannot close RH without T3/T4 and candidate trace theorem"
+}

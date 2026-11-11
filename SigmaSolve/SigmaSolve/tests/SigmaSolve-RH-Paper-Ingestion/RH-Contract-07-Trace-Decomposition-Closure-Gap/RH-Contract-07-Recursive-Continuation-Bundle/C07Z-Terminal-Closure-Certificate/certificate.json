@@ -1,0 +1,35 @@
+{
+  "contract": "RH-C07",
+  "workflow_state": "EXHAUSTED_AVAILABLE_CONTINUATIONS",
+  "mathematical_state": "UNRESOLVED",
+  "complete_dimensions": [
+    "atomic failure localization",
+    "source bibliography resolution",
+    "quotient inverse repair theorem",
+    "fundamental-domain source binding",
+    "operator-family comparison",
+    "trace applicability ledger",
+    "T3/T4 conditional replay",
+    "T5 terminal audit",
+    "historical critique scoping"
+  ],
+  "unresolved_dimensions": [
+    "full primary-source reconstruction of Li 2015 exact trace theorem",
+    "proof that source theorem applies to v10 T_h",
+    "independent line-by-line T3/T4 analytic replay",
+    "independent T5 reproduction",
+    "formal verification",
+    "independent expert review"
+  ],
+  "RH_proved": false,
+  "RH_disproved": false,
+  "candidate_refuted": false,
+  "candidate_validated": false,
+  "terminal_reason": "Further progress requires source-level mathematical reconstruction and external/formal verification not available from the current evidence; creating more continuation folders would duplicate the same residual rather than reduce it.",
+  "reopen_when": [
+    "full text of Li 2015 theorem and proof is ingested",
+    "exact T_h operator-transfer witness is supplied",
+    "formalization environment for adelic Hilbert spaces is available",
+    "independent expert critique identifies a specific valid or invalid step"
+  ]
+}

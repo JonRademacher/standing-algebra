@@ -1,0 +1,28 @@
+{
+  "candidate_operator": {
+    "name": "T_h",
+    "carrier": "L2(C_S)",
+    "construction": "convolution/transform/projection expression using E_S, F_S, P_Lambda, S_Lambda",
+    "claimed_trace": "Delta(h)-hhat(0)-hhat(1)"
+  },
+  "connes_S_local_operator": {
+    "name": "R_Lambda U(h)",
+    "carrier": "L2(X_S)",
+    "construction": "infrared and Fourier cutoffs around multiplicative action",
+    "claimed_trace": "asymptotic S-local trace formula as Lambda->infinity"
+  },
+  "meyer_representation": {
+    "name": "global difference/virtual representation",
+    "carrier": "bornological/representation-theoretic construction",
+    "character": "variant of Weil distribution"
+  },
+  "relations_proved": [],
+  "relations_not_proved": [
+    "exact identity",
+    "unitary equivalence",
+    "compression identity",
+    "trace-norm limit",
+    "interchange of Lambda and epsilon limits"
+  ],
+  "verdict": "NO OPERATOR-TRANSFER WITNESS ESTABLISHED"
+}

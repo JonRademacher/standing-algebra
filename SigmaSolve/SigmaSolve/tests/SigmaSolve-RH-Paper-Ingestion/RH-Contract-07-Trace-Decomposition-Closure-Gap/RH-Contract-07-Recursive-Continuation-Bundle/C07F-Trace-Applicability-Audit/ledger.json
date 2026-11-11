@@ -1,0 +1,44 @@
+[
+  {
+    "id": "TA1",
+    "claim": "T_h is trace class",
+    "status": "EXTERNAL_UNVERIFIED",
+    "needed": "exact source theorem and hypotheses"
+  },
+  {
+    "id": "TA2",
+    "claim": "tr(T_h)=Delta(h)-hhat(0)-hhat(1)",
+    "status": "EXTERNAL_UNVERIFIED",
+    "needed": "exact source theorem and normalization"
+  },
+  {
+    "id": "TA3",
+    "claim": "compressions/cross products are trace class",
+    "status": "CONDITIONAL",
+    "needed": "TA1 plus bounded orthogonal projections and well-typed products"
+  },
+  {
+    "id": "TA4",
+    "claim": "trace cyclicity applies",
+    "status": "CONDITIONAL",
+    "needed": "one trace-class factor and bounded remaining factors"
+  },
+  {
+    "id": "TA5",
+    "claim": "kernel diagonal trace theorem applies",
+    "status": "EXTERNAL_HYPOTHESES_OPEN",
+    "needed": "traceable kernel representative and measure-space conditions"
+  },
+  {
+    "id": "TA6",
+    "claim": "candidate special h_n,epsilon satisfy source theorem",
+    "status": "OPEN",
+    "needed": "compact support/Schwartz/regularity and normalization check"
+  },
+  {
+    "id": "TA7",
+    "claim": "all Lambda/epsilon limits commute",
+    "status": "OPEN",
+    "needed": "uniform trace-norm or dominated convergence theorem"
+  }
+]

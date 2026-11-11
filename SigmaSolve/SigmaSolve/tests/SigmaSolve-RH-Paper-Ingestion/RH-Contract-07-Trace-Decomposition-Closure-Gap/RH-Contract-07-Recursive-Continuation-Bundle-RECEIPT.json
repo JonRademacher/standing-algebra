@@ -1,0 +1,8 @@
+{
+  "file": "RH-Contract-07-Recursive-Continuation-Bundle.zip",
+  "bytes": 11583,
+  "sha256": "f41e73f65dcd9fa4b2b2742bbf70a0773d57fc92ab853e990efe1249acfc828f",
+  "files": 16,
+  "contract_workflow": "EXHAUSTED_AVAILABLE_CONTINUATIONS",
+  "mathematical_state": "UNRESOLVED"
+}
