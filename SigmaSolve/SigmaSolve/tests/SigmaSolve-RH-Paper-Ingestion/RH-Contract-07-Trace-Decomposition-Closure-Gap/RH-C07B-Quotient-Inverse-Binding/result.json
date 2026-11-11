@@ -1,0 +1,16 @@
+{
+  "contract": "RH-C07B-QUOTIENT-INVERSE-BINDING",
+  "contract_type": "SCOPED_SUBCONTRACT_OF_C07",
+  "terminal_state": "UNRESOLVED",
+  "inverse_gap": "CONDITIONALLY_REPAIRED",
+  "repair": "isometric extension + dense range => unitary => unique bounded inverse",
+  "external_binding": "UNVERIFIED",
+  "fundamental_domain": "OPEN",
+  "trace_theorem": "OPEN_EXTERNAL_BINDING",
+  "T3": "NARROWED_NOT_CLOSED",
+  "T4": "NARROWED_NOT_CLOSED",
+  "T5": "UNCHANGED",
+  "RH_proved": false,
+  "RH_disproved": false,
+  "next": "C07C Trace-Theorem Instantiation and Fundamental-Domain Binding"
+}

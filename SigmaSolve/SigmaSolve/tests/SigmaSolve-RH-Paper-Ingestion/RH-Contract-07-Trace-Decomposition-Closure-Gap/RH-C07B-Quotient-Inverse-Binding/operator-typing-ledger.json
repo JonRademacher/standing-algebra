@@ -1,0 +1,10 @@
+[
+  {"expr":"E_S","domain":"L2(X_S)","codomain":"L2(C_S)","status":"CONDITIONALLY_UNITARY_AFTER_REPAIR"},
+  {"expr":"E_S^{-1}","domain":"L2(C_S)","codomain":"L2(X_S)","status":"CONDITIONALLY_WELL_TYPED_AS_UNITARY_INVERSE"},
+  {"expr":"F_S","domain":"L2(X_S)","codomain":"L2(X_S)","status":"EXTERNAL_UNVERIFIED_UNITARY"},
+  {"expr":"E_S F_S E_S^{-1}","domain":"L2(C_S)","codomain":"L2(C_S)","status":"WELL_TYPED_IF_PRECEDING_BINDINGS_HOLD"},
+  {"expr":"P_Lambda","domain":"L2(X_S) or pre-transform carrier","codomain":"same","status":"NOTATION_REQUIRES_EXACT_CARRIER_BINDING"},
+  {"expr":"S_Lambda","domain":"L2(C_S)","codomain":"L2(C_S)","status":"POINTWISE_CUTOFF_CANDIDATE"},
+  {"expr":"E_S F_S^t P_Lambda F_S E_S^{-1}","domain":"L2(C_S)","codomain":"L2(C_S)","status":"WELL_TYPED_ONLY_AFTER_P_LAMBDA_AND_TRANSPOSE_BINDING"},
+  {"expr":"T_h","domain":"L2(C_S)","codomain":"L2(C_S)","status":"EXTERNAL_TRACE_CLASS_CLAIM"}
+]

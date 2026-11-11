@@ -1,0 +1,19 @@
+{
+  "resolved_or_narrowed": [
+    "The set-valued E_S^{-1} notation need not be fatal: a canonical single-valued inverse exists if E_S extends isometrically with dense range.",
+    "The repair theorem establishes that dense isometric range becomes surjective after completion.",
+    "Operator compositions using E_S^{-1} can therefore be well-typed conditionally."
+  ],
+  "remaining": [
+    "Verify the cited external construction actually makes E_S the required isometric dense-range extension.",
+    "Bind P_Lambda and S_Lambda to exact domains.",
+    "Verify the transpose/adjoint convention F_S^t.",
+    "Construct a measurable fundamental domain I_S.",
+    "Instantiate the trace-class theorem for h_n,epsilon.",
+    "Replay the T3/T4 integral transformations under those bindings."
+  ],
+  "T3":"NARROWED_NOT_CLOSED",
+  "T4":"NARROWED_NOT_CLOSED",
+  "T5":"UNCHANGED_STRONG_CONDITIONAL_SURVIVOR",
+  "RH":"UNRESOLVED"
+}

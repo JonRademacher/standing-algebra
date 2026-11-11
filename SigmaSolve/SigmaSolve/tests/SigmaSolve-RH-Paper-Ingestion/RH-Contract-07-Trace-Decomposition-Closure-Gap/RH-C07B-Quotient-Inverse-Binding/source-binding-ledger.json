@@ -1,0 +1,6 @@
+[
+  {"id":"SB1","source":"Alain Connes, Trace formula in noncommutative geometry and the zeros of the Riemann zeta function","role":"external Adele-class/trace-formula architecture","status":"PRIMARY SOURCE LOCATED","remaining":"bind exact proposition/lemma numbering and definitions used by Li"},
+  {"id":"SB2","source":"Li candidate Lemma 2.6 citing Proposition 2.30 p.359","role":"dense range for E_S","status":"CITATION PRESENT IN CANDIDATE","remaining":"identify exact referenced publication and verify statement matches candidate notation"},
+  {"id":"SB3","source":"Li candidate citation to Connes Lemma 1(b) p.54","role":"unitarity of F_S and Q_Lambda decomposition","status":"CITATION PRESENT","remaining":"verify exact carrier and cutoff conventions"},
+  {"id":"SB4","source":"Li candidate Theorem 1.1 citing [16] and [13]","role":"trace class and explicit trace formula","status":"CITATION PRESENT","remaining":"verify exact h hypotheses and whether they hold for h_n,epsilon"}
+]
