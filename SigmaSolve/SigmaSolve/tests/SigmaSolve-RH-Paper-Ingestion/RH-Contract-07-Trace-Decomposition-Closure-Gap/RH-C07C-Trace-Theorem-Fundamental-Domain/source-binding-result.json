@@ -1,0 +1,17 @@
+{
+  "primary_source": "Alain Connes, Trace formula in noncommutative geometry and the zeros of the Riemann zeta function, arXiv:math/9811068",
+  "verified_from_source": [
+    "O_S^* is defined as the S-unit subgroup and is cocompact in the norm-one S-ideles.",
+    "A multiplicative fundamental domain D for the O_S^* action on J_S is explicitly used to normalize Haar measure.",
+    "L2(X_S) is defined by completing and separating the Schwartz space under a norm computed on C_S or a fundamental domain D.",
+    "A trace formula is proved in the S-local case for cutoff operators R_Lambda U(h).",
+    "The quotient trace kernel is expressed as a sum over q in O_S^* integrated over D."
+  ],
+  "not_verified_by_source": [
+    "Li's exact operator T_h is identical to Connes's R_Lambda U(h).",
+    "Li's compressed operators in T3/T4 satisfy Connes's theorem without new hypotheses.",
+    "Li's E_S^{-1}, P_Lambda, S_Lambda, and transpose notation exactly match the source conventions.",
+    "The finite-Lambda asymptotic trace formula directly implies Li's exact zero/nonnegative trace components."
+  ],
+  "binding_status": "PARTIAL_SUCCESS"
+}

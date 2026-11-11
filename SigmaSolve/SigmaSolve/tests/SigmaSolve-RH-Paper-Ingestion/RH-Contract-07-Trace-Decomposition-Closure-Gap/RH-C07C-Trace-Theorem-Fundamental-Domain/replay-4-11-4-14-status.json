@@ -1,0 +1,11 @@
+{
+  "carrier": "S-local quotient L2(X_S) with fundamental domain D",
+  "typed_inverse": "conditionally available from C07B",
+  "S_unit_invariance": "available",
+  "fundamental_domain": "source-supported",
+  "absolute_convergence": "candidate supplies estimates; independent replay incomplete",
+  "trace_class_operator": "not yet bound for Li T_h",
+  "changes_of_variables": "structurally admissible under product-formula measure normalization; exact integrands not replayed line-by-line",
+  "identical_summand_conclusion": "conditional",
+  "T3": "NARROWED_NOT_CLOSED"
+}

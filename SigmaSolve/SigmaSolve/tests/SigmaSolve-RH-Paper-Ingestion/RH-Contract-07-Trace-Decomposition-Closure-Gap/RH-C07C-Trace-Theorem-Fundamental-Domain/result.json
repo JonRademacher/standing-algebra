@@ -1,0 +1,14 @@
+{
+  "contract": "RH-C07C-TRACE-THEOREM-FUNDAMENTAL-DOMAIN",
+  "contract_type": "SCOPED_SUBCONTRACT_OF_C07",
+  "terminal_state": "UNRESOLVED",
+  "fundamental_domain": "SOURCE_BOUND_AT_ARCHITECTURAL_LEVEL",
+  "quotient_Hilbert_space": "SOURCE_BOUND_AT_ARCHITECTURAL_LEVEL",
+  "trace_theorem": "PARTIALLY_BOUND; SOURCE OPERATOR DIFFERS FROM LI T_h",
+  "T3": "NARROWED_NOT_CLOSED",
+  "T4": "BLOCKED_ON_EXACT_OPERATOR_TRANSFER_AND_CROSS_TERM",
+  "T5": "UNCHANGED_STRONG_SURVIVOR",
+  "RH_proved": false,
+  "RH_disproved": false,
+  "next": "C07D — Exact T_h Source Identification and Operator-Transfer Lemma"
+}

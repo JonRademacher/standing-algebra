@@ -1,0 +1,8 @@
+{
+  "file": "RH-C07C-Trace-Theorem-Fundamental-Domain.zip",
+  "bytes": 6325,
+  "sha256": "ed4fee412fcc28a278389795ac01bb5dc2582b6253096663d83f1268fe46732d",
+  "terminal_state": "UNRESOLVED",
+  "source_binding": "partial success",
+  "new_failure_shape": "operator-transfer gap"
+}
