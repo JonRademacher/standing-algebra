@@ -1,4 +1,4 @@
-from future import annotations
+from __future__ import annotations
 
 from typing import Set, FrozenSet, Dict, List, Tuple, Any
 from datetime import date
@@ -23,7 +23,7 @@ try:
         PolicyKernelError,
     )
 except ModuleNotFoundError:
-    sys.path.append(str(Path(file).resolve().parent))
+    sys.path.append(str(Path(__file__).resolve().parent))
     from Closure_Theoretic_Hospital_Triage_AI_Kernel import (
         ClosurePolicyKernel,
         PolicyRegion,
@@ -263,7 +263,7 @@ def run_cases(kernel: ClosurePolicyKernel, adapter: AdapterManifest) -> Dict[str
         except PolicyKernelError as e:
             record["status"] = "rejected"
             # FIX: must be name
-            record["error_type"] = type(e).name
+            record["error_type"] = type(e).__name__
 
         results.append(record)
 
@@ -323,7 +323,7 @@ def run_drift(kernel: ClosurePolicyKernel, adapter: AdapterManifest, seed: int, 
         except PolicyKernelError as e:
             rec["status"] = "rejected"
             # FIX: must be name
-            rec["error_type"] = type(e).name
+            rec["error_type"] = type(e).__name__
 
         trace.append(rec)
 
@@ -459,5 +459,5 @@ def main() -> None:
         if not (ok1 and ok2):
             raise SystemExit(2)
 
-if name == "main":
+if __name__ == "__main__":
     main()

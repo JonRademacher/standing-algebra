@@ -33,7 +33,7 @@ Public use must attribute:
 "Jon Rademacher (2026) — Closure-Theoretic Policy Kernel"
 """
 
-from future import annotations
+from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Dict, FrozenSet, Iterable, List, Optional, Sequence, Set, Tuple
 from datetime import date
@@ -49,20 +49,20 @@ class PolicyKernelError(Exception):
 
 
 class NoAdmissibleClosureError(PolicyKernelError):
-    def init(self, message: str, diagnostics: Dict[str, Any]):
-        super().init(message)
+    def __init__(self, message: str, diagnostics: Dict[str, Any]):
+        super().__init__(message)
         self.diagnostics = diagnostics
 
 
 class UnknownAtomError(PolicyKernelError):
-    def init(self, unknown_atoms: List[Any]):
-        super().init(f"Unknown/undefined atoms in proposal: {unknown_atoms}")
+    def __init__(self, unknown_atoms: List[Any]):
+        super().__init__(f"Unknown/undefined atoms in proposal: {unknown_atoms}")
         self.unknown_atoms = unknown_atoms
 
 
 class GovernanceError(PolicyKernelError):
-    def init(self, message: str, issues: List[Dict[str, Any]]):
-        super().init(message)
+    def __init__(self, message: str, issues: List[Dict[str, Any]]):
+        super().__init__(message)
         self.issues = issues
 
 
@@ -124,12 +124,11 @@ class ClosurePolicyKernel:
     for diagnostics / completeness ONLY. They are not enforced unless promoted.
     """
 
-    def init(
+    def __init__(
         self,
         universe: Set[Any],
         regions: Sequence[PolicyRegion],
         atom_registry: Optional[Sequence[AtomSpec]] = None,
-        ,
         kernel_id: str = "JR-ClosurePolicyKernel-2026",
         strict_atoms: bool = True,
 
@@ -324,7 +323,8 @@ class ClosurePolicyKernel:
     # Closure (authoritative enforcement only)
     # -----------------------------
 
-    def _authoritative_supersets(self, proposal: FrozenSet[Any]) -> List"""
+    def _authoritative_supersets(self, proposal: FrozenSet[Any]) -> List[PolicyRegion]:
+        """
         Efficiently find authoritative regions containing proposal.
         """
         if not proposal:
@@ -353,13 +353,13 @@ class ClosurePolicyKernel:
                 "No admissible closure exists under authoritative policy regions.",
                 diagnostics=self._diagnose_no_closure(proposal),
             )
-        return frozenset.intersection((r.region for r in supersets))
+        return frozenset.intersection(*[r.region for r in supersets])
 
     # -----------------------------
     # Enforcement with frontier + explanation
     # -----------------------------
 
-    def enforce(self, proposal: Iterable[Any], , adapter: Optional[AdapterManifest] = None) -> Dict[str, Any]:
+    def enforce(self, proposal: Iterable[Any], adapter: Optional[AdapterManifest] = None) -> Dict[str, Any]:
         proposal = frozenset(proposal)
         self._check_atoms_known(proposal)
 
@@ -370,7 +370,7 @@ class ClosurePolicyKernel:
                 diagnostics=self._diagnose_no_closure(proposal),
             )
 
-        conservative = frozenset.intersection((r.region for r in supersets))
+        conservative = frozenset.intersection(*[r.region for r in supersets])
         frontier = self._inclusion_minimal_regions(supersets)
         removed = sorted(list(proposal - conservative), key=str)
 
@@ -404,7 +404,7 @@ class ClosurePolicyKernel:
 
         audit = {
             "kernel_id": self.kernel_id,
-            "adapter": (adapter.dict if adapter else None),
+            "adapter": (adapter.__dict__ if adapter else None),
             "proposal": list(proposal),
             "conservative_result": list(conservative),
             "removed": removed,
@@ -427,7 +427,8 @@ class ClosurePolicyKernel:
             "audit": audit,
         }
 
-    def _inclusion_minimal_regions(self, regs: List[PolicyRegion]) -> Listmins = []
+    def _inclusion_minimal_regions(self, regs: List[PolicyRegion]) -> List[PolicyRegion]:
+        mins = []
         for r in regs:
             if not any((r2.region < r.region) for r2 in regs):
                 mins.append(r)
@@ -438,7 +439,7 @@ class ClosurePolicyKernel:
             return {"note": "no frontier regions"}
 
         all_atoms = set().union((r.region for r in frontier))
-        common_atoms = set.intersection((set(r.region) for r in frontier))
+        common_atoms = set.intersection(*[set(r.region) for r in frontier])
         varying_atoms = sorted(list(all_atoms - common_atoms), key=str)
 
         options = []
