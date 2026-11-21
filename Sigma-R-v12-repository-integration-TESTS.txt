@@ -1,0 +1,60 @@
++ compile : /opt/pyvenv/bin/python -m py_compile /mnt/data/repo_fix/SigmaR/runtime/sigma_r.py /mnt/data/repo_fix/SigmaR/adversarial/sigma_r_external_evaluator.py /mnt/data/repo_fix/SigmaR/adversarial/break_sigma_r.py
++ regression : /opt/pyvenv/bin/python -m unittest -v test_sigma_r_v10.py test_sigma_r_v11.py test_sigma_r_v12.py test_sigma_r_v4.py test_sigma_r_v5.py test_sigma_r_v6.py test_sigma_r_v7.py test_sigma_r_v8.py test_sigma_r_v9.py
+test_bypass_stays_blocked (test_sigma_r_v10.V10.test_bypass_stays_blocked) ... ok
+test_evidence_authority_preserved (test_sigma_r_v10.V10.test_evidence_authority_preserved) ... ok
+test_full_composition (test_sigma_r_v10.V10.test_full_composition) ... ok
+test_global_is_typed (test_sigma_r_v10.V10.test_global_is_typed) ... ok
+test_no_executor (test_sigma_r_v10.V10.test_no_executor) ... ok
+test_k8s_clusterrolebinding (test_sigma_r_v11.V11.test_k8s_clusterrolebinding) ... ok
+test_k8s_loadbalancer (test_sigma_r_v11.V11.test_k8s_loadbalancer) ... ok
+test_missing_kind_residual (test_sigma_r_v11.V11.test_missing_kind_residual) ... ok
+test_privileged_stays_protected (test_sigma_r_v11.V11.test_privileged_stays_protected) ... ok
+test_tf_iam (test_sigma_r_v11.V11.test_tf_iam) ... ok
+test_tf_public_network (test_sigma_r_v11.V11.test_tf_public_network) ... ok
+test_tf_replacement (test_sigma_r_v11.V11.test_tf_replacement) ... ok
+test_boundary (test_sigma_r_v12.V12.test_boundary) ... ok
+test_complete_object_continues (test_sigma_r_v12.V12.test_complete_object_continues) ... ok
+test_missing_actions_fail_closed (test_sigma_r_v12.V12.test_missing_actions_fail_closed) ... ok
+test_missing_kind_fail_closed (test_sigma_r_v12.V12.test_missing_kind_fail_closed) ... ok
+test_no_executor (test_sigma_r_v12.V12.test_no_executor) ... ok
+test_boundary_not_crossed (test_sigma_r_v4.V4.test_boundary_not_crossed) ... ok
+test_directional_repair (test_sigma_r_v4.V4.test_directional_repair) ... ok
+test_five_decisions (test_sigma_r_v4.V4.test_five_decisions) ... ok
+test_receipt_chain (test_sigma_r_v4.V4.test_receipt_chain) ... ok
+test_limits_are_explicit (test_sigma_r_v5.V5.test_limits_are_explicit) ... ok
+test_no_executor_surface (test_sigma_r_v5.V5.test_no_executor_surface) ... ok
+test_pareto_preserves_plurality (test_sigma_r_v5.V5.test_pareto_preserves_plurality) ... ok
+test_recursive_repair_reaches_composition (test_sigma_r_v5.V5.test_recursive_repair_reaches_composition) ... ok
+test_no_executor (test_sigma_r_v6.V6.test_no_executor) ... ok
+test_recursive_evidence_authority (test_sigma_r_v6.V6.test_recursive_evidence_authority) ... ok
+test_saturates (test_sigma_r_v6.V6.test_saturates) ... ok
+test_visible_state_limit (test_sigma_r_v6.V6.test_visible_state_limit) ... ok
+test_boundary (test_sigma_r_v7.V7.test_boundary) ... ok
+test_no_executor (test_sigma_r_v7.V7.test_no_executor) ... ok
+test_operator_improvement (test_sigma_r_v7.V7.test_operator_improvement) ... ok
+test_rejection_receipt (test_sigma_r_v7.V7.test_rejection_receipt) ... ok
+test_boundary (test_sigma_r_v8.V8.test_boundary) ... ok
+test_corpus (test_sigma_r_v8.V8.test_corpus) ... ok
+test_no_executor (test_sigma_r_v8.V8.test_no_executor) ... ok
+test_promotion_has_zero_regressions (test_sigma_r_v8.V8.test_promotion_has_zero_regressions) ... ok
+test_boundary (test_sigma_r_v9.V9.test_boundary) ... ok
+test_bypass_cannot_be_repaired (test_sigma_r_v9.V9.test_bypass_cannot_be_repaired) ... ok
+test_composition_discharge (test_sigma_r_v9.V9.test_composition_discharge) ... ok
+test_no_executor (test_sigma_r_v9.V9.test_no_executor) ... ok
+test_partial_allow_not_promoted (test_sigma_r_v9.V9.test_partial_allow_not_promoted) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.388s
+
+OK
++ evaluator : /opt/pyvenv/bin/python /mnt/data/repo_fix/SigmaR/adversarial/sigma_r_external_evaluator.py /mnt/data/repo_fix/SigmaR/runtime/sigma_r.py --json-out /mnt/data/repo_fix/SigmaR/adversarial/external-evaluation.json
+Sigma-R external evaluation: PASS
+ core SHA-256: 933e66e45c78e8ce1ebf1a7447bb9059ead29d7a94b4fb4fe816af933e4313e5
+ behavioral: PASS
+ regression: NOT_PRESENT
+ execution surface: none
+ report: /mnt/data/repo_fix/SigmaR/adversarial/external-evaluation.json
++ breaker : /opt/pyvenv/bin/python /mnt/data/repo_fix/SigmaR/adversarial/break_sigma_r.py /mnt/data/repo_fix/SigmaR/runtime/sigma_r.py --seed 1337 --cases 5000 --json-out /mnt/data/repo_fix/SigmaR/adversarial/break-report.json
+NO_BREAK_FOUND: 0 violation(s), 5003 finding(s) evaluated, seed=1337
+Report: /mnt/data/repo_fix/SigmaR/adversarial/break-report.json
+SIGMA_R_REPOSITORY_GATE=PASS
