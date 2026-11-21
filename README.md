@@ -1,3 +1,53 @@
+<!-- ===================================================================== -->
+<!-- TOP BANNER: ADDITIVE HEADER FOR sigma_r_agent_wrapper.py              -->
+<!-- Paste this directly above your existing README.md content on `main`   -->
+<!-- ===================================================================== -->
+
+# 🛡️ Standing Algebra ($\Sigma^R$) & ICG — AI Agent Admissibility Firewall
+### *Solving Machine-Speed AI Patch & Agent Instability Without Black-Box Overrides*
+
+[![Zenodo DOI](https://zenodo.org)](https://doi.org)
+[![Formal Verification](https://shields.io)](#architecture--guarantees)
+[![License: CC BY-SA 4.0](https://shields.io)](https://creativecommons.org)
+[![OpenTimestamps](https://shields.io)](#provenance--ip-protection)
+
+> **Featured Implementation:** [`sigma_r_agent_wrapper.py`](./sigma_r_agent_wrapper.py) — A zero-dependency runtime admissibility middleware (with optional Z3 SMT backend) that projects autonomous AI proposals onto formally verified legitimacy envelopes.
+
+---
+
+### Core Mechanics & Features
+**`sigma_r_agent_wrapper.py`** applies Standing Algebra ($\Sigma^R$ v7.0) and Interoperable Constraint Geometry (ICG) to prevent cascading AI instability:
+* **Filter, Not Selector:** Projects proposals onto declared invariants without introducing internal optimization or preference ranking.
+* **Strict Adapter Discipline:** Enforces explicit context declarations, failing safely (`ADAPTER_FAIL`) on missing state dependencies.
+* **Emergency Routing & Damping:** Holds safe invariant states during constraint deadlocks and uses structural debt indexing to damp high-frequency oscillations.
+* **Cross-Domain Liftability:** Verifies commutative ICG invariants to safely transfer validated updates across constrained subsystems.
+
+---
+
+### Quick Start & Adversarial Testing
+
+Run the built-in adversarial stress test:
+
+```bash
+pip install z3-solver  # Optional SMT backend
+python sigma_r_agent_wrapper.py
+```
+
+The script evaluates scenarios ranging from grounded summaries to forced contradictions, sovereign override attempts, and tone oscillations, enforcing strict closure frontiers and emergency envelopes as detailed in the full codebase.
+
+---
+
+### Provenance & IP Protection
+* **Canonical Paper:** Jonathan Rademacher (2026), *Standing Algebra ($\Sigma^R$)* (v7.0), Zenodo — [`10.5281/zenodo.23016270`](https://doi.org).
+* **Cryptographic Timestamp:** Verifiable via OpenTimestamps (`sigma_r_agent_wrapper.py.ots`).
+* **Licensing:** CC-BY-SA 4.0 (Inquiries: `JonathanDRademacher@yahoo.com`).
+
+---
+<!-- ===================================================================== -->
+<!-- EXISTING README CONTENT BELOW THIS LINE                               -->
+<!-- ===================================================================== -->
+
+
 Standing Algebra (Σᴿ)
 Standing Algebra (Σᴿ) is a formally specified, mechanically verified admissibility framework for autonomy‑preserving transformations in multi‑agent systems. The framework is validated across Lean, Coq, and SMT‑LIB (Z3) and is explicitly designed to enforce non‑domination structurally, without optimization objectives, outcome selection, or internal authority.
 Overview
